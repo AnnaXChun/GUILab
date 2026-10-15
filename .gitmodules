@@ -1,0 +1,3 @@
+[submodule "vendor/CADWORLD"]
+ path = vendor/CADWORLD
+ url = https://github.com/Zdong104/CADWORLD.git

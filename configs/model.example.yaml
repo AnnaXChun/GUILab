@@ -1,0 +1,8 @@
+# 凭证只使用环境变量，禁止填写密钥值。
+provider: gemini
+model: gemini-3-flash-preview
+credential_env: GEMINI_API_KEY
+enable_paid_runs: false
+max_retries: 0
+local_cli_base_url: http://127.0.0.1:8001/v1
+local_cli_model: null

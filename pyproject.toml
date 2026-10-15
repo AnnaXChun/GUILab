@@ -1,0 +1,14 @@
+[project]
+name = "cad-cf-hybrid"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = ["PyYAML>=6.0,<7", "requests>=2.31,<3"]
+[dependency-groups]
+dev = [
+    "pytest>=8,<9",
+    "openai==1.102.0",
+    "google-genai==1.68.0",
+]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

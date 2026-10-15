@@ -1,0 +1,8 @@
+{
+  "P0": {"static_status": "FAIL", "live_status": "BLOCKED_BY_ENV", "upstream_cli_dry_run": "FAIL", "go": false},
+  "P1": {"static_status": "PASS", "live_status": "BLOCKED_BY_ENV", "native_save_reopen": "NOT_RUN", "go": false},
+  "P2": {"static_status": "PASS", "live_status": "BLOCKED_BY_ENV", "real_pairs": 0, "go": false},
+  "P3": {"static_status": "PASS", "live_status": "BLOCKED_BY_ENV", "smoke_real_valid_pairs": 0, "pilot_24": "NOT_RUN_BUDGET", "go": false},
+  "P4": {"status": "NOT_IMPLEMENTED", "go": false},
+  "P5": {"status": "NOT_IMPLEMENTED", "go": false}
+}

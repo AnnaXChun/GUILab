@@ -1,0 +1,49 @@
+{
+  "N_real": 0,
+  "N_real_valid": 0,
+  "N_synthetic": 9,
+  "N_total": 9,
+  "credit": {
+    "N_pairs": 0,
+    "N_tasks": 0,
+    "ci95": null,
+    "mean": null
+  },
+  "editability": {
+    "N_branches": 0,
+    "N_measured": 0,
+    "coverage": null,
+    "rate": null
+  },
+  "execution_cost": {
+    "gui_atomic_actions": 0,
+    "model_calls": 0,
+    "recoveries": 0,
+    "tokens": 0,
+    "typed_api_calls": 0,
+    "verification_calls": 0,
+    "wall_s": 0
+  },
+  "label_counts": {},
+  "label_coverage": null,
+  "pair_valid_rate": null,
+  "preference_ratios": {
+    "api": null,
+    "gui": null,
+    "tie": null
+  },
+  "preservation": {
+    "N_branches": 0,
+    "N_measured": 0,
+    "coverage": null,
+    "rate": null
+  },
+  "strict_reason": "official post-hoc evaluation unavailable in pair traces",
+  "strict_success": null,
+  "validity": {
+    "N_branches": 0,
+    "N_measured": 0,
+    "coverage": null,
+    "rate": null
+  }
+}

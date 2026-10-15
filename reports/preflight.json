@@ -1,0 +1,84 @@
+{
+  "checks": {
+    "credentials": {
+      "scope": "current process environment only; .env not inspected",
+      "status": "BLOCKED_BY_CREDENTIALS"
+    },
+    "docker": {
+      "command": [
+        "docker",
+        "info"
+      ],
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    "host_freecad": {
+      "required_for": "CAM scoring",
+      "status": "BLOCKED_BY_ENV"
+    },
+    "kvm": {
+      "status": "BLOCKED_BY_ENV"
+    },
+    "paid_runs": {
+      "status": "NOT_RUN_BUDGET"
+    },
+    "pin": {
+      "sha": "e5d0ebab8bd28da6e98c68c61db05747d1647f7b",
+      "status": "PASS"
+    },
+    "platform": {
+      "machine": "arm64",
+      "status": "BLOCKED_BY_ENV",
+      "system": "Darwin"
+    },
+    "qemu": {
+      "command": [
+        "qemu-system-x86_64",
+        "--version"
+      ],
+      "error": "FileNotFoundError",
+      "exit_code": null,
+      "status": "BLOCKED_BY_ENV"
+    },
+    "uv": {
+      "command": [
+        "uv",
+        "--version"
+      ],
+      "exit_code": 0,
+      "output": "uv 0.12.21 (7af826859 2026-09-29 aarch64-apple-darwin)\n",
+      "status": "PASS"
+    },
+    "vm": {
+      "sha256": null,
+      "status": "BLOCKED_BY_ENV"
+    }
+  },
+  "disk_free_bytes": 727992451072,
+  "live_ready": false,
+  "python": "3.12.14",
+  "selection": {
+    "N_part_sketch": 140,
+    "domain_counts": {
+      "test": {
+        "part": 15,
+        "sketch": 12
+      },
+      "train": {
+        "part": 46,
+        "sketch": 37
+      },
+      "val": {
+        "part": 16,
+        "sketch": 14
+      }
+    },
+    "eligible_edit": 32,
+    "groups": 22,
+    "split_counts": {
+      "test": 27,
+      "train": 83,
+      "val": 30
+    }
+  }
+}

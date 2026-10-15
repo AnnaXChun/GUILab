@@ -1,0 +1,9 @@
+G0_OFFICIAL_GUI: {protocol: official_gui_only, instruction: raw, runner: scripts/python/run_cadworld.py}
+G1_GUI_HYBRID_PROTOCOL: {protocol: extended_hybrid, router: gui_only, instruction: effective}
+G2_TYPED_API_ONLY: {protocol: extended_hybrid, router: api_only, instruction: effective}
+G3_NAIVE_HYBRID: {protocol: extended_hybrid, router: naive, instruction: effective}
+G4_RULE_ROUTER: {protocol: extended_hybrid, router: rule, instruction: effective}
+G5_CONVENTIONAL_VERIFY: {protocol: extended_hybrid, max_retries: 1, cost_matched: true, status: planned_not_run}
+G6_CF_ROUTER: {protocol: extended_hybrid, router: cf_preference, inference_branches: 1, training: P4_not_run}
+G7_BEST_OF_2: {protocol: extended_hybrid, inference_branches: 2, extra_compute_upper_bound: true, status: planned_not_run}
+CLI_OFFICIAL: {protocol: official_terminal_only, screenshots: false, typed_api_only: false, runner: CLI/run_cli.py}

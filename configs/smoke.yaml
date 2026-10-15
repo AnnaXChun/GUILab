@@ -1,0 +1,9 @@
+seed: 20261015
+mock_output: results/mock_smoke
+live_tasks: 2
+live_pairs: 3
+weights: {validity: 0.25, target_progress: 0.35, preservation: 0.20, editability: 0.20}
+cost_lambda: 0.05
+epsilon: 0.05
+budgets: {model_calls: 12, tokens: 12000, wall_s: 600, gui_atomic_actions: 100, typed_api_calls: 40}
+mock_cases: [none, gui_target_miss, different_s0, stale_screenshot, execution_timeout, api_preservation, unknown_target, unknown_validity, invalid_native]
