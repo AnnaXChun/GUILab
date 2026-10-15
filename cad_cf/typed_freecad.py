@@ -24,7 +24,9 @@ class TypedFreeCAD:
             raise RuntimeError("GUI must acknowledge saved/closed before API write")
         result = self.worker({"task_root": self.root, "document": document,
                               "output": output, "actions": [asdict(a) for a in actions]})
-        if not result.get("ok") or not result.get("reopened") or not result.get("recomputed"):
+        # A known invalid shape is a measured failed candidate, not a broken pair.
+        # Unknown/unreopenable state still aborts; it cannot support a comparison.
+        if not result.get("reopened") or not result.get("recomputed"):
             raise RuntimeError("native worker failed save/reopen/verify")
         self.session.reopen(output)
         screenshot = self.session.refresh_screenshot()

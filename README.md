@@ -2,7 +2,7 @@
 
 [本项目新增] 在同一原生工程状态、同一公开语义子目标下，用隔离 GUI/API 分支采集工程自检 preference。规格见 [SPEC.md](SPEC.md)。上游固定 `e5d0ebab8bd28da6e98c68c61db05747d1647f7b`。
 
-当前结果：66 个项目测试、7 个 upstream CLI 单测通过；9 个 synthetic dry-run case。真实 VM/API 任务 N=0。P0 live 与 P3/P4 均为 NO-GO，原因见 [复现状态](reports/REPRO_STATUS.md)。
+当前结果：67 个项目测试、7 个 upstream CLI 单测通过；9 个 synthetic dry-run case。真实 VM/API 任务 N=0。P0 live 与 P3/P4 均为 NO-GO，原因见 [复现状态](reports/REPRO_STATUS.md)。
 
 ```bash
 bash scripts/bootstrap.sh

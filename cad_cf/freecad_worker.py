@@ -142,7 +142,13 @@ def run(request):
     try:
         for raw in request["actions"]:
             action = TypedAction(**raw)
-            records.append({"tool": action.tool, "args": action.args, "result": execute(doc, action, root)})
+            try:
+                result = execute(doc, action, root)
+            except (ValueError, TypeError, RuntimeError, AttributeError, IndexError) as exc:
+                records.append({"tool": action.tool, "args": action.args,
+                                "result": {"ok": False, "error": type(exc).__name__}})
+                break  # No repair/retry. Commit and measure the known failure state.
+            records.append({"tool": action.tool, "args": action.args, "result": result})
         doc.recompute()
         doc.saveAs(output)
         App.closeDocument(doc.Name)
@@ -158,6 +164,7 @@ def run(request):
             doc = None
             probe_result = editability_probe(output, request["probe_intent"], root)
         return {"ok": clean, "state": state, "tools": records,
+                "execution_ok": all(r["result"]["ok"] for r in records),
                 "reopened": True, "recomputed": True, "freecad_version": list(App.Version()), "probe": probe_result}
     finally:
         if doc and doc.Name in App.listDocuments():

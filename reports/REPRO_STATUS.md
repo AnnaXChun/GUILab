@@ -9,7 +9,7 @@
 | upstream 全量依赖 | BLOCKED_BY_ENV | 本机 Darwin arm64；只执行 `uv sync --frozen --dry-run`，预览 405 包，未把预览算作安装完成 |
 | upstream CLI unittest | PASS | 7 tests；原始 `CLI.test_terminal_agent`，使用本项目轻量环境 |
 | upstream CLI dry-run | FAIL | 原始脚本 exit 1：`ModuleNotFoundError: No module named 'dotenv'`；依赖阻塞，未经过 VM/API |
-| 本项目 deterministic tests | PASS | 66 tests；命令和输出见 `commands.json` |
+| 本项目 deterministic tests | PASS | 67 tests；命令和输出见 `commands.json` |
 | mock pair campaign | PASS | 9 synthetic 场景；完整 JSONL、冻结契约、状态差异与失败记录见 `../results/verification_final/` |
 | Linux x86_64 / KVM / QEMU / VM | BLOCKED_BY_ENV | Darwin arm64，无 `/dev/kvm`、QEMU 或 qcow2；Docker daemon 可访问 |
 | 模型凭证 | BLOCKED_BY_CREDENTIALS | 当前进程未检测到支持的 provider 密钥；未读取 `.env`，未请求模型 |
