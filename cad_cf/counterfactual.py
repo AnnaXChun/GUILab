@@ -13,7 +13,7 @@ from .artifact_state import digest, changed
 from .candidate_generator import paired_candidates
 from .cadworld_adapter import agent_view
 from .metrics import normalized_cost
-from .self_verifier import PublicContract, checks, preference
+from .self_verifier import PublicContract, checks, preference, WEIGHTS
 from .snapshot import SnapshotStore, prove_equivalence, prove_live_isolation, InvalidPair
 from .trace import Trace, write_json
 from . import PIN
@@ -31,10 +31,13 @@ class PairRunner:
                 "task_id": raw_task["id"], "task_split": split, "protocol": "CADWorld-Hybrid (extended protocol)",
                 "synthetic": self.backend.synthetic, "intent": intent.record(), "s0": {
                     "checkpoint_sha256": cp.checkpoint_sha256, "canonical_state_digest": cp.canonical_state_digest,
+                    "checkpoint_path": str(cp.path), "vm_checkpoint_sha256": cp.vm_checkpoint_sha256,
                     "screenshot_sha256": cp.screenshot_sha256, "ui_digest": cp.ui_digest},
                 "branches": {}, "pair_valid": False, "label": "invalid", "credit_delta": None,
                 "label_source": "public_contract_only", "leakage_audit_passed": False,
                 "tool_version": "actc-v1", "cadworld_commit": PIN,
+                "verifier_config": {"weights": self.weights or WEIGHTS, "epsilon": self.epsilon,
+                                    "cost_lambda": self.cost_lambda, "budgets": self.budgets},
                 "model_contexts": {"gui": gui.context, "api": api.context}}
         prepared = {}
         try:
@@ -42,6 +45,7 @@ class PairRunner:
                 raise InvalidPair("mock/native checkpoint provenance mismatch")
             source_state = json.loads((cp.path / "canonical.json").read_text())
             view = agent_view(raw_task, source_state, cp.screenshot_sha256)
+            write_json(output / "agent_view.json", dict(view))
             gui, api = paired_candidates(intent, gui, api, view, "/home/user/current")
             contract = PublicContract.freeze(intent, view["instruction_effective"])
             write_json(output / "public_contract.json", asdict(contract))
