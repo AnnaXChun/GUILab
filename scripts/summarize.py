@@ -34,7 +34,9 @@ def main():
            '| 样本 | 类型 | 有效 | 标签 | 原因 |','| --- | --- | --- | --- | --- |']
     for f,r in zip(paths,pairs):
         lines.append(f"| {f.parent.name} | {'synthetic' if r['synthetic'] else 'real'} | {r['pair_valid']} | {r['label']} | {r.get('invalid_reason',r.get('reason',''))} |")
-    lines+=['','[研究假设] 真实标签能否改善路由，需要先验证原生文件恢复、双路径执行与差异重测；当前没有效果估计。','']
+    lines+=['', '完整指标与适用覆盖率见同名 JSON：valid_saved_artifact_rate、native_feature_tree_validity、preservation、editability probe、pair_valid_rate、label_coverage、route accuracy/regret 和分项成本。',
+            '当前无真实 episode，part/sketch、creation/edit、failure_class 与 stage funnel 均无可统计样本。',
+            '', '[研究假设] 真实标签能否改善路由，需要先验证原生文件恢复、双路径执行与差异重测；当前没有效果估计。','']
     failure_lines=['# 失败案例','', f"synthetic 行是明确注入的单测场景。真实样本 N={summary['N_real']}，与 mock 分开统计。",'',
                    '| 样本 | 观察结果 | Trace |','| --- | --- | --- |']
     for f,r in failures:

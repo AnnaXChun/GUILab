@@ -73,4 +73,13 @@ def summarize_pairs(pairs):
     result["execution_cost"] = {k: {"measured_sum": sum(b["cost"][k] for b in branches if b["cost"].get(k) is not None),
                                      "N_measured": sum(b["cost"].get(k) is not None for b in branches), "N_branches": len(branches)}
                                 for k in ("model_calls", "tokens", "wall_s", "gui_atomic_actions", "typed_api_calls", "verification_calls", "recoveries")}
+    result["valid_saved_artifact_rate"] = result["validity"]
+    result["unmodified_component_preservation"] = result["preservation"]
+    result["parametric_editability_probe_pass_rate"] = result["editability"]
+    trees = [b["native"]["native_feature_tree_valid"] for b in branches
+             if b.get("native", {}).get("native_feature_tree_valid") is not None]
+    result["native_feature_tree_validity"] = {"N_branches": len(branches), "N_measured": len(trees),
+        "coverage": len(trees)/len(branches) if branches else None, "rate": statistics.mean(trees) if trees else None}
+    result["route_preference_accuracy"] = {"N": 0, "value": None, "reason": "held-out predictions not supplied"}
+    result["route_regret"] = {"N": 0, "value": None, "reason": "held-out predictions not supplied; use route_metrics"}
     return result

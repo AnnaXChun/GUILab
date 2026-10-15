@@ -13,10 +13,15 @@ from .tool_protocol import Intent, TypedAction, Candidate
 
 def run_plan(plan_path, config, output):
     plan = json.loads(Path(plan_path).read_text())
+    split_manifest = json.loads(Path("manifests/splits.json").read_text())
+    if plan["public_task"]["id"] not in split_manifest["splits"].get(plan["split"], []):
+        raise InvalidPair("task does not belong to the declared frozen split")
     # P0/P1 live acceptance is an explicit prerequisite; static PASS never satisfies it.
     stages = json.loads(Path(plan["stage_evidence"]).read_text())
     if any(stages.get(k, {}).get("live_status") != "PASS" for k in ("P0", "P1")):
         raise InvalidPair("BLOCKED_BY_ENV: P0/P1 live acceptance has not passed")
+    if plan["split"] == "test" and not stages.get("P3", {}).get("protocol_frozen_before_test"):
+        raise InvalidPair("test collection requires a protocol frozen after train/val")
     upstream = Path("vendor/CADWORLD").resolve()
     verify_pin(upstream)
     cp_record = plan["checkpoint"]

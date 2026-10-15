@@ -163,6 +163,12 @@ class NativeBackend:
         if not session.refresh_screenshot() or digest(session.summary()) != digest(result["state"]):
             raise RuntimeError("probe changed measured branch or GUI state")
         result["probe"] = probe_result["probe"]
+        nodes = result["state"]["objects"]
+        names = {o["name"] for o in nodes}
+        target = next((o for o in nodes if o["name"] == candidate.intent.object), None)
+        tree_valid = bool(target and target["type_id"] == candidate.intent.type_id and
+                          target["type_id"].startswith(("PartDesign::", "Sketcher::")) and
+                          all(set(o["dependencies"]) <= names and not ({"Error", "Invalid"} & set(o["status"])) for o in nodes))
         from .tool_protocol import validate_gui
         if candidate.context.get("generation_wall_s") is None:
             raise ValueError("live candidate generation cost must be measured, not assumed free")
@@ -175,6 +181,7 @@ class NativeBackend:
         return {"state": result["state"], "artifact_path": str(artifact), "cost": cost,
                 "native": {"container_ok": container_check(artifact)["value"], "reopened": result["reopened"],
                            "recomputed": result["recomputed"], "shapes_valid": result["ok"], "probe": result.get("probe"),
+                           "native_feature_tree_valid": tree_valid,
                            "freecad_version": result["freecad_version"]}}
     def close(self, branch):
         branch["bridge"].close()
