@@ -16,17 +16,57 @@
     "rate": null
   },
   "execution_cost": {
-    "gui_atomic_actions": 0,
-    "model_calls": 0,
-    "recoveries": 0,
-    "tokens": 0,
-    "typed_api_calls": 0,
-    "verification_calls": 0,
-    "wall_s": 0
+    "gui_atomic_actions": {
+      "N_branches": 0,
+      "N_measured": 0,
+      "measured_sum": 0
+    },
+    "model_calls": {
+      "N_branches": 0,
+      "N_measured": 0,
+      "measured_sum": 0
+    },
+    "recoveries": {
+      "N_branches": 0,
+      "N_measured": 0,
+      "measured_sum": 0
+    },
+    "tokens": {
+      "N_branches": 0,
+      "N_measured": 0,
+      "measured_sum": 0
+    },
+    "typed_api_calls": {
+      "N_branches": 0,
+      "N_measured": 0,
+      "measured_sum": 0
+    },
+    "verification_calls": {
+      "N_branches": 0,
+      "N_measured": 0,
+      "measured_sum": 0
+    },
+    "wall_s": {
+      "N_branches": 0,
+      "N_measured": 0,
+      "measured_sum": 0
+    }
   },
   "label_counts": {},
   "label_coverage": null,
+  "native_feature_tree_validity": {
+    "N_branches": 0,
+    "N_measured": 0,
+    "coverage": null,
+    "rate": null
+  },
   "pair_valid_rate": null,
+  "parametric_editability_probe_pass_rate": {
+    "N_branches": 0,
+    "N_measured": 0,
+    "coverage": null,
+    "rate": null
+  },
   "preference_ratios": {
     "api": null,
     "gui": null,
@@ -38,8 +78,30 @@
     "coverage": null,
     "rate": null
   },
+  "route_preference_accuracy": {
+    "N": 0,
+    "reason": "held-out predictions not supplied",
+    "value": null
+  },
+  "route_regret": {
+    "N": 0,
+    "reason": "held-out predictions not supplied; use route_metrics",
+    "value": null
+  },
   "strict_reason": "official post-hoc evaluation unavailable in pair traces",
   "strict_success": null,
+  "unmodified_component_preservation": {
+    "N_branches": 0,
+    "N_measured": 0,
+    "coverage": null,
+    "rate": null
+  },
+  "valid_saved_artifact_rate": {
+    "N_branches": 0,
+    "N_measured": 0,
+    "coverage": null,
+    "rate": null
+  },
   "validity": {
     "N_branches": 0,
     "N_measured": 0,

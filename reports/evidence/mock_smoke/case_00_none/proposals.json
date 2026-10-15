@@ -1,0 +1,56 @@
+{
+  "api": {
+    "actions": [
+      {
+        "args": {
+          "object_name": "Pad",
+          "property": "Length",
+          "type_id": "PartDesign::Pad",
+          "value": 12.0
+        },
+        "tool": "set_object_property"
+      }
+    ],
+    "context": {
+      "model": "deterministic_stub",
+      "model_calls": 0,
+      "parameters": {},
+      "provider": "none",
+      "seed": 20261015,
+      "tokens": 0
+    },
+    "intent": {
+      "evidence": "Length to 12 mm",
+      "id": "edit_pad_length",
+      "object": "Pad",
+      "target": {
+        "Length": 12.0
+      },
+      "type_id": "PartDesign::Pad"
+    },
+    "modality": "api"
+  },
+  "gui": {
+    "actions": [
+      "pyautogui.doubleClick(100, 200)\npyautogui.write('12')\npyautogui.press('enter')"
+    ],
+    "context": {
+      "model": "deterministic_stub",
+      "model_calls": 0,
+      "parameters": {},
+      "provider": "none",
+      "seed": 20261015,
+      "tokens": 0
+    },
+    "intent": {
+      "evidence": "Length to 12 mm",
+      "id": "edit_pad_length",
+      "object": "Pad",
+      "target": {
+        "Length": 12.0
+      },
+      "type_id": "PartDesign::Pad"
+    },
+    "modality": "gui"
+  }
+}

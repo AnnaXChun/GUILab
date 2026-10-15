@@ -14,6 +14,7 @@
 | GUI 进程同步 | 上游未提供可复用的同步 FreeCAD GUI IPC | 新增 guest-only loopback/Qt 主线程桥。仅 summary、commit/close、reopen；启动宏是受控 checkpoint 准备步骤。没有桥或无 ack 时拒绝配对；本机未运行 Qt/FreeCAD |
 | same-S0 | 精确截图哈希容易受光标/动画/通知影响 | 初版宁可拒绝 pair，要求稳定 workbench/camera/selection/文档集与截图。未用近似截图相等放宽证据 |
 | 任务分组 | 原 test_easy/test_small/test_60 重叠，且 precondition 工程可能重复 | 仅公开操作 family + 明确提供的 precondition 文件 SHA 做并集分组，兼顾领域与 edit 初筛池，尽量接近 60/20/20，seed=20261015。完整任务实际 92/25/23，edit 初筛候选 19/7/6；分组完整性优先于精确比例 |
+| 原生执行失败的归类 | 已知无效形体与网络结果不确定需要分开 | 文件可重开且终态已知时保留低质量候选；timeout/5xx 或无法恢复终态时判 invalid_pair。全部记录失败分支成本，未知动作数用 null，不当作零成本 |
 | verifier unknown | SPEC 允许不适用项重归一化，但未指定 unknown 的乐观处理 | 仅不适用项重归一化；任何适用质量项 unknown 则不产生方向标签。当前目标 grammar 保守，未覆盖项显式 unknown；只在 val 上扩展/冻结规则 |
 | `CLI/terminal_agent.py:236` 与 `scripts/python/api_agent.py:732` | SDK client 没有显式禁用默认重试 | 外部 `upstream_launch` 仅覆写 SDK constructor/request 预算，OpenAI max_retries=0、Gemini attempts=1；错误后不再调用 provider，usage 独立 JSONL。未改 prompt、parser 或评分器；原始命令与受限执行命令分开记录，guard 仅 mock transport 验证 |
 | P3 24 valid pairs | 默认限 3 live pairs，且没有额外授权 | 24-pair pilot 不启动，NOT_RUN_BUDGET。9 个 mock campaign case 不计入 3 个合法真实 smoke pair 或 24 valid pair 目标 |

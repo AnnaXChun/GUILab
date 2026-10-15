@@ -10,7 +10,7 @@
 | upstream CLI unittest | PASS | 7 tests；原始 `CLI.test_terminal_agent`，使用本项目轻量环境 |
 | upstream CLI dry-run | FAIL | 原始脚本 exit 1：`ModuleNotFoundError: No module named 'dotenv'`；依赖阻塞，未经过 VM/API |
 | 本项目 deterministic tests | PASS | 70 tests；命令和输出见 `commands.json` |
-| mock pair campaign | PASS | 9 synthetic 场景；完整 JSONL、冻结契约、状态差异与失败记录见 `../results/final_artifacts/` |
+| mock pair campaign | PASS | 9 synthetic 场景；完整 JSONL、冻结契约、状态差异与失败记录见 `../results/final_artifacts/`，版本化副本在 `evidence/mock_smoke/` |
 | Linux x86_64 / KVM / QEMU / VM | BLOCKED_BY_ENV | Darwin arm64，无 `/dev/kvm`、QEMU 或 qcow2；Docker daemon 可访问 |
 | 模型凭证 | BLOCKED_BY_CREDENTIALS | 当前进程未检测到支持的 provider 密钥；未读取 `.env`，未请求模型 |
 | 真实 GUI/API smoke | BLOCKED_BY_ENV | 实际任务数 N=0，真实 pair 数 N=0，FreeCAD 版本及 VM SHA 均为 null |

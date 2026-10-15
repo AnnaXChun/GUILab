@@ -24,4 +24,7 @@ synthetic 单测样本 N=9，仅用于工程验证。标签分布 `{'tie': 3, 'a
 | case_07_unknown_validity | synthetic | True | tie | quality evidence unavailable |
 | case_08_invalid_native | synthetic | True | gui | public_contract_only |
 
+完整指标与适用覆盖率见同名 JSON：valid_saved_artifact_rate、native_feature_tree_validity、preservation、editability probe、pair_valid_rate、label_coverage、route accuracy/regret 和分项成本。
+当前无真实 episode，part/sketch、creation/edit、failure_class 与 stage funnel 均无可统计样本。
+
 [研究假设] 真实标签能否改善路由，需要先验证原生文件恢复、双路径执行与差异重测；当前没有效果估计。

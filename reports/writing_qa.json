@@ -1,0 +1,14 @@
+{
+  "scope": "Chinese prose; code and raw evidence exempt",
+  "halfwidth_punctuation_adjacent_to_han": [],
+  "facts_checked": [
+    "commit",
+    "70 project tests",
+    "7 upstream tests",
+    "9 synthetic cases",
+    "0 real tasks",
+    "0 provider network requests",
+    "92/25/23 split",
+    "19/7/6 edit pool"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "editability": {
+    "applicable": true,
+    "confidence": 1.0,
+    "evidence": "isolated perturb/recompute/restore probe",
+    "reason": null,
+    "value": 1.0
+  },
+  "preservation": {
+    "applicable": true,
+    "confidence": 1.0,
+    "evidence": "protected independent objects: Other,Sketch",
+    "reason": null,
+    "value": 1.0
+  },
+  "target_progress": {
+    "applicable": true,
+    "confidence": 1.0,
+    "evidence": "public dimensional contract: Length to 12 mm",
+    "reason": null,
+    "value": 1.0
+  },
+  "validity": {
+    "applicable": true,
+    "confidence": 1.0,
+    "evidence": "native runtime validation failed",
+    "reason": null,
+    "value": 0.0
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "branches": {},
+  "cadworld_commit": "e5d0ebab8bd28da6e98c68c61db05747d1647f7b",
+  "credit_delta": null,
+  "intent": {
+    "evidence": "Length to 12 mm",
+    "id": "edit_pad_length",
+    "object": "Pad",
+    "target": {
+      "Length": 12.0
+    },
+    "type_id": "PartDesign::Pad"
+  },
+  "invalid_reason": "InvalidPair: different_S0: canonical state differs",
+  "label": "invalid",
+  "label_source": "public_contract_only",
+  "leakage_audit_passed": true,
+  "model_contexts": {
+    "api": {
+      "model": "deterministic_stub",
+      "model_calls": 0,
+      "parameters": {},
+      "provider": "none",
+      "seed": 20261015,
+      "tokens": 0
+    },
+    "gui": {
+      "model": "deterministic_stub",
+      "model_calls": 0,
+      "parameters": {},
+      "provider": "none",
+      "seed": 20261015,
+      "tokens": 0
+    }
+  },
+  "pair_id": "995e4038-b25b-598f-aa96-23aaf3cb56b9",
+  "pair_valid": false,
+  "protocol": "CADWorld-Hybrid (extended protocol)",
+  "s0": {
+    "canonical_state_digest": "c17405da7c9db9625b37b9142a9c99c4a01c59d525774fd8f0e8b45f6bb4cc6a",
+    "checkpoint_path": "results/final_artifacts/checkpoint",
+    "checkpoint_sha256": "607f34cb3a078906392d6c9e79c1b15f52552f3a482b0a843095633b73891eea",
+    "screenshot_sha256": "52187750b1d04bf713561134cef7ff4aa4dbd45880dc26ef43a32dc7baa0bfa9",
+    "ui_digest": "7240bb1eb94bbaf6c48bdd44f168e5df0471623ccef15ea4898b0dec7d25b496",
+    "vm_checkpoint_sha256": null
+  },
+  "synthetic": true,
+  "task_id": "mock-edit-length",
+  "task_split": "train",
+  "tool_version": "actc-v1",
+  "verifier_config": {
+    "budgets": {
+      "gui_atomic_actions": 100,
+      "model_calls": 12,
+      "tokens": 12000,
+      "typed_api_calls": 40,
+      "wall_s": 600
+    },
+    "cost_lambda": 0.05,
+    "epsilon": 0.05,
+    "weights": {
+      "editability": 0.2,
+      "preservation": 0.2,
+      "target_progress": 0.35,
+      "validity": 0.25
+    }
+  }
+}

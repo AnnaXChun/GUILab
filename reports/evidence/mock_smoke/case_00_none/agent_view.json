@@ -1,0 +1,54 @@
+{
+  "id": "mock-edit-length",
+  "instruction_effective": "Set Pad Length to 12 mm, keeping Other unchanged.",
+  "instruction_image_count": 0,
+  "instruction_raw": "Set Pad Length to 12 mm, keeping Other unchanged.",
+  "object_summary": {
+    "objects": [
+      {
+        "constraints": [],
+        "dependencies": [],
+        "expressions": [],
+        "geometry": [],
+        "name": "Sketch",
+        "properties": {
+          "Radius": 5.0
+        },
+        "shape": null,
+        "status": [],
+        "type_id": "Sketcher::SketchObject"
+      },
+      {
+        "constraints": [],
+        "dependencies": [
+          "Sketch"
+        ],
+        "expressions": [],
+        "geometry": [],
+        "name": "Pad",
+        "properties": {
+          "Length": 10.0
+        },
+        "shape": null,
+        "status": [],
+        "type_id": "PartDesign::Pad"
+      },
+      {
+        "constraints": [],
+        "dependencies": [],
+        "expressions": [],
+        "geometry": [],
+        "name": "Other",
+        "properties": {
+          "Length": 3.0
+        },
+        "shape": null,
+        "status": [],
+        "type_id": "PartDesign::Pad"
+      }
+    ]
+  },
+  "requires_precondition": true,
+  "screenshot": "52187750b1d04bf713561134cef7ff4aa4dbd45880dc26ef43a32dc7baa0bfa9",
+  "system": "You may use GUI or approved FreeCAD typed APIs in the current task sandbox."
+}

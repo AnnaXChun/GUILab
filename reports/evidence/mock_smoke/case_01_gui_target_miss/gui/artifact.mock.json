@@ -1,0 +1,48 @@
+{
+  "state": {
+    "objects": [
+      {
+        "constraints": [],
+        "dependencies": [],
+        "expressions": [],
+        "geometry": [],
+        "name": "Sketch",
+        "properties": {
+          "Radius": 5.0
+        },
+        "shape": null,
+        "status": [],
+        "type_id": "Sketcher::SketchObject"
+      },
+      {
+        "constraints": [],
+        "dependencies": [
+          "Sketch"
+        ],
+        "expressions": [],
+        "geometry": [],
+        "name": "Pad",
+        "properties": {
+          "Length": 11.0
+        },
+        "shape": null,
+        "status": [],
+        "type_id": "PartDesign::Pad"
+      },
+      {
+        "constraints": [],
+        "dependencies": [],
+        "expressions": [],
+        "geometry": [],
+        "name": "Other",
+        "properties": {
+          "Length": 3.0
+        },
+        "shape": null,
+        "status": [],
+        "type_id": "PartDesign::Pad"
+      }
+    ]
+  },
+  "synthetic": true
+}

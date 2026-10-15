@@ -1,0 +1,22 @@
+{
+  "budgets": {
+    "gui_atomic_actions": 100,
+    "model_calls": 12,
+    "tokens": 12000,
+    "typed_api_calls": 40,
+    "wall_s": 600
+  },
+  "cadworld_commit": "e5d0ebab8bd28da6e98c68c61db05747d1647f7b",
+  "code_tree_sha256": "458197ea46cb8aed206675674d8d92c1502b6f76e23544d764fddfa330011ddc",
+  "config_sha256": "7300ab66f7bfd88d552f280e518f7f0870611df1e14c0574e42bc6471597f233",
+  "freecad_version": null,
+  "git_sha": "6555431270ef583de956fabc0cbedb55dd989a5e",
+  "model": "deterministic_stub",
+  "paid_runs": false,
+  "protocol": "CADWorld-Hybrid (extended protocol)",
+  "provider": "none",
+  "python_version": "3.12.14",
+  "seed": 20261015,
+  "synthetic": true,
+  "vm_sha256": null
+}

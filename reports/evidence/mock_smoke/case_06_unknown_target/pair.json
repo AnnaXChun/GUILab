@@ -1,0 +1,191 @@
+{
+  "branches": {
+    "api": {
+      "artifact_path": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/final_artifacts/case_06_unknown_target/api/artifact.mock.json",
+      "checks": {
+        "editability": {
+          "applicable": true,
+          "confidence": 1.0,
+          "evidence": "isolated perturb/recompute/restore probe",
+          "reason": null,
+          "value": 1.0
+        },
+        "preservation": {
+          "applicable": true,
+          "confidence": 1.0,
+          "evidence": "protected independent objects: Other,Sketch",
+          "reason": null,
+          "value": 1.0
+        },
+        "target_progress": {
+          "applicable": true,
+          "confidence": 0.0,
+          "evidence": "",
+          "reason": "no independently verifiable public target",
+          "value": null
+        },
+        "validity": {
+          "applicable": true,
+          "confidence": 1.0,
+          "evidence": "parse + FreeCAD reopen/recompute + valid shapes",
+          "reason": null,
+          "value": 1.0
+        }
+      },
+      "cost": {
+        "decision_turns": 1,
+        "gui_atomic_actions": 0,
+        "model_calls": 0,
+        "recoveries": 0,
+        "tokens": 0,
+        "typed_api_calls": 1,
+        "verification_calls": 1,
+        "wall_s": 0.0
+      },
+      "native": {
+        "container_ok": true,
+        "evidence_kind": "SYNTHETIC_TEST_DOUBLE",
+        "probe": true,
+        "recomputed": true,
+        "reopened": true,
+        "shapes_valid": true
+      },
+      "normalized_cost": 0.005,
+      "state_after": "535d536116644142dcf68e81c6fffcbe0273f61a1ad72d08c295dba9ddec404c",
+      "state_before": "c17405da7c9db9625b37b9142a9c99c4a01c59d525774fd8f0e8b45f6bb4cc6a",
+      "state_diff": {
+        "added": [],
+        "modified": [
+          "Pad"
+        ],
+        "removed": []
+      },
+      "status": "complete"
+    },
+    "gui": {
+      "artifact_path": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/final_artifacts/case_06_unknown_target/gui/artifact.mock.json",
+      "checks": {
+        "editability": {
+          "applicable": true,
+          "confidence": 1.0,
+          "evidence": "isolated perturb/recompute/restore probe",
+          "reason": null,
+          "value": 1.0
+        },
+        "preservation": {
+          "applicable": true,
+          "confidence": 1.0,
+          "evidence": "protected independent objects: Other,Sketch",
+          "reason": null,
+          "value": 1.0
+        },
+        "target_progress": {
+          "applicable": true,
+          "confidence": 0.0,
+          "evidence": "",
+          "reason": "no independently verifiable public target",
+          "value": null
+        },
+        "validity": {
+          "applicable": true,
+          "confidence": 1.0,
+          "evidence": "parse + FreeCAD reopen/recompute + valid shapes",
+          "reason": null,
+          "value": 1.0
+        }
+      },
+      "cost": {
+        "decision_turns": 1,
+        "gui_atomic_actions": 3,
+        "model_calls": 0,
+        "recoveries": 0,
+        "tokens": 0,
+        "typed_api_calls": 0,
+        "verification_calls": 1,
+        "wall_s": 0.0
+      },
+      "native": {
+        "container_ok": true,
+        "evidence_kind": "SYNTHETIC_TEST_DOUBLE",
+        "probe": true,
+        "recomputed": true,
+        "reopened": true,
+        "shapes_valid": true
+      },
+      "normalized_cost": 0.006,
+      "state_after": "535d536116644142dcf68e81c6fffcbe0273f61a1ad72d08c295dba9ddec404c",
+      "state_before": "c17405da7c9db9625b37b9142a9c99c4a01c59d525774fd8f0e8b45f6bb4cc6a",
+      "state_diff": {
+        "added": [],
+        "modified": [
+          "Pad"
+        ],
+        "removed": []
+      },
+      "status": "complete"
+    }
+  },
+  "cadworld_commit": "e5d0ebab8bd28da6e98c68c61db05747d1647f7b",
+  "credit_delta": null,
+  "intent": {
+    "evidence": "",
+    "id": "edit_pad_length",
+    "object": "Pad",
+    "target": {},
+    "type_id": "PartDesign::Pad"
+  },
+  "label": "tie",
+  "label_source": "public_contract_only",
+  "leakage_audit_passed": true,
+  "model_contexts": {
+    "api": {
+      "model": "deterministic_stub",
+      "model_calls": 0,
+      "parameters": {},
+      "provider": "none",
+      "seed": 20261015,
+      "tokens": 0
+    },
+    "gui": {
+      "model": "deterministic_stub",
+      "model_calls": 0,
+      "parameters": {},
+      "provider": "none",
+      "seed": 20261015,
+      "tokens": 0
+    }
+  },
+  "pair_id": "e20f7e11-a0ca-5a62-9700-8e7cfeb3e2ca",
+  "pair_valid": true,
+  "protocol": "CADWorld-Hybrid (extended protocol)",
+  "reason": "unknown public target; no directional supervision",
+  "s0": {
+    "canonical_state_digest": "c17405da7c9db9625b37b9142a9c99c4a01c59d525774fd8f0e8b45f6bb4cc6a",
+    "checkpoint_path": "results/final_artifacts/checkpoint",
+    "checkpoint_sha256": "607f34cb3a078906392d6c9e79c1b15f52552f3a482b0a843095633b73891eea",
+    "screenshot_sha256": "52187750b1d04bf713561134cef7ff4aa4dbd45880dc26ef43a32dc7baa0bfa9",
+    "ui_digest": "7240bb1eb94bbaf6c48bdd44f168e5df0471623ccef15ea4898b0dec7d25b496",
+    "vm_checkpoint_sha256": null
+  },
+  "synthetic": true,
+  "task_id": "mock-edit-length",
+  "task_split": "train",
+  "tool_version": "actc-v1",
+  "verifier_config": {
+    "budgets": {
+      "gui_atomic_actions": 100,
+      "model_calls": 12,
+      "tokens": 12000,
+      "typed_api_calls": 40,
+      "wall_s": 600
+    },
+    "cost_lambda": 0.05,
+    "epsilon": 0.05,
+    "weights": {
+      "editability": 0.2,
+      "preservation": 0.2,
+      "target_progress": 0.35,
+      "validity": 0.25
+    }
+  }
+}

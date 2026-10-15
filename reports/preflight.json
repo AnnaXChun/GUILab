@@ -54,31 +54,31 @@
       "status": "BLOCKED_BY_ENV"
     }
   },
-  "disk_free_bytes": 727992451072,
+  "disk_free_bytes": 727877664768,
   "live_ready": false,
   "python": "3.12.14",
   "selection": {
     "N_part_sketch": 140,
     "domain_counts": {
       "test": {
-        "part": 15,
+        "part": 11,
         "sketch": 12
       },
       "train": {
-        "part": 46,
+        "part": 55,
         "sketch": 37
       },
       "val": {
-        "part": 16,
+        "part": 11,
         "sketch": 14
       }
     },
     "eligible_edit": 32,
     "groups": 22,
     "split_counts": {
-      "test": 27,
-      "train": 83,
-      "val": 30
+      "test": 23,
+      "train": 92,
+      "val": 25
     }
   }
 }
