@@ -1,13 +1,17 @@
-请接手 GUILab 仓库中的 CADWorld ACTC 复现工程，直接推进执行。
+请接手 GUILab，在远程环境中推进少量真实 CADWorld baseline smoke。
 
-先读根目录 AGENTS.md、HANDOFF.md、SPEC.md，再按 HANDOFF 的顺序检查报告与 pinned upstream。上游固定为 e5d0ebab8bd28da6e98c68c61db05747d1647f7b，不重新调研论文或替换 benchmark。
+先读 AGENTS.md、docs/NEXT_BASELINE_RUN.md、HANDOFF.md、SPEC.md。上游固定为 e5d0ebab8bd28da6e98c68c61db05747d1647f7b，不重新调研论文、不替换 benchmark。
 
-当前真实 baseline 尚未跑通：只有历史 70 个项目单测、7 个 upstream CLI 单测和 9 个 synthetic case，真实任务与 pairs 为 0。首先确认当前远程环境是否具有 Linux x86_64、可访问 /dev/kvm、Docker daemon、QEMU、足够磁盘和外网。远程 Codex 普通容器不保证有这些能力；没有就如实记录 blocker，不能伪造 VM 成绩。
+用户已经明确要求真正运行几个小实验，而不只是继续 mock。你接手后先检查已有配置，再向用户一次性收集缺失的 BASE_URL、准确 MODEL_ID、接口类型以及 API key 的 secret/环境变量配置。GUI 需要图片输入能力，CLI 的接口兼容要按 pinned 代码核对。不要向这个已结束的本地交接会话索取密钥；真实实验由你所在的远程环境执行。
 
-按 P0 → P1 → P2 → P3 进行，当前重点是 P0：初始化 submodule、核对 SHA、安装合适依赖、让原始 CLI unittest 和 dry-run 通过；再在镜像与环境就绪时完成无模型 VM 检查。明确记录官方 GUI-only、官方 CLI、extended hybrid 的协议与不同可见信息。
+同时检查 Linux x86_64、可访问 /dev/kvm、Docker daemon、QEMU、磁盘和官方 VM，完成原始 CLI unittest/dry-run 与无模型 VM reset/observe。普通远程容器不保证有 KVM。缺环境就报告具体解除条件，不伪造运行结果。
 
-ENABLE_PAID_RUNS 默认保持 0。本条交接消息没有追加模型额度，不授权 full-200、24-pair pilot、自动下载大模型、训练或 veRL。先完成无付费工作；需要真实模型时说明实际 provider/model、可用凭证状态和具体任务/调用/token/wall 上限，再依据会话中的授权启用。不得输出或提交密钥。下载官方 VM 必须显式操作并记录实际 SHA。
+当前 baseline.py 写死了 GUI Gemini 与 CLI localhost endpoint，CLI 默认 key 是 EMPTY；仅设置通用 OPENAI_API_KEY 不保证生效。按 docs/NEXT_BASELINE_RUN.md 先在本项目做最小 endpoint/key 接入与 HTTP mock 验证，保留原始 runner、prompt、parser、评分器以及零重试/usage/budget guard。
 
-HANDOFF.md 已列出应优先排查的代码风险，特别是 scripts/verify.py 的 Mac 固定预期、qcow2 backing file 的容器可见性、guest GUI bridge 的部署启动、headless FreeCAD 的保存重开，以及 pair artifact 到官方 post-hoc 评分路径的接入。逐项用真实环境验证后再更新阶段 gate，不能仅把 JSON 改为 PASS。
+少量真实 smoke 已获授权：首批最多 2 个任务，GUI sketch-061 与 part-076 各 3 turns，CLI sketch-061 最多 8 turns，另有 1 次小型 endpoint 生成验证；整批最多 15 次生成请求、16000 输出 tokens，细项和时限见 NEXT_BASELINE_RUN。默认 ENABLE_PAID_RUNS=0 保留；参数、环境、计量预算就绪后为该批设置 1，直接运行并完成结果收集，不再重复申请同一小批的启用许可。此授权不包含 25-step 追加、24-pair pilot、full-200、自动下载大模型、训练或 veRL。
 
-最终更新 reports/{REPRO_STATUS,BASELINE_REPRO,PILOT,FAILURE_CASES,DEVIATIONS}.md、机器可读阶段状态及必要脱敏证据，提交代码并报告实际命令、任务 ID、产物、成本、失败/阻塞和 GO/NO-GO。保留所有失败样本，mock 不计入研究结论。
+不要把 key 写入 Git、argv、日志或报告。API 错误不自动重试；失败请求计入额度。请求与成本按整批累计，不因 GUI/CLI 分别启动而重置。凭证缺失、接口不兼容、环境不可用或需要扩展预算时，给出具体缺项再继续。
+
+目前只有历史 70 个项目测试、7 个上游 CLI 单测和 9 个 synthetic case，真实任务与 pairs 为 0。真实任务 strict=0 与 run_error 分开，官方 GUI-only、官方 CLI、extended hybrid 分开。先打通 P0；再验证 P1 原生保存重开与 GUI/API 同步，后续 pairs 不越级。
+
+完成这批后保留全部成功/失败样本，更新 reports/{REPRO_STATUS,BASELINE_REPRO,PILOT,FAILURE_CASES,DEVIATIONS}.md、stages.json 与脱敏证据，提交代码并报告真实命令、任务 ID、artifact、评分、调用/token/wall 成本、阻塞和 GO/NO-GO。不要以新一轮泛泛计划结束可执行的工作。

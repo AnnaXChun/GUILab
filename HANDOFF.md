@@ -2,6 +2,12 @@
 
 交接日期：2026-10-16。代码来源：本项目 main，历史已保留；本文件与移植检查随本次交接提交。规格的证据类型、实验边界与 Stop/Go 继续有效。
 
+## 下一步执行指令已更新
+
+用户后续明确要求由远程 Codex 索取 base URL、API key、model ID 并真正跑少量 baseline。先读 [下一批真实 smoke](docs/NEXT_BASELINE_RUN.md)：其中给出参数收集方式、需要修正的 endpoint 接入、首批 15 次生成请求 / 16000 输出 tokens 上限及验收顺序。环境和参数就绪后，远程在该范围内启用调用并执行，不继续停在 mock 或重复询问是否允许相同小批实验。
+
+此次本地会话只修改仓库说明，不收集或使用密钥、不运行实验。以下历史状态仍然有效，真实任务数尚未增加。
+
 ## 先看结论
 
 **当前没有完成真实 baseline 复现。远程第一个目标是打通 P0。**
@@ -100,7 +106,7 @@ bash scripts/run_baseline.sh --kind gui-25 --dry-run
 bash scripts/run_baseline.sh --kind cli --dry-run
 ```
 
-有明确运行授权、凭证/服务、预算和健康状态之后才启用实时命令。GUI-connect 是 2 题、每题最多 3 个 decision turns；CLI smoke 默认只取 sketch-061，最多 8 turns/terminal calls、600 秒、12000 completion tokens。CLI 本地 server 不会自动启动，必须先核对实际 served model ID 与 endpoint。自定义 provider/base URL 需要按 pinned 源码作最小参数适配并记录。
+少量真实 smoke 已按 `docs/NEXT_BASELINE_RUN.md` 获得后续授权；补齐凭证/服务、环境和预算控制后启用实时命令。GUI-connect 是 2 题、每题最多 3 个 decision turns；CLI smoke 默认只取 sketch-061，最多 8 turns/terminal calls、600 秒、12000 completion tokens。CLI 本地 server 不会自动启动，必须先核对实际 served model ID 与 endpoint。自定义 provider/base URL 需要按 pinned 源码作最小参数适配并记录。
 
 `baseline.py` 的受限执行入口调用原始 runner，并通过 `upstream_launch.py` 对 OpenAI/Gemini SDK 关闭重试、记录 usage 和限制预算；此前只做 HTTP mock 测试。原始 runner 的 prompt、parser、评测逻辑未改。当前 guard 的 call/output-token/wall gate 是 **整次启动共享**，不是每题独立，参数名与报告中不能误写为实际按题重置。600 秒 subprocess timeout 也共享。先测 3-step 连接，不直接开 25-step；25-step 还要求连接验收文件和超过默认 12 calls 的额外预算。
 

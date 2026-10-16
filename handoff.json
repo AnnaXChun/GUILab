@@ -6,8 +6,8 @@
   "branch": "main",
   "read_first": [
     "AGENTS.md",
-    "HANDOFF.md",
-    "SPEC.md"
+    "docs/NEXT_BASELINE_RUN.md",
+    "HANDOFF.md"
   ],
   "cadworld_commit": "e5d0ebab8bd28da6e98c68c61db05747d1647f7b",
   "historical_evidence": {
@@ -20,8 +20,8 @@
     "baseline_reproduced": false
   },
   "next_phase": "P0",
-  "next_action": "Initialize pinned submodule, run lightweight tests, then verify remote Linux x86_64/KVM/Docker/QEMU and complete original CLI dry-run.",
-  "paid_run_authorization_added": false,
+  "next_action": "Read docs/NEXT_BASELINE_RUN.md; collect BASE_URL, MODEL_ID, interface and secret; check remote VM environment; adapt endpoint handling; enable the authorized bounded real baseline smoke when ready.",
+  "paid_run_authorization_added": true,
   "defaults": {
     "ENABLE_PAID_RUNS": 0,
     "MAX_LIVE_TASKS": 2,
@@ -52,5 +52,25 @@
     "reports/FAILURE_CASES.md",
     "reports/DEVIATIONS.md",
     "reports/stages.json"
-  ]
+  ],
+  "execution_location": "remote Codex; current local session edits documentation only",
+  "authorized_real_smoke": {
+    "scope": "initial small baseline batch only",
+    "unique_tasks": [
+      "freecad-sketch-061",
+      "freecad-part-076"
+    ],
+    "endpoint_generation_calls": 1,
+    "gui_task_max_turns": 3,
+    "cli_tasks": [
+      "freecad-sketch-061"
+    ],
+    "cli_max_turns": 8,
+    "batch_max_generation_calls": 15,
+    "batch_max_output_tokens": 16000,
+    "automatic_retries": 0,
+    "requires_endpoint_and_environment_ready": true,
+    "execute_when_ready_without_duplicate_scope_approval": true,
+    "pilot24_or_full200_authorized": false
+  }
 }

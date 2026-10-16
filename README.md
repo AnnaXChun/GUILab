@@ -2,7 +2,7 @@
 
 GUILab 当前承载 CADWorld Counterfactual Tool Credit（ACTC）复现工程。仓库根目录即项目根目录。
 
-远程 Codex 接手请先读 [HANDOFF.md](HANDOFF.md)，将 [REMOTE_CODEX_PROMPT.md](REMOTE_CODEX_PROMPT.md) 作为任务提示；执行约束见 [AGENTS.md](AGENTS.md)。
+下一步是远程少量真实 baseline smoke，具体见 [NEXT_BASELINE_RUN.md](docs/NEXT_BASELINE_RUN.md)。远程接手读 [HANDOFF.md](HANDOFF.md)，使用 [REMOTE_CODEX_PROMPT.md](REMOTE_CODEX_PROMPT.md) 启动；执行约束见 [AGENTS.md](AGENTS.md)。
 
 ```bash
 git clone --recurse-submodules https://github.com/AnnaXChun/GUILab.git
@@ -27,7 +27,7 @@ bash scripts/run_smoke.sh --dry-run --output results/my_mock_run
 
 `scripts/*.sh` 支持 `--help`、`--dry-run`，并传播非零退出码。`scripts/verify.py --run-id <new_name>` 保存确切命令、输出和退出码。目录已存在时拒绝覆盖；失败尝试必须留存。完整上游依赖只在 Linux x86_64 上用 `bash scripts/bootstrap.sh --full-upstream` 安装。
 
-真实基线先使用 `bash scripts/run_baseline.sh --kind gui-connect --dry-run` 查看固定命令。`ENABLE_PAID_RUNS=0` 默认关闭实时执行；不自动下载 VM，不启动模型服务，不发起 full-200。基线启动时由外部 SDK guard 强制关闭重试并限制调用数、输出 tokens 与总时长；guard 只经 mock transport 验证，尚无真实 provider 运行。
+真实基线先使用 `bash scripts/run_baseline.sh --kind gui-connect --dry-run` 查看固定命令。`ENABLE_PAID_RUNS=0` 保留为无配置默认；远程小批真实 smoke 已获后续授权，配置和环境就绪后按 NEXT_BASELINE_RUN 在批次进程启用；不自动下载 VM，不启动模型服务，不发起 full-200。基线启动时由外部 SDK guard 强制关闭重试并限制调用数、输出 tokens 与总时长；guard 只经 mock transport 验证，尚无真实 provider 运行。
 
 原生配对入口为 `python -m cad_cf.counterfactual --config configs/smoke.yaml --live-plan <reviewed-plan.json> --output results/<new-run>`。它要求 Linux preflight、P0/P1 的真实验收证据、同一停机 disk checkpoint 的两个新 overlay、当前 native checkpoint、两个固定候选和公开 task view。它不调用模型生成代码。`cad_cf.live.run_plan` 复用 upstream DesktopEnv 启动两个独立实例，拒绝用同 VM undo 冒充恢复。
 
