@@ -1,0 +1,27 @@
+{
+  "classification": "exploratory_infrastructure_smoke",
+  "status": "BLOCKED_BY_ENV",
+  "go": false,
+  "final_attempt_boot_seconds": 900.001,
+  "actual_task_ids": [],
+  "official_gui_episodes": 0,
+  "official_cli_episodes": 0,
+  "real_pairs": 0,
+  "model_calls": 0,
+  "controller_execute_dispatches": 0,
+  "native_probe_status": "NOT_RUN",
+  "native_probe_reason": "controller screenshot and platform never ready in bounded boot attempt",
+  "freecad_version": null,
+  "strict": null,
+  "strict_reason": "no benchmark episode",
+  "reference_gates_changed": false,
+  "asset_sha256": "edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12",
+  "failure_observations": [
+    "default tini subreaper unsupported",
+    "iptables initialization unsupported under emulated userspace",
+    "guest device UUID wait timeout and boot/efi mount dependency failure",
+    "controller screenshot timeout at 900 seconds; platform read timeout"
+  ],
+  "root_cause_fully_identified": false,
+  "next_action": "On remote x86_64 Linux with accessible KVM, independently verify the same asset and DesktopEnv reset/observe/close before the already authorized bounded model baseline batch."
+}

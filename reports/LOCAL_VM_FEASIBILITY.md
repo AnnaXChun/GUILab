@@ -1,15 +1,13 @@
-# 本地 Linux 可行性
+# 本机 Linux 与 CADWorld VM 可行性
 
-2026-10-16，只读核查，未安装新 VM、修改现有 Colima profile、拉取容器镜像或下载官方 qcow2。
+2026-10-16 已从只读核查推进到真实、无模型的 VM 软件模拟检查。完整结果、命令、截图与失败证据见 [Mac VM 验证](MAC_VM_SMOKE.md)；早期 `local_vm_preflight.json` 只表示实验前状态。
 
-本机为 Apple M5 Pro、macOS 26.5.1、ARM64、48 GiB 内存。已经有一台运行中的 Colima Linux VM：Ubuntu 24.04.4 LTS、aarch64、4 vCPU、12 GiB 内存、80 GiB 虚拟磁盘。guest 内实测 `/dev/kvm` 不存在。
+本机为 Apple M5 Pro、ARM64、48 GiB RAM。原 `scientific-harness` ARM Linux profile 保持运行，默认 Docker context 未改变。为本轮另建 `cadworld-probe`：8 vCPU、16 GiB RAM、128 GiB data disk；没有 `/dev/kvm`。
 
-需要补充先前的环境判断：pinned upstream 并非完全禁止无 KVM 运行。`desktop_env/providers/docker/provider.py:172,274` 和 `DOCKER_GUIDELINE.md` 明确支持 `CADWORLD_ENABLE_KVM=false`，会设置 `KVM=N`。因此本地软件模拟可以作为待验证的功能 smoke 路径，不能直接断言 VM 完全无法启动。
+已实际执行官方 linux/amd64 容器中的 QEMU 9.1.0，并通过 TCG BIOS 指令检查。28.3 GB 官方 FreeCAD qcow2 已下载，完整 SHA256 与 HF 内容哈希一致。该官方磁盘已在 TCG 中进入 64 位内核态并显示 Ubuntu 启动动画，不能再把“Mac 只能做静态检查”当作硬件事实。
 
-本次 registry metadata 核查显示，上游使用的 `happysixd/osworld-docker:latest` 为 linux/amd64，观察到的 digest 是 `sha256:0e6497a9295647cf05bf2b2af522fdd79bdeba2737595259cab310a3bcf6baa9`。这里只读取 manifest，没有拉取镜像。
+完整桌面与 controller 本轮未通过验收，900.001 秒后状态为 `BLOCKED_BY_ENV`。默认 `tini -s` 入口在 QEMU user translation 下失败；直接原入口后，容器内 iptables 初始化也失败。使用同一镜像现有的直接入口与 user 网络选项后，已启动 guest，但观察到等待磁盘 UUID 超时、`/boot/efi` 挂载依赖失败和 systemd 错误。没有执行 `/execute`、FreeCAD 保存重开或模型 baseline，不能把启动动画当作 reset/action 闭环。
 
-Mac 上再创建 ARM Linux，仍无法给官方 x86_64 guest 提供同架构 KVM 加速。Lima 2.2.0 的配置说明支持 M3 及以上芯片的 ARM 嵌套虚拟化，但它不提供跨架构 x86 KVM。容器 amd64 兼容和 FreeCAD 系统 VM 的软件模拟均需另外实测；当前没有启动耗时、交互延迟或成功结果。
+Mac 的主要成本来自跨架构软件模拟与容器运行时兼容；再装一台普通 ARM Linux 不会提供 x86 KVM。本轮使用 amd64 容器的 QEMU user translation，再由其中的 TCG 执行 x86 guest，是两层软件执行。原生 ARM 版 QEMU 模拟 x86 是另一条可探索路径，本轮未验证，不能假定它已可用。
 
-结论：Linux 本身已经可用，无需为“有 Linux”重复安装。若继续本地路线，应使用独立 CADWorld profile 做明确标注的软件模拟试验，先验证容器兼容，再显式准备官方镜像，最后做限时、无模型的 VM 连接测试。现有其他项目的 profile 不应被改作 CADWorld 环境。
-
-SPEC 的 Linux x86_64 + KVM 参考协议仍为 NO-GO；软件模拟结果须单列环境差异与时间成本，不用于等硬件效率比较。正式 baseline 推荐可访问 `/dev/kvm` 的 x86_64 Linux 主机。真实任务与 paid model calls 仍为 0。
+正式参考协议仍是 Linux x86_64 + KVM；本机结果不改变 P0–P3 gate，也不能用于 GUI/API 等硬件效率比较。下一步为远程可访问 KVM 的 x86_64 Linux 上验证同一资产的 `DesktopEnv.reset → observe → close`，再执行已授权的少量模型 baseline。远程仍须实测，不能保证只换主机就自动成功。

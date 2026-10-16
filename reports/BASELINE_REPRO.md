@@ -30,3 +30,5 @@ GUI 计划命令保留原始 runner，并显式加入 `--no-download_vm`，防�
 CLI-only 无运行时截图；扩展协议中 GUI/API/router 使用同一 effective instruction 和当前工程摘要。两者的 observation budget 不等同。`test_easy` 结果即使日后得到，也不能外推 full-200 或与论文 17.5% 直接比较。
 
 没有 `result.txt` / `evaluation.json` 的官方 episode，本报告的 strict、failure_class 与 stage funnel 为 unavailable，而非 0。预算与环境失败也不计作 Agent 任务错误。
+
+2026-10-16 本机另行执行了无模型的官方 VM 软件模拟检查，详见 [Mac VM 验证](MAC_VM_SMOKE.md)。官方 qcow2 已下载并通过完整 SHA256 校验；默认入口和默认网络的失败均保留，兼容配置未改 upstream tracked 文件。本轮没有启动官方 GUI/CLI 模型 runner，没有 agent 生成的 `.FCStd` 或官方评分结果，因此本表的模型任务 N=0、strict=null 不变。

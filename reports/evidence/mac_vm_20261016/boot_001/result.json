@@ -1,0 +1,25 @@
+{
+  "classification": "exploratory_infrastructure_smoke",
+  "model_calls": 0,
+  "benchmark_episodes": 0,
+  "image": "happysixd/osworld-docker@sha256:0e6497a9295647cf05bf2b2af522fdd79bdeba2737595259cab310a3bcf6baa9",
+  "context": "colima-cadworld-probe",
+  "vm": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/vm_data/FreeCAD-Ubuntu.qcow2",
+  "kvm": false,
+  "cpu_cores": 2,
+  "ram": "8G",
+  "boot_deadline_seconds": 900,
+  "status": "FAIL",
+  "started_at_utc": "2026-10-16T09:27:34.684133+00:00",
+  "probe_source_sha256": "6963e6168827dd0f80d6a4a10c4f5f1950c53773d5b90ad0535704f09520c6ae",
+  "vm_sha256": "edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12",
+  "hash_seconds": 14.23,
+  "container_id": "3ed7b0e349648bf99814d19536b4c46b5753d1607b0bf1d9ed768a38ef08887c",
+  "endpoint": "http://127.0.0.1:15000",
+  "error": {
+    "type": "RuntimeError",
+    "message": "container exited before controller readiness"
+  },
+  "stopped": true,
+  "ended_at_utc": "2026-10-16T09:27:49.662485+00:00"
+}

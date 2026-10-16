@@ -1,0 +1,1 @@
+[FATAL tini (1)] PR_SET_CHILD_SUBREAPER is unavailable on this platform. Are you using Linux >= 3.4?

@@ -1,0 +1,6 @@
+{
+  "route": "GET /platform",
+  "mutating": false,
+  "error_type": "ReadTimeout",
+  "wall_seconds": 3.014
+}

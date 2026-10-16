@@ -1,0 +1,6 @@
+{
+  "switch_time_utc": "2026-10-16T09:16:34Z",
+  "reason": "bounded transfer: sequential download too slow; resume the same official URL with aria2",
+  "preserved_prefix_bytes": 2202009600,
+  "sha256_expected": "edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12"
+}

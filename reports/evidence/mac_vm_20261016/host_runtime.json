@@ -1,0 +1,13 @@
+{
+  "host_system": "Darwin",
+  "host_machine": "arm64",
+  "host_release": "25.5.0",
+  "processor": "Apple M5 Pro",
+  "physical_memory_bytes": 51539607552,
+  "free_disk_bytes": 698913353728,
+  "active_docker_context": "colima-scientific-harness",
+  "ports": {
+    "15000": "available before launch",
+    "18006": "available before launch"
+  }
+}

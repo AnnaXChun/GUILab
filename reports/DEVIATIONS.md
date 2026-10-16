@@ -21,3 +21,17 @@
 | 运行时模型生成 | 本轮凭证/环境不可用 | deterministic candidate stub + reviewed live-plan 接口；没有伪造模型 proposal、tokens、provider 时间或任务成绩。P4 predictor 接口提供，训练 NOT_IMPLEMENTED |
 
 所有上述变化均位于本项目。上游 evaluator、规则、参考 artifact 与 tracked 文件未改动，也未读取 golden `.FCStd` 来生成答案。选样只 hash `fixtures/precondition/` 下明确作为任务输入的文件，未打开这些文件解析几何。真实 native worker 路径目前只静态验证，验收仍需 Linux VM。
+
+## 2026-10-16 Mac 环境验证
+
+用户后续要求“开始验证”，因此在原“Mac 静态开发”边界之外增加独立、限时、无模型的软件模拟检查。它不是正式 baseline，不改变 `preflight.py` 和 `reports/stages.json` 的 Linux x86_64/KVM gate。
+
+| 来源与确切路径 | 实测差异 | 最小适配与影响 |
+| --- | --- | --- |
+| `desktop_env/providers/docker/provider.py:start_emulator` | 本机为 ARM64，只有 amd64 binfmt；外层 preflight 会拒绝参考环境以外的启动 | 新增 `scripts/probe_mac_vm.py`，以显式 Docker CLI 检查同一官方容器/VM 的基础设施，不声称执行过 `DesktopEnv.reset` 或 baseline runner |
+| 官方容器 Config.Entrypoint | `/usr/bin/tini -s /run/entry.sh` 在 QEMU user translation 下立即报 subreaper 不支持 | 保留默认入口失败；显式 `--direct-entry` 直接执行未修改的 `/run/entry.sh`。仅验证短期独立容器，不替换正式 Linux 入口 |
+| 官方容器 `/run/network.sh` | legacy iptables 查询失败；模块加载后仍失败，nft 查询也不支持。自动 user fallback 未转发 5000 | 显式 `--user-network` 使用镜像既有 `NETWORK=user`、`USER_PORTS=5000,9222,8080`；不改评分或 guest 工程 |
+| 官方容器及 provider 的资源参数 | 参考约 8 vCPU/8 GiB/KVM；本轮为 2 vCPU/8 GiB/TCG | 记录真实时延与超时，不用于等硬件效率比较或 stage PASS |
+| pinned `scripts/python/download_vm_image.py` | 单连接传输过慢 | 同一官方 URL 续传，保留失败/切换记录；完整 Python SHA256 与 HF 内容哈希一致后才改为正式 qcow2 文件名。没有替换镜像或重选 benchmark |
+
+逐次命令、结果、截图和清理证据以 `MAC_VM_SMOKE.md` 及其版本化证据为准。没有模型生成、官方评分或真实 pair，不把可信基础设施探针用于 preference 数据。

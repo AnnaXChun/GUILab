@@ -53,7 +53,7 @@
     "reports/DEVIATIONS.md",
     "reports/stages.json"
   ],
-  "execution_location": "remote Codex; current local session edits documentation only",
+  "execution_location": "remote Codex for model baselines; local bounded model-free VM feasibility smoke authorized on 2026-10-16",
   "authorized_real_smoke": {
     "scope": "initial small baseline batch only",
     "unique_tasks": [
@@ -72,5 +72,22 @@
     "requires_endpoint_and_environment_ready": true,
     "execute_when_ready_without_duplicate_scope_approval": true,
     "pilot24_or_full200_authorized": false
+  },
+  "mac_infrastructure_evidence": "reports/MAC_VM_SMOKE.md",
+  "vm_asset_observed": {
+    "bytes": 28310503424,
+    "sha256": "edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12",
+    "verified_on": "2026-10-16",
+    "remote_must_hash_its_own_file": true
+  },
+  "mac_infrastructure_result": {
+    "status": "BLOCKED_BY_ENV",
+    "controller_ready": false,
+    "boot_timeout_seconds": 900,
+    "official_vm_guest_boot_started": true,
+    "execute_dispatches": 0,
+    "native_probe": "NOT_RUN",
+    "model_calls": 0,
+    "evidence": "reports/evidence/mac_vm_20261016/summary.json"
   }
 }

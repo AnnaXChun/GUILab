@@ -1,0 +1,28 @@
+{
+  "classification": "exploratory_infrastructure_smoke",
+  "model_calls": 0,
+  "benchmark_episodes": 0,
+  "image": "happysixd/osworld-docker@sha256:0e6497a9295647cf05bf2b2af522fdd79bdeba2737595259cab310a3bcf6baa9",
+  "context": "colima-cadworld-probe",
+  "vm": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/vm_data/FreeCAD-Ubuntu.qcow2",
+  "kvm": false,
+  "cpu_cores": 2,
+  "ram": "8G",
+  "boot_deadline_seconds": 900,
+  "entrypoint_mode": "direct-bash-entry",
+  "network_mode": "explicit-user-with-controller-forward",
+  "status": "BLOCKED_BY_ENV",
+  "started_at_utc": "2026-10-16T09:30:53.744714+00:00",
+  "probe_source_sha256": "324a4c9f828df9be4519c7688b75031df26c43320e58c6f4c1a54e5e3c9b1c6c",
+  "vm_sha256": "edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12",
+  "hash_seconds": 15.32,
+  "container_id": "d3e793427597c226636e7371ed48e5373bfb017ec17ea4e3a5a30689ad0c4bdb",
+  "endpoint": "http://127.0.0.1:15000",
+  "boot_seconds": 900.001,
+  "error": {
+    "type": "TimeoutError",
+    "message": "controller screenshot not ready before boot deadline"
+  },
+  "stopped": true,
+  "ended_at_utc": "2026-10-16T09:46:10.949785+00:00"
+}

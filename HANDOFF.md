@@ -6,7 +6,7 @@
 
 用户后续明确要求由远程 Codex 索取 base URL、API key、model ID 并真正跑少量 baseline。先读 [下一批真实 smoke](docs/NEXT_BASELINE_RUN.md)：其中给出参数收集方式、需要修正的 endpoint 接入、首批 15 次生成请求 / 16000 输出 tokens 上限及验收顺序。环境和参数就绪后，远程在该范围内启用调用并执行，不继续停在 mock 或重复询问是否允许相同小批实验。
 
-此次本地会话只修改仓库说明，不收集或使用密钥、不运行实验。以下历史状态仍然有效，真实任务数尚未增加。
+用户随后要求本机“开始验证”。本轮使用独立 Colima profile 做限时、无模型的软件模拟检查，实际结果见 [Mac VM 验证](reports/MAC_VM_SMOKE.md)。不收集或使用模型密钥，以下模型任务数尚未增加。
 
 ## 先看结论
 
@@ -72,7 +72,7 @@ df -h .
 
 Ubuntu 缺少运行时且具有安装权限时，可按 pinned upstream README 安装 `docker.io qemu-system-x86 qemu-utils`，配置 docker/kvm 组后重新登录；不要把权限失败绕过成 root 下不受控执行。uv 缺失时使用其官方安装方式。主机安装操作与模型运行额度分别记录。
 
-本机此前是 Apple M5 Pro / ARM64。已有 ARM Ubuntu VM，但没有 x86 KVM。上游允许 `CADWORLD_ENABLE_KVM=false` 软件模拟；这条路径未实测，且当前 preflight 仍按参考协议严格要求 x86_64/KVM。软件模拟只能单列 exploratory 结果，不静默放宽正式 gate。详情见 `reports/LOCAL_VM_FEASIBILITY.md`。
+本机是 Apple M5 Pro / ARM64，没有 x86 KVM。已使用独立 ARM Colima profile 实测官方容器与 VM 的 TCG 路径，逐次结果见 `reports/MAC_VM_SMOKE.md`。默认入口与网络都遇到兼容性错误，不能把“支持关闭 KVM”理解为原样即可运行。当前 preflight 仍按参考协议严格要求 x86_64/KVM；软件模拟单列 exploratory 结果，不放宽正式 gate。
 
 ## P0：官方基线闭环
 
@@ -94,9 +94,9 @@ cd ../..
 bash scripts/preflight.sh
 ```
 
-实际 SHA 未知，必须现场计算，不能填本机没有测过的值。不要把 qcow2 提交到 Git。CAM 官方评分还需要宿主 FreeCAD 1.1.x；前几道 sketch/part smoke 可以避开 CAM。
+本机本次实测 qcow2 SHA256 为 `edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12`，28,310,503,424 bytes。远程仍须对实际文件独立计算并记录，不能只复制该值作为检查结果；源地址的 main 可以变化。不要把 qcow2 提交到 Git。CAM 官方评分还需要宿主 FreeCAD 1.1.x；前几道 sketch/part smoke 可以避开 CAM。
 
-先核对两个计划任务 `freecad-sketch-061`、`freecad-part-076`，它们都是 creation，不是 preservation 编辑主实验。可先实现或执行一次 **无模型的** `DesktopEnv.reset → observe → close` 环境探针，并记录代码与日志；使用 pinned 上游的 provider/controller，不读取隐藏规则给 agent。仓库没有已经验证好的无模型 VM 探针，不要声称存在。
+先核对两个计划任务 `freecad-sketch-061`、`freecad-part-076`，它们都是 creation，不是 preservation 编辑主实验。先实现或执行一次 **无模型的** `DesktopEnv.reset → observe → close` 环境探针，并记录代码与日志；使用 pinned 上游的 provider/controller，不读取隐藏规则给 agent。新增的 `scripts/probe_mac_vm.py` 只检查独立 Docker 基础设施，不能替代这个 DesktopEnv 闭环，实际结果见 Mac VM 报告。
 
 查看模型 smoke 的确切计划命令，仍不请求模型：
 

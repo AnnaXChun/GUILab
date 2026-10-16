@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "sha256": "edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12",
+  "expected_sha256": "edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12",
+  "bytes": 28310503424,
+  "hash_seconds": 13.922,
+  "verification": "complete host Python hashlib pass, independent of aria2 checksum progress",
+  "aria2_checksum_stopped_after_independent_hash_pass": true,
+  "destination": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/vm_data/FreeCAD-Ubuntu.qcow2"
+}

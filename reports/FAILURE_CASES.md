@@ -1,6 +1,6 @@
 # 失败案例
 
-synthetic 行是明确注入的单测场景。真实样本 N=0，与 mock 分开统计。
+synthetic 行是明确注入的单测场景。真实模型/pair 样本 N=0。2026-10-16 的真实基础设施失败单列于文末，不当作 Agent 任务错误。
 
 | 样本 | 观察结果 | Trace |
 | --- | --- | --- |
@@ -12,3 +12,13 @@ synthetic 行是明确注入的单测场景。真实样本 N=0，与 mock 分开
 | case_06_unknown_target | unknown public target; no directional supervision | `results/final_artifacts/case_06_unknown_target/trajectory.jsonl` |
 | case_07_unknown_validity | quality evidence unavailable | `results/final_artifacts/case_07_unknown_validity/trajectory.jsonl` |
 | case_08_invalid_native | API 原生重算失败；validity=0，保留失败证据 | `results/final_artifacts/case_08_invalid_native/trajectory.jsonl` |
+
+## Mac 无模型基础设施失败
+
+| 尝试 | 实测失败与处置 | 证据 |
+| --- | --- | --- |
+| `boot_001` | 官方容器默认 `tini -s` 在 amd64 user translation 下报 `PR_SET_CHILD_SUBREAPER is unavailable`，立即退出；没有 guest 动作或模型请求 | `evidence/mac_vm_20261016/boot_001/` |
+| `boot_002` | 直接原入口后 QEMU 运行；iptables 初始化失败导致自动退回 user 网络，未转发 controller 5000。捕获 UEFI 截图后主动停止该独立容器，用新 overlay 显式配置 user forwarding | `evidence/mac_vm_20261016/boot_002/` |
+| `boot_003` | 显式 user forwarding 后进入内核与 Ubuntu 动画，但 guest 出现设备 UUID 等待超时、`/boot/efi` 挂载依赖失败；900.001 秒后 controller 未就绪。`/platform` 也超时，未发 `/execute`；根因未完全确定 | `evidence/mac_vm_20261016/boot_003/` |
+
+启动时限与最终结果见 [Mac VM 验证](MAC_VM_SMOKE.md)。这些失败均不产生 preference 标签，不计入官方 GUI-only、CLI 或 Hybrid 的 task success 分母。

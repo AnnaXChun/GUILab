@@ -1,0 +1,7 @@
+{
+  "exit_code": 7,
+  "timed_out": false,
+  "duration_seconds": 298.113,
+  "destination": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/vm_data/FreeCAD-Ubuntu.qcow2.download",
+  "download_and_checksum_passed": false
+}

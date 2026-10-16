@@ -1,0 +1,5 @@
+{
+  "reason": "known networking failure: emulated legacy/nft iptables unavailable; automatic slirp fallback omits controller port 5000",
+  "action": "stop this disposable container and launch a fresh overlay with explicit NETWORK=user and USER_PORTS=5000,9222,8080",
+  "not_a_controller_retry": true
+}

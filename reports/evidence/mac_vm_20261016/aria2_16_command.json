@@ -1,0 +1,18 @@
+[
+  "aria2c",
+  "--continue=true",
+  "--split=16",
+  "--max-connection-per-server=16",
+  "--min-split-size=16M",
+  "--file-allocation=none",
+  "--max-tries=1",
+  "--connect-timeout=20",
+  "--timeout=30",
+  "--summary-interval=15",
+  "--console-log-level=warn",
+  "--download-result=full",
+  "--checksum=sha-256=edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12",
+  "--dir=/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/vm_data",
+  "--out=FreeCAD-Ubuntu.qcow2.download",
+  "https://huggingface.co/Zihan1004/CADWorld/resolve/main/vm_data/FreeCAD-Ubuntu.qcow2?download=true"
+]

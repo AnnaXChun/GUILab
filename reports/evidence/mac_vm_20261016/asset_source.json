@@ -1,0 +1,12 @@
+{
+  "source": "https://huggingface.co/Zihan1004/CADWorld/resolve/main/vm_data/FreeCAD-Ubuntu.qcow2?download=true",
+  "expected_bytes_from_HTTP": 28310503424,
+  "expected_sha256_from_x_linked_etag": "edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12",
+  "observed_cdn_etag": "a4cbd7236a40fc3f9920a20d0d7b7a5bdebe66dbf2b27b623329be61a55f4a91",
+  "range_probe": {
+    "status_code": 206,
+    "bytes": 1048576,
+    "content_range": "bytes 28309454848-28310503423/28310503424"
+  },
+  "credentials_or_model_requests": false
+}

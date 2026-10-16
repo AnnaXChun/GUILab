@@ -1,0 +1,20 @@
+{
+  "probe_containers_removed": [
+    "actc-mac-infra-probe-20261016",
+    "actc-mac-infra-probe-20261016-002",
+    "actc-mac-infra-probe-20261016-003"
+  ],
+  "probe_profile_stopped": true,
+  "official_qcow2_retained": true,
+  "active_context_unchanged": true,
+  "active_context": "colima-scientific-harness",
+  "other_containers_after": [
+    "scientific-harness-scientific-harness-api-1 Up 7 days (healthy)",
+    "scientific-harness-postgres-1 Up 2 weeks (healthy)"
+  ],
+  "profiles_after": [
+    "{\"name\":\"default\",\"status\":\"Stopped\",\"arch\":\"aarch64\",\"cpus\":2,\"memory\":4294967296,\"disk\":21474836480,\"runtime\":\"containerd\"}",
+    "{\"name\":\"cadworld-probe\",\"status\":\"Stopped\",\"arch\":\"aarch64\",\"cpus\":8,\"memory\":17179869184,\"disk\":137438953472,\"runtime\":\"docker\"}",
+    "{\"name\":\"scientific-harness\",\"status\":\"Running\",\"arch\":\"aarch64\",\"cpus\":4,\"memory\":12884901888,\"disk\":85899345920,\"runtime\":\"docker\"}"
+  ]
+}

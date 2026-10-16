@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/.venv/bin/python",
+    "-u",
+    "vendor/CADWORLD/scripts/python/download_vm_image.py",
+    "--retries",
+    "1",
+    "--timeout",
+    "45"
+  ],
+  "status": "FAIL",
+  "exit_code": -15,
+  "wall_seconds": 449.901,
+  "remote_bytes": 28310503424,
+  "source": "https://huggingface.co/Zihan1004/CADWorld/resolve/main/vm_data/FreeCAD-Ubuntu.qcow2?download=true"
+}

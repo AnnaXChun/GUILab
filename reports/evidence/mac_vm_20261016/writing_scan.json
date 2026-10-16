@@ -1,0 +1,18 @@
+{
+  "skill": "haohao-shuohua",
+  "files": [
+    "README.md",
+    "AGENTS.md",
+    "HANDOFF.md",
+    "docs/NEXT_BASELINE_RUN.md",
+    "reports/MAC_VM_SMOKE.md",
+    "reports/LOCAL_VM_FEASIBILITY.md",
+    "reports/REPRO_STATUS.md",
+    "reports/BASELINE_REPRO.md",
+    "reports/DEVIATIONS.md",
+    "reports/FAILURE_CASES.md",
+    "reports/PILOT.md"
+  ],
+  "hits": [],
+  "scan_scope": "prose outside fenced code; technical spellings and source quotes preserved"
+}

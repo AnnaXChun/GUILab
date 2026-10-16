@@ -1,0 +1,33 @@
+{
+  "command": [
+    "docker",
+    "--context",
+    "colima-cadworld-probe",
+    "run",
+    "--rm",
+    "-i",
+    "--platform",
+    "linux/amd64",
+    "--entrypoint",
+    "qemu-system-x86_64",
+    "happysixd/osworld-docker@sha256:0e6497a9295647cf05bf2b2af522fdd79bdeba2737595259cab310a3bcf6baa9",
+    "-accel",
+    "tcg",
+    "-machine",
+    "q35",
+    "-m",
+    "128",
+    "-nodefaults",
+    "-display",
+    "none",
+    "-serial",
+    "none",
+    "-qmp",
+    "stdio",
+    "-S"
+  ],
+  "exit_code": 0,
+  "wall_s": 3.099,
+  "stdout": "{\"QMP\": {\"version\": {\"qemu\": {\"micro\": 0, \"minor\": 1, \"major\": 9}, \"package\": \"Debian 1:9.1.0+ds-8\"}, \"capabilities\": [\"oob\"]}}\n{\"return\": {}}\n{\"timestamp\": {\"seconds\": 1792141857, \"microseconds\": 863884}, \"event\": \"RESUME\"}\n{\"return\": {}}\n{\"return\": {\"status\": \"running\", \"running\": true}}\n{\"return\": \"\\r\\nCPU#0\\r\\nEAX=00000000 EBX=00000000 ECX=0000b7a6 EDX=00000000\\r\\nESI=0000b7a6 EDI=00000000 EBP=0000b7a6 ESP=00006f98\\r\\nEIP=0000b7c2 EFL=00000246 [---Z-P-] CPL=0 II=0 A20=1 SMM=0 HLT=1\\r\\nES =d900 000d9000 0000ffff 00009300\\r\\nCS =f000 000f0000 0000ffff 00009b00\\r\\nSS =0000 00000000 0000ffff 00009300\\r\\nDS =0000 00000000 0000ffff 00009300\\r\\nFS =0000 00000000 0000ffff 00009300\\r\\nGS =0000 00000000 0000ffff 00009300\\r\\nLDT=0000 00000000 0000ffff 00008200\\r\\nTR =0000 00000000 0000ffff 00008b00\\r\\nGDT=     00000000 00000000\\r\\nIDT=     00000000 000003ff\\r\\nCR0=00000010 CR2=00000000 CR3=00000000 CR4=00000000\\r\\nDR0=0000000000000000 DR1=0000000000000000 DR2=0000000000000000 DR3=0000000000000000 \\r\\nDR6=00000000ffff0ff0 DR7=0000000000000400\\r\\nEFER=0000000000000000\\r\\nFCW=037f FSW=0000 [ST=0] FTW=00 MXCSR=00001f80\\r\\nFPR0=0000000000000000 0000 FPR1=0000000000000000 0000\\r\\nFPR2=0000000000000000 0000 FPR3=0000000000000000 0000\\r\\nFPR4=0000000000000000 0000 FPR5=0000000000000000 0000\\r\\nFPR6=0000000000000000 0000 FPR7=0000000000000000 0000\\r\\nXMM00=0000000000000000 0000000000000000 XMM01=0000000000000000 0000000000000000\\r\\nXMM02=0000000000000000 0000000000000000 XMM03=0000000000000000 0000000000000000\\r\\nXMM04=0000000000000000 0000000000000000 XMM05=0000000000000000 0000000000000000\\r\\nXMM06=0000000000000000 0000000000000000 XMM07=0000000000000000 0000000000000000\\r\\n\"}\n{\"timestamp\": {\"seconds\": 1792141860, \"microseconds\": 554519}, \"event\": \"SHUTDOWN\", \"data\": {\"guest\": false, \"reason\": \"host-qmp-quit\"}}\n{\"return\": {}}\n",
+  "stderr": ""
+}

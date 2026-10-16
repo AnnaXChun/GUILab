@@ -1,0 +1,59 @@
+{
+  "Id": "aa609982e4012b38b8d6f3d93fc8f402c5fa473ef5d7e27dc5948acafa51c4d0",
+  "Name": "/actc-mac-infra-probe-20261016-002",
+  "Image": "sha256:0e6497a9295647cf05bf2b2af522fdd79bdeba2737595259cab310a3bcf6baa9",
+  "State": {
+    "Status": "exited",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 0,
+    "Error": "",
+    "StartedAt": "2026-10-16T09:29:12.112404043Z",
+    "FinishedAt": "2026-10-16T09:30:36.734484515Z"
+  },
+  "Mounts": [
+    {
+      "Type": "bind",
+      "Source": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/vm_data/FreeCAD-Ubuntu.qcow2",
+      "Destination": "/System.qcow2",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "volume",
+      "Name": "ceab56cff87eefb18701472a49e30d227f0b9412c959bac0c1f9d9112b2dfade",
+      "Source": "/var/lib/docker/volumes/ceab56cff87eefb18701472a49e30d227f0b9412c959bac0c1f9d9112b2dfade/_data",
+      "Destination": "/storage",
+      "Driver": "local",
+      "Mode": "",
+      "RW": true,
+      "Propagation": ""
+    }
+  ],
+  "Config": {
+    "Env": [
+      "DISK_SIZE=64G",
+      "DEBUG=Y",
+      "KVM=N",
+      "CPU_CORES=2",
+      "CPU_MODEL=qemu64",
+      "RAM_SIZE=8G",
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "BOOT=http://example.com/image.iso"
+    ],
+    "Entrypoint": [
+      "/bin/bash"
+    ],
+    "Cmd": [
+      "/run/entry.sh"
+    ],
+    "Labels": {
+      "actc.probe": "mac-infrastructure"
+    }
+  }
+}

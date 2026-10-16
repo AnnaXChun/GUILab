@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "classification": "model-free exploratory infrastructure evidence",
+  "model_calls": 0,
+  "baseline_episodes": 0,
+  "source_commit_before_work": "5111b68fb28e3f98daa6951159ef81aaa5790f0d",
+  "cadworld_commit": "e5d0ebab8bd28da6e98c68c61db05747d1647f7b",
+  "files": [
+    {
+      "path": "amd64_qemu_test.log",
+      "bytes": 246,
+      "sha256": "cf65ff582768ee53002ce03193a455a05098af8813140535cf806ec8fa2bbb6b"
+    },
+    {
+      "path": "aria2_16_command.json",
+      "bytes": 605,
+      "sha256": "4e28d30b5abf707ad274ba2b5b1b4f1e15786a5ee5348a698cba6b0e2e466396"
+    },
+    {
+      "path": "aria2_16_download_result.json",
+      "bytes": 136,
+      "sha256": "a6cbdf6877ff206816c147ba3d707f4138920e22a6cec61faac21fa80f5d2a12"
+    },
+    {
+      "path": "aria2_command.json",
+      "bytes": 605,
+      "sha256": "086d70d1de85f74c549dd02c62f2a527af4eb0a371d5d177f297d25c4a64c85e"
+    },
+    {
+      "path": "aria2_download_result.json",
+      "bytes": 236,
+      "sha256": "fb0d76576c8d43b9da962a4aa82c9eb7bf5561b2e2d2afedbaea66f3deb45d37"
+    },
+    {
+      "path": "asset_source.json",
+      "bytes": 535,
+      "sha256": "9148562496c62eea56e19fd402c5e9e7778d7a4f214f38298566a9fa9a5db92c"
+    },
+    {
+      "path": "asset_verified.json",
+      "bytes": 511,
+      "sha256": "aed9c896bf0ce7eede2379aadb0284a4b81e775ebcb9fafa5f30d61e1f07cde7"
+    },
+    {
+      "path": "boot_001/container_inspect_summary.json",
+      "bytes": 1579,
+      "sha256": "e52e53e9364ec6896ca15211ce7af304d1b6d06f68491dc0ce8d5c0ddc50c345"
+    },
+    {
+      "path": "boot_001/container_logs.txt",
+      "bytes": 101,
+      "sha256": "85831d1952fe52ab2503792ea83e420c170f08fcbfe994c015771a293de4e007"
+    },
+    {
+      "path": "boot_001/execute_trace.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "boot_001/launch_command.json",
+      "bytes": 784,
+      "sha256": "880015afe219a6d2a9c75a2867983e0eb4ceb5b59e6216eb09560b405a50cbb1"
+    },
+    {
+      "path": "boot_001/qemu_image_info.json",
+      "bytes": 753,
+      "sha256": "d87cd7c59be58c1d360b11d70e7b13ff8145a4345a52617b8af43c99b23ceb88"
+    },
+    {
+      "path": "boot_001/readiness.jsonl",
+      "bytes": 58,
+      "sha256": "6c5c2a9ca87f1a2ac35482a95cd214c0a0ff30e53c979756e61f1c69f8d0d35e"
+    },
+    {
+      "path": "boot_001/result.json",
+      "bytes": 1023,
+      "sha256": "c3fc01a7a738af4695c8ccf0ace72f64aa2af0a89cb24e6ac38c7b79ffd33d42"
+    },
+    {
+      "path": "boot_002/container_inspect_summary.json",
+      "bytes": 1569,
+      "sha256": "b1b01e2ae87ba1aa248691cedc54a0b8c26b3491e144ae086fc9e70f6c20eed2"
+    },
+    {
+      "path": "boot_002/container_logs.txt",
+      "bytes": 2581,
+      "sha256": "ca542021582ae6de058295fd9886956c179147207e1d9dff03aae67b03c0039b"
+    },
+    {
+      "path": "boot_002/early_boot.png",
+      "bytes": 22027,
+      "sha256": "8cb0b81ad8052e864064709a0d4c73fbc1f9301bc5641669c02edce0340a4459"
+    },
+    {
+      "path": "boot_002/execute_trace.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "boot_002/launch_command.json",
+      "bytes": 840,
+      "sha256": "6448be03cbb97106ea44c473d8b62a0e9e7397bfdc3cd3e457637d3aa552c7ba"
+    },
+    {
+      "path": "boot_002/operator_stop.json",
+      "bytes": 302,
+      "sha256": "34918d40f92006d968cff7e7895695a3fb72e83e1677483202e8c35b70303792"
+    },
+    {
+      "path": "boot_002/qemu_image_info.json",
+      "bytes": 753,
+      "sha256": "d87cd7c59be58c1d360b11d70e7b13ff8145a4345a52617b8af43c99b23ceb88"
+    },
+    {
+      "path": "boot_002/readiness.jsonl",
+      "bytes": 608,
+      "sha256": "08f62a25d1f0b5bb50ec603acd90762e0013c8e34bb5687c949eb7ce56f4f21c"
+    },
+    {
+      "path": "boot_002/result.json",
+      "bytes": 1065,
+      "sha256": "44011b2d8f59ef0e0282b90ec104146f9904a94cd2bf0ba15c0b571d83f7eec6"
+    },
+    {
+      "path": "boot_003/boot_early.png",
+      "bytes": 28560,
+      "sha256": "31a005c6b8b27d1a025a103bae669f5084e02d53ce707ef36411aeb84f5476e4"
+    },
+    {
+      "path": "boot_003/boot_final.png",
+      "bytes": 50690,
+      "sha256": "a166cba93b51f6371732f0700ed64b92413f9079da22e4b781a37a13adc867fd"
+    },
+    {
+      "path": "boot_003/boot_late.png",
+      "bytes": 30746,
+      "sha256": "04dbbf5cd862fac125949293f041e43f710d095b3ed78e5962fe1bbd37f45773"
+    },
+    {
+      "path": "boot_003/boot_progress.png",
+      "bytes": 28560,
+      "sha256": "31a005c6b8b27d1a025a103bae669f5084e02d53ce707ef36411aeb84f5476e4"
+    },
+    {
+      "path": "boot_003/container_inspect_summary.json",
+      "bytes": 1619,
+      "sha256": "123486b00a01e6fe6ea1e774891fc716ff278ba13d043a04394f0906f262a6ed"
+    },
+    {
+      "path": "boot_003/container_logs.txt",
+      "bytes": 2241,
+      "sha256": "77768c112a98304a0f29f652ca4272b387bb0055685170ae96ae2abe884acc82"
+    },
+    {
+      "path": "boot_003/execute_trace.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "boot_003/launch_command.json",
+      "bytes": 911,
+      "sha256": "35d2d60513dc68d3cffc1ebdbf065647b531a1cdbcc45034fa7902498c58975f"
+    },
+    {
+      "path": "boot_003/platform_probe.json",
+      "bytes": 108,
+      "sha256": "68b17663b3d4f52568bdc6cfb0f3944b1a06219662ce64654205779b509677c5"
+    },
+    {
+      "path": "boot_003/qemu_image_info.json",
+      "bytes": 753,
+      "sha256": "d87cd7c59be58c1d360b11d70e7b13ff8145a4345a52617b8af43c99b23ceb88"
+    },
+    {
+      "path": "boot_003/readiness.jsonl",
+      "bytes": 3471,
+      "sha256": "b73563d63fa5a9cd850e066861af0989029b46f0755866dc71b8948a49b2919d"
+    },
+    {
+      "path": "boot_003/registers_midboot.txt",
+      "bytes": 2564,
+      "sha256": "39be71819a855e577c298783fb0267c54db5cc3658e16dbeec93cfa5ea450e5f"
+    },
+    {
+      "path": "boot_003/registers_midboot_summary.json",
+      "bytes": 278,
+      "sha256": "eaf01308569c394a078b1a3c3238f9857b599a799e15c5a7cae9c5094596501b"
+    },
+    {
+      "path": "boot_003/result.json",
+      "bytes": 1169,
+      "sha256": "360d0c9b3f6f9329feb2f7a218e8f1c171144dac95a355153902c06ea34ccee7"
+    },
+    {
+      "path": "cleanup.json",
+      "bytes": 978,
+      "sha256": "78654df6c232b1cd1d6985bc08cd42705b2ebb102acf2f19c6351270f2e65a47"
+    },
+    {
+      "path": "download_result.json",
+      "bytes": 426,
+      "sha256": "e2013acf6dd3753cf1ead3fb7cb7f1d506bd7631c3be2760de2412aa97acbc0f"
+    },
+    {
+      "path": "download_switch.json",
+      "bytes": 280,
+      "sha256": "acfa85a413851ad8776f39a4d83ea22b437dd60bd179dc57025a0142c43e966d"
+    },
+    {
+      "path": "host_runtime.json",
+      "bytes": 344,
+      "sha256": "0c8defffda10318faa0232799dadcaa7a2fb8a5b7865d99c308c0ff3048e057b"
+    },
+    {
+      "path": "pytest_final.log",
+      "bytes": 99,
+      "sha256": "aff3eab099d3f778904d17c5dd773a50d24843b2876eb8fb2b9c553be552b2d3"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 1180,
+      "sha256": "b99ae689b1a009ab91fd4352aca2c672e92a58c378dc0a716e04c6965825c2e7"
+    },
+    {
+      "path": "tcg_selftest.json",
+      "bytes": 2527,
+      "sha256": "b9426940e504cbf66308ef397c7a510e3b8bd1860b07962fee659af469169e20"
+    },
+    {
+      "path": "writing_scan.json",
+      "bytes": 461,
+      "sha256": "7f6d1abaa56b5aaea7c804b0f080040e1f5786dc8a9b0d1364c676df86d7d44a"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "scripts/probe_mac_vm.py",
+      "sha256": "324a4c9f828df9be4519c7688b75031df26c43320e58c6f4c1a54e5e3c9b1c6c"
+    },
+    {
+      "path": "scripts/trusted_native_probe.FCMacro",
+      "sha256": "24533d8b2393cff19db58689d1a048a4a1046b0aa105fc1f594177b5795f353c"
+    },
+    {
+      "path": "tests/test_mac_probe.py",
+      "sha256": "f36a6158e5693675979069a65b7257c198e0b60ff42104e878f95161cd206843"
+    }
+  ]
+}
