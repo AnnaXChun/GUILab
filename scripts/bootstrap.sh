@@ -9,7 +9,10 @@ case "${1:-}" in
  *) echo 'Unknown argument' >&2; exit 2;;
 esac
 pin=e5d0ebab8bd28da6e98c68c61db05747d1647f7b
-if test ! -d vendor/CADWORLD; then
+submodule_mode=$(git ls-files --stage -- vendor/CADWORLD | cut -d ' ' -f 1)
+if test "$submodule_mode" = 160000 && test ! -e vendor/CADWORLD/.git; then
+ git submodule update --init -- vendor/CADWORLD
+elif test ! -e vendor/CADWORLD/.git; then
  mkdir -p vendor
  git clone --filter=blob:none --no-checkout https://github.com/Zdong104/CADWORLD.git vendor/CADWORLD
  git -C vendor/CADWORLD fetch origin "$pin"

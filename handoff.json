@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-16",
+  "project": "GUILab / CADWorld ACTC",
+  "repository": "https://github.com/AnnaXChun/GUILab",
+  "branch": "main",
+  "read_first": [
+    "AGENTS.md",
+    "HANDOFF.md",
+    "SPEC.md"
+  ],
+  "cadworld_commit": "e5d0ebab8bd28da6e98c68c61db05747d1647f7b",
+  "historical_evidence": {
+    "project_tests": 70,
+    "upstream_cli_tests": 7,
+    "synthetic_cases": 9,
+    "real_tasks": 0,
+    "real_pairs": 0,
+    "provider_network_calls": 0,
+    "baseline_reproduced": false
+  },
+  "next_phase": "P0",
+  "next_action": "Initialize pinned submodule, run lightweight tests, then verify remote Linux x86_64/KVM/Docker/QEMU and complete original CLI dry-run.",
+  "paid_run_authorization_added": false,
+  "defaults": {
+    "ENABLE_PAID_RUNS": 0,
+    "MAX_LIVE_TASKS": 2,
+    "MAX_PAIRS": 3,
+    "MAX_MODEL_CALLS_PER_TASK": 12,
+    "MAX_WALL_SECONDS_PER_TASK": 600,
+    "MAX_RETRIES": 0
+  },
+  "runtime_unverified": [
+    "official GUI/CLI episodes",
+    "FreeCAD native save/reopen",
+    "GUI process bridge deployment",
+    "same-S0 stopped-disk restore",
+    "qcow2 backing visibility inside Docker",
+    "post-hoc native artifact publication",
+    "automatic model proposal collection"
+  ],
+  "known_constraints": [
+    "scripts/verify.py expects historical Mac failures",
+    "call/output/wall gate is per launch",
+    "32 edit candidates need introspection",
+    "sketch-edit held-out coverage is zero"
+  ],
+  "artifacts": [
+    "reports/REPRO_STATUS.md",
+    "reports/BASELINE_REPRO.md",
+    "reports/PILOT.md",
+    "reports/FAILURE_CASES.md",
+    "reports/DEVIATIONS.md",
+    "reports/stages.json"
+  ]
+}

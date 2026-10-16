@@ -1,4 +1,17 @@
-# CADWorld ACTC
+# GUILab
+
+GUILab 当前承载 CADWorld Counterfactual Tool Credit（ACTC）复现工程。仓库根目录即项目根目录。
+
+远程 Codex 接手请先读 [HANDOFF.md](HANDOFF.md)，将 [REMOTE_CODEX_PROMPT.md](REMOTE_CODEX_PROMPT.md) 作为任务提示；执行约束见 [AGENTS.md](AGENTS.md)。
+
+```bash
+git clone --recurse-submodules https://github.com/AnnaXChun/GUILab.git
+cd GUILab
+bash scripts/bootstrap.sh
+bash scripts/test.sh
+```
+
+未递归 clone 时，`bootstrap.sh` 会初始化 pinned submodule。以上步骤不启动 VM、不请求模型。远程是否具备 KVM 需要单独检查。
 
 [本项目新增] 在同一原生工程状态、同一公开语义子目标下，用隔离 GUI/API 分支采集工程自检 preference。规格见 [SPEC.md](SPEC.md)。上游固定 `e5d0ebab8bd28da6e98c68c61db05747d1647f7b`。
 
