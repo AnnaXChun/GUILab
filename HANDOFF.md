@@ -19,6 +19,8 @@
 
 `reports/commands.json` 是早期 Mac 验证记录；`reports/evidence/mock_smoke/` 是完整 synthetic 归档，`INDEX.json` 有哈希。里面的 Mac 绝对路径只用于追溯，远程不可直接执行。不要把历史报告重命名成远程成果。
 
+本次交接已在全新本地 clone（起初 submodule 未初始化）重新验证 bootstrap、70 个项目测试、7 个 upstream CLI 测试和 9 个无付费 mock case。验证记录见 `reports/HANDOFF_VALIDATION.json`。该检查仍不等于 Linux VM 实验。
+
 按需读取：`SPEC.md`、`reports/REPRO_STATUS.md`、`reports/BASELINE_REPRO.md`、`reports/DEVIATIONS.md`、`reports/stages.json`。后续研究接口见 `docs/P4_P5_PLAN.md`，无需重新调研论文。
 
 ## 克隆与无付费验证
