@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-16",
+  "host": {
+    "system": "macOS",
+    "version": "26.5.1",
+    "cpu": "Apple M5 Pro",
+    "arch": "arm64",
+    "memory_bytes": 51539607552
+  },
+  "existing_linux_vm": {
+    "manager": "Colima",
+    "distribution": "Ubuntu 24.04.4 LTS",
+    "arch": "aarch64",
+    "configured_cpus": 4,
+    "configured_memory_bytes": 12884901888,
+    "configured_disk_bytes": 85899345920,
+    "status": "Running",
+    "kvm_device_present": false
+  },
+  "upstream_software_emulation": {
+    "supported_opt_out": "CADWORLD_ENABLE_KVM=false",
+    "source": "vendor/CADWORLD/desktop_env/providers/docker/provider.py:172,274",
+    "tested": false
+  },
+  "upstream_container_observed": {
+    "reference": "happysixd/osworld-docker:latest",
+    "platform": "linux/amd64",
+    "digest": "sha256:0e6497a9295647cf05bf2b2af522fdd79bdeba2737595259cab310a3bcf6baa9"
+  },
+  "actions": {
+    "host_and_vm_read_only_checks": true,
+    "new_vm_created": false,
+    "vm_image_downloaded": false,
+    "container_image_pulled": false,
+    "paid_api_calls": 0
+  },
+  "reference_protocol_go": false
+}

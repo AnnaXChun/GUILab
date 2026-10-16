@@ -26,3 +26,5 @@ P0 真实验收为 NO-GO。P1/P2 静态测试通过，真实 save/reopen、跨 V
 SPEC 的“阶段未过则停止下一阶段”用于真实实验门槛；缺环境时继续完成静态代码与 mock，不把后续阶段记作真实 PASS。具体适配见 `DEVIATIONS.md`。
 
 下一步：迁移到 Ubuntu x86_64 + KVM，执行完整 upstream sync 和原始 CLI dry-run；显式取得镜像并记录 SHA；配置实际模型及额度边界；先跑 2 题、3-step 官方 GUI 连接检查。之后验证一个原生工程的 GUI/API 保存重开与隔离恢复，再尝试最多 3 个真实 pairs。24-pair pilot 需要额外明确授权。
+
+2026-10-16 补充：本机已有 Ubuntu ARM64 Colima VM；上游提供无 KVM 软件模拟开关。详见 `LOCAL_VM_FEASIBILITY.md` 与 `local_vm_preflight.json`。这是新的可行性证据，尚未启动官方 VM，不改变参考协议的 NO-GO 状态。
