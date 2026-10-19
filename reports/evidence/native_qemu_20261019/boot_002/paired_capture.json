@@ -1,0 +1,7 @@
+{
+  "captured_at_utc": "2026-10-19T06:22:14.057609+00:00",
+  "controller_request_seconds": 14.421,
+  "qmp_followup_seconds": 0.451,
+  "same_vm": true,
+  "comparison": "visual display-channel check, not same-S0 pair validation"
+}

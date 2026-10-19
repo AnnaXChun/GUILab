@@ -2,6 +2,8 @@
 
 2026-10-16，用户要求“开始验证”后执行。用途是验证本机能否加载官方 VM、取得真实截图与执行响应；不是模型实验，不计 CADWorld 成绩。
 
+> 后续更新：2026-10-19 原生 ARM QEMU 已启动同一官方 VM 并通过 FreeCADCmd 原生文件检查，见 [最新报告](MAC_NATIVE_QEMU_SMOKE.md)。以下保留 2026-10-16 Docker 路线的历史失败，不代表所有无 KVM 路线均不可行。
+
 ## 当前结论
 
 **本机这条 Docker/TCG 路径本轮为 NO-GO，`BLOCKED_BY_ENV`。官方模型 baseline 尚未跑通。** 第三次启动等待 900.001 秒，未取得 `/screenshot`；另一次只读 `/platform` 也超时。因此 `/execute` 派发为 0、FreeCAD 原生保存重开为 `NOT_RUN`、模型任务及真实 pair 均为 0。

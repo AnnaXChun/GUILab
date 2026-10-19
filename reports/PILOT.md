@@ -7,6 +7,8 @@ synthetic 单测样本 N=9，仅用于工程验证。标签分布 `{'tie': 3, 'a
 
 2026-10-16 本机新增的是无模型 VM 软件模拟检查，见 `MAC_VM_SMOKE.md`，没有新增 episode、pair 或标签。本报告的统计样本和指标不变。
 
+2026-10-19 无 KVM FreeCADCmd 环境探针成功，前两次 GUI 宏超时；全部属于可信基础设施检查，未新增 pair、标签或模型 episode，见 `MAC_NATIVE_QEMU_SMOKE.md`。
+
 真实 GUI/API 任务均未运行。Strict Success、有效 pair 比例、标签覆盖率和 task bootstrap 95% CI 均为 null，分母 N=0。
 
 原论文 GUI-only、官方 CLI 与 CADWorld-Hybrid (extended protocol) 分开报告。GO/NO-GO 需要结合阶段验收与真实差异重测。

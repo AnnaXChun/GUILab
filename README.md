@@ -11,11 +11,11 @@ bash scripts/bootstrap.sh
 bash scripts/test.sh
 ```
 
-未递归 clone 时，`bootstrap.sh` 会初始化 pinned submodule。以上步骤不启动 VM、不请求模型。远程是否具备 KVM 需要单独检查。全新 clone 的交接验证见 [HANDOFF_VALIDATION.json](reports/HANDOFF_VALIDATION.json)。
+未递归 clone 时，`bootstrap.sh` 会初始化 pinned submodule。以上步骤不启动 VM、不请求模型。用户已确认无法提供 KVM，先按 [无 KVM 路线](docs/NO_KVM_RUN.md) 验证 TCG。全新 clone 的交接验证见 [HANDOFF_VALIDATION.json](reports/HANDOFF_VALIDATION.json)。
 
 [本项目新增] 在同一原生工程状态、同一公开语义子目标下，用隔离 GUI/API 分支采集工程自检 preference。规格见 [SPEC.md](SPEC.md)。上游固定 `e5d0ebab8bd28da6e98c68c61db05747d1647f7b`。
 
-当前结果：72 个项目测试通过；历史 7 个 upstream CLI 单测和 9 个 synthetic dry-run case 通过。已执行 [Mac 无模型 VM 检查](reports/MAC_VM_SMOKE.md)，模型任务与真实 pairs 仍为 0。P0 live 与 P3/P4 均为 NO-GO，原因见 [复现状态](reports/REPRO_STATUS.md)。
+当前已用 Mac ARM 原生 QEMU/TCG 启动官方 x86 VM、controller 和 FreeCAD GUI，无需 KVM；原生文件与单测的详细结果见 [最新无模型检查](reports/MAC_NATIVE_QEMU_SMOKE.md)。历史 7 个 upstream CLI 单测和 9 个 synthetic case 已通过，模型任务与真实 pairs 仍为 0。P0 live 与 P3/P4 均为 NO-GO，原因见 [复现状态](reports/REPRO_STATUS.md)。
 
 ```bash
 bash scripts/bootstrap.sh

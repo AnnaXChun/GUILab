@@ -11,7 +11,7 @@
 | `vendor/CADWORLD/pyproject.toml` / `uv.lock` | full sync 405 包含大型推理/视觉运行时 | 本机 Mac 先用轻量本项目 venv 跑 upstream CLI 单测；full sync 只预览，原始 CLI dry-run 失败如实保留。Linux 上由 bootstrap --full-upstream 执行完整依赖 |
 | SPEC P0–P3 Stop/Go 与无环境静态交付 | 本机不具备 Linux KVM / VM / provider credentials | 真实实验停在 P0；P1–P3 继续静态实现和 mock，所有真实阶段门槛仍为 blocked，不以 synthetic 满足 ≥3 real pairs |
 | native fork 工作文件 | 任务公开路径常为 `/home/user/Unnamed.FCStd`，并行 worker 需要每任务私有目录 | NativeBackend 在 guest `/home/user/current` 操作 checkpoint/artifact；正式 post-hoc 前由可信适配层发布已保存文件到任务输出路径。官方 baseline 原路径不变；该发布尚未真实验证 |
-| GUI 进程同步 | 上游未提供可复用的同步 FreeCAD GUI IPC | 新增 guest-only loopback/Qt 主线程桥。仅 summary、commit/close、reopen；启动宏是受控 checkpoint 准备步骤。没有桥或无 ack 时拒绝配对；本机未运行 Qt/FreeCAD |
+| GUI 进程同步 | 上游未提供可复用的同步 FreeCAD GUI IPC | 新增 guest-only loopback/Qt 主线程桥。仅 summary、commit/close、reopen；启动宏是受控 checkpoint 准备步骤。没有桥或无 ack 时拒绝配对；GUI bridge 尚未实际部署验收 |
 | same-S0 | 精确截图哈希容易受光标/动画/通知影响 | 初版宁可拒绝 pair，要求稳定 workbench/camera/selection/文档集与截图。未用近似截图相等放宽证据 |
 | 任务分组 | 原 test_easy/test_small/test_60 重叠，且 precondition 工程可能重复 | 仅公开操作 family + 明确提供的 precondition 文件 SHA 做并集分组，兼顾领域与 edit 初筛池，尽量接近 60/20/20，seed=20261015。完整任务实际 92/25/23，edit 初筛候选 19/7/6；分组完整性优先于精确比例 |
 | 原生执行失败的归类 | 已知无效形体与网络结果不确定需要分开 | 文件可重开且终态已知时保留低质量候选；timeout/5xx 或无法恢复终态时判 invalid_pair。全部记录失败分支成本，未知动作数用 null，不当作零成本 |
@@ -20,7 +20,7 @@
 | P3 24 valid pairs | 默认限 3 live pairs，且没有额外授权 | 24-pair pilot 不启动，NOT_RUN_BUDGET。9 个 mock campaign case 不计入 3 个合法真实 smoke pair 或 24 valid pair 目标 |
 | 运行时模型生成 | 本轮凭证/环境不可用 | deterministic candidate stub + reviewed live-plan 接口；没有伪造模型 proposal、tokens、provider 时间或任务成绩。P4 predictor 接口提供，训练 NOT_IMPLEMENTED |
 
-所有上述变化均位于本项目。上游 evaluator、规则、参考 artifact 与 tracked 文件未改动，也未读取 golden `.FCStd` 来生成答案。选样只 hash `fixtures/precondition/` 下明确作为任务输入的文件，未打开这些文件解析几何。真实 native worker 路径目前只静态验证，验收仍需 Linux VM。
+所有上述变化均位于本项目。上游 evaluator、规则、参考 artifact 与 tracked 文件未改动，也未读取 golden `.FCStd` 来生成答案。选样只 hash `fixtures/precondition/` 下明确作为任务输入的文件，未打开这些文件解析几何。正式 native worker 路径目前只静态验证；最新可信 headless 探针单列于下文，不替代 worker/GUI 同步验收。
 
 ## 2026-10-16 Mac 环境验证
 
@@ -35,3 +35,16 @@
 | pinned `scripts/python/download_vm_image.py` | 单连接传输过慢 | 同一官方 URL 续传，保留失败/切换记录；完整 Python SHA256 与 HF 内容哈希一致后才改为正式 qcow2 文件名。没有替换镜像或重选 benchmark |
 
 逐次命令、结果、截图和清理证据以 `MAC_VM_SMOKE.md` 及其版本化证据为准。没有模型生成、官方评分或真实 pair，不把可信基础设施探针用于 preference 数据。
+
+## 2026-10-19 无 KVM 原生 QEMU
+
+用户确认无法提供 KVM。Linux 容器能够运行 FreeCAD；KVM 用于 VM 加速，不能把缺 KVM 直接等同于所有执行不可行。本轮结果和证据见 [原生 QEMU 报告](MAC_NATIVE_QEMU_SMOKE.md)。
+
+| 来源 | 适配与边界 | 实测 |
+| --- | --- | --- |
+| pinned `desktop_env/providers/docker/provider.py:173,284` | upstream 已支持 `CADWORLD_ENABLE_KVM=false`，其 Docker/网络权限仍需检查；不是新算法 | 远程优先验证这一原有入口；本机探针直接运行 ARM 原生 QEMU，尚未接该 provider |
+| 同一官方容器的 QEMU/固件参数 | 新增 `scripts/probe_native_qemu.py`，独立 overlay、TCG、user forwarding、QMP 与限时清理；不改 upstream tracked 文件 | 3 次 controller 成功，约 120 秒可启动；原始 base SHA 前后相同 |
+| pinned `scripts/bootstrap_vm_server.sh` 的公开提权流程 | 可选 `--prepare-x11` 仅在私有 overlay 设置 GDM，再 reset 一次；原始 ledger 不上传，导出脱敏该 payload | 第二次 GUI 宏仍超时；第三次 headless 不用此选项，未将它宣称为必要修复 |
+| `CLI/run_cli.py:420` snap runtime | 固定 `trusted_headless_probe.py` + `--native-mode cmd`，复用 PATH/PYTHONPATH/LD_LIBRARY_PATH，去除显示变量；不改 HOME、无 agent shell | FreeCADCmd 1.1.0 实测 Body/Sketch/Pad、参数修改与保存重开；不是正式 TypedWorker 验收 |
+| GUI 宏结果未知 | 前两次宏仅启动一次；第三次使用新 clone 和固定 headless 脚本，输出路径嵌入部署内容，避免依赖 GUI 环境变量转发 | GUI 宏根因仍未知；headless PASS 单列，不作为 GUI 同步证据 |
+| 环境协议与阶段 gate | 当前 baseline 入口仍要求参考环境，原生 QEMU 不具备完整 runner 生命周期；新增文档定义无 KVM 后续适配 | 不手改 stage PASS；GUI-only、CLI、Hybrid 和 TCG 环境分开报告，真实模型任务/pair 仍为 0 |

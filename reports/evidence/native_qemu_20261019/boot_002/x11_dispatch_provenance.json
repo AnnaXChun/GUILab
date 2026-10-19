@@ -1,0 +1,6 @@
+{
+  "source": "pinned scripts/bootstrap_vm_server.sh",
+  "execution_id": "private-x11-config-once",
+  "payload_sha256": "ef4f542f71154c098adf2c4c24a16b55191ba0e2153f32d8636aa676c49c8fe4",
+  "public_export_payload_redacted": true
+}

@@ -1,0 +1,33 @@
+{
+  "base_sha256_after": "edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12",
+  "default_docker_context": {
+    "argv": [
+      "docker",
+      "context",
+      "show"
+    ],
+    "exit_code": 0,
+    "stdout": "colima-scientific-harness\n",
+    "stderr": ""
+  },
+  "colima_profiles": {
+    "argv": [
+      "colima",
+      "list",
+      "--json"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"name\":\"default\",\"status\":\"Stopped\",\"arch\":\"aarch64\",\"cpus\":2,\"memory\":4294967296,\"disk\":21474836480,\"runtime\":\"containerd\"}\n{\"name\":\"cadworld-probe\",\"status\":\"Stopped\",\"arch\":\"aarch64\",\"cpus\":8,\"memory\":17179869184,\"disk\":137438953472,\"runtime\":\"docker\"}\n{\"name\":\"scientific-harness\",\"status\":\"Running\",\"arch\":\"aarch64\",\"cpus\":4,\"memory\":12884901888,\"disk\":85899345920,\"runtime\":\"docker\"}\n",
+    "stderr": ""
+  },
+  "qemu_processes": {
+    "argv": [
+      "pgrep",
+      "-fl",
+      "qemu-system-x86_64"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": ""
+  }
+}

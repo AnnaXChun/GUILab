@@ -1,0 +1,33 @@
+{
+  "attempts": [
+    {
+      "attempt": "boot_001",
+      "source_matches": true,
+      "one_native_launch": true,
+      "trace_rows": 4,
+      "uncertain_ids": []
+    },
+    {
+      "attempt": "boot_002",
+      "source_matches": true,
+      "one_native_launch": true,
+      "trace_rows": 6,
+      "uncertain_ids": [
+        "macro-diagnostic-once"
+      ]
+    },
+    {
+      "attempt": "boot_003",
+      "source_matches": true,
+      "one_native_launch": true,
+      "trace_rows": 3,
+      "uncertain_ids": []
+    }
+  ],
+  "no_quoted_guest_credential_in_archive": true,
+  "no_raw_ledger_or_native_disk_files": true,
+  "base_unchanged": true,
+  "all_qemu_stopped": true,
+  "stage_gate_unchanged": true,
+  "pinned_upstream_tracked_clean": true
+}

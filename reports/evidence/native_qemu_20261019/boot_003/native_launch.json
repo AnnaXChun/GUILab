@@ -1,0 +1,6 @@
+{
+  "error": "",
+  "output": "{\"pid\": 2187, \"executable\": \"/snap/freecad/2266/usr/bin/FreeCADCmd\", \"mode\": \"headless\", \"home_overridden\": false}\n",
+  "returncode": 0,
+  "status": "success"
+}

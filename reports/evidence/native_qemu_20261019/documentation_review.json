@@ -1,0 +1,23 @@
+{
+  "files": [
+    "AGENTS.md",
+    "HANDOFF.md",
+    "README.md",
+    "REMOTE_CODEX_PROMPT.md",
+    "docs/NEXT_BASELINE_RUN.md",
+    "docs/NO_KVM_RUN.md",
+    "reports/REPRO_STATUS.md",
+    "reports/BASELINE_REPRO.md",
+    "reports/PILOT.md",
+    "reports/FAILURE_CASES.md",
+    "reports/DEVIATIONS.md",
+    "reports/MAC_VM_SMOKE.md",
+    "reports/LOCAL_VM_FEASIBILITY.md",
+    "reports/MAC_NATIVE_QEMU_SMOKE.md"
+  ],
+  "mechanical_scan_findings": [],
+  "broken_links": [],
+  "fact_check": "Claims checked against per-attempt results and native_result; headless success separated from GUI sync and model baselines.",
+  "structure_review": "Current no-KVM route linked from handoff entry points; historical failures retained.",
+  "rhythm_review": "New Chinese prose reviewed for sentence length and redundant conclusions."
+}

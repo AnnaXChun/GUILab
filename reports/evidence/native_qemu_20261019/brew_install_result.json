@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "brew",
+    "install",
+    "qemu"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "wall_seconds": 76.643,
+  "purpose": "native ARM host QEMU, no model downloads"
+}

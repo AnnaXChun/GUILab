@@ -1,0 +1,422 @@
+{
+  "classification": "trusted_model_free_infrastructure_only",
+  "root": "reports/evidence/native_qemu_20261019",
+  "excluded": [
+    "qcow2",
+    "firmware binary",
+    "FCStd",
+    "raw SQLite ledger"
+  ],
+  "files": [
+    {
+      "path": "boot_001/backing_chain.json",
+      "bytes": 2259,
+      "sha256": "a334fd8cf044ab77ba18e4a9495dbf82e46bc52498c97dc79c25a258f7b7a627"
+    },
+    {
+      "path": "boot_001/base_info.json",
+      "bytes": 909,
+      "sha256": "cdd7cf69344d54858ccacc1db21493969b09b91eefb438baf90dc444d80586a5"
+    },
+    {
+      "path": "boot_001/boot_0070.png",
+      "bytes": 20198,
+      "sha256": "406ff99b8a6d3ca96ce876088fdacb492581555cf19051370b1c452f0449307e"
+    },
+    {
+      "path": "boot_001/commands.jsonl",
+      "bytes": 5682,
+      "sha256": "d081c4b937d88c66a60ef43d7783ee67755b1cd32c72ed9c58ad40233bf0163f"
+    },
+    {
+      "path": "boot_001/display_diagnostic.json",
+      "bytes": 864,
+      "sha256": "6871cf1d866011c7194f48eb4036decce9f15b5b7d3467174f86d729cd6736da"
+    },
+    {
+      "path": "boot_001/during_native.png",
+      "bytes": 6234,
+      "sha256": "fa2c449fdfcf091a6857113e17319a07f4d7305900a5a8108a70f018d58a95b8"
+    },
+    {
+      "path": "boot_001/execute_trace.jsonl",
+      "bytes": 7648,
+      "sha256": "4de843b64155594d941c14d0bee01d112a67e247aae825475e30c242e17014c1"
+    },
+    {
+      "path": "boot_001/final_display.png",
+      "bytes": 247535,
+      "sha256": "8b3a334bc996d4b8ef1721701f99627f825337cd898213988c3356112038c1e4"
+    },
+    {
+      "path": "boot_001/freecad_startup_diagnostic.txt",
+      "bytes": 374,
+      "sha256": "5849afe99ff096b21bd1a7034780f78be162db75da9cf581e52116b88019dfb1"
+    },
+    {
+      "path": "boot_001/freecad_stdout.txt",
+      "bytes": 374,
+      "sha256": "5849afe99ff096b21bd1a7034780f78be162db75da9cf581e52116b88019dfb1"
+    },
+    {
+      "path": "boot_001/guest_environment.json",
+      "bytes": 204,
+      "sha256": "f9184ba3bdd9dbeb4a1b02d513d9f55b81208442388ae03ae4afe7ecd31d7831"
+    },
+    {
+      "path": "boot_001/launch_command.json",
+      "bytes": 1209,
+      "sha256": "39312b6aa5d180954110d17719c2c243291cf4e7742ed1ad95b0814f0ca53760"
+    },
+    {
+      "path": "boot_001/mouse_move.json",
+      "bytes": 97,
+      "sha256": "5ada8acb82010d683fa8ff7ba01750fd47b0dbceab1f47cf2ab3289cc0d162ad"
+    },
+    {
+      "path": "boot_001/native_launch.json",
+      "bytes": 93,
+      "sha256": "ff13c501347c6021647c0331f34b2ad6336067a7eb3357f0fc7b3d38c7eeae2f"
+    },
+    {
+      "path": "boot_001/native_qmp_diagnostic.png",
+      "bytes": 247535,
+      "sha256": "8b3a334bc996d4b8ef1721701f99627f825337cd898213988c3356112038c1e4"
+    },
+    {
+      "path": "boot_001/native_read_poll.jsonl",
+      "bytes": 2858,
+      "sha256": "cc9654fe25d3ea8463c3c66388526e79b0f8e62a6b75960d3ee4ce028d109720"
+    },
+    {
+      "path": "boot_001/native_result.json",
+      "bytes": 112,
+      "sha256": "5c6300b9065b77e26feed3dfb0c5b102ea2a2c326a98b1f5e8a8239afc1c1328"
+    },
+    {
+      "path": "boot_001/probe_source.py",
+      "bytes": 14893,
+      "sha256": "21079591640709b6c8cf329d02cc410f45606059dd55629168c374ad26ad489c"
+    },
+    {
+      "path": "boot_001/qemu.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "boot_001/readiness.jsonl",
+      "bytes": 903,
+      "sha256": "8ecea9d38ee0c90f1960bdcfbe7287245c8adb5f7987955582e038e8c476ccb6"
+    },
+    {
+      "path": "boot_001/ready.png",
+      "bytes": 6232,
+      "sha256": "6d0428dbe8845decf7503746580eb3c73589845fd9b168fd50176f7fd060fff7"
+    },
+    {
+      "path": "boot_001/result.json",
+      "bytes": 946,
+      "sha256": "d93e6c47cdc347474848e4518bdd3856e2b136c6f3ff5c4fd58de8df4cfe4e0c"
+    },
+    {
+      "path": "boot_002/backing_chain.json",
+      "bytes": 2259,
+      "sha256": "7ac0964264ff07ad38ff49dbd9b454183f65376e7ef5f43c6846cfb92019c7c0"
+    },
+    {
+      "path": "boot_002/base_info.json",
+      "bytes": 909,
+      "sha256": "cdd7cf69344d54858ccacc1db21493969b09b91eefb438baf90dc444d80586a5"
+    },
+    {
+      "path": "boot_002/before_x11.png",
+      "bytes": 6232,
+      "sha256": "6d0428dbe8845decf7503746580eb3c73589845fd9b168fd50176f7fd060fff7"
+    },
+    {
+      "path": "boot_002/boot_0062.png",
+      "bytes": 18353,
+      "sha256": "cd58185cf01b19f551bbe47110d2e244d622eb4ad64c7c24194e14d0c0aa0fff"
+    },
+    {
+      "path": "boot_002/boot_0123.png",
+      "bytes": 6121,
+      "sha256": "c1161e09bb43363d2777bdb410b3e59e98b33eae3b374322b5e86079ab089a12"
+    },
+    {
+      "path": "boot_002/boot_0187.png",
+      "bytes": 20263,
+      "sha256": "b04f9e0060a90d2443417637b63774908f8d61e0c6ee8770116784e057742bcb"
+    },
+    {
+      "path": "boot_002/boot_0250.png",
+      "bytes": 6121,
+      "sha256": "c1161e09bb43363d2777bdb410b3e59e98b33eae3b374322b5e86079ab089a12"
+    },
+    {
+      "path": "boot_002/commands.jsonl",
+      "bytes": 5682,
+      "sha256": "1ea6420ef99fc255c4d932ac77185268ea4420c164c295c0ec2f0b1171017ecf"
+    },
+    {
+      "path": "boot_002/execute_trace.jsonl",
+      "bytes": 9181,
+      "sha256": "30a91cd3d632b6d449daa5f8ca98023b6ba14c6c60f7415226dc0215184f7311"
+    },
+    {
+      "path": "boot_002/final_display.png",
+      "bytes": 249554,
+      "sha256": "2b5751e707cb8350f59e40890dfb242d814de6578409571c7d3e86bf65608eb6"
+    },
+    {
+      "path": "boot_002/freecad_stdout.txt",
+      "bytes": 318,
+      "sha256": "da1f511a95c176320047435eba354713ce27e9fc3e38079c77a0573a89972fcf"
+    },
+    {
+      "path": "boot_002/guest_environment.json",
+      "bytes": 204,
+      "sha256": "f9184ba3bdd9dbeb4a1b02d513d9f55b81208442388ae03ae4afe7ecd31d7831"
+    },
+    {
+      "path": "boot_002/launch_command.json",
+      "bytes": 1209,
+      "sha256": "e1023a2dd22e4c5f182d99fc8b00fd6b3dcbf66ab319d3fb381602a3c483993f"
+    },
+    {
+      "path": "boot_002/mouse_move.json",
+      "bytes": 97,
+      "sha256": "5ada8acb82010d683fa8ff7ba01750fd47b0dbceab1f47cf2ab3289cc0d162ad"
+    },
+    {
+      "path": "boot_002/native_launch.json",
+      "bytes": 93,
+      "sha256": "253dae5378bedf992adc77dc43488e748abd36135fdd12bf8cbc6f549848800b"
+    },
+    {
+      "path": "boot_002/native_read_poll.jsonl",
+      "bytes": 2815,
+      "sha256": "bb659d2f460b91126cfeb0f9ba4ddcacfae48fce4e30460814b90a1966c5bcdd"
+    },
+    {
+      "path": "boot_002/native_result.json",
+      "bytes": 112,
+      "sha256": "5c6300b9065b77e26feed3dfb0c5b102ea2a2c326a98b1f5e8a8239afc1c1328"
+    },
+    {
+      "path": "boot_002/paired_capture.json",
+      "bytes": 229,
+      "sha256": "ff42b7dd6cc42c3d552f3349ddb8565ef39fa273da899e4bf34534ced494efd0"
+    },
+    {
+      "path": "boot_002/paired_controller.png",
+      "bytes": 1138985,
+      "sha256": "8a84b1af525c1365d075e3019d813dbc98cecdd6543494a68dcb6bf56371673b"
+    },
+    {
+      "path": "boot_002/paired_qmp.png",
+      "bytes": 1130480,
+      "sha256": "a8469918626adaa80f13b93f855b7d2fb899ff2d18d056b0bd3a606b3b09707e"
+    },
+    {
+      "path": "boot_002/probe_source.py",
+      "bytes": 19189,
+      "sha256": "2e53a003daa25a72c716f877f6e71d0b312d18cb97597ff0c79dd79a332a99fc"
+    },
+    {
+      "path": "boot_002/qemu.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "boot_002/qmp_reset_once.json",
+      "bytes": 73,
+      "sha256": "de88bd064fe9c3699969e228feb1ff9bb1503cb1bad5ef46b0c53c41398c0c1f"
+    },
+    {
+      "path": "boot_002/readiness.jsonl",
+      "bytes": 2199,
+      "sha256": "e2d993500d4fe1e3516e5dec9fba0af5f148b6d8df56030d861ed280e5109c5a"
+    },
+    {
+      "path": "boot_002/ready.png",
+      "bytes": 6232,
+      "sha256": "6d0428dbe8845decf7503746580eb3c73589845fd9b168fd50176f7fd060fff7"
+    },
+    {
+      "path": "boot_002/result.json",
+      "bytes": 975,
+      "sha256": "87df21428967353d4eb3efbfd05d7006a3e844501f476c9bca87e788b8396fd9"
+    },
+    {
+      "path": "boot_002/session_diagnostic.json",
+      "bytes": 1040,
+      "sha256": "402793ea53fec3aadf0feb905b3802e73b29e369e4cef64e6c0502d61d7bcef7"
+    },
+    {
+      "path": "boot_002/x11_dispatch_provenance.json",
+      "bytes": 231,
+      "sha256": "03c4e62915ea0197f6b0550d4b057261c84299dc3b057ffedf7d75049b7a630c"
+    },
+    {
+      "path": "boot_002/x11_setup.json",
+      "bytes": 326,
+      "sha256": "e107477b3dc9be514a8a319eeafc4cd3f525b72c5cf07783e3e0751e84bfaee6"
+    },
+    {
+      "path": "boot_003/backing_chain.json",
+      "bytes": 2259,
+      "sha256": "0c947c6a1e011f8f3a16e1e7a9c2551bbb8810aa9af7ad4a19727344203a17b1"
+    },
+    {
+      "path": "boot_003/base_info.json",
+      "bytes": 909,
+      "sha256": "cdd7cf69344d54858ccacc1db21493969b09b91eefb438baf90dc444d80586a5"
+    },
+    {
+      "path": "boot_003/boot_0062.png",
+      "bytes": 18353,
+      "sha256": "cd58185cf01b19f551bbe47110d2e244d622eb4ad64c7c24194e14d0c0aa0fff"
+    },
+    {
+      "path": "boot_003/commands.jsonl",
+      "bytes": 5682,
+      "sha256": "837867298ef7171f973e164168d0415a146b9a102b156367568f3525a259df81"
+    },
+    {
+      "path": "boot_003/execute_trace.jsonl",
+      "bytes": 7103,
+      "sha256": "7a09e7b10b1976d40b68592bc6a8254c9029dc36ab694ae478c8860c63a5118d"
+    },
+    {
+      "path": "boot_003/final_display.png",
+      "bytes": 6121,
+      "sha256": "c1161e09bb43363d2777bdb410b3e59e98b33eae3b374322b5e86079ab089a12"
+    },
+    {
+      "path": "boot_003/freecad_stdout.txt",
+      "bytes": 1357,
+      "sha256": "cc36a17de6bab23ffc111759eb666785f7abca4d0cf2a6ea95584051018aab1e"
+    },
+    {
+      "path": "boot_003/guest_environment.json",
+      "bytes": 204,
+      "sha256": "f9184ba3bdd9dbeb4a1b02d513d9f55b81208442388ae03ae4afe7ecd31d7831"
+    },
+    {
+      "path": "boot_003/launch_command.json",
+      "bytes": 1209,
+      "sha256": "df95036d68ef5a7a7f4f190f77704d128f961255111918d708d1a153bfcc9480"
+    },
+    {
+      "path": "boot_003/mouse_move.json",
+      "bytes": 97,
+      "sha256": "5ada8acb82010d683fa8ff7ba01750fd47b0dbceab1f47cf2ab3289cc0d162ad"
+    },
+    {
+      "path": "boot_003/native_launch.json",
+      "bytes": 204,
+      "sha256": "d197108bd87e9a2d5970724d4ec662f84a3d79232a5eb625fc47ff2dde001992"
+    },
+    {
+      "path": "boot_003/native_read_poll.jsonl",
+      "bytes": 190,
+      "sha256": "e368444d6870e7dba41fd0b00ab1d84b22fdbfde4c5f853775d5a6b791dea0b0"
+    },
+    {
+      "path": "boot_003/native_result.json",
+      "bytes": 1729,
+      "sha256": "8ea5d2a069101005ab990b99f897959b8758dde81cde671f2c7f6b06ee907c31"
+    },
+    {
+      "path": "boot_003/native_zip.json",
+      "bytes": 585,
+      "sha256": "8269deca09c324917b99d51625e33e5950df0b04093e3b2b2adc281bcfbdb918"
+    },
+    {
+      "path": "boot_003/probe_source.py",
+      "bytes": 21715,
+      "sha256": "14a47964ef6321ab08b12cd05a33556074a980ac3324451faa56ddaa1804bc55"
+    },
+    {
+      "path": "boot_003/qemu.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "boot_003/readiness.jsonl",
+      "bytes": 964,
+      "sha256": "95e167aa504f6b26750cf9adbfc31cb7e957d32c4ec2ebf8b8f3a4dce2274c98"
+    },
+    {
+      "path": "boot_003/ready.png",
+      "bytes": 6232,
+      "sha256": "6d0428dbe8845decf7503746580eb3c73589845fd9b168fd50176f7fd060fff7"
+    },
+    {
+      "path": "boot_003/result.json",
+      "bytes": 1006,
+      "sha256": "d88466603e1344688828329fcc192b80e46c5fef05fa9d1b00ff8644f7920c94"
+    },
+    {
+      "path": "boot_003/trusted_headless_probe.py",
+      "bytes": 3610,
+      "sha256": "1b668ce9312ccd930264f0043eed56b8cc7345b9a3cd173405378572d2c06468"
+    },
+    {
+      "path": "brew_install_result.json",
+      "bytes": 181,
+      "sha256": "afa78a603ea6b9ea145225172f38201cd03c36c30d4507d318d35f4776739ee5"
+    },
+    {
+      "path": "cleanup.json",
+      "bytes": 1045,
+      "sha256": "052d0c474c59c25ed11c7a15b841baa44893d5810a11614aa0df47509120afbd"
+    },
+    {
+      "path": "documentation_review.json",
+      "bytes": 825,
+      "sha256": "21e3b5bc2af2cb41776e268884d62f54df5ab999fb553cde12e126c69f74a628"
+    },
+    {
+      "path": "firmware_commands.json",
+      "bytes": 9484,
+      "sha256": "2fa4a1ca35277594aaaee9e79265e3102afe2b5d704c7dddaad6346a8c7cde5c"
+    },
+    {
+      "path": "firmware_source.json",
+      "bytes": 335,
+      "sha256": "5479374a762ef1f0b7f4ece44906a69067cff2958b27d2b20fb2238167440274"
+    },
+    {
+      "path": "integrity_review.json",
+      "bytes": 746,
+      "sha256": "20d683150edb067fc0dbbf3f6b7b41179f7cfdbf7e1546b0e5be8b4bba09dac1"
+    },
+    {
+      "path": "isolation_before_boot.json",
+      "bytes": 115,
+      "sha256": "7bd76dcf2da5bc8fd237f45c61d02d07968d3bad901b8c3022108999e201f38c"
+    },
+    {
+      "path": "native_binary_commands.json",
+      "bytes": 557,
+      "sha256": "99536b0a01f257db4b1d74e2e9e1ec50388bd9543d64bb67d75ee2c77a42a38d"
+    },
+    {
+      "path": "pytest_final.log",
+      "bytes": 179,
+      "sha256": "593439bc9cab4ec12b04233515c338859272525dca536fe181f9741acb245637"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 6250,
+      "sha256": "378ae95e45b54fa34e97332b69939c6ceebce9ae07a5e6e05b2f0fffccebf521"
+    },
+    {
+      "path": "trusted_native_probe.FCMacro",
+      "bytes": 3888,
+      "sha256": "24533d8b2393cff19db58689d1a048a4a1046b0aa105fc1f594177b5795f353c"
+    }
+  ]
+}

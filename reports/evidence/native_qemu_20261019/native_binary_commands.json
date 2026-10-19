@@ -1,0 +1,21 @@
+[
+  {
+    "argv": [
+      "file",
+      "/opt/homebrew/bin/qemu-system-x86_64",
+      "/opt/homebrew/bin/qemu-img"
+    ],
+    "exit_code": 0,
+    "stdout": "/opt/homebrew/bin/qemu-system-x86_64: Mach-O 64-bit executable arm64\n/opt/homebrew/bin/qemu-img:           Mach-O 64-bit executable arm64\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "qemu-system-x86_64",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "QEMU emulator version 11.1.2\nCopyright (c) 2003-2026 Fabrice Bellard and the QEMU Project developers\n",
+    "stderr": ""
+  }
+]

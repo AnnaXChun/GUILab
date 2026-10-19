@@ -1,0 +1,187 @@
+{
+  "date": "2026-10-19",
+  "classification": "exploratory_native_qemu_infrastructure",
+  "kvm_available": false,
+  "vm_sha256": "edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12",
+  "same_base_before_after": true,
+  "attempts": {
+    "boot_001": {
+      "classification": "exploratory_native_qemu_infrastructure",
+      "model_calls": 0,
+      "benchmark_episodes": 0,
+      "host_system": "Darwin",
+      "host_arch": "arm64",
+      "kvm": false,
+      "boot_deadline_seconds": 600,
+      "cpu_cores": 2,
+      "ram_mib": 8192,
+      "started_at_utc": "2026-10-19T05:59:20.498383+00:00",
+      "status": "PASS_INFRASTRUCTURE_ONLY",
+      "native_status": "BLOCKED_BY_ENV",
+      "probe_source_sha256": "21079591640709b6c8cf329d02cc410f45606059dd55629168c374ad26ad489c",
+      "vm_sha256": "edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12",
+      "firmware_sha256": "2df617a6fd1bae41ec7c0e3bceca96c928a5a88d8dc198468d34733393ab2792",
+      "qemu_version": "QEMU emulator version 11.1.2\nCopyright (c) 2003-2026 Fabrice Bellard and the QEMU Project developers",
+      "qemu_pid": 42534,
+      "boot_seconds": 119.566,
+      "controller_ready": true,
+      "qemu_exit_code": 0,
+      "qemu_stopped": true,
+      "ended_at_utc": "2026-10-19T06:06:50.354590+00:00"
+    },
+    "boot_002": {
+      "classification": "exploratory_native_qemu_infrastructure",
+      "model_calls": 0,
+      "benchmark_episodes": 0,
+      "host_system": "Darwin",
+      "host_arch": "arm64",
+      "kvm": false,
+      "boot_deadline_seconds": 600,
+      "cpu_cores": 2,
+      "ram_mib": 8192,
+      "started_at_utc": "2026-10-19T06:14:27.308470+00:00",
+      "status": "PASS_CONTROLLER_TRANSPORT_ONLY",
+      "native_status": "BLOCKED_BY_ENV",
+      "probe_source_sha256": "2e53a003daa25a72c716f877f6e71d0b312d18cb97597ff0c79dd79a332a99fc",
+      "prepare_x11": true,
+      "vm_sha256": "edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12",
+      "firmware_sha256": "2df617a6fd1bae41ec7c0e3bceca96c928a5a88d8dc198468d34733393ab2792",
+      "qemu_version": "QEMU emulator version 11.1.2\nCopyright (c) 2003-2026 Fabrice Bellard and the QEMU Project developers",
+      "qemu_pid": 47477,
+      "boot_seconds": 281.927,
+      "controller_ready": true,
+      "qemu_exit_code": 0,
+      "qemu_stopped": true,
+      "ended_at_utc": "2026-10-19T06:24:35.980733+00:00"
+    },
+    "boot_003": {
+      "classification": "exploratory_native_qemu_infrastructure",
+      "model_calls": 0,
+      "benchmark_episodes": 0,
+      "host_system": "Darwin",
+      "host_arch": "arm64",
+      "kvm": false,
+      "boot_deadline_seconds": 600,
+      "cpu_cores": 2,
+      "ram_mib": 8192,
+      "started_at_utc": "2026-10-19T06:30:48.078157+00:00",
+      "status": "PASS_NATIVE_HEADLESS_ONLY",
+      "native_status": "PASS_NATIVE_HEADLESS_ONLY",
+      "probe_source_sha256": "14a47964ef6321ab08b12cd05a33556074a980ac3324451faa56ddaa1804bc55",
+      "prepare_x11": false,
+      "native_mode": "cmd",
+      "vm_sha256": "edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12",
+      "firmware_sha256": "2df617a6fd1bae41ec7c0e3bceca96c928a5a88d8dc198468d34733393ab2792",
+      "qemu_version": "QEMU emulator version 11.1.2\nCopyright (c) 2003-2026 Fabrice Bellard and the QEMU Project developers",
+      "qemu_pid": 53643,
+      "boot_seconds": 119.615,
+      "controller_ready": true,
+      "qemu_exit_code": 0,
+      "qemu_stopped": true,
+      "ended_at_utc": "2026-10-19T06:33:37.130436+00:00"
+    }
+  },
+  "native_result": {
+    "classification": "trusted_environment_probe",
+    "benchmark_success": null,
+    "agent_generated": false,
+    "model_calls": 0,
+    "status": "PASS_NATIVE_HEADLESS_ONLY",
+    "freecad_version": [
+      "1",
+      "1",
+      "0",
+      "44227 +568 (Git)",
+      "git://github.com/FreeCAD/FreeCAD.git",
+      "2026/03/25 02:17:53",
+      "tag: 1.1.0",
+      "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+    ],
+    "artifact": "/home/user/actc_infra_boot_003/trusted_infrastructure.FCStd",
+    "sha256": "bba102bed921deccbb43bb1e365743134a0ef452f6c0b50945d04f1431b0dd8c",
+    "saved": true,
+    "reopened_twice": true,
+    "gui_sync_verified": false,
+    "active_document": "trusted_infrastructure",
+    "radius_mm": 5.0,
+    "initial_length_mm": 10.0,
+    "final_length_mm": 12.0,
+    "initial_volume": 785.3981633974482,
+    "final_volume": 942.4777960769378,
+    "shape_valid": true,
+    "solids": 1,
+    "profile": "Sketch",
+    "body_tip": "Pad",
+    "sketch_constraints": 2,
+    "objects": [
+      {
+        "name": "Body",
+        "type_id": "PartDesign::Body"
+      },
+      {
+        "name": "Origin",
+        "type_id": "App::Origin"
+      },
+      {
+        "name": "X_Axis",
+        "type_id": "App::Line"
+      },
+      {
+        "name": "Y_Axis",
+        "type_id": "App::Line"
+      },
+      {
+        "name": "Z_Axis",
+        "type_id": "App::Line"
+      },
+      {
+        "name": "XY_Plane",
+        "type_id": "App::Plane"
+      },
+      {
+        "name": "XZ_Plane",
+        "type_id": "App::Plane"
+      },
+      {
+        "name": "YZ_Plane",
+        "type_id": "App::Plane"
+      },
+      {
+        "name": "Origin001",
+        "type_id": "App::Point"
+      },
+      {
+        "name": "Sketch",
+        "type_id": "Sketcher::SketchObject"
+      },
+      {
+        "name": "Pad",
+        "type_id": "PartDesign::Pad"
+      }
+    ],
+    "wall_seconds": 5.966
+  },
+  "native_artifact_local_only": "results/mac_native_probe_20261019/boot_003/trusted_infrastructure.FCStd",
+  "project_tests_passed": 77,
+  "model_calls": 0,
+  "benchmark_episodes": 0,
+  "real_pairs": 0,
+  "baseline_reproduced": false,
+  "gui_api_sync_verified": false,
+  "all_qemu_stopped": true,
+  "current_blockers": [
+    "native QEMU is not wired into pinned baseline provider",
+    "GUI macro timeout: no GUI native/synchronization acknowledgement",
+    "upstream full dependencies / original CLI dry-run not repaired",
+    "model endpoint, ID and credentials not supplied for this run"
+  ],
+  "go": [
+    "bounded TCG provider/runner adaptation and model-free GUI synchronization verification"
+  ],
+  "no_go": [
+    "claiming official baseline reproduced",
+    "counterfactual pairs",
+    "pilot24",
+    "full200"
+  ]
+}

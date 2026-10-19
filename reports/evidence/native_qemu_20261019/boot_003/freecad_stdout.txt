@@ -1,0 +1,13 @@
+FreeCAD 1.1.0, Libs: 1.1.0R44227 +568 (Git)
+(C) 2001-2026 FreeCAD contributors
+FreeCAD is free and open-source software licensed under the terms of LGPL2+ license.
+
+Recompute......
+						(9 %)							(18 %)							(27 %)							(36 %)							(45 %)							(54 %)							(63 %)							(72 %)							(81 %)							(90 %)							(100 %)									Importing project files......
+						(9 %)							(18 %)							(27 %)							(36 %)							(45 %)							(54 %)							(63 %)							(72 %)							(81 %)							(90 %)							(100 %)									Postprocessing......
+						(100 %)									Recompute......
+						(9 %)							(18 %)							(27 %)							(36 %)							(45 %)							(54 %)							(63 %)							(72 %)							(81 %)							(90 %)							(100 %)									Recompute......
+						(9 %)							(18 %)							(27 %)							(36 %)							(45 %)							(54 %)							(63 %)							(72 %)							(81 %)							(90 %)							(100 %)									Importing project files......
+						(9 %)							(18 %)							(27 %)							(36 %)							(45 %)							(54 %)							(63 %)							(72 %)							(81 %)							(90 %)							(100 %)									Postprocessing......
+						(100 %)									Recompute......
+						(9 %)							(18 %)							(27 %)							(36 %)							(45 %)							(54 %)							(63 %)							(72 %)							(81 %)							(90 %)							(100 %)									

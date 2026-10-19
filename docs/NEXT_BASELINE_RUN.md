@@ -1,6 +1,6 @@
 # 下一步：真实 baseline smoke
 
-2026-10-16 用户更新要求：下一步应在远程 Codex 中收集 base URL、API key 与模型信息，真正运行少量实验，先跑通 baseline。用户随后要求本机“开始验证”；本机只做独立、限时、无模型的 VM 软件模拟检查，结果见 `../reports/MAC_VM_SMOKE.md`。本文件继续定义远程的模型 baseline 小批实验。
+2026-10-16 用户更新要求：下一步应在远程 Codex 中收集 base URL、API key 与模型信息，真正运行少量实验，先跑通 baseline。用户随后要求本机“开始验证”；本机只做独立、限时、无模型的 VM 软件模拟检查，结果见 `../reports/MAC_VM_SMOKE.md`。本文件继续定义远程的模型 baseline 小批实验。2026-10-19 用户确认无法提供 KVM，后续先按 [无 KVM 路线](NO_KVM_RUN.md) 验证 TCG；本机最新证据见 [原生 QEMU 检查](../reports/MAC_NATIVE_QEMU_SMOKE.md)。
 
 ## 远程接手后的第一件事
 
@@ -10,7 +10,7 @@
 
 推荐 secret 名为 `CADWORLD_API_KEY`；endpoint 与 model 可用 `CADWORLD_API_BASE_URL`、`CADWORLD_MODEL_NAME`。不要假定 GitHub Actions repository secret 会自动出现在其他执行环境。若远程平台没有 secret 注入入口，可以使用不受 Git 跟踪的本地配置方式，不能把密钥写进受跟踪配置、命令日志或提交。
 
-参数收集和 Linux/KVM、Docker、QEMU、镜像、完整 upstream 依赖检查可以并行推进。没有 `/dev/kvm` 时给出明确解除条件和所需主机能力；不能靠再装一个普通容器就声称解决。具体环境命令在 `HANDOFF.md`。
+参数收集和容器权限、Docker、原生宿主 QEMU、内存、镜像及 upstream 依赖检查可以并行推进。KVM 已确认不可提供，不再反复索取。先检查 pinned Docker provider 的 `CADWORLD_ENABLE_KVM=false` 路线；若 Docker 不可用，使用原生 QEMU/TCG 并完成 runner 生命周期适配。Linux 容器可以运行 FreeCAD；是否具备桌面、依赖和所需资源需要实测。具体步骤见 `NO_KVM_RUN.md`。
 
 ## 付费调用如何启用
 
@@ -52,7 +52,7 @@
 ## 实际运行顺序
 
 1. 完成 pinned submodule 和原始 CLI unittest / dry-run。修正环境依赖，不把旧 `scripts/verify.py` 期待的 Mac 失败退出码当成远程通过条件。
-2. 显式准备官方 VM，记录来源与 SHA；完成无模型的 reset/observe/close 检查。镜像与主机不可用时先解决环境，不能把 endpoint 文本响应当作 baseline 跑通。
+2. 显式准备官方 VM，记录来源与 SHA；按无 KVM 路线完成无模型的 reset/observe/action/close 检查。TCG 作为探索环境单列，当前参考 gate 不直接放宽；需要在适配层增加该协议的独立验收，不能手改 stage PASS。镜像与主机不可用时先解决环境，不能把 endpoint 文本响应当作 baseline 跑通。
 3. 收集 endpoint 参数并完成上述自定义接口适配，在整批预算内执行一次模型验证。GUI 使用图片，CLI 使用上游支持的 action 协议；兼容性失败就保留错误并修复，不切换到其他 benchmark。
 4. 启用本次进程的付费调用，在两道 creation 题上跑官方 GUI 3-turn smoke。核对真实轨迹、截图、动作、评分与产物收集，区分 strict=0 和 run_error。
 5. VM 与模型接口健康时，在同一服务/实际 model ID 上运行官方 CLI 的 sketch-061 小批。CLI 不提供运行时桌面截图，作为单独基线记录，不与 GUI 假称完全相同 observation budget。

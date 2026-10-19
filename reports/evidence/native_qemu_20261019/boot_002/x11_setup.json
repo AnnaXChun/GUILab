@@ -1,0 +1,6 @@
+{
+  "error": "\n",
+  "output": "{\"path\": \"/etc/gdm3/custom.conf\", \"before_sha256\": \"ace2c502268010652fc8c624e217d4516e32022af29f5ff88375a34b3d6a0d1d\", \"after_sha256\": \"9fb24ef287e74d8184e0e140648658faa1572d34a41327e540b1eb5dac0d179c\", \"WaylandEnable\": \"false\"}\n\n",
+  "returncode": 0,
+  "status": "success"
+}

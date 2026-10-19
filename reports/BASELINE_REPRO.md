@@ -21,7 +21,7 @@ bash scripts/run_baseline.sh --kind gui-25 --dry-run
 bash scripts/run_baseline.sh --kind cli --dry-run
 ```
 
-原始 CLI dry-run exit=1，缺少 `dotenv`。完整上游 `uv sync` 没有执行；Mac 无 KVM，安装全部 405 个依赖也不能达到 VM 复现门槛。未用 stub 替代这些上游导入来宣称 CLI dry-run 通过。
+原始 CLI dry-run exit=1，缺少 `dotenv`。完整上游 `uv sync` 没有执行；405 包预览不能证明运行时依赖就绪。KVM 不是 FreeCAD 安装或软件模拟启动的必要条件。未用 stub 替代这些上游导入来宣称 CLI dry-run 通过。
 
 GUI 计划命令保留原始 runner，并显式加入 `--no-download_vm`，防止镜像缺失时自动下载。`--max_steps` 记录为 decision-turn 上限，不当作 atomic action 数或等预算证据。25-step smoke 也受默认 12-model-call 安全边界限制；需要另行提高默认调用上限才会开放该实时入口。
 
@@ -32,3 +32,5 @@ CLI-only 无运行时截图；扩展协议中 GUI/API/router 使用同一 effect
 没有 `result.txt` / `evaluation.json` 的官方 episode，本报告的 strict、failure_class 与 stage funnel 为 unavailable，而非 0。预算与环境失败也不计作 Agent 任务错误。
 
 2026-10-16 本机另行执行了无模型的官方 VM 软件模拟检查，详见 [Mac VM 验证](MAC_VM_SMOKE.md)。官方 qcow2 已下载并通过完整 SHA256 校验；默认入口和默认网络的失败均保留，兼容配置未改 upstream tracked 文件。本轮没有启动官方 GUI/CLI 模型 runner，没有 agent 生成的 `.FCStd` 或官方评分结果，因此本表的模型任务 N=0、strict=null 不变。
+
+2026-10-19 更新：无 KVM 原生 QEMU 已启动同一官方 VM、controller 和 FreeCAD GUI；固定 FreeCADCmd 探针完成参数化 `.FCStd` 保存重开与修改，见 [最新基础设施证据](MAC_NATIVE_QEMU_SMOKE.md)。该脚本没有模型和任务 instruction，不能计为 GUI、CLI 或 Hybrid baseline。当前原生 QEMU 尚未接入 pinned runner 的 reset/setup/evaluate/close，模型任务 N=0、strict=null 不变；下一步按 `docs/NO_KVM_RUN.md` 适配，不能继续把 KVM 当作唯一阻塞。

@@ -1,0 +1,6 @@
+{
+  "error": "",
+  "output": "{\"controller_environment\": {\"XAUTHORITY\": null, \"DISPLAY\": \":0\", \"WAYLAND_DISPLAY\": null, \"QT_QPA_PLATFORM\": null, \"XDG_SESSION_TYPE\": null}, \"uid\": 1000, \"processes\": [{\"pid\": \"1356\", \"comm\": \"Xorg\", \"display_environment\": {\"XDG_SESSION_TYPE\": \"x11\"}}, {\"pid\": \"1642\", \"comm\": \"gnome-shell\", \"display_environment\": {\"DISPLAY\": \":0\", \"XAUTHORITY\": \"/run/user/1000/gdm/Xauthority\", \"XDG_SESSION_TYPE\": \"x11\"}}, {\"pid\": \"1927\", \"comm\": \"FreeCAD\", \"display_environment\": {\"XDG_SESSION_TYPE\": \"x11\", \"XAUTHORITY\": \"/run/user/1000/gdm/Xauthority\", \"WAYLAND_DISPLAY\": \"unset\", \"DISPLAY\": \":0\"}}, {\"pid\": \"2209\", \"comm\": \"FreeCAD\", \"display_environment\": {\"WAYLAND_DISPLAY\": \"unset\", \"QT_QPA_PLATFORM\": \"xcb\", \"DISPLAY\": \":0\"}}], \"x11_sockets\": [\"X0\"], \"gdm_display_setting\": [\"WaylandEnable = false\"], \"sessions\": \"1 1000 user seat0 tty2 active no -\\n\"}\n",
+  "returncode": 0,
+  "status": "success"
+}

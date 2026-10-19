@@ -1,0 +1,15 @@
+{"elapsed_seconds": 0.0, "qmp_error": "FileNotFoundError", "error_type": "ConnectionError"}
+{"elapsed_seconds": 5.013, "error_type": "ReadTimeout"}
+{"elapsed_seconds": 18.025, "error_type": "ReadTimeout"}
+{"elapsed_seconds": 31.034, "error_type": "ReadTimeout"}
+{"elapsed_seconds": 44.039, "error_type": "ReadTimeout"}
+{"elapsed_seconds": 57.045, "error_type": "ConnectionError"}
+{"elapsed_seconds": 62.054, "qmp_status": {"status": "running", "running": true}, "error_type": "ConnectionError"}
+{"elapsed_seconds": 67.085, "error_type": "ConnectionError"}
+{"elapsed_seconds": 72.094, "error_type": "ConnectionError"}
+{"elapsed_seconds": 77.097, "error_type": "ConnectionError"}
+{"elapsed_seconds": 82.102, "error_type": "ConnectionError"}
+{"elapsed_seconds": 87.107, "error_type": "ConnectionError"}
+{"elapsed_seconds": 92.116, "error_type": "ReadTimeout"}
+{"elapsed_seconds": 105.126, "error_type": "ReadTimeout"}
+{"elapsed_seconds": 118.136, "status_code": 200}

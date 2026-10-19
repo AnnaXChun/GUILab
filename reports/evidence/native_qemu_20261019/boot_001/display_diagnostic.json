@@ -1,0 +1,6 @@
+{
+  "error": "",
+  "output": "{\"display_environment\": {\"DISPLAY\": \":0\", \"WAYLAND_DISPLAY\": null, \"XDG_SESSION_TYPE\": null, \"XDG_RUNTIME_DIR\": \"/run/user/1000\", \"QT_QPA_PLATFORM\": null}, \"x11_sockets\": [\"X0\"], \"processes\": [{\"pid\": \"1176\", \"comm\": \"gdm3\", \"state\": \"State:\\tS (sleeping)\"}, {\"pid\": \"1185\", \"comm\": \"gdm-session-wor\", \"state\": \"State:\\tS (sleeping)\"}, {\"pid\": \"1333\", \"comm\": \"Xorg\", \"state\": \"State:\\tS (sleeping)\"}, {\"pid\": \"1646\", \"comm\": \"gnome-shell\", \"state\": \"State:\\tS (sleeping)\"}, {\"pid\": \"1953\", \"comm\": \"FreeCAD\", \"state\": \"State:\\tR (running)\"}, {\"pid\": \"2025\", \"comm\": \"FreeCAD\", \"state\": \"State:\\tR (running)\"}], \"own_files\": [\"freecad_stdout.txt\", \"trusted_native_probe.FCMacro\"]}\n",
+  "returncode": 0,
+  "status": "success"
+}

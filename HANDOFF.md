@@ -1,12 +1,12 @@
 # 远程 Codex 交接
 
-交接日期：2026-10-16。代码来源：本项目 main，历史已保留；本文件与移植检查随本次交接提交。规格的证据类型、实验边界与 Stop/Go 继续有效。
+交接更新：2026-10-19。代码来源：本项目 main，历史已保留；本文件与移植检查随本次交接提交。规格的证据类型、实验边界与 Stop/Go 继续有效。
 
 ## 下一步执行指令已更新
 
 用户后续明确要求由远程 Codex 索取 base URL、API key、model ID 并真正跑少量 baseline。先读 [下一批真实 smoke](docs/NEXT_BASELINE_RUN.md)：其中给出参数收集方式、需要修正的 endpoint 接入、首批 15 次生成请求 / 16000 输出 tokens 上限及验收顺序。环境和参数就绪后，远程在该范围内启用调用并执行，不继续停在 mock 或重复询问是否允许相同小批实验。
 
-用户随后要求本机“开始验证”。本轮使用独立 Colima profile 做限时、无模型的软件模拟检查，实际结果见 [Mac VM 验证](reports/MAC_VM_SMOKE.md)。不收集或使用模型密钥，以下模型任务数尚未增加。
+用户随后要求本机“开始验证”，并确认无法提供 KVM。早期 Docker 双层模拟结果见 [Mac VM 验证](reports/MAC_VM_SMOKE.md)；后续 ARM 原生 QEMU 已在无 KVM 条件下启动官方 VM、controller 与 FreeCAD GUI，最新结果见 [原生 QEMU 检查](reports/MAC_NATIVE_QEMU_SMOKE.md)。下一步按 [无 KVM 路线](docs/NO_KVM_RUN.md) 推进，不再索取 KVM，不安装 VMware。不收集或使用模型密钥，以下模型任务数尚未增加。
 
 ## 先看结论
 
@@ -15,7 +15,7 @@
 | 已有证据 | 实际状态 |
 | --- | --- |
 | pinned upstream | `e5d0ebab8bd28da6e98c68c61db05747d1647f7b`；submodule 原始 tracked 文件未改 |
-| 本项目单测 | 历史 70 tests 通过，需在远程重新执行 |
+| 本项目单测 | 最新计数与日志见原生 QEMU 报告，远程仍需重新执行 |
 | upstream CLI unittest | 历史 7 tests 通过；用的是本项目轻量 Python 环境 |
 | 原始 CLI dry-run | 历史 exit 1，缺少 `dotenv`；full upstream sync 当时仅预览，未安装 |
 | synthetic campaign | 9 case：6 个有效 mock pair、3 个 invalid；标签 api=1、gui=2、tie=3、invalid=3 |
@@ -59,8 +59,6 @@ SHA 必须等于 pinned commit，tracked 状态应为空。结果目录已存在
 ```bash
 uname -s
 uname -m
-ls -l /dev/kvm
-test -r /dev/kvm && test -w /dev/kvm
 docker info
 qemu-system-x86_64 --version
 qemu-img --version
@@ -68,15 +66,15 @@ uv --version
 df -h .
 ```
 
-参考环境为 Ubuntu/Linux x86_64 + Docker + QEMU/KVM。SPEC 建议至少 100 GB 空闲空间，单路 VM 约 8 vCPU、8 GB RAM、64 GB 虚拟磁盘；两路原生 pair 需要额外宿主资源。KVM 必须在当前执行环境内可访问，只有宿主支持却未传入容器仍算 blocker。
+参考环境为 Ubuntu/Linux x86_64 + Docker + QEMU/KVM。SPEC 建议至少 100 GB 空闲空间，单路 VM 约 8 vCPU、8 GB RAM、64 GB 虚拟磁盘；两路原生 pair 需要额外宿主资源。这只是参考环境配置。用户已确认无 KVM，当前转为单列 TCG 探索环境，不将其硬件时延与参考协议混报。
 
 Ubuntu 缺少运行时且具有安装权限时，可按 pinned upstream README 安装 `docker.io qemu-system-x86 qemu-utils`，配置 docker/kvm 组后重新登录；不要把权限失败绕过成 root 下不受控执行。uv 缺失时使用其官方安装方式。主机安装操作与模型运行额度分别记录。
 
-本机是 Apple M5 Pro / ARM64，没有 x86 KVM。已使用独立 ARM Colima profile 实测官方容器与 VM 的 TCG 路径，逐次结果见 `reports/MAC_VM_SMOKE.md`。默认入口与网络都遇到兼容性错误，不能把“支持关闭 KVM”理解为原样即可运行。当前 preflight 仍按参考协议严格要求 x86_64/KVM；软件模拟单列 exploratory 结果，不放宽正式 gate。
+本机是 Apple M5 Pro / ARM64，没有 x86 KVM。2026-10-19 已用 ARM 原生 QEMU 11.1.2 直接模拟同一官方 x86 qcow2，绕过原 amd64 容器转译层。controller 与 FreeCAD GUI 已启动；宏超时和原生文件结果分别见 `reports/MAC_NATIVE_QEMU_SMOKE.md`。当前 preflight 仍按参考协议严格要求 x86_64/KVM；软件模拟使用独立探索验收，不能手动改 stage PASS。
 
 ## P0：官方基线闭环
 
-先在合适的 Linux 上完成完整依赖与原始 CLI dry-run：
+先确认容器资源及原生 QEMU/TCG 可运行，再完成 upstream 依赖与原始 CLI dry-run。不要以无 KVM 为由跳过所有运行验证：
 
 ```bash
 bash scripts/bootstrap.sh --full-upstream
@@ -96,7 +94,7 @@ bash scripts/preflight.sh
 
 本机本次实测 qcow2 SHA256 为 `edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12`，28,310,503,424 bytes。远程仍须对实际文件独立计算并记录，不能只复制该值作为检查结果；源地址的 main 可以变化。不要把 qcow2 提交到 Git。CAM 官方评分还需要宿主 FreeCAD 1.1.x；前几道 sketch/part smoke 可以避开 CAM。
 
-先核对两个计划任务 `freecad-sketch-061`、`freecad-part-076`，它们都是 creation，不是 preservation 编辑主实验。先实现或执行一次 **无模型的** `DesktopEnv.reset → observe → close` 环境探针，并记录代码与日志；使用 pinned 上游的 provider/controller，不读取隐藏规则给 agent。新增的 `scripts/probe_mac_vm.py` 只检查独立 Docker 基础设施，不能替代这个 DesktopEnv 闭环，实际结果见 Mac VM 报告。
+先核对两个计划任务 `freecad-sketch-061`、`freecad-part-076`，它们都是 creation，不是 preservation 编辑主实验。先实现或执行一次 **无模型的** `DesktopEnv.reset → observe → close` 环境探针，并记录代码与日志；使用 pinned 上游的 provider/controller，不读取隐藏规则给 agent。`scripts/probe_mac_vm.py` 和 `scripts/probe_native_qemu.py` 分别检查 Docker 与宿主 QEMU 基础设施，都不能替代 DesktopEnv 闭环。后者尚未接入 baseline runner。优先尝试 pinned Docker provider 的软件模拟；Docker 不可用时，在本项目做原生 QEMU provider/生命周期适配，保留上游 runner、prompt、parser 和离线评分。
 
 查看模型 smoke 的确切计划命令，仍不请求模型：
 

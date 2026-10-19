@@ -1,0 +1,26 @@
+{
+  "sha256": "bba102bed921deccbb43bb1e365743134a0ef452f6c0b50945d04f1431b0dd8c",
+  "types": [
+    "App::Line",
+    "App::Origin",
+    "App::Plane",
+    "App::Point",
+    "PartDesign::Body",
+    "PartDesign::Pad",
+    "Sketcher::SketchObject"
+  ],
+  "members": [
+    "Document.xml",
+    "StringHasher.Table.txt",
+    "Body.Shape.brp",
+    "Body.Shape.Map.txt",
+    "Sketch.InternalShape.brp",
+    "Sketch.Shape.brp",
+    "Sketch.Shape.Map.txt",
+    "Pad.AddSubShape.brp",
+    "Pad.AddSubShape.Map.txt",
+    "Pad.Shape.brp",
+    "Pad.Shape.Map.txt",
+    "Pad.SuppressedShape.brp"
+  ]
+}
