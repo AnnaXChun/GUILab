@@ -1,0 +1,55 @@
+{
+  "classification": "at_most_once_dispatch_audit",
+  "payload_policy": "digest only; action text remains in original agent trajectory",
+  "source_sha256": "36bee51c8f3d2ca50a963e35fc3efaf3aa4ddfe126ec0fff612e843626f1d76d",
+  "rows": [
+    {
+      "execution_id": "0639bbba-5abb-4906-9b91-ea0598998b31",
+      "state": "complete",
+      "payload_sha256": "d159ce09e0facf602a1ee07eb70f626263ddd54e0daeaf95bb8d1e75a2e0362a",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "17cf3bcb-ce05-41b5-b29f-8f9cacdfc26d",
+      "state": "complete",
+      "payload_sha256": "bbb4ffaaf3ef33c7891d2871eb381bd60bf5b3587ee3743294f9868370d9736c",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "56588802-78d0-468a-a9f3-da4ab2a6d350",
+      "state": "complete",
+      "payload_sha256": "5c1d20d4689fa62c5ca32f471d324a8a98cf15b0b3a41effc6320619ec189dee",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cc0d68f5-bd3e-4886-b794-15d8cd365d69",
+      "state": "complete",
+      "payload_sha256": "0337aabf83d50553a20485cf01e17060cf6285f28ab479a937a2098b29cae5a2",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "c845bacf-d47a-4f12-90a4-8c8efdfd93aa",
+      "state": "complete",
+      "payload_sha256": "af4a1a2ee98e1c96514d8eeab9d683fe7420970277515d3a6a8d501fc1515215",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "a9f60f6e-e067-4703-80a6-e23fbc8d5116",
+      "state": "complete",
+      "payload_sha256": "f1b306b4ab094557e13b20c2d3e91a6e34723612efa1630932c7a17bfac51f55",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "006ba5db-ca40-4fc8-a1fc-0b45190edca5",
+      "state": "complete",
+      "payload_sha256": "0fd907097c0e9c5dbb216e1764da39206a50c83c28d6fa4534d098734a6e7496",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "b4ba71d9-3230-4347-8b8c-bf590bca4c1c",
+      "state": "complete",
+      "payload_sha256": "239b023b70cfe3eebc5d6f29d18dd872fc99e54c04537985987ac2d410f8beee",
+      "payload_excluded": true
+    }
+  ]
+}

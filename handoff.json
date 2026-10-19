@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-19",
+  "updated_at": "2026-10-19T10:39:04.385209+00:00",
   "project": "GUILab / CADWorld ACTC",
   "repository": "https://github.com/AnnaXChun/GUILab",
   "branch": "main",
   "read_first": [
     "AGENTS.md",
-    "reports/BASELINE_RUNTIME_SMOKE.md",
+    "reports/BASELINE_SUCCESS_SMOKE.md",
     "HANDOFF.md"
   ],
   "cadworld_commit": "e5d0ebab8bd28da6e98c68c61db05747d1647f7b",
@@ -14,15 +14,16 @@
     "project_tests": 96,
     "upstream_cli_tests": 7,
     "synthetic_cases": 9,
-    "real_tasks": 3,
+    "real_tasks": 2,
     "real_pairs": 0,
     "provider_network_calls": 15,
     "baseline_reproduced": false,
     "unique_tasks": 2,
-    "note": "Three real bounded episodes evaluated, all strict=0 and no output file; not paper/full benchmark reproduction."
+    "note": "Three real bounded episodes evaluated, all strict=0 and no output file; not paper/full benchmark reproduction.",
+    "real_episodes": 3
   },
   "next_phase": "P0",
-  "next_action": "Fix and validate Qwen3.5 GUI coordinate contract and CLI FreeCAD saveAs/document-object usage. First batch exhausted 15 calls; do not issue new generation without a new bounded authorization. Then validate formal NativeWorker/GUI bridge before real pairs.",
+  "next_action": "Run model-free GUI attachment-panel/event-loop diagnostics, then accept formal TypedWorker/Qt bridge save-reopen synchronization and same-S0 double-clone restore. Follow docs/NEXT_ACTC_VALIDATION.md; no new inference or pair/training GO yet.",
   "paid_run_authorization_added": true,
   "defaults": {
     "ENABLE_PAID_RUNS": 0,
@@ -41,14 +42,15 @@
     "automatic model proposal collection"
   ],
   "known_constraints": [
-    "First batch generation requests=15/15; do not reset the ledger",
-    "Earlier GPT HTTP 500 usage unknown; reserved output=128 retained",
-    "TCG is exploratory; reference KVM environment not reproduced",
-    "Qwen3.5 emitted apparent 0..1000 coordinates despite pinned pixel contract",
-    "CLI model scripts used wrong FreeCAD object types/properties and doc.save(path)",
-    "Formal NativeWorker/GUI bridge/same-S0 pairs not validated",
-    "Full 405-package upstream sync not performed",
-    "No real ACTC pairs or training evidence"
+    "All earlier ledgers, failed requests and unknown usage reservations retained; do not replay completed campaigns.",
+    "Reference Linux/KVM gate not passed; user cannot provide KVM; do not request it again.",
+    "Qwen normalized-coordinate GUI adapter v1 mixed pixel execution in online history; v2 fixes units; report protocols separately.",
+    "Qwen3.6 CLI score=1 but saved Sketch.Invalid/attachment error; exclude that artifact from valid training data.",
+    "Qwen3.5-122B CLI score=1 and native audit PASS; agent terminated at turn_limit, not finish.",
+    "sketch-061 was repeatedly used for debugging/model selection; not an unseen held-out result.",
+    "No full 405-package upstream sync; no model weights downloaded.",
+    "Formal TypedWorker/GUI bridge/same-S0 paired runtime not yet validated; real ACTC pairs=0.",
+    "Provider aliases do not prove backend weight identity; price/initial HTTP500 usage unknown."
   ],
   "artifacts": [
     "reports/REPRO_STATUS.md",
@@ -58,9 +60,9 @@
     "reports/DEVIATIONS.md",
     "reports/stages.json"
   ],
-  "execution_location": "Current Mac and remote handoff share one already-consumed first batch; local baseline smoke authorized on 2026-10-19.",
+  "execution_location": "Authorized local Mac native QEMU/TCG continuation; remote must validate its own assets, environment and secrets.",
   "authorized_real_smoke": {
-    "scope": "initial small baseline batch only",
+    "scope": "Historical initial batch, already consumed; continuation scope is in explicit campaign configs and baseline_smoke.",
     "unique_tasks": [
       "freecad-sketch-061",
       "freecad-part-076"
@@ -86,7 +88,7 @@
   "vm_asset_observed": {
     "bytes": 28310503424,
     "sha256": "edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12",
-    "verified_on": "2026-10-16",
+    "verified_on": "2026-10-19",
     "remote_must_hash_its_own_file": true
   },
   "mac_infrastructure_result": {
@@ -97,11 +99,14 @@
     "gui_visible": true,
     "gui_api_sync_verified": false,
     "baseline_reproduced": false,
-    "model_calls": 15,
+    "model_calls": 201,
     "real_pairs": 0,
     "all_qemu_stopped": true,
-    "evidence": "reports/evidence/baseline_runtime_20261019/campaign_summary.json",
-    "gui_native_save_reopen": true
+    "evidence": "reports/evidence/baseline_success_20261019/baseline_success_20261019/campaign_summary.json",
+    "gui_native_save_reopen": true,
+    "paper_reproduced": false,
+    "official_cli_single_task_success": true,
+    "model_calls_scope": "Combined baseline/probe evidence, not the trusted infrastructure macro itself."
   },
   "mac_infrastructure_history": {
     "2026-10-16": {
@@ -118,37 +123,207 @@
   "environment_route": {
     "kvm_available": false,
     "native_host_qemu_tcg_probe_verified": true,
-    "next_guide": "docs/RUN_TCG_BASELINE.md",
+    "next_guide": "docs/NEXT_ACTC_VALIDATION.md",
     "reference_gate_unchanged": true,
     "native_baseline_provider_verified": true
   },
   "baseline_smoke": {
-    "protocol": "exploratory_tcg",
-    "model": "qwen3.5-35b-a3b",
-    "thinking": false,
-    "evaluated_episodes": 3,
-    "unique_tasks": 2,
-    "strict_scores": [
-      0.0,
-      0.0,
-      0.0
+    "classification": "bounded_baseline_continuation",
+    "evidence": "reports/evidence/baseline_success_20261019/baseline_success_20261019/campaign_summary.json",
+    "reference_kvm_gate_passed": false,
+    "models": [
+      "qwen3.5-122b-a10b",
+      "qwen3.6-35b-a3b"
     ],
-    "saved_artifacts": 0,
-    "generation_calls": 15,
-    "known_input_tokens": 28304,
-    "known_output_tokens": 1369,
-    "unknown_output_reservation": 128,
+    "attempts": 7,
+    "evaluated_episodes": 5,
+    "run_errors": 2,
+    "real_pairs": 0,
+    "episodes": [
+      {
+        "run_id": "success_cli_qwen36_001",
+        "kind": "cli",
+        "model": "qwen3.6-35b-a3b",
+        "coordinate_history_protocol": null,
+        "task_id": "freecad-sketch-061",
+        "status": "EVALUATED",
+        "strict": 1.0,
+        "upstream_raw_score": 1.0,
+        "model_calls": 14,
+        "known_output_tokens": 5823,
+        "artifact_count": 1
+      },
+      {
+        "run_id": "success_gui_qwen36_001",
+        "kind": "gui",
+        "model": "qwen3.6-35b-a3b",
+        "coordinate_history_protocol": 1,
+        "task_id": "freecad-sketch-061",
+        "status": "EVALUATED",
+        "strict": 0.0,
+        "upstream_raw_score": 0.0,
+        "model_calls": 25,
+        "known_output_tokens": 2393,
+        "artifact_count": 0
+      },
+      {
+        "run_id": "success_gui_qwen36_100_001",
+        "kind": "gui",
+        "model": "qwen3.6-35b-a3b",
+        "coordinate_history_protocol": 1,
+        "task_id": "freecad-sketch-061",
+        "status": "RUN_ERROR",
+        "strict": null,
+        "upstream_raw_score": 0.0,
+        "model_calls": 50,
+        "known_output_tokens": 4343,
+        "artifact_count": 0
+      },
+      {
+        "run_id": "success_gui_qwen36_recovery_001",
+        "kind": "gui",
+        "model": "qwen3.6-35b-a3b",
+        "coordinate_history_protocol": 1,
+        "task_id": "freecad-sketch-061",
+        "status": "RUN_ERROR",
+        "strict": null,
+        "upstream_raw_score": null,
+        "model_calls": 6,
+        "known_output_tokens": 464,
+        "artifact_count": 0
+      },
+      {
+        "run_id": "success_gui_qwen36_history_001",
+        "kind": "gui",
+        "model": "qwen3.6-35b-a3b",
+        "coordinate_history_protocol": 2,
+        "task_id": "freecad-sketch-061",
+        "status": "EVALUATED",
+        "strict": 0.0,
+        "upstream_raw_score": 0.0,
+        "model_calls": 44,
+        "known_output_tokens": 3558,
+        "artifact_count": 0
+      },
+      {
+        "run_id": "success_gui_qwen122_001",
+        "kind": "gui",
+        "model": "qwen3.5-122b-a10b",
+        "coordinate_history_protocol": 2,
+        "task_id": "freecad-sketch-061",
+        "status": "EVALUATED",
+        "strict": 0.0,
+        "upstream_raw_score": 0.0,
+        "model_calls": 35,
+        "known_output_tokens": 3405,
+        "artifact_count": 0
+      },
+      {
+        "run_id": "success_cli_qwen122_001",
+        "kind": "cli",
+        "model": "qwen3.5-122b-a10b",
+        "coordinate_history_protocol": null,
+        "task_id": "freecad-sketch-061",
+        "status": "EVALUATED",
+        "strict": 1.0,
+        "upstream_raw_score": 1.0,
+        "model_calls": 8,
+        "known_output_tokens": 1869,
+        "artifact_count": 1
+      }
+    ],
+    "official_cli_single_task_success": true,
+    "official_gui_with_coordinate_adapter_single_task_success": false,
+    "native_cli36_artifact_status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "native_gui_artifact_status": "NOT_RUN_NO_ARTIFACT",
+    "native_cli122_artifact_status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "project_tests": 122,
+    "upstream_cli_tests": 7,
+    "generation_calls_total_including_history": 201,
+    "known_output_tokens_total_including_history": 23385,
+    "known_input_tokens_total_including_history": 702267,
+    "unknown_output_reservation_total": 128,
     "total_output_tokens": null,
     "total_cost_usd": null,
-    "real_pairs": 0,
+    "paper_reproduced": false,
     "all_vms_stopped": true,
-    "evidence": "reports/evidence/baseline_runtime_20261019/campaign_summary.json"
+    "budget_snapshots": [
+      {
+        "ledger": "first_baseline_batch.sqlite",
+        "ledger_sha256": "05eeb7e0e1e4b0216d5110e355b13680e9db4a8c4ab87a3d25414cf68eca8cf9",
+        "max_calls": 15,
+        "max_output_tokens": 16000,
+        "blocked": false,
+        "requests": 15,
+        "known_output_tokens": 1369,
+        "unknown_output_reservation": 128
+      },
+      {
+        "ledger": "success_batch_20261019.sqlite",
+        "ledger_sha256": "30f0b18a63843d4e20d964b387f9a5604c974f41740897bb4e6c4029f32b0506",
+        "max_calls": 50,
+        "max_output_tokens": 32000,
+        "blocked": false,
+        "requests": 50,
+        "known_output_tokens": 10243,
+        "unknown_output_reservation": 0
+      },
+      {
+        "ledger": "gui100_batch_20261019.sqlite",
+        "ledger_sha256": "a18fb5d29bad608bd7b9c55424d7fb9c1de9780286b03ab6533a786677d4be06",
+        "max_calls": 100,
+        "max_output_tokens": 32000,
+        "blocked": true,
+        "requests": 50,
+        "known_output_tokens": 4343,
+        "unknown_output_reservation": 0
+      },
+      {
+        "ledger": "gui_recovery_batch_20261019.sqlite",
+        "ledger_sha256": "1c1239caaf7cfecd6953f59cf53d5120fe006ca60b6b544c01d73c0fa9d1c265",
+        "max_calls": 50,
+        "max_output_tokens": 16000,
+        "blocked": false,
+        "requests": 50,
+        "known_output_tokens": 4022,
+        "unknown_output_reservation": 0
+      },
+      {
+        "ledger": "qwen122_batch_20261019.sqlite",
+        "ledger_sha256": "01e545f43ea785cd9cc33403ba9329e53224e7d90686aec3ae0698c25c663202",
+        "max_calls": 36,
+        "max_output_tokens": 24000,
+        "blocked": false,
+        "requests": 36,
+        "known_output_tokens": 3408,
+        "unknown_output_reservation": 0
+      }
+    ],
+    "pooled_success_rate": null,
+    "pooled_success_rate_reason": "Different models, budgets/adapters and repeated same task; no pooled benchmark estimate.",
+    "attempts_including_first_batch": 10,
+    "evaluated_episodes_including_first_batch": 8,
+    "held_out_estimate": false
   },
   "go_no_go": {
     "baseline_infrastructure": "GO",
+    "official_cli_single_task": "GO",
+    "model_free_gui_diagnostics": "GO",
+    "gui_coordinate_adapter_single_task": "NO-GO",
+    "native_valid_gui_artifact": "NO-GO",
+    "native_valid_cli122_artifact": "GO",
     "paper_reproduction": "NO-GO",
-    "more_generation_in_first_batch": "NO-GO",
+    "more_generation_in_completed_batches": "NO-GO",
     "actc_pairs": "NO-GO",
-    "reason": "No saved agent artifact; GUI coordinate contract and CLI CAD API errors unresolved; first call budget exhausted."
+    "P4_training": "NO-GO"
+  },
+  "baseline_continuation_authorized": true,
+  "baseline_history_first_batch": {
+    "blocked": false,
+    "known_output_tokens": 1369,
+    "remaining_calls": 0,
+    "remaining_output_cap": 14503,
+    "requests": 15,
+    "unknown_output_reservation": 128
   }
 }

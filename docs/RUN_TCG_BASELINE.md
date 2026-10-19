@@ -1,6 +1,6 @@
 # 在无 KVM 环境执行小批 baseline
 
-首批已于 2026-10-19 完成，15 次生成额度耗尽；下方命令用于说明已实现入口，不能据此在新账本重开第一批。最新 3 个真实 episode 均 strict=0、无输出文件，详见 [BASELINE_RUNTIME_SMOKE](../reports/BASELINE_RUNTIME_SMOKE.md)。下一批需要新的明确预算。
+首批15次请求及失败保留，后续CLI单题已通过官方评分与122B原生审计；Qwen3.6原文件Invalid失败仍保留。GUI仍无成功文件，当前停止新增推理。最新结果见[单题续跑](../reports/BASELINE_SUCCESS_SMOKE.md)，下一步按[阶段验收](NEXT_ACTC_VALIDATION.md)做无模型GUI诊断与同步/隔离。下方Qwen3.5/15次命令属于历史首批，不能在新账本重复执行；原Python入口复用见[官方sh核对](../reports/UPSTREAM_SH_REUSE.md)。
 
 2026-10-19 用户要求当前会话继续解决 GUI 宏超时并真正开始 baseline。这项新授权将此前“本机只做无模型检查”的执行位置限制扩展到当前 Mac；模型请求仍受首批 15 次、16000 输出 tokens 上限约束。没有接口与凭证时不调用模型，也不以 mock 冒充真实实验。
 
@@ -44,6 +44,8 @@ cd ../..
 `cad_cf.gui_startup` 直接启动同一 snap 安装中的 FreeCAD ELF，沿用 snap 的 Python/库路径，显式使用当前 X11 display；不覆盖 HOME。可信输出目录在部署宏时写入，避免依赖 GUI/snap 对自定义环境变量的继承。仅在私有 overlay 内禁用镜像的 FreeCAD 自动启动条目，并结束已有启动实例。GUI ack 后再核验 PID；若仍有已启动的空白 autostart 实例则结束它，发现其他带文档参数的实例就拒绝验收。原始 qcow2 不变。固定 native GUI 探针增加分阶段 JSONL，能分辨是否进入宏、是否完成几何、保存重开和 GUI 刷新。
 
 GUI readiness 宏只检查空文档集、版本、workbench 和窗口可见性，不创建任务几何，不预填答案。真实 baseline 的 prompt、parser、agent、任务 config、评分与 diagnostics 都来自 pinned upstream。
+
+后续可选 `gui_warmup` 曾创建0对象的临时空文档、渲染后关闭；ack 成功的 GUI100 仍卡在欢迎页，50次请求后主动阻断。该尝试按诊断失败单列，不能把 ack 当作交互验收。恢复复测显式关闭 `gui_warmup`，不根据这一单例声称已确定根因。Qwen 的 `--qwen-coordinates normalized1000` 会追加坐标合同并转换绝对鼠标位置，这是原 GUI-only 基线的接入差异，必须与原像素合同结果分开。
 
 本轮可信 GUI 建模探针已成功。多个启动条件共同变化，尚不能唯一归因旧宏失败；不能把“某个环境变量就是根因”写成已证实结论。实际时延和失败见最新报告。
 

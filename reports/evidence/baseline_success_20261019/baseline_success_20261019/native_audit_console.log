@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/scripts/audit_native_artifact.py", line 101, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/scripts/audit_native_artifact.py", line 90, in main
+    response=bridge.execute(['/usr/bin/python3','-c',deployed],execution_id='native-artifact-audit-once',timeout=120)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/cad_cf/terminal_bridge.py", line 41, in execute
+    raise RuntimeError("VM command failed: " + str(result.get("error", ""))[:200])
+RuntimeError: VM command failed: 

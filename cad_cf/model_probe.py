@@ -5,7 +5,7 @@ import json
 import os
 from pathlib import Path
 from .baseline import safe_endpoint
-from .batch_budget import BatchBudget
+from .campaign import load_campaign,open_budget
 from .trace import Trace
 from .upstream_launch import APIGate
 
@@ -17,6 +17,7 @@ def main():
     p.add_argument('--env-file',type=Path,default=Path('.env'))
     p.add_argument('--screenshot',type=Path,required=True);p.add_argument('--output',type=Path,required=True)
     p.add_argument('--batch-ledger',type=Path,default=Path('results/first_baseline_batch.sqlite'))
+    p.add_argument('--campaign-config',type=Path)
     a=p.parse_args()
     from dotenv import dotenv_values
     from openai import OpenAI
@@ -30,7 +31,7 @@ def main():
     screenshot=a.screenshot.read_bytes()
     if not screenshot.startswith(b'\x89PNG\r\n\x1a\n'):raise ValueError('real PNG screenshot required')
     a.output.mkdir(parents=True,exist_ok=False);a.batch_ledger.parent.mkdir(parents=True,exist_ok=True)
-    batch=BatchBudget(a.batch_ledger)
+    batch=open_budget(a.batch_ledger,load_campaign(a.campaign_config))
     gate=APIGate(max_calls=1,output_tokens=128,max_wall=110,trace=Trace(a.output/'usage.jsonl'),batch=batch,per_call_tokens=128)
     client=OpenAI(api_key=secret,base_url=endpoint,max_retries=0,timeout=110)
     result={'classification':'endpoint_connectivity_only','benchmark_episode':False,'base_url':endpoint,'requested_model':model,'status':'FAIL','output_tokens':None,

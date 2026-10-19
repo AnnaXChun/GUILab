@@ -1,0 +1,38 @@
+{
+  "classification": "offline_delivery_checks",
+  "raw_log_whitespace_preserved": true,
+  "raw_log_policy": ".gitattributes exempts captured continuation logs from whitespace lint and EOL conversion; source, tests and prose remain checked.",
+  "codebase_memory": {
+    "access": "local CLI available",
+    "project": "Users-bytedance-Desktop-Own-CUA-cad-cf-hybrid",
+    "index_status": "ready",
+    "indexed_at": "2026-10-19T10:42:07Z",
+    "source_paths_checked": 6,
+    "parse_partial_count": 0,
+    "parse_unusable_count": 0,
+    "scope_policy": "Index and detect_changes assist inspection; git diff defines submission scope and actual tests establish correctness. MCP cache/diagnostic outputs excluded."
+  },
+  "model_calls": 0,
+  "project_tests": 122,
+  "upstream_cli_tests": 7,
+  "adapted_upstream_cli_dry_run": "PASS",
+  "test_evidence": "evidence/baseline_success_20261019/baseline_success_20261019/project_tests_final.log",
+  "archive_files_verified": 588,
+  "archive_jsonl_files": 40,
+  "archive_jsonl_rows": 1434,
+  "archive_omitted_screenshot_sha_records": 187,
+  "private_values_printed": false,
+  "privacy_findings": [],
+  "prose_scan": {
+    "files": 14,
+    "findings": [],
+    "protected_spans": "fenced commands, inline code, URLs and filenames unchanged",
+    "fact_review": "Official scores/native validity/termination/cost/held-out scope checked separately; no added causal attribution."
+  },
+  "qemu_system_x86_64_processes": [],
+  "base_sha256_verified_by_host_shasum": "edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12",
+  "firmware_sha256_verified_by_host_shasum": "2df617a6fd1bae41ec7c0e3bceca96c928a5a88d8dc198468d34733393ab2792",
+  "pinned_upstream_tracked_clean": true,
+  "real_pairs": 0,
+  "P4": "NO-GO"
+}

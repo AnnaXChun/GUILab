@@ -1,0 +1,18 @@
+{
+  "classification": "agent_artifact_metadata_only",
+  "reference_or_expected_read": false,
+  "artifact_sha256": "3ae807fd800ef3c8da1a89362c52f8c902cda50b76ccc870a5dd7cc4eb93a8eb",
+  "bytes": 3463,
+  "document_xml_sha256": "3a3987261eed7ac3e1faf1d147665eedfe73b4600db9c6c207925f46fb8f1445",
+  "saved_error_attributes": [
+    {
+      "type": "Sketcher::SketchObject",
+      "name": "Sketch",
+      "id": "456",
+      "Touched": "1",
+      "Invalid": "1",
+      "Error": "AttachEngine3D::calculateAttachedPlacement: not enough shapes linked (at least two are required)."
+    }
+  ],
+  "artifact_modified": false
+}

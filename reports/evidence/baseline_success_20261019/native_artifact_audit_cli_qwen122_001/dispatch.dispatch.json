@@ -1,0 +1,13 @@
+{
+  "classification": "at_most_once_dispatch_audit",
+  "payload_policy": "digest only; action text remains in original agent trajectory",
+  "source_sha256": "0c47ae1c2f5116306ea12b32924aac0871dc1ccf925507a644dca5e3607de719",
+  "rows": [
+    {
+      "execution_id": "native-artifact-audit-once",
+      "state": "complete",
+      "payload_sha256": "3c4751ed85938207669a5ec766ef36704c8f5fa0d8068a4e9cbc120aef2080b6",
+      "payload_excluded": true
+    }
+  ]
+}

@@ -6,12 +6,15 @@ import uuid
 class BatchBudget:
     def __init__(self,path,max_calls=15,max_output_tokens=16000):
         self.db=sqlite3.connect(path,timeout=10)
-        self.db.execute('CREATE TABLE IF NOT EXISTS limits (id INTEGER PRIMARY KEY CHECK(id=1), calls INTEGER, tokens INTEGER, blocked INTEGER)')
-        self.db.execute('CREATE TABLE IF NOT EXISTS requests (id TEXT PRIMARY KEY,state TEXT,reserved INTEGER,output INTEGER)')
-        self.db.execute('INSERT OR IGNORE INTO limits VALUES (1,?,?,0)',(max_calls,max_output_tokens))
-        actual=self.db.execute('SELECT calls,tokens FROM limits WHERE id=1').fetchone()
-        if actual!=(max_calls,max_output_tokens):raise ValueError('existing batch limits cannot change')
-        self.db.commit()
+        try:
+            self.db.execute('CREATE TABLE IF NOT EXISTS limits (id INTEGER PRIMARY KEY CHECK(id=1), calls INTEGER, tokens INTEGER, blocked INTEGER)')
+            self.db.execute('CREATE TABLE IF NOT EXISTS requests (id TEXT PRIMARY KEY,state TEXT,reserved INTEGER,output INTEGER)')
+            self.db.execute('INSERT OR IGNORE INTO limits VALUES (1,?,?,0)',(max_calls,max_output_tokens))
+            actual=self.db.execute('SELECT calls,tokens FROM limits WHERE id=1').fetchone()
+            if actual!=(max_calls,max_output_tokens):raise ValueError('existing batch limits cannot change')
+            self.db.commit()
+        except BaseException:
+            self.db.rollback();self.db.close();raise
 
     def reserve(self,requested):
         self.db.execute('BEGIN IMMEDIATE')

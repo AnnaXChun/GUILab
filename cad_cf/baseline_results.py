@@ -22,9 +22,11 @@ def collect_episode(directory, usage_path, *, kind, task_id):
     errors=[row for row in usage if row.get('event')=='model_error']
     errors += [row for row in trajectory if row.get('error_type')]
     reason=None
-    if (directory/'error.json').exists() or errors or upstream_result.get('error'):
+    if (Path(usage_path).parent/'external_stop.json').exists():
+        reason='externally_stopped_diagnostic_run'
+    elif (directory/'error.json').exists() or errors or upstream_result.get('error'):
         reason='runner_or_model_error'
-    elif any(row.get('event')=='budget_summary' and row.get('circuit_open') for row in usage):
+    elif any(row.get('event')=='budget_rejected' or (row.get('event')=='budget_summary' and row.get('circuit_open')) for row in usage):
         reason='model_or_execution_circuit_open'
     elif raw_score is None:reason='official_score_missing'
     artifacts=[]

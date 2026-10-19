@@ -1,0 +1,149 @@
+{
+  "scope": "source captured during GUI cold boot; explicit normalized1000 adapter",
+  "files": [
+    {
+      "path": "cad_cf/gui_startup.py",
+      "sha256": "ecd902a050c7afb4731c950e834bcf64676da286fbcd664cdc0d69dea69708c1"
+    },
+    {
+      "path": "cad_cf/artifact_state.py",
+      "sha256": "01f7fa94c495991dee700152e7b17104d8566ef74e7b5e0bcdf82bd49263a025"
+    },
+    {
+      "path": "cad_cf/metrics.py",
+      "sha256": "9299ed7153673d8882374fbf3ced95b77dbed2905f5e92acb554667639f150fb"
+    },
+    {
+      "path": "cad_cf/trace.py",
+      "sha256": "62210e8dc57c55c3a72f70771ceec60b8d4414e7e981eaa4fe9a908f3dd9a177"
+    },
+    {
+      "path": "cad_cf/typed_freecad.py",
+      "sha256": "f21f85c59bbd16cdae1ea2cb3e658b64a55bc092aa016d2509e1b9725f0088dd"
+    },
+    {
+      "path": "cad_cf/self_verifier.py",
+      "sha256": "0345e3e6e325466b0d976da56d96bfb900c0d02558737c9f418e3ec04b22e08f"
+    },
+    {
+      "path": "cad_cf/upstream_launch.py",
+      "sha256": "6d0395e9c38c2b1332166d45cd40d0d11bb7903bd3d3c99f81ae88508e9eb78b"
+    },
+    {
+      "path": "cad_cf/desktop_viewer.py",
+      "sha256": "1c42e7581e357fa2216992bafd32227498ce913cb2e1da355e72a20101d035a2"
+    },
+    {
+      "path": "cad_cf/mock_backend.py",
+      "sha256": "c14acefb8955d77d05b027b78a7031f1272bd51c6d3c1bcf3428c2fc40bed3b5"
+    },
+    {
+      "path": "cad_cf/model_probe.py",
+      "sha256": "1f1b6a073ca1aafea6bc27be459c058c4becd44d6455a1afa8a8b8606e6b2710"
+    },
+    {
+      "path": "cad_cf/baseline.py",
+      "sha256": "75f394ee03075cea1651707f478b27335219eb4d493db412d2a042c2925c8b67"
+    },
+    {
+      "path": "cad_cf/tool_protocol.py",
+      "sha256": "eb7603d882290e7f84ef27dc350eb0148826372a5a25b120c6311af61958b15e"
+    },
+    {
+      "path": "cad_cf/native_backend.py",
+      "sha256": "8b765bed5cbde6d4b87019c24fed57be7ed5fbcde95241782afaf7a1335ec272"
+    },
+    {
+      "path": "cad_cf/budget.py",
+      "sha256": "779cd9d19ebafd3ec0642e3f8b56a8d9abb4757ee763a5305f6ef5c7d0f30257"
+    },
+    {
+      "path": "cad_cf/terminal_bridge.py",
+      "sha256": "3f410b8d2eb071e3d230ca623501f785ee0bfbdf015540f4666b961eea5d3190"
+    },
+    {
+      "path": "cad_cf/batch_budget.py",
+      "sha256": "52953e7b0ab3deb3546927a02ae848fa3be323f773020092906b081ab70f8e02"
+    },
+    {
+      "path": "cad_cf/candidate_generator.py",
+      "sha256": "29921a5955cb3ac3b05b24162492e2ffac45c0821f4c41ebcbe3f303a9226b17"
+    },
+    {
+      "path": "cad_cf/upstream_runtime.py",
+      "sha256": "121635a6539f29bbb76ccb517128aa6403f42ba6eb5420e9b546effa775dc667"
+    },
+    {
+      "path": "cad_cf/__init__.py",
+      "sha256": "e4543047e38d02220643e77b882f3b44602fc8883ace518fef7ae812c87a61e8"
+    },
+    {
+      "path": "cad_cf/posthoc.py",
+      "sha256": "7b47c02672356a21d94eda8d7cb5974157dfc6e9b45d45d65a23a9ae9fb604ad"
+    },
+    {
+      "path": "cad_cf/counterfactual.py",
+      "sha256": "8c0ebfada50d58c579fe56dcc09ed51a105ff8685439540d767803e1e5449767"
+    },
+    {
+      "path": "cad_cf/cadworld_adapter.py",
+      "sha256": "cd53b375eeb725367d514be1e7101093ded05307b576f1397aa14b422e2325ce"
+    },
+    {
+      "path": "cad_cf/qwen_coordinates.py",
+      "sha256": "4d0df5fd663f86e674d00bf7e42f0df77c96655e782e6d06fe2820492bb22833"
+    },
+    {
+      "path": "cad_cf/dataset.py",
+      "sha256": "b1c7c7f78c906a79a099a674d38a45646de7bdda237799186fafe82c74130ad1"
+    },
+    {
+      "path": "cad_cf/campaign.py",
+      "sha256": "ca6c2fa219713be14c076330a25192df26ea1d2380395e436ec3848c0c3d09d6"
+    },
+    {
+      "path": "cad_cf/guest_gui_bridge.py",
+      "sha256": "8696ae0cbe9bce4fd3630012ac81a34ac10ffea53ecf2bc8fb334c76c93e67b0"
+    },
+    {
+      "path": "cad_cf/qemu_runtime.py",
+      "sha256": "f54ac35f4e22f5c03757d20960f22560111b31b480c8b8ff4a1dc3666f896a9f"
+    },
+    {
+      "path": "cad_cf/baseline_results.py",
+      "sha256": "a364b6ea4340aac46ae0ff48b12fd23eb1b5c9d9ea5aa9321258e4957bb5cd0e"
+    },
+    {
+      "path": "cad_cf/live.py",
+      "sha256": "364f9aa1fdf099683fcf69ae8b48db70b4df09a66782192b9f1c5a43c578eee2"
+    },
+    {
+      "path": "cad_cf/selection.py",
+      "sha256": "f6671e0fa7360da3b0710d97fd8f2afe481b125db58d2460a8ba9d372732db45"
+    },
+    {
+      "path": "cad_cf/router.py",
+      "sha256": "b1ed294cd09c49c1d5b6f0dddd106a7ef41fbf94ffcde036a55f476a4cf39b5c"
+    },
+    {
+      "path": "cad_cf/instruction.py",
+      "sha256": "422fa6b6658b5a30e927977149022baec8b81112dabaee8c6612e86d0a76addf"
+    },
+    {
+      "path": "cad_cf/controller_guard.py",
+      "sha256": "8015190fe290039b470e7a66a6d63bbda46c2a1ee8787383ef0365457e767da2"
+    },
+    {
+      "path": "cad_cf/freecad_worker.py",
+      "sha256": "c85c212b66e0bfb55237dc71017062888c8e7ea82a9cf7892c5c62e1addb5aaa"
+    },
+    {
+      "path": "cad_cf/snapshot.py",
+      "sha256": "b202ba6229fb7addba696091f56483fb4de3560383485dac64310a0af2bab6e9"
+    },
+    {
+      "path": "cad_cf/preflight.py",
+      "sha256": "e83f68ddc4a0d1bcacc8f42f6615835d3955823d80e41a6203af2ae2bb4bc993"
+    }
+  ]
+}

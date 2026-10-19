@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "name": "qwen_success_20261019",
+  "authorization": "2026-10-19 用户：继续跑，直到模型任务能够成功；检查并复用 CADWorld sh 脚本。按单题分批继续，不跑 full-200、不下载模型。",
+  "prior_evidence": "reports/evidence/baseline_runtime_20261019/campaign_summary.json",
+  "max_calls": 50,
+  "max_output_tokens": 32000,
+  "gui": {
+    "turns": 25,
+    "per_call_tokens": 1024,
+    "output_tokens": 16000,
+    "wall_seconds": 900
+  },
+  "cli": {
+    "turns": 20,
+    "per_call_tokens": 4096,
+    "output_tokens": 16000,
+    "wall_seconds": 1200
+  }
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "manifest": "vendor/CADWORLD/evaluation_examples/test_rest.json",
+    "exists": false
+  },
+  {
+    "manifest": "vendor/CADWORLD/evaluation_examples/test_small.json",
+    "exists": true,
+    "task_count": 50
+  },
+  {
+    "manifest": "vendor/CADWORLD/evaluation_examples/test_all.json",
+    "exists": true,
+    "task_count": 200
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "base": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/vm_data/FreeCAD-Ubuntu.qcow2",
+  "base_sha": "edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12",
+  "firmware": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/mac_native_probe_20261019/official_uefi.rom",
+  "firmware_sha": "2df617a6fd1bae41ec7c0e3bceca96c928a5a88d8dc198468d34733393ab2792",
+  "output": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/runtime_success_gui_qwen122_001",
+  "port": 15010,
+  "vnc_port": 15910,
+  "visible": false,
+  "boot_seconds": 600,
+  "gui_ready": true,
+  "gui_seconds": 600,
+  "gui_warmup": false
+}

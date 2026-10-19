@@ -1,0 +1,1 @@
+{"classification": "gui_coordinate_contract_probe", "actions": ["pyautogui.click(x=841, y=740)"], "response_status": "ok", "calls": 1}

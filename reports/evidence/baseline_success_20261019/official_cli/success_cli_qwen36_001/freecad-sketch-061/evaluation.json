@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "task_id": "freecad-sketch-061",
+  "category": "sketch",
+  "scores": {
+    "stored": 1.0,
+    "recomputed": 1.0
+  },
+  "completion": {
+    "available": true,
+    "steps": 15,
+    "termination": "done",
+    "claimed_done": true,
+    "error_type": null
+  },
+  "artifacts": [
+    {
+      "vm_path": "/home/user/Unnamed.FCStd",
+      "host_path": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/success_cli_qwen36_001/freecad-sketch-061/freecad-sketch-061.FCStd",
+      "saved": true,
+      "valid": {
+        "ok": true,
+        "archive_ok": true,
+        "document_xml_present": true,
+        "document_xml_parses": true,
+        "size_bytes": 3463
+      }
+    }
+  ],
+  "stages": {
+    "completion": {
+      "ok": true,
+      "termination": "done",
+      "claimed_done": true,
+      "steps": 15,
+      "error_type": null,
+      "available": true
+    },
+    "file_saved": {
+      "ok": true
+    },
+    "file_valid": {
+      "ok": true
+    },
+    "precondition": {
+      "required": false,
+      "applicable": false,
+      "checkable": false,
+      "ok": null
+    },
+    "structure": {
+      "ok": true,
+      "n_checks": 4,
+      "units": [
+        {
+          "ok": true,
+          "n_checks": 4,
+          "checks": {
+            "entity_counts": true,
+            "entities_matched": true,
+            "extra_geometry": true,
+            "units": true
+          }
+        }
+      ]
+    },
+    "geometry": {
+      "ok": true,
+      "n_checks": 1,
+      "units": [
+        {
+          "ok": true,
+          "n_checks": 1,
+          "checks": {
+            "profiles": true
+          },
+          "profile_reports": []
+        }
+      ]
+    },
+    "process": {
+      "ok": true,
+      "n_checks": 3,
+      "units": [
+        {
+          "ok": true,
+          "n_checks": 3,
+          "checks": {
+            "relations": true,
+            "fully_constrained": true,
+            "solver_status": true
+          },
+          "failed_relations": []
+        }
+      ]
+    },
+    "strict": {
+      "ok": true,
+      "score": 1.0
+    }
+  },
+  "units": [
+    {
+      "kind": "sketch",
+      "structure": {
+        "ok": true,
+        "n_checks": 4,
+        "checks": {
+          "entity_counts": true,
+          "entities_matched": true,
+          "extra_geometry": true,
+          "units": true
+        }
+      },
+      "geometry": {
+        "ok": true,
+        "n_checks": 1,
+        "checks": {
+          "profiles": true
+        },
+        "profile_reports": []
+      },
+      "process": {
+        "ok": true,
+        "n_checks": 3,
+        "checks": {
+          "relations": true,
+          "fully_constrained": true,
+          "solver_status": true
+        },
+        "failed_relations": []
+      },
+      "strict_score": 1.0,
+      "document": {
+        "geometry_count": 1,
+        "constraint_count": 1,
+        "fully_constrained": false,
+        "solver_status": {
+          "fully_constrained": false,
+          "underconstrained": true,
+          "overconstrained": false
+        },
+        "unit_system": "Standard (mm, kg, s, °)"
+      },
+      "func": "check_freecad_sketch"
+    }
+  ],
+  "failure_class": "pass"
+}

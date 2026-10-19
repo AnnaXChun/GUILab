@@ -1,0 +1,160 @@
+[2026-10-19 17:47:31,744 INFO run_single/186] Task started: freecad-sketch-061
+[2026-10-19 17:47:31,744 INFO run_single/187] Instruction: Use GUI, Sketch one horizontal normal-geometry line segment 10 mm long in the XY plane. Save the completed model to /home/user/Unnamed.FCStd.
+[2026-10-19 17:47:31,744 INFO desktop_env/246] Resetting environment...
+[2026-10-19 17:47:31,744 INFO desktop_env/247] Switching task...
+[2026-10-19 17:47:31,744 INFO desktop_env/248] Setting counters...
+[2026-10-19 17:47:31,744 INFO desktop_env/277] Environment is clean, skipping snapshot revert (provider: docker).
+[2026-10-19 17:47:31,805 INFO desktop_env/285] Setting up environment...
+[2026-10-19 17:47:31,805 INFO setup/71] try to connect http://127.0.0.1:15010
+[2026-10-19 17:47:36,704 INFO setup/96] Executing setup step 1/1: _execute_setup
+[2026-10-19 17:47:36,896 INFO setup/378] Command executed successfully: rm -f /home/user/Unnamed.FCStd -> {
+  "error": "",
+  "output": "",
+  "returncode": 0,
+  "status": "success"
+}
+
+[2026-10-19 17:47:36,896 INFO setup/99] SETUP COMPLETED: _execute_setup({'command': ['rm', '-f', '/home/user/Unnamed.FCStd'], 'shell': False})
+[2026-10-19 17:47:36,896 INFO desktop_env/302] Environment setup complete.
+[2026-10-19 17:47:42,530 INFO python/54] Got screenshot successfully
+[2026-10-19 17:47:42,530 INFO run_single/191] Waiting 15.0s after reset for FreeCAD startup before agent control; this grace period is outside the agent action loop.
+[2026-10-19 17:47:42,530 INFO run_single/196] Waiting 15.0s after reset before agent control.
+[2026-10-19 17:48:03,584 INFO python/54] Got screenshot successfully
+[2026-10-19 17:48:03,588 INFO run_single/202] Recording enabled: False; started: False
+[2026-10-19 17:48:04,099 INFO api_agent/455] Thinking configuration for openai-compatible/qwen3.6-35b-a3b: requested=none normalized=none native=chat_template_kwargs.enable_thinking=false
+[2026-10-19 17:48:06,087 INFO api_agent/455] Step 1 raw model output: {
+  "reason": "The welcome dialog is blocking access to the main FreeCAD interface. I need to close it by clicking 'Done' to proceed with creating a sketch.",
+  "action": "pyautogui.click(x=839, y=740)"
+}
+[2026-10-19 17:48:06,087 INFO api_agent/455] Step 1 parsed model response action: pyautogui.click(x=839, y=740)
+[2026-10-19 17:48:06,087 INFO api_agent/455] Step 1 parsed model response actions: ['pyautogui.click(x=839, y=740)']
+[2026-10-19 17:48:06,087 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=839, y=740)'] -> ['pyautogui.click(x=1611, y=799)']
+[2026-10-19 17:48:06,087 INFO api_agent/455] Step 1 sanitized executable actions: ['pyautogui.click(x=1611, y=799)']
+[2026-10-19 17:48:06,088 INFO run_single/215] Step 1: pyautogui.click(x=1611, y=799)
+[2026-10-19 17:48:06,088 INFO run_single/216] Step 1 action: pyautogui.click(x=1611, y=799)
+[2026-10-19 17:48:06,088 INFO desktop_env/398] Step 1 in trajectory 0 with action: pyautogui.click(x=1611, y=799)
+[2026-10-19 17:48:14,988 INFO python/54] Got screenshot successfully
+[2026-10-19 17:48:14,989 INFO run_single/221] Step 1 result: reward=0 done=False info={} screenshot=step_1_20261019@174806088077.png
+[2026-10-19 17:48:16,453 INFO api_agent/455] Step 2 raw model output: {
+  "reason": "The welcome dialog is still open and blocking the main interface. I need to close it by clicking the 'Done' button at the bottom right of the dialog to proceed with creating a sketch.",
+  "action": "pyautogui.click(x=839, y=740)"
+}
+[2026-10-19 17:48:16,453 INFO api_agent/455] Step 2 parsed model response action: pyautogui.click(x=839, y=740)
+[2026-10-19 17:48:16,453 INFO api_agent/455] Step 2 parsed model response actions: ['pyautogui.click(x=839, y=740)']
+[2026-10-19 17:48:16,455 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=839, y=740)'] -> ['pyautogui.click(x=1611, y=799)']
+[2026-10-19 17:48:16,455 INFO api_agent/455] Step 2 sanitized executable actions: ['pyautogui.click(x=1611, y=799)']
+[2026-10-19 17:48:16,455 INFO run_single/215] Step 2: pyautogui.click(x=1611, y=799)
+[2026-10-19 17:48:16,455 INFO run_single/216] Step 2 action: pyautogui.click(x=1611, y=799)
+[2026-10-19 17:48:16,455 INFO desktop_env/398] Step 2 in trajectory 0 with action: pyautogui.click(x=1611, y=799)
+[2026-10-19 17:48:20,945 INFO python/54] Got screenshot successfully
+[2026-10-19 17:48:20,946 INFO run_single/221] Step 2 result: reward=0 done=False info={} screenshot=step_2_20261019@174816455720.png
+[2026-10-19 17:48:22,428 INFO api_agent/455] Step 3 raw model output: {
+  "reason": "The welcome/start dialog is still blocking the main interface. I need to click 'Done' to close it and access the FreeCAD workspace where I can create a sketch.",
+  "action": "pyautogui.click(x=839, y=740)"
+}
+[2026-10-19 17:48:22,428 INFO api_agent/455] Step 3 parsed model response action: pyautogui.click(x=839, y=740)
+[2026-10-19 17:48:22,428 INFO api_agent/455] Step 3 parsed model response actions: ['pyautogui.click(x=839, y=740)']
+[2026-10-19 17:48:22,428 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=839, y=740)'] -> ['pyautogui.click(x=1611, y=799)']
+[2026-10-19 17:48:22,428 INFO api_agent/455] Step 3 sanitized executable actions: ['pyautogui.click(x=1611, y=799)']
+[2026-10-19 17:48:22,428 INFO run_single/215] Step 3: pyautogui.click(x=1611, y=799)
+[2026-10-19 17:48:22,428 INFO run_single/216] Step 3 action: pyautogui.click(x=1611, y=799)
+[2026-10-19 17:48:22,428 INFO desktop_env/398] Step 3 in trajectory 0 with action: pyautogui.click(x=1611, y=799)
+[2026-10-19 17:48:27,186 INFO python/54] Got screenshot successfully
+[2026-10-19 17:48:27,187 INFO run_single/221] Step 3 result: reward=0 done=False info={} screenshot=step_3_20261019@174822428570.png
+[2026-10-19 17:48:28,585 INFO api_agent/455] Step 4 raw model output: {
+  "reason": "The task requires creating a sketch with a horizontal line. The current screen shows the FreeCAD start page. To create a sketch, I need to first create a new document or open an existing one. The 'Empty File' option under 'New File' seems appropriate for starting fresh. Clicking this will allow me to proceed with creating a sketch.",
+  "action": "pyautogui.click(x=805, y=283)"
+}
+[2026-10-19 17:48:28,585 INFO api_agent/455] Step 4 parsed model response action: pyautogui.click(x=805, y=283)
+[2026-10-19 17:48:28,585 INFO api_agent/455] Step 4 parsed model response actions: ['pyautogui.click(x=805, y=283)']
+[2026-10-19 17:48:28,586 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=805, y=283)'] -> ['pyautogui.click(x=1546, y=306)']
+[2026-10-19 17:48:28,586 INFO api_agent/455] Step 4 sanitized executable actions: ['pyautogui.click(x=1546, y=306)']
+[2026-10-19 17:48:28,586 INFO run_single/215] Step 4: pyautogui.click(x=1546, y=306)
+[2026-10-19 17:48:28,586 INFO run_single/216] Step 4 action: pyautogui.click(x=1546, y=306)
+[2026-10-19 17:48:28,586 INFO desktop_env/398] Step 4 in trajectory 0 with action: pyautogui.click(x=1546, y=306)
+[2026-10-19 17:48:34,862 INFO python/54] Got screenshot successfully
+[2026-10-19 17:48:34,864 INFO run_single/221] Step 4 result: reward=0 done=False info={} screenshot=step_4_20261019@174828586099.png
+[2026-10-19 17:48:36,171 INFO api_agent/455] Step 5 raw model output: {
+  "reason": "The FreeCAD start page is still visible, and I need to create a new empty file to begin the sketching process. The 'Empty File' option is clearly displayed in the 'New File' section.",
+  "action": "pyautogui.click(x=805, y=283)"
+}
+[2026-10-19 17:48:36,171 INFO api_agent/455] Step 5 parsed model response action: pyautogui.click(x=805, y=283)
+[2026-10-19 17:48:36,171 INFO api_agent/455] Step 5 parsed model response actions: ['pyautogui.click(x=805, y=283)']
+[2026-10-19 17:48:36,172 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=805, y=283)'] -> ['pyautogui.click(x=1546, y=306)']
+[2026-10-19 17:48:36,172 INFO api_agent/455] Step 5 sanitized executable actions: ['pyautogui.click(x=1546, y=306)']
+[2026-10-19 17:48:36,172 INFO run_single/215] Step 5: pyautogui.click(x=1546, y=306)
+[2026-10-19 17:48:36,172 INFO run_single/216] Step 5 action: pyautogui.click(x=1546, y=306)
+[2026-10-19 17:48:36,172 INFO desktop_env/398] Step 5 in trajectory 0 with action: pyautogui.click(x=1546, y=306)
+[2026-10-19 17:48:48,545 INFO python/54] Got screenshot successfully
+[2026-10-19 17:48:48,549 INFO run_single/221] Step 5 result: reward=0 done=False info={} screenshot=step_5_20261019@174836172798.png
+[2026-10-19 17:48:49,928 INFO api_agent/455] Step 6 raw model output: {
+  "reason": "The FreeCAD start page is still open, and I need to create a new empty file to begin sketching. The 'Empty File' option is clearly visible in the 'New File' section. Clicking this will open a blank document where I can proceed with creating the sketch.",
+  "action": "pyautogui.click(x=1546, y=306)"
+}
+[2026-10-19 17:48:49,928 INFO api_agent/455] Step 6 parsed model response action: pyautogui.click(x=1546, y=306)
+[2026-10-19 17:48:49,928 INFO api_agent/455] Step 6 parsed model response actions: ['pyautogui.click(x=1546, y=306)']
+[2026-10-19 17:48:49,929 ERROR run_single/263] Example failed: literal Qwen coordinates must be in 0..1000
+Traceback (most recent call last):
+  File "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/scripts/python/benchmark/run_single.py", line 207, in run_single_example
+    response, actions = agent.predict(instruction, obs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/scripts/python/api_agent.py", line 192, in predict
+    actions = self.provider_adapter.adapt_actions(self, actions, obs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/cad_cf/qwen_coordinates.py", line 52, in adapt_actions
+    scaled=[scale_action(action,width,height) for action in raw]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/cad_cf/qwen_coordinates.py", line 35, in scale_action
+    tree=Coordinates().visit(ast.parse(source));ast.fix_missing_locations(tree)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bytedance/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/ast.py", line 407, in visit
+    return visitor(node)
+           ^^^^^^^^^^^^^
+  File "/Users/bytedance/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/ast.py", line 483, in generic_visit
+    value = self.visit(value)
+            ^^^^^^^^^^^^^^^^^
+  File "/Users/bytedance/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/ast.py", line 407, in visit
+    return visitor(node)
+           ^^^^^^^^^^^^^
+  File "/Users/bytedance/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/ast.py", line 492, in generic_visit
+    new_node = self.visit(old_value)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bytedance/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/ast.py", line 407, in visit
+    return visitor(node)
+           ^^^^^^^^^^^^^
+  File "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/cad_cf/qwen_coordinates.py", line 29, in visit_Call
+    raise ValueError('literal Qwen coordinates must be in 0..1000')
+ValueError: literal Qwen coordinates must be in 0..1000
+[2026-10-19 17:48:49,966 ERROR run_single/264] Example failed: literal Qwen coordinates must be in 0..1000
+Traceback (most recent call last):
+  File "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/scripts/python/benchmark/run_single.py", line 207, in run_single_example
+    response, actions = agent.predict(instruction, obs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/scripts/python/api_agent.py", line 192, in predict
+    actions = self.provider_adapter.adapt_actions(self, actions, obs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/cad_cf/qwen_coordinates.py", line 52, in adapt_actions
+    scaled=[scale_action(action,width,height) for action in raw]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/cad_cf/qwen_coordinates.py", line 35, in scale_action
+    tree=Coordinates().visit(ast.parse(source));ast.fix_missing_locations(tree)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bytedance/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/ast.py", line 407, in visit
+    return visitor(node)
+           ^^^^^^^^^^^^^
+  File "/Users/bytedance/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/ast.py", line 483, in generic_visit
+    value = self.visit(value)
+            ^^^^^^^^^^^^^^^^^
+  File "/Users/bytedance/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/ast.py", line 407, in visit
+    return visitor(node)
+           ^^^^^^^^^^^^^
+  File "/Users/bytedance/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/ast.py", line 492, in generic_visit
+    new_node = self.visit(old_value)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bytedance/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/ast.py", line 407, in visit
+    return visitor(node)
+           ^^^^^^^^^^^^^
+  File "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/cad_cf/qwen_coordinates.py", line 29, in visit_Call
+    raise ValueError('literal Qwen coordinates must be in 0..1000')
+ValueError: literal Qwen coordinates must be in 0..1000
+[2026-10-19 17:48:49,983 INFO run_single/164] Diagnostics written to /Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_gui/success_gui_qwen36_recovery_001/freecad-sketch-061/evaluation.json (failure_class=no_output_file)

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "name": "qwen122_single_gui_20261019",
+  "authorization": "用户要求继续跑至模型任务成功并优先开源多模态Qwen3。35B已官方CLI成功，但GUI在修正坐标合同后44轮仍无保存；现有服务列出qwen3.5-122b-a10b，仅增加1次图片验证和1个sketch-061 GUI单题，最多35轮，不下载模型、不启动批量测评。全部旧消耗与失败保留。",
+  "prior_evidence": "reports/BASELINE_SUCCESS_SMOKE.md",
+  "max_calls": 36,
+  "max_output_tokens": 24000,
+  "gui": {"turns": 35, "per_call_tokens": 1024, "output_tokens": 23000, "wall_seconds": 1200},
+  "cli": {"turns": 20, "per_call_tokens": 4096, "output_tokens": 16000, "wall_seconds": 1200}
+}

@@ -1,6 +1,6 @@
 # 复现状态
 
-2026-10-19 更新：本机原生 QEMU/TCG 已完成 3 个真实 baseline episode，strict 均为 0，无模型输出文件。可信 GUI 宏、单实例空 GUI 的 DesktopEnv 闭环和 Qwen3.5 图片接口通过。逐题结果与累计成本见 [本批运行记录](BASELINE_RUNTIME_SMOKE.md) 和 [基线结果](BASELINE_REPRO.md)，历史无模型报告不代表当前调用数。
+2026-10-19最终更新：Qwen3.5-122B CLI在sketch-061获得官方strict=1.0，保存的模型文件通过独立原生审计；8次生成、1869输出tokens、turn_limit结束。Qwen3.6 CLI也有官方1.0，但原文件Invalid，工程审计FAIL。GUI仍未成功，真实pairs=0。全部成功、失败和成本见[单题续跑](BASELINE_SUCCESS_SMOKE.md)，下一方向见[下一阶段验收](../docs/NEXT_ACTC_VALIDATION.md)。以下状态分别指代码、基础设施、官方任务得分或原生工程质量，不互相替代。
 
 | 检查项 | 状态 | 证据与限制 |
 | --- | --- | --- |
@@ -9,24 +9,32 @@
 | upstream 全量依赖 | NOT_RUN | 405 包未全部安装；不能把受限依赖运行通过写成完整 sync |
 | upstream CLI unittest | PASS | 本轮重新执行 7 tests |
 | 原始 CLI dry-run + 延迟导入适配 | PASS | 原始 `CLI/run_cli.py --dry-run`，保留旧 dotenv 失败；未替换 metric/getter 函数 |
-| 本项目单测 | PASS | 96 passed in 3.59s；含预算跨进程、错误隔离、序列化回归、HTTP mock 与结果归类 |
+| 本项目单测 | PASS | 122 passed；坐标合同、续跑预算、原生Invalid审计、外部中止归类与脱敏归档回归 |
 | synthetic campaign | PASS | 9 case，6 valid mock、3 invalid；不能计真实任务或 pair |
 | 官方 VM/controller，TCG | PASS | 同一官方 qcow2，ARM 原生 QEMU 11.1.2，2 vCPU / 8 GiB，无 KVM |
 | FreeCAD GUI 可信原生建模 | PASS_NATIVE_INFRASTRUCTURE_ONLY | FreeCAD 1.1.0；Body/Sketch/Pad、参数修改、保存关闭重开两次，形体有效；不是模型产物 |
 | 官方 DesktopEnv 空 GUI 闭环 | PASS_BASELINE_INFRASTRUCTURE | 003 单实例、空文档、reset/observe/action/observe/close；001 双实例和 002 JSON 失败保留 |
-| 模型服务 | PASS_IMAGE_PROBE | 用户配置的服务，`qwen3.5-35b-a3b`，图片识别成功，usage 可计量；服务价格与权重身份未核验 |
+| 模型服务 | PASS_IMAGE_PROBE | Qwen3.5与Qwen3.6图片验证成功，usage可计量；服务价格与权重身份未核验 |
+| Qwen3.6官方CLI单题 | PASS_OFFICIAL_SCORE | sketch-061，14次生成、13次terminal、5823输出tokens，strict=1.0；不是论文全量复现 |
+| Qwen3.6 CLI模型原生工程质量 | FAIL | 原文件含Sketch.Invalid与attachment错误；官方分数保留，训练导出排除 |
+| Qwen3.5-122B CLI单题与原生质量 | PASS_NATIVE_ARTIFACT_AUDIT | 官方1.0；原生Sketch、重算/重开、一次性内存参数编辑通过，原文件SHA不变；非完全约束，非finish |
+| GUI v2两次有效复测 | FAIL | 35B 44轮、122B 35轮，均strict=0、无文件；平面面板/事件循环尚待无模型诊断 |
 | 参考 Linux x86_64/KVM 环境 | BLOCKED_BY_ENV | 用户不能提供 KVM；本机 TCG 独立记录，参考 gate 未改成 PASS |
 | 正式 NativeBackend/TypedWorker/GUI bridge | BLOCKED_BY_ENV | 固定可信宏通过不等于正式模块已部署验收 |
 | same-S0 双 VM 与真实 ACTC pairs | NOT_RUN | N=0；不能以单路 baseline、mock 或同 VM undo 代替 |
-| GUI 25-turn、24-pair pilot、full-200 | NOT_RUN_BUDGET | 不在当前首批授权范围 |
+| GUI25及后续单题续跑 | SEE_BASELINE_SUCCESS_SMOKE | 用户追加授权，显式配置和独立历史账本；不是重开首批 |
+| 24-pair pilot、full-200 | NOT_RUN_BUDGET | 未启动 |
+| 凭证缺失时的移机状态 | BLOCKED_BY_CREDENTIALS | 本机服务已可用；新主机没有凭证时才使用该状态，不把它写成本机当前阻塞 |
 | P4 训练 / P5 veRL | NOT_IMPLEMENTED | 接口和后续方案已交付，本轮不启动 |
 
-[本项目新增] native QEMU provider、GUI bootstrap、endpoint/SDK guard、共享整批账本、一次派发隔离和离线结果汇总已实现。GUI agent、CLI agent、任务 config、官方评分与 diagnostics 复用 pinned 实现。完整 source snapshot、失败 trace、截图与脱敏日志见 `evidence/baseline_runtime_20261019/INDEX.json`。
+[本项目新增] native QEMU provider、GUI bootstrap、endpoint/SDK guard、共享整批账本、一次派发隔离、坐标合同v2和离线审计/归档已实现。GUI agent、CLI agent、任务config、官方评分与diagnostics复用pinned实现；坐标适配差异单列。最新完整source snapshot、JSONL、失败截图与脱敏日志见`evidence/baseline_success_20261019/INDEX.json`，首批历史归档保留。
 
 默认付费为 0；本机同一小批已有用户授权，实际命令单次设为 1。此前 GPT 图片请求 HTTP 500 继续计入额度；用户改选 Qwen3 后记录 correction 才恢复同一本账本。未知 usage 保留 128-token 占用，不能用零成本或新账本覆盖。
 
 P1/P2 静态开发和 9 个 mock case 不代表真实阶段验收。P3 的 ≥3 个合法真实 smoke pairs、差异重测和 24 valid pairs 均未完成，P4 为 NO-GO。SPEC 的阶段门槛继续约束真实实验；TCG 的环境差异和模型差异见 `DEVIATIONS.md`。
 
-下一步先依据本批结果定位模型动作、保存或 CLI 接口问题，再验收正式 worker 与 GUI 同步。不重选 benchmark，不增加未经授权的调用，不把 3-turn smoke 外推为论文 17.5% 或 full-200 成绩。
+下一步先做无模型GUI控件与事件循环诊断，再验收正式worker和GUI保存重开同步，最后验证same-S0双clone。参考环境gate未通过；TCG探索验收独立记录，不再索取KVM。不把单题成功外推为论文17.5%或full-200成绩。
 
-本批最终：GUI 两题 + CLI 一题，共 3 个真实 episode、2 个不同任务，均有效评估为 strict=0 / no_output_file；没有 agent 原生文件。生成请求 15/15，已知输入 28304 / 输出 1369 tokens，早期 500 的 usage unknown，保留 128-token 占用。全部 QEMU/viewer 已停止，base/固件 SHA 再核验一致。基础设施 GO，模型任务成功/论文复现、追加首批调用与 ACTC pairs 均 NO-GO。项目最终测试仍为 96 passed（最新 3.59 秒），上游 CLI 7 passed；机器可读汇总见本批归档。
+历史首批最终为3个episode、2个不同任务，strict均0，无文件；15次请求，已知输入28304/输出1369，早期500的usage未知、128-token占用保留。该历史终态不能覆盖后续官方CLI成功。当前完整成本、VM清理、原生审计、测试计数与GO/NO-GO以最新续跑报告及其机器可读归档为准。参考KVM gate、正式P1/P2、真实pair N=0和P4 NO-GO均未改变。
+
+累计10个attempt、8个有效评估episode、2个运行/诊断错误，涉及2个不同任务；包含探针在内共201次生成，已知输入702267/输出23385 tokens，美元费用null。已停止新增推理，全部模型与审计VM退出。sketch-061已用于调试与选模型，不是独立held-out结果。

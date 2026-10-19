@@ -1,6 +1,20 @@
 # 基线复现
 
-本轮复用 [CADWorld](https://github.com/Zdong104/CADWORLD) 的 pinned commit `e5d0ebab8bd28da6e98c68c61db05747d1647f7b`，不修改上游 tracked 文件。Mac ARM 原生 QEMU/TCG 已接入原 GUI/CLI runner；最新逐题结果、成本和命令见 [BASELINE_RUNTIME_SMOKE](BASELINE_RUNTIME_SMOKE.md)。这是限定轮数的真实连接 smoke，不能声称复现论文 full-200 或 17.5%。
+复用 [CADWorld](https://github.com/Zdong104/CADWORLD) 的 pinned commit `e5d0ebab8bd28da6e98c68c61db05747d1647f7b`，不修改上游tracked文件。Mac ARM原生QEMU/TCG已接入原GUI/CLI runner；最新结果、成本和命令见 [单题续跑](BASELINE_SUCCESS_SMOKE.md)，脚本核对见 [UPSTREAM_SH_REUSE](UPSTREAM_SH_REUSE.md)。限定单题结果不能声称复现论文full-200或17.5%。
+
+Qwen3.6 CLI `success_cli_qwen36_001` 已获得官方strict=1.0，14次生成、13次terminal、5823输出tokens，保存原生Body/Sketch/LineSegment。独立审计发现原文件Sketch.Invalid和attachment错误，因此官方任务成功与工程质量通过分开。模型文件未修复，官方评分器未修改，不进入有效训练数据。
+
+最新`success_cli_qwen122_001`使用`qwen3.5-122b-a10b`，8次生成/terminal、1869输出tokens，官方strict=1.0，模型保存的2924-byte文件通过独立原生重算、关闭重开、类型树恢复和参数编辑审计。agent以turn_limit结束，不能写作finish。35B/v2的44轮GUI和122B/v2的35轮GUI都strict=0、无文件，仍卡在平面选择。
+
+累计10个attempt中8个有效评估、2个运行/诊断错误；涉及2个任务，含探针共201次生成，已知输入702267/输出23385 tokens，价格和初次HTTP500 usage未知。不是201题，也不能合并估计成功率。下一步见[下一阶段验收](../docs/NEXT_ACTC_VALIDATION.md)；当前模型请求停止，真实pairs=0。
+
+GUI `success_gui_qwen36_001` 的25轮未保存；`success_gui_qwen36_100_001` 的空白预热ack成功，但50次真实模型点击后欢迎页仍不响应，主动阻断后原adapter以WAIT结束循环。该次按诊断中止记录，strict=null，保留upstream_raw_score=0；不能当完整100次模型决策的成绩。撤掉预热的独立复测单列。新增normalized1000适配改变坐标合同，不能和原像素prompt合并成同一设置的成功率。
+
+原论文GUI-only、官方CLI、加入显式坐标适配的GUI、CADWorld-Hybrid分别报告。真实ACTC pairs仍为0；本轮两个baseline没有same-S0恢复证明，不能用任务ID相同冒充pair。
+
+## 首批历史结果
+
+以下为Qwen3.5首批，原始证据见 [BASELINE_RUNTIME_SMOKE](BASELINE_RUNTIME_SMOKE.md)。其15次调用、失败和预算不因后续用户授权而删除或重置。
 
 ## 协议与模型
 
@@ -34,4 +48,4 @@
 
 共有 3 个有效评估 episode、2 个不同任务；不是 3 个独立任务，不能把 CLI 7 个工具错误当成 7 个 episode。15 次生成上限已用完，已知输出 1369 tokens，另有初次 GPT 500 的未知 usage 和 128-token 保守占用。正式任务 artifact 为 0；可信圆柱文件只证明基础设施。
 
-结论：受限 baseline 运行链路已跑通，模型任务成功尚未跑通，论文成绩未复现。先修坐标合同与 CLI FreeCAD 保存/对象用法，再做新的受限实验；当前首批不再发出生成请求。详细成本、时长、错误和 GO/NO-GO 见本批运行记录。
+首批历史结论：运行链路跑通，但这3个模型episode都未成功。后续CLI单题官方与122B原生验收已通过，见本报告开头；首批结果不覆写。论文成绩尚未复现，当前不再发出生成请求。

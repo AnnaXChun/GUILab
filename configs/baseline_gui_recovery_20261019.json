@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "name": "qwen_gui_recovery_20261019",
+  "authorization": "用户要求继续跑直到模型任务成功。预热运行在50次已完成生成后停止，本轮撤掉预热，仅在全新VM复测sketch-061，最多50次生成；两次合计不超过100，原账本、失败、调用与成本保留。",
+  "prior_evidence": "reports/BASELINE_SUCCESS_SMOKE.md",
+  "prior_budget": {"ledger": "results/gui100_batch_20261019.sqlite", "completed_requests": 50, "blocked": true, "combined_request_ceiling": 100},
+  "max_calls": 50,
+  "max_output_tokens": 16000,
+  "gui": {"turns": 50, "per_call_tokens": 1024, "output_tokens": 16000, "wall_seconds": 1200},
+  "cli": {"turns": 20, "per_call_tokens": 4096, "output_tokens": 16000, "wall_seconds": 1200}
+}

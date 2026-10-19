@@ -1,0 +1,33 @@
+{
+  "cadworld_commit": "e5d0ebab8bd28da6e98c68c61db05747d1647f7b",
+  "sources": [
+    {
+      "path": "baseline/Qwen3-6/experiment_qwen3_6.sh",
+      "sha256": "d2572aa8551b0974d7cbc0005d6f9b69d9756a0b0d2149368135e01f9a6a364b"
+    },
+    {
+      "path": "baseline/Qwen3-6/run_vllm_qwen3_6.sh",
+      "sha256": "3726989db627b25fd5e0747f7c8d08753336091ae94db5d0dc08d8a8ef2db978"
+    },
+    {
+      "path": "CLI/launch_wave1.sh",
+      "sha256": "91cf188a90c257e0bcb9d46126f1fdf8e0a7641dbfe720fbfd2cabee360bfcec"
+    },
+    {
+      "path": "CLI/run_cli.py",
+      "sha256": "51f056169cf34ab6532516837d14358dfb867fe0a88e1487476dba8b2ef36fc0"
+    },
+    {
+      "path": "scripts/python/run_cadworld.py",
+      "sha256": "6ecde228e4f3aa3153a441eb3951527359c9cba01d530c96b9e26754e86c9f2c"
+    },
+    {
+      "path": "scripts/python/api_agent.py",
+      "sha256": "6631e8cca18a45dfca341177e2818dd1848147557b96b66b0b6904016bb90c3e"
+    },
+    {
+      "path": "baseline/Qwen3-6/adapter.py",
+      "sha256": "c167009389aa0d897ee85cc9fb7b754817cac66a4e1c280e94ce92878586c405"
+    }
+  ]
+}

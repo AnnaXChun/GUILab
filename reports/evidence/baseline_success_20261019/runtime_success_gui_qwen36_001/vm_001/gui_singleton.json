@@ -1,0 +1,6 @@
+{
+  "error": "",
+  "output": "{\"before\": [{\"pid\": 2076, \"argv\": [\"/snap/freecad/2266/usr/bin/FreeCAD\"]}, {\"pid\": 2311, \"argv\": [\"/snap/freecad/2266/usr/bin/FreeCAD\", \"/home/user/.actc_gui_ready_vm_001/bootstrap.FCMacro\"]}], \"removed_empty_autostart_pids\": [2076], \"remaining_pid\": 2311, \"singleton_verified\": true}\n",
+  "returncode": 0,
+  "status": "success"
+}

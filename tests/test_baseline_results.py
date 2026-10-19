@@ -26,3 +26,22 @@ def test_evaluated_zero_with_complete_usage_remains_real_zero(tmp_path):
     result=collect_episode(tmp_path,usage,kind='gui',task_id='test')
     assert result['strict']==0 and result['status']=='EVALUATED'
     assert result['model_calls']==1 and result['output_tokens']==5 and result['input_tokens']==20
+
+
+def test_external_stop_preserves_fallback_score_but_excludes_full_run_result(tmp_path):
+    (tmp_path/'result.txt').write_text('0.0\n')
+    (tmp_path/'evaluation.json').write_text('{}')
+    (tmp_path/'external_stop.json').write_text('{"reason":"GUI unresponsive"}')
+    result=collect_episode(tmp_path,tmp_path/'usage.jsonl',kind='gui',task_id='test')
+    assert result['strict'] is None and result['upstream_raw_score']==0
+    assert result['strict_unavailable_reason']=='externally_stopped_diagnostic_run'
+
+
+def test_budget_denial_without_sent_request_is_a_run_error(tmp_path):
+    (tmp_path/'result.txt').write_text('0.0\n')
+    (tmp_path/'evaluation.json').write_text('{}')
+    usage=tmp_path/'usage.jsonl'
+    usage.write_text('{"event":"budget_rejected","provider_request_sent":false}\n')
+    result=collect_episode(tmp_path,usage,kind='gui',task_id='test')
+    assert result['strict'] is None and result['model_calls']==0
+    assert result['strict_unavailable_reason']=='model_or_execution_circuit_open'

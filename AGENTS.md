@@ -10,7 +10,7 @@
 
 ## 当前事实
 
-最新事实以 `reports/BASELINE_RUNTIME_SMOKE.md`、`reports/BASELINE_REPRO.md` 和 `handoff.json` 为准，历史无模型报告不能覆盖后续真实请求。原生 QEMU/TCG 已接入 pinned runner；单实例空 GUI 的 `DesktopEnv.reset → observe → action → observe → close` 已通过，可信 GUI 参数化保存重开已通过。原始 CLI dry-run 的旧 `dotenv` 失败保留，本轮安装受限依赖并延迟导入原始 registry 后已通过，7 项上游 CLI 单测也已重跑。正式 TypedWorker、ACTC 配对与参考 Linux/KVM 环境仍未验收。远程须验证本环境，不把本机记录直接当作远程验收。
+最新事实以`reports/BASELINE_SUCCESS_SMOKE.md`、`reports/BASELINE_REPRO.md`和`handoff.json`为准。Qwen3.5-122B CLI sketch-061官方1.0、原生审计PASS，8次生成、1869输出tokens、turn_limit结束；Qwen3.6 CLI官方1.0但原文件Invalid，工程审计FAIL。GUI仍未成功，真实pairs=0。累计含探针201次生成，最新122 tests通过。下一步按`docs/NEXT_ACTC_VALIDATION.md`做无模型GUI诊断，不新增本轮推理。原生QEMU/TCG基础设施已通过；正式TypedWorker、GUI同步、ACTC配对与参考Linux/KVM环境仍未验收。远程须验证本环境，不把本机记录直接当远程验收。
 
 ## 实验与预算
 
@@ -21,6 +21,12 @@
 2026-10-19 用户进一步要求当前会话解决 GUI 宏超时并真正开始 baseline，当前 Mac 执行已获同一首批小样本授权；参数就绪后按 `docs/RUN_TCG_BASELINE.md` 执行，不再将旧的执行位置限制当作 blocker。优先 upstream CLI dry-run 与无模型 VM reset/observe 检查，再做极少量已授权模型 smoke。2026-10-19 用户确认无法提供 KVM，后续按 `docs/NO_KVM_RUN.md` 推进 TCG，不再索取 KVM 或默认安装 VMware。Linux 容器可以运行 FreeCAD，KVM 只影响 VM 硬件加速。缺资源、镜像、可用 controller 或模型服务时记录具体 `BLOCKED_BY_ENV` / `BLOCKED_BY_CREDENTIALS` / `NOT_RUN_BUDGET`。参考 preflight 不改成无条件通过；TCG 的探索验收需独立记录。
 
 用户指定开源多模态 Qwen3 系列，本批选 `qwen3.5-35b-a3b`，图片接口验证通过。GUI/CLI 使用同一模型并加 `--qwen-no-thinking`。此前 GPT 图片请求 HTTP 500 的次数和未知 usage 继续占用原账本；用户更正模型后才记录 correction 恢复，不能删除失败或重建账本重置预算。按实际剩余额度收紧 CLI，本批总上限仍为 15 次生成、16000 输出 tokens。
+
+后续用户明确要求“继续跑，直到模型任务能够成功，查看官方sh是否可复用”，授权单题续跑。采用显式campaign，保留所有旧账本。success账本上限50，先42次，最后122B CLI用剩余8次；gui100实际50后blocked，后50个WAIT不是模型请求；recovery为6+44，122B专用账本为图片1+GUI35。加首批15，合计201次生成。现已停止新增推理，完成原生审计与交接，不重开已完成批次，不覆盖run ID。
+
+GUI 新增的 `normalized1000` 是显式协议适配，必须单列，不能声称整段 prompt 完全未变。预热 ack 只能证明宏完成，不能证明欢迎页可操作；卡住原因尚未唯一确定。官方 sh 的 `test_rest.json` 在 pinned commit 缺失；vLLM sh 会启动 GPU 服务，CLI wave sh 会启动四个模型与50题，不能原样启动。复用原 Python 入口，详见 `reports/UPSTREAM_SH_REUSE.md`。
+
+无预热的recovery run在第6次请求因混合单位history失败，464输出tokens保留；模型照抄了前轮pixel执行值。坐标协议v2仅将在线history的action统一为normalized单位，原返回response和完整JSONL仍记录pixel执行与mapping。真实pinned agent两轮无网络回归已验证。`success_gui_qwen36_history_001`使用同一本recovery账本，自动收紧至剩余44次；不能改用新账本恢复50次。
 
 ## 研究有效性
 

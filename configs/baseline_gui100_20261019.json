@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "name": "qwen_gui100_20261019",
+  "authorization": "用户要求继续跑直到模型任务成功并复用官方 sh。CLI 已 strict=1；GUI 25步截断于等待保存框，本轮按 pinned sh 的100步仅复测 sketch-061，前两批账本和消耗完整保留，不跑批量任务、不下载模型。",
+  "prior_evidence": "reports/UPSTREAM_SH_REUSE.md",
+  "max_calls": 100,
+  "max_output_tokens": 32000,
+  "gui": {"turns": 100, "per_call_tokens": 512, "output_tokens": 32000, "wall_seconds": 1200},
+  "cli": {"turns": 20, "per_call_tokens": 4096, "output_tokens": 16000, "wall_seconds": 1200}
+}

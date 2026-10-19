@@ -55,3 +55,20 @@ synthetic 行是明确注入的单测场景。早期报告的模型/pair 样本�
 `baseline_cli_sketch_001` 是独立的工程失败：pinned `CLI/run_cli.py:100` 要求 `--results-dir` 位于 `CLI/` 边界内，原包装层给出项目 results，参数解析 exit=2。该尝试未启动 VM、未发模型生成请求，不计 episode 分母。修复为先在 `vendor/CADWORLD/CLI/results/actc/<run_id>` 运行，结束后复制原始产物到项目 `results/official_cli/<run_id>`；拒绝重复 run ID，保留这次失败，用 `_002` 新目录继续。实际 pinned CLI 计划已再次通过无模型 dry-run。
 
 CLI `_002` 最终完成 7 轮，7 个 terminal 返回码均为 1；前三类具体错误为 `PrimitivePy` 没有 `Point1`、`Part::LineSegment` 不是文档对象类型、`doc.save(path)` 不接受路径参数。后者在后几轮重复出现，没有保存文件。官方评估 strict=0、termination=turn_limit、failure_class=no_output_file；没有 API/VM 超时或 pipeline error。它是 1 个真实 episode 内的 7 个失败命令，不扩大 episode 分母。当前 3 个真实 baseline episode 全部保留；真实 pair 仍为 0。
+
+## Qwen3.6续跑中的失败
+
+| 尝试 | 实际观察 | 处理与统计 |
+| --- | --- | --- |
+| `success_cli_qwen36_001` | 官方strict=1.0，但模型自己保存的Document.xml带Sketch.Invalid及`AttachEngine3D::calculateAttachedPlacement`错误 | 原文件和分数不改；工程审计FAIL，不导出有效preference |
+| `native_artifact_audit_qwen36_001` | 审计命令失败，未捕获stdout | 审计器故障，不能追补根因；0模型调用，不算新episode |
+| `native_artifact_audit_qwen36_002` | 实际FreeCAD绑定没有`Sketcher.SketchObject.movePoint` | 保留完整controller响应；审计器改用原生Distance constraint在一次性内存副本测试编辑 |
+| `native_artifact_audit_qwen36_003` | 旧分类器只检查shape/solver，错误输出PASS，漏掉Invalid状态 | 原audit.json保留；audit_review.json纠正为FAIL，新增回归；未修改评分器或模型文件 |
+| `success_gui_qwen36_001` | 25轮已进入绘图，Local ΔX=10、ΔY=0，第24轮Ctrl+S，第25轮仍等待保存框；多个未响应弹窗 | 官方strict=0、no_output_file；全部原始动作保留，不能按截图补文件 |
+| `success_gui_qwen36_100_001` | 空白渲染预热ack成功；50次已完成请求后仍停在欢迎页，像素点击在Done内，活动窗口PID正确 | 主动阻断后不再发模型请求；随后50个WAIT是原adapter fallback。strict=null，保留官方原始0分，不计完整100步模型测量，未证明唯一根因 |
+| `success_gui_qwen36_recovery_001` | 无预热，欢迎页关闭；第6轮将前轮执行pixel `(1546,306)`当作新normalized坐标输出 | 越界拒绝，strict=null、RUN_ERROR，6次/464输出tokens；修复混合单位history后用同一账本剩余44次继续，新run不覆盖 |
+| `success_gui_qwen36_history_001` | v2在线history单位修复后用满44轮，仍未保存，平面选择未完成，后期未响应/窗口关闭 | strict=0、3558输出tokens；越界未重现，但关闭根因未知，不能根据模型reason定因 |
+| `success_gui_qwen122_001` | 122B、v2、无预热，35轮仍卡在Select attachment，未输出文件 | strict=0、3405输出tokens；下一步先诊断控件可见性与事件循环，不盲加预算 |
+| `success_cli_qwen122_001`的终止状态 | 官方1.0、原生审计PASS，但第8轮预算结束，没有finish | termination=turn_limit；保留成功文件与真实终态，不将文件有效等同agent主动宣布完成 |
+
+续跑中的成功、恢复复测与累计成本见 `BASELINE_SUCCESS_SMOKE.md`。正式ACTC pairs仍为0，以上审计器或基础设施失败不扩大模型任务分母。

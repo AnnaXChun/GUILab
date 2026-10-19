@@ -1,0 +1,17 @@
+{
+  "files": 13,
+  "findings": [
+    {
+      "file": "HANDOFF.md",
+      "line": 32,
+      "rule": "halfwidth",
+      "content": "只收集缺项：`CADWORLD_API_BASE_URL`、`CADWORLD_API_KEY`、准确model ID。当前显式使用`qwen3.6-35b-a3b --qwen-no-thinking`；旧.env中的3.5别名不代表本轮选择。服务别名不证明权重哈希。密钥通过secret、环境变量或ignored .env提供，不进Git、argv或报告，不假定GitHub secret自动进入远程环境。"
+    },
+    {
+      "file": "REMOTE_CODEX_PROMPT.md",
+      "line": 7,
+      "rule": "halfwidth",
+      "content": "用户要求开源多模态Qwen3，当前显式使用qwen3.6-35b-a3b，thinking=false。只收集本环境缺失的endpoint、secret和准确model ID；本机.env不随Git上传。GUI需图片输入，CLI保持terminal-only。服务别名不是权重身份已核验，不下载模型。normalized1000适配改变了坐标合同，须与原像素合同结果分开。"
+    }
+  ]
+}

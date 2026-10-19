@@ -1,0 +1,1 @@
+{"classification": "endpoint_connectivity_only", "benchmark_episode": false, "requested_model": "qwen3.5-122b-a10b", "status": "PASS", "output_tokens": 3, "qwen_no_thinking": true, "response_model": "qwen3.5-122b-a10b", "response_text": "FREECAD", "image_request_accepted": true, "image_recognition_pass": true, "finish_reason": "stop", "model_calls": 1}

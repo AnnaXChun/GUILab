@@ -1,20 +1,26 @@
 # GUILab 交接
 
-更新：2026-10-19。仓库为 [AnnaXChun/GUILab](https://github.com/AnnaXChun/GUILab)，根目录即原 cad-cf-hybrid。按 AGENTS.md、[本批实际结果](reports/BASELINE_RUNTIME_SMOKE.md)、[复现状态](reports/REPRO_STATUS.md)、[TCG 运行指南](docs/RUN_TCG_BASELINE.md)、SPEC.md 接手。机器可读状态见 handoff.json；远程首条消息可使用 REMOTE_CODEX_PROMPT.md。
+更新：2026-10-19。仓库：[AnnaXChun/GUILab](https://github.com/AnnaXChun/GUILab)，根目录就是项目。先读本文件、[本轮续跑](reports/BASELINE_SUCCESS_SMOKE.md)、[官方sh核对](reports/UPSTREAM_SH_REUSE.md)、[阶段状态](reports/REPRO_STATUS.md)和SPEC.md，机器记录见handoff.json。历史失败不可被后续成功覆盖。
 
-本批最终为 3 个真实 episode（2 GUI + 1 CLI，2 个不同任务），strict 均为 0，无模型输出文件。15 次生成调用已用完，已知输出 1369 tokens，另有早期失败的未知 usage。下一批先修坐标合同与 CLI FreeCAD API 用法，不得在远程重置账本继续首批。
+下一步按[阶段验收计划](docs/NEXT_ACTC_VALIDATION.md)做无模型GUI诊断，不再增加本轮模型调用。CLI单题已有官方与原生成功，GUI和平面对话框、正式worker同步、same-S0双clone仍需验收。
 
-## 现在已验证到哪里
+## 已验证的结果
 
-pinned upstream 为 `e5d0ebab8bd28da6e98c68c61db05747d1647f7b`，submodule tracked 文件未改。Mac ARM 原生 QEMU/TCG 已接入原 DesktopEnv 和 GUI/CLI runner，独立 overlay、SHA、controller、关闭清理都有记录。空 FreeCAD 单实例的 reset/observe/action/observe/close 已通过；可信 GUI 宏完成参数化建模、参数修改、保存关闭重开。这些探针不计模型成绩，正式 TypedWorker 和 ACTC 的 GUI/API 主线程同步尚未验收。
+最新`qwen3.5-122b-a10b` CLI的`success_cli_qwen122_001`在sketch-061官方strict=1.0，8次生成/terminal、1869输出tokens，termination=turn_limit。原文件2924 bytes，SHA为`ebc2e5cbcee52bc49f0b081d67d5d3979a6e10f7205795d6945771403f47d673`；独立无模型VM原生审计PASS，重算/重开、类型树和一次性内存参数编辑通过，模型文件未改。它是原生Sketch，未完全约束，不声称agent主动finish。
 
-用户不能提供 KVM，不再索取 KVM，不安装 VMware。Linux 容器能够运行 FreeCAD；容器是否具备 Docker、QEMU、桌面与足够资源需要实测。当前 TCG 结果独立于参考 Linux x86_64/KVM 协议，不能以手改 stages.json 为 PASS 替代验证。
+Qwen3.6 CLI在`freecad-sketch-061`获得官方strict=1.0，14次生成、13次terminal、5823输出tokens；模型自行保存并重开。原CLI prompt、tools、parser、评分器与diagnostics均复用pinned源码，没有提供答案脚本或人工修复。
 
-本轮已安装 16 个来自 pinned lock 的 baseline 直接依赖版本，以延迟 registry 方式加载原 metric/getter 函数，原始 CLI dry-run 已通过，7 个 upstream CLI 单测重跑通过。没有安装全部 405 个 upstream 包，没有下载大模型、Torch/OCR 权重。旧 dotenv 失败和 GUI 宏失败仍保留在历史证据中。
+独立原生审计发现原文件的Sketch.State包含Invalid，Document.xml记录attachment错误。因此官方成功保留，工程质量判为FAIL，不进入有效训练数据。审计器曾有stdout未捕获、movePoint不可用、漏Invalid三次问题；保留原记录，以audit_review.json纠正旧PASS，不改模型文件。
 
-用户指定开源多模态 Qwen3，当前选择服务列出的 `qwen3.5-35b-a3b`。图片验证返回 `FREECAD`，输入 2077、输出 3 tokens；GUI 和 CLI 使用同一 model ID、thinking=false，实际 episode 结果以本批报告为准。模型别名不等于后端权重身份已核验。CLI 保持 terminal-only，不追加运行时截图。
+GUI25进入绘图和保存阶段但未存盘，strict=0；预热GUI100在50次真实生成后仍停在欢迎页，主动阻断，随后WAIT均为原adapter fallback。该次strict=null，保留raw score=0，不能作为完整100步测试。撤掉预热的恢复run在第6轮因混合单位history触发越界拒绝，6次/464输出tokens保留；v2将在线history统一为normalized单位，实际pixel执行和JSONL不变。新run沿用同一本账本的剩余44次。最终消耗与终态见本轮报告。
 
-## 启动与配置
+35B/v2的44轮GUI与122B/v2的35轮GUI都strict=0、无文件，卡在Select attachment平面选择；控件展开状态与事件循环仍需独立检查。累计10个attempt、8个有效评估episode、2个运行/诊断错误，涉及2个任务；含探针201次生成，已知输入702267/输出23385 tokens，价格和初次HTTP500 usage未知。所有模型与审计VM已停止，最新122 tests、上游CLI 7 tests和原CLI适配dry-run通过。该题用于调试与选模型，不能作独立held-out成绩。
+
+Qwen3.5首批的2 GUI + 1 CLI均为strict=0，无文件；15次请求、已知输出1369与早期HTTP500未知usage完整保留在[首批历史](reports/BASELINE_RUNTIME_SMOKE.md)。不同模型、预算与坐标合同不合并统计成功率。真实ACTC pairs仍为0。
+
+## 环境与启动
+
+用户无法提供KVM，不再索取，不安装VMware。Mac ARM原生QEMU/TCG已接入官方qcow2、DesktopEnv和GUI/CLI runner。单实例空GUI的reset/observe/action/observe/close、可信GUI参数化保存重开已通过；它们不是模型任务。参考Linux/KVM gate、正式TypedWorker、GUI bridge和same-S0双VM恢复尚未验收。
 
 ```bash
 git clone --recurse-submodules https://github.com/AnnaXChun/GUILab.git
@@ -25,30 +31,30 @@ git -C vendor/CADWORLD rev-parse HEAD
 git -C vendor/CADWORLD status --porcelain --untracked-files=no
 ```
 
-远程只收集缺项。`.env` 使用 `CADWORLD_API_BASE_URL`、`CADWORLD_MODEL_NAME`、`CADWORLD_API_KEY`，不随 Git 上传。不要假定 GitHub secret 会自动进入远程 Codex。key 只放所选 secret/环境变量或 ignored 配置，不进 argv、Git、报告；完整服务模型目录和真实服务地址也不上传。
+upstream固定`e5d0ebab8bd28da6e98c68c61db05747d1647f7b`，tracked文件不得修改。16个baseline直接依赖来自pinned lock，原CLI dry-run与7个上游测试通过；未安装完整405包或下载模型权重。
 
-VM 和固件不随 clone 取得。先检查本机/远程已有资产，不静默重下；用 `configs/native_tcg.example.json` 填实际路径和实际 SHA，按 RUN_TCG_BASELINE 做无模型验收。历史 Mac 路径只供 provenance，不能直接执行。本机官方 qcow2 为 28,310,503,424 bytes，SHA256 `edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12`，远程仍要独立 hash。
+VM、固件、.env和SQLite不随Git上传。已有官方qcow2为28,310,503,424 bytes，SHA256为`edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12`；远程必须核验自己的资产，不能直接使用本机路径。按`configs/native_tcg.example.json`填写路径与SHA，重新运行`probe_baseline_env.py`取得本机验收。具体步骤见[TCG指南](docs/RUN_TCG_BASELINE.md)。
 
-## 剩余预算与运行边界
+下一阶段无模型检查无需API key。未来模型实验只收集缺项：`CADWORLD_API_BASE_URL`、`CADWORLD_API_KEY`和准确model ID；本轮使用过qwen3.6-35b-a3b和qwen3.5-122b-a10b，均thinking=false。服务别名不证明权重哈希。密钥通过secret、环境变量或ignored `.env`提供，不进Git、argv或报告，不假定GitHub secret自动进入远程环境。
 
-用户已授权本机或远程执行同一首批真实 smoke，默认 `ENABLE_PAID_RUNS=0` 仍保留。条件就绪后单次命令设置 1，不重复询问相同范围许可。两地共用一批，不能各开第二批。
+## 授权和预算
 
-整批最多 15 次生成 / 16000 输出 tokens；GUI sketch-061、part-076 各最多 3 turns / 512 输出，CLI sketch-061 原上限 8 turns。早期 GPT 图片验证 HTTP 500 已占 1 次，unknown usage 保留 128-token 占用；用户更正模型后记录 correction，再做 Qwen 图片验证 1 次。因此两道 GUI 各用满 3 次后，CLI 最多剩 7 次。最终实际消耗与剩余额度见报告和共享账本。
+用户已要求少量真实实验，并追加“继续跑，直到模型任务能够成功，查看官方sh是否可复用”。默认`ENABLE_PAID_RUNS=0`保留为无配置保护，已授权命令单次设为1，无需重复请求同一范围许可。已完成的批次不能在远程重开。
 
-共享账本为 ignored `results/first_baseline_batch.sqlite`。移机前恢复该账本或按可信汇总保守迁移，不能用新空账本重置额度。SQLite 本身没有 key，不默认上传公共仓库；公开预算快照供审计。SDK 无自动重试；API 错误/未知 usage 关闭 circuit。只有明确的用户配置更正后才记录 correction 恢复，历史失败不删。非幂等 `/execute` 不重发，终态不确定就停止并隔离 VM。
+5本账本请求数为15、50、50、50、36，合计201。success账本先用42次，最后CLI122用剩余8次；gui100在50次后blocked，recovery为6+44，122B专用账本为图片1+GUI35。未知usage保留128-token reservation，总token和美元费用null，不报0。不得把未消耗的blocked额度当作新实验授权。
 
-不授权 25-step 追加、24-pair pilot、full-200、自动下载模型、训练或 veRL。模型 wall gate 从首请求起计 600 秒，单请求最多 110 秒；OS/GUI 冷启动另有限时，整进程最多 1800 秒。截图/轨迹保留，视频关闭，TCG 时延不与参考硬件混报。
+SDK重试为0，/execute非幂等变更单次派发；timeout或不确定写入停止并隔离clone。不得清空账本、删失败或修改上限恢复额度。不启动24-pair pilot、full-200、模型下载、训练或veRL。
 
-## 接下来的验收
+## 下一步和有效性边界
 
-先检查本批 GUI/CLI 的实际结果与失败原因。GUI `result.txt=0` 可能是上游异常 fallback，必须结合 error.json、usage circuit 和 diagnostics；`cad_cf.baseline_results` 保留 upstream_raw_score，对运行故障输出 strict=null + reason。有效 episode 的 strict=0 是任务未通过，不能改成服务故障，也不能因 runner 退出 0 宣称任务成功。
+先做无模型GUI控件/事件循环诊断，通过后再定义单题GUI模型复测；当前不新增推理。官方sh可以复用原Python入口；GUI sh引用缺失test_rest.json且不透传参数，vLLM sh固定GPU3，CLI wave sh启动四个模型和50题，不能原样启动。
 
-P0 baseline 闭环后，P1 仍需部署 `cad_cf/guest_gui_bridge.py`，验收 Qt 主线程 ack、正式 TypedWorker 保存重开、GUI 当前文档刷新。不能用可信圆柱探针替代正式 worker。随后才做同 intent、同 S0、两个独立 VM/磁盘/workdir 的 pair；不能 A 后 undo 再 B。保存关闭重开、相机/工作台/选中项、截图与原生 digest 均须核对，不一致就 invalid。
+P1必须部署正式guest_gui_bridge，验收Qt主线程ack、TypedWorker保存关闭重开和当前GUI刷新。之后P2才验证同一公开intent、同一S0、两个独立VM/磁盘/workdir；不能用同一base SHA或同任务ID代替S0证明，不能A后undo再B。真实pair、差异重测和训练GO门槛见stages.json，单路成功不自动放行P1–P4。
 
-当前 live plan 接口、native backend、公开契约 verifier、router、split 和 mock 已实现，正式双路流水线尚未实测。官方 expected/reference/evaluation 只能留在可信离线评分端，不能回流 agent/router/verifier。配对数和训练 GO 门槛见 stages.json；9 个 synthetic case 不计真实 pair，P3/P4 不因本批 baseline 自动通过。
+agent/router/verifier仅接公开白名单字段与当前状态。官方expected/reference/evaluation只在episode后离线评分，不回流在线模型。原论文GUI-only、CLI、显式坐标适配GUI、CADWorld-Hybrid分别报告；不把verifier或局部修复当novelty。
 
-## 产物与交付
+## 证据与提交
 
-`reports/evidence/baseline_runtime_20261019/INDEX.json` 包含逐次失败、source snapshot、脱敏 JSONL、截图和哈希。`.env`、完整服务目录、SQLite、qcow2、固件、FCStd 不进 Git；原始本机 results 不代表远程可用产物。原生文件若产生，只按实际做过的 ZIP/FreeCAD 重开/参数化检查报告，不用 fixture 或可信探针补齐模型输出。
+本轮脱敏归档位于`reports/evidence/baseline_success_20261019/`，INDEX记录原始与公开副本SHA。完整JSONL保留，截图抽样，其余本地图像哈希列入清单；执行SQLite公开导出仅含payload SHA/state，避免以base64上传原生文件。FCStd、qcow2、固件、凭证、完整模型目录和MCP诊断不提交。
 
-继续更新 reports/{REPRO_STATUS,BASELINE_REPRO,PILOT,FAILURE_CASES,DEVIATIONS}.md、机器可读状态和必要证据。完成后提交并推送已授权仓库，报告确切命令、任务 ID、artifact、strict、调用/token/wall 成本、阻塞与 GO/NO-GO。`scripts/verify.py` 固定早期 Mac 失败预期，不作为通用远程验收；使用实际适配后的测试与运行命令。
+继续更新reports/{REPRO_STATUS,BASELINE_REPRO,PILOT,FAILURE_CASES,DEVIATIONS}.md、机器状态和实际命令。完成适当测试、secret检查后直接提交并推送已授权仓库。scripts/verify.py固定早期Mac失败预期，不能作为通用远程验收。

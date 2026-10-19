@@ -1,0 +1,6 @@
+{
+  "artifact_sha256": "ebc2e5cbcee52bc49f0b081d67d5d3979a6e10f7205795d6945771403f47d673",
+  "artifact_bytes": 2924,
+  "deployed_source_sha256": "1996ea3f7454cb491f8eec9ba5784fe17300709e8d791b0ec93398ce693587a1",
+  "artifact_payload_excluded_from_public_trace": true
+}

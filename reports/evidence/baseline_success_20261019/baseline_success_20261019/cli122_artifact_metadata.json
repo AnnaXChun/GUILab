@@ -1,0 +1,15 @@
+{
+  "classification": "agent_artifact_metadata_only",
+  "artifact_sha256": "ebc2e5cbcee52bc49f0b081d67d5d3979a6e10f7205795d6945771403f47d673",
+  "bytes": 2924,
+  "document_xml_sha256": "7f9c7e0e8f9649dd5702c6acef9ef6dbbe2fbfc5835ef55f40bb1118f3f1429a",
+  "objects": [
+    {
+      "type": "Sketcher::SketchObject",
+      "name": "Sketch",
+      "id": "3016"
+    }
+  ],
+  "saved_error_attributes": [],
+  "artifact_modified": false
+}

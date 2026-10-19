@@ -1,0 +1,8 @@
+{
+  "classification": "readonly_model_health",
+  "generation_calls": 0,
+  "candidate": "qwen3-vl-plus",
+  "candidate_listed": true,
+  "full_directory_excluded": true,
+  "status": "PASS"
+}

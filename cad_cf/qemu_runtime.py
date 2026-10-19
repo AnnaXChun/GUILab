@@ -45,7 +45,7 @@ def qmp(path, command, arguments=None):
 class NativeQemuProvider:
     """One fresh overlay per boot. Reset discards a VM, never replays actions."""
     def __init__(self, base, base_sha, firmware, firmware_sha, output, *, port=15010,
-                 vnc_port=15910, visible=False, boot_seconds=600, gui_ready=False, gui_seconds=300):
+                 vnc_port=15910, visible=False, boot_seconds=600, gui_ready=False, gui_seconds=300,gui_warmup=False):
         self.base, self.firmware = Path(base).resolve(), Path(firmware).resolve()
         self.base_sha, self.firmware_sha = base_sha, firmware_sha
         self.output = Path(output).resolve()
@@ -53,6 +53,7 @@ class NativeQemuProvider:
         self.port, self.vnc_port, self.visible = port, vnc_port, visible
         self.boot_seconds = boot_seconds
         self.gui_ready, self.gui_seconds = gui_ready, gui_seconds
+        self.gui_warmup=gui_warmup
         self.process = self.socket_dir = self.log = None
         self.boot = 0
         self.current = None
@@ -115,7 +116,7 @@ class NativeQemuProvider:
                         self._save('ready.json',event)
                         if self.gui_ready:
                             from .gui_startup import prepare_gui
-                            prepare_gui(self.endpoint,self.current,self.gui_seconds)
+                            prepare_gui(self.endpoint,self.current,self.gui_seconds,warm_canvas=self.gui_warmup)
                         return
                 with (self.current/'readiness.jsonl').open('a') as stream: stream.write(json.dumps(event)+'\n')
                 time.sleep(3)

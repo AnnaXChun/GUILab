@@ -1,0 +1,8 @@
+{
+  "classification": "local_candidate_review",
+  "generation_calls": 0,
+  "selected_open_qwen_candidate": "qwen3.5-122b-a10b",
+  "open_weight_named_candidate_available": true,
+  "vl_plus_is_not_treated_as_open_weights": true,
+  "full_directory_excluded": true
+}

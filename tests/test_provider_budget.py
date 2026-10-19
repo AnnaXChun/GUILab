@@ -12,6 +12,28 @@ def test_provider_failure_opens_circuit():
     assert len(calls)==1
 
 
+def test_shared_budget_denial_opens_gate_without_dispatch(tmp_path):
+    import json
+    from cad_cf.batch_budget import BatchBudget
+    from cad_cf.trace import Trace
+    batch=BatchBudget(tmp_path/'budget.sqlite',max_calls=1,max_output_tokens=10)
+    key,_=batch.reserve(10);batch.finish(key,2)
+    calls=[]
+    path=tmp_path/'usage.jsonl'
+    gate=APIGate(batch=batch,trace=Trace(path))
+    try:
+        with pytest.raises(BudgetExhausted,match='no provider request'):
+            gate.invoke(lambda **kw:calls.append(kw),{},provider='openai')
+        with pytest.raises(BudgetExhausted):
+            gate.invoke(lambda **kw:calls.append(kw),{},provider='openai')
+        assert gate.blocked and gate.calls==0 and calls==[]
+        assert batch.status()['requests']==1
+        rows=[json.loads(line) for line in path.read_text().splitlines()]
+        assert len(rows)==1 and rows[0]['event']=='budget_rejected'
+        assert rows[0]['provider_request_sent'] is False
+    finally:batch.close()
+
+
 def test_output_budget_clamps_next_request():
     calls=[]
     def method(**kw):

@@ -9,7 +9,7 @@
 | `vendor/CADWORLD/CLI/prompts.py:39` | normalize 支持三种精确前缀且会 strip/lstrip | 本项目逐字复用同样的前缀规则。raw 保留，effective 单独记录，官方 GUI 使用 raw |
 | `vendor/CADWORLD/desktop_env/evaluators/diagnostics.py:717` | diagnostics 读取 evaluator.expected | 仅 `posthoc.py` 离线可信入口引用官方收集/诊断函数；verifier、candidate、router 不导入它，模型不接触 raw task config |
 | `vendor/CADWORLD/pyproject.toml` / `uv.lock` | full sync 405 包含大型推理/视觉运行时 | 本机 Mac 先用轻量本项目 venv 跑 upstream CLI 单测；full sync 只预览，原始 CLI dry-run 失败如实保留。Linux 上由 bootstrap --full-upstream 执行完整依赖 |
-| SPEC P0–P3 Stop/Go 与无环境静态交付 | 本机不具备 Linux KVM / VM / provider credentials | 真实实验停在 P0；P1–P3 继续静态实现和 mock，所有真实阶段门槛仍为 blocked，不以 synthetic 满足 ≥3 real pairs |
+| SPEC P0–P3 Stop/Go 与初期静态交付 | 初期本机缺少KVM、VM及凭证；后续TCG/VM/模型服务已实测 | 参考环境gate仍未通过；正式P1–P3尚未验收，不以synthetic或单路CLI成功满足≥3 real pairs |
 | native fork 工作文件 | 任务公开路径常为 `/home/user/Unnamed.FCStd`，并行 worker 需要每任务私有目录 | NativeBackend 在 guest `/home/user/current` 操作 checkpoint/artifact；正式 post-hoc 前由可信适配层发布已保存文件到任务输出路径。官方 baseline 原路径不变；该发布尚未真实验证 |
 | GUI 进程同步 | 上游未提供可复用的同步 FreeCAD GUI IPC | 新增 guest-only loopback/Qt 主线程桥。仅 summary、commit/close、reopen；启动宏是受控 checkpoint 准备步骤。没有桥或无 ack 时拒绝配对；GUI bridge 尚未实际部署验收 |
 | same-S0 | 精确截图哈希容易受光标/动画/通知影响 | 初版宁可拒绝 pair，要求稳定 workbench/camera/selection/文档集与截图。未用近似截图相等放宽证据 |
@@ -69,3 +69,29 @@
 正式 ACTC 的 TypedWorker、GUI 主线程桥、same-S0 和双 VM 隔离仍未因这些基础设施 PASS 而验收。真实 pair 数继续为 0；24-pair pilot、full-200、训练与 veRL 未启动。
 
 `CLI/run_cli.py:100–102` 对 results-dir 有 CLI_ROOT 边界限制。第一次 live CLI 参数解析被拒绝（0 次模型生成、0 次 VM 启动）；`cad_cf.baseline` 改为先在 upstream `CLI/results/actc/<run_id>` 保存，进程结束后原样复制到本项目 `results/official_cli/<run_id>`。没有用 symlink 绕过检查，没有改上游安全边界；另拒绝已存在的 CLI run ID，防止上游默认 resume 混入历史结果。新路径经实际原 CLI dry-run 与边界回归检查通过，失败 `_001` 不覆盖，继续使用 `_002`。
+
+## 单题续跑与官方sh适配
+
+用户后续授权继续跑至模型任务成功。新增显式campaign配置；首批15次账本不变，续跑50次上限批实际42次，另有GUI诊断与恢复预算，全部保留。原账本constructor上限不符时未释放SQLite锁的问题已修复。共享reserve拒绝会打开当前APIGate并写budget_rejected，避免被原adapter的WAIT fallback误报成完整模型测量。
+
+pinned `baseline/Qwen3-6/experiment_qwen3_6.sh` 的100步、trajectory10、sleep0.3和think none已核对。它引用的`test_rest.json`在该commit缺失，且不透传`"$@"`；vLLM sh固定NVIDIA GPU3、CLI wave sh同时启动四个模型与50题。本机复用同一Python入口与现有服务，改用单题清单、TCG生命周期和受限预算，未执行GPU服务脚本或整批任务。模型由服务Qwen3.5改为对应的Qwen3.6别名，模型、预算同时变化，不能归因单一改动。
+
+原Qwen adapter要求像素，服务在公开空GUI截图探针上仍输出0..1000位置。新增显式normalized1000合同及AST转换，仅缩放绝对鼠标x/y，保留相对位移、scroll数量和键盘操作；原始与实际像素动作均记录。这一prompt后缀差异单列，不能称原GUI协议完全未变；不提供按钮位置或建模步骤。
+
+可选空视图预热创建无对象临时文档、渲染后关闭，核对空文档集。GUI100的宏ack成功但欢迎页仍不响应，50次请求后停止计费，原循环余下为WAIT。不能据此确认唯一根因，也不能将raw score=0当成有效完整100步结果；离线collector据external_stop.json输出strict=null。恢复运行在新VM显式关闭预热，最多50次，两次实际生成合计不超过100。
+
+CLI官方strict=1.0与工程审计FAIL并列保留。独立审计器先后出现stdout缺失、movePoint不可用、漏Invalid状态三类问题；原记录不覆写，修正分类器并保留review。所有参数编辑只在独立VM内的内存副本，原文件SHA不变。工程自检未读取expected/reference，也没有给在线模型反馈评分或审计结果。
+
+撤掉预热的`success_gui_qwen36_recovery_001`在6次生成后因坐标合同违例结束：前轮normalized `(805,283)`执行为pixel `(1546,306)`；第6轮模型直接输出后者，转换器拒绝执行。pinned `predict → _remember_turn → _trajectory_prompt_context`会同时把原始model_action与实际pixel executed_action放入下一轮prompt，形成混合单位历史。该工程缺陷已在协议v2修正：在线history的两类action统一以normalized单位表示，返回response和实际JSONL保留原始值、pixel执行值及显式coordinate_mapping元数据。未猜单位、未双重缩放或放宽越界检查。使用真实pinned agent的无网络两轮测试验证下一轮prompt不再含pixel action，执行返回值仍为正确pixel，退出后恢复所有monkeypatch。
+
+后续`success_gui_qwen36_history_001`复用同一recovery账本，6次请求不清零，自动将新run上限收紧至剩余44次；环境仍为全新overlay、无预热。这个历史字段呈现差异与v1结果分别报告，不改pinned tracked源码或任务答案。
+
+## 最终续跑与原生验收
+
+35B/v2的44轮和122B/v2的35轮GUI都未保存，官方strict=0。更大服务模型未解决本轮平面选择；平面列表的展开状态、输入送达、Qt事件循环尚未单独诊断，不将失败唯一归因于模型或TCG。最终代码又补齐scroll位置参数缩放与重复坐标拒绝；各模型run的source_snapshot保存首次请求前的实际实现，不能把之后的小修追溯算进此前实验。
+
+122B CLI使用success账本原50次上限中的剩余8次，官方strict=1.0、1869输出tokens，termination=turn_limit。独立无模型VM审计其原文件，重算、重开、类型树和可编辑性通过，原文件SHA不变；没有修复模型产物。其原生Sketch没有Body、未完全约束，均不据此否定原生参数化结构。Qwen3.6原文件的Invalid仍为FAIL，不能由122B成功覆盖。
+
+运行时基于ea2a4b1父提交且工作区有改动，每个run首次模型请求前保存36个cad_cf源文件及SHA。后续交付提交含审计器和归档修正，不声称是模型当时运行的干净提交。完整JSONL保留，公开执行SQLite仅导出payload SHA与state，避免以base64上传FCStd；原始SQLite与二进制文件仍留本地。
+
+累计含探针201次生成、10个attempt、8个有效评估episode；不同模型/预算/坐标协议与重复任务不合并估计成功率。sketch-061用于调试与模型选择，不充当未见held-out结果。下一阶段为无模型GUI诊断、正式worker同步和same-S0隔离验收，见`docs/NEXT_ACTC_VALIDATION.md`；真实pairs=0，参考gate与P3/P4未放行。

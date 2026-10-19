@@ -34,3 +34,5 @@ synthetic 单测样本 N=9，仅用于工程验证。标签分布 `{'tie': 3, 'a
 [研究假设] 真实标签能否改善路由，需要先验证原生文件恢复、双路径执行与差异重测；当前没有效果估计。
 
 2026-10-19 后续：真实单路 baseline 已评估 3 个 episode（2 GUI + 1 CLI，2 个不同任务），strict 均为 0，无模型输出文件；15 次生成已达到首批调用上限。它们不是反事实 pairs，不生成 preference/credit，不改变本报告的真实 pair N=0、CI=null 或 P3/P4 NO-GO。
+
+2026-10-19最终续跑：Qwen3.6 CLI sketch-061官方1.0、原生审计FAIL；Qwen3.5-122B CLI官方1.0、原生审计PASS。GUI两次v2复测仍无文件。累计10个attempt、8个有效评估episode、2个运行/诊断错误，含探针共201次生成；详见`BASELINE_SUCCESS_SMOKE.md`，各运行不是same-S0配对。sketch-061已用于调试与模型选择，不能作独立held-out效果。真实ACTC pair、有效pair、GUI/API差异重测仍为0，不能从单路成功推导路由收益，P3/P4继续NO-GO。

@@ -1,0 +1,12 @@
+{
+  "type": "external_stop_at_next_model_reservation",
+  "utc": "2026-10-19T09:37:12.312350+00:00",
+  "reason": "Repeated correct-position Done clicks with unchanged welcome screen after empty-canvas warmup; stop billing and diagnose GUI liveness. No task artifact or action has been manually changed.",
+  "requests_at_stop": 50,
+  "states_at_stop": {
+    "complete": 50
+  },
+  "requested_max_steps": 100,
+  "completed_full_100_step_protocol": false,
+  "interpretation": "Externally stopped diagnostic failure; any upstream fallback zero is not a valid full-budget score."
+}

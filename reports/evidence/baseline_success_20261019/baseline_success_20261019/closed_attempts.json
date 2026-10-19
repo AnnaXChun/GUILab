@@ -1,0 +1,57 @@
+[
+  {
+    "run_id": "success_cli_qwen36_001",
+    "status": "EVALUATED",
+    "strict": 1.0,
+    "upstream_raw_score": 1.0,
+    "model_calls": 14,
+    "known_output_tokens": 5823,
+    "input_tokens": 75539,
+    "artifact_count": 1,
+    "trajectory_rows": 28
+  },
+  {
+    "run_id": "success_gui_qwen36_001",
+    "status": "EVALUATED",
+    "strict": 0.0,
+    "upstream_raw_score": 0.0,
+    "model_calls": 25,
+    "known_output_tokens": 2393,
+    "input_tokens": 88650,
+    "artifact_count": 0,
+    "trajectory_rows": 29
+  },
+  {
+    "run_id": "success_gui_qwen36_100_001",
+    "status": "RUN_ERROR",
+    "strict": null,
+    "upstream_raw_score": 0.0,
+    "model_calls": 50,
+    "known_output_tokens": 4343,
+    "input_tokens": 180792,
+    "artifact_count": 0,
+    "trajectory_rows": 100
+  },
+  {
+    "run_id": "success_gui_qwen36_recovery_001",
+    "status": "RUN_ERROR",
+    "strict": null,
+    "upstream_raw_score": null,
+    "model_calls": 6,
+    "known_output_tokens": 464,
+    "input_tokens": 17113,
+    "artifact_count": 0,
+    "trajectory_rows": 6
+  },
+  {
+    "run_id": "success_gui_qwen36_history_001",
+    "status": "EVALUATED",
+    "strict": 0.0,
+    "upstream_raw_score": 0.0,
+    "model_calls": 44,
+    "known_output_tokens": 3558,
+    "input_tokens": 157997,
+    "artifact_count": 0,
+    "trajectory_rows": 45
+  }
+]

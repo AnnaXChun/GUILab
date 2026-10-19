@@ -2,9 +2,9 @@
 
 GUILab 当前承载 CADWorld Counterfactual Tool Credit（ACTC）复现工程。仓库根目录即项目根目录。
 
-当前正在推进真实 baseline smoke，已实现无 KVM runner 和 endpoint 接入，命令见 [RUN_TCG_BASELINE.md](docs/RUN_TCG_BASELINE.md)；首批预算见 [NEXT_BASELINE_RUN.md](docs/NEXT_BASELINE_RUN.md)。远程接手读 [HANDOFF.md](HANDOFF.md)，使用 [REMOTE_CODEX_PROMPT.md](REMOTE_CODEX_PROMPT.md) 启动；执行约束见 [AGENTS.md](AGENTS.md)。
+CLI单题流程已跑通，GUI与ACTC配对尚未通过。下一阶段见[验收计划](docs/NEXT_ACTC_VALIDATION.md)：先无模型诊断GUI，再验收正式API同步与双clone。历史启动命令见[RUN_TCG_BASELINE](docs/RUN_TCG_BASELINE.md)。远程接手读[HANDOFF](HANDOFF.md)和[REMOTE_CODEX_PROMPT](REMOTE_CODEX_PROMPT.md)，执行约束见[AGENTS](AGENTS.md)。
 
-首批已完成：Qwen3.5 的 2 个 GUI + 1 个 CLI episode 均 strict=0，无输出文件；GUI 卡在坐标定位，CLI 卡在 FreeCAD API 用法。15 次生成上限已用完，不能在远程重开首批。流程、失败与成本见 [BASELINE_RUNTIME_SMOKE](reports/BASELINE_RUNTIME_SMOKE.md)。
+`qwen3.5-122b-a10b`的CLI在`freecad-sketch-061`获得官方1.0，模型文件通过原生重开、重算和可编辑性审计；8次生成、1869输出tokens，以turn_limit结束。此前Qwen3.6 CLI官方也为1.0，但原文件attachment/Invalid，工程审计FAIL。GUI仍无成功文件。完整成功、失败、201次累计生成的成本及协议差异见[单题续跑](reports/BASELINE_SUCCESS_SMOKE.md)与[官方sh复用](reports/UPSTREAM_SH_REUSE.md)，不合并为论文成功率。
 
 ```bash
 git clone --recurse-submodules https://github.com/AnnaXChun/GUILab.git
@@ -17,7 +17,7 @@ bash scripts/test.sh
 
 [本项目新增] 在同一原生工程状态、同一公开语义子目标下，用隔离 GUI/API 分支采集工程自检 preference。规格见 [SPEC.md](SPEC.md)。上游固定 `e5d0ebab8bd28da6e98c68c61db05747d1647f7b`。
 
-Mac ARM 原生 QEMU/TCG 已接入 pinned baseline runner，无需 KVM。可信 GUI 参数化保存重开、单实例空 GUI 的 DesktopEnv 闭环已通过；Qwen3.5 多模态接口已实测，真实任务、单测与成本见 [最新运行记录](reports/BASELINE_RUNTIME_SMOKE.md)。7 个 upstream CLI 单测和 9 个 synthetic case 已通过；真实 ACTC pairs 仍为 0，P3/P4 为 NO-GO，阶段状态见 [复现状态](reports/REPRO_STATUS.md)。
+Mac ARM原生QEMU/TCG已接入pinned baseline runner，无需KVM。可信GUI参数化保存重开、单实例空GUI的DesktopEnv闭环已通过；Qwen3.5/3.6图片接口已实测。项目122 tests、上游CLI 7 tests和9个synthetic case通过；真实ACTC pairs仍为0，P3/P4 NO-GO，见[复现状态](reports/REPRO_STATUS.md)。
 
 ```bash
 bash scripts/bootstrap.sh

@@ -1,0 +1,1140 @@
+[2026-10-19 17:31:12,331 INFO run_single/186] Task started: freecad-sketch-061
+[2026-10-19 17:31:12,331 INFO run_single/187] Instruction: Use GUI, Sketch one horizontal normal-geometry line segment 10 mm long in the XY plane. Save the completed model to /home/user/Unnamed.FCStd.
+[2026-10-19 17:31:12,331 INFO desktop_env/246] Resetting environment...
+[2026-10-19 17:31:12,331 INFO desktop_env/247] Switching task...
+[2026-10-19 17:31:12,331 INFO desktop_env/248] Setting counters...
+[2026-10-19 17:31:12,331 INFO desktop_env/277] Environment is clean, skipping snapshot revert (provider: docker).
+[2026-10-19 17:31:12,409 INFO desktop_env/285] Setting up environment...
+[2026-10-19 17:31:12,409 INFO setup/71] try to connect http://127.0.0.1:15010
+[2026-10-19 17:31:16,967 INFO setup/96] Executing setup step 1/1: _execute_setup
+[2026-10-19 17:31:17,015 INFO setup/378] Command executed successfully: rm -f /home/user/Unnamed.FCStd -> {
+  "error": "",
+  "output": "",
+  "returncode": 0,
+  "status": "success"
+}
+
+[2026-10-19 17:31:17,015 INFO setup/99] SETUP COMPLETED: _execute_setup({'command': ['rm', '-f', '/home/user/Unnamed.FCStd'], 'shell': False})
+[2026-10-19 17:31:17,015 INFO desktop_env/302] Environment setup complete.
+[2026-10-19 17:31:18,673 INFO python/54] Got screenshot successfully
+[2026-10-19 17:31:18,674 INFO run_single/191] Waiting 15.0s after reset for FreeCAD startup before agent control; this grace period is outside the agent action loop.
+[2026-10-19 17:31:18,674 INFO run_single/196] Waiting 15.0s after reset before agent control.
+[2026-10-19 17:31:35,407 INFO python/54] Got screenshot successfully
+[2026-10-19 17:31:35,409 INFO run_single/202] Recording enabled: False; started: False
+[2026-10-19 17:31:35,937 INFO api_agent/455] Thinking configuration for openai-compatible/qwen3.6-35b-a3b: requested=none normalized=none native=chat_template_kwargs.enable_thinking=false
+[2026-10-19 17:31:37,371 INFO api_agent/455] Step 1 raw model output: {
+  "reason": "The FreeCAD welcome dialog is blocking the workspace. I need to close it by clicking 'Done' to access the main interface and proceed with creating a sketch.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:31:37,371 INFO api_agent/455] Step 1 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:31:37,371 INFO api_agent/455] Step 1 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:31:37,372 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:31:37,372 INFO api_agent/455] Step 1 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:31:37,372 INFO run_single/215] Step 1: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:31:37,372 INFO run_single/216] Step 1 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:31:37,372 INFO desktop_env/398] Step 1 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:31:42,348 INFO python/54] Got screenshot successfully
+[2026-10-19 17:31:42,349 INFO run_single/221] Step 1 result: reward=0 done=False info={} screenshot=step_1_20261019@173137372267.png
+[2026-10-19 17:31:44,470 INFO api_agent/455] Step 2 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. I need to close it by clicking 'Done' to access the main interface and proceed with creating a sketch.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:31:44,470 INFO api_agent/455] Step 2 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:31:44,470 INFO api_agent/455] Step 2 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:31:44,470 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:31:44,470 INFO api_agent/455] Step 2 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:31:44,470 INFO run_single/215] Step 2: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:31:44,471 INFO run_single/216] Step 2 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:31:44,471 INFO desktop_env/398] Step 2 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:31:49,338 INFO python/54] Got screenshot successfully
+[2026-10-19 17:31:49,339 INFO run_single/221] Step 2 result: reward=0 done=False info={} screenshot=step_2_20261019@173144470965.png
+[2026-10-19 17:31:50,489 INFO api_agent/455] Step 3 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. I need to close it by clicking 'Done' to access the main interface and proceed with creating a sketch.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:31:50,489 INFO api_agent/455] Step 3 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:31:50,489 INFO api_agent/455] Step 3 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:31:50,490 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:31:50,490 INFO api_agent/455] Step 3 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:31:50,490 INFO run_single/215] Step 3: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:31:50,490 INFO run_single/216] Step 3 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:31:50,490 INFO desktop_env/398] Step 3 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:31:55,698 INFO python/54] Got screenshot successfully
+[2026-10-19 17:31:55,699 INFO run_single/221] Step 3 result: reward=0 done=False info={} screenshot=step_3_20261019@173150490117.png
+[2026-10-19 17:31:56,701 INFO api_agent/455] Step 4 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. I need to click the 'Done' button to close it and access the main interface for creating a sketch.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:31:56,701 INFO api_agent/455] Step 4 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:31:56,701 INFO api_agent/455] Step 4 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:31:56,701 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:31:56,701 INFO api_agent/455] Step 4 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:31:56,701 INFO run_single/215] Step 4: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:31:56,701 INFO run_single/216] Step 4 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:31:56,701 INFO desktop_env/398] Step 4 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:32:01,729 INFO python/54] Got screenshot successfully
+[2026-10-19 17:32:01,731 INFO run_single/221] Step 4 result: reward=0 done=False info={} screenshot=step_4_20261019@173156701674.png
+[2026-10-19 17:32:02,820 INFO api_agent/455] Step 5 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. I need to click the 'Done' button to close it and access the main interface for creating a sketch.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:32:02,820 INFO api_agent/455] Step 5 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:32:02,820 INFO api_agent/455] Step 5 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:32:02,820 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:32:02,820 INFO api_agent/455] Step 5 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:32:02,820 INFO run_single/215] Step 5: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:32:02,820 INFO run_single/216] Step 5 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:32:02,820 INFO desktop_env/398] Step 5 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:32:08,159 INFO python/54] Got screenshot successfully
+[2026-10-19 17:32:08,199 INFO run_single/221] Step 5 result: reward=0 done=False info={} screenshot=step_5_20261019@173202820609.png
+[2026-10-19 17:32:09,446 INFO api_agent/455] Step 6 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. I need to click the 'Done' button to close it and access the main interface for creating a sketch.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:32:09,446 INFO api_agent/455] Step 6 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:32:09,446 INFO api_agent/455] Step 6 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:32:09,446 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:32:09,446 INFO api_agent/455] Step 6 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:32:09,446 INFO run_single/215] Step 6: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:32:09,446 INFO run_single/216] Step 6 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:32:09,446 INFO desktop_env/398] Step 6 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:32:14,566 INFO python/54] Got screenshot successfully
+[2026-10-19 17:32:14,567 INFO run_single/221] Step 6 result: reward=0 done=False info={} screenshot=step_6_20261019@173209446557.png
+[2026-10-19 17:32:15,813 INFO api_agent/455] Step 7 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. I need to click the 'Done' button to close it and access the main interface for creating a sketch.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:32:15,813 INFO api_agent/455] Step 7 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:32:15,813 INFO api_agent/455] Step 7 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:32:15,814 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:32:15,814 INFO api_agent/455] Step 7 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:32:15,814 INFO run_single/215] Step 7: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:32:15,814 INFO run_single/216] Step 7 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:32:15,814 INFO desktop_env/398] Step 7 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:32:20,494 INFO python/54] Got screenshot successfully
+[2026-10-19 17:32:20,495 INFO run_single/221] Step 7 result: reward=0 done=False info={} screenshot=step_7_20261019@173215814266.png
+[2026-10-19 17:32:21,438 INFO api_agent/455] Step 8 raw model output: {"reason": "The FreeCAD welcome dialog is still blocking the workspace. I need to click the 'Done' button to close it and access the main interface for creating a sketch.", "action": "pyautogui.click(x=840, y=741)"}
+[2026-10-19 17:32:21,438 INFO api_agent/455] Step 8 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:32:21,438 INFO api_agent/455] Step 8 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:32:21,438 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:32:21,438 INFO api_agent/455] Step 8 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:32:21,438 INFO run_single/215] Step 8: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:32:21,438 INFO run_single/216] Step 8 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:32:21,438 INFO desktop_env/398] Step 8 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:32:28,238 INFO python/54] Got screenshot successfully
+[2026-10-19 17:32:28,240 INFO run_single/221] Step 8 result: reward=0 done=False info={} screenshot=step_8_20261019@173221438690.png
+[2026-10-19 17:32:29,646 INFO api_agent/455] Step 9 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still blocking the workspace. The previous attempts to click 'Done' used incorrect coordinates (likely mapped from a different resolution or misinterpreted). I need to click the 'Done' button at its correct location in the current screenshot to close the dialog and proceed with creating the sketch.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:32:29,646 INFO api_agent/455] Step 9 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:32:29,646 INFO api_agent/455] Step 9 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:32:29,646 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:32:29,646 INFO api_agent/455] Step 9 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:32:29,647 INFO run_single/215] Step 9: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:32:29,647 INFO run_single/216] Step 9 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:32:29,647 INFO desktop_env/398] Step 9 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:32:37,083 INFO python/54] Got screenshot successfully
+[2026-10-19 17:32:37,085 INFO run_single/221] Step 9 result: reward=0 done=False info={} screenshot=step_9_20261019@173229647050.png
+[2026-10-19 17:32:38,282 INFO api_agent/455] Step 10 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. I need to click the 'Done' button to close it and access the main interface for creating a sketch.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:32:38,282 INFO api_agent/455] Step 10 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:32:38,282 INFO api_agent/455] Step 10 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:32:38,283 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:32:38,283 INFO api_agent/455] Step 10 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:32:38,283 INFO run_single/215] Step 10: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:32:38,283 INFO run_single/216] Step 10 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:32:38,283 INFO desktop_env/398] Step 10 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:32:51,472 INFO python/54] Got screenshot successfully
+[2026-10-19 17:32:51,476 INFO run_single/221] Step 10 result: reward=0 done=False info={} screenshot=step_10_20261019@173238283188.png
+[2026-10-19 17:32:52,532 INFO api_agent/455] Step 11 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. I need to click the 'Done' button to close it and access the main interface for creating a sketch.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:32:52,532 INFO api_agent/455] Step 11 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:32:52,532 INFO api_agent/455] Step 11 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:32:52,532 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:32:52,532 INFO api_agent/455] Step 11 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:32:52,532 INFO run_single/215] Step 11: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:32:52,532 INFO run_single/216] Step 11 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:32:52,532 INFO desktop_env/398] Step 11 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:33:08,080 INFO python/54] Got screenshot successfully
+[2026-10-19 17:33:08,082 INFO run_single/221] Step 11 result: reward=0 done=False info={} screenshot=step_11_20261019@173252532892.png
+[2026-10-19 17:33:09,400 INFO api_agent/455] Step 12 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. I need to click the 'Done' button to close it and access the main interface for creating a sketch.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:33:09,401 INFO api_agent/455] Step 12 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:33:09,401 INFO api_agent/455] Step 12 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:33:09,401 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:33:09,401 INFO api_agent/455] Step 12 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:33:09,401 INFO run_single/215] Step 12: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:33:09,401 INFO run_single/216] Step 12 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:33:09,401 INFO desktop_env/398] Step 12 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:33:15,701 INFO python/54] Got screenshot successfully
+[2026-10-19 17:33:15,702 INFO run_single/221] Step 12 result: reward=0 done=False info={} screenshot=step_12_20261019@173309401579.png
+[2026-10-19 17:33:16,981 INFO api_agent/455] Step 13 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. The previous attempts to click 'Done' used incorrect coordinates (likely mapped from a different resolution or misinterpreted). I need to click the 'Done' button at its correct location in the current screenshot to close",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:33:16,981 INFO api_agent/455] Step 13 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:33:16,981 INFO api_agent/455] Step 13 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:33:16,982 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:33:16,982 INFO api_agent/455] Step 13 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:33:16,982 INFO run_single/215] Step 13: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:33:16,982 INFO run_single/216] Step 13 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:33:16,982 INFO desktop_env/398] Step 13 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:33:23,760 INFO python/54] Got screenshot successfully
+[2026-10-19 17:33:23,762 INFO run_single/221] Step 13 result: reward=0 done=False info={} screenshot=step_13_20261019@173316982095.png
+[2026-10-19 17:33:25,172 INFO api_agent/455] Step 14 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. I need to click the 'Done' button to close it and access the main interface for creating a sketch.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:33:25,173 INFO api_agent/455] Step 14 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:33:25,173 INFO api_agent/455] Step 14 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:33:25,173 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:33:25,173 INFO api_agent/455] Step 14 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:33:25,173 INFO run_single/215] Step 14: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:33:25,173 INFO run_single/216] Step 14 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:33:25,173 INFO desktop_env/398] Step 14 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:33:29,816 INFO python/54] Got screenshot successfully
+[2026-10-19 17:33:29,817 INFO run_single/221] Step 14 result: reward=0 done=False info={} screenshot=step_14_20261019@173325173464.png
+[2026-10-19 17:33:30,854 INFO api_agent/455] Step 15 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. I need to click the 'Done' button to close it and access the main interface for creating a sketch.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:33:30,855 INFO api_agent/455] Step 15 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:33:30,855 INFO api_agent/455] Step 15 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:33:30,855 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:33:30,855 INFO api_agent/455] Step 15 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:33:30,855 INFO run_single/215] Step 15: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:33:30,855 INFO run_single/216] Step 15 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:33:30,855 INFO desktop_env/398] Step 15 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:33:36,723 INFO python/54] Got screenshot successfully
+[2026-10-19 17:33:36,726 INFO run_single/221] Step 15 result: reward=0 done=False info={} screenshot=step_15_20261019@173330855402.png
+[2026-10-19 17:33:37,852 INFO api_agent/455] Step 16 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. The previous attempts to click 'Done' failed because the coordinates were incorrect (likely mapped from a different resolution). I need to click the 'Done' button at its correct location in the current screenshot to close the dialog and access the main interface for creating a sketch.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:33:37,852 INFO api_agent/455] Step 16 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:33:37,852 INFO api_agent/455] Step 16 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:33:37,852 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:33:37,852 INFO api_agent/455] Step 16 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:33:37,852 INFO run_single/215] Step 16: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:33:37,852 INFO run_single/216] Step 16 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:33:37,853 INFO desktop_env/398] Step 16 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:33:46,158 INFO python/54] Got screenshot successfully
+[2026-10-19 17:33:46,165 INFO run_single/221] Step 16 result: reward=0 done=False info={} screenshot=step_16_20261019@173337852946.png
+[2026-10-19 17:33:47,602 INFO api_agent/455] Step 17 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. The previous attempts to click 'Done' used incorrect coordinates. I need to click the 'Done' button at its correct location in the current screenshot to close it and access the main interface.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:33:47,603 INFO api_agent/455] Step 17 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:33:47,603 INFO api_agent/455] Step 17 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:33:47,603 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:33:47,603 INFO api_agent/455] Step 17 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:33:47,603 INFO run_single/215] Step 17: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:33:47,603 INFO run_single/216] Step 17 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:33:47,603 INFO desktop_env/398] Step 17 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:33:53,904 INFO python/54] Got screenshot successfully
+[2026-10-19 17:33:53,905 INFO run_single/221] Step 17 result: reward=0 done=False info={} screenshot=step_17_20261019@173347603761.png
+[2026-10-19 17:33:55,130 INFO api_agent/455] Step 18 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. I need to click the 'Done' button to close it and access the main interface for creating a sketch.",
+  "action": "pyautogui.click(x=839, y=740)"
+}
+[2026-10-19 17:33:55,131 INFO api_agent/455] Step 18 parsed model response action: pyautogui.click(x=839, y=740)
+[2026-10-19 17:33:55,131 INFO api_agent/455] Step 18 parsed model response actions: ['pyautogui.click(x=839, y=740)']
+[2026-10-19 17:33:55,131 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=839, y=740)'] -> ['pyautogui.click(x=1611, y=799)']
+[2026-10-19 17:33:55,131 INFO api_agent/455] Step 18 sanitized executable actions: ['pyautogui.click(x=1611, y=799)']
+[2026-10-19 17:33:55,131 INFO run_single/215] Step 18: pyautogui.click(x=1611, y=799)
+[2026-10-19 17:33:55,131 INFO run_single/216] Step 18 action: pyautogui.click(x=1611, y=799)
+[2026-10-19 17:33:55,131 INFO desktop_env/398] Step 18 in trajectory 0 with action: pyautogui.click(x=1611, y=799)
+[2026-10-19 17:34:00,354 INFO python/54] Got screenshot successfully
+[2026-10-19 17:34:00,356 INFO run_single/221] Step 18 result: reward=0 done=False info={} screenshot=step_18_20261019@173355131794.png
+[2026-10-19 17:34:01,847 INFO api_agent/455] Step 19 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still blocking the workspace. The previous attempts to click 'Done' have been failing due to incorrect coordinate mapping. I need to click the 'Done' button at its correct location in the current screenshot to close the dialog and access the main interface for sketching.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:34:01,847 INFO api_agent/455] Step 19 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:34:01,847 INFO api_agent/455] Step 19 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:34:01,848 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:34:01,848 INFO api_agent/455] Step 19 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:34:01,848 INFO run_single/215] Step 19: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:34:01,848 INFO run_single/216] Step 19 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:34:01,848 INFO desktop_env/398] Step 19 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:34:06,427 INFO python/54] Got screenshot successfully
+[2026-10-19 17:34:06,431 INFO run_single/221] Step 19 result: reward=0 done=False info={} screenshot=step_19_20261019@173401848381.png
+[2026-10-19 17:34:07,828 INFO api_agent/455] Step 20 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. I need to click the 'Done' button to close it and access the main interface for creating a sketch.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:34:07,828 INFO api_agent/455] Step 20 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:34:07,828 INFO api_agent/455] Step 20 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:34:07,828 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:34:07,828 INFO api_agent/455] Step 20 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:34:07,828 INFO run_single/215] Step 20: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:34:07,828 INFO run_single/216] Step 20 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:34:07,828 INFO desktop_env/398] Step 20 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:34:11,696 INFO python/54] Got screenshot successfully
+[2026-10-19 17:34:11,698 INFO run_single/221] Step 20 result: reward=0 done=False info={} screenshot=step_20_20261019@173407828907.png
+[2026-10-19 17:34:12,966 INFO api_agent/455] Step 21 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. The previous attempts to click 'Done' used incorrect coordinates (likely mapped from a different resolution or misinterpreted). I need to click the 'Done' button at its correct location in the current screenshot to close it and access the main interface for creating a sketch.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:34:12,966 INFO api_agent/455] Step 21 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:34:12,966 INFO api_agent/455] Step 21 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:34:12,966 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:34:12,966 INFO api_agent/455] Step 21 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:34:12,966 INFO run_single/215] Step 21: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:34:12,966 INFO run_single/216] Step 21 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:34:12,966 INFO desktop_env/398] Step 21 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:34:19,470 INFO python/54] Got screenshot successfully
+[2026-10-19 17:34:19,471 INFO run_single/221] Step 21 result: reward=0 done=False info={} screenshot=step_21_20261019@173412966580.png
+[2026-10-19 17:34:20,509 INFO api_agent/455] Step 22 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. I need to click the 'Done' button to close it and access the main interface for creating a sketch.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:34:20,509 INFO api_agent/455] Step 22 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:34:20,509 INFO api_agent/455] Step 22 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:34:20,509 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:34:20,509 INFO api_agent/455] Step 22 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:34:20,509 INFO run_single/215] Step 22: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:34:20,509 INFO run_single/216] Step 22 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:34:20,510 INFO desktop_env/398] Step 22 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:34:27,463 INFO python/54] Got screenshot successfully
+[2026-10-19 17:34:27,464 INFO run_single/221] Step 22 result: reward=0 done=False info={} screenshot=step_22_20261019@173420509949.png
+[2026-10-19 17:34:28,791 INFO api_agent/455] Step 23 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. Previous attempts to click 'Done' have failed due to incorrect coordinate mapping. I need to click the 'Done' button at its correct location in the current screenshot to close the dialog and access the main interface for creating a sketch.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:34:28,791 INFO api_agent/455] Step 23 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:34:28,792 INFO api_agent/455] Step 23 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:34:28,793 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:34:28,793 INFO api_agent/455] Step 23 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:34:28,794 INFO run_single/215] Step 23: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:34:28,794 INFO run_single/216] Step 23 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:34:28,794 INFO desktop_env/398] Step 23 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:34:34,559 INFO python/54] Got screenshot successfully
+[2026-10-19 17:34:34,560 INFO run_single/221] Step 23 result: reward=0 done=False info={} screenshot=step_23_20261019@173428793979.png
+[2026-10-19 17:34:35,828 INFO api_agent/455] Step 24 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. The previous attempts to click 'Done' have failed due to incorrect coordinate mapping. I need to click the 'Done' button at its correct location in the current screenshot to close the dialog and access the main interface for sketching.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:34:35,828 INFO api_agent/455] Step 24 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:34:35,828 INFO api_agent/455] Step 24 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:34:35,829 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:34:35,829 INFO api_agent/455] Step 24 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:34:35,829 INFO run_single/215] Step 24: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:34:35,829 INFO run_single/216] Step 24 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:34:35,829 INFO desktop_env/398] Step 24 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:34:38,972 INFO python/54] Got screenshot successfully
+[2026-10-19 17:34:38,973 INFO run_single/221] Step 24 result: reward=0 done=False info={} screenshot=step_24_20261019@173435829251.png
+[2026-10-19 17:34:40,298 INFO api_agent/455] Step 25 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. The previous attempts to click 'Done' have been failing due to incorrect coordinate mapping. I need to click the 'Done' button at its correct location in the current screenshot to close the dialog and access the main interface for creating a sketch.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:34:40,298 INFO api_agent/455] Step 25 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:34:40,298 INFO api_agent/455] Step 25 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:34:40,299 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:34:40,299 INFO api_agent/455] Step 25 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:34:40,299 INFO run_single/215] Step 25: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:34:40,299 INFO run_single/216] Step 25 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:34:40,299 INFO desktop_env/398] Step 25 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:34:44,123 INFO python/54] Got screenshot successfully
+[2026-10-19 17:34:44,124 INFO run_single/221] Step 25 result: reward=0 done=False info={} screenshot=step_25_20261019@173440299345.png
+[2026-10-19 17:34:45,336 INFO api_agent/455] Step 26 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. The previous attempts to click 'Done' have been failing due to incorrect coordinate mapping. I need to click the 'Done' button at its correct location in the current screenshot to close the dialog and access the main interface for creating a sketch.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:34:45,337 INFO api_agent/455] Step 26 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:34:45,338 INFO api_agent/455] Step 26 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:34:45,338 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:34:45,339 INFO api_agent/455] Step 26 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:34:45,339 INFO run_single/215] Step 26: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:34:45,339 INFO run_single/216] Step 26 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:34:45,339 INFO desktop_env/398] Step 26 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:34:57,609 INFO python/54] Got screenshot successfully
+[2026-10-19 17:34:57,611 INFO run_single/221] Step 26 result: reward=0 done=False info={} screenshot=step_26_20261019@173445339275.png
+[2026-10-19 17:34:59,953 INFO api_agent/455] Step 27 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. Previous attempts to click 'Done' have failed due to incorrect coordinate mapping. I need to click the 'Done' button at its correct location in the current screenshot to close the dialog and access the main interface for creating a sketch.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:34:59,953 INFO api_agent/455] Step 27 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:34:59,953 INFO api_agent/455] Step 27 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:34:59,953 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:34:59,953 INFO api_agent/455] Step 27 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:34:59,953 INFO run_single/215] Step 27: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:34:59,953 INFO run_single/216] Step 27 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:34:59,953 INFO desktop_env/398] Step 27 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:07,732 INFO python/54] Got screenshot successfully
+[2026-10-19 17:35:07,734 INFO run_single/221] Step 27 result: reward=0 done=False info={} screenshot=step_27_20261019@173459953836.png
+[2026-10-19 17:35:09,097 INFO api_agent/455] Step 28 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. Previous attempts to click 'Done' used incorrect coordinates (likely mapped from a different resolution or misinterpreted). I need to click the 'Done' button at its correct location in the current screenshot to close the dialog and access the main interface for creating a sketch.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:35:09,097 INFO api_agent/455] Step 28 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:35:09,097 INFO api_agent/455] Step 28 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:35:09,097 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:35:09,097 INFO api_agent/455] Step 28 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:35:09,097 INFO run_single/215] Step 28: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:09,097 INFO run_single/216] Step 28 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:09,098 INFO desktop_env/398] Step 28 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:19,880 INFO python/54] Got screenshot successfully
+[2026-10-19 17:35:19,882 INFO run_single/221] Step 28 result: reward=0 done=False info={} screenshot=step_28_20261019@173509097869.png
+[2026-10-19 17:35:21,192 INFO api_agent/455] Step 29 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. Previous attempts to click 'Done' have failed due to incorrect coordinate mapping. I need to click the 'Done' button at its correct location in the current screenshot to close the dialog and access the main interface for creating a sketch.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:35:21,192 INFO api_agent/455] Step 29 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:35:21,192 INFO api_agent/455] Step 29 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:35:21,192 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:35:21,192 INFO api_agent/455] Step 29 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:35:21,192 INFO run_single/215] Step 29: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:21,192 INFO run_single/216] Step 29 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:21,192 INFO desktop_env/398] Step 29 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:27,045 INFO python/54] Got screenshot successfully
+[2026-10-19 17:35:27,046 INFO run_single/221] Step 29 result: reward=0 done=False info={} screenshot=step_29_20261019@173521192759.png
+[2026-10-19 17:35:28,449 INFO api_agent/455] Step 30 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. Previous attempts to click 'Done' used incorrect coordinates (likely mapped from a different resolution or misinterpreted). I need to click the 'Done' button at its correct location in the current screenshot to close the dialog and access the main interface for creating a sketch.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:35:28,449 INFO api_agent/455] Step 30 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:35:28,449 INFO api_agent/455] Step 30 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:35:28,449 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:35:28,449 INFO api_agent/455] Step 30 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:35:28,449 INFO run_single/215] Step 30: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:28,449 INFO run_single/216] Step 30 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:28,449 INFO desktop_env/398] Step 30 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:33,148 INFO python/54] Got screenshot successfully
+[2026-10-19 17:35:33,149 INFO run_single/221] Step 30 result: reward=0 done=False info={} screenshot=step_30_20261019@173528449738.png
+[2026-10-19 17:35:34,494 INFO api_agent/455] Step 31 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. Previous attempts to click 'Done' have failed due to incorrect coordinate mapping. I need to click the 'Done' button at its correct location in the current screenshot to close the dialog and access the main interface for creating a sketch.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:35:34,494 INFO api_agent/455] Step 31 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:35:34,494 INFO api_agent/455] Step 31 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:35:34,495 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:35:34,495 INFO api_agent/455] Step 31 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:35:34,495 INFO run_single/215] Step 31: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:34,495 INFO run_single/216] Step 31 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:34,495 INFO desktop_env/398] Step 31 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:37,325 INFO python/54] Got screenshot successfully
+[2026-10-19 17:35:37,326 INFO run_single/221] Step 31 result: reward=0 done=False info={} screenshot=step_31_20261019@173534495147.png
+[2026-10-19 17:35:38,501 INFO api_agent/455] Step 32 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still blocking the workspace. The previous attempts to click 'Done' failed due to incorrect coordinate mapping. I need to click the 'Done' button at its correct location in the current screenshot to close the dialog and access the main interface for creating a sketch.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:35:38,501 INFO api_agent/455] Step 32 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:35:38,501 INFO api_agent/455] Step 32 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:35:38,501 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:35:38,501 INFO api_agent/455] Step 32 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:35:38,501 INFO run_single/215] Step 32: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:38,501 INFO run_single/216] Step 32 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:38,501 INFO desktop_env/398] Step 32 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:41,466 INFO python/54] Got screenshot successfully
+[2026-10-19 17:35:41,468 INFO run_single/221] Step 32 result: reward=0 done=False info={} screenshot=step_32_20261019@173538501733.png
+[2026-10-19 17:35:43,109 INFO api_agent/455] Step 33 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. Previous attempts to click 'Done' used incorrect coordinates (likely mapped from a different resolution or misinterpreted). I need to click the 'Done' button at its correct location in the current screenshot to close the dialog and access the main interface for sketching.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:35:43,109 INFO api_agent/455] Step 33 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:35:43,109 INFO api_agent/455] Step 33 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:35:43,110 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:35:43,110 INFO api_agent/455] Step 33 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:35:43,110 INFO run_single/215] Step 33: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:43,110 INFO run_single/216] Step 33 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:43,110 INFO desktop_env/398] Step 33 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:47,297 INFO python/54] Got screenshot successfully
+[2026-10-19 17:35:47,298 INFO run_single/221] Step 33 result: reward=0 done=False info={} screenshot=step_33_20261019@173543110438.png
+[2026-10-19 17:35:48,442 INFO api_agent/455] Step 34 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. Previous attempts to click 'Done' have failed due to incorrect coordinate mapping (the model was sending coordinates that were likely misinterpreted or mapped incorrectly). I need to click the 'Done' button at its correct location in the current screenshot to close the dialog and access the main interface for sketching.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:35:48,442 INFO api_agent/455] Step 34 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:35:48,442 INFO api_agent/455] Step 34 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:35:48,442 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:35:48,442 INFO api_agent/455] Step 34 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:35:48,442 INFO run_single/215] Step 34: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:48,442 INFO run_single/216] Step 34 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:48,442 INFO desktop_env/398] Step 34 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:51,279 INFO python/54] Got screenshot successfully
+[2026-10-19 17:35:51,282 INFO run_single/221] Step 34 result: reward=0 done=False info={} screenshot=step_34_20261019@173548442920.png
+[2026-10-19 17:35:52,392 INFO api_agent/455] Step 35 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. Previous attempts to click 'Done' have failed due to incorrect coordinate mapping. I need to click the 'Done' button at its correct location in the current screenshot to close the dialog and access the main interface for sketching.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:35:52,392 INFO api_agent/455] Step 35 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:35:52,392 INFO api_agent/455] Step 35 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:35:52,392 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:35:52,392 INFO api_agent/455] Step 35 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:35:52,392 INFO run_single/215] Step 35: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:52,392 INFO run_single/216] Step 35 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:52,392 INFO desktop_env/398] Step 35 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:55,427 INFO python/54] Got screenshot successfully
+[2026-10-19 17:35:55,430 INFO run_single/221] Step 35 result: reward=0 done=False info={} screenshot=step_35_20261019@173552392630.png
+[2026-10-19 17:35:56,699 INFO api_agent/455] Step 36 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. The previous attempts to click 'Done' have failed due to incorrect coordinate mapping. I need to click the 'Done' button at its correct location in the current screenshot to close the dialog and access the main interface for sketching.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:35:56,699 INFO api_agent/455] Step 36 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:35:56,699 INFO api_agent/455] Step 36 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:35:56,699 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:35:56,699 INFO api_agent/455] Step 36 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:35:56,699 INFO run_single/215] Step 36: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:56,699 INFO run_single/216] Step 36 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:56,699 INFO desktop_env/398] Step 36 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:35:59,520 INFO python/54] Got screenshot successfully
+[2026-10-19 17:35:59,523 INFO run_single/221] Step 36 result: reward=0 done=False info={} screenshot=step_36_20261019@173556699706.png
+[2026-10-19 17:36:00,853 INFO api_agent/455] Step 37 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. Previous attempts to click 'Done' used incorrect coordinates. I need to click the 'Done' button at its correct location in the current screenshot to close the dialog and access the main interface for sketching.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:36:00,853 INFO api_agent/455] Step 37 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:36:00,853 INFO api_agent/455] Step 37 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:36:00,853 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:36:00,853 INFO api_agent/455] Step 37 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:36:00,853 INFO run_single/215] Step 37: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:00,853 INFO run_single/216] Step 37 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:00,853 INFO desktop_env/398] Step 37 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:05,307 INFO python/54] Got screenshot successfully
+[2026-10-19 17:36:05,311 INFO run_single/221] Step 37 result: reward=0 done=False info={} screenshot=step_37_20261019@173600853791.png
+[2026-10-19 17:36:06,726 INFO api_agent/455] Step 38 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. Previous attempts to click 'Done' have failed due to incorrect coordinate mapping (the model was sending coordinates that were likely misinterpreted or mapped incorrectly). I need to click the 'Done' button at its correct location in the current screenshot to close the dialog and access the main interface for sketching.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:36:06,727 INFO api_agent/455] Step 38 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:36:06,727 INFO api_agent/455] Step 38 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:36:06,727 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:36:06,727 INFO api_agent/455] Step 38 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:36:06,727 INFO run_single/215] Step 38: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:06,727 INFO run_single/216] Step 38 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:06,727 INFO desktop_env/398] Step 38 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:11,040 INFO python/54] Got screenshot successfully
+[2026-10-19 17:36:11,042 INFO run_single/221] Step 38 result: reward=0 done=False info={} screenshot=step_38_20261019@173606727522.png
+[2026-10-19 17:36:12,417 INFO api_agent/455] Step 39 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. The previous attempts to click 'Done' failed because the coordinates were likely not mapped correctly to the actual button position. I need to click the 'Done' button at its correct location in the current screenshot to close the dialog and access the main interface for sketching.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:36:12,418 INFO api_agent/455] Step 39 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:36:12,419 INFO api_agent/455] Step 39 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:36:12,420 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:36:12,420 INFO api_agent/455] Step 39 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:36:12,420 INFO run_single/215] Step 39: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:12,420 INFO run_single/216] Step 39 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:12,420 INFO desktop_env/398] Step 39 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:16,288 INFO python/54] Got screenshot successfully
+[2026-10-19 17:36:16,289 INFO run_single/221] Step 39 result: reward=0 done=False info={} screenshot=step_39_20261019@173612420390.png
+[2026-10-19 17:36:17,648 INFO api_agent/455] Step 40 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. Previous attempts to click 'Done' failed due to incorrect coordinate mapping. I need to click the 'Done' button at its correct location in the current screenshot to close the dialog and access the main interface for sketching.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:36:17,649 INFO api_agent/455] Step 40 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:36:17,649 INFO api_agent/455] Step 40 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:36:17,650 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:36:17,650 INFO api_agent/455] Step 40 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:36:17,650 INFO run_single/215] Step 40: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:17,650 INFO run_single/216] Step 40 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:17,650 INFO desktop_env/398] Step 40 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:23,531 INFO python/54] Got screenshot successfully
+[2026-10-19 17:36:23,533 INFO run_single/221] Step 40 result: reward=0 done=False info={} screenshot=step_40_20261019@173617650620.png
+[2026-10-19 17:36:25,129 INFO api_agent/455] Step 41 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still blocking the workspace. Previous attempts to click 'Done' have failed due to incorrect coordinate mapping. I need to click the 'Done' button at its correct location in the current screenshot to close the dialog and access the main interface for sketching.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:36:25,130 INFO api_agent/455] Step 41 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:36:25,130 INFO api_agent/455] Step 41 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:36:25,130 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:36:25,130 INFO api_agent/455] Step 41 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:36:25,130 INFO run_single/215] Step 41: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:25,130 INFO run_single/216] Step 41 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:25,130 INFO desktop_env/398] Step 41 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:33,815 INFO python/54] Got screenshot successfully
+[2026-10-19 17:36:33,817 INFO run_single/221] Step 41 result: reward=0 done=False info={} screenshot=step_41_20261019@173625130400.png
+[2026-10-19 17:36:35,745 INFO api_agent/455] Step 42 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. The previous attempts to click 'Done' have failed due to incorrect coordinate mapping (the model was sending coordinates that were likely misinterpreted or mapped incorrectly). I need to click the 'Done' button at its correct location in the current screenshot to close the dialog and access the main interface for sketching.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:36:35,746 INFO api_agent/455] Step 42 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:36:35,746 INFO api_agent/455] Step 42 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:36:35,747 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:36:35,747 INFO api_agent/455] Step 42 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:36:35,747 INFO run_single/215] Step 42: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:35,747 INFO run_single/216] Step 42 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:35,747 INFO desktop_env/398] Step 42 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:40,147 INFO python/54] Got screenshot successfully
+[2026-10-19 17:36:40,148 INFO run_single/221] Step 42 result: reward=0 done=False info={} screenshot=step_42_20261019@173635747284.png
+[2026-10-19 17:36:41,685 INFO api_agent/455] Step 43 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. The previous attempts to click 'Done' used incorrect coordinates (x=840, y=741) which mapped to x=1613, y=800 in the actual execution. Looking at the current screenshot, the 'Done' button is located at approximately x=840, y=741 in normalized coordinates. I need to try clicking it again with these correct coordinates.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:36:41,685 INFO api_agent/455] Step 43 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:36:41,685 INFO api_agent/455] Step 43 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:36:41,685 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:36:41,685 INFO api_agent/455] Step 43 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:36:41,686 INFO run_single/215] Step 43: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:41,686 INFO run_single/216] Step 43 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:41,686 INFO desktop_env/398] Step 43 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:45,659 INFO python/54] Got screenshot successfully
+[2026-10-19 17:36:45,660 INFO run_single/221] Step 43 result: reward=0 done=False info={} screenshot=step_43_20261019@173641686044.png
+[2026-10-19 17:36:47,005 INFO api_agent/455] Step 44 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. The previous attempts to click 'Done' used coordinates that were likely misinterpreted or mapped incorrectly. I need to click the 'Done' button at its correct location in the current screenshot to close the dialog and access the main interface for sketching.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:36:47,005 INFO api_agent/455] Step 44 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:36:47,005 INFO api_agent/455] Step 44 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:36:47,005 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:36:47,005 INFO api_agent/455] Step 44 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:36:47,005 INFO run_single/215] Step 44: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:47,005 INFO run_single/216] Step 44 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:47,005 INFO desktop_env/398] Step 44 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:50,403 INFO python/54] Got screenshot successfully
+[2026-10-19 17:36:50,404 INFO run_single/221] Step 44 result: reward=0 done=False info={} screenshot=step_44_20261019@173647005905.png
+[2026-10-19 17:36:51,451 INFO api_agent/455] Step 45 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. Previous attempts to click 'Done' have failed due to incorrect coordinate mapping. I need to click the 'Done' button at its correct location in the current screenshot to close the dialog and access the main interface for sketching.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:36:51,451 INFO api_agent/455] Step 45 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:36:51,451 INFO api_agent/455] Step 45 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:36:51,451 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:36:51,451 INFO api_agent/455] Step 45 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:36:51,451 INFO run_single/215] Step 45: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:51,451 INFO run_single/216] Step 45 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:51,452 INFO desktop_env/398] Step 45 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:54,465 INFO python/54] Got screenshot successfully
+[2026-10-19 17:36:54,466 INFO run_single/221] Step 45 result: reward=0 done=False info={} screenshot=step_45_20261019@173651451930.png
+[2026-10-19 17:36:56,928 INFO api_agent/455] Step 46 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. Previous attempts to click 'Done' used incorrect coordinates (x=840, y=741) which mapped to x=1613, y=800 in the actual execution. Looking at the current screenshot, the 'Done' button is located at approximately x=84% and y=74% of the screen width/height relative to the dialog box position. I need to click the 'Done' button at its correct location in the current screenshot to close the dialog and access the main interface for sketching.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:36:56,928 INFO api_agent/455] Step 46 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:36:56,928 INFO api_agent/455] Step 46 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:36:56,929 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:36:56,929 INFO api_agent/455] Step 46 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:36:56,929 INFO run_single/215] Step 46: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:56,929 INFO run_single/216] Step 46 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:56,929 INFO desktop_env/398] Step 46 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:36:59,420 INFO python/54] Got screenshot successfully
+[2026-10-19 17:36:59,424 INFO run_single/221] Step 46 result: reward=0 done=False info={} screenshot=step_46_20261019@173656929353.png
+[2026-10-19 17:37:00,808 INFO api_agent/455] Step 47 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. The previous attempts to click 'Done' failed because the coordinates were not mapped correctly. Looking at the current screenshot, the 'Done' button is located at the bottom right of the dialog box. I need to click this button to close the dialog and access the main interface for sketching.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:37:00,808 INFO api_agent/455] Step 47 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:37:00,808 INFO api_agent/455] Step 47 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:37:00,809 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:37:00,809 INFO api_agent/455] Step 47 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:37:00,809 INFO run_single/215] Step 47: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:37:00,809 INFO run_single/216] Step 47 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:37:00,809 INFO desktop_env/398] Step 47 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:37:03,097 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:03,098 INFO run_single/221] Step 47 result: reward=0 done=False info={} screenshot=step_47_20261019@173700809635.png
+[2026-10-19 17:37:04,391 INFO api_agent/455] Step 48 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. Previous attempts to click 'Done' failed because the coordinates were not mapped correctly. Looking at the current screenshot, the 'Done' button is located at the bottom right of the dialog box. I need to click it with correct normalized coordinates.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:37:04,391 INFO api_agent/455] Step 48 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:37:04,391 INFO api_agent/455] Step 48 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:37:04,391 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:37:04,391 INFO api_agent/455] Step 48 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:37:04,391 INFO run_single/215] Step 48: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:37:04,391 INFO run_single/216] Step 48 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:37:04,391 INFO desktop_env/398] Step 48 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:37:06,639 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:06,644 INFO run_single/221] Step 48 result: reward=0 done=False info={} screenshot=step_48_20261019@173704391671.png
+[2026-10-19 17:37:07,874 INFO api_agent/455] Step 49 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still open and blocking the workspace. Previous attempts to click 'Done' failed due to incorrect coordinate mapping. The 'Done' button is clearly visible at the bottom right of the dialog box. I need to click it with correct coordinates to close the dialog and access the main interface.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:37:07,875 INFO api_agent/455] Step 49 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:37:07,875 INFO api_agent/455] Step 49 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:37:07,875 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:37:07,875 INFO api_agent/455] Step 49 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:37:07,875 INFO run_single/215] Step 49: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:37:07,875 INFO run_single/216] Step 49 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:37:07,875 INFO desktop_env/398] Step 49 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:37:10,244 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:10,245 INFO run_single/221] Step 49 result: reward=0 done=False info={} screenshot=step_49_20261019@173707875485.png
+[2026-10-19 17:37:11,791 INFO api_agent/455] Step 50 raw model output: {
+  "reason": "The FreeCAD welcome dialog is still blocking the workspace. Previous attempts to click 'Done' failed due to incorrect coordinate mapping. Looking at the current screenshot, the 'Done' button is located at the bottom right of the dialog box. I need to click it with correct coordinates to close the dialog and access the main interface.",
+  "action": "pyautogui.click(x=840, y=741)"
+}
+[2026-10-19 17:37:11,791 INFO api_agent/455] Step 50 parsed model response action: pyautogui.click(x=840, y=741)
+[2026-10-19 17:37:11,791 INFO api_agent/455] Step 50 parsed model response actions: ['pyautogui.click(x=840, y=741)']
+[2026-10-19 17:37:11,791 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=840, y=741)'] -> ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:37:11,791 INFO api_agent/455] Step 50 sanitized executable actions: ['pyautogui.click(x=1613, y=800)']
+[2026-10-19 17:37:11,792 INFO run_single/215] Step 50: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:37:11,792 INFO run_single/216] Step 50 action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:37:11,792 INFO desktop_env/398] Step 50 in trajectory 0 with action: pyautogui.click(x=1613, y=800)
+[2026-10-19 17:37:14,756 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:14,758 INFO run_single/221] Step 50 result: reward=0 done=False info={} screenshot=step_50_20261019@173711791999.png
+[2026-10-19 17:37:14,763 WARNING api_agent/459] Step 51 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:14,763 INFO api_agent/455] Step 51 parsed model response action: WAIT
+[2026-10-19 17:37:14,763 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:14,763 INFO api_agent/455] Step 51 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:14,763 INFO run_single/215] Step 51: WAIT
+[2026-10-19 17:37:14,763 INFO run_single/216] Step 51 action: WAIT
+[2026-10-19 17:37:14,763 INFO desktop_env/398] Step 51 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:16,353 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:16,355 INFO run_single/221] Step 51 result: reward=0 done=False info={} screenshot=step_51_20261019@173714763444.png
+[2026-10-19 17:37:16,360 WARNING api_agent/459] Step 52 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:16,360 INFO api_agent/455] Step 52 parsed model response action: WAIT
+[2026-10-19 17:37:16,360 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:16,360 INFO api_agent/455] Step 52 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:16,361 INFO run_single/215] Step 52: WAIT
+[2026-10-19 17:37:16,361 INFO run_single/216] Step 52 action: WAIT
+[2026-10-19 17:37:16,361 INFO desktop_env/398] Step 52 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:17,964 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:17,965 INFO run_single/221] Step 52 result: reward=0 done=False info={} screenshot=step_52_20261019@173716361027.png
+[2026-10-19 17:37:17,971 WARNING api_agent/459] Step 53 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:17,971 INFO api_agent/455] Step 53 parsed model response action: WAIT
+[2026-10-19 17:37:17,971 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:17,971 INFO api_agent/455] Step 53 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:17,971 INFO run_single/215] Step 53: WAIT
+[2026-10-19 17:37:17,971 INFO run_single/216] Step 53 action: WAIT
+[2026-10-19 17:37:17,971 INFO desktop_env/398] Step 53 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:19,453 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:19,454 INFO run_single/221] Step 53 result: reward=0 done=False info={} screenshot=step_53_20261019@173717971538.png
+[2026-10-19 17:37:19,458 WARNING api_agent/459] Step 54 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:19,459 INFO api_agent/455] Step 54 parsed model response action: WAIT
+[2026-10-19 17:37:19,459 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:19,459 INFO api_agent/455] Step 54 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:19,459 INFO run_single/215] Step 54: WAIT
+[2026-10-19 17:37:19,459 INFO run_single/216] Step 54 action: WAIT
+[2026-10-19 17:37:19,459 INFO desktop_env/398] Step 54 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:20,942 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:20,943 INFO run_single/221] Step 54 result: reward=0 done=False info={} screenshot=step_54_20261019@173719459287.png
+[2026-10-19 17:37:20,948 WARNING api_agent/459] Step 55 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:20,948 INFO api_agent/455] Step 55 parsed model response action: WAIT
+[2026-10-19 17:37:20,949 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:20,949 INFO api_agent/455] Step 55 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:20,949 INFO run_single/215] Step 55: WAIT
+[2026-10-19 17:37:20,949 INFO run_single/216] Step 55 action: WAIT
+[2026-10-19 17:37:20,949 INFO desktop_env/398] Step 55 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:22,666 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:22,667 INFO run_single/221] Step 55 result: reward=0 done=False info={} screenshot=step_55_20261019@173720949373.png
+[2026-10-19 17:37:22,674 WARNING api_agent/459] Step 56 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:22,674 INFO api_agent/455] Step 56 parsed model response action: WAIT
+[2026-10-19 17:37:22,674 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:22,674 INFO api_agent/455] Step 56 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:22,674 INFO run_single/215] Step 56: WAIT
+[2026-10-19 17:37:22,674 INFO run_single/216] Step 56 action: WAIT
+[2026-10-19 17:37:22,675 INFO desktop_env/398] Step 56 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:24,219 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:24,220 INFO run_single/221] Step 56 result: reward=0 done=False info={} screenshot=step_56_20261019@173722674958.png
+[2026-10-19 17:37:24,224 WARNING api_agent/459] Step 57 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:24,224 INFO api_agent/455] Step 57 parsed model response action: WAIT
+[2026-10-19 17:37:24,225 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:24,225 INFO api_agent/455] Step 57 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:24,225 INFO run_single/215] Step 57: WAIT
+[2026-10-19 17:37:24,225 INFO run_single/216] Step 57 action: WAIT
+[2026-10-19 17:37:24,225 INFO desktop_env/398] Step 57 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:25,749 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:25,752 INFO run_single/221] Step 57 result: reward=0 done=False info={} screenshot=step_57_20261019@173724225162.png
+[2026-10-19 17:37:25,757 WARNING api_agent/459] Step 58 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:25,757 INFO api_agent/455] Step 58 parsed model response action: WAIT
+[2026-10-19 17:37:25,757 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:25,757 INFO api_agent/455] Step 58 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:25,757 INFO run_single/215] Step 58: WAIT
+[2026-10-19 17:37:25,757 INFO run_single/216] Step 58 action: WAIT
+[2026-10-19 17:37:25,757 INFO desktop_env/398] Step 58 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:27,315 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:27,316 INFO run_single/221] Step 58 result: reward=0 done=False info={} screenshot=step_58_20261019@173725757746.png
+[2026-10-19 17:37:27,323 WARNING api_agent/459] Step 59 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:27,323 INFO api_agent/455] Step 59 parsed model response action: WAIT
+[2026-10-19 17:37:27,323 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:27,323 INFO api_agent/455] Step 59 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:27,323 INFO run_single/215] Step 59: WAIT
+[2026-10-19 17:37:27,323 INFO run_single/216] Step 59 action: WAIT
+[2026-10-19 17:37:27,323 INFO desktop_env/398] Step 59 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:29,047 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:29,048 INFO run_single/221] Step 59 result: reward=0 done=False info={} screenshot=step_59_20261019@173727323687.png
+[2026-10-19 17:37:29,053 WARNING api_agent/459] Step 60 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:29,053 INFO api_agent/455] Step 60 parsed model response action: WAIT
+[2026-10-19 17:37:29,053 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:29,053 INFO api_agent/455] Step 60 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:29,053 INFO run_single/215] Step 60: WAIT
+[2026-10-19 17:37:29,053 INFO run_single/216] Step 60 action: WAIT
+[2026-10-19 17:37:29,053 INFO desktop_env/398] Step 60 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:30,795 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:30,797 INFO run_single/221] Step 60 result: reward=0 done=False info={} screenshot=step_60_20261019@173729053460.png
+[2026-10-19 17:37:30,801 WARNING api_agent/459] Step 61 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:30,801 INFO api_agent/455] Step 61 parsed model response action: WAIT
+[2026-10-19 17:37:30,801 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:30,801 INFO api_agent/455] Step 61 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:30,801 INFO run_single/215] Step 61: WAIT
+[2026-10-19 17:37:30,801 INFO run_single/216] Step 61 action: WAIT
+[2026-10-19 17:37:30,801 INFO desktop_env/398] Step 61 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:32,560 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:32,562 INFO run_single/221] Step 61 result: reward=0 done=False info={} screenshot=step_61_20261019@173730801866.png
+[2026-10-19 17:37:32,566 WARNING api_agent/459] Step 62 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:32,566 INFO api_agent/455] Step 62 parsed model response action: WAIT
+[2026-10-19 17:37:32,566 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:32,566 INFO api_agent/455] Step 62 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:32,566 INFO run_single/215] Step 62: WAIT
+[2026-10-19 17:37:32,566 INFO run_single/216] Step 62 action: WAIT
+[2026-10-19 17:37:32,566 INFO desktop_env/398] Step 62 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:34,314 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:34,315 INFO run_single/221] Step 62 result: reward=0 done=False info={} screenshot=step_62_20261019@173732566716.png
+[2026-10-19 17:37:34,320 WARNING api_agent/459] Step 63 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:34,320 INFO api_agent/455] Step 63 parsed model response action: WAIT
+[2026-10-19 17:37:34,320 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:34,320 INFO api_agent/455] Step 63 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:34,320 INFO run_single/215] Step 63: WAIT
+[2026-10-19 17:37:34,320 INFO run_single/216] Step 63 action: WAIT
+[2026-10-19 17:37:34,320 INFO desktop_env/398] Step 63 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:36,019 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:36,020 INFO run_single/221] Step 63 result: reward=0 done=False info={} screenshot=step_63_20261019@173734320926.png
+[2026-10-19 17:37:36,025 WARNING api_agent/459] Step 64 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:36,026 INFO api_agent/455] Step 64 parsed model response action: WAIT
+[2026-10-19 17:37:36,026 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:36,026 INFO api_agent/455] Step 64 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:36,026 INFO run_single/215] Step 64: WAIT
+[2026-10-19 17:37:36,026 INFO run_single/216] Step 64 action: WAIT
+[2026-10-19 17:37:36,026 INFO desktop_env/398] Step 64 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:37,662 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:37,664 INFO run_single/221] Step 64 result: reward=0 done=False info={} screenshot=step_64_20261019@173736026277.png
+[2026-10-19 17:37:37,669 WARNING api_agent/459] Step 65 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:37,669 INFO api_agent/455] Step 65 parsed model response action: WAIT
+[2026-10-19 17:37:37,669 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:37,670 INFO api_agent/455] Step 65 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:37,670 INFO run_single/215] Step 65: WAIT
+[2026-10-19 17:37:37,670 INFO run_single/216] Step 65 action: WAIT
+[2026-10-19 17:37:37,670 INFO desktop_env/398] Step 65 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:39,312 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:39,312 INFO run_single/221] Step 65 result: reward=0 done=False info={} screenshot=step_65_20261019@173737670198.png
+[2026-10-19 17:37:39,318 WARNING api_agent/459] Step 66 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:39,319 INFO api_agent/455] Step 66 parsed model response action: WAIT
+[2026-10-19 17:37:39,319 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:39,319 INFO api_agent/455] Step 66 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:39,319 INFO run_single/215] Step 66: WAIT
+[2026-10-19 17:37:39,319 INFO run_single/216] Step 66 action: WAIT
+[2026-10-19 17:37:39,319 INFO desktop_env/398] Step 66 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:41,337 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:41,370 INFO run_single/221] Step 66 result: reward=0 done=False info={} screenshot=step_66_20261019@173739319432.png
+[2026-10-19 17:37:41,393 WARNING api_agent/459] Step 67 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:41,393 INFO api_agent/455] Step 67 parsed model response action: WAIT
+[2026-10-19 17:37:41,393 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:41,393 INFO api_agent/455] Step 67 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:41,393 INFO run_single/215] Step 67: WAIT
+[2026-10-19 17:37:41,393 INFO run_single/216] Step 67 action: WAIT
+[2026-10-19 17:37:41,393 INFO desktop_env/398] Step 67 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:42,984 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:42,985 INFO run_single/221] Step 67 result: reward=0 done=False info={} screenshot=step_67_20261019@173741393741.png
+[2026-10-19 17:37:42,989 WARNING api_agent/459] Step 68 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:42,989 INFO api_agent/455] Step 68 parsed model response action: WAIT
+[2026-10-19 17:37:42,989 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:42,989 INFO api_agent/455] Step 68 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:42,989 INFO run_single/215] Step 68: WAIT
+[2026-10-19 17:37:42,989 INFO run_single/216] Step 68 action: WAIT
+[2026-10-19 17:37:42,989 INFO desktop_env/398] Step 68 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:44,680 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:44,693 INFO run_single/221] Step 68 result: reward=0 done=False info={} screenshot=step_68_20261019@173742989756.png
+[2026-10-19 17:37:44,724 WARNING api_agent/459] Step 69 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:44,725 INFO api_agent/455] Step 69 parsed model response action: WAIT
+[2026-10-19 17:37:44,725 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:44,725 INFO api_agent/455] Step 69 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:44,725 INFO run_single/215] Step 69: WAIT
+[2026-10-19 17:37:44,725 INFO run_single/216] Step 69 action: WAIT
+[2026-10-19 17:37:44,725 INFO desktop_env/398] Step 69 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:46,301 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:46,302 INFO run_single/221] Step 69 result: reward=0 done=False info={} screenshot=step_69_20261019@173744725383.png
+[2026-10-19 17:37:46,308 WARNING api_agent/459] Step 70 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:46,308 INFO api_agent/455] Step 70 parsed model response action: WAIT
+[2026-10-19 17:37:46,308 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:46,308 INFO api_agent/455] Step 70 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:46,308 INFO run_single/215] Step 70: WAIT
+[2026-10-19 17:37:46,308 INFO run_single/216] Step 70 action: WAIT
+[2026-10-19 17:37:46,308 INFO desktop_env/398] Step 70 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:47,906 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:47,907 INFO run_single/221] Step 70 result: reward=0 done=False info={} screenshot=step_70_20261019@173746308403.png
+[2026-10-19 17:37:47,911 WARNING api_agent/459] Step 71 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:47,911 INFO api_agent/455] Step 71 parsed model response action: WAIT
+[2026-10-19 17:37:47,911 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:47,911 INFO api_agent/455] Step 71 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:47,911 INFO run_single/215] Step 71: WAIT
+[2026-10-19 17:37:47,912 INFO run_single/216] Step 71 action: WAIT
+[2026-10-19 17:37:47,912 INFO desktop_env/398] Step 71 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:49,406 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:49,407 INFO run_single/221] Step 71 result: reward=0 done=False info={} screenshot=step_71_20261019@173747911965.png
+[2026-10-19 17:37:49,411 WARNING api_agent/459] Step 72 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:49,411 INFO api_agent/455] Step 72 parsed model response action: WAIT
+[2026-10-19 17:37:49,411 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:49,411 INFO api_agent/455] Step 72 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:49,411 INFO run_single/215] Step 72: WAIT
+[2026-10-19 17:37:49,411 INFO run_single/216] Step 72 action: WAIT
+[2026-10-19 17:37:49,411 INFO desktop_env/398] Step 72 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:50,917 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:50,918 INFO run_single/221] Step 72 result: reward=0 done=False info={} screenshot=step_72_20261019@173749411878.png
+[2026-10-19 17:37:50,922 WARNING api_agent/459] Step 73 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:50,923 INFO api_agent/455] Step 73 parsed model response action: WAIT
+[2026-10-19 17:37:50,923 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:50,923 INFO api_agent/455] Step 73 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:50,923 INFO run_single/215] Step 73: WAIT
+[2026-10-19 17:37:50,923 INFO run_single/216] Step 73 action: WAIT
+[2026-10-19 17:37:50,923 INFO desktop_env/398] Step 73 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:52,457 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:52,458 INFO run_single/221] Step 73 result: reward=0 done=False info={} screenshot=step_73_20261019@173750923228.png
+[2026-10-19 17:37:52,462 WARNING api_agent/459] Step 74 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:52,462 INFO api_agent/455] Step 74 parsed model response action: WAIT
+[2026-10-19 17:37:52,462 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:52,462 INFO api_agent/455] Step 74 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:52,462 INFO run_single/215] Step 74: WAIT
+[2026-10-19 17:37:52,462 INFO run_single/216] Step 74 action: WAIT
+[2026-10-19 17:37:52,462 INFO desktop_env/398] Step 74 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:53,936 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:53,937 INFO run_single/221] Step 74 result: reward=0 done=False info={} screenshot=step_74_20261019@173752462679.png
+[2026-10-19 17:37:53,942 WARNING api_agent/459] Step 75 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:53,942 INFO api_agent/455] Step 75 parsed model response action: WAIT
+[2026-10-19 17:37:53,942 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:53,942 INFO api_agent/455] Step 75 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:53,942 INFO run_single/215] Step 75: WAIT
+[2026-10-19 17:37:53,942 INFO run_single/216] Step 75 action: WAIT
+[2026-10-19 17:37:53,942 INFO desktop_env/398] Step 75 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:55,624 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:55,625 INFO run_single/221] Step 75 result: reward=0 done=False info={} screenshot=step_75_20261019@173753942452.png
+[2026-10-19 17:37:55,629 WARNING api_agent/459] Step 76 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:55,630 INFO api_agent/455] Step 76 parsed model response action: WAIT
+[2026-10-19 17:37:55,630 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:55,630 INFO api_agent/455] Step 76 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:55,630 INFO run_single/215] Step 76: WAIT
+[2026-10-19 17:37:55,630 INFO run_single/216] Step 76 action: WAIT
+[2026-10-19 17:37:55,630 INFO desktop_env/398] Step 76 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:57,328 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:57,329 INFO run_single/221] Step 76 result: reward=0 done=False info={} screenshot=step_76_20261019@173755630270.png
+[2026-10-19 17:37:57,333 WARNING api_agent/459] Step 77 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:57,334 INFO api_agent/455] Step 77 parsed model response action: WAIT
+[2026-10-19 17:37:57,334 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:57,334 INFO api_agent/455] Step 77 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:57,334 INFO run_single/215] Step 77: WAIT
+[2026-10-19 17:37:57,334 INFO run_single/216] Step 77 action: WAIT
+[2026-10-19 17:37:57,334 INFO desktop_env/398] Step 77 in trajectory 0 with action: WAIT
+[2026-10-19 17:37:58,978 INFO python/54] Got screenshot successfully
+[2026-10-19 17:37:58,979 INFO run_single/221] Step 77 result: reward=0 done=False info={} screenshot=step_77_20261019@173757334223.png
+[2026-10-19 17:37:58,984 WARNING api_agent/459] Step 78 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:37:58,984 INFO api_agent/455] Step 78 parsed model response action: WAIT
+[2026-10-19 17:37:58,984 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:37:58,984 INFO api_agent/455] Step 78 sanitized executable actions: ['WAIT']
+[2026-10-19 17:37:58,984 INFO run_single/215] Step 78: WAIT
+[2026-10-19 17:37:58,984 INFO run_single/216] Step 78 action: WAIT
+[2026-10-19 17:37:58,984 INFO desktop_env/398] Step 78 in trajectory 0 with action: WAIT
+[2026-10-19 17:38:00,665 INFO python/54] Got screenshot successfully
+[2026-10-19 17:38:00,666 INFO run_single/221] Step 78 result: reward=0 done=False info={} screenshot=step_78_20261019@173758984403.png
+[2026-10-19 17:38:00,670 WARNING api_agent/459] Step 79 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:38:00,670 INFO api_agent/455] Step 79 parsed model response action: WAIT
+[2026-10-19 17:38:00,670 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:38:00,670 INFO api_agent/455] Step 79 sanitized executable actions: ['WAIT']
+[2026-10-19 17:38:00,670 INFO run_single/215] Step 79: WAIT
+[2026-10-19 17:38:00,670 INFO run_single/216] Step 79 action: WAIT
+[2026-10-19 17:38:00,670 INFO desktop_env/398] Step 79 in trajectory 0 with action: WAIT
+[2026-10-19 17:38:02,353 INFO python/54] Got screenshot successfully
+[2026-10-19 17:38:02,354 INFO run_single/221] Step 79 result: reward=0 done=False info={} screenshot=step_79_20261019@173800670779.png
+[2026-10-19 17:38:02,358 WARNING api_agent/459] Step 80 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:38:02,358 INFO api_agent/455] Step 80 parsed model response action: WAIT
+[2026-10-19 17:38:02,358 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:38:02,358 INFO api_agent/455] Step 80 sanitized executable actions: ['WAIT']
+[2026-10-19 17:38:02,358 INFO run_single/215] Step 80: WAIT
+[2026-10-19 17:38:02,358 INFO run_single/216] Step 80 action: WAIT
+[2026-10-19 17:38:02,358 INFO desktop_env/398] Step 80 in trajectory 0 with action: WAIT
+[2026-10-19 17:38:03,997 INFO python/54] Got screenshot successfully
+[2026-10-19 17:38:03,998 INFO run_single/221] Step 80 result: reward=0 done=False info={} screenshot=step_80_20261019@173802358771.png
+[2026-10-19 17:38:04,002 WARNING api_agent/459] Step 81 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:38:04,002 INFO api_agent/455] Step 81 parsed model response action: WAIT
+[2026-10-19 17:38:04,002 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:38:04,002 INFO api_agent/455] Step 81 sanitized executable actions: ['WAIT']
+[2026-10-19 17:38:04,002 INFO run_single/215] Step 81: WAIT
+[2026-10-19 17:38:04,002 INFO run_single/216] Step 81 action: WAIT
+[2026-10-19 17:38:04,002 INFO desktop_env/398] Step 81 in trajectory 0 with action: WAIT
+[2026-10-19 17:38:05,664 INFO python/54] Got screenshot successfully
+[2026-10-19 17:38:05,665 INFO run_single/221] Step 81 result: reward=0 done=False info={} screenshot=step_81_20261019@173804002666.png
+[2026-10-19 17:38:05,669 WARNING api_agent/459] Step 82 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:38:05,670 INFO api_agent/455] Step 82 parsed model response action: WAIT
+[2026-10-19 17:38:05,670 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:38:05,670 INFO api_agent/455] Step 82 sanitized executable actions: ['WAIT']
+[2026-10-19 17:38:05,670 INFO run_single/215] Step 82: WAIT
+[2026-10-19 17:38:05,670 INFO run_single/216] Step 82 action: WAIT
+[2026-10-19 17:38:05,670 INFO desktop_env/398] Step 82 in trajectory 0 with action: WAIT
+[2026-10-19 17:38:07,191 INFO python/54] Got screenshot successfully
+[2026-10-19 17:38:07,192 INFO run_single/221] Step 82 result: reward=0 done=False info={} screenshot=step_82_20261019@173805670194.png
+[2026-10-19 17:38:07,197 WARNING api_agent/459] Step 83 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:38:07,198 INFO api_agent/455] Step 83 parsed model response action: WAIT
+[2026-10-19 17:38:07,198 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:38:07,198 INFO api_agent/455] Step 83 sanitized executable actions: ['WAIT']
+[2026-10-19 17:38:07,198 INFO run_single/215] Step 83: WAIT
+[2026-10-19 17:38:07,198 INFO run_single/216] Step 83 action: WAIT
+[2026-10-19 17:38:07,198 INFO desktop_env/398] Step 83 in trajectory 0 with action: WAIT
+[2026-10-19 17:38:08,704 INFO python/54] Got screenshot successfully
+[2026-10-19 17:38:08,705 INFO run_single/221] Step 83 result: reward=0 done=False info={} screenshot=step_83_20261019@173807198221.png
+[2026-10-19 17:38:08,709 WARNING api_agent/459] Step 84 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:38:08,709 INFO api_agent/455] Step 84 parsed model response action: WAIT
+[2026-10-19 17:38:08,709 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:38:08,709 INFO api_agent/455] Step 84 sanitized executable actions: ['WAIT']
+[2026-10-19 17:38:08,709 INFO run_single/215] Step 84: WAIT
+[2026-10-19 17:38:08,709 INFO run_single/216] Step 84 action: WAIT
+[2026-10-19 17:38:08,709 INFO desktop_env/398] Step 84 in trajectory 0 with action: WAIT
+[2026-10-19 17:38:10,206 INFO python/54] Got screenshot successfully
+[2026-10-19 17:38:10,207 INFO run_single/221] Step 84 result: reward=0 done=False info={} screenshot=step_84_20261019@173808709334.png
+[2026-10-19 17:38:10,211 WARNING api_agent/459] Step 85 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:38:10,211 INFO api_agent/455] Step 85 parsed model response action: WAIT
+[2026-10-19 17:38:10,211 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:38:10,212 INFO api_agent/455] Step 85 sanitized executable actions: ['WAIT']
+[2026-10-19 17:38:10,212 INFO run_single/215] Step 85: WAIT
+[2026-10-19 17:38:10,212 INFO run_single/216] Step 85 action: WAIT
+[2026-10-19 17:38:10,212 INFO desktop_env/398] Step 85 in trajectory 0 with action: WAIT
+[2026-10-19 17:38:11,717 INFO python/54] Got screenshot successfully
+[2026-10-19 17:38:11,718 INFO run_single/221] Step 85 result: reward=0 done=False info={} screenshot=step_85_20261019@173810212054.png
+[2026-10-19 17:38:11,722 WARNING api_agent/459] Step 86 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:38:11,723 INFO api_agent/455] Step 86 parsed model response action: WAIT
+[2026-10-19 17:38:11,723 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:38:11,723 INFO api_agent/455] Step 86 sanitized executable actions: ['WAIT']
+[2026-10-19 17:38:11,723 INFO run_single/215] Step 86: WAIT
+[2026-10-19 17:38:11,723 INFO run_single/216] Step 86 action: WAIT
+[2026-10-19 17:38:11,723 INFO desktop_env/398] Step 86 in trajectory 0 with action: WAIT
+[2026-10-19 17:38:13,223 INFO python/54] Got screenshot successfully
+[2026-10-19 17:38:13,224 INFO run_single/221] Step 86 result: reward=0 done=False info={} screenshot=step_86_20261019@173811723428.png
+[2026-10-19 17:38:13,228 WARNING api_agent/459] Step 87 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:38:13,228 INFO api_agent/455] Step 87 parsed model response action: WAIT
+[2026-10-19 17:38:13,229 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:38:13,229 INFO api_agent/455] Step 87 sanitized executable actions: ['WAIT']
+[2026-10-19 17:38:13,229 INFO run_single/215] Step 87: WAIT
+[2026-10-19 17:38:13,229 INFO run_single/216] Step 87 action: WAIT
+[2026-10-19 17:38:13,229 INFO desktop_env/398] Step 87 in trajectory 0 with action: WAIT
+[2026-10-19 17:38:14,707 INFO python/54] Got screenshot successfully
+[2026-10-19 17:38:14,708 INFO run_single/221] Step 87 result: reward=0 done=False info={} screenshot=step_87_20261019@173813229141.png
+[2026-10-19 17:38:14,713 WARNING api_agent/459] Step 88 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:38:14,713 INFO api_agent/455] Step 88 parsed model response action: WAIT
+[2026-10-19 17:38:14,713 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:38:14,713 INFO api_agent/455] Step 88 sanitized executable actions: ['WAIT']
+[2026-10-19 17:38:14,713 INFO run_single/215] Step 88: WAIT
+[2026-10-19 17:38:14,713 INFO run_single/216] Step 88 action: WAIT
+[2026-10-19 17:38:14,713 INFO desktop_env/398] Step 88 in trajectory 0 with action: WAIT
+[2026-10-19 17:38:16,198 INFO python/54] Got screenshot successfully
+[2026-10-19 17:38:16,199 INFO run_single/221] Step 88 result: reward=0 done=False info={} screenshot=step_88_20261019@173814713342.png
+[2026-10-19 17:38:16,203 WARNING api_agent/459] Step 89 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:38:16,203 INFO api_agent/455] Step 89 parsed model response action: WAIT
+[2026-10-19 17:38:16,203 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:38:16,203 INFO api_agent/455] Step 89 sanitized executable actions: ['WAIT']
+[2026-10-19 17:38:16,203 INFO run_single/215] Step 89: WAIT
+[2026-10-19 17:38:16,203 INFO run_single/216] Step 89 action: WAIT
+[2026-10-19 17:38:16,203 INFO desktop_env/398] Step 89 in trajectory 0 with action: WAIT
+[2026-10-19 17:38:17,856 INFO python/54] Got screenshot successfully
+[2026-10-19 17:38:17,857 INFO run_single/221] Step 89 result: reward=0 done=False info={} screenshot=step_89_20261019@173816203763.png
+[2026-10-19 17:38:17,862 WARNING api_agent/459] Step 90 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:38:17,862 INFO api_agent/455] Step 90 parsed model response action: WAIT
+[2026-10-19 17:38:17,862 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:38:17,862 INFO api_agent/455] Step 90 sanitized executable actions: ['WAIT']
+[2026-10-19 17:38:17,862 INFO run_single/215] Step 90: WAIT
+[2026-10-19 17:38:17,862 INFO run_single/216] Step 90 action: WAIT
+[2026-10-19 17:38:17,862 INFO desktop_env/398] Step 90 in trajectory 0 with action: WAIT
+[2026-10-19 17:38:19,511 INFO python/54] Got screenshot successfully
+[2026-10-19 17:38:19,514 INFO run_single/221] Step 90 result: reward=0 done=False info={} screenshot=step_90_20261019@173817862304.png
+[2026-10-19 17:38:19,518 WARNING api_agent/459] Step 91 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:38:19,518 INFO api_agent/455] Step 91 parsed model response action: WAIT
+[2026-10-19 17:38:19,518 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:38:19,518 INFO api_agent/455] Step 91 sanitized executable actions: ['WAIT']
+[2026-10-19 17:38:19,518 INFO run_single/215] Step 91: WAIT
+[2026-10-19 17:38:19,518 INFO run_single/216] Step 91 action: WAIT
+[2026-10-19 17:38:19,518 INFO desktop_env/398] Step 91 in trajectory 0 with action: WAIT
+[2026-10-19 17:38:21,152 INFO python/54] Got screenshot successfully
+[2026-10-19 17:38:21,153 INFO run_single/221] Step 91 result: reward=0 done=False info={} screenshot=step_91_20261019@173819518876.png
+[2026-10-19 17:38:21,157 WARNING api_agent/459] Step 92 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:38:21,158 INFO api_agent/455] Step 92 parsed model response action: WAIT
+[2026-10-19 17:38:21,158 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:38:21,158 INFO api_agent/455] Step 92 sanitized executable actions: ['WAIT']
+[2026-10-19 17:38:21,158 INFO run_single/215] Step 92: WAIT
+[2026-10-19 17:38:21,158 INFO run_single/216] Step 92 action: WAIT
+[2026-10-19 17:38:21,158 INFO desktop_env/398] Step 92 in trajectory 0 with action: WAIT
+[2026-10-19 17:38:22,822 INFO python/54] Got screenshot successfully
+[2026-10-19 17:38:22,823 INFO run_single/221] Step 92 result: reward=0 done=False info={} screenshot=step_92_20261019@173821158247.png
+[2026-10-19 17:38:22,827 WARNING api_agent/459] Step 93 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:38:22,828 INFO api_agent/455] Step 93 parsed model response action: WAIT
+[2026-10-19 17:38:22,828 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:38:22,828 INFO api_agent/455] Step 93 sanitized executable actions: ['WAIT']
+[2026-10-19 17:38:22,828 INFO run_single/215] Step 93: WAIT
+[2026-10-19 17:38:22,828 INFO run_single/216] Step 93 action: WAIT
+[2026-10-19 17:38:22,828 INFO desktop_env/398] Step 93 in trajectory 0 with action: WAIT
+[2026-10-19 17:38:24,459 INFO python/54] Got screenshot successfully
+[2026-10-19 17:38:24,460 INFO run_single/221] Step 93 result: reward=0 done=False info={} screenshot=step_93_20261019@173822828165.png
+[2026-10-19 17:38:24,464 WARNING api_agent/459] Step 94 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:38:24,464 INFO api_agent/455] Step 94 parsed model response action: WAIT
+[2026-10-19 17:38:24,464 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:38:24,464 INFO api_agent/455] Step 94 sanitized executable actions: ['WAIT']
+[2026-10-19 17:38:24,464 INFO run_single/215] Step 94: WAIT
+[2026-10-19 17:38:24,464 INFO run_single/216] Step 94 action: WAIT
+[2026-10-19 17:38:24,464 INFO desktop_env/398] Step 94 in trajectory 0 with action: WAIT
+[2026-10-19 17:38:26,095 INFO python/54] Got screenshot successfully
+[2026-10-19 17:38:26,097 INFO run_single/221] Step 94 result: reward=0 done=False info={} screenshot=step_94_20261019@173824464891.png
+[2026-10-19 17:38:26,101 WARNING api_agent/459] Step 95 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:38:26,101 INFO api_agent/455] Step 95 parsed model response action: WAIT
+[2026-10-19 17:38:26,101 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:38:26,101 INFO api_agent/455] Step 95 sanitized executable actions: ['WAIT']
+[2026-10-19 17:38:26,102 INFO run_single/215] Step 95: WAIT
+[2026-10-19 17:38:26,102 INFO run_single/216] Step 95 action: WAIT
+[2026-10-19 17:38:26,102 INFO desktop_env/398] Step 95 in trajectory 0 with action: WAIT
+[2026-10-19 17:38:27,851 INFO python/54] Got screenshot successfully
+[2026-10-19 17:38:27,852 INFO run_single/221] Step 95 result: reward=0 done=False info={} screenshot=step_95_20261019@173826102009.png
+[2026-10-19 17:38:27,857 WARNING api_agent/459] Step 96 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:38:27,857 INFO api_agent/455] Step 96 parsed model response action: WAIT
+[2026-10-19 17:38:27,857 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:38:27,857 INFO api_agent/455] Step 96 sanitized executable actions: ['WAIT']
+[2026-10-19 17:38:27,857 INFO run_single/215] Step 96: WAIT
+[2026-10-19 17:38:27,857 INFO run_single/216] Step 96 action: WAIT
+[2026-10-19 17:38:27,857 INFO desktop_env/398] Step 96 in trajectory 0 with action: WAIT
+[2026-10-19 17:38:29,361 INFO python/54] Got screenshot successfully
+[2026-10-19 17:38:29,364 INFO run_single/221] Step 96 result: reward=0 done=False info={} screenshot=step_96_20261019@173827857745.png
+[2026-10-19 17:38:29,369 WARNING api_agent/459] Step 97 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:38:29,369 INFO api_agent/455] Step 97 parsed model response action: WAIT
+[2026-10-19 17:38:29,369 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:38:29,369 INFO api_agent/455] Step 97 sanitized executable actions: ['WAIT']
+[2026-10-19 17:38:29,369 INFO run_single/215] Step 97: WAIT
+[2026-10-19 17:38:29,369 INFO run_single/216] Step 97 action: WAIT
+[2026-10-19 17:38:29,369 INFO desktop_env/398] Step 97 in trajectory 0 with action: WAIT
+[2026-10-19 17:38:30,857 INFO python/54] Got screenshot successfully
+[2026-10-19 17:38:30,858 INFO run_single/221] Step 97 result: reward=0 done=False info={} screenshot=step_97_20261019@173829369345.png
+[2026-10-19 17:38:30,862 WARNING api_agent/459] Step 98 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:38:30,862 INFO api_agent/455] Step 98 parsed model response action: WAIT
+[2026-10-19 17:38:30,862 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:38:30,862 INFO api_agent/455] Step 98 sanitized executable actions: ['WAIT']
+[2026-10-19 17:38:30,863 INFO run_single/215] Step 98: WAIT
+[2026-10-19 17:38:30,863 INFO run_single/216] Step 98 action: WAIT
+[2026-10-19 17:38:30,863 INFO desktop_env/398] Step 98 in trajectory 0 with action: WAIT
+[2026-10-19 17:38:32,410 INFO python/54] Got screenshot successfully
+[2026-10-19 17:38:32,411 INFO run_single/221] Step 98 result: reward=0 done=False info={} screenshot=step_98_20261019@173830863007.png
+[2026-10-19 17:38:32,419 WARNING api_agent/459] Step 99 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:38:32,420 INFO api_agent/455] Step 99 parsed model response action: WAIT
+[2026-10-19 17:38:32,420 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:38:32,420 INFO api_agent/455] Step 99 sanitized executable actions: ['WAIT']
+[2026-10-19 17:38:32,420 INFO run_single/215] Step 99: WAIT
+[2026-10-19 17:38:32,420 INFO run_single/216] Step 99 action: WAIT
+[2026-10-19 17:38:32,420 INFO desktop_env/398] Step 99 in trajectory 0 with action: WAIT
+[2026-10-19 17:38:33,913 INFO python/54] Got screenshot successfully
+[2026-10-19 17:38:33,914 INFO run_single/221] Step 99 result: reward=0 done=False info={} screenshot=step_99_20261019@173832420232.png
+[2026-10-19 17:38:33,918 WARNING api_agent/459] Step 100 model call failed for openai-compatible/qwen3.6-35b-a3b: batch circuit open or unresolved request
+[2026-10-19 17:38:33,918 INFO api_agent/455] Step 100 parsed model response action: WAIT
+[2026-10-19 17:38:33,918 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['WAIT'] -> ['WAIT']
+[2026-10-19 17:38:33,918 INFO api_agent/455] Step 100 sanitized executable actions: ['WAIT']
+[2026-10-19 17:38:33,918 INFO run_single/215] Step 100: WAIT
+[2026-10-19 17:38:33,918 INFO run_single/216] Step 100 action: WAIT
+[2026-10-19 17:38:33,918 INFO desktop_env/398] Step 100 in trajectory 0 with action: WAIT
+[2026-10-19 17:38:35,408 INFO python/54] Got screenshot successfully
+[2026-10-19 17:38:35,409 INFO run_single/221] Step 100 result: reward=0 done=False info={} screenshot=step_100_20261019@173833918627.png
+[2026-10-19 17:38:37,413 INFO setup/71] try to connect http://127.0.0.1:15010
+[2026-10-19 17:38:37,887 ERROR python/126] Failed to get file. Status code: 404
+[2026-10-19 17:38:37,888 INFO python/127] Retrying to get file.
+[2026-10-19 17:38:42,910 ERROR python/126] Failed to get file. Status code: 404
+[2026-10-19 17:38:42,910 INFO python/127] Retrying to get file.
+[2026-10-19 17:38:47,937 ERROR python/126] Failed to get file. Status code: 404
+[2026-10-19 17:38:47,938 INFO python/127] Retrying to get file.
+[2026-10-19 17:38:52,942 ERROR python/133] Failed to get file.
+[2026-10-19 17:38:52,942 ERROR freecad_sketch/250] Failed to download FCStd file: /home/user/Unnamed.FCStd
+[2026-10-19 17:38:52,942 INFO run_single/252] Evaluation result: 0.000
+[2026-10-19 17:38:52,960 ERROR python/126] Failed to get file. Status code: 404
+[2026-10-19 17:38:52,960 INFO python/127] Retrying to get file.
+[2026-10-19 17:38:57,987 ERROR python/126] Failed to get file. Status code: 404
+[2026-10-19 17:38:57,989 INFO python/127] Retrying to get file.
+[2026-10-19 17:39:03,010 ERROR python/126] Failed to get file. Status code: 404
+[2026-10-19 17:39:03,010 INFO python/127] Retrying to get file.
+[2026-10-19 17:39:08,015 ERROR python/133] Failed to get file.
+[2026-10-19 17:39:08,017 WARNING run_single/138] Generated FCStd not found in VM at /home/user/Unnamed.FCStd
+[2026-10-19 17:39:08,065 INFO run_single/164] Diagnostics written to /Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_gui/success_gui_qwen36_100_001/freecad-sketch-061/evaluation.json (failure_class=no_output_file)

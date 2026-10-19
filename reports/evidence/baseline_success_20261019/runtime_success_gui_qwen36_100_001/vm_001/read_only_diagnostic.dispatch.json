@@ -1,0 +1,13 @@
+{
+  "classification": "at_most_once_dispatch_audit",
+  "payload_policy": "digest only; action text remains in original agent trajectory",
+  "source_sha256": "ab4727a6ace6edde902dfc72fcc66f58bf69df67e5d8d08adf613b762731e59d",
+  "rows": [
+    {
+      "execution_id": "readonly-gui-liveness-001",
+      "state": "complete",
+      "payload_sha256": "62c9bee6cf8817850f10747b71f9735f115939592cae5f916b0b67ab7e2c5646",
+      "payload_excluded": true
+    }
+  ]
+}

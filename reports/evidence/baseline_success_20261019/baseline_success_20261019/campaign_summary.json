@@ -1,0 +1,2353 @@
+{
+  "classification": "single_task_baseline_continuation",
+  "cadworld_commit": "e5d0ebab8bd28da6e98c68c61db05747d1647f7b",
+  "run_source_provenance": {
+    "parent_commit": "ea2a4b1c553b1ab06d3be560593160a33729e3df",
+    "dirty_worktree_at_runtime": true,
+    "actual_source": "per-run source_snapshot/INDEX.json; captured before each first model request"
+  },
+  "protocol": "exploratory_tcg",
+  "episodes": [
+    {
+      "task_id": "freecad-sketch-061",
+      "kind": "cli",
+      "protocol": "exploratory_tcg",
+      "status": "EVALUATED",
+      "strict": 1.0,
+      "strict_unavailable_reason": null,
+      "upstream_raw_score": 1.0,
+      "diagnostics_present": true,
+      "trajectory_rows": 28,
+      "termination": "finish",
+      "model_calls": 14,
+      "output_tokens": 5823,
+      "known_output_tokens": 5823,
+      "input_tokens": 75539,
+      "atomic_gui_actions": null,
+      "atomic_gui_actions_reason": "not instrumented; action code may contain multiple calls",
+      "artifacts": [
+        {
+          "name": "freecad-sketch-061.FCStd",
+          "bytes": 3463,
+          "sha256": "3ae807fd800ef3c8da1a89362c52f8c902cda50b76ccc870a5dd7cc4eb93a8eb",
+          "native_zip_document_present": true,
+          "freecad_reopen_verified": null,
+          "parametric_history_verified": null
+        }
+      ],
+      "artifact_count": 1,
+      "note": "ZIP integrity is not evidence of FreeCAD reopen, geometry validity, or editable feature history.",
+      "run_id": "success_cli_qwen36_001",
+      "model": "qwen3.6-35b-a3b",
+      "thinking": false,
+      "coordinate_contract": null,
+      "coordinate_history_protocol": null,
+      "evidence_directory": "results/official_cli/success_cli_qwen36_001/freecad-sketch-061",
+      "controller_ready_seconds": 102.135,
+      "gui_ready_seconds": 99.197,
+      "vm_stopped": true,
+      "failure_class": "pass",
+      "stages": {
+        "completion": {
+          "ok": true,
+          "termination": "done",
+          "claimed_done": true,
+          "steps": 15,
+          "error_type": null,
+          "available": true
+        },
+        "file_saved": {
+          "ok": true
+        },
+        "file_valid": {
+          "ok": true
+        },
+        "precondition": {
+          "required": false,
+          "applicable": false,
+          "checkable": false,
+          "ok": null
+        },
+        "structure": {
+          "ok": true,
+          "n_checks": 4,
+          "units": [
+            {
+              "ok": true,
+              "n_checks": 4,
+              "checks": {
+                "entity_counts": true,
+                "entities_matched": true,
+                "extra_geometry": true,
+                "units": true
+              }
+            }
+          ]
+        },
+        "geometry": {
+          "ok": true,
+          "n_checks": 1,
+          "units": [
+            {
+              "ok": true,
+              "n_checks": 1,
+              "checks": {
+                "profiles": true
+              },
+              "profile_reports": []
+            }
+          ]
+        },
+        "process": {
+          "ok": true,
+          "n_checks": 3,
+          "units": [
+            {
+              "ok": true,
+              "n_checks": 3,
+              "checks": {
+                "relations": true,
+                "fully_constrained": true,
+                "solver_status": true
+              },
+              "failed_relations": []
+            }
+          ]
+        },
+        "strict": {
+          "ok": true,
+          "score": 1.0
+        }
+      },
+      "agent_seconds": 140.134,
+      "task_seconds": 158.945,
+      "terminal_calls": 13,
+      "turns": 14,
+      "execution_ledger_states": {
+        "controller_dispatch": {
+          "complete": 13
+        },
+        "gui_startup": {
+          "complete": 2
+        }
+      },
+      "host_log_span_seconds": 382.713,
+      "wall_note": "includes boot/evaluation; not provider latency"
+    },
+    {
+      "task_id": "freecad-sketch-061",
+      "kind": "gui",
+      "protocol": "exploratory_tcg",
+      "status": "EVALUATED",
+      "strict": 0.0,
+      "strict_unavailable_reason": null,
+      "upstream_raw_score": 0.0,
+      "diagnostics_present": true,
+      "trajectory_rows": 29,
+      "termination": null,
+      "model_calls": 25,
+      "output_tokens": 2393,
+      "known_output_tokens": 2393,
+      "input_tokens": 88650,
+      "atomic_gui_actions": null,
+      "atomic_gui_actions_reason": "not instrumented; action code may contain multiple calls",
+      "artifacts": [],
+      "artifact_count": 0,
+      "note": "ZIP integrity is not evidence of FreeCAD reopen, geometry validity, or editable feature history.",
+      "run_id": "success_gui_qwen36_001",
+      "model": "qwen3.6-35b-a3b",
+      "thinking": false,
+      "coordinate_contract": "normalized1000",
+      "coordinate_history_protocol": 1,
+      "evidence_directory": "results/official_gui/success_gui_qwen36_001/freecad-sketch-061",
+      "controller_ready_seconds": 133.164,
+      "gui_ready_seconds": 303.062,
+      "vm_stopped": true,
+      "failure_class": "no_output_file",
+      "stages": {
+        "completion": {
+          "ok": false,
+          "termination": "max_steps_or_stopped",
+          "claimed_done": false,
+          "steps": 29,
+          "error_type": null,
+          "available": true
+        },
+        "file_saved": {
+          "ok": false
+        },
+        "file_valid": {
+          "ok": false
+        },
+        "precondition": {
+          "required": false,
+          "applicable": false,
+          "checkable": false,
+          "ok": null
+        },
+        "structure": {
+          "ok": null,
+          "n_checks": 0,
+          "units": [],
+          "unavailable_units": 1
+        },
+        "geometry": {
+          "ok": null,
+          "n_checks": 0,
+          "units": [],
+          "unavailable_units": 1
+        },
+        "process": {
+          "ok": null,
+          "n_checks": 0,
+          "units": [],
+          "unavailable_units": 1
+        },
+        "strict": {
+          "ok": false,
+          "score": 0.0
+        }
+      },
+      "execution_ledger_states": {
+        "gui_dispatch": {
+          "complete": 28
+        },
+        "gui_startup": {
+          "complete": 2
+        }
+      },
+      "host_log_span_seconds": 884.967,
+      "wall_note": "includes boot/evaluation; not provider latency"
+    },
+    {
+      "task_id": "freecad-sketch-061",
+      "kind": "gui",
+      "protocol": "exploratory_tcg",
+      "status": "RUN_ERROR",
+      "strict": null,
+      "strict_unavailable_reason": "externally_stopped_diagnostic_run",
+      "upstream_raw_score": 0.0,
+      "diagnostics_present": true,
+      "trajectory_rows": 100,
+      "termination": null,
+      "model_calls": 50,
+      "output_tokens": 4343,
+      "known_output_tokens": 4343,
+      "input_tokens": 180792,
+      "atomic_gui_actions": null,
+      "atomic_gui_actions_reason": "not instrumented; action code may contain multiple calls",
+      "artifacts": [],
+      "artifact_count": 0,
+      "note": "ZIP integrity is not evidence of FreeCAD reopen, geometry validity, or editable feature history.",
+      "run_id": "success_gui_qwen36_100_001",
+      "model": "qwen3.6-35b-a3b",
+      "thinking": false,
+      "coordinate_contract": "normalized1000",
+      "coordinate_history_protocol": 1,
+      "evidence_directory": "results/official_gui/success_gui_qwen36_100_001/freecad-sketch-061",
+      "controller_ready_seconds": 108.148,
+      "gui_ready_seconds": 285.439,
+      "vm_stopped": true,
+      "failure_class": "no_output_file",
+      "stages": {
+        "completion": {
+          "ok": false,
+          "termination": "max_steps_or_stopped",
+          "claimed_done": false,
+          "steps": 100,
+          "error_type": null,
+          "available": true
+        },
+        "file_saved": {
+          "ok": false
+        },
+        "file_valid": {
+          "ok": false
+        },
+        "precondition": {
+          "required": false,
+          "applicable": false,
+          "checkable": false,
+          "ok": null
+        },
+        "structure": {
+          "ok": null,
+          "n_checks": 0,
+          "units": [],
+          "unavailable_units": 1
+        },
+        "geometry": {
+          "ok": null,
+          "n_checks": 0,
+          "units": [],
+          "unavailable_units": 1
+        },
+        "process": {
+          "ok": null,
+          "n_checks": 0,
+          "units": [],
+          "unavailable_units": 1
+        },
+        "strict": {
+          "ok": false,
+          "score": 0.0
+        }
+      },
+      "execution_ledger_states": {
+        "gui_dispatch": {
+          "complete": 50
+        },
+        "gui_startup": {
+          "complete": 2
+        },
+        "read_only_diagnostic": {
+          "complete": 1
+        }
+      },
+      "host_log_span_seconds": 899.12,
+      "wall_note": "includes boot/evaluation; not provider latency"
+    },
+    {
+      "task_id": "freecad-sketch-061",
+      "kind": "gui",
+      "protocol": "exploratory_tcg",
+      "status": "RUN_ERROR",
+      "strict": null,
+      "strict_unavailable_reason": "runner_or_model_error",
+      "upstream_raw_score": null,
+      "diagnostics_present": true,
+      "trajectory_rows": 6,
+      "termination": null,
+      "model_calls": 6,
+      "output_tokens": 464,
+      "known_output_tokens": 464,
+      "input_tokens": 17113,
+      "atomic_gui_actions": null,
+      "atomic_gui_actions_reason": "not instrumented; action code may contain multiple calls",
+      "artifacts": [],
+      "artifact_count": 0,
+      "note": "ZIP integrity is not evidence of FreeCAD reopen, geometry validity, or editable feature history.",
+      "run_id": "success_gui_qwen36_recovery_001",
+      "model": "qwen3.6-35b-a3b",
+      "thinking": false,
+      "coordinate_contract": "normalized1000",
+      "coordinate_history_protocol": 1,
+      "evidence_directory": "results/official_gui/success_gui_qwen36_recovery_001/freecad-sketch-061",
+      "controller_ready_seconds": 133.921,
+      "gui_ready_seconds": 306.673,
+      "vm_stopped": true,
+      "failure_class": "no_output_file",
+      "stages": {
+        "completion": {
+          "ok": false,
+          "termination": "error",
+          "claimed_done": false,
+          "steps": 5,
+          "error_type": "pipeline_error",
+          "available": true
+        },
+        "file_saved": {
+          "ok": false
+        },
+        "file_valid": {
+          "ok": false
+        },
+        "precondition": {
+          "required": false,
+          "applicable": false,
+          "checkable": false,
+          "ok": null
+        },
+        "structure": {
+          "ok": null,
+          "n_checks": 0,
+          "units": [],
+          "unavailable_units": 1
+        },
+        "geometry": {
+          "ok": null,
+          "n_checks": 0,
+          "units": [],
+          "unavailable_units": 1
+        },
+        "process": {
+          "ok": null,
+          "n_checks": 0,
+          "units": [],
+          "unavailable_units": 1
+        },
+        "strict": {
+          "ok": false,
+          "score": 0.0
+        }
+      },
+      "execution_ledger_states": {
+        "gui_dispatch": {
+          "complete": 5
+        },
+        "gui_startup": {
+          "complete": 2
+        }
+      },
+      "host_log_span_seconds": 553.334,
+      "wall_note": "includes boot/evaluation; not provider latency"
+    },
+    {
+      "task_id": "freecad-sketch-061",
+      "kind": "gui",
+      "protocol": "exploratory_tcg",
+      "status": "EVALUATED",
+      "strict": 0.0,
+      "strict_unavailable_reason": null,
+      "upstream_raw_score": 0.0,
+      "diagnostics_present": true,
+      "trajectory_rows": 45,
+      "termination": null,
+      "model_calls": 44,
+      "output_tokens": 3558,
+      "known_output_tokens": 3558,
+      "input_tokens": 157997,
+      "atomic_gui_actions": null,
+      "atomic_gui_actions_reason": "not instrumented; action code may contain multiple calls",
+      "artifacts": [],
+      "artifact_count": 0,
+      "note": "ZIP integrity is not evidence of FreeCAD reopen, geometry validity, or editable feature history.",
+      "run_id": "success_gui_qwen36_history_001",
+      "model": "qwen3.6-35b-a3b",
+      "thinking": false,
+      "coordinate_contract": "normalized1000",
+      "coordinate_history_protocol": 2,
+      "evidence_directory": "results/official_gui/success_gui_qwen36_history_001/freecad-sketch-061",
+      "controller_ready_seconds": 136.811,
+      "gui_ready_seconds": 223.091,
+      "vm_stopped": true,
+      "failure_class": "no_output_file",
+      "stages": {
+        "completion": {
+          "ok": false,
+          "termination": "max_steps_or_stopped",
+          "claimed_done": false,
+          "steps": 45,
+          "error_type": null,
+          "available": true
+        },
+        "file_saved": {
+          "ok": false
+        },
+        "file_valid": {
+          "ok": false
+        },
+        "precondition": {
+          "required": false,
+          "applicable": false,
+          "checkable": false,
+          "ok": null
+        },
+        "structure": {
+          "ok": null,
+          "n_checks": 0,
+          "units": [],
+          "unavailable_units": 1
+        },
+        "geometry": {
+          "ok": null,
+          "n_checks": 0,
+          "units": [],
+          "unavailable_units": 1
+        },
+        "process": {
+          "ok": null,
+          "n_checks": 0,
+          "units": [],
+          "unavailable_units": 1
+        },
+        "strict": {
+          "ok": false,
+          "score": 0.0
+        }
+      },
+      "execution_ledger_states": {
+        "gui_dispatch": {
+          "complete": 45
+        },
+        "gui_startup": {
+          "complete": 2
+        }
+      },
+      "host_log_span_seconds": 825.416,
+      "wall_note": "includes boot/evaluation; not provider latency"
+    },
+    {
+      "task_id": "freecad-sketch-061",
+      "kind": "gui",
+      "protocol": "exploratory_tcg",
+      "status": "EVALUATED",
+      "strict": 0.0,
+      "strict_unavailable_reason": null,
+      "upstream_raw_score": 0.0,
+      "diagnostics_present": true,
+      "trajectory_rows": 36,
+      "termination": null,
+      "model_calls": 35,
+      "output_tokens": 3405,
+      "known_output_tokens": 3405,
+      "input_tokens": 127481,
+      "atomic_gui_actions": null,
+      "atomic_gui_actions_reason": "not instrumented; action code may contain multiple calls",
+      "artifacts": [],
+      "artifact_count": 0,
+      "note": "ZIP integrity is not evidence of FreeCAD reopen, geometry validity, or editable feature history.",
+      "run_id": "success_gui_qwen122_001",
+      "model": "qwen3.5-122b-a10b",
+      "thinking": false,
+      "coordinate_contract": "normalized1000",
+      "coordinate_history_protocol": 2,
+      "evidence_directory": "results/official_gui/success_gui_qwen122_001/freecad-sketch-061",
+      "controller_ready_seconds": 125.018,
+      "gui_ready_seconds": 214.962,
+      "vm_stopped": true,
+      "failure_class": "no_output_file",
+      "stages": {
+        "completion": {
+          "ok": false,
+          "termination": "max_steps_or_stopped",
+          "claimed_done": false,
+          "steps": 36,
+          "error_type": null,
+          "available": true
+        },
+        "file_saved": {
+          "ok": false
+        },
+        "file_valid": {
+          "ok": false
+        },
+        "precondition": {
+          "required": false,
+          "applicable": false,
+          "checkable": false,
+          "ok": null
+        },
+        "structure": {
+          "ok": null,
+          "n_checks": 0,
+          "units": [],
+          "unavailable_units": 1
+        },
+        "geometry": {
+          "ok": null,
+          "n_checks": 0,
+          "units": [],
+          "unavailable_units": 1
+        },
+        "process": {
+          "ok": null,
+          "n_checks": 0,
+          "units": [],
+          "unavailable_units": 1
+        },
+        "strict": {
+          "ok": false,
+          "score": 0.0
+        }
+      },
+      "execution_ledger_states": {
+        "gui_dispatch": {
+          "complete": 36
+        },
+        "gui_startup": {
+          "complete": 2
+        }
+      },
+      "host_log_span_seconds": 752.078,
+      "wall_note": "includes boot/evaluation; not provider latency"
+    },
+    {
+      "task_id": "freecad-sketch-061",
+      "kind": "cli",
+      "protocol": "exploratory_tcg",
+      "status": "EVALUATED",
+      "strict": 1.0,
+      "strict_unavailable_reason": null,
+      "upstream_raw_score": 1.0,
+      "diagnostics_present": true,
+      "trajectory_rows": 16,
+      "termination": "turn_limit",
+      "model_calls": 8,
+      "output_tokens": 1869,
+      "known_output_tokens": 1869,
+      "input_tokens": 17332,
+      "atomic_gui_actions": null,
+      "atomic_gui_actions_reason": "not instrumented; action code may contain multiple calls",
+      "artifacts": [
+        {
+          "name": "freecad-sketch-061.FCStd",
+          "bytes": 2924,
+          "sha256": "ebc2e5cbcee52bc49f0b081d67d5d3979a6e10f7205795d6945771403f47d673",
+          "native_zip_document_present": true,
+          "freecad_reopen_verified": null,
+          "parametric_history_verified": null
+        }
+      ],
+      "artifact_count": 1,
+      "note": "ZIP integrity is not evidence of FreeCAD reopen, geometry validity, or editable feature history.",
+      "run_id": "success_cli_qwen122_001",
+      "model": "qwen3.5-122b-a10b",
+      "thinking": false,
+      "coordinate_contract": null,
+      "coordinate_history_protocol": null,
+      "evidence_directory": "results/official_cli/success_cli_qwen122_001/freecad-sketch-061",
+      "controller_ready_seconds": 105.177,
+      "gui_ready_seconds": 170.339,
+      "vm_stopped": true,
+      "failure_class": "pass",
+      "stages": {
+        "completion": {
+          "ok": false,
+          "termination": "max_steps_or_stopped",
+          "claimed_done": false,
+          "steps": 8,
+          "error_type": null,
+          "available": true
+        },
+        "file_saved": {
+          "ok": true
+        },
+        "file_valid": {
+          "ok": true
+        },
+        "precondition": {
+          "required": false,
+          "applicable": false,
+          "checkable": false,
+          "ok": null
+        },
+        "structure": {
+          "ok": true,
+          "n_checks": 4,
+          "units": [
+            {
+              "ok": true,
+              "n_checks": 4,
+              "checks": {
+                "entity_counts": true,
+                "entities_matched": true,
+                "extra_geometry": true,
+                "units": true
+              }
+            }
+          ]
+        },
+        "geometry": {
+          "ok": true,
+          "n_checks": 1,
+          "units": [
+            {
+              "ok": true,
+              "n_checks": 1,
+              "checks": {
+                "profiles": true
+              },
+              "profile_reports": []
+            }
+          ]
+        },
+        "process": {
+          "ok": true,
+          "n_checks": 3,
+          "units": [
+            {
+              "ok": true,
+              "n_checks": 3,
+              "checks": {
+                "relations": true,
+                "fully_constrained": true,
+                "solver_status": true
+              },
+              "failed_relations": []
+            }
+          ]
+        },
+        "strict": {
+          "ok": true,
+          "score": 1.0
+        }
+      },
+      "agent_seconds": 69.123,
+      "task_seconds": 77.232,
+      "terminal_calls": 8,
+      "turns": 8,
+      "execution_ledger_states": {
+        "controller_dispatch": {
+          "complete": 8
+        },
+        "gui_startup": {
+          "complete": 2
+        }
+      },
+      "host_log_span_seconds": 381.648,
+      "wall_note": "includes boot/evaluation; not provider latency"
+    }
+  ],
+  "budgets": [
+    {
+      "ledger": "first_baseline_batch.sqlite",
+      "ledger_sha256": "05eeb7e0e1e4b0216d5110e355b13680e9db4a8c4ab87a3d25414cf68eca8cf9",
+      "max_calls": 15,
+      "max_output_tokens": 16000,
+      "blocked": false,
+      "requests": 15,
+      "known_output_tokens": 1369,
+      "unknown_output_reservation": 128,
+      "request_records": [
+        {
+          "request_id": "cc8f965a-8a86-4921-b134-d517b3087eba",
+          "state": "uncertain",
+          "reserved_output_tokens": 128,
+          "output_tokens": null
+        },
+        {
+          "request_id": "5fc67856-7a78-44b1-8f6c-43ca75ace88a",
+          "state": "complete",
+          "reserved_output_tokens": 128,
+          "output_tokens": 3
+        },
+        {
+          "request_id": "7efc1d7f-a3dd-400b-b536-940803726bd5",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 82
+        },
+        {
+          "request_id": "035fe475-678e-4afb-aa25-041fd0ba69b7",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 69
+        },
+        {
+          "request_id": "5d1f0c0a-aa4f-40cb-9798-3d9f723f92b2",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 68
+        },
+        {
+          "request_id": "f8895795-2f1a-47d4-958c-726718327f71",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 65
+        },
+        {
+          "request_id": "ce946e64-483b-4124-bfde-605e7d9e2ed8",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 66
+        },
+        {
+          "request_id": "0b8801c7-9013-4fad-a459-4ce091df70a2",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 65
+        },
+        {
+          "request_id": "b4817205-25bc-456f-a233-eb10f1bb9207",
+          "state": "complete",
+          "reserved_output_tokens": 8192,
+          "output_tokens": 131
+        },
+        {
+          "request_id": "3a2af4fb-fdb8-43e1-9a56-90e9dc904b0d",
+          "state": "complete",
+          "reserved_output_tokens": 8192,
+          "output_tokens": 132
+        },
+        {
+          "request_id": "d281bae5-6d6f-44c4-be7a-f6009c56dd45",
+          "state": "complete",
+          "reserved_output_tokens": 8192,
+          "output_tokens": 131
+        },
+        {
+          "request_id": "8a9b22f4-d6a5-4a17-9e97-0d16459f4a84",
+          "state": "complete",
+          "reserved_output_tokens": 8192,
+          "output_tokens": 130
+        },
+        {
+          "request_id": "9899ae92-b42b-4c03-a403-06cf63378f83",
+          "state": "complete",
+          "reserved_output_tokens": 8192,
+          "output_tokens": 134
+        },
+        {
+          "request_id": "8c9a63b0-1cec-435a-b0c2-06a47827140e",
+          "state": "complete",
+          "reserved_output_tokens": 8192,
+          "output_tokens": 147
+        },
+        {
+          "request_id": "be2894d8-3a9b-41d1-8cd2-ada8caa146f3",
+          "state": "complete",
+          "reserved_output_tokens": 8192,
+          "output_tokens": 146
+        }
+      ]
+    },
+    {
+      "ledger": "success_batch_20261019.sqlite",
+      "ledger_sha256": "30f0b18a63843d4e20d964b387f9a5604c974f41740897bb4e6c4029f32b0506",
+      "max_calls": 50,
+      "max_output_tokens": 32000,
+      "blocked": false,
+      "requests": 50,
+      "known_output_tokens": 10243,
+      "unknown_output_reservation": 0,
+      "request_records": [
+        {
+          "request_id": "5a723359-369b-460d-b210-602f8377b9a7",
+          "state": "complete",
+          "reserved_output_tokens": 128,
+          "output_tokens": 3
+        },
+        {
+          "request_id": "e03005c5-17e4-40d4-9906-ce6b53cd979b",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 82
+        },
+        {
+          "request_id": "718da3fc-09e8-4677-ae92-54d38767ef4c",
+          "state": "complete",
+          "reserved_output_tokens": 4096,
+          "output_tokens": 578
+        },
+        {
+          "request_id": "7c0f5bca-901b-4ae8-96cc-81f91a1202cc",
+          "state": "complete",
+          "reserved_output_tokens": 4096,
+          "output_tokens": 424
+        },
+        {
+          "request_id": "27b7e770-fe51-4aca-897b-d2af21487658",
+          "state": "complete",
+          "reserved_output_tokens": 4096,
+          "output_tokens": 389
+        },
+        {
+          "request_id": "946c0a8c-2714-4b1f-a5dc-602b34efb5cd",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 73
+        },
+        {
+          "request_id": "d345a0c5-9457-4de0-9ba0-034a2a60fbb8",
+          "state": "complete",
+          "reserved_output_tokens": 4096,
+          "output_tokens": 352
+        },
+        {
+          "request_id": "65fe3f83-2fd5-4089-b72d-365bebc7d52b",
+          "state": "complete",
+          "reserved_output_tokens": 4096,
+          "output_tokens": 433
+        },
+        {
+          "request_id": "067f4e25-5f16-45eb-b0ed-643e2380e13a",
+          "state": "complete",
+          "reserved_output_tokens": 4096,
+          "output_tokens": 442
+        },
+        {
+          "request_id": "4c11517e-fefb-47fc-b4f0-a3cb1f3305c9",
+          "state": "complete",
+          "reserved_output_tokens": 4096,
+          "output_tokens": 420
+        },
+        {
+          "request_id": "c4a95586-eb25-460c-934b-15527cba4954",
+          "state": "complete",
+          "reserved_output_tokens": 4096,
+          "output_tokens": 401
+        },
+        {
+          "request_id": "d7c45c82-ee28-4ca6-aa27-f08f342cbb1e",
+          "state": "complete",
+          "reserved_output_tokens": 4096,
+          "output_tokens": 417
+        },
+        {
+          "request_id": "b33c392a-8e66-49db-bfed-ca6c3fb842a7",
+          "state": "complete",
+          "reserved_output_tokens": 4096,
+          "output_tokens": 453
+        },
+        {
+          "request_id": "989ad741-6bb0-4ebe-aa07-97a5f8ba1742",
+          "state": "complete",
+          "reserved_output_tokens": 4096,
+          "output_tokens": 572
+        },
+        {
+          "request_id": "8e3901a3-eba6-487d-9986-97a223841cec",
+          "state": "complete",
+          "reserved_output_tokens": 4096,
+          "output_tokens": 445
+        },
+        {
+          "request_id": "880c8f1d-342b-4be9-af32-c112cf59ffec",
+          "state": "complete",
+          "reserved_output_tokens": 4096,
+          "output_tokens": 354
+        },
+        {
+          "request_id": "5eb4e0ff-d3ba-4fda-8fc7-7257fe8ba151",
+          "state": "complete",
+          "reserved_output_tokens": 4096,
+          "output_tokens": 143
+        },
+        {
+          "request_id": "3d5d8062-3b9c-431b-8c21-c0e09955eb9b",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 58
+        },
+        {
+          "request_id": "38996ab0-a1cd-4a6c-a546-4f6eb7c563b1",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 65
+        },
+        {
+          "request_id": "b6a8321b-f681-47bf-a2b3-ea6aec03b6dd",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 94
+        },
+        {
+          "request_id": "ab2523e3-2733-4fbf-9007-cd29e4ea026f",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 81
+        },
+        {
+          "request_id": "4a099516-2027-49fa-89f9-0604694f33b0",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 82
+        },
+        {
+          "request_id": "15db3e90-2a2a-4e8b-932f-65cd9860caa1",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 93
+        },
+        {
+          "request_id": "67e2ad15-f40a-4638-9f41-bf1bdde7cc62",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 96
+        },
+        {
+          "request_id": "431b9b52-d79a-4790-bf0b-dc422c39fd01",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 101
+        },
+        {
+          "request_id": "cf8e17d2-1dce-4a07-8373-d4624fcd904c",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 101
+        },
+        {
+          "request_id": "28ac8494-f1f2-4aa4-bce0-423a6929d314",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 101
+        },
+        {
+          "request_id": "27a84adf-a0e6-44da-9ef7-02e5234888f3",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 94
+        },
+        {
+          "request_id": "7dc65701-6d62-4743-90e0-223940d6353f",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 99
+        },
+        {
+          "request_id": "43a7322f-0b47-49a7-afef-0e9ea1ea2451",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 98
+        },
+        {
+          "request_id": "e7b2b186-bbe0-46a0-872a-060f903b383a",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 63
+        },
+        {
+          "request_id": "e223fbc7-10b1-4504-8e0b-13dad8eaad8f",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 63
+        },
+        {
+          "request_id": "1d9cf8c0-2404-4809-9fa4-9b9d1b22c0a1",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 87
+        },
+        {
+          "request_id": "9859fedf-4c92-47b0-ab78-433baecc461c",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 84
+        },
+        {
+          "request_id": "f269e581-322e-4a10-87db-fbb83073425f",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 92
+        },
+        {
+          "request_id": "460c6c98-6bd8-4d05-ab97-743a9959e6d2",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 85
+        },
+        {
+          "request_id": "4057611b-bb76-45a8-a7da-9722c362d3a9",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 109
+        },
+        {
+          "request_id": "c43a4275-fce7-4e64-9144-b593183743db",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 197
+        },
+        {
+          "request_id": "60aab31b-b54a-430b-8331-ec8c5b699d59",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 141
+        },
+        {
+          "request_id": "bb9d2082-d600-46e7-86ed-116f7b7392dc",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 136
+        },
+        {
+          "request_id": "0916f9a9-1b84-41f4-80a7-727f52e67697",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 101
+        },
+        {
+          "request_id": "349d5edd-a065-4087-a6df-53f767dd59fd",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 72
+        },
+        {
+          "request_id": "2cece689-853b-4413-8a0b-e1ac79762b48",
+          "state": "complete",
+          "reserved_output_tokens": 4096,
+          "output_tokens": 326
+        },
+        {
+          "request_id": "7b5dd763-bcdb-47e4-b33f-32e3d076d2e2",
+          "state": "complete",
+          "reserved_output_tokens": 4096,
+          "output_tokens": 356
+        },
+        {
+          "request_id": "79b387df-d330-4e02-9a8b-1ddc41e0a5ee",
+          "state": "complete",
+          "reserved_output_tokens": 4096,
+          "output_tokens": 360
+        },
+        {
+          "request_id": "fc0316c6-050e-4b87-b23f-b6a39b808cfe",
+          "state": "complete",
+          "reserved_output_tokens": 4096,
+          "output_tokens": 55
+        },
+        {
+          "request_id": "a66a70d0-3f56-4621-acf8-f68cda2f59f4",
+          "state": "complete",
+          "reserved_output_tokens": 4096,
+          "output_tokens": 251
+        },
+        {
+          "request_id": "b914b6df-e536-4936-90e0-b8ec116ee707",
+          "state": "complete",
+          "reserved_output_tokens": 4096,
+          "output_tokens": 235
+        },
+        {
+          "request_id": "3b22b079-b35a-4607-9f9f-67bb75e1e389",
+          "state": "complete",
+          "reserved_output_tokens": 4096,
+          "output_tokens": 232
+        },
+        {
+          "request_id": "2c2c230e-1223-4049-b512-d3a5d53f7cf0",
+          "state": "complete",
+          "reserved_output_tokens": 4096,
+          "output_tokens": 54
+        }
+      ]
+    },
+    {
+      "ledger": "gui100_batch_20261019.sqlite",
+      "ledger_sha256": "a18fb5d29bad608bd7b9c55424d7fb9c1de9780286b03ab6533a786677d4be06",
+      "max_calls": 100,
+      "max_output_tokens": 32000,
+      "blocked": true,
+      "requests": 50,
+      "known_output_tokens": 4343,
+      "unknown_output_reservation": 0,
+      "request_records": [
+        {
+          "request_id": "54f1148f-768c-42d3-a2df-ba7b7a0d8ac1",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 64
+        },
+        {
+          "request_id": "73ea0949-50a8-41cb-b0b6-4ee171270d84",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 67
+        },
+        {
+          "request_id": "a4c57d7e-a3eb-4f22-85c6-d07371d2b171",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 67
+        },
+        {
+          "request_id": "3a68afdc-a9cf-46bf-aff8-a0f455cc9c2d",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 67
+        },
+        {
+          "request_id": "72feac89-3207-431b-a6e4-dd9dccb8f44f",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 67
+        },
+        {
+          "request_id": "0d6a8701-16a5-41fc-bb84-d6a3c23b1160",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 67
+        },
+        {
+          "request_id": "fa44948a-5146-4e95-ae6d-ef5aaea3c908",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 67
+        },
+        {
+          "request_id": "ed55ebbc-c60a-4bab-ab33-4edfaea001b9",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 59
+        },
+        {
+          "request_id": "7ae371e0-484c-4ceb-887d-afea4e2939ba",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 93
+        },
+        {
+          "request_id": "e4a073f6-2891-4252-ad07-b3ce88d8ab19",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 67
+        },
+        {
+          "request_id": "25646afe-3b38-4b7f-8ce5-6c37e432ece7",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 67
+        },
+        {
+          "request_id": "47e888b0-c6b6-4562-8629-e1f9e2ac472c",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 67
+        },
+        {
+          "request_id": "40132806-a5e8-456f-99c9-743ac8847588",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 87
+        },
+        {
+          "request_id": "c8d77483-35e8-4f31-99cc-14046f8e243d",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 67
+        },
+        {
+          "request_id": "c49106f9-4c6d-4dd2-95ea-28f3e8e920f2",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 67
+        },
+        {
+          "request_id": "0d4055fb-5f47-4a49-8143-1574ad4062bb",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 98
+        },
+        {
+          "request_id": "7148ee90-93b5-4871-bb82-3cc77df92bd8",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 83
+        },
+        {
+          "request_id": "b418ad01-38ce-40f0-aae0-76972bbe07ed",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 67
+        },
+        {
+          "request_id": "d38fd700-647d-4b70-bdec-094a88ea3821",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 90
+        },
+        {
+          "request_id": "bf2e35bb-d6eb-4485-be97-c58a41562462",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 67
+        },
+        {
+          "request_id": "0ca30d64-7e54-4172-bf43-1f71ca5957a3",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 97
+        },
+        {
+          "request_id": "91dab8a2-51db-4bac-9c6f-f17c3236837c",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 67
+        },
+        {
+          "request_id": "5a0a5a05-b471-4efd-97b1-aeba2c088d01",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 91
+        },
+        {
+          "request_id": "60ed0e8b-9c6f-49eb-bc0d-e1fe676678e7",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 91
+        },
+        {
+          "request_id": "fd9fe7b6-c647-45a0-afeb-fa2090b30b05",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 93
+        },
+        {
+          "request_id": "339dd8e1-1d6a-4742-8512-99e764a9dd13",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 93
+        },
+        {
+          "request_id": "f72d444b-fcfe-4d82-8a07-45384e12fc16",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 91
+        },
+        {
+          "request_id": "1b8002e9-b292-4c83-afb3-652ca1c4a0f7",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 97
+        },
+        {
+          "request_id": "46456a2f-e9b5-49d9-aeb5-e4893f83e677",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 91
+        },
+        {
+          "request_id": "1c48eb77-ff5b-4d64-82a7-89ee1b769a05",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 97
+        },
+        {
+          "request_id": "40a57ecb-eb57-47f3-b774-f505d7a6fe90",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 91
+        },
+        {
+          "request_id": "3961c9f5-effa-4c2b-ba0e-c13ce554212c",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 89
+        },
+        {
+          "request_id": "75241c20-1016-449b-afba-e1f1029989c8",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 96
+        },
+        {
+          "request_id": "1ed6951e-120d-48aa-874a-019de361144d",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 104
+        },
+        {
+          "request_id": "dd139331-96ff-42c5-9a1c-a3c65683c17f",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 90
+        },
+        {
+          "request_id": "e4585607-4611-45a4-a7c4-ae7f38d6f1fc",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 91
+        },
+        {
+          "request_id": "a4e39531-748b-43a2-8d03-5a9b5effe384",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 86
+        },
+        {
+          "request_id": "9a5a9348-31d5-4aa6-afea-490b97656957",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 104
+        },
+        {
+          "request_id": "6e4600ab-a3db-4e19-8330-17a619e1f053",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 98
+        },
+        {
+          "request_id": "894eff7e-6f59-4eb9-a0f4-6e74e22d82ab",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 89
+        },
+        {
+          "request_id": "0e6e4502-fc63-4448-aa8f-7f870e0a69b1",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 88
+        },
+        {
+          "request_id": "faaf5b9c-2440-4629-9b1b-a73f20296c3f",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 105
+        },
+        {
+          "request_id": "2e74501c-d400-46c3-bc5a-3679c07a6cc9",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 131
+        },
+        {
+          "request_id": "f0ad9cc1-89f3-4c84-83bc-8f6cb7673691",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 94
+        },
+        {
+          "request_id": "c1384f2a-79de-49c6-81fc-e879f70136a3",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 90
+        },
+        {
+          "request_id": "a87f833f-0407-45da-87a1-6d8f4808378f",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 157
+        },
+        {
+          "request_id": "4354f996-c4f7-40d2-88eb-cd4e49edcd02",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 103
+        },
+        {
+          "request_id": "d9e88807-590f-46ed-9c5f-e87a56b2c8b8",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 93
+        },
+        {
+          "request_id": "612f903e-119c-4ea4-b2c2-a971a6c40c1f",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 94
+        },
+        {
+          "request_id": "d5f00a2b-8b62-41aa-9caf-b290e3441c4b",
+          "state": "complete",
+          "reserved_output_tokens": 512,
+          "output_tokens": 97
+        }
+      ]
+    },
+    {
+      "ledger": "gui_recovery_batch_20261019.sqlite",
+      "ledger_sha256": "1c1239caaf7cfecd6953f59cf53d5120fe006ca60b6b544c01d73c0fa9d1c265",
+      "max_calls": 50,
+      "max_output_tokens": 16000,
+      "blocked": false,
+      "requests": 50,
+      "known_output_tokens": 4022,
+      "unknown_output_reservation": 0,
+      "request_records": [
+        {
+          "request_id": "da728cc7-047f-47d0-a0a0-aa450141b81d",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 62
+        },
+        {
+          "request_id": "28beb844-ac9a-44ae-acbf-595380b031af",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 70
+        },
+        {
+          "request_id": "7ba46a0d-6b91-4aff-a797-d37a0bb4eb79",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 66
+        },
+        {
+          "request_id": "8cd28f02-a7ca-48a4-83a0-7bc59cf1dbdf",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 102
+        },
+        {
+          "request_id": "dced4359-cee7-4fb8-b940-24791d766436",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 74
+        },
+        {
+          "request_id": "46172bc5-8c18-4e5c-bb93-0a4739bb553c",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 90
+        },
+        {
+          "request_id": "a2564cf5-a32f-4810-9571-e6c31cff0780",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 61
+        },
+        {
+          "request_id": "2b882cfb-5b87-4dee-940b-4c5ec14b51f7",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 64
+        },
+        {
+          "request_id": "374acfa1-d4dd-4e9c-90b7-634482a1aecb",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 72
+        },
+        {
+          "request_id": "51df637e-ce1b-45b2-a873-6668052525a9",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 74
+        },
+        {
+          "request_id": "ed759e5d-e375-4491-aefe-46cdeaab52b3",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 84
+        },
+        {
+          "request_id": "19b08179-17dc-45da-904c-8b73784c60d9",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 73
+        },
+        {
+          "request_id": "d7fbdae6-cb45-4ce0-a016-f71fd2b67a4e",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 78
+        },
+        {
+          "request_id": "2cd22ca0-1685-4d1d-904f-f69ceb2be5b7",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 59
+        },
+        {
+          "request_id": "94ddd655-74c5-4086-9cdf-22494da6a35d",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 85
+        },
+        {
+          "request_id": "526201c1-3a5d-46a8-8ea2-0905fb214b25",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 108
+        },
+        {
+          "request_id": "ec2e0a94-7553-41ba-8d44-9bee3c6f0f79",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 82
+        },
+        {
+          "request_id": "babd41b2-8cf9-4323-943b-5a4983753a6f",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 59
+        },
+        {
+          "request_id": "0e96d1ce-19f8-4a5e-83c6-7968394440c4",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 59
+        },
+        {
+          "request_id": "dac99a53-b392-4537-b526-2ea9eaa04a56",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 78
+        },
+        {
+          "request_id": "7cf0f0e4-bd00-4424-80d1-eba0bd2bc13a",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 78
+        },
+        {
+          "request_id": "88a2c60c-f66c-4fde-b26d-80973700f069",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 59
+        },
+        {
+          "request_id": "96d523d9-62f2-451d-90dd-4866f6a15e6a",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 72
+        },
+        {
+          "request_id": "13917d69-3bad-404f-bedd-756c22858428",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 76
+        },
+        {
+          "request_id": "2073d659-d161-413b-b117-3f3a5ef14efe",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 76
+        },
+        {
+          "request_id": "61a77ea1-8830-41d1-a6d1-b32d23ac4b3a",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 89
+        },
+        {
+          "request_id": "fb73ec20-f5ef-4b2b-8a45-2aa81eabd104",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 77
+        },
+        {
+          "request_id": "41c3ce8d-fe0c-4e43-a3d3-d992176ab82d",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 77
+        },
+        {
+          "request_id": "351f4e69-54b6-4370-88a7-bebfd1470283",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 77
+        },
+        {
+          "request_id": "05f597e4-f09c-43ba-8b6c-ecf48d96453a",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 76
+        },
+        {
+          "request_id": "d1366e5a-ba7f-44ed-a0d2-a6d8ba4948a3",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 77
+        },
+        {
+          "request_id": "adcbaf74-e9b7-47d3-b1bc-4bb621060260",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 88
+        },
+        {
+          "request_id": "1566e701-686a-4bab-a0d1-b34be476aee8",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 77
+        },
+        {
+          "request_id": "81adda43-19f7-48c7-aa51-34aecb1970d0",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 89
+        },
+        {
+          "request_id": "85586af2-88cc-45e7-8b5e-d2df017715b8",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 89
+        },
+        {
+          "request_id": "724f7dc3-7678-45f6-917a-f8fe9a9c3f24",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 77
+        },
+        {
+          "request_id": "0c2dfd1f-47c2-4789-87a0-d43c36e2f983",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 87
+        },
+        {
+          "request_id": "5c2464e4-40ce-4c1c-9d13-9ee4f092661b",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 82
+        },
+        {
+          "request_id": "d907f218-6b9a-4762-86b5-a96a602c9007",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 104
+        },
+        {
+          "request_id": "75e096d4-31f6-4499-ab71-6b552ae7e0b4",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 103
+        },
+        {
+          "request_id": "29e82ff9-2693-4060-9fde-fbcb2e6fa8cf",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 111
+        },
+        {
+          "request_id": "646541df-51b3-4baa-a6a0-18b992b2fb43",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 72
+        },
+        {
+          "request_id": "02871e02-2b83-41fe-9e5e-032db1cc163f",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 111
+        },
+        {
+          "request_id": "7945d9b2-2f05-4e76-b4bb-941c5b9c18d0",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 69
+        },
+        {
+          "request_id": "3e0799e6-c066-4d23-9869-e49cb488168b",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 87
+        },
+        {
+          "request_id": "3a789e84-c443-4672-94ac-1040dc2893ee",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 81
+        },
+        {
+          "request_id": "77bce750-cd4c-4b74-b399-6e710cb7fc6e",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 92
+        },
+        {
+          "request_id": "a8fa911a-f2c9-4c1a-8eeb-3493888e680e",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 84
+        },
+        {
+          "request_id": "f6fc6a15-5252-43b1-81e8-b95c2eedad87",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 98
+        },
+        {
+          "request_id": "482d8847-437d-44dd-9e84-1c7aa1ee63a4",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 87
+        }
+      ]
+    },
+    {
+      "ledger": "qwen122_batch_20261019.sqlite",
+      "ledger_sha256": "01e545f43ea785cd9cc33403ba9329e53224e7d90686aec3ae0698c25c663202",
+      "max_calls": 36,
+      "max_output_tokens": 24000,
+      "blocked": false,
+      "requests": 36,
+      "known_output_tokens": 3408,
+      "unknown_output_reservation": 0,
+      "request_records": [
+        {
+          "request_id": "59f0c6d7-5a42-44b6-a49a-017f2c961b36",
+          "state": "complete",
+          "reserved_output_tokens": 128,
+          "output_tokens": 3
+        },
+        {
+          "request_id": "59e1b5bc-493d-4a10-bc6f-27f73a71107f",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 68
+        },
+        {
+          "request_id": "b9aee77f-7c0f-43df-9901-7950b6676d09",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 70
+        },
+        {
+          "request_id": "7f9078ad-f746-4749-b7de-0135f60acdf6",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 84
+        },
+        {
+          "request_id": "3c174059-cbe7-48c5-801d-07e3f42545d0",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 80
+        },
+        {
+          "request_id": "979c7585-9c5c-497a-9153-7f3f3a00cbb5",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 85
+        },
+        {
+          "request_id": "4416ed53-b3db-4b29-a02b-380e434943a0",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 70
+        },
+        {
+          "request_id": "d761fe78-fc80-4d1e-b342-2c5c46448da3",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 79
+        },
+        {
+          "request_id": "d19597fb-e117-4fda-9c63-fd9d58cff79e",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 78
+        },
+        {
+          "request_id": "1156be3d-bcdc-423d-b451-9f716343e7a6",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 81
+        },
+        {
+          "request_id": "3fc19053-a64e-48c5-9007-9267d7219117",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 108
+        },
+        {
+          "request_id": "ab541904-4e2a-4372-a4f9-a28c58ef9e22",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 81
+        },
+        {
+          "request_id": "2ef73b5a-448e-4ba0-9368-1fa7c1508d56",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 84
+        },
+        {
+          "request_id": "f32c3d23-e63e-4978-8379-12f739c897c3",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 89
+        },
+        {
+          "request_id": "cee567ec-78d3-4a06-ad73-1b9a92b19a69",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 80
+        },
+        {
+          "request_id": "210b6f64-21ce-4777-ad76-eac2b0b59828",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 100
+        },
+        {
+          "request_id": "40b6a50e-ab1a-4ab6-a913-ce08cce3cd75",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 69
+        },
+        {
+          "request_id": "c1cc0d66-6957-40bb-a35f-e786f58d95a1",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 83
+        },
+        {
+          "request_id": "e59e5292-da42-4c29-bd74-9da0ab86ee97",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 90
+        },
+        {
+          "request_id": "d54cffdf-73e3-42de-aefe-275bfe5bb4ba",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 111
+        },
+        {
+          "request_id": "d2b2d576-266c-4481-8e37-af5d4c46fb74",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 88
+        },
+        {
+          "request_id": "71de0cd1-4068-4dc5-9d43-1111b62a27d8",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 88
+        },
+        {
+          "request_id": "3d1d94db-dd7d-46a2-b2e5-ad21f2a92d3f",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 119
+        },
+        {
+          "request_id": "65f33212-daf7-42c0-a76e-753d9e64657e",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 97
+        },
+        {
+          "request_id": "3e31b572-56f9-4185-90d2-43e6d9f753cf",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 125
+        },
+        {
+          "request_id": "d07a61a7-dbe1-4e66-9dc3-5b1502d4a7bc",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 126
+        },
+        {
+          "request_id": "a0f229b5-cc99-4741-847f-c589023b3594",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 120
+        },
+        {
+          "request_id": "910d8307-37ef-41f8-bda0-a61bdd66610f",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 128
+        },
+        {
+          "request_id": "7aba3d97-5ab8-481f-b130-61e4fc45e311",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 108
+        },
+        {
+          "request_id": "3f30d0d8-8a7f-4e11-a3af-9ed877637ad0",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 108
+        },
+        {
+          "request_id": "d2ccd0e5-25c8-4a35-951d-e90269f5cecb",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 137
+        },
+        {
+          "request_id": "fec5dc3c-e99a-471c-a05b-d2ca3dfb797a",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 144
+        },
+        {
+          "request_id": "d5b6f421-47eb-442f-a4fb-e3d3326e2f6a",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 95
+        },
+        {
+          "request_id": "9b90d7a4-7c58-4d0f-97ea-00a600f56b4f",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 107
+        },
+        {
+          "request_id": "7a0dff10-a2c9-4409-bca0-b3839c88893a",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 120
+        },
+        {
+          "request_id": "3d73dade-d334-40a2-9588-90c1c57d35fd",
+          "state": "complete",
+          "reserved_output_tokens": 1024,
+          "output_tokens": 105
+        }
+      ]
+    }
+  ],
+  "real_pairs": 0,
+  "generation_calls_total_including_history": 201,
+  "known_output_tokens_total_including_history": 23385,
+  "known_input_tokens_total_including_history": 702267,
+  "unknown_output_reservation_total": 128,
+  "total_output_tokens": null,
+  "total_cost_usd": null,
+  "cost_unavailable_reason": "Initial GPT HTTP500 usage unknown; provider prices not supplied.",
+  "native_cli_audit": {
+    "classification": "trusted_posthoc_native_audit",
+    "benchmark_episode": false,
+    "model_calls": 0,
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "freecad_version": [
+      "1",
+      "1",
+      "0",
+      "44227 +568 (Git)",
+      "git://github.com/FreeCAD/FreeCAD.git",
+      "2026/03/25 02:17:53",
+      "tag: 1.1.0",
+      "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+    ],
+    "artifact_sha256": "3ae807fd800ef3c8da1a89362c52f8c902cda50b76ccc870a5dd7cc4eb93a8eb",
+    "saved_file_unchanged": true,
+    "native_open_recompute_reopen": true,
+    "native_tree_restored": true,
+    "initial_objects": [
+      {
+        "name": "Body",
+        "type_id": "PartDesign::Body",
+        "state": [
+          "Up-to-date"
+        ]
+      },
+      {
+        "name": "Origin",
+        "type_id": "App::Origin",
+        "state": [
+          "Up-to-date"
+        ]
+      },
+      {
+        "name": "X_Axis",
+        "type_id": "App::Line",
+        "state": [
+          "Up-to-date"
+        ],
+        "shape_valid": true,
+        "edges": 1,
+        "solids": 0
+      },
+      {
+        "name": "Y_Axis",
+        "type_id": "App::Line",
+        "state": [
+          "Up-to-date"
+        ],
+        "shape_valid": true,
+        "edges": 1,
+        "solids": 0
+      },
+      {
+        "name": "Z_Axis",
+        "type_id": "App::Line",
+        "state": [
+          "Up-to-date"
+        ],
+        "shape_valid": true,
+        "edges": 1,
+        "solids": 0
+      },
+      {
+        "name": "XY_Plane",
+        "type_id": "App::Plane",
+        "state": [
+          "Up-to-date"
+        ],
+        "shape_valid": true,
+        "edges": 0,
+        "solids": 0
+      },
+      {
+        "name": "XZ_Plane",
+        "type_id": "App::Plane",
+        "state": [
+          "Up-to-date"
+        ],
+        "shape_valid": true,
+        "edges": 0,
+        "solids": 0
+      },
+      {
+        "name": "YZ_Plane",
+        "type_id": "App::Plane",
+        "state": [
+          "Up-to-date"
+        ],
+        "shape_valid": true,
+        "edges": 0,
+        "solids": 0
+      },
+      {
+        "name": "Origin001",
+        "type_id": "App::Point",
+        "state": [
+          "Up-to-date"
+        ],
+        "shape_valid": true,
+        "edges": 0,
+        "solids": 0
+      },
+      {
+        "name": "Sketch",
+        "type_id": "Sketcher::SketchObject",
+        "state": [
+          "Touched",
+          "Invalid"
+        ],
+        "shape_valid": true,
+        "edges": 1,
+        "solids": 0,
+        "geometry_count": 1,
+        "constraint_count": 1,
+        "fully_constrained": false,
+        "solver_return": 0,
+        "geometries": [
+          {
+            "type": "LineSegment",
+            "construction": false,
+            "start": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "end": [
+              10.0,
+              0.0,
+              0.0
+            ],
+            "length": 10.0
+          }
+        ]
+      }
+    ],
+    "reopened_objects": [
+      {
+        "name": "Body",
+        "type_id": "PartDesign::Body",
+        "state": [
+          "Up-to-date"
+        ]
+      },
+      {
+        "name": "Origin",
+        "type_id": "App::Origin",
+        "state": [
+          "Up-to-date"
+        ]
+      },
+      {
+        "name": "X_Axis",
+        "type_id": "App::Line",
+        "state": [
+          "Up-to-date"
+        ],
+        "shape_valid": true,
+        "edges": 1,
+        "solids": 0
+      },
+      {
+        "name": "Y_Axis",
+        "type_id": "App::Line",
+        "state": [
+          "Up-to-date"
+        ],
+        "shape_valid": true,
+        "edges": 1,
+        "solids": 0
+      },
+      {
+        "name": "Z_Axis",
+        "type_id": "App::Line",
+        "state": [
+          "Up-to-date"
+        ],
+        "shape_valid": true,
+        "edges": 1,
+        "solids": 0
+      },
+      {
+        "name": "XY_Plane",
+        "type_id": "App::Plane",
+        "state": [
+          "Up-to-date"
+        ],
+        "shape_valid": true,
+        "edges": 0,
+        "solids": 0
+      },
+      {
+        "name": "XZ_Plane",
+        "type_id": "App::Plane",
+        "state": [
+          "Up-to-date"
+        ],
+        "shape_valid": true,
+        "edges": 0,
+        "solids": 0
+      },
+      {
+        "name": "YZ_Plane",
+        "type_id": "App::Plane",
+        "state": [
+          "Up-to-date"
+        ],
+        "shape_valid": true,
+        "edges": 0,
+        "solids": 0
+      },
+      {
+        "name": "Origin001",
+        "type_id": "App::Point",
+        "state": [
+          "Up-to-date"
+        ],
+        "shape_valid": true,
+        "edges": 0,
+        "solids": 0
+      },
+      {
+        "name": "Sketch",
+        "type_id": "Sketcher::SketchObject",
+        "state": [
+          "Touched",
+          "Invalid"
+        ],
+        "shape_valid": true,
+        "edges": 1,
+        "solids": 0,
+        "geometry_count": 1,
+        "constraint_count": 1,
+        "fully_constrained": false,
+        "solver_return": 0,
+        "geometries": [
+          {
+            "type": "LineSegment",
+            "construction": false,
+            "start": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "end": [
+              10.0,
+              0.0,
+              0.0
+            ],
+            "length": 10.0
+          }
+        ]
+      }
+    ],
+    "parameter_edit_probe": {
+      "applicable": true,
+      "performed_only_in_disposable_memory": true,
+      "method": "add_native_distance_constraint",
+      "constraint_index": 1,
+      "initial_length": 10.0,
+      "changed_length": 11.0,
+      "changed": true,
+      "solver_return": 0
+    },
+    "native_errors": [
+      {
+        "name": "Sketch",
+        "reason": "native_object_state",
+        "state": [
+          "Touched",
+          "Invalid"
+        ]
+      }
+    ],
+    "native_state_valid": false,
+    "reviewed_raw_sha256": "935539a7dfd7f608e6bdefe44075924df4e982e3d456a620dd3952dc25a11619",
+    "note": "Raw audit retained; classifier corrected to include native Invalid state. Official strict score and agent artifact unchanged."
+  },
+  "all_continuation_vms_stopped": true,
+  "success_rate": null,
+  "success_rate_reason": "Different models, budgets/adapters and repeated same task; no pooled benchmark estimate.",
+  "prior_evidence": "reports/evidence/baseline_runtime_20261019/campaign_summary.json",
+  "native_cli122_audit": {
+    "classification": "trusted_posthoc_native_audit",
+    "benchmark_episode": false,
+    "model_calls": 0,
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "freecad_version": [
+      "1",
+      "1",
+      "0",
+      "44227 +568 (Git)",
+      "git://github.com/FreeCAD/FreeCAD.git",
+      "2026/03/25 02:17:53",
+      "tag: 1.1.0",
+      "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+    ],
+    "artifact_sha256": "ebc2e5cbcee52bc49f0b081d67d5d3979a6e10f7205795d6945771403f47d673",
+    "saved_file_unchanged": true,
+    "native_open_recompute_reopen": true,
+    "native_tree_restored": true,
+    "initial_objects": [
+      {
+        "name": "Sketch",
+        "type_id": "Sketcher::SketchObject",
+        "state": [
+          "Up-to-date"
+        ],
+        "shape_valid": true,
+        "edges": 1,
+        "solids": 0,
+        "geometry_count": 1,
+        "constraint_count": 1,
+        "fully_constrained": false,
+        "solver_return": 0,
+        "geometries": [
+          {
+            "type": "LineSegment",
+            "construction": false,
+            "start": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "end": [
+              10.0,
+              0.0,
+              0.0
+            ],
+            "length": 10.0
+          }
+        ]
+      }
+    ],
+    "reopened_objects": [
+      {
+        "name": "Sketch",
+        "type_id": "Sketcher::SketchObject",
+        "state": [
+          "Up-to-date"
+        ],
+        "shape_valid": true,
+        "edges": 1,
+        "solids": 0,
+        "geometry_count": 1,
+        "constraint_count": 1,
+        "fully_constrained": false,
+        "solver_return": 0,
+        "geometries": [
+          {
+            "type": "LineSegment",
+            "construction": false,
+            "start": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "end": [
+              10.0,
+              0.0,
+              0.0
+            ],
+            "length": 10.0
+          }
+        ]
+      }
+    ],
+    "parameter_edit_probe": {
+      "applicable": true,
+      "performed_only_in_disposable_memory": true,
+      "method": "add_native_distance_constraint",
+      "constraint_index": 1,
+      "initial_length": 10.0,
+      "changed_length": 11.0,
+      "changed": true,
+      "solver_return": 0
+    },
+    "native_errors": [],
+    "native_state_valid": true,
+    "parameter_editability": "PASS"
+  },
+  "all_audit_vms_stopped": true,
+  "project_tests": 122,
+  "upstream_cli_tests": 7
+}

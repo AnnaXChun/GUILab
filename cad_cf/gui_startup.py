@@ -39,8 +39,8 @@ print(json.dumps({{'pid':p.pid,'executable':str(snap/'usr/bin/FreeCAD'),'termina
 '''
 
 
-def prepare_gui(endpoint,output,seconds=300):
-    """New empty GUI; readiness never creates a task document or answer."""
+def prepare_gui(endpoint,output,seconds=300,warm_canvas=False):
+    """Empty GUI; optional renderer warmup closes its geometry-free document."""
     if not 1<=seconds<=600:raise ValueError('bounded GUI startup deadline required')
     output=Path(output)
     guest='/home/user/.actc_gui_ready_'+output.name
@@ -48,6 +48,9 @@ def prepare_gui(endpoint,output,seconds=300):
 from pathlib import Path
 root=Path("__ACTC_INFRA_OUTPUT__")
 result={'classification':'trusted_gui_readiness','model_calls':0,'agent_generated':False}
+started=time.monotonic()
+def phase(name):
+ with (root/'gui_phases.jsonl').open('a') as f:f.write(json.dumps({'stage':name,'elapsed_seconds':time.monotonic()-started})+'\\n')
 (root/'entered.json').write_text(json.dumps({'entered':True}))
 try:
  import FreeCAD as App
@@ -56,11 +59,24 @@ try:
  Gui.updateGui()
  docs=list(App.listDocuments())
  if docs:raise RuntimeError('readiness requires an empty document set')
+ if __ACTC_RENDER_WARMUP__:
+  phase('empty_canvas_start')
+  warm_doc=App.newDocument('ACTCRenderWarmup')
+  Gui.updateGui()
+  if warm_doc.Objects:raise RuntimeError('warmup must not create task geometry')
+  Gui.activeDocument().activeView().viewTop()
+  Gui.activeDocument().activeView().saveImage(str(root/'empty_canvas.png'),640,480,'White')
+  Gui.updateGui();phase('empty_canvas_rendered')
+  App.closeDocument(warm_doc.Name);Gui.updateGui()
+  docs=list(App.listDocuments())
+  if docs:raise RuntimeError('warmup must restore empty document set')
+  result.update(canvas_warmed=True,warmup_object_count=0)
+  phase('empty_canvas_closed')
  result.update(status='PASS_GUI_READY',pid=os.getpid(),freecad_version=list(App.Version()),documents=docs,workbench=Gui.activeWorkbench().name(),window_visible=Gui.getMainWindow().isVisible())
 except Exception as exc:
  result.update(status='FAIL',error=type(exc).__name__,message=str(exc),traceback=traceback.format_exc())
 (root/'gui_ready.json').write_text(json.dumps(result))
-'''
+'''.replace('__ACTC_RENDER_WARMUP__',repr(bool(warm_canvas)))
     source=gui_launch_source(guest,macro)
     (output/'gui_launch_source.py').write_text(source)
     bridge=TerminalBridge(endpoint,endpoint,output/'gui_startup.sqlite')
@@ -76,6 +92,7 @@ except Exception as exc:
             (output/'gui_ready.json').write_text(json.dumps(result,indent=2)+'\n')
             if result.get('status')!='PASS_GUI_READY' or not result.get('window_visible'):
                 raise RuntimeError('GUI readiness rejected; inspect gui_ready.json')
+            if warm_canvas and not result.get('canvas_warmed'):raise RuntimeError('GUI canvas warmup acceptance missing')
             singleton=verify_singleton(endpoint,output,result['pid'])
             result['singleton_verified']=True
             result['singleton']=singleton

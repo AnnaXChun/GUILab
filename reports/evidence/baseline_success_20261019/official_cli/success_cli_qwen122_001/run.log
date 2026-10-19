@@ -1,0 +1,27 @@
+[2026-10-19 18:20:05,107 INFO cadworld.cli] CLI-only tasks: ['freecad-sketch-061']
+[2026-10-19 18:20:06,600 INFO cadworld.cli] Model endpoint healthy; advertised models: [PRIVATE DIRECTORY EXCLUDED]
+[2026-10-19 18:20:06,601 INFO desktopenv.env] Initializing...
+[2026-10-19 18:25:09,169 INFO cadworld.cli] Resetting task freecad-sketch-061
+[2026-10-19 18:25:09,169 INFO desktopenv.env] Resetting environment...
+[2026-10-19 18:25:09,169 INFO desktopenv.env] Switching task...
+[2026-10-19 18:25:09,169 INFO desktopenv.env] Setting counters...
+[2026-10-19 18:25:09,169 INFO desktopenv.env] Environment is clean, skipping snapshot revert (provider: docker).
+[2026-10-19 18:25:09,226 INFO desktopenv.env] Setting up environment...
+[2026-10-19 18:25:09,226 INFO desktopenv.setup] try to connect http://127.0.0.1:15010
+[2026-10-19 18:25:14,880 INFO desktopenv.setup] Executing setup step 1/1: _execute_setup
+[2026-10-19 18:25:14,955 INFO desktopenv.setup] Command executed successfully: rm -f /home/user/Unnamed.FCStd -> {
+  "error": "",
+  "output": "",
+  "returncode": 0,
+  "status": "success"
+}
+
+[2026-10-19 18:25:14,955 INFO desktopenv.setup] SETUP COMPLETED: _execute_setup({'command': ['rm', '-f', '/home/user/Unnamed.FCStd'], 'shell': False})
+[2026-10-19 18:25:14,955 INFO desktopenv.env] Environment setup complete.
+[2026-10-19 18:26:26,100 INFO desktopenv.setup] try to connect http://127.0.0.1:15010
+[2026-10-19 18:26:26,315 INFO desktopenv.pycontroller] File downloaded successfully
+[2026-10-19 18:26:26,367 INFO desktopenv.pycontroller] File downloaded successfully
+[2026-10-19 18:26:26,368 INFO desktopenv.experiment] Saved generated FCStd to /Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/success_cli_qwen122_001/freecad-sketch-061/freecad-sketch-061.FCStd (2924 bytes)
+[2026-10-19 18:26:26,399 INFO cadworld.cli.freecad-sketch-061] Diagnostics written to /Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/success_cli_qwen122_001/freecad-sketch-061/evaluation.json (failure_class=pass)
+[2026-10-19 18:26:26,402 INFO cadworld.cli] Task freecad-sketch-061 score=1.000 termination=turn_limit
+[2026-10-19 18:26:26,755 INFO cadworld.cli] Finished 1 task(s); mean score 1.000; results: /Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/success_cli_qwen122_001

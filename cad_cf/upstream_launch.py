@@ -1,7 +1,8 @@
 """Original upstream runner with an external SDK call/output-token circuit breaker.
 
-Only SDK retry settings and explicit resource limits change. GUI prompts,
-parsers, task setup, actions, evaluator and diagnostics remain upstream code.
+The optional Qwen coordinate adapter changes its coordinate contract/history
+units explicitly. Runner, parser, task setup, evaluator and diagnostics remain
+upstream code; SDK retries and resource limits are guarded externally.
 """
 from __future__ import annotations
 import argparse
@@ -33,7 +34,12 @@ class APIGate:
         if self.per_call_tokens is not None:remaining=min(remaining,self.per_call_tokens)
         reservation=None
         if self.batch:
-            reservation,remaining=self.batch.reserve(remaining)
+            try:
+                reservation,remaining=self.batch.reserve(remaining)
+            except RuntimeError as exc:
+                self.blocked=True
+                if self.trace:self.trace.emit('budget_rejected',reason=str(exc),provider_request_sent=False)
+                raise BudgetExhausted('shared batch circuit open; no provider request sent') from exc
         if provider == 'openai':
             for field in ('max_tokens','max_completion_tokens','max_output_tokens'):
                 if field in kwargs:
@@ -113,6 +119,8 @@ def main():
     parser.add_argument('--runtime-config',type=Path)
     parser.add_argument('--lightweight-imports',action='store_true')
     parser.add_argument('--batch-ledger',type=Path)
+    parser.add_argument('--campaign-config',type=Path)
+    parser.add_argument('--qwen-normalized-coordinates',action='store_true')
     parser.add_argument('--per-call-tokens',type=int)
     parser.add_argument('runner_args',nargs=argparse.REMAINDER)
     args=parser.parse_args()
@@ -122,8 +130,8 @@ def main():
         raise SystemExit('NOT_RUN_BUDGET: ENABLE_PAID_RUNS=0')
     if not no_model and not args.batch_ledger:
         raise SystemExit('NOT_RUN_BUDGET: shared batch ledger required for real requests')
-    from .batch_budget import BatchBudget
-    batch=BatchBudget(args.batch_ledger) if args.batch_ledger else None
+    from .campaign import load_campaign,open_budget
+    batch=open_budget(args.batch_ledger,load_campaign(args.campaign_config)) if args.batch_ledger else None
     gate=APIGate(args.max_calls,args.max_output_tokens,args.max_wall,Trace(args.log),batch,args.per_call_tokens)
     cleanup=lambda:None
     if args.runtime_config:
@@ -133,6 +141,11 @@ def main():
         from .upstream_runtime import install_lazy_registries
         install_lazy_registries(Path.cwd())
     for name in ('openai','httpx','httpcore'):logging.getLogger(name).setLevel(logging.WARNING)
+    restore_coordinates=lambda:None
+    if args.qwen_normalized_coordinates:
+        if args.kind!='gui':raise ValueError('coordinate adapter is GUI-only')
+        from .qwen_coordinates import install_qwen_coordinates
+        restore_coordinates=install_qwen_coordinates()
     restore=install_sdk_guards(gate)
     runner='scripts/python/run_cadworld.py' if args.kind=='gui' else 'CLI/run_cli.py'
     options=args.runner_args[1:] if args.runner_args[:1]==['--'] else args.runner_args
@@ -144,6 +157,7 @@ def main():
             raise
     finally:
         restore()
+        restore_coordinates()
         cleanup()
         if batch:batch.close()
         if gate.trace:gate.trace.emit('budget_summary',model_calls=gate.calls,output_tokens=None if gate.unknown_usage else gate.used_output,known_output_tokens=gate.used_output,circuit_open=gate.blocked)

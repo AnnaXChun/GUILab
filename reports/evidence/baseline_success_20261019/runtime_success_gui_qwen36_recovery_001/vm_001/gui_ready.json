@@ -1,0 +1,44 @@
+{
+  "classification": "trusted_gui_readiness",
+  "model_calls": 0,
+  "agent_generated": false,
+  "status": "PASS_GUI_READY",
+  "pid": 1972,
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "documents": [],
+  "workbench": "PartDesignWorkbench",
+  "window_visible": true,
+  "host_poll_seconds": 306.673,
+  "singleton_verified": true,
+  "singleton": {
+    "before": [
+      {
+        "pid": 1950,
+        "argv": [
+          "/snap/freecad/2266/usr/bin/FreeCAD"
+        ]
+      },
+      {
+        "pid": 1972,
+        "argv": [
+          "/snap/freecad/2266/usr/bin/FreeCAD",
+          "/home/user/.actc_gui_ready_vm_001/bootstrap.FCMacro"
+        ]
+      }
+    ],
+    "removed_empty_autostart_pids": [
+      1950
+    ],
+    "remaining_pid": 1972,
+    "singleton_verified": true
+  }
+}

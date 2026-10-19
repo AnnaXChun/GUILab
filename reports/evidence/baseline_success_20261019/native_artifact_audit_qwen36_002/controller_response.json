@@ -1,0 +1,6 @@
+{
+  "error": "",
+  "output": "\nTraceback (most recent call last):\n  File \"<string>\", line 34, in <module>\nAttributeError: 'Sketcher.SketchObject' object has no attribute 'movePoint'\n\n",
+  "returncode": 1,
+  "status": "success"
+}
