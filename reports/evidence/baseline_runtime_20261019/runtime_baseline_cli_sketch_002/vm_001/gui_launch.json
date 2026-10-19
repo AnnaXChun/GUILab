@@ -1,0 +1,6 @@
+{
+  "error": "",
+  "output": "{\"pid\": 2068, \"executable\": \"/snap/freecad/2266/usr/bin/FreeCAD\", \"terminated_startup_freecad_pids\": [], \"home_overridden\": false, \"autostart_disabled\": true, \"autostart_before_sha256\": \"27defea3b993f8f9f2434d22e2d104f59b245248087df3a82ff49cbcec4ee41c\"}\n",
+  "returncode": 0,
+  "status": "success"
+}

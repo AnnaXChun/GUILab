@@ -1,0 +1,80 @@
+{
+  "classification": "trusted_environment_probe",
+  "benchmark_success": null,
+  "agent_generated": false,
+  "model_calls": 0,
+  "status": "PASS_NATIVE_INFRASTRUCTURE_ONLY",
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "artifact": "/home/user/actc_gui_direct_001/trusted_infrastructure.FCStd",
+  "sha256": "d93b982b1a29de4c1551288406fdd0c61e1b83dc37b5ca9dd118d697589856e2",
+  "saved": true,
+  "reopened_twice": true,
+  "gui_document": "trusted_infrastructure",
+  "active_document": "trusted_infrastructure",
+  "radius_mm": 5.0,
+  "initial_length_mm": 10.0,
+  "final_length_mm": 12.0,
+  "initial_volume": 785.3981633974482,
+  "final_volume": 942.4777960769378,
+  "shape_valid": true,
+  "solids": 1,
+  "profile": "Sketch",
+  "body_tip": "Pad",
+  "sketch_constraints": 2,
+  "objects": [
+    {
+      "name": "Body",
+      "type_id": "PartDesign::Body"
+    },
+    {
+      "name": "Origin",
+      "type_id": "App::Origin"
+    },
+    {
+      "name": "X_Axis",
+      "type_id": "App::Line"
+    },
+    {
+      "name": "Y_Axis",
+      "type_id": "App::Line"
+    },
+    {
+      "name": "Z_Axis",
+      "type_id": "App::Line"
+    },
+    {
+      "name": "XY_Plane",
+      "type_id": "App::Plane"
+    },
+    {
+      "name": "XZ_Plane",
+      "type_id": "App::Plane"
+    },
+    {
+      "name": "YZ_Plane",
+      "type_id": "App::Plane"
+    },
+    {
+      "name": "Origin001",
+      "type_id": "App::Point"
+    },
+    {
+      "name": "Sketch",
+      "type_id": "Sketcher::SketchObject"
+    },
+    {
+      "name": "Pad",
+      "type_id": "PartDesign::Pad"
+    }
+  ],
+  "wall_seconds": 98.886
+}

@@ -1,158 +1,54 @@
-# 远程 Codex 交接
+# GUILab 交接
 
-交接更新：2026-10-19。代码来源：本项目 main，历史已保留；本文件与移植检查随本次交接提交。规格的证据类型、实验边界与 Stop/Go 继续有效。
+更新：2026-10-19。仓库为 [AnnaXChun/GUILab](https://github.com/AnnaXChun/GUILab)，根目录即原 cad-cf-hybrid。按 AGENTS.md、[本批实际结果](reports/BASELINE_RUNTIME_SMOKE.md)、[复现状态](reports/REPRO_STATUS.md)、[TCG 运行指南](docs/RUN_TCG_BASELINE.md)、SPEC.md 接手。机器可读状态见 handoff.json；远程首条消息可使用 REMOTE_CODEX_PROMPT.md。
 
-## 下一步执行指令已更新
+本批最终为 3 个真实 episode（2 GUI + 1 CLI，2 个不同任务），strict 均为 0，无模型输出文件。15 次生成调用已用完，已知输出 1369 tokens，另有早期失败的未知 usage。下一批先修坐标合同与 CLI FreeCAD API 用法，不得在远程重置账本继续首批。
 
-用户后续明确要求由远程 Codex 索取 base URL、API key、model ID 并真正跑少量 baseline。先读 [下一批真实 smoke](docs/NEXT_BASELINE_RUN.md)：其中给出参数收集方式、需要修正的 endpoint 接入、首批 15 次生成请求 / 16000 输出 tokens 上限及验收顺序。环境和参数就绪后，远程在该范围内启用调用并执行，不继续停在 mock 或重复询问是否允许相同小批实验。
+## 现在已验证到哪里
 
-用户随后要求本机“开始验证”，并确认无法提供 KVM。早期 Docker 双层模拟结果见 [Mac VM 验证](reports/MAC_VM_SMOKE.md)；后续 ARM 原生 QEMU 已在无 KVM 条件下启动官方 VM、controller 与 FreeCAD GUI，最新结果见 [原生 QEMU 检查](reports/MAC_NATIVE_QEMU_SMOKE.md)。下一步按 [无 KVM 路线](docs/NO_KVM_RUN.md) 推进，不再索取 KVM，不安装 VMware。不收集或使用模型密钥，以下模型任务数尚未增加。
+pinned upstream 为 `e5d0ebab8bd28da6e98c68c61db05747d1647f7b`，submodule tracked 文件未改。Mac ARM 原生 QEMU/TCG 已接入原 DesktopEnv 和 GUI/CLI runner，独立 overlay、SHA、controller、关闭清理都有记录。空 FreeCAD 单实例的 reset/observe/action/observe/close 已通过；可信 GUI 宏完成参数化建模、参数修改、保存关闭重开。这些探针不计模型成绩，正式 TypedWorker 和 ACTC 的 GUI/API 主线程同步尚未验收。
 
-## 先看结论
+用户不能提供 KVM，不再索取 KVM，不安装 VMware。Linux 容器能够运行 FreeCAD；容器是否具备 Docker、QEMU、桌面与足够资源需要实测。当前 TCG 结果独立于参考 Linux x86_64/KVM 协议，不能以手改 stages.json 为 PASS 替代验证。
 
-**当前没有完成真实 baseline 复现。远程第一个目标是打通 P0。**
+本轮已安装 16 个来自 pinned lock 的 baseline 直接依赖版本，以延迟 registry 方式加载原 metric/getter 函数，原始 CLI dry-run 已通过，7 个 upstream CLI 单测重跑通过。没有安装全部 405 个 upstream 包，没有下载大模型、Torch/OCR 权重。旧 dotenv 失败和 GUI 宏失败仍保留在历史证据中。
 
-| 已有证据 | 实际状态 |
-| --- | --- |
-| pinned upstream | `e5d0ebab8bd28da6e98c68c61db05747d1647f7b`；submodule 原始 tracked 文件未改 |
-| 本项目单测 | 最新计数与日志见原生 QEMU 报告，远程仍需重新执行 |
-| upstream CLI unittest | 历史 7 tests 通过；用的是本项目轻量 Python 环境 |
-| 原始 CLI dry-run | 历史 exit 1，缺少 `dotenv`；full upstream sync 当时仅预览，未安装 |
-| synthetic campaign | 9 case：6 个有效 mock pair、3 个 invalid；标签 api=1、gui=2、tie=3、invalid=3 |
-| 真实官方 GUI / CLI 任务 | N=0；无模型任务的 `.FCStd`、strict、`evaluation.json` |
-| 真实 counterfactual pairs | N=0；P3/P4 为 NO-GO |
-| 真实 provider 网络调用 | 0；`ENABLE_PAID_RUNS=0` |
+用户指定开源多模态 Qwen3，当前选择服务列出的 `qwen3.5-35b-a3b`。图片验证返回 `FREECAD`，输入 2077、输出 3 tokens；GUI 和 CLI 使用同一 model ID、thinking=false，实际 episode 结果以本批报告为准。模型别名不等于后端权重身份已核验。CLI 保持 terminal-only，不追加运行时截图。
 
-`reports/commands.json` 是早期 Mac 验证记录；`reports/evidence/mock_smoke/` 是完整 synthetic 归档，`INDEX.json` 有哈希。里面的 Mac 绝对路径只用于追溯，远程不可直接执行。不要把历史报告重命名成远程成果。
-
-本次交接已在全新本地 clone（起初 submodule 未初始化）重新验证 bootstrap、70 个项目测试、7 个 upstream CLI 测试和 9 个无付费 mock case。验证记录见 `reports/HANDOFF_VALIDATION.json`。该检查仍不等于 Linux VM 实验。
-
-按需读取：`SPEC.md`、`reports/REPRO_STATUS.md`、`reports/BASELINE_REPRO.md`、`reports/DEVIATIONS.md`、`reports/stages.json`。后续研究接口见 `docs/P4_P5_PLAN.md`，无需重新调研论文。
-
-## 克隆与无付费验证
+## 启动与配置
 
 ```bash
 git clone --recurse-submodules https://github.com/AnnaXChun/GUILab.git
 cd GUILab
-export ENABLE_PAID_RUNS=0
-bash scripts/bootstrap.sh
-bash scripts/test.sh
-```
-
-如果远程平台已经 clone 了主仓库，直接从项目根运行 `bash scripts/bootstrap.sh`。它会处理未初始化的 submodule，再核对 SHA。禁止把 submodule 切到最新 main。
-
-```bash
+bash scripts/bootstrap.sh --baseline
+ENABLE_PAID_RUNS=0 bash scripts/test.sh
 git -C vendor/CADWORLD rev-parse HEAD
 git -C vendor/CADWORLD status --porcelain --untracked-files=no
-bash scripts/run_smoke.sh --dry-run --output results/remote_mock_001
-.venv/bin/python scripts/summarize.py \
-  --input results/remote_mock_001 \
-  --output results/remote_mock_001/PILOT.md
 ```
 
-SHA 必须等于 pinned commit，tracked 状态应为空。结果目录已存在会拒绝覆盖，要换新的 run_id；保留失败尝试。默认 bootstrap 只安装轻量依赖，不下载 VM 或大模型。
+远程只收集缺项。`.env` 使用 `CADWORLD_API_BASE_URL`、`CADWORLD_MODEL_NAME`、`CADWORLD_API_KEY`，不随 Git 上传。不要假定 GitHub secret 会自动进入远程 Codex。key 只放所选 secret/环境变量或 ignored 配置，不进 argv、Git、报告；完整服务模型目录和真实服务地址也不上传。
 
-## 先确认远程机器是否适合实验
+VM 和固件不随 clone 取得。先检查本机/远程已有资产，不静默重下；用 `configs/native_tcg.example.json` 填实际路径和实际 SHA，按 RUN_TCG_BASELINE 做无模型验收。历史 Mac 路径只供 provenance，不能直接执行。本机官方 qcow2 为 28,310,503,424 bytes，SHA256 `edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12`，远程仍要独立 hash。
 
-“远程 Codex”不等于“有 KVM 的主机”。普通容器即使显示 Linux，也可能没有 Docker daemon、`/dev/kvm` 或嵌套虚拟化权限。GPU 不是这个阶段的必要条件；可用的模型 API 或已有推理服务可以承担模型调用。
+## 剩余预算与运行边界
 
-```bash
-uname -s
-uname -m
-docker info
-qemu-system-x86_64 --version
-qemu-img --version
-uv --version
-df -h .
-```
+用户已授权本机或远程执行同一首批真实 smoke，默认 `ENABLE_PAID_RUNS=0` 仍保留。条件就绪后单次命令设置 1，不重复询问相同范围许可。两地共用一批，不能各开第二批。
 
-参考环境为 Ubuntu/Linux x86_64 + Docker + QEMU/KVM。SPEC 建议至少 100 GB 空闲空间，单路 VM 约 8 vCPU、8 GB RAM、64 GB 虚拟磁盘；两路原生 pair 需要额外宿主资源。这只是参考环境配置。用户已确认无 KVM，当前转为单列 TCG 探索环境，不将其硬件时延与参考协议混报。
+整批最多 15 次生成 / 16000 输出 tokens；GUI sketch-061、part-076 各最多 3 turns / 512 输出，CLI sketch-061 原上限 8 turns。早期 GPT 图片验证 HTTP 500 已占 1 次，unknown usage 保留 128-token 占用；用户更正模型后记录 correction，再做 Qwen 图片验证 1 次。因此两道 GUI 各用满 3 次后，CLI 最多剩 7 次。最终实际消耗与剩余额度见报告和共享账本。
 
-Ubuntu 缺少运行时且具有安装权限时，可按 pinned upstream README 安装 `docker.io qemu-system-x86 qemu-utils`，配置 docker/kvm 组后重新登录；不要把权限失败绕过成 root 下不受控执行。uv 缺失时使用其官方安装方式。主机安装操作与模型运行额度分别记录。
+共享账本为 ignored `results/first_baseline_batch.sqlite`。移机前恢复该账本或按可信汇总保守迁移，不能用新空账本重置额度。SQLite 本身没有 key，不默认上传公共仓库；公开预算快照供审计。SDK 无自动重试；API 错误/未知 usage 关闭 circuit。只有明确的用户配置更正后才记录 correction 恢复，历史失败不删。非幂等 `/execute` 不重发，终态不确定就停止并隔离 VM。
 
-本机是 Apple M5 Pro / ARM64，没有 x86 KVM。2026-10-19 已用 ARM 原生 QEMU 11.1.2 直接模拟同一官方 x86 qcow2，绕过原 amd64 容器转译层。controller 与 FreeCAD GUI 已启动；宏超时和原生文件结果分别见 `reports/MAC_NATIVE_QEMU_SMOKE.md`。当前 preflight 仍按参考协议严格要求 x86_64/KVM；软件模拟使用独立探索验收，不能手动改 stage PASS。
+不授权 25-step 追加、24-pair pilot、full-200、自动下载模型、训练或 veRL。模型 wall gate 从首请求起计 600 秒，单请求最多 110 秒；OS/GUI 冷启动另有限时，整进程最多 1800 秒。截图/轨迹保留，视频关闭，TCG 时延不与参考硬件混报。
 
-## P0：官方基线闭环
+## 接下来的验收
 
-先确认容器资源及原生 QEMU/TCG 可运行，再完成 upstream 依赖与原始 CLI dry-run。不要以无 KVM 为由跳过所有运行验证：
+先检查本批 GUI/CLI 的实际结果与失败原因。GUI `result.txt=0` 可能是上游异常 fallback，必须结合 error.json、usage circuit 和 diagnostics；`cad_cf.baseline_results` 保留 upstream_raw_score，对运行故障输出 strict=null + reason。有效 episode 的 strict=0 是任务未通过，不能改成服务故障，也不能因 runner 退出 0 宣称任务成功。
 
-```bash
-bash scripts/bootstrap.sh --full-upstream
-```
+P0 baseline 闭环后，P1 仍需部署 `cad_cf/guest_gui_bridge.py`，验收 Qt 主线程 ack、正式 TypedWorker 保存重开、GUI 当前文档刷新。不能用可信圆柱探针替代正式 worker。随后才做同 intent、同 S0、两个独立 VM/磁盘/workdir 的 pair；不能 A 后 undo 再 B。保存关闭重开、相机/工作台/选中项、截图与原生 digest 均须核对，不一致就 invalid。
 
-该脚本依次运行本项目 sync、upstream CLI unittest，再进入 submodule 做 `uv sync --frozen`、原始 CLI unittest 和 `CLI/run_cli.py --dry-run`。会安装官方运行时依赖，可能包含较大的 Torch/OCR 包；这不代表下载或启动模型权重。不能用当前单测的成功替代原始 dry-run。
+当前 live plan 接口、native backend、公开契约 verifier、router、split 和 mock 已实现，正式双路流水线尚未实测。官方 expected/reference/evaluation 只能留在可信离线评分端，不能回流 agent/router/verifier。配对数和训练 GO 门槛见 stages.json；9 个 synthetic case 不计真实 pair，P3/P4 不因本批 baseline 自动通过。
 
-镜像准备是独立显式步骤。先检查磁盘和资产是否已提供；没有镜像时，记录下载计划后按官方脚本取得，不依赖 runner 的自动下载默认值：
+## 产物与交付
 
-```bash
-cd vendor/CADWORLD
-uv run python scripts/python/download_vm_image.py
-sha256sum vm_data/FreeCAD-Ubuntu.qcow2
-cd ../..
-bash scripts/preflight.sh
-```
+`reports/evidence/baseline_runtime_20261019/INDEX.json` 包含逐次失败、source snapshot、脱敏 JSONL、截图和哈希。`.env`、完整服务目录、SQLite、qcow2、固件、FCStd 不进 Git；原始本机 results 不代表远程可用产物。原生文件若产生，只按实际做过的 ZIP/FreeCAD 重开/参数化检查报告，不用 fixture 或可信探针补齐模型输出。
 
-本机本次实测 qcow2 SHA256 为 `edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12`，28,310,503,424 bytes。远程仍须对实际文件独立计算并记录，不能只复制该值作为检查结果；源地址的 main 可以变化。不要把 qcow2 提交到 Git。CAM 官方评分还需要宿主 FreeCAD 1.1.x；前几道 sketch/part smoke 可以避开 CAM。
-
-先核对两个计划任务 `freecad-sketch-061`、`freecad-part-076`，它们都是 creation，不是 preservation 编辑主实验。先实现或执行一次 **无模型的** `DesktopEnv.reset → observe → close` 环境探针，并记录代码与日志；使用 pinned 上游的 provider/controller，不读取隐藏规则给 agent。`scripts/probe_mac_vm.py` 和 `scripts/probe_native_qemu.py` 分别检查 Docker 与宿主 QEMU 基础设施，都不能替代 DesktopEnv 闭环。后者尚未接入 baseline runner。优先尝试 pinned Docker provider 的软件模拟；Docker 不可用时，在本项目做原生 QEMU provider/生命周期适配，保留上游 runner、prompt、parser 和离线评分。
-
-查看模型 smoke 的确切计划命令，仍不请求模型：
-
-```bash
-bash scripts/run_baseline.sh --kind gui-connect --dry-run
-bash scripts/run_baseline.sh --kind gui-25 --dry-run
-bash scripts/run_baseline.sh --kind cli --dry-run
-```
-
-少量真实 smoke 已按 `docs/NEXT_BASELINE_RUN.md` 获得后续授权；补齐凭证/服务、环境和预算控制后启用实时命令。GUI-connect 是 2 题、每题最多 3 个 decision turns；CLI smoke 默认只取 sketch-061，最多 8 turns/terminal calls、600 秒、12000 completion tokens。CLI 本地 server 不会自动启动，必须先核对实际 served model ID 与 endpoint。自定义 provider/base URL 需要按 pinned 源码作最小参数适配并记录。
-
-`baseline.py` 的受限执行入口调用原始 runner，并通过 `upstream_launch.py` 对 OpenAI/Gemini SDK 关闭重试、记录 usage 和限制预算；此前只做 HTTP mock 测试。原始 runner 的 prompt、parser、评测逻辑未改。当前 guard 的 call/output-token/wall gate 是 **整次启动共享**，不是每题独立，参数名与报告中不能误写为实际按题重置。600 秒 subprocess timeout 也共享。先测 3-step 连接，不直接开 25-step；25-step 还要求连接验收文件和超过默认 12 calls 的额外预算。
-
-GUI P0 最低验收是至少 1 题完成 reset/action/evaluation/artifact collection，文件包括 `traj.jsonl`、`result.txt`、`evaluation.json`、截图/日志，允许 strict=0，但不能把 run_error 写作任务失败 0。记录 decision turns、atomic GUI actions、model calls、tokens 与 wall time。CLI 也保留原始轨迹、预算与失败原因。
-
-## P1 → P2：原生执行与配对
-
-P0 有真实证据后再做 P1。当前代码是待实测实现，下面是必须先验证/适配的接入点：
-
-| 接入点 | 当前边界与下一步 |
-| --- | --- |
-| `cad_cf/guest_gui_bridge.py` | 需把固定项目模块部署到 guest，在 FreeCAD GUI 进程启动宏中启动；检查 PySide/Qt 兼容、主线程 ack 与 loopback 请求。不是仅调用 host Python 就会自动安装 |
-| `cad_cf/native_backend.py` | `NativeSession` / `NativeWorker` 提供固定接口；检查实际 `FreeCADCmd` 路径、snap 环境、执行超时、保存与重开。禁止把任意 Python/shell 交给模型 |
-| `capture_native_checkpoint` | 先 GUI 保存关闭、重开、收集当前 native 文件、摘要、截图和 UI；停机后再记录实际磁盘 SHA。冻结时的当前文档必须与 snapshot 来源一致 |
-| `snapshot.create_overlay` / `live.run_plan` | qcow2 overlay 会记录 backing file 的宿主绝对路径，而上游容器只把传入镜像挂载到 `/System.qcow2`。必须验证 backing 路径在容器中可解析；必要时在本项目用独立完整 clone/flatten 或可审计的挂载适配。不要假定当前 overlay 可直接开机 |
-| clone 的 GUI 状态 | 上游 Docker `save_state()` 不支持快照。停机磁盘的开机恢复不自动等于原来的 GUI 内存/窗口状态；启动宏/文档/工作台/相机/选中项/截图须实测一致，不满足就 invalid |
-| `NativeBackend.close` / `live.run_plan` | 当前两个位置都会关闭 env，需检查上游 close 的重复调用行为和异常清理，确保不污染其他 run |
-| artifact 与官方离线评分 | 分支输出在 `/home/user/current/artifact.FCStd`，官方任务通常要求 `/home/user/Unnamed.FCStd`。可信发布与独立 post-hoc 的完整闭环尚未验证；`posthoc.py` 只是可信函数入口，不能声称已有自动化独立评分进程 |
-| `candidate_generator.py` / `live.py` | 当前支持冻结 proposal / reviewed live-plan；没有已验证的模型自动生成双路候选流水线。检查公开证据、同 intent、Name/TypeId 和真实 generation cost |
-| `self_verifier.py` | 初版公开尺寸 grammar 保守；不覆盖的表达必须 unknown。确认 native validity、dependency preservation 和隔离扰动 probe 的测量，不为制造偏好去放松规则 |
-
-P1 至少要证明一个真实原生 `.FCStd` 经 API 修改后可保存、重开、保留参数化结构，并在 GUI 中同步显示。之后再准备 P2 的两个完全隔离分支，比较同一 source hash、canonical digest、目标属性、截图与 UI 状态。不能在一台 VM 上执行 A、undo 后执行 B。
-
-`python -m cad_cf.counterfactual --config configs/smoke.yaml --live-plan <plan.json> --output results/<new-run>` 是 live 入口。`plan.json` 结构目前由 `cad_cf/live.py` 定义：stage_evidence、checkpoint 字段、stopped_disk、powered_off_source、overlays.gui/api、intent、document、public_task、split、gui/api actions/context。远程应据真实准备结果生成 schema/example 与 plan，不要用占位 SHA 跳过校验。
-
-stage evidence 必须是实际运行结果。`gui.context` / `api.context` 需记录模型、provider、seed/参数、calls、tokens、decision_turns 和 `generation_wall_s`；未知成本不能当作 0。JSONL、pair.json、public_contract、agent_view、state diff、verifier checks、失败分支与最终 native artifact 全部保留。
-
-## P3 与后续门槛
-
-先拿到至少 3 个合法真实 smoke pairs，并对非 tie 差异重测。默认 2 题/3 pairs 上限不等于已授权 24-pair pilot。24 valid pairs 目标需额外明确授权；invalid 与失败也报告分母与原因。没有差异或规则已等效时暂不训练。
-
-公开选样共 140 个 part/sketch，32 个 edit 初筛候选；split=92/25/23，edit 初筛=19/7/6。按 family 与前置来源 SHA 并集分组，seed=20261015。sketch-edit 只有 1 题且在 train，val/test 该分层 N=0。当前真实可配对性仍未知，不能把 32 题直接算有效 pairs。
-
-权重固定 validity=.25、target_progress=.35、preservation=.20、editability=.20，cost lambda=.05、epsilon=.05。只可在 val 调参并在 test 前冻结。训练数据用 `cad_cf.dataset.preference_rows` 拒绝 synthetic、invalid、tie、未知质量和 held-out。P4 predictor 接口存在，训练器未实现；P5 veRL 不在本轮范围。
-
-## 报告、提交与可重复性
-
-持续更新以下真实状态，不只追加成功案例：
-
-- `reports/REPRO_STATUS.md`：命令、SHA、环境、model/provider、实际执行/未执行和 blocker。
-- `reports/BASELINE_REPRO.md`：官方 GUI、官方 CLI、extended hybrid 分开。
-- `reports/PILOT.md` 与对应 JSON：任务与 pair 分母、质量覆盖率、credit、成本、CI 和 route 指标；没有预测/样本则 null。
-- `reports/FAILURE_CASES.md`：真实失败与 synthetic 明确分开；不足 5 个真实 case 就全部列出。
-- `reports/DEVIATIONS.md`：每个最小适配的来源路径、差异、影响、验证证据。
-- `reports/stages.json`：依据真实证据更新 gate，不直接改 PASS。
-
-旧 `scripts/verify.py` 固定预期 CLI exit 1、preflight exit 2；这只适合历史 Mac 场景。Linux 依赖齐备后的成功退出码为 0，必须先做环境感知适配或分别执行命令；不要为迎合旧测试故意保留依赖故障。
-
-Git 中保留小型脱敏证据与 manifest；大镜像、模型、原生工程批量产物使用约定的外部存储，并记录可取回位置与 SHA。仓库默认忽略 `.env`、results、qcow2、FCStd。禁止上传凭证与宿主无关个人资料；不要把本机私人 Wiki 上传到 GitHub。
-
-远程会话最后需要明确回答：实际执行的命令/任务、真实 artifact 和 strict 状态、实际成本、有效/invalid pair 数、是否有大于 0 的真实可重测工具差异、当前 GO/NO-GO、下一步。任务完成后提交代码；有 GitHub push 权限时推送本次分支，否则交付 commit 与待推送状态。
+继续更新 reports/{REPRO_STATUS,BASELINE_REPRO,PILOT,FAILURE_CASES,DEVIATIONS}.md、机器可读状态和必要证据。完成后提交并推送已授权仓库，报告确切命令、任务 ID、artifact、strict、调用/token/wall 成本、阻塞与 GO/NO-GO。`scripts/verify.py` 固定早期 Mac 失败预期，不作为通用远程验收；使用实际适配后的测试与运行命令。

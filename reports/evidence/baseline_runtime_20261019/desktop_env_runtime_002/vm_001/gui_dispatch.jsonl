@@ -1,0 +1,1 @@
+{"execution_id": "11042997-89ad-4e76-84e7-0e575c16a560", "state": "complete", "payload_sha256": "ca161bed40d4477686232d536547f5ac44f423017bbc43feb991fd21e154d1b8", "payload": ["python", "-c", "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.moveTo(400,300,duration=.2)"]}

@@ -10,7 +10,7 @@
 
 ## 当前事实
 
-历史本机记录为 70 个项目测试、7 个 upstream CLI 单测通过，9 个 synthetic case；新增探针后的测试结果以 reports/MAC_NATIVE_QEMU_SMOKE.md 为准。真实 CADWorld 任务、真实 pairs、模型网络请求均为 0。官方 GUI baseline 未执行；官方 CLI 原始 dry-run 曾因缺 `dotenv` 失败。远程必须重新验证，不能把这些历史记录当作远程主机验收。
+最新事实以 `reports/BASELINE_RUNTIME_SMOKE.md`、`reports/BASELINE_REPRO.md` 和 `handoff.json` 为准，历史无模型报告不能覆盖后续真实请求。原生 QEMU/TCG 已接入 pinned runner；单实例空 GUI 的 `DesktopEnv.reset → observe → action → observe → close` 已通过，可信 GUI 参数化保存重开已通过。原始 CLI dry-run 的旧 `dotenv` 失败保留，本轮安装受限依赖并延迟导入原始 registry 后已通过，7 项上游 CLI 单测也已重跑。正式 TypedWorker、ACTC 配对与参考 Linux/KVM 环境仍未验收。远程须验证本环境，不把本机记录直接当作远程验收。
 
 ## 实验与预算
 
@@ -18,7 +18,9 @@
 
 默认 `ENABLE_PAID_RUNS=0`、`MAX_LIVE_TASKS=2`、`MAX_PAIRS=3`、`MAX_MODEL_CALLS_PER_TASK=12`、`MAX_WALL_SECONDS_PER_TASK=600`、`MAX_RETRIES=0`。2026-10-16 用户后续已明确要求远程 Codex 收集 endpoint/key 并进行少量真实 baseline smoke，授权范围与首批保守预算以 `docs/NEXT_BASELINE_RUN.md` 为准。默认 0 是无配置保护；参数、环境和预算就绪后，远程应为该批次设置 1 并执行，不重复请求同一范围的形式许可。用户随后要求“开始验证”，授权本机使用独立 Colima profile 做限时、无模型的官方 VM 软件模拟检查；早期结果见 `reports/MAC_VM_SMOKE.md`，后续原生 QEMU 结果见 `reports/MAC_NATIVE_QEMU_SMOKE.md`，不得计作模型 baseline 或放宽正式 gate。仍不授权 24-pair pilot、full-200、自动下载大模型、模型训练或 veRL。镜像下载必须显式记录命令、来源、磁盘需求与实际 SHA，不得借 runner 默认行为静默下载。
 
-优先原始 upstream CLI dry-run 与无模型 VM reset/observe 检查，再做极少量已授权模型 smoke。2026-10-19 用户确认无法提供 KVM，后续按 `docs/NO_KVM_RUN.md` 推进 TCG，不再索取 KVM 或默认安装 VMware。Linux 容器可以运行 FreeCAD，KVM 只影响 VM 硬件加速。缺资源、镜像、可用 controller 或模型服务时记录具体 `BLOCKED_BY_ENV` / `BLOCKED_BY_CREDENTIALS` / `NOT_RUN_BUDGET`。参考 preflight 不改成无条件通过；TCG 的探索验收需独立记录。
+2026-10-19 用户进一步要求当前会话解决 GUI 宏超时并真正开始 baseline，当前 Mac 执行已获同一首批小样本授权；参数就绪后按 `docs/RUN_TCG_BASELINE.md` 执行，不再将旧的执行位置限制当作 blocker。优先 upstream CLI dry-run 与无模型 VM reset/observe 检查，再做极少量已授权模型 smoke。2026-10-19 用户确认无法提供 KVM，后续按 `docs/NO_KVM_RUN.md` 推进 TCG，不再索取 KVM 或默认安装 VMware。Linux 容器可以运行 FreeCAD，KVM 只影响 VM 硬件加速。缺资源、镜像、可用 controller 或模型服务时记录具体 `BLOCKED_BY_ENV` / `BLOCKED_BY_CREDENTIALS` / `NOT_RUN_BUDGET`。参考 preflight 不改成无条件通过；TCG 的探索验收需独立记录。
+
+用户指定开源多模态 Qwen3 系列，本批选 `qwen3.5-35b-a3b`，图片接口验证通过。GUI/CLI 使用同一模型并加 `--qwen-no-thinking`。此前 GPT 图片请求 HTTP 500 的次数和未知 usage 继续占用原账本；用户更正模型后才记录 correction 恢复，不能删除失败或重建账本重置预算。按实际剩余额度收紧 CLI，本批总上限仍为 15 次生成、16000 输出 tokens。
 
 ## 研究有效性
 

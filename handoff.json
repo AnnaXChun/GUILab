@@ -6,21 +6,23 @@
   "branch": "main",
   "read_first": [
     "AGENTS.md",
-    "docs/NO_KVM_RUN.md",
+    "reports/BASELINE_RUNTIME_SMOKE.md",
     "HANDOFF.md"
   ],
   "cadworld_commit": "e5d0ebab8bd28da6e98c68c61db05747d1647f7b",
   "historical_evidence": {
-    "project_tests": 77,
+    "project_tests": 96,
     "upstream_cli_tests": 7,
     "synthetic_cases": 9,
-    "real_tasks": 0,
+    "real_tasks": 3,
     "real_pairs": 0,
-    "provider_network_calls": 0,
-    "baseline_reproduced": false
+    "provider_network_calls": 15,
+    "baseline_reproduced": false,
+    "unique_tasks": 2,
+    "note": "Three real bounded episodes evaluated, all strict=0 and no output file; not paper/full benchmark reproduction."
   },
   "next_phase": "P0",
-  "next_action": "Read docs/NO_KVM_RUN.md and reports/MAC_NATIVE_QEMU_SMOKE.md. KVM is unavailable. Validate pinned Docker TCG provider if usable; otherwise wire native QEMU lifecycle into pinned runners. Complete model-free GUI document sync and CLI dependencies, then execute the already-authorized bounded model baseline on the remote environment.",
+  "next_action": "Fix and validate Qwen3.5 GUI coordinate contract and CLI FreeCAD saveAs/document-object usage. First batch exhausted 15 calls; do not issue new generation without a new bounded authorization. Then validate formal NativeWorker/GUI bridge before real pairs.",
   "paid_run_authorization_added": true,
   "defaults": {
     "ENABLE_PAID_RUNS": 0,
@@ -31,7 +33,6 @@
     "MAX_RETRIES": 0
   },
   "runtime_unverified": [
-    "official GUI/CLI episodes",
     "formal NativeWorker/TypedFreeCAD save/reopen and GUI synchronization",
     "GUI process bridge deployment",
     "same-S0 stopped-disk restore",
@@ -40,13 +41,14 @@
     "automatic model proposal collection"
   ],
   "known_constraints": [
-    "scripts/verify.py expects historical Mac failures",
-    "call/output/wall gate is per launch",
-    "32 edit candidates need introspection",
-    "sketch-edit held-out coverage is zero",
-    "User cannot provide KVM; do not request KVM again",
-    "native QEMU probe is not a baseline provider",
-    "GUI macro timeout remains unresolved; headless pass is scoped"
+    "First batch generation requests=15/15; do not reset the ledger",
+    "Earlier GPT HTTP 500 usage unknown; reserved output=128 retained",
+    "TCG is exploratory; reference KVM environment not reproduced",
+    "Qwen3.5 emitted apparent 0..1000 coordinates despite pinned pixel contract",
+    "CLI model scripts used wrong FreeCAD object types/properties and doc.save(path)",
+    "Formal NativeWorker/GUI bridge/same-S0 pairs not validated",
+    "Full 405-package upstream sync not performed",
+    "No real ACTC pairs or training evidence"
   ],
   "artifacts": [
     "reports/REPRO_STATUS.md",
@@ -56,14 +58,14 @@
     "reports/DEVIATIONS.md",
     "reports/stages.json"
   ],
-  "execution_location": "remote Codex for model baselines; local bounded model-free VM feasibility smoke authorized on 2026-10-16",
+  "execution_location": "Current Mac and remote handoff share one already-consumed first batch; local baseline smoke authorized on 2026-10-19.",
   "authorized_real_smoke": {
     "scope": "initial small baseline batch only",
     "unique_tasks": [
       "freecad-sketch-061",
       "freecad-part-076"
     ],
-    "endpoint_generation_calls": 1,
+    "endpoint_generation_calls": 2,
     "gui_task_max_turns": 3,
     "cli_tasks": [
       "freecad-sketch-061"
@@ -74,9 +76,13 @@
     "automatic_retries": 0,
     "requires_endpoint_and_environment_ready": true,
     "execute_when_ready_without_duplicate_scope_approval": true,
-    "pilot24_or_full200_authorized": false
+    "pilot24_or_full200_authorized": false,
+    "actual_generation_calls": 15,
+    "remaining_generation_calls": 0,
+    "cli_actual_max_turns": 7,
+    "endpoint_note": "Initial GPT failure plus successful Qwen image request; explicit model correction retained in shared ledger."
   },
-  "mac_infrastructure_evidence": "reports/MAC_NATIVE_QEMU_SMOKE.md",
+  "mac_infrastructure_evidence": "reports/BASELINE_RUNTIME_SMOKE.md",
   "vm_asset_observed": {
     "bytes": 28310503424,
     "sha256": "edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12",
@@ -84,17 +90,18 @@
     "remote_must_hash_its_own_file": true
   },
   "mac_infrastructure_result": {
-    "status": "PASS_NATIVE_HEADLESS_ONLY",
+    "status": "PASS_BASELINE_INFRASTRUCTURE",
     "controller_ready": true,
     "native_freecad_version": "1.1.0",
     "native_parametric_save_reopen": true,
     "gui_visible": true,
     "gui_api_sync_verified": false,
     "baseline_reproduced": false,
-    "model_calls": 0,
+    "model_calls": 15,
     "real_pairs": 0,
     "all_qemu_stopped": true,
-    "evidence": "reports/evidence/native_qemu_20261019/summary.json"
+    "evidence": "reports/evidence/baseline_runtime_20261019/campaign_summary.json",
+    "gui_native_save_reopen": true
   },
   "mac_infrastructure_history": {
     "2026-10-16": {
@@ -111,7 +118,37 @@
   "environment_route": {
     "kvm_available": false,
     "native_host_qemu_tcg_probe_verified": true,
-    "next_guide": "docs/NO_KVM_RUN.md",
-    "reference_gate_unchanged": true
+    "next_guide": "docs/RUN_TCG_BASELINE.md",
+    "reference_gate_unchanged": true,
+    "native_baseline_provider_verified": true
+  },
+  "baseline_smoke": {
+    "protocol": "exploratory_tcg",
+    "model": "qwen3.5-35b-a3b",
+    "thinking": false,
+    "evaluated_episodes": 3,
+    "unique_tasks": 2,
+    "strict_scores": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "saved_artifacts": 0,
+    "generation_calls": 15,
+    "known_input_tokens": 28304,
+    "known_output_tokens": 1369,
+    "unknown_output_reservation": 128,
+    "total_output_tokens": null,
+    "total_cost_usd": null,
+    "real_pairs": 0,
+    "all_vms_stopped": true,
+    "evidence": "reports/evidence/baseline_runtime_20261019/campaign_summary.json"
+  },
+  "go_no_go": {
+    "baseline_infrastructure": "GO",
+    "paper_reproduction": "NO-GO",
+    "more_generation_in_first_batch": "NO-GO",
+    "actc_pairs": "NO-GO",
+    "reason": "No saved agent artifact; GUI coordinate contract and CLI CAD API errors unresolved; first call budget exhausted."
   }
 }

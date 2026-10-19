@@ -1,0 +1,14 @@
+{
+  "classification": "endpoint_connectivity_only",
+  "benchmark_episode": false,
+  "base_url": "[REDACTED]",
+  "requested_model": "qwen3.5-35b-a3b",
+  "status": "FAIL",
+  "output_tokens": null,
+  "qwen_no_thinking": true,
+  "error": "RuntimeError",
+  "http_status": null,
+  "model_calls": 0,
+  "error_body_redacted": "batch circuit open or unresolved request",
+  "request_id": null
+}

@@ -1,0 +1,22 @@
+{
+  "skill": "haohao-shuohua",
+  "reviewed_files": [
+    "AGENTS.md",
+    "HANDOFF.md",
+    "REMOTE_CODEX_PROMPT.md",
+    "README.md",
+    "docs/NEXT_BASELINE_RUN.md",
+    "docs/RUN_TCG_BASELINE.md",
+    "reports/REPRO_STATUS.md",
+    "reports/BASELINE_REPRO.md",
+    "reports/BASELINE_RUNTIME_SMOKE.md",
+    "reports/PILOT.md",
+    "reports/FAILURE_CASES.md",
+    "reports/DEVIATIONS.md"
+  ],
+  "protected_code_spans_excluded": true,
+  "findings": [],
+  "fact_review": "Reconciled 3 evaluated episodes, 2 unique tasks, strict=0, artifacts=0, 15 calls, 1369 known output tokens, unknown earlier usage, 96 project tests and 7 upstream tests with source evidence.",
+  "edit_review": "Removed stale zero-call/zero-episode claims; preserve all commands, model IDs, task IDs and failed attempts. Technical punctuation in code is exempt.",
+  "main_point": "链路可运行，模型任务未通过；下一批先修坐标合同与 FreeCAD API 用法。"
+}

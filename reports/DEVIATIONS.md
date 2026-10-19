@@ -48,3 +48,24 @@
 | `CLI/run_cli.py:420` snap runtime | 固定 `trusted_headless_probe.py` + `--native-mode cmd`，复用 PATH/PYTHONPATH/LD_LIBRARY_PATH，去除显示变量；不改 HOME、无 agent shell | FreeCADCmd 1.1.0 实测 Body/Sketch/Pad、参数修改与保存重开；不是正式 TypedWorker 验收 |
 | GUI 宏结果未知 | 前两次宏仅启动一次；第三次使用新 clone 和固定 headless 脚本，输出路径嵌入部署内容，避免依赖 GUI 环境变量转发 | GUI 宏根因仍未知；headless PASS 单列，不作为 GUI 同步证据 |
 | 环境协议与阶段 gate | 当前 baseline 入口仍要求参考环境，原生 QEMU 不具备完整 runner 生命周期；新增文档定义无 KVM 后续适配 | 不手改 stage PASS；GUI-only、CLI、Hybrid 和 TCG 环境分开报告，真实模型任务/pair 仍为 0 |
+
+## 2026-10-19 GUI 修复与真实小批接入
+
+本节是后续状态，覆盖上文“尚未接入 baseline runner”“本轮没有凭证”“GUI 仅 headless 成功”等历史限制。逐次证据见 [BASELINE_RUNTIME_SMOKE](BASELINE_RUNTIME_SMOKE.md)，保留原失败记录。
+
+| pinned 来源或研究边界 | 本轮最小适配 | 影响与验证 |
+| --- | --- | --- |
+| `desktop_env/desktop_env.py` 的 factory、reset/start/close | 外部注入 `NativeQemuProvider`，独立 overlay、资产 SHA、loopback controller、QMP 与限时清理；内部保留 docker 名称以兼容初始化分支，manifest 明示 native QEMU/TCG | 没有伪造 RAM snapshot；reset 丢弃旧盘并重启。空 GUI 的官方 DesktopEnv reset/action/close 已实测通过；参考硬件 gate 不改 |
+| `desktop_env/evaluators/{metrics,getters}/__init__.py` | 从原导出表延迟加载原函数，不 eager 导入无关 Office/OCR 依赖 | 无 metric/getter 实现或期望规则替换；同一原函数身份经单测确认，CLI 原始脚本 dry-run 通过；未声称完整上游 sync |
+| snap FreeCAD GUI 启动 | 直接运行同一 snap ELF，沿用其 Python/库环境；固定宏输出路径，保留 HOME；私有 overlay 禁用 autostart，ack 后核验单实例 | 可信 GUI 保存重开和参数修改通过；旧超时唯一根因未确定。001 双实例验收被新 gate 拒绝，002 序列化失败保留，003 完整通过 |
+| `desktop_env/controllers/python.py`、CLI 的一次 `/execute` closure | GUI 改走持久化 TerminalBridge；CLI 在原 closure 外记录同一 HTTP payload 的一次派发；不确定结果停机隔离，环境 setup 外层尝试次数为 1 | 不自动重试非幂等变更；CLI prompt/tools/parser、GUI 原始 parser 保留，实际派发 JSONL 可追溯 |
+| `CLI/run_cli.py` 默认 EMPTY key 和 GUI 兼容服务配置 | 本项目从所选环境变量或 ignored dotenv 接 endpoint/model/key，可信 SDK constructor 注入认证；不把 key 放入 argv | HTTP mock 已验证实际 Authorization 和 token clamp；真实服务参数只留 ignored results，公开副本脱敏 |
+| SDK 默认重试与按 launch 预算 | SDK 零重试，共享 SQLite 整批账本；错误请求保留未知 token 预留，进程崩溃留下未决派发时拒绝继续；模型 wall 从首次请求开始，OS/GUI 启动另限时 | 批次总 15 次 / 16000 输出不重置；runner 整进程 1800 秒，超时杀本轮进程组。费用未知不用 0；原始错误类、usage 和 ledger 状态保留 |
+| `baseline/Qwen3-6/adapter.py` 与 CLI thinking flags | 用户指定开源多模态 Qwen3；服务列出 `qwen3.5-35b-a3b`。GUI 复用原 Qwen3-6 adapter，think_level=none；CLI 发 chat_template_kwargs，thinking=false；图片 probe 同配置 | Qwen3.5 图片接口实测成功；这是复用 adapter 的版本适配，不改原 prompt/parser 实现。服务别名不证明后端权重身份；有限 smoke 与论文模型/推理设置分开 |
+| 早期 GPT endpoint HTTP 500 | 用户改选 Qwen 后显式记录配置 correction，再恢复同一账本；未重发 GPT 请求 | 失败 1 次、usage unknown 与 128-token 预留仍占用；额外 Qwen probe 1 次，CLI 按整批剩余 calls 收紧，不能开启第二本账本 |
+| GUI 录制与 600 秒模型时限 | 关闭视频，保留 screenshot/traj/runtime/evaluation；两题独立 launch，避免第二次冷启动耗尽同一 launch 的模型时窗 | TCG 效率不与参考环境比较；不是 GUI 25-turn 或 full-200 成绩 |
+| `run_single_example`/CLI 错误时的上游 0 分 fallback | 仅在离线 `baseline_results` 汇总时读取 error/usage/circuit，保留 upstream_raw_score；运行故障的 strict=null + reason | 不改上游 result 或评分器。真实未通过可为 strict=0；没有 artifact 不用可信探针/fixture 补齐，ZIP 结构不冒充原生重开验证 |
+
+正式 ACTC 的 TypedWorker、GUI 主线程桥、same-S0 和双 VM 隔离仍未因这些基础设施 PASS 而验收。真实 pair 数继续为 0；24-pair pilot、full-200、训练与 veRL 未启动。
+
+`CLI/run_cli.py:100–102` 对 results-dir 有 CLI_ROOT 边界限制。第一次 live CLI 参数解析被拒绝（0 次模型生成、0 次 VM 启动）；`cad_cf.baseline` 改为先在 upstream `CLI/results/actc/<run_id>` 保存，进程结束后原样复制到本项目 `results/official_cli/<run_id>`。没有用 symlink 绕过检查，没有改上游安全边界；另拒绝已存在的 CLI run ID，防止上游默认 resume 混入历史结果。新路径经实际原 CLI dry-run 与边界回归检查通过，失败 `_001` 不覆盖，继续使用 `_002`。

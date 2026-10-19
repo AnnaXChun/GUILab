@@ -28,14 +28,7 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from cad_cf.terminal_bridge import TerminalBridge
-
-
-def sha256(path):
-    h = hashlib.sha256()
-    with path.open("rb") as stream:
-        for chunk in iter(lambda: stream.read(8 * 1024 * 1024), b""):
-            h.update(chunk)
-    return h.hexdigest()
+from cad_cf.qemu_runtime import sha256, qmp
 
 
 def export_dispatch_trace(ledger, destination):
@@ -50,30 +43,6 @@ def export_dispatch_trace(ledger, destination):
                     record["payload"] = json.loads(payload)
                 records.append(record)
     destination.write_text("".join(json.dumps(row) + "\n" for row in records))
-
-
-def qmp(path, command, arguments=None):
-    """One QMP command; async notifications do not count as command replies."""
-    with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as conn:
-        conn.settimeout(3)
-        conn.connect(str(path))
-        with conn.makefile("rwb") as stream:
-            if "QMP" not in json.loads(stream.readline()):
-                raise RuntimeError("missing QMP greeting")
-            def request(name, args, request_id):
-                stream.write((json.dumps({"execute": name, "arguments": args, "id": request_id}) + "\n").encode())
-                stream.flush()
-                while True:
-                    line = stream.readline()
-                    if not line:
-                        raise EOFError("QMP disconnected")
-                    reply = json.loads(line)
-                    if reply.get("id") == request_id:
-                        if "error" in reply:
-                            raise RuntimeError(str(reply["error"]))
-                        return reply["return"]
-            request("qmp_capabilities", {}, "capabilities")
-            return request(command, arguments or {}, "command")
 
 
 def prepare_x11(bridge, out):
@@ -148,22 +117,10 @@ def native_probe(bridge, session, endpoint, out, executable, qt_xcb=False, mode=
     """Fixed trusted macro, dispatched once; result/file polling is read-only."""
     if mode == "gui" and not executable:
         return {"status": "BLOCKED_BY_ENV", "reason": "no GUI FreeCAD executable in PATH"}
-    macro = Path(__file__).with_name("trusted_native_probe.FCMacro").read_bytes()
+    from cad_cf.gui_startup import gui_launch_source
+    macro = Path(__file__).with_name("trusted_gui_probe.FCMacro").read_text()
     guest = "/home/user/actc_infra_" + out.name
-    source = f"""import base64,json,os,pathlib,subprocess
-root=pathlib.Path({guest!r})
-if root.exists(): raise RuntimeError('private probe directory exists; refusing replay')
-root.mkdir()
-macro=root/'trusted_native_probe.FCMacro'
-macro.write_bytes(base64.b64decode({base64.b64encode(macro).decode()!r}))
-env=dict(os.environ,ACTC_INFRA_OUTPUT=str(root))
-if {qt_xcb!r}:
- env['QT_QPA_PLATFORM']='xcb'
- env.pop('WAYLAND_DISPLAY',None)
-with (root/'freecad_stdout.txt').open('w') as log:
- p=subprocess.Popen([{executable!r},str(macro)],env=env,stdin=subprocess.DEVNULL,stdout=log,stderr=subprocess.STDOUT,start_new_session=True)
-print(json.dumps({{'pid':p.pid}}))
-"""
+    source = gui_launch_source(guest,macro)
     if mode == "cmd":
         source = headless_dispatch_source(out)
     (out / "native_dispatch_source.py").write_text(source)
@@ -207,7 +164,7 @@ print(json.dumps({{'pid':p.pid}}))
             response.raise_for_status()
             (out / "native_gui.png").write_bytes(response.content)
     try:
-        response = session.post(endpoint + "/file", data={"file_path": guest + "/freecad_stdout.txt"}, timeout=(2, 8))
+        response = session.post(endpoint + "/file", data={"file_path": guest + ("/freecad_stdout.txt" if mode == "cmd" else "/stdout.txt")}, timeout=(2, 8))
         if response.status_code == 200:
             (out / "freecad_stdout.txt").write_bytes(response.content)
     except requests.RequestException:

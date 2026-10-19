@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "classification": "read_only_endpoint_health",
+  "generation_calls": 0,
+  "model_count": 200,
+  "selected_model": "qwen3.5-35b-a3b",
+  "selected_model_listed": true,
+  "private_directory_excluded": true,
+  "endpoint_sha256": "c91f7975f41fba20deb11fa4d886c1e99c51726bc8dd9d4711b0019ed745b902"
+}

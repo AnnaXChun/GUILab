@@ -1,10 +1,12 @@
 # 下一步：真实 baseline smoke
 
+最新状态：本文件下方是已执行的首批计划。2026-10-19 已完成 2 GUI + 1 CLI episode，strict 均为 0，无模型输出文件；整批 15 次生成已用完。当前下一步是离线修正 Qwen 坐标合同和 CLI FreeCAD API 用法，再提出下一批预算，不能在新主机重开本批。实际结果见 [BASELINE_RUNTIME_SMOKE](../reports/BASELINE_RUNTIME_SMOKE.md)。
+
 2026-10-16 用户更新要求：下一步应在远程 Codex 中收集 base URL、API key 与模型信息，真正运行少量实验，先跑通 baseline。用户随后要求本机“开始验证”；本机只做独立、限时、无模型的 VM 软件模拟检查，结果见 `../reports/MAC_VM_SMOKE.md`。本文件继续定义远程的模型 baseline 小批实验。2026-10-19 用户确认无法提供 KVM，后续先按 [无 KVM 路线](NO_KVM_RUN.md) 验证 TCG；本机最新证据见 [原生 QEMU 检查](../reports/MAC_NATIVE_QEMU_SMOKE.md)。
 
-## 远程接手后的第一件事
+## 当前执行位置与参数
 
-远程 Codex 先检查现有配置和 secret，再向用户一次性收集缺失项：
+2026-10-19 用户要求当前会话解决 GUI 宏并开始 baseline，当前 Mac 也可执行同一首批。已实现入口与实际命令见 [RUN_TCG_BASELINE](RUN_TCG_BASELINE.md)。先检查现有配置和 secret，再收集缺失项：
 
 > 接下来运行已授权的少量真实 CADWorld baseline smoke。请提供 BASE_URL、准确的 MODEL_ID、接口类型，并将 API key 通过当前远程环境可用的 secret 或环境变量注入方式提供，告诉我变量名。GUI baseline 需要模型支持图片输入；CLI 需要 Chat Completions 工具调用或上游支持的 JSON action 模式。你提供参数、环境就绪后，我会在下述小批预算内直接执行并报告结果。
 
@@ -36,24 +38,21 @@
 
 若提供的 endpoint 无法返回可计量 usage，应报告缺失并停止继续计费请求。无法提前给出美元成本时，报告请求/token 上限和缺失的价格信息，不虚构费用。`/models` 之类只读健康检查单独记录；失败后不要进行无限探测。
 
-## 先把自定义 endpoint 接入，再运行
+## endpoint 与执行入口
 
-**当前仓库的外层 baseline 启动器没有完成通用 endpoint 参数接入，需要远程 Codex 先做以下最小适配。当前文档中的变量名是接入约定，不代表现有脚本已经支持这些参数。**
+本轮已为 `cad_cf.baseline` 增加 base URL、model ID、provider、所选 key 环境变量和 ignored dotenv 接入，CLI 默认 EMPTY key 由可信 SDK 适配注入。HTTP mock 已验证 Authorization 和 token clamp，key 值不进 argv 或 launch manifest。GUI/CLI 原始 runner、prompt、parser、metric/getter 实现不变。
 
-1. `cad_cf/baseline.py` 的 GUI provider 仍写死为 Gemini，CLI base URL 仍为本地 `127.0.0.1:8001/v1`。为 provider、base URL、model ID 和 key 的环境变量名增加可配置入口，dry-run 显示实际计划；不把 key 值放入 argv、输出或 manifest。
-2. pinned GUI runner 已有 `--api_provider`、`--api_base_url`、`--model_name`。其中 `openai-compatible` 走 Chat Completions，并从 `CADWORLD_OPENAI_COMPATIBLE_API_KEY` / `CADWORLD_LOCAL_API_KEY` 读取 key；`openai` provider 的请求路径与其不同，不能只凭 endpoint 名称猜接口。按用户提供的接口类型映射，复用上游 prompt、parser 与 runner。
-3. pinned CLI 已有 `--base-url`、`--model`、`--api-key-name` 和 `--env-file`。但默认 client 的 key 是 `EMPTY`，`--api-key-name` 读的是指定 dotenv 文件，不能假定仅设置 `OPENAI_API_KEY` 或 `CADWORLD_API_KEY` 就会生效。用本项目适配层正确注入所选 secret，或使用不受跟踪的凭证文件；不修改上游评分器。
-4. CLI 的原始 `healthcheck()` 会调用 `/models`。如果服务确实不支持该路由，明确记录兼容性差异；可在可信适配层使用用户提供的准确 model ID 和受限生成验证，不能伪称已列出模型，也不能为探测服务自动启动或下载模型。
-5. 保留 `upstream_launch.py` 的零重试、usage trace、总时长和 token gate。它目前按 launch 共享预算，远程需要为 endpoint 验证、GUI 与 CLI 建立整批账本，确保 15 次 / 16000 输出 tokens 不因切换进程而重置。不要自动启用第二批。
-6. 用 HTTP mock 验证 endpoint、Authorization 注入、缺 key 拒绝、key 不出日志以及预算拒绝；通过后再发出用户 endpoint 的那一次真实验证请求。不会接触上游隐藏规则，也不需要引入新 benchmark。
+endpoint 验证、GUI 和 CLI 共用 SQLite batch ledger，不能通过分别启动进程重置 15 次 / 16000 输出 tokens 上限。未完成或失败的请求关闭 circuit。SDK 零重试，GUI 动作持久化单次派发，未知写入不重发。模型 wall gate 从首次请求计 600 秒，OS/GUI 启动另设有限 deadline；整个 runner 最多 1800 秒，超时终止本轮进程组。计时适配、视频禁用、TCG 和 lazy registry 单独报告。
 
-接口适配完成后给出实际可复制的命令，保存 provider/model、base URL 的必要非敏感信息、预算和 config/code SHA。不要在交接里直接写一条现有脚本并不支持的命令，声称它已经可运行。
+当前优先接 OpenAI Chat Completions 兼容接口。CLI 保留 upstream `/models` healthcheck 与默认 native tools；服务不支持时记录兼容性阻塞，不假称列出模型，也不启动模型服务。其他接口按 pinned provider 的实际路径核对。
+
+真实调用前使用 `probe_baseline_env.py` 生成 TCG 验收，证明空 GUI、单个 FreeCAD 实例和官方 DesktopEnv 的 reset/action/close。历史仅有 screenshot HTTP 200 或两个 GUI 的原始 PASS 不能启用计费。TCG 模型结果与参考硬件协议分开。
 
 ## 实际运行顺序
 
 1. 完成 pinned submodule 和原始 CLI unittest / dry-run。修正环境依赖，不把旧 `scripts/verify.py` 期待的 Mac 失败退出码当成远程通过条件。
 2. 显式准备官方 VM，记录来源与 SHA；按无 KVM 路线完成无模型的 reset/observe/action/close 检查。TCG 作为探索环境单列，当前参考 gate 不直接放宽；需要在适配层增加该协议的独立验收，不能手改 stage PASS。镜像与主机不可用时先解决环境，不能把 endpoint 文本响应当作 baseline 跑通。
-3. 收集 endpoint 参数并完成上述自定义接口适配，在整批预算内执行一次模型验证。GUI 使用图片，CLI 使用上游支持的 action 协议；兼容性失败就保留错误并修复，不切换到其他 benchmark。
+3. 收集 endpoint 参数，使用已实现接口，在整批预算内执行一次模型验证。GUI 使用图片，CLI 使用上游支持的 action 协议；兼容性失败就保留错误并修复，不切换到其他 benchmark。
 4. 启用本次进程的付费调用，在两道 creation 题上跑官方 GUI 3-turn smoke。核对真实轨迹、截图、动作、评分与产物收集，区分 strict=0 和 run_error。
 5. VM 与模型接口健康时，在同一服务/实际 model ID 上运行官方 CLI 的 sketch-061 小批。CLI 不提供运行时桌面截图，作为单独基线记录，不与 GUI 假称完全相同 observation budget。
 6. 汇总首批结果。只有基线真实闭环通过，才考虑后续原生 GUI/API 同步和 paired intervention。不要为了先出 ACTC 标签跳过 baseline。
@@ -71,4 +70,4 @@
 
 先索取缺失参数并检查环境，接着做最小接口适配并完成已授权的小批真实 baseline。拿到可执行条件后持续完成闭环，不以再次重述计划结束。只有需要新参数、实际环境不可用或超出这批预算时才报告具体阻塞。
 
-这些模型实验由接手仓库的远程 Codex 执行。本机 VM 基础设施检查不消耗本文件的模型调用预算，也不计入 baseline 任务数。
+模型实验可由当前已获授权的本机会话或接手的远程 Codex 执行，共用同一首批预算，不各自开第二批。可信 VM/GUI 检查不消耗模型调用额度，也不计入 baseline 任务数。

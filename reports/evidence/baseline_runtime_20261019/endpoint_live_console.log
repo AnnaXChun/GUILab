@@ -1,0 +1,1 @@
+{"classification": "endpoint_connectivity_only", "benchmark_episode": false, "base_url": "[REDACTED]", "requested_model": "gpt-5.4", "status": "FAIL", "output_tokens": null, "error": "InternalServerError", "http_status": 500, "model_calls": 1}

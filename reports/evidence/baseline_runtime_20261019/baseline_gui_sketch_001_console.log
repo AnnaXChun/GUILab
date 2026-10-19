@@ -1,0 +1,126 @@
+[2026-10-19 15:54:35,421 INFO run_cadworld/469] Args: {'path_to_vm': '/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/vm_data/FreeCAD-Ubuntu.qcow2', 'download_vm': False, 'vm_download_url': 'https://huggingface.co/Zihan1004/CADWorld/resolve/main/vm_data/FreeCAD-Ubuntu.qcow2?download=true', 'provider_name': 'docker', 'headless': True, 'action_space': 'pyautogui', 'observation_type': 'screenshot', 'sleep_after_execution': 0.3, 'wait_after_reset': 15.0, 'wait_before_eval': 2.0, 'max_steps': 3, 'max_trajectory_length': 10, 'screen_width': 1920, 'screen_height': 1080, 'client_password': '', 'vm_disk_size': '64G', 'vm_ram_size': '8G', 'vm_cpu_cores': '8', 'test_config_base_dir': '/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/evaluation_examples', 'test_all_meta_path': '/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/manifests/smoke_2.json', 'domain': 'sketch', 'result_dir': '/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_gui/baseline_gui_sketch_001', 'api_provider': 'openai-compatible', 'model_name': 'qwen3.5-35b-a3b', 'think_level': 'none', 'temperature': None, 'api_base_url': '[REDACTED]', 'api_base_urls': None, 'num_shards': 1, 'shard_index': 0, 'run_id': 'baseline_gui_sketch_001', 'record': False, 'skip_finished': False, 'log_level': 'INFO'}
+[2026-10-19 15:54:35,421 INFO run_cadworld/479] Tasks to run: 1 (shard 0/1, api_base_url=[REDACTED])
+[2026-10-19 15:54:35,457 INFO desktop_env/183] Initializing...
+[2026-10-19 16:01:55,949 INFO run_cadworld/515] [Domain]: sketch
+[2026-10-19 16:01:55,950 INFO run_cadworld/516] [Example ID]: freecad-sketch-061
+[2026-10-19 16:01:55,950 INFO run_cadworld/517] [Instruction]: Use GUI, Sketch one horizontal normal-geometry line segment 10 mm long in the XY plane. Save the completed model to /home/user/Unnamed.FCStd.
+[2026-10-19 16:01:55,951 INFO run_single/186] Task started: freecad-sketch-061
+[2026-10-19 16:01:55,951 INFO run_single/187] Instruction: Use GUI, Sketch one horizontal normal-geometry line segment 10 mm long in the XY plane. Save the completed model to /home/user/Unnamed.FCStd.
+[2026-10-19 16:01:55,951 INFO desktop_env/246] Resetting environment...
+[2026-10-19 16:01:55,951 INFO desktop_env/247] Switching task...
+[2026-10-19 16:01:55,951 INFO desktop_env/248] Setting counters...
+[2026-10-19 16:01:55,951 INFO desktop_env/277] Environment is clean, skipping snapshot revert (provider: docker).
+[2026-10-19 16:01:56,042 INFO desktop_env/285] Setting up environment...
+[2026-10-19 16:01:56,042 INFO setup/71] try to connect http://127.0.0.1:15010
+[2026-10-19 16:02:02,938 INFO setup/96] Executing setup step 1/1: _execute_setup
+[2026-10-19 16:02:03,187 INFO setup/378] Command executed successfully: rm -f /home/user/Unnamed.FCStd -> {
+  "error": "",
+  "output": "",
+  "returncode": 0,
+  "status": "success"
+}
+
+[2026-10-19 16:02:03,187 INFO setup/99] SETUP COMPLETED: _execute_setup({'command': ['rm', '-f', '/home/user/Unnamed.FCStd'], 'shell': False})
+[2026-10-19 16:02:03,187 INFO desktop_env/302] Environment setup complete.
+[2026-10-19 16:02:10,039 INFO python/54] Got screenshot successfully
+[2026-10-19 16:02:10,040 INFO run_single/191] Waiting 15.0s after reset for FreeCAD startup before agent control; this grace period is outside the agent action loop.
+[2026-10-19 16:02:10,040 INFO run_single/196] Waiting 15.0s after reset before agent control.
+[2026-10-19 16:02:26,398 INFO python/54] Got screenshot successfully
+[2026-10-19 16:02:26,399 INFO run_single/202] Recording enabled: False; started: False
+[2026-10-19 16:02:27,450 INFO api_agent/455] Thinking configuration for openai-compatible/qwen3.5-35b-a3b: requested=none normalized=none native=chat_template_kwargs.enable_thinking=false
+[2026-10-19 16:02:31,697 INFO api_agent/455] Step 1 raw model output: {
+  "reason": "The current screen shows the FreeCAD welcome dialog. To proceed with creating a sketch, I need to close this dialog first by clicking 'Done'. This will allow access to the main interface where I can create a new sketch and draw the required line segment.",
+  "action": "pyautogui.click(x=842, 737)"
+}
+[2026-10-19 16:02:31,697 INFO api_agent/455] Step 1 parsed model response action: pyautogui.click(x=842, 737)
+[2026-10-19 16:02:31,697 INFO api_agent/455] Step 1 parsed model response actions: ['pyautogui.click(x=842, 737)']
+[2026-10-19 16:02:31,698 INFO api_agent/455] Step 1 sanitized executable actions: ['pyautogui.click(x=842, y=737)']
+[2026-10-19 16:02:31,698 INFO run_single/215] Step 1: pyautogui.click(x=842, y=737)
+[2026-10-19 16:02:31,698 INFO run_single/216] Step 1 action: pyautogui.click(x=842, y=737)
+[2026-10-19 16:02:31,698 INFO desktop_env/398] Step 1 in trajectory 0 with action: pyautogui.click(x=842, y=737)
+[2026-10-19 16:02:38,156 INFO python/54] Got screenshot successfully
+[2026-10-19 16:02:38,157 INFO run_single/221] Step 1 result: reward=0 done=False info={} screenshot=step_1_20261019@160231698398.png
+[2026-10-19 16:02:39,842 INFO api_agent/455] Step 2 raw model output: {"reason": "The welcome dialog is still open and needs to be dismissed before proceeding with sketch creation. The 'Done' button at the bottom right of the dialog should be clicked to close it and access the main FreeCAD interface.", "action": "pyautogui.click(x=842, y=737)"}
+[2026-10-19 16:02:39,842 INFO api_agent/455] Step 2 parsed model response action: pyautogui.click(x=842, y=737)
+[2026-10-19 16:02:39,842 INFO api_agent/455] Step 2 parsed model response actions: ['pyautogui.click(x=842, y=737)']
+[2026-10-19 16:02:39,842 INFO api_agent/455] Step 2 sanitized executable actions: ['pyautogui.click(x=842, y=737)']
+[2026-10-19 16:02:39,842 INFO run_single/215] Step 2: pyautogui.click(x=842, y=737)
+[2026-10-19 16:02:39,842 INFO run_single/216] Step 2 action: pyautogui.click(x=842, y=737)
+[2026-10-19 16:02:39,842 INFO desktop_env/398] Step 2 in trajectory 0 with action: pyautogui.click(x=842, y=737)
+[2026-10-19 16:02:45,388 INFO python/54] Got screenshot successfully
+[2026-10-19 16:02:45,389 INFO run_single/221] Step 2 result: reward=0 done=False info={} screenshot=step_2_20261019@160239842607.png
+[2026-10-19 16:02:47,667 INFO api_agent/455] Step 3 raw model output: {"reason": "The welcome dialog is still open and blocking access to the main FreeCAD interface. The 'Done' button at the bottom right of the dialog needs to be clicked to close it and proceed with creating a sketch.", "action": "pyautogui.click(x=842, y=737)"}
+[2026-10-19 16:02:47,667 INFO api_agent/455] Step 3 parsed model response action: pyautogui.click(x=842, y=737)
+[2026-10-19 16:02:47,667 INFO api_agent/455] Step 3 parsed model response actions: ['pyautogui.click(x=842, y=737)']
+[2026-10-19 16:02:47,668 INFO api_agent/455] Step 3 sanitized executable actions: ['pyautogui.click(x=842, y=737)']
+[2026-10-19 16:02:47,668 INFO run_single/215] Step 3: pyautogui.click(x=842, y=737)
+[2026-10-19 16:02:47,668 INFO run_single/216] Step 3 action: pyautogui.click(x=842, y=737)
+[2026-10-19 16:02:47,668 INFO desktop_env/398] Step 3 in trajectory 0 with action: pyautogui.click(x=842, y=737)
+[2026-10-19 16:02:53,925 INFO python/54] Got screenshot successfully
+[2026-10-19 16:02:53,926 INFO run_single/221] Step 3 result: reward=0 done=False info={} screenshot=step_3_20261019@160247668136.png
+[2026-10-19 16:02:55,929 INFO setup/71] try to connect http://127.0.0.1:15010
+[2026-10-19 16:02:56,248 ERROR python/126] Failed to get file. Status code: 404
+[2026-10-19 16:02:56,249 INFO python/127] Retrying to get file.
+[2026-10-19 16:03:01,279 ERROR python/126] Failed to get file. Status code: 404
+[2026-10-19 16:03:01,280 INFO python/127] Retrying to get file.
+[2026-10-19 16:03:06,311 ERROR python/126] Failed to get file. Status code: 404
+[2026-10-19 16:03:06,311 INFO python/127] Retrying to get file.
+[2026-10-19 16:03:11,315 ERROR python/133] Failed to get file.
+[2026-10-19 16:03:11,315 ERROR freecad_sketch/250] Failed to download FCStd file: /home/user/Unnamed.FCStd
+[2026-10-19 16:03:11,315 INFO run_single/252] Evaluation result: 0.000
+[2026-10-19 16:03:11,363 ERROR python/126] Failed to get file. Status code: 404
+[2026-10-19 16:03:11,364 INFO python/127] Retrying to get file.
+[2026-10-19 16:03:16,420 ERROR python/126] Failed to get file. Status code: 404
+[2026-10-19 16:03:16,421 INFO python/127] Retrying to get file.
+[2026-10-19 16:03:21,493 ERROR python/126] Failed to get file. Status code: 404
+[2026-10-19 16:03:21,493 INFO python/127] Retrying to get file.
+[2026-10-19 16:03:26,494 ERROR python/133] Failed to get file.
+[2026-10-19 16:03:26,495 WARNING run_single/138] Generated FCStd not found in VM at /home/user/Unnamed.FCStd
+[2026-10-19 16:03:26,591 INFO run_single/164] Diagnostics written to /Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_gui/baseline_gui_sketch_001/freecad-sketch-061/evaluation.json (failure_class=no_output_file)
+[2026-10-19 16:03:26,594 INFO run_cadworld/541] [Result] sketch/freecad-sketch-061 = 0.000
+[2026-10-19 16:03:27,115 INFO run_cadworld/558] Average score: 0.000 over 1 task(s)
+[2026-10-19 16:03:27,115 INFO run_cadworld/559] Excel result: /Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_gui/baseline_gui_sketch_001/result.xlsx
+{
+  "kind": "gui-connect",
+  "command": [
+    "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/.venv/bin/python",
+    "scripts/python/run_cadworld.py",
+    "--no-download_vm",
+    "--path_to_vm",
+    "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/vm_data/FreeCAD-Ubuntu.qcow2",
+    "--test_all_meta_path",
+    "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/manifests/smoke_2.json",
+    "--agent",
+    "api",
+    "--api_provider",
+    "openai-compatible",
+    "--model_name",
+    "qwen3.5-35b-a3b",
+    "--max_steps",
+    "3",
+    "--run_id",
+    "baseline_gui_sketch_001",
+    "--result_dir",
+    "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_gui",
+    "--no-skip_finished",
+    "--no-record",
+    "--headless",
+    "--api_base_url",
+    "[REDACTED]",
+    "--domain",
+    "sketch",
+    "--think_level",
+    "none"
+  ],
+  "cwd": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD",
+  "protocol": "exploratory_tcg",
+  "task_id": "freecad-sketch-061",
+  "model": "qwen3.5-35b-a3b",
+  "base_url": "[REDACTED]",
+  "key_env": "CADWORLD_API_KEY",
+  "key_present": true,
+  "qwen_no_thinking": true,
+  "batch_ledger": "results/first_baseline_batch.sqlite",
+  "batch_max_calls": 15,
+  "batch_max_output_tokens": 16000
+}

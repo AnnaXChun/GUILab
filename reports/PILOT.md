@@ -9,7 +9,7 @@ synthetic 单测样本 N=9，仅用于工程验证。标签分布 `{'tie': 3, 'a
 
 2026-10-19 无 KVM FreeCADCmd 环境探针成功，前两次 GUI 宏超时；全部属于可信基础设施检查，未新增 pair、标签或模型 episode，见 `MAC_NATIVE_QEMU_SMOKE.md`。
 
-真实 GUI/API 任务均未运行。Strict Success、有效 pair 比例、标签覆盖率和 task bootstrap 95% CI 均为 null，分母 N=0。
+真实 GUI/API 配对尚未运行。配对 Strict Success、有效 pair 比例、标签覆盖率和 task bootstrap 95% CI 均为 null，真实 pair 分母 N=0。后续单路模型 baseline 见 `BASELINE_RUNTIME_SMOKE.md`，不能把它们计作 ACTC pair。
 
 原论文 GUI-only、官方 CLI 与 CADWorld-Hybrid (extended protocol) 分开报告。GO/NO-GO 需要结合阶段验收与真实差异重测。
 
@@ -29,6 +29,8 @@ synthetic 单测样本 N=9，仅用于工程验证。标签分布 `{'tie': 3, 'a
 | case_08_invalid_native | synthetic | True | gui | public_contract_only |
 
 完整指标与适用覆盖率见同名 JSON：valid_saved_artifact_rate、native_feature_tree_validity、preservation、editability probe、pair_valid_rate、label_coverage、route accuracy/regret 和分项成本。
-当前无真实 episode，part/sketch、creation/edit、failure_class 与 stage funnel 均无可统计样本。
+当前无真实 pair，配对的 part/sketch、creation/edit、failure_class 与 stage funnel 均无可统计样本；单路 baseline 另行报告。
 
 [研究假设] 真实标签能否改善路由，需要先验证原生文件恢复、双路径执行与差异重测；当前没有效果估计。
+
+2026-10-19 后续：真实单路 baseline 已评估 3 个 episode（2 GUI + 1 CLI，2 个不同任务），strict 均为 0，无模型输出文件；15 次生成已达到首批调用上限。它们不是反事实 pairs，不生成 preference/credit，不改变本报告的真实 pair N=0、CI=null 或 P3/P4 NO-GO。

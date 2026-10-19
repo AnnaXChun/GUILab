@@ -57,3 +57,7 @@ output 必须是新目录。脚本为原始底盘创建独立 qcow2 overlay，�
 ## Gate 如何处理
 
 现有 `preflight.py` 和 `run_baseline.sh` 仍执行参考环境 gate，不能把缺 KVM 的退出码改成 PASS。远程如采用 TCG，应增加明确的探索环境配置与独立的无模型验收记录，再让受限模型 smoke 使用该已验收环境；参考环境结果仍为未复现。不要手改 `stages.json` 解除 gate，也不要只给 baseline 启动命令加一个环境变量就声称适配完成。
+
+## runner 接入更新
+
+原生 provider、DesktopEnv 生命周期、endpoint/key 和共享预算账本已接入本项目适配层。上文尚未接 runner 的描述保留为前次交接状态；当前执行以 [RUN_TCG_BASELINE](RUN_TCG_BASELINE.md) 和最新报告为准。GUI 宏已有真实保存重开成功，冷启动实例竞争另有专项复验。模型实验仍需要真实 endpoint、model 与 key，可信宏不计作 baseline。

@@ -1,0 +1,3 @@
+# Preserve raw evidence bytes, including serial CRLF and pytest whitespace.
+reports/evidence/baseline_runtime_20261019/*.log -whitespace
+reports/evidence/baseline_runtime_20261019/**/serial.log -whitespace

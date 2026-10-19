@@ -1,0 +1,94 @@
+"""Fixed infrastructure probe; never an agent answer or CADWorld task artifact.
+
+Run once in a disposable VM using ACTC_INFRA_OUTPUT as its private directory.
+It tests real Sketch/Pad history, parameter editing, disk save and GUI reopen.
+"""
+import hashlib
+import json
+import math
+import os
+from pathlib import Path
+import time
+import traceback
+
+
+root = Path('/home/user/actc_gui_direct_001')
+root.mkdir(parents=True, exist_ok=True)
+artifact = root / "trusted_infrastructure.FCStd"
+result_path = root / "native_result.json"
+started = time.monotonic()
+result = {"classification": "trusted_environment_probe", "benchmark_success": None,
+          "agent_generated": False, "model_calls": 0}
+if artifact.exists() or result_path.exists():
+    raise RuntimeError("refusing duplicate probe execution or artifact overwrite")
+def stage(name):
+    with (root/'gui_phases.jsonl').open('a') as stream:
+        stream.write(json.dumps({'stage':name,'elapsed_seconds':round(time.monotonic()-started,3)})+'\n')
+stage('macro_entered')
+try:
+    import FreeCAD as App
+    import FreeCADGui as Gui
+    import Part
+    import Sketcher
+    stage('imports_ready')
+    doc = App.newDocument("ACTCInfrastructureProbe")
+    body = doc.addObject("PartDesign::Body", "Body")
+    sketch = body.newObject("Sketcher::SketchObject", "Sketch")
+    sketch.addGeometry(Part.Circle(App.Vector(0, 0, 0), App.Vector(0, 0, 1), 5), False)
+    sketch.addConstraint(Sketcher.Constraint("Coincident", 0, 3, -1, 1))
+    sketch.addConstraint(Sketcher.Constraint("Radius", 0, 5.0))
+    pad = body.newObject("PartDesign::Pad", "Pad")
+    pad.Profile = sketch
+    pad.Length = 10.0
+    sketch.Visibility = False
+    pad.Visibility = True
+    doc.recompute()
+    assert not pad.Shape.isNull() and pad.Shape.isValid()
+    assert math.isclose(pad.Shape.Volume, math.pi * 25 * 10, rel_tol=1e-7)
+    stage("initial_model_ready")
+    doc.saveAs(str(artifact))
+    App.closeDocument(doc.Name)
+    doc = App.openDocument(str(artifact))
+    doc.recompute()
+    assert doc.getObject("Sketch").TypeId == "Sketcher::SketchObject"
+    assert doc.getObject("Pad").TypeId == "PartDesign::Pad"
+    pad = doc.getObject("Pad")
+    initial_volume = pad.Shape.Volume
+    pad.Length = 12.0
+    doc.recompute()
+    assert math.isclose(pad.Shape.Volume, math.pi * 25 * 12, rel_tol=1e-7)
+    doc.save()
+    App.closeDocument(doc.Name)
+    doc = App.openDocument(str(artifact))
+    doc.recompute()
+    pad = doc.getObject("Pad")
+    sketch = doc.getObject("Sketch")
+    assert pad.Length.Value == 12.0
+    assert pad.Profile[0].Name == sketch.Name
+    assert doc.getObject("Body").Tip.Name == "Pad"
+    assert len(sketch.Constraints) == 2
+    assert pad.Shape.isValid() and len(pad.Shape.Solids) == 1
+    assert math.isclose(pad.Shape.Volume, math.pi * 25 * 12, rel_tol=1e-7)
+    assert not sketch.Visibility and pad.Visibility
+    stage("native_reopen_checks_passed")
+    Gui.activateWorkbench("PartDesignWorkbench")
+    Gui.Selection.clearSelection()
+    Gui.activeDocument().activeView().viewAxonometric()
+    Gui.activeDocument().activeView().fitAll()
+    Gui.updateGui()
+    stage("gui_refreshed")
+    result.update(status="PASS_NATIVE_INFRASTRUCTURE_ONLY", freecad_version=list(App.Version()),
+        artifact=str(artifact), sha256=hashlib.sha256(artifact.read_bytes()).hexdigest(),
+        saved=True, reopened_twice=True, gui_document=Gui.activeDocument().Document.Name,
+        active_document=App.ActiveDocument.Name, radius_mm=5.0, initial_length_mm=10.0,
+        final_length_mm=pad.Length.Value, initial_volume=initial_volume, final_volume=pad.Shape.Volume,
+        shape_valid=pad.Shape.isValid(), solids=len(pad.Shape.Solids),
+        profile=pad.Profile[0].Name, body_tip=doc.getObject("Body").Tip.Name,
+        sketch_constraints=len(sketch.Constraints),
+        objects=[{"name": o.Name, "type_id": o.TypeId} for o in doc.Objects])
+except Exception as exc:
+    result.update(status="FAIL", error=type(exc).__name__, message=str(exc), traceback=traceback.format_exc())
+finally:
+    result["wall_seconds"] = round(time.monotonic() - started, 3)
+    stage("result_written_next")
+    result_path.write_text(json.dumps(result, indent=2) + "\n")

@@ -2,7 +2,9 @@
 
 GUILab 当前承载 CADWorld Counterfactual Tool Credit（ACTC）复现工程。仓库根目录即项目根目录。
 
-下一步是远程少量真实 baseline smoke，具体见 [NEXT_BASELINE_RUN.md](docs/NEXT_BASELINE_RUN.md)。远程接手读 [HANDOFF.md](HANDOFF.md)，使用 [REMOTE_CODEX_PROMPT.md](REMOTE_CODEX_PROMPT.md) 启动；执行约束见 [AGENTS.md](AGENTS.md)。
+当前正在推进真实 baseline smoke，已实现无 KVM runner 和 endpoint 接入，命令见 [RUN_TCG_BASELINE.md](docs/RUN_TCG_BASELINE.md)；首批预算见 [NEXT_BASELINE_RUN.md](docs/NEXT_BASELINE_RUN.md)。远程接手读 [HANDOFF.md](HANDOFF.md)，使用 [REMOTE_CODEX_PROMPT.md](REMOTE_CODEX_PROMPT.md) 启动；执行约束见 [AGENTS.md](AGENTS.md)。
+
+首批已完成：Qwen3.5 的 2 个 GUI + 1 个 CLI episode 均 strict=0，无输出文件；GUI 卡在坐标定位，CLI 卡在 FreeCAD API 用法。15 次生成上限已用完，不能在远程重开首批。流程、失败与成本见 [BASELINE_RUNTIME_SMOKE](reports/BASELINE_RUNTIME_SMOKE.md)。
 
 ```bash
 git clone --recurse-submodules https://github.com/AnnaXChun/GUILab.git
@@ -15,7 +17,7 @@ bash scripts/test.sh
 
 [本项目新增] 在同一原生工程状态、同一公开语义子目标下，用隔离 GUI/API 分支采集工程自检 preference。规格见 [SPEC.md](SPEC.md)。上游固定 `e5d0ebab8bd28da6e98c68c61db05747d1647f7b`。
 
-当前已用 Mac ARM 原生 QEMU/TCG 启动官方 x86 VM、controller 和 FreeCAD GUI，无需 KVM；原生文件与单测的详细结果见 [最新无模型检查](reports/MAC_NATIVE_QEMU_SMOKE.md)。历史 7 个 upstream CLI 单测和 9 个 synthetic case 已通过，模型任务与真实 pairs 仍为 0。P0 live 与 P3/P4 均为 NO-GO，原因见 [复现状态](reports/REPRO_STATUS.md)。
+Mac ARM 原生 QEMU/TCG 已接入 pinned baseline runner，无需 KVM。可信 GUI 参数化保存重开、单实例空 GUI 的 DesktopEnv 闭环已通过；Qwen3.5 多模态接口已实测，真实任务、单测与成本见 [最新运行记录](reports/BASELINE_RUNTIME_SMOKE.md)。7 个 upstream CLI 单测和 9 个 synthetic case 已通过；真实 ACTC pairs 仍为 0，P3/P4 为 NO-GO，阶段状态见 [复现状态](reports/REPRO_STATUS.md)。
 
 ```bash
 bash scripts/bootstrap.sh
@@ -27,7 +29,7 @@ bash scripts/run_smoke.sh --dry-run --output results/my_mock_run
 
 `scripts/*.sh` 支持 `--help`、`--dry-run`，并传播非零退出码。`scripts/verify.py --run-id <new_name>` 保存确切命令、输出和退出码。目录已存在时拒绝覆盖；失败尝试必须留存。完整上游依赖只在 Linux x86_64 上用 `bash scripts/bootstrap.sh --full-upstream` 安装。
 
-真实基线先使用 `bash scripts/run_baseline.sh --kind gui-connect --dry-run` 查看固定命令。`ENABLE_PAID_RUNS=0` 保留为无配置默认；远程小批真实 smoke 已获后续授权，配置和环境就绪后按 NEXT_BASELINE_RUN 在批次进程启用；不自动下载 VM，不启动模型服务，不发起 full-200。基线启动时由外部 SDK guard 强制关闭重试并限制调用数、输出 tokens 与总时长；guard 只经 mock transport 验证，尚无真实 provider 运行。
+真实基线先使用 `bash scripts/run_baseline.sh --kind gui-connect --dry-run` 查看固定命令。`ENABLE_PAID_RUNS=0` 保留为无配置默认；本机或远程小批真实 smoke 已获后续授权，配置和环境就绪后按 RUN_TCG_BASELINE 在批次进程启用。入口不自动下载 VM、不启动模型服务或 full-200。SDK guard 强制关闭重试，实际生成请求计入同一 SQLite 批次账本；失败请求与未知 usage 占用保留，不能分入口重置额度。
 
 原生配对入口为 `python -m cad_cf.counterfactual --config configs/smoke.yaml --live-plan <reviewed-plan.json> --output results/<new-run>`。它要求 Linux preflight、P0/P1 的真实验收证据、同一停机 disk checkpoint 的两个新 overlay、当前 native checkpoint、两个固定候选和公开 task view。它不调用模型生成代码。`cad_cf.live.run_plan` 复用 upstream DesktopEnv 启动两个独立实例，拒绝用同 VM undo 冒充恢复。
 

@@ -1,8 +1,58 @@
 {
-  "P0": {"static_status": "FAIL", "live_status": "BLOCKED_BY_ENV", "upstream_cli_dry_run": "FAIL", "go": false},
-  "P1": {"static_status": "PASS", "live_status": "BLOCKED_BY_ENV", "native_save_reopen": "NOT_RUN", "go": false},
-  "P2": {"static_status": "PASS", "live_status": "BLOCKED_BY_ENV", "real_pairs": 0, "go": false},
-  "P3": {"static_status": "PASS", "live_status": "BLOCKED_BY_ENV", "smoke_real_valid_pairs": 0, "pilot_24": "NOT_RUN_BUDGET", "go": false},
-  "P4": {"status": "NOT_IMPLEMENTED", "go": false},
-  "P5": {"status": "NOT_IMPLEMENTED", "go": false}
+  "P0": {
+    "static_status": "PASS",
+    "live_status": "BLOCKED_BY_ENV",
+    "upstream_cli_dry_run": "PASS",
+    "go": false,
+    "static_scope": "project tests and adapted pinned CLI dry-run; full upstream dependency sync not completed",
+    "evidence": "evidence/baseline_runtime_20261019/INDEX.json",
+    "reference_environment_reason": "Linux/KVM unavailable; separate TCG smoke is not a reference PASS"
+  },
+  "P1": {
+    "static_status": "PASS",
+    "live_status": "BLOCKED_BY_ENV",
+    "native_save_reopen": "NOT_RUN",
+    "go": false
+  },
+  "P2": {
+    "static_status": "PASS",
+    "live_status": "BLOCKED_BY_ENV",
+    "real_pairs": 0,
+    "go": false
+  },
+  "P3": {
+    "static_status": "PASS",
+    "live_status": "BLOCKED_BY_ENV",
+    "smoke_real_valid_pairs": 0,
+    "pilot_24": "NOT_RUN_BUDGET",
+    "go": false
+  },
+  "P4": {
+    "status": "NOT_IMPLEMENTED",
+    "go": false
+  },
+  "P5": {
+    "status": "NOT_IMPLEMENTED",
+    "go": false
+  },
+  "exploratory_tcg": {
+    "status": "SMOKE_EVALUATED",
+    "reference_gate_passed": false,
+    "model": "qwen3.5-35b-a3b",
+    "evaluated_episodes": 3,
+    "gui_strict": [
+      0,
+      0
+    ],
+    "cli_strict": [
+      0
+    ],
+    "agent_saved_artifacts": 0,
+    "generation_calls": 15,
+    "known_output_tokens": 1369,
+    "real_pairs": 0,
+    "go_for_more_generation": false,
+    "go_for_pairs": false,
+    "evidence": "evidence/baseline_runtime_20261019/campaign_summary.json"
+  }
 }

@@ -2,8 +2,9 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 case "${1:-}" in
- --help) echo 'Usage: bootstrap.sh [--dry-run|--full-upstream]. Default installs lightweight project dependencies. Full upstream sync requires Linux x86_64.'; exit 0;;
+ --help) echo 'Usage: bootstrap.sh [--dry-run|--baseline|--full-upstream]. Default installs lightweight project dependencies. Full upstream sync requires Linux x86_64.'; exit 0;;
  --dry-run) echo 'Would verify pinned CADWORLD commit, uv sync local dependencies, and run upstream CLI unit tests; no VM/model downloads.'; exit 0;;
+ --baseline) ;;
  --full-upstream) test "$(uname -s)" = Linux && test "$(uname -m)" = x86_64 || exit 2;;
  '') ;;
  *) echo 'Unknown argument' >&2; exit 2;;
@@ -20,7 +21,11 @@ elif test ! -e vendor/CADWORLD/.git; then
 fi
 test "$(git -C vendor/CADWORLD rev-parse HEAD)" = "$pin"
 test -z "$(git -C vendor/CADWORLD status --porcelain --untracked-files=no)"
-uv sync --frozen
+if test "${1:-}" = --baseline; then
+ uv sync --frozen --group baseline
+else
+ uv sync --frozen
+fi
 PYTHONPATH=vendor/CADWORLD .venv/bin/python -m unittest CLI.test_terminal_agent
 if test "${1:-}" = --full-upstream; then
  (cd vendor/CADWORLD && uv sync --frozen && uv run python -m unittest CLI.test_terminal_agent && uv run python CLI/run_cli.py --dry-run)

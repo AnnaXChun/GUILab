@@ -47,3 +47,13 @@ def test_sdk_guards_disable_retries_without_network():
         client.close()
     finally:
         restore()
+
+
+def test_direct_runner_cannot_bypass_default_paid_gate(monkeypatch,tmp_path):
+    import sys
+    from cad_cf import upstream_launch
+    monkeypatch.delenv('ENABLE_PAID_RUNS',raising=False)
+    monkeypatch.setattr(sys,'argv',['upstream_launch','--kind','gui','--log',str(tmp_path/'unused'/'usage.jsonl'),'--','--no-download_vm'])
+    with pytest.raises(SystemExit,match='ENABLE_PAID_RUNS=0'):
+        upstream_launch.main()
+    assert not (tmp_path/'unused').exists()

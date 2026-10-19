@@ -1,0 +1,6 @@
+{"stage": "macro_entered", "elapsed_seconds": 0.008}
+{"stage": "imports_ready", "elapsed_seconds": 0.022}
+{"stage": "initial_model_ready", "elapsed_seconds": 68.793}
+{"stage": "native_reopen_checks_passed", "elapsed_seconds": 79.953}
+{"stage": "gui_refreshed", "elapsed_seconds": 98.844}
+{"stage": "result_written_next", "elapsed_seconds": 98.888}

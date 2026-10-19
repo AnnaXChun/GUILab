@@ -1,0 +1,37 @@
+{
+  "scope": "CLI 002 source; CLI 001 argument-boundary failure uses earlier campaign snapshot",
+  "files": [
+    {
+      "path": "cad_cf/baseline.py",
+      "sha256": "1d7de65546c9aa0e9cff35bad5c61bfff966f300d712b1801a24336728471a1e"
+    },
+    {
+      "path": "cad_cf/upstream_launch.py",
+      "sha256": "0d4cc60e5f03a3669df301567179d7c1190707d7ac8c1a8c621621e458f2b3e7"
+    },
+    {
+      "path": "cad_cf/upstream_runtime.py",
+      "sha256": "121635a6539f29bbb76ccb517128aa6403f42ba6eb5420e9b546effa775dc667"
+    },
+    {
+      "path": "cad_cf/qemu_runtime.py",
+      "sha256": "f54ac35f4e22f5c03757d20960f22560111b31b480c8b8ff4a1dc3666f896a9f"
+    },
+    {
+      "path": "cad_cf/gui_startup.py",
+      "sha256": "ecd902a050c7afb4731c950e834bcf64676da286fbcd664cdc0d69dea69708c1"
+    },
+    {
+      "path": "cad_cf/controller_guard.py",
+      "sha256": "8015190fe290039b470e7a66a6d63bbda46c2a1ee8787383ef0365457e767da2"
+    },
+    {
+      "path": "cad_cf/batch_budget.py",
+      "sha256": "097415c82b54feead2e28e03586739017408ebaae9779ad9ae224da1e122bd5f"
+    },
+    {
+      "path": "cad_cf/terminal_bridge.py",
+      "sha256": "3f410b8d2eb071e3d230ca623501f785ee0bfbdf015540f4666b961eea5d3190"
+    }
+  ]
+}

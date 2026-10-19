@@ -1,0 +1,394 @@
+{
+  "batch_limits": {
+    "calls": 15,
+    "output_tokens": 16000
+  },
+  "batch_requests": [
+    {
+      "id": "cc8f965a-8a86-4921-b134-d517b3087eba",
+      "output_tokens": null,
+      "reserved_output_tokens": 128,
+      "state": "uncertain"
+    },
+    {
+      "id": "5fc67856-7a78-44b1-8f6c-43ca75ace88a",
+      "output_tokens": 3,
+      "reserved_output_tokens": 128,
+      "state": "complete"
+    },
+    {
+      "id": "7efc1d7f-a3dd-400b-b536-940803726bd5",
+      "output_tokens": 82,
+      "reserved_output_tokens": 512,
+      "state": "complete"
+    },
+    {
+      "id": "035fe475-678e-4afb-aa25-041fd0ba69b7",
+      "output_tokens": 69,
+      "reserved_output_tokens": 512,
+      "state": "complete"
+    },
+    {
+      "id": "5d1f0c0a-aa4f-40cb-9798-3d9f723f92b2",
+      "output_tokens": 68,
+      "reserved_output_tokens": 512,
+      "state": "complete"
+    },
+    {
+      "id": "f8895795-2f1a-47d4-958c-726718327f71",
+      "output_tokens": 65,
+      "reserved_output_tokens": 512,
+      "state": "complete"
+    },
+    {
+      "id": "ce946e64-483b-4124-bfde-605e7d9e2ed8",
+      "output_tokens": 66,
+      "reserved_output_tokens": 512,
+      "state": "complete"
+    },
+    {
+      "id": "0b8801c7-9013-4fad-a459-4ce091df70a2",
+      "output_tokens": 65,
+      "reserved_output_tokens": 512,
+      "state": "complete"
+    },
+    {
+      "id": "b4817205-25bc-456f-a233-eb10f1bb9207",
+      "output_tokens": 131,
+      "reserved_output_tokens": 8192,
+      "state": "complete"
+    },
+    {
+      "id": "3a2af4fb-fdb8-43e1-9a56-90e9dc904b0d",
+      "output_tokens": 132,
+      "reserved_output_tokens": 8192,
+      "state": "complete"
+    },
+    {
+      "id": "d281bae5-6d6f-44c4-be7a-f6009c56dd45",
+      "output_tokens": 131,
+      "reserved_output_tokens": 8192,
+      "state": "complete"
+    },
+    {
+      "id": "8a9b22f4-d6a5-4a17-9e97-0d16459f4a84",
+      "output_tokens": 130,
+      "reserved_output_tokens": 8192,
+      "state": "complete"
+    },
+    {
+      "id": "9899ae92-b42b-4c03-a403-06cf63378f83",
+      "output_tokens": 134,
+      "reserved_output_tokens": 8192,
+      "state": "complete"
+    },
+    {
+      "id": "8c9a63b0-1cec-435a-b0c2-06a47827140e",
+      "output_tokens": 147,
+      "reserved_output_tokens": 8192,
+      "state": "complete"
+    },
+    {
+      "id": "be2894d8-3a9b-41d1-8cd2-ada8caa146f3",
+      "output_tokens": 146,
+      "reserved_output_tokens": 8192,
+      "state": "complete"
+    }
+  ],
+  "batch_status": {
+    "blocked": false,
+    "known_output_tokens": 1369,
+    "remaining_calls": 0,
+    "remaining_output_cap": 14503,
+    "requests": 15,
+    "unknown_output_reservation": 128
+  },
+  "cadworld_commit": "e5d0ebab8bd28da6e98c68c61db05747d1647f7b",
+  "classification": "bounded_baseline_smoke",
+  "configuration_corrections": [
+    "User explicitly requested an open multimodal Qwen3 model; select listed qwen3.5-35b-a3b with thinking disabled. Preserve earlier failed request and unknown usage reservation."
+  ],
+  "cost_unavailable_reason": "provider prices unavailable; earlier HTTP 500 usage unknown",
+  "episodes": [
+    {
+      "artifact_count": 0,
+      "artifacts": [],
+      "atomic_gui_actions": null,
+      "atomic_gui_actions_reason": "not instrumented; action code may contain multiple calls",
+      "diagnostics_present": true,
+      "evidence_directory": "results/official_gui/baseline_gui_sketch_001/freecad-sketch-061",
+      "input_tokens": 7948,
+      "kind": "gui",
+      "known_output_tokens": 219,
+      "model_calls": 3,
+      "note": "ZIP integrity is not evidence of FreeCAD reopen, geometry validity, or editable feature history.",
+      "output_tokens": 219,
+      "protocol": "exploratory_tcg",
+      "run_id": "baseline_gui_sketch_001",
+      "status": "EVALUATED",
+      "strict": 0.0,
+      "strict_unavailable_reason": null,
+      "task_id": "freecad-sketch-061",
+      "termination": null,
+      "trajectory_rows": 3,
+      "upstream_raw_score": 0.0,
+      "controller_ready_seconds": 133.987,
+      "gui_ready_seconds": 273.887,
+      "vm_stopped": true,
+      "console_log_span_seconds": 531.694,
+      "wall_measurement_note": "host console log span includes cold boot, not a direct provider-latency measurement",
+      "failure_class": "no_output_file",
+      "stages": {
+        "completion": {
+          "ok": false,
+          "termination": "max_steps_or_stopped",
+          "claimed_done": false,
+          "steps": 3,
+          "error_type": null,
+          "available": true
+        },
+        "file_saved": {
+          "ok": false
+        },
+        "file_valid": {
+          "ok": false
+        },
+        "precondition": {
+          "required": false,
+          "applicable": false,
+          "checkable": false,
+          "ok": null
+        },
+        "structure": {
+          "ok": null,
+          "n_checks": 0,
+          "units": [],
+          "unavailable_units": 1
+        },
+        "geometry": {
+          "ok": null,
+          "n_checks": 0,
+          "units": [],
+          "unavailable_units": 1
+        },
+        "process": {
+          "ok": null,
+          "n_checks": 0,
+          "units": [],
+          "unavailable_units": 1
+        },
+        "strict": {
+          "ok": false,
+          "score": 0.0
+        }
+      },
+      "turns": 3,
+      "execution_ledger_states": {
+        "gui_startup": {
+          "complete": 2
+        },
+        "gui_dispatch": {
+          "complete": 3
+        }
+      }
+    },
+    {
+      "artifact_count": 0,
+      "artifacts": [],
+      "atomic_gui_actions": null,
+      "atomic_gui_actions_reason": "not instrumented; action code may contain multiple calls",
+      "diagnostics_present": true,
+      "evidence_directory": "results/official_gui/baseline_gui_part_001/freecad-part-076",
+      "input_tokens": 7932,
+      "kind": "gui",
+      "known_output_tokens": 196,
+      "model_calls": 3,
+      "note": "ZIP integrity is not evidence of FreeCAD reopen, geometry validity, or editable feature history.",
+      "output_tokens": 196,
+      "protocol": "exploratory_tcg",
+      "run_id": "baseline_gui_part_001",
+      "status": "EVALUATED",
+      "strict": 0.0,
+      "strict_unavailable_reason": null,
+      "task_id": "freecad-part-076",
+      "termination": null,
+      "trajectory_rows": 3,
+      "upstream_raw_score": 0.0,
+      "controller_ready_seconds": 128.197,
+      "gui_ready_seconds": 296.955,
+      "vm_stopped": true,
+      "console_log_span_seconds": 535.447,
+      "wall_measurement_note": "host console log span includes cold boot, not a direct provider-latency measurement",
+      "failure_class": "no_output_file",
+      "stages": {
+        "completion": {
+          "ok": false,
+          "termination": "max_steps_or_stopped",
+          "claimed_done": false,
+          "steps": 3,
+          "error_type": null,
+          "available": true
+        },
+        "file_saved": {
+          "ok": false
+        },
+        "file_valid": {
+          "ok": false
+        },
+        "precondition": {
+          "required": false,
+          "applicable": false,
+          "checkable": false,
+          "ok": null
+        },
+        "structure": {
+          "ok": null,
+          "n_checks": 0,
+          "units": [],
+          "unavailable_units": 2
+        },
+        "geometry": {
+          "ok": null,
+          "n_checks": 0,
+          "units": [],
+          "unavailable_units": 2
+        },
+        "process": {
+          "ok": null,
+          "n_checks": 0,
+          "units": [],
+          "unavailable_units": 2
+        },
+        "strict": {
+          "ok": false,
+          "score": 0.0
+        }
+      },
+      "turns": 3,
+      "execution_ledger_states": {
+        "gui_startup": {
+          "complete": 2
+        },
+        "gui_dispatch": {
+          "complete": 3
+        }
+      }
+    },
+    {
+      "artifact_count": 0,
+      "artifacts": [],
+      "atomic_gui_actions": null,
+      "atomic_gui_actions_reason": "not instrumented; action code may contain multiple calls",
+      "diagnostics_present": true,
+      "evidence_directory": "results/official_cli/baseline_cli_sketch_002/freecad-sketch-061",
+      "input_tokens": 10347,
+      "kind": "cli",
+      "known_output_tokens": 951,
+      "model_calls": 7,
+      "note": "ZIP integrity is not evidence of FreeCAD reopen, geometry validity, or editable feature history.",
+      "output_tokens": 951,
+      "protocol": "exploratory_tcg",
+      "run_id": "baseline_cli_sketch_002",
+      "status": "EVALUATED",
+      "strict": 0.0,
+      "strict_unavailable_reason": null,
+      "task_id": "freecad-sketch-061",
+      "termination": "turn_limit",
+      "trajectory_rows": 14,
+      "upstream_raw_score": 0.0,
+      "controller_ready_seconds": 150.214,
+      "gui_ready_seconds": 222.636,
+      "vm_stopped": true,
+      "console_log_span_seconds": 556.986,
+      "wall_measurement_note": "host console log span includes cold boot, not a direct provider-latency measurement",
+      "failure_class": "no_output_file",
+      "stages": {
+        "completion": {
+          "ok": false,
+          "termination": "max_steps_or_stopped",
+          "claimed_done": false,
+          "steps": 7,
+          "error_type": null,
+          "available": true
+        },
+        "file_saved": {
+          "ok": false
+        },
+        "file_valid": {
+          "ok": false
+        },
+        "precondition": {
+          "required": false,
+          "applicable": false,
+          "checkable": false,
+          "ok": null
+        },
+        "structure": {
+          "ok": null,
+          "n_checks": 0,
+          "units": [],
+          "unavailable_units": 1
+        },
+        "geometry": {
+          "ok": null,
+          "n_checks": 0,
+          "units": [],
+          "unavailable_units": 1
+        },
+        "process": {
+          "ok": null,
+          "n_checks": 0,
+          "units": [],
+          "unavailable_units": 1
+        },
+        "strict": {
+          "ok": false,
+          "score": 0.0
+        }
+      },
+      "agent_seconds": 103.027,
+      "task_seconds": 153.501,
+      "turns": 7,
+      "terminal_calls": 7,
+      "execution_ledger_states": {
+        "gui_startup": {
+          "complete": 2
+        },
+        "controller_dispatch": {
+          "complete": 7
+        }
+      }
+    }
+  ],
+  "evaluated_episodes": 3,
+  "model": "qwen3.5-35b-a3b",
+  "model_generation_requests": 15,
+  "official_paper_success_reproduced": false,
+  "prelaunch_failures": [
+    {
+      "error": "pinned CLI results-dir boundary",
+      "model_calls": 0,
+      "run_id": "baseline_cli_sketch_001",
+      "vm_boots": 0
+    }
+  ],
+  "project_tests": 96,
+  "protocol": "exploratory_tcg",
+  "real_pairs": 0,
+  "reference_kvm_gate_passed": false,
+  "synthetic_cases": 9,
+  "thinking": false,
+  "total_cost_usd": null,
+  "total_output_tokens": null,
+  "upstream_cli_tests": 7,
+  "known_input_tokens": 28304,
+  "all_baseline_vms_stopped": true,
+  "asset_integrity": {
+    "base_bytes": 28310503424,
+    "base_sha256": "edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12",
+    "firmware_sha256": "2df617a6fd1bae41ec7c0e3bceca96c928a5a88d8dc198468d34733393ab2792",
+    "cadworld_commit": "e5d0ebab8bd28da6e98c68c61db05747d1647f7b",
+    "upstream_tracked_clean": true
+  },
+  "remaining_campaign_qemu_pids": []
+}

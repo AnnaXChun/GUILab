@@ -1,0 +1,50 @@
+.F                                                                       [100%]
+=================================== FAILURES ===================================
+_______ test_readiness_produces_parseable_acceptance_and_only_one_launch _______
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x1091e4b30>
+tmp_path = PosixPath('/private/var/folders/z3/r4gl35t95l9_h8wby1_hchnh0000gn/T/pytest-of-bytedance/pytest-118/test_readiness_produces_parsea0')
+
+    def test_readiness_produces_parseable_acceptance_and_only_one_launch(monkeypatch,tmp_path):
+        import json
+        from types import SimpleNamespace
+        from cad_cf import gui_startup
+        calls=[]
+        class Bridge:
+            def __init__(self,*args,**kwargs):pass
+            def execute(self,*args,**kwargs):calls.append(kwargs['execution_id']);return {'output':'{}','returncode':0}
+            def close(self):pass
+        monkeypatch.setattr(gui_startup,'TerminalBridge',Bridge)
+        ready={'status':'PASS_GUI_READY','window_visible':True,'pid':123,'documents':[]}
+        monkeypatch.setattr(gui_startup.requests,'post',lambda *a,**kw:SimpleNamespace(status_code=200,json=lambda:dict(ready)))
+        monkeypatch.setattr(gui_startup,'verify_singleton',lambda *a: {'remaining_pid':123,'singleton_verified':True})
+        result=gui_startup.prepare_gui('http://unused',tmp_path)
+>       saved=json.loads((tmp_path/'gui_ready.json').read_text())
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_gui_startup.py:42: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../../../.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/json/__init__.py:346: in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <json.decoder.JSONDecoder object at 0x108b38c20>
+s = '{\n  "status": "PASS_GUI_READY",\n  "window_visible": true,\n  "pid": 123,\n  "documents": [],\n  "host_poll_seconds"...n  "singleton_verified": true,\n  "singleton": {\n    "remaining_pid": 123,\n    "singleton_verified": true\n  }\n}\\n'
+_w = <built-in method match of re.Pattern object at 0x108bed630>
+
+    def decode(self, s, _w=WHITESPACE.match):
+        """Return the Python representation of ``s`` (a ``str`` instance
+        containing a JSON document).
+    
+        """
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+        end = _w(s, end).end()
+        if end != len(s):
+>           raise JSONDecodeError("Extra data", s, end)
+E           json.decoder.JSONDecodeError: Extra data: line 12 column 2 (char 228)
+
+../../../../.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/json/decoder.py:341: JSONDecodeError
+=========================== short test summary info ============================
+FAILED tests/test_gui_startup.py::test_readiness_produces_parseable_acceptance_and_only_one_launch
+1 failed, 1 passed in 0.54s

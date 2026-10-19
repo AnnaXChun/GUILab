@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "task_id": "freecad-sketch-061",
+  "category": "sketch",
+  "scores": {
+    "stored": 0.0,
+    "recomputed": 0.0
+  },
+  "completion": {
+    "available": true,
+    "steps": 3,
+    "termination": "max_steps_or_stopped",
+    "claimed_done": false,
+    "error_type": null
+  },
+  "artifacts": [
+    {
+      "vm_path": "/home/user/Unnamed.FCStd",
+      "host_path": null,
+      "saved": false
+    }
+  ],
+  "stages": {
+    "completion": {
+      "ok": false,
+      "termination": "max_steps_or_stopped",
+      "claimed_done": false,
+      "steps": 3,
+      "error_type": null,
+      "available": true
+    },
+    "file_saved": {
+      "ok": false
+    },
+    "file_valid": {
+      "ok": false
+    },
+    "precondition": {
+      "required": false,
+      "applicable": false,
+      "checkable": false,
+      "ok": null
+    },
+    "structure": {
+      "ok": null,
+      "n_checks": 0,
+      "units": [],
+      "unavailable_units": 1
+    },
+    "geometry": {
+      "ok": null,
+      "n_checks": 0,
+      "units": [],
+      "unavailable_units": 1
+    },
+    "process": {
+      "ok": null,
+      "n_checks": 0,
+      "units": [],
+      "unavailable_units": 1
+    },
+    "strict": {
+      "ok": false,
+      "score": 0.0
+    }
+  },
+  "units": [
+    {
+      "kind": "sketch",
+      "available": false,
+      "reason": "no saved .FCStd",
+      "func": "check_freecad_sketch"
+    }
+  ],
+  "failure_class": "no_output_file"
+}

@@ -1,0 +1,23 @@
+{
+  "artifact_count": 0,
+  "artifacts": [],
+  "atomic_gui_actions": null,
+  "atomic_gui_actions_reason": "not instrumented; action code may contain multiple calls",
+  "diagnostics_present": true,
+  "evidence_directory": "results/official_gui/baseline_gui_sketch_001/freecad-sketch-061",
+  "input_tokens": 7948,
+  "kind": "gui",
+  "known_output_tokens": 219,
+  "model_calls": 3,
+  "note": "ZIP integrity is not evidence of FreeCAD reopen, geometry validity, or editable feature history.",
+  "output_tokens": 219,
+  "protocol": "exploratory_tcg",
+  "run_id": "baseline_gui_sketch_001",
+  "status": "EVALUATED",
+  "strict": 0.0,
+  "strict_unavailable_reason": null,
+  "task_id": "freecad-sketch-061",
+  "termination": null,
+  "trajectory_rows": 3,
+  "upstream_raw_score": 0.0
+}

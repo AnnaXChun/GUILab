@@ -1,0 +1,1875 @@
+{
+  "classification": "sanitized_bounded_baseline_and_infrastructure_evidence",
+  "excluded": [
+    ".env",
+    "full model directory",
+    "SQLite",
+    "qcow2",
+    "firmware",
+    "FCStd",
+    "live viewer frames"
+  ],
+  "files": [
+    {
+      "path": "baseline_cli_sketch_001/launch.json",
+      "source": "results/baseline_cli_sketch_001/launch.json",
+      "source_sha256": "6812e1d81dd81152e09d4a447c64e743a191352b6ae028637d6ecb54fb9a758b",
+      "sha256": "b0b125161fd56a019813599bdc657ba95732af636a2bbe02b1f7bf2dc5c4c56e",
+      "redacted": true
+    },
+    {
+      "path": "baseline_cli_sketch_001/provider_usage.jsonl",
+      "source": "results/baseline_cli_sketch_001/provider_usage.jsonl",
+      "source_sha256": "7070d9b8681b40ab71e6b96f674b19ba509d957718e0c0330312da07dfedf56d",
+      "sha256": "7070d9b8681b40ab71e6b96f674b19ba509d957718e0c0330312da07dfedf56d",
+      "redacted": false
+    },
+    {
+      "path": "baseline_cli_sketch_001/runtime_config.json",
+      "source": "results/baseline_cli_sketch_001/runtime_config.json",
+      "source_sha256": "1e96b4077db02ba0f29c02c7db4db05d89e606dbe41c5dd5788639ce5dcad226",
+      "sha256": "1e96b4077db02ba0f29c02c7db4db05d89e606dbe41c5dd5788639ce5dcad226",
+      "redacted": false
+    },
+    {
+      "path": "baseline_cli_sketch_001_console.log",
+      "source": "results/baseline_debug_20261019/baseline_cli_sketch_001_console.log",
+      "source_sha256": "d37091657e90fa188b43ac97c804cbbfdc596ccfb292d4c26eded7745e8a8c1c",
+      "sha256": "1d6d5a94292f2c18ca980e58f7f2f3aca6193f1c91d2e7677e92d51ccb671107",
+      "redacted": true
+    },
+    {
+      "path": "baseline_cli_sketch_002/collected.json",
+      "source": "results/baseline_cli_sketch_002/collected.json",
+      "source_sha256": "17059f054378c559b3f3797e871377b9b921bdf71b544f0c05330db33784ae2b",
+      "sha256": "17059f054378c559b3f3797e871377b9b921bdf71b544f0c05330db33784ae2b",
+      "redacted": false
+    },
+    {
+      "path": "baseline_cli_sketch_002/launch.json",
+      "source": "results/baseline_cli_sketch_002/launch.json",
+      "source_sha256": "99c215a42b7754a0e697df2fb298d9da4387a84c7b4411d09a9d892059a6e09e",
+      "sha256": "08e277f39b4002147881521d1653a5c2c9ed30579d58891497c772fcb00cf521",
+      "redacted": true
+    },
+    {
+      "path": "baseline_cli_sketch_002/provider_usage.jsonl",
+      "source": "results/baseline_cli_sketch_002/provider_usage.jsonl",
+      "source_sha256": "a2873e1f71ce287caa266c5cdb0946d3e5583da25b637302e2fed8d0ea755d31",
+      "sha256": "a2873e1f71ce287caa266c5cdb0946d3e5583da25b637302e2fed8d0ea755d31",
+      "redacted": false
+    },
+    {
+      "path": "baseline_cli_sketch_002/runtime_config.json",
+      "source": "results/baseline_cli_sketch_002/runtime_config.json",
+      "source_sha256": "dbd15c469bc18249c9b1c1f80f96f340e24a59035861868d0091d53803e590db",
+      "sha256": "dbd15c469bc18249c9b1c1f80f96f340e24a59035861868d0091d53803e590db",
+      "redacted": false
+    },
+    {
+      "path": "baseline_cli_sketch_002/source_snapshot/INDEX.json",
+      "source": "results/baseline_cli_sketch_002/source_snapshot/INDEX.json",
+      "source_sha256": "c0f46505a627473ebaaef17f0b6d2645b2bffce47e5c7a92e10c2405ada2b10b",
+      "sha256": "c0f46505a627473ebaaef17f0b6d2645b2bffce47e5c7a92e10c2405ada2b10b",
+      "redacted": false
+    },
+    {
+      "path": "baseline_cli_sketch_002/source_snapshot/baseline.py",
+      "source": "results/baseline_cli_sketch_002/source_snapshot/baseline.py",
+      "source_sha256": "1d7de65546c9aa0e9cff35bad5c61bfff966f300d712b1801a24336728471a1e",
+      "sha256": "1d7de65546c9aa0e9cff35bad5c61bfff966f300d712b1801a24336728471a1e",
+      "redacted": false
+    },
+    {
+      "path": "baseline_cli_sketch_002/source_snapshot/batch_budget.py",
+      "source": "results/baseline_cli_sketch_002/source_snapshot/batch_budget.py",
+      "source_sha256": "097415c82b54feead2e28e03586739017408ebaae9779ad9ae224da1e122bd5f",
+      "sha256": "097415c82b54feead2e28e03586739017408ebaae9779ad9ae224da1e122bd5f",
+      "redacted": false
+    },
+    {
+      "path": "baseline_cli_sketch_002/source_snapshot/controller_guard.py",
+      "source": "results/baseline_cli_sketch_002/source_snapshot/controller_guard.py",
+      "source_sha256": "8015190fe290039b470e7a66a6d63bbda46c2a1ee8787383ef0365457e767da2",
+      "sha256": "8015190fe290039b470e7a66a6d63bbda46c2a1ee8787383ef0365457e767da2",
+      "redacted": false
+    },
+    {
+      "path": "baseline_cli_sketch_002/source_snapshot/gui_startup.py",
+      "source": "results/baseline_cli_sketch_002/source_snapshot/gui_startup.py",
+      "source_sha256": "ecd902a050c7afb4731c950e834bcf64676da286fbcd664cdc0d69dea69708c1",
+      "sha256": "ecd902a050c7afb4731c950e834bcf64676da286fbcd664cdc0d69dea69708c1",
+      "redacted": false
+    },
+    {
+      "path": "baseline_cli_sketch_002/source_snapshot/qemu_runtime.py",
+      "source": "results/baseline_cli_sketch_002/source_snapshot/qemu_runtime.py",
+      "source_sha256": "f54ac35f4e22f5c03757d20960f22560111b31b480c8b8ff4a1dc3666f896a9f",
+      "sha256": "f54ac35f4e22f5c03757d20960f22560111b31b480c8b8ff4a1dc3666f896a9f",
+      "redacted": false
+    },
+    {
+      "path": "baseline_cli_sketch_002/source_snapshot/terminal_bridge.py",
+      "source": "results/baseline_cli_sketch_002/source_snapshot/terminal_bridge.py",
+      "source_sha256": "3f410b8d2eb071e3d230ca623501f785ee0bfbdf015540f4666b961eea5d3190",
+      "sha256": "3f410b8d2eb071e3d230ca623501f785ee0bfbdf015540f4666b961eea5d3190",
+      "redacted": false
+    },
+    {
+      "path": "baseline_cli_sketch_002/source_snapshot/upstream_launch.py",
+      "source": "results/baseline_cli_sketch_002/source_snapshot/upstream_launch.py",
+      "source_sha256": "0d4cc60e5f03a3669df301567179d7c1190707d7ac8c1a8c621621e458f2b3e7",
+      "sha256": "0d4cc60e5f03a3669df301567179d7c1190707d7ac8c1a8c621621e458f2b3e7",
+      "redacted": false
+    },
+    {
+      "path": "baseline_cli_sketch_002/source_snapshot/upstream_runtime.py",
+      "source": "results/baseline_cli_sketch_002/source_snapshot/upstream_runtime.py",
+      "source_sha256": "121635a6539f29bbb76ccb517128aa6403f42ba6eb5420e9b546effa775dc667",
+      "sha256": "121635a6539f29bbb76ccb517128aa6403f42ba6eb5420e9b546effa775dc667",
+      "redacted": false
+    },
+    {
+      "path": "baseline_cli_sketch_002_console.log",
+      "source": "results/baseline_debug_20261019/baseline_cli_sketch_002_console.log",
+      "source_sha256": "0df16462f5cd6ce8a085a2fec20a276f938972a475fd776a3ebc2d76f704dc9e",
+      "sha256": "efeeb9edb01302e03628d592a1703db651aa83fdfb36984027f70d7f55654161",
+      "redacted": true
+    },
+    {
+      "path": "baseline_cli_sketch_002_viewer.log",
+      "source": "results/baseline_debug_20261019/baseline_cli_sketch_002_viewer.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false
+    },
+    {
+      "path": "baseline_dependencies.log",
+      "source": "results/baseline_debug_20261019/baseline_dependencies.log",
+      "source_sha256": "c40ce59562fff12e00c6e83e8722cafe08b707cb6c67aecfcc8d36840ae77ede",
+      "sha256": "c40ce59562fff12e00c6e83e8722cafe08b707cb6c67aecfcc8d36840ae77ede",
+      "redacted": false
+    },
+    {
+      "path": "baseline_dryrun.json",
+      "source": "results/baseline_debug_20261019/baseline_dryrun.json",
+      "source_sha256": "094114fcae7d56e249e771b07e4bbb53365f79a082137a231390159623faa6b9",
+      "sha256": "094114fcae7d56e249e771b07e4bbb53365f79a082137a231390159623faa6b9",
+      "redacted": false
+    },
+    {
+      "path": "baseline_gui_part_001/collected.json",
+      "source": "results/baseline_gui_part_001/collected.json",
+      "source_sha256": "8128806f56cc92d55b8f2d28b126cb8f85e292abfc58cd2905e73dfed2057383",
+      "sha256": "8128806f56cc92d55b8f2d28b126cb8f85e292abfc58cd2905e73dfed2057383",
+      "redacted": false
+    },
+    {
+      "path": "baseline_gui_part_001/launch.json",
+      "source": "results/baseline_gui_part_001/launch.json",
+      "source_sha256": "f3f39f9862720f755d924f40e8585b0839ad27152061bcfccd9264ecd5f1db97",
+      "sha256": "b4093dd4ad7db3a443919d6041d034664417e91df3ad36caabee44f6c7676b97",
+      "redacted": true
+    },
+    {
+      "path": "baseline_gui_part_001/provider_usage.jsonl",
+      "source": "results/baseline_gui_part_001/provider_usage.jsonl",
+      "source_sha256": "388819e464fdbaf40ae3c4628af569ea177b0ae54382b8af72ebf99cdff13ffd",
+      "sha256": "388819e464fdbaf40ae3c4628af569ea177b0ae54382b8af72ebf99cdff13ffd",
+      "redacted": false
+    },
+    {
+      "path": "baseline_gui_part_001/runtime_config.json",
+      "source": "results/baseline_gui_part_001/runtime_config.json",
+      "source_sha256": "c16f1e24ff3854e7e9f3e1475307a9e435cba671ff9e5aa823b48f623eeb5f55",
+      "sha256": "c16f1e24ff3854e7e9f3e1475307a9e435cba671ff9e5aa823b48f623eeb5f55",
+      "redacted": false
+    },
+    {
+      "path": "baseline_gui_part_001_console.log",
+      "source": "results/baseline_debug_20261019/baseline_gui_part_001_console.log",
+      "source_sha256": "f2ff61bc6476b3f9ab02ff2eca1463183f40b46db740cffee158d3abfa9f2ae3",
+      "sha256": "b0494b811c6c5a37b7c3750fe03500ba6b26e9aa5ba1c0411ff158024f1683c5",
+      "redacted": true
+    },
+    {
+      "path": "baseline_gui_part_001_viewer.log",
+      "source": "results/baseline_debug_20261019/baseline_gui_part_001_viewer.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false
+    },
+    {
+      "path": "baseline_gui_sketch_001/collected.json",
+      "source": "results/baseline_gui_sketch_001/collected.json",
+      "source_sha256": "a7b4d17dc179477b6bdd12def84653695edf229bb53bd07db8e37ca25ddc3d33",
+      "sha256": "a7b4d17dc179477b6bdd12def84653695edf229bb53bd07db8e37ca25ddc3d33",
+      "redacted": false
+    },
+    {
+      "path": "baseline_gui_sketch_001/launch.json",
+      "source": "results/baseline_gui_sketch_001/launch.json",
+      "source_sha256": "1b00489a71c98ddffd66d3f6aa6923b871f8da1133088fe19f9ecd7b639ae186",
+      "sha256": "028a87603ddb8eb0226f132eacf60bd28285e8a363c97355af87b74795e129f6",
+      "redacted": true
+    },
+    {
+      "path": "baseline_gui_sketch_001/provider_usage.jsonl",
+      "source": "results/baseline_gui_sketch_001/provider_usage.jsonl",
+      "source_sha256": "2f311539fd59193287bf90b7f7b65c1a01d05d5c3f3cb100dbae7eed849ae9a5",
+      "sha256": "2f311539fd59193287bf90b7f7b65c1a01d05d5c3f3cb100dbae7eed849ae9a5",
+      "redacted": false
+    },
+    {
+      "path": "baseline_gui_sketch_001/runtime_config.json",
+      "source": "results/baseline_gui_sketch_001/runtime_config.json",
+      "source_sha256": "5876dd41d5b9dfad21d6aeb58c0998b6ce8969203928275c73c4a636cf650ed5",
+      "sha256": "5876dd41d5b9dfad21d6aeb58c0998b6ce8969203928275c73c4a636cf650ed5",
+      "redacted": false
+    },
+    {
+      "path": "baseline_gui_sketch_001_console.log",
+      "source": "results/baseline_debug_20261019/baseline_gui_sketch_001_console.log",
+      "source_sha256": "a237b8b6310ec8c724ba8a4c78f02fef62382be8168b394e64223efd77a9e893",
+      "sha256": "d2fa3771b8c8c771332f002b869b3e1d6e6d2085d4a109b0a5fb7a539219d628",
+      "redacted": true
+    },
+    {
+      "path": "baseline_gui_sketch_001_viewer.log",
+      "source": "results/baseline_debug_20261019/baseline_gui_sketch_001_viewer.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/INDEX.json",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/INDEX.json",
+      "source_sha256": "0fc8e7c35e43349b16c9403a38afce9666b4ceb34f12a4c3eb4ce74b11ee77e6",
+      "sha256": "0fc8e7c35e43349b16c9403a38afce9666b4ceb34f12a4c3eb4ce74b11ee77e6",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/__init__.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/__init__.py",
+      "source_sha256": "e4543047e38d02220643e77b882f3b44602fc8883ace518fef7ae812c87a61e8",
+      "sha256": "e4543047e38d02220643e77b882f3b44602fc8883ace518fef7ae812c87a61e8",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/artifact_state.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/artifact_state.py",
+      "source_sha256": "01f7fa94c495991dee700152e7b17104d8566ef74e7b5e0bcdf82bd49263a025",
+      "sha256": "01f7fa94c495991dee700152e7b17104d8566ef74e7b5e0bcdf82bd49263a025",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/baseline.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/baseline.py",
+      "source_sha256": "c626e3160387838a8db596107c2bb918c103475de09f4fd96c68964ac07b9b2d",
+      "sha256": "c626e3160387838a8db596107c2bb918c103475de09f4fd96c68964ac07b9b2d",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/batch_budget.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/batch_budget.py",
+      "source_sha256": "097415c82b54feead2e28e03586739017408ebaae9779ad9ae224da1e122bd5f",
+      "sha256": "097415c82b54feead2e28e03586739017408ebaae9779ad9ae224da1e122bd5f",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/budget.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/budget.py",
+      "source_sha256": "779cd9d19ebafd3ec0642e3f8b56a8d9abb4757ee763a5305f6ef5c7d0f30257",
+      "sha256": "779cd9d19ebafd3ec0642e3f8b56a8d9abb4757ee763a5305f6ef5c7d0f30257",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/cadworld_adapter.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/cadworld_adapter.py",
+      "source_sha256": "cd53b375eeb725367d514be1e7101093ded05307b576f1397aa14b422e2325ce",
+      "sha256": "cd53b375eeb725367d514be1e7101093ded05307b576f1397aa14b422e2325ce",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/candidate_generator.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/candidate_generator.py",
+      "source_sha256": "29921a5955cb3ac3b05b24162492e2ffac45c0821f4c41ebcbe3f303a9226b17",
+      "sha256": "29921a5955cb3ac3b05b24162492e2ffac45c0821f4c41ebcbe3f303a9226b17",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/controller_guard.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/controller_guard.py",
+      "source_sha256": "8015190fe290039b470e7a66a6d63bbda46c2a1ee8787383ef0365457e767da2",
+      "sha256": "8015190fe290039b470e7a66a6d63bbda46c2a1ee8787383ef0365457e767da2",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/counterfactual.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/counterfactual.py",
+      "source_sha256": "8c0ebfada50d58c579fe56dcc09ed51a105ff8685439540d767803e1e5449767",
+      "sha256": "8c0ebfada50d58c579fe56dcc09ed51a105ff8685439540d767803e1e5449767",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/dataset.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/dataset.py",
+      "source_sha256": "b1c7c7f78c906a79a099a674d38a45646de7bdda237799186fafe82c74130ad1",
+      "sha256": "b1c7c7f78c906a79a099a674d38a45646de7bdda237799186fafe82c74130ad1",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/desktop_viewer.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/desktop_viewer.py",
+      "source_sha256": "1c42e7581e357fa2216992bafd32227498ce913cb2e1da355e72a20101d035a2",
+      "sha256": "1c42e7581e357fa2216992bafd32227498ce913cb2e1da355e72a20101d035a2",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/freecad_worker.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/freecad_worker.py",
+      "source_sha256": "c85c212b66e0bfb55237dc71017062888c8e7ea82a9cf7892c5c62e1addb5aaa",
+      "sha256": "c85c212b66e0bfb55237dc71017062888c8e7ea82a9cf7892c5c62e1addb5aaa",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/guest_gui_bridge.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/guest_gui_bridge.py",
+      "source_sha256": "8696ae0cbe9bce4fd3630012ac81a34ac10ffea53ecf2bc8fb334c76c93e67b0",
+      "sha256": "8696ae0cbe9bce4fd3630012ac81a34ac10ffea53ecf2bc8fb334c76c93e67b0",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/gui_startup.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/gui_startup.py",
+      "source_sha256": "ecd902a050c7afb4731c950e834bcf64676da286fbcd664cdc0d69dea69708c1",
+      "sha256": "ecd902a050c7afb4731c950e834bcf64676da286fbcd664cdc0d69dea69708c1",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/instruction.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/instruction.py",
+      "source_sha256": "422fa6b6658b5a30e927977149022baec8b81112dabaee8c6612e86d0a76addf",
+      "sha256": "422fa6b6658b5a30e927977149022baec8b81112dabaee8c6612e86d0a76addf",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/live.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/live.py",
+      "source_sha256": "364f9aa1fdf099683fcf69ae8b48db70b4df09a66782192b9f1c5a43c578eee2",
+      "sha256": "364f9aa1fdf099683fcf69ae8b48db70b4df09a66782192b9f1c5a43c578eee2",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/metrics.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/metrics.py",
+      "source_sha256": "9299ed7153673d8882374fbf3ced95b77dbed2905f5e92acb554667639f150fb",
+      "sha256": "9299ed7153673d8882374fbf3ced95b77dbed2905f5e92acb554667639f150fb",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/mock_backend.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/mock_backend.py",
+      "source_sha256": "c14acefb8955d77d05b027b78a7031f1272bd51c6d3c1bcf3428c2fc40bed3b5",
+      "sha256": "c14acefb8955d77d05b027b78a7031f1272bd51c6d3c1bcf3428c2fc40bed3b5",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/model_probe.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/model_probe.py",
+      "source_sha256": "bac61af95e9fd6f3880ce6e220fa4caec82b75c8e7f77dc3295ea070b74deaa7",
+      "sha256": "bac61af95e9fd6f3880ce6e220fa4caec82b75c8e7f77dc3295ea070b74deaa7",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/native_backend.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/native_backend.py",
+      "source_sha256": "8b765bed5cbde6d4b87019c24fed57be7ed5fbcde95241782afaf7a1335ec272",
+      "sha256": "8b765bed5cbde6d4b87019c24fed57be7ed5fbcde95241782afaf7a1335ec272",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/posthoc.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/posthoc.py",
+      "source_sha256": "7b47c02672356a21d94eda8d7cb5974157dfc6e9b45d45d65a23a9ae9fb604ad",
+      "sha256": "7b47c02672356a21d94eda8d7cb5974157dfc6e9b45d45d65a23a9ae9fb604ad",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/preflight.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/preflight.py",
+      "source_sha256": "e83f68ddc4a0d1bcacc8f42f6615835d3955823d80e41a6203af2ae2bb4bc993",
+      "sha256": "e83f68ddc4a0d1bcacc8f42f6615835d3955823d80e41a6203af2ae2bb4bc993",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/qemu_runtime.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/qemu_runtime.py",
+      "source_sha256": "f54ac35f4e22f5c03757d20960f22560111b31b480c8b8ff4a1dc3666f896a9f",
+      "sha256": "f54ac35f4e22f5c03757d20960f22560111b31b480c8b8ff4a1dc3666f896a9f",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/router.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/router.py",
+      "source_sha256": "b1ed294cd09c49c1d5b6f0dddd106a7ef41fbf94ffcde036a55f476a4cf39b5c",
+      "sha256": "b1ed294cd09c49c1d5b6f0dddd106a7ef41fbf94ffcde036a55f476a4cf39b5c",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/selection.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/selection.py",
+      "source_sha256": "f6671e0fa7360da3b0710d97fd8f2afe481b125db58d2460a8ba9d372732db45",
+      "sha256": "f6671e0fa7360da3b0710d97fd8f2afe481b125db58d2460a8ba9d372732db45",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/self_verifier.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/self_verifier.py",
+      "source_sha256": "0345e3e6e325466b0d976da56d96bfb900c0d02558737c9f418e3ec04b22e08f",
+      "sha256": "0345e3e6e325466b0d976da56d96bfb900c0d02558737c9f418e3ec04b22e08f",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/snapshot.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/snapshot.py",
+      "source_sha256": "b202ba6229fb7addba696091f56483fb4de3560383485dac64310a0af2bab6e9",
+      "sha256": "b202ba6229fb7addba696091f56483fb4de3560383485dac64310a0af2bab6e9",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/terminal_bridge.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/terminal_bridge.py",
+      "source_sha256": "3f410b8d2eb071e3d230ca623501f785ee0bfbdf015540f4666b961eea5d3190",
+      "sha256": "3f410b8d2eb071e3d230ca623501f785ee0bfbdf015540f4666b961eea5d3190",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/tool_protocol.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/tool_protocol.py",
+      "source_sha256": "eb7603d882290e7f84ef27dc350eb0148826372a5a25b120c6311af61958b15e",
+      "sha256": "eb7603d882290e7f84ef27dc350eb0148826372a5a25b120c6311af61958b15e",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/trace.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/trace.py",
+      "source_sha256": "62210e8dc57c55c3a72f70771ceec60b8d4414e7e981eaa4fe9a908f3dd9a177",
+      "sha256": "62210e8dc57c55c3a72f70771ceec60b8d4414e7e981eaa4fe9a908f3dd9a177",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/typed_freecad.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/typed_freecad.py",
+      "source_sha256": "f21f85c59bbd16cdae1ea2cb3e658b64a55bc092aa016d2509e1b9725f0088dd",
+      "sha256": "f21f85c59bbd16cdae1ea2cb3e658b64a55bc092aa016d2509e1b9725f0088dd",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/upstream_launch.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/upstream_launch.py",
+      "source_sha256": "0d4cc60e5f03a3669df301567179d7c1190707d7ac8c1a8c621621e458f2b3e7",
+      "sha256": "0d4cc60e5f03a3669df301567179d7c1190707d7ac8c1a8c621621e458f2b3e7",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/cad_cf/upstream_runtime.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/cad_cf/upstream_runtime.py",
+      "source_sha256": "121635a6539f29bbb76ccb517128aa6403f42ba6eb5420e9b546effa775dc667",
+      "sha256": "121635a6539f29bbb76ccb517128aa6403f42ba6eb5420e9b546effa775dc667",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/scripts/probe_baseline_env.py",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/scripts/probe_baseline_env.py",
+      "source_sha256": "c35bef36b735512c5d1d94f0f9728f13745b19ebfd3557456e54bef82d4cb54e",
+      "sha256": "c35bef36b735512c5d1d94f0f9728f13745b19ebfd3557456e54bef82d4cb54e",
+      "redacted": false
+    },
+    {
+      "path": "baseline_source_snapshot/scripts/trusted_gui_probe.FCMacro",
+      "source": "results/baseline_debug_20261019/baseline_source_snapshot/scripts/trusted_gui_probe.FCMacro",
+      "source_sha256": "6359b944c31210381e60ae13170b2d208afea2c5c1be51d69a199a1c7ca79b7b",
+      "sha256": "6359b944c31210381e60ae13170b2d208afea2c5c1be51d69a199a1c7ca79b7b",
+      "redacted": false
+    },
+    {
+      "path": "campaign_summary.json",
+      "source": "results/baseline_debug_20261019/campaign_summary.json",
+      "source_sha256": "5cf7a1e3b3750e309b75c98505d79bb2c47cf656af0dc16d9e4ff3fb8a6beba7",
+      "sha256": "5cf7a1e3b3750e309b75c98505d79bb2c47cf656af0dc16d9e4ff3fb8a6beba7",
+      "redacted": false
+    },
+    {
+      "path": "cli_boundary_dryrun.log",
+      "source": "results/baseline_debug_20261019/cli_boundary_dryrun.log",
+      "source_sha256": "69f78fda502db1a6ae07f6e705136fb0c38df4be9b99fb665658477f1e1f9260",
+      "sha256": "69f78fda502db1a6ae07f6e705136fb0c38df4be9b99fb665658477f1e1f9260",
+      "redacted": false
+    },
+    {
+      "path": "cli_dryrun.log",
+      "source": "results/baseline_debug_20261019/cli_dryrun.log",
+      "source_sha256": "b6bed98e5e5b48177eca2d3bd3011dd0e392d3efa187fd6ef01c4938d5289399",
+      "sha256": "b6bed98e5e5b48177eca2d3bd3011dd0e392d3efa187fd6ef01c4938d5289399",
+      "redacted": false
+    },
+    {
+      "path": "cli_dryrun_final.log",
+      "source": "results/baseline_debug_20261019/cli_dryrun_final.log",
+      "source_sha256": "e101ae9d2a3b67025a52a698df047e4be4c61a9ab2dfe778962bf5fd090e9251",
+      "sha256": "e101ae9d2a3b67025a52a698df047e4be4c61a9ab2dfe778962bf5fd090e9251",
+      "redacted": false
+    },
+    {
+      "path": "cli_launch_plan.json",
+      "source": "results/baseline_debug_20261019/cli_launch_plan.json",
+      "source_sha256": "37ea93786de17f23911776acc9f3c0636c0b968ff680dd8f6c734bf8742dee08",
+      "sha256": "37ea93786de17f23911776acc9f3c0636c0b968ff680dd8f6c734bf8742dee08",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_acceptance_001/acceptance.json",
+      "source": "results/baseline_debug_20261019/desktop_env_acceptance_001/acceptance.json",
+      "source_sha256": "fc79b83f535f41f522c07223f49f864bf543c17065f4bbfa3f5cb4c869c6851a",
+      "sha256": "fc79b83f535f41f522c07223f49f864bf543c17065f4bbfa3f5cb4c869c6851a",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_acceptance_001/action.json",
+      "source": "results/baseline_debug_20261019/desktop_env_acceptance_001/action.json",
+      "source_sha256": "9554fd1e78fec7b9ac3325ace1083c76e05d8792bd68b6db9bdc4b09d176b6d1",
+      "sha256": "9554fd1e78fec7b9ac3325ace1083c76e05d8792bd68b6db9bdc4b09d176b6d1",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_acceptance_001/after_step.png",
+      "source": "results/baseline_debug_20261019/desktop_env_acceptance_001/after_step.png",
+      "source_sha256": "844f1e6585f8a911b6304b4405fe1300144d0112fc3a8e9d17ee629cda64e427",
+      "sha256": "844f1e6585f8a911b6304b4405fe1300144d0112fc3a8e9d17ee629cda64e427",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_acceptance_001/cold_start_diagnostic.json",
+      "source": "results/baseline_debug_20261019/desktop_env_acceptance_001/cold_start_diagnostic.json",
+      "source_sha256": "3f12c990d6c5a96e06ef2b5f9fb4a438ff2859f5e35d2ec280a6263607c195fa",
+      "sha256": "3f12c990d6c5a96e06ef2b5f9fb4a438ff2859f5e35d2ec280a6263607c195fa",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_acceptance_001/probe_source.py",
+      "sha256": "02a39a9cfecec9cfdbd7cfc4fb6bcc68cc6142ed5ef4c029414708e45b8482b6",
+      "generated": true
+    },
+    {
+      "path": "desktop_env_acceptance_001/read_diagnostic.jsonl",
+      "source": "results/baseline_debug_20261019/desktop_env_acceptance_001/read_diagnostic.jsonl",
+      "source_sha256": "25b7feb3acc3d1eca28a767658433e33214e3dd53f5a83a93ff550eeb753a969",
+      "sha256": "25b7feb3acc3d1eca28a767658433e33214e3dd53f5a83a93ff550eeb753a969",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_acceptance_001/reset.png",
+      "source": "results/baseline_debug_20261019/desktop_env_acceptance_001/reset.png",
+      "source_sha256": "9aa43c097d510ac3cbeac4895c6613ff465a4c2c07a513e38528b0dacdc7efc5",
+      "sha256": "9aa43c097d510ac3cbeac4895c6613ff465a4c2c07a513e38528b0dacdc7efc5",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_acceptance_002/acceptance.json",
+      "source": "results/baseline_debug_20261019/desktop_env_acceptance_002/acceptance.json",
+      "source_sha256": "db5ff0a37e1ad317f205803200a30ffc1eb4671d0bc74e25ad3fb04d50adb41e",
+      "sha256": "db5ff0a37e1ad317f205803200a30ffc1eb4671d0bc74e25ad3fb04d50adb41e",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_acceptance_002/action.json",
+      "source": "results/baseline_debug_20261019/desktop_env_acceptance_002/action.json",
+      "source_sha256": "9554fd1e78fec7b9ac3325ace1083c76e05d8792bd68b6db9bdc4b09d176b6d1",
+      "sha256": "9554fd1e78fec7b9ac3325ace1083c76e05d8792bd68b6db9bdc4b09d176b6d1",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_acceptance_002/after_step.png",
+      "source": "results/baseline_debug_20261019/desktop_env_acceptance_002/after_step.png",
+      "source_sha256": "fe41384932f45f8b0e4f61d0f2aa0e770f758b8747643bb332832c328e9e2a24",
+      "sha256": "fe41384932f45f8b0e4f61d0f2aa0e770f758b8747643bb332832c328e9e2a24",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_acceptance_002/probe_source.py",
+      "sha256": "c35bef36b735512c5d1d94f0f9728f13745b19ebfd3557456e54bef82d4cb54e",
+      "generated": true
+    },
+    {
+      "path": "desktop_env_acceptance_002/read_diagnostic.jsonl",
+      "source": "results/baseline_debug_20261019/desktop_env_acceptance_002/read_diagnostic.jsonl",
+      "source_sha256": "1e02043aaa4eae2863d354fc0faa73afd05265ae155cb0f53cd8b96772fa8878",
+      "sha256": "1e02043aaa4eae2863d354fc0faa73afd05265ae155cb0f53cd8b96772fa8878",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_acceptance_002/reset.png",
+      "source": "results/baseline_debug_20261019/desktop_env_acceptance_002/reset.png",
+      "source_sha256": "220d86b5d0ac839a4b2909473a168fc51dc3f26e82fcb550d98002b1d9cc33ab",
+      "sha256": "220d86b5d0ac839a4b2909473a168fc51dc3f26e82fcb550d98002b1d9cc33ab",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_acceptance_003/acceptance.json",
+      "source": "results/baseline_debug_20261019/desktop_env_acceptance_003/acceptance.json",
+      "source_sha256": "4a4a90446b79e485dcfffafd849867514cdd93ef5289cd6d71df776abd7c7345",
+      "sha256": "4a4a90446b79e485dcfffafd849867514cdd93ef5289cd6d71df776abd7c7345",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_acceptance_003/action.json",
+      "source": "results/baseline_debug_20261019/desktop_env_acceptance_003/action.json",
+      "source_sha256": "9554fd1e78fec7b9ac3325ace1083c76e05d8792bd68b6db9bdc4b09d176b6d1",
+      "sha256": "9554fd1e78fec7b9ac3325ace1083c76e05d8792bd68b6db9bdc4b09d176b6d1",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_acceptance_003/after_step.png",
+      "source": "results/baseline_debug_20261019/desktop_env_acceptance_003/after_step.png",
+      "source_sha256": "35f366f97406342b796eeef89b0928881a706c7191959ed12cc3894f287e1245",
+      "sha256": "35f366f97406342b796eeef89b0928881a706c7191959ed12cc3894f287e1245",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_acceptance_003/reset.png",
+      "source": "results/baseline_debug_20261019/desktop_env_acceptance_003/reset.png",
+      "source_sha256": "d66837f8acce3bd5dce672048d5ea176b509b5c132f9b6ba87c5ae30c3ff2f12",
+      "sha256": "d66837f8acce3bd5dce672048d5ea176b509b5c132f9b6ba87c5ae30c3ff2f12",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_acceptance_003/source_snapshots/gui_startup.py",
+      "source": "results/baseline_debug_20261019/desktop_env_acceptance_003/source_snapshots/gui_startup.py",
+      "source_sha256": "ecd902a050c7afb4731c950e834bcf64676da286fbcd664cdc0d69dea69708c1",
+      "sha256": "ecd902a050c7afb4731c950e834bcf64676da286fbcd664cdc0d69dea69708c1",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_acceptance_003/source_snapshots/probe_baseline_env.py",
+      "source": "results/baseline_debug_20261019/desktop_env_acceptance_003/source_snapshots/probe_baseline_env.py",
+      "source_sha256": "c35bef36b735512c5d1d94f0f9728f13745b19ebfd3557456e54bef82d4cb54e",
+      "sha256": "c35bef36b735512c5d1d94f0f9728f13745b19ebfd3557456e54bef82d4cb54e",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_acceptance_003/source_snapshots/qemu_runtime.py",
+      "source": "results/baseline_debug_20261019/desktop_env_acceptance_003/source_snapshots/qemu_runtime.py",
+      "source_sha256": "f54ac35f4e22f5c03757d20960f22560111b31b480c8b8ff4a1dc3666f896a9f",
+      "sha256": "f54ac35f4e22f5c03757d20960f22560111b31b480c8b8ff4a1dc3666f896a9f",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_acceptance_003/source_snapshots/upstream_runtime.py",
+      "source": "results/baseline_debug_20261019/desktop_env_acceptance_003/source_snapshots/upstream_runtime.py",
+      "source_sha256": "eb23ea7f70132a6e6b35c903d0170b60f6237842b15abb7021760d1322374124",
+      "sha256": "eb23ea7f70132a6e6b35c903d0170b60f6237842b15abb7021760d1322374124",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_config.json",
+      "source": "results/baseline_debug_20261019/desktop_env_config.json",
+      "source_sha256": "0e4e786025c058a0d410ee08899ce680bba5b3447b053708aac0a8233ce3372c",
+      "sha256": "0e4e786025c058a0d410ee08899ce680bba5b3447b053708aac0a8233ce3372c",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_config_002.json",
+      "source": "results/baseline_debug_20261019/desktop_env_config_002.json",
+      "source_sha256": "8c254df82e5c56f9d99cba532d69ef9c2d53df42ec98ef9d0f724248b63a9c1a",
+      "sha256": "8c254df82e5c56f9d99cba532d69ef9c2d53df42ec98ef9d0f724248b63a9c1a",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_config_003.json",
+      "source": "results/baseline_debug_20261019/desktop_env_config_003.json",
+      "source_sha256": "2c3d1a9f2d14be26207cc5452fc51e0b61eeedb9f7dda8537c6b84f191667135",
+      "sha256": "2c3d1a9f2d14be26207cc5452fc51e0b61eeedb9f7dda8537c6b84f191667135",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_probe.log",
+      "source": "results/baseline_debug_20261019/desktop_env_probe.log",
+      "source_sha256": "288058e83321d22e83bdd1c906841f5e25f31a9cbe0b888808ccb1c7d0d4307d",
+      "sha256": "288058e83321d22e83bdd1c906841f5e25f31a9cbe0b888808ccb1c7d0d4307d",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_probe_002.log",
+      "source": "results/baseline_debug_20261019/desktop_env_probe_002.log",
+      "source_sha256": "0e75bfccfe61a330ef48e2a9dc8d5d3ea7ea315fa071bb8f0a0a11457693556e",
+      "sha256": "0e75bfccfe61a330ef48e2a9dc8d5d3ea7ea315fa071bb8f0a0a11457693556e",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_probe_003.log",
+      "source": "results/baseline_debug_20261019/desktop_env_probe_003.log",
+      "source_sha256": "1165195bd19e83da1bf82b5c91e657318d9ecf042a48fc143d161971860ec57e",
+      "sha256": "1165195bd19e83da1bf82b5c91e657318d9ecf042a48fc143d161971860ec57e",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_001/vm_001/final.png",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_001/vm_001/final.png",
+      "source_sha256": "5b917856eab3b26c3d46fd1f222810777721efd13b5889a53ddfd61b7046d223",
+      "sha256": "5b917856eab3b26c3d46fd1f222810777721efd13b5889a53ddfd61b7046d223",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_001/vm_001/gui_dispatch.jsonl",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_001/vm_001/gui_dispatch.jsonl",
+      "source_sha256": "a1453b445342fd520b9db30c9ed75f3c64afcfa90ab896de5fcaf3ed06c72f2b",
+      "sha256": "a1453b445342fd520b9db30c9ed75f3c64afcfa90ab896de5fcaf3ed06c72f2b",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_001/vm_001/gui_launch.json",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_001/vm_001/gui_launch.json",
+      "source_sha256": "b42137a39002dd42fc33fde0a96808258ef090f5c10be2cc29526b5ad58e2943",
+      "sha256": "b42137a39002dd42fc33fde0a96808258ef090f5c10be2cc29526b5ad58e2943",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_001/vm_001/gui_launch_source.py",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_001/vm_001/gui_launch_source.py",
+      "source_sha256": "6d37c2406cb834e469ce9289f3341d554114403b439ce12f23b1aa2bcc7b2427",
+      "sha256": "6d37c2406cb834e469ce9289f3341d554114403b439ce12f23b1aa2bcc7b2427",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_001/vm_001/gui_poll.jsonl",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_001/vm_001/gui_poll.jsonl",
+      "source_sha256": "e0f8eeb82984c8e2f6613bdcb59f09e1d9a4f3a5c10cffc650fd028aa25cc722",
+      "sha256": "e0f8eeb82984c8e2f6613bdcb59f09e1d9a4f3a5c10cffc650fd028aa25cc722",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_001/vm_001/gui_ready.json",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_001/vm_001/gui_ready.json",
+      "source_sha256": "57b48847bd1f100393f45ff4444d25693dd0e9f49f61389cb94faac5ecbe09ae",
+      "sha256": "57b48847bd1f100393f45ff4444d25693dd0e9f49f61389cb94faac5ecbe09ae",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_001/vm_001/gui_startup.jsonl",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_001/vm_001/gui_startup.jsonl",
+      "source_sha256": "f65313114103ba137e519924ee0bc248f2918901c87629b8f2a06408ae94a077",
+      "sha256": "f65313114103ba137e519924ee0bc248f2918901c87629b8f2a06408ae94a077",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_001/vm_001/launch.json",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_001/vm_001/launch.json",
+      "source_sha256": "c5dc1827c20b8755a9c2841fd18667ad28d49793acb33c9e6791b9ed9fead44a",
+      "sha256": "c5dc1827c20b8755a9c2841fd18667ad28d49793acb33c9e6791b9ed9fead44a",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_001/vm_001/qemu.log",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_001/vm_001/qemu.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_001/vm_001/readiness.jsonl",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_001/vm_001/readiness.jsonl",
+      "source_sha256": "76dcdfb991d095aa2fddfd0ab0b9ca8fb589d636f15116a2100b4f70a9853752",
+      "sha256": "76dcdfb991d095aa2fddfd0ab0b9ca8fb589d636f15116a2100b4f70a9853752",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_001/vm_001/ready.json",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_001/vm_001/ready.json",
+      "source_sha256": "dc7f60be025262421d138d682bfcfdf3110b2e5616781714c03d5659616487fd",
+      "sha256": "dc7f60be025262421d138d682bfcfdf3110b2e5616781714c03d5659616487fd",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_001/vm_001/ready.png",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_001/vm_001/ready.png",
+      "source_sha256": "6d0428dbe8845decf7503746580eb3c73589845fd9b168fd50176f7fd060fff7",
+      "sha256": "6d0428dbe8845decf7503746580eb3c73589845fd9b168fd50176f7fd060fff7",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_001/vm_001/serial.log",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_001/vm_001/serial.log",
+      "source_sha256": "b9f0f261cb82c547887770a795f7d95c64dde5de3aebeab0cc9b484fe727e990",
+      "sha256": "b9f0f261cb82c547887770a795f7d95c64dde5de3aebeab0cc9b484fe727e990",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_001/vm_001/stopped.json",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_001/vm_001/stopped.json",
+      "source_sha256": "337ad6798511033516aa4699bb1a58baa986b9c4aa7f04e4a3193b51635e7cff",
+      "sha256": "337ad6798511033516aa4699bb1a58baa986b9c4aa7f04e4a3193b51635e7cff",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_002/source_snapshots/gui_startup.py",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_002/source_snapshots/gui_startup.py",
+      "source_sha256": "21444a077b3300bf343838b612296cce5e6a00d67bb90572309b58c5cd1811de",
+      "sha256": "21444a077b3300bf343838b612296cce5e6a00d67bb90572309b58c5cd1811de",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_002/source_snapshots/probe_baseline_env.py",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_002/source_snapshots/probe_baseline_env.py",
+      "source_sha256": "c35bef36b735512c5d1d94f0f9728f13745b19ebfd3557456e54bef82d4cb54e",
+      "sha256": "c35bef36b735512c5d1d94f0f9728f13745b19ebfd3557456e54bef82d4cb54e",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_002/source_snapshots/qemu_runtime.py",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_002/source_snapshots/qemu_runtime.py",
+      "source_sha256": "f54ac35f4e22f5c03757d20960f22560111b31b480c8b8ff4a1dc3666f896a9f",
+      "sha256": "f54ac35f4e22f5c03757d20960f22560111b31b480c8b8ff4a1dc3666f896a9f",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_002/source_snapshots/upstream_runtime.py",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_002/source_snapshots/upstream_runtime.py",
+      "source_sha256": "eb23ea7f70132a6e6b35c903d0170b60f6237842b15abb7021760d1322374124",
+      "sha256": "eb23ea7f70132a6e6b35c903d0170b60f6237842b15abb7021760d1322374124",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_002/vm_001/final.png",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_002/vm_001/final.png",
+      "source_sha256": "01ca80eeb19298087e270b0481b118fce33971c98d379a49595330cd81ce2b35",
+      "sha256": "01ca80eeb19298087e270b0481b118fce33971c98d379a49595330cd81ce2b35",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_002/vm_001/gui_dispatch.jsonl",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_002/vm_001/gui_dispatch.jsonl",
+      "source_sha256": "2562c3b43501c9867961f31e0905b5e0849dee0d61adc9cdbcfdba86e136948c",
+      "sha256": "2562c3b43501c9867961f31e0905b5e0849dee0d61adc9cdbcfdba86e136948c",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_002/vm_001/gui_launch.json",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_002/vm_001/gui_launch.json",
+      "source_sha256": "91168fc268f4868042c731371868fb04bdb60c1fad9a493fd27d8a3ceff8e75e",
+      "sha256": "91168fc268f4868042c731371868fb04bdb60c1fad9a493fd27d8a3ceff8e75e",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_002/vm_001/gui_launch_source.py",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_002/vm_001/gui_launch_source.py",
+      "source_sha256": "18b1bf313d27775813642d121efbc689f609962568db6e69c27c5627034de8eb",
+      "sha256": "18b1bf313d27775813642d121efbc689f609962568db6e69c27c5627034de8eb",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_002/vm_001/gui_poll.jsonl",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_002/vm_001/gui_poll.jsonl",
+      "source_sha256": "aa2af6e7a89387a6898b9a37bd32fe9ac5c12461b40308795627e341804330ad",
+      "sha256": "aa2af6e7a89387a6898b9a37bd32fe9ac5c12461b40308795627e341804330ad",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_002/vm_001/gui_ready.malformed.txt",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_002/vm_001/gui_ready.json",
+      "source_sha256": "0431a2f5d294c43eb838cfd63f19b1d03ab72047c37f29683f71706966d57a07",
+      "sha256": "0431a2f5d294c43eb838cfd63f19b1d03ab72047c37f29683f71706966d57a07",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_002/vm_001/gui_singleton.json",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_002/vm_001/gui_singleton.json",
+      "source_sha256": "e657e820013c3b249ac3476df7a7e7ca0c21a4330393e67ff126cd567c023c92",
+      "sha256": "e657e820013c3b249ac3476df7a7e7ca0c21a4330393e67ff126cd567c023c92",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_002/vm_001/gui_startup.jsonl",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_002/vm_001/gui_startup.jsonl",
+      "source_sha256": "fedd3471dd45310a7ac480594eaf3a4f46add2d208a76e217629f088be9cb6bf",
+      "sha256": "fedd3471dd45310a7ac480594eaf3a4f46add2d208a76e217629f088be9cb6bf",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_002/vm_001/launch.json",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_002/vm_001/launch.json",
+      "source_sha256": "b4134699a3487a99d2e240cfc30f44664d118e66066fe59e42aa83b1288f3e61",
+      "sha256": "b4134699a3487a99d2e240cfc30f44664d118e66066fe59e42aa83b1288f3e61",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_002/vm_001/qemu.log",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_002/vm_001/qemu.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_002/vm_001/readiness.jsonl",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_002/vm_001/readiness.jsonl",
+      "source_sha256": "953f2ee71416b3f83a823d7418a73539ff4e31db4df6144d65abc8b5d0882952",
+      "sha256": "953f2ee71416b3f83a823d7418a73539ff4e31db4df6144d65abc8b5d0882952",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_002/vm_001/ready.json",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_002/vm_001/ready.json",
+      "source_sha256": "d66c2c5d6873fb5b6ff4778dd08df24b8538152cbb93a824d9360b904abf15e7",
+      "sha256": "d66c2c5d6873fb5b6ff4778dd08df24b8538152cbb93a824d9360b904abf15e7",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_002/vm_001/ready.png",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_002/vm_001/ready.png",
+      "source_sha256": "6d0428dbe8845decf7503746580eb3c73589845fd9b168fd50176f7fd060fff7",
+      "sha256": "6d0428dbe8845decf7503746580eb3c73589845fd9b168fd50176f7fd060fff7",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_002/vm_001/serial.log",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_002/vm_001/serial.log",
+      "source_sha256": "b9f0f261cb82c547887770a795f7d95c64dde5de3aebeab0cc9b484fe727e990",
+      "sha256": "b9f0f261cb82c547887770a795f7d95c64dde5de3aebeab0cc9b484fe727e990",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_002/vm_001/stopped.json",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_002/vm_001/stopped.json",
+      "source_sha256": "1c2301cf1a8e7cf3e04d05ff4e912ca65b6cc66d3847534aaa57579aa19314a3",
+      "sha256": "1c2301cf1a8e7cf3e04d05ff4e912ca65b6cc66d3847534aaa57579aa19314a3",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_003/vm_001/final.png",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_003/vm_001/final.png",
+      "source_sha256": "0c1c26e8d1b19dd054df7b6b164e6c33ee9ad631633a4a50f820173c11feab41",
+      "sha256": "0c1c26e8d1b19dd054df7b6b164e6c33ee9ad631633a4a50f820173c11feab41",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_003/vm_001/gui_dispatch.jsonl",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_003/vm_001/gui_dispatch.jsonl",
+      "source_sha256": "55067e5452c3062171ab3f8ec461df47925fbb4d36219014d16b07d3d7d03d57",
+      "sha256": "55067e5452c3062171ab3f8ec461df47925fbb4d36219014d16b07d3d7d03d57",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_003/vm_001/gui_launch.json",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_003/vm_001/gui_launch.json",
+      "source_sha256": "ccfbb5340444c90cd82d5922747ba5c6f2e1b4c6720eb036a9225fa03febea87",
+      "sha256": "ccfbb5340444c90cd82d5922747ba5c6f2e1b4c6720eb036a9225fa03febea87",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_003/vm_001/gui_launch_source.py",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_003/vm_001/gui_launch_source.py",
+      "source_sha256": "18b1bf313d27775813642d121efbc689f609962568db6e69c27c5627034de8eb",
+      "sha256": "18b1bf313d27775813642d121efbc689f609962568db6e69c27c5627034de8eb",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_003/vm_001/gui_poll.jsonl",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_003/vm_001/gui_poll.jsonl",
+      "source_sha256": "78272a336997ae045cc937e1e5aaabb6f48633ce682c0397d49000f580ad0552",
+      "sha256": "78272a336997ae045cc937e1e5aaabb6f48633ce682c0397d49000f580ad0552",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_003/vm_001/gui_ready.json",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_003/vm_001/gui_ready.json",
+      "source_sha256": "9285ea0a091fe6ca405399f3b8f4cbd5c66beafa164a159e797344f0b9f2a5d9",
+      "sha256": "9285ea0a091fe6ca405399f3b8f4cbd5c66beafa164a159e797344f0b9f2a5d9",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_003/vm_001/gui_singleton.json",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_003/vm_001/gui_singleton.json",
+      "source_sha256": "b33581e6eca00cfad02b25a921a1a8691f3c353a2c33e5d2153e72a967d1a353",
+      "sha256": "b33581e6eca00cfad02b25a921a1a8691f3c353a2c33e5d2153e72a967d1a353",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_003/vm_001/gui_startup.jsonl",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_003/vm_001/gui_startup.jsonl",
+      "source_sha256": "134529a43b2bbc53c31cdb3c73630e4ca9dea2e0bd59398988eed593088245b7",
+      "sha256": "134529a43b2bbc53c31cdb3c73630e4ca9dea2e0bd59398988eed593088245b7",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_003/vm_001/launch.json",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_003/vm_001/launch.json",
+      "source_sha256": "c8b06aeae2c4183a28987cd12d41ed31bdd4993ebcf1c5e7c9a32a537cfcf11f",
+      "sha256": "c8b06aeae2c4183a28987cd12d41ed31bdd4993ebcf1c5e7c9a32a537cfcf11f",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_003/vm_001/qemu.log",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_003/vm_001/qemu.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_003/vm_001/readiness.jsonl",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_003/vm_001/readiness.jsonl",
+      "source_sha256": "58446a82ad3dcdbf4c675bed4822713d32d29fe4ba3499e3d253226f36aa7c8a",
+      "sha256": "58446a82ad3dcdbf4c675bed4822713d32d29fe4ba3499e3d253226f36aa7c8a",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_003/vm_001/ready.json",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_003/vm_001/ready.json",
+      "source_sha256": "a9851ede088b9ea3102860422ce1ab851857b2eb26fec92af57414c5f320c979",
+      "sha256": "a9851ede088b9ea3102860422ce1ab851857b2eb26fec92af57414c5f320c979",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_003/vm_001/ready.png",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_003/vm_001/ready.png",
+      "source_sha256": "6d0428dbe8845decf7503746580eb3c73589845fd9b168fd50176f7fd060fff7",
+      "sha256": "6d0428dbe8845decf7503746580eb3c73589845fd9b168fd50176f7fd060fff7",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_003/vm_001/serial.log",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_003/vm_001/serial.log",
+      "source_sha256": "b9f0f261cb82c547887770a795f7d95c64dde5de3aebeab0cc9b484fe727e990",
+      "sha256": "b9f0f261cb82c547887770a795f7d95c64dde5de3aebeab0cc9b484fe727e990",
+      "redacted": false
+    },
+    {
+      "path": "desktop_env_runtime_003/vm_001/stopped.json",
+      "source": "results/baseline_debug_20261019/desktop_env_runtime_003/vm_001/stopped.json",
+      "source_sha256": "ee48b18c711594fabbedd01ab983304d02971fe7338c4b2cfb800d272b9c1b73",
+      "sha256": "ee48b18c711594fabbedd01ab983304d02971fe7338c4b2cfb800d272b9c1b73",
+      "redacted": false
+    },
+    {
+      "path": "endpoint_health_public.json",
+      "sha256": "5885710c5680c4fd29d5b2842d4fbf636283166ea831ea5ee9f13eedc9cb5f0a",
+      "generated": true
+    },
+    {
+      "path": "endpoint_live_001/result.json",
+      "source": "results/endpoint_live_001/result.json",
+      "source_sha256": "733494c889fc07e2cf82a1c6c25a59633355725e29c7585d45c8fc62aeae2940",
+      "sha256": "169ccb2ffebd196811d666cb9fa72897f646a1ba9f228b478a2ef5e9fe666377",
+      "redacted": true
+    },
+    {
+      "path": "endpoint_live_001/usage.jsonl",
+      "source": "results/endpoint_live_001/usage.jsonl",
+      "source_sha256": "8d46580297a940041b1f901b91dd6c59e5a305641c4853d854da8723a0b98807",
+      "sha256": "8d46580297a940041b1f901b91dd6c59e5a305641c4853d854da8723a0b98807",
+      "redacted": false
+    },
+    {
+      "path": "endpoint_live_console.log",
+      "source": "results/baseline_debug_20261019/endpoint_live_console.log",
+      "source_sha256": "c724ec564c16d56523ab8c4013949f6bbb0740b035cbcf4275b3e1850ae42470",
+      "sha256": "2d5d224d4bda974ae3138b854ab4449623ad905e6aa61ee3abef8669de79b72f",
+      "redacted": true
+    },
+    {
+      "path": "endpoint_qwen_001/result.json",
+      "source": "results/endpoint_qwen_001/result.json",
+      "source_sha256": "1a02cec1b2915714b9d694a05e5547e2e96dcd17309efd63130676e5a7568afc",
+      "sha256": "acd92f34dd859507770c96e40a0101684eac9948b21a6cd4773fb1ab1ae46e33",
+      "redacted": true
+    },
+    {
+      "path": "endpoint_qwen_002/result.json",
+      "source": "results/endpoint_qwen_002/result.json",
+      "source_sha256": "4dd3f205b1124fc851fe7808eefa2c658dc4daef03875c7896ac973730b6d835",
+      "sha256": "39f344da1b3e56eb6af0664d3edc60f31e39c086a803d4049bef359cdc28d850",
+      "redacted": true
+    },
+    {
+      "path": "endpoint_qwen_002/usage.jsonl",
+      "source": "results/endpoint_qwen_002/usage.jsonl",
+      "source_sha256": "6c231da6667a2358489ad2c60d3158bc68589d97c4c68a8091d8190726116fff",
+      "sha256": "6c231da6667a2358489ad2c60d3158bc68589d97c4c68a8091d8190726116fff",
+      "redacted": false
+    },
+    {
+      "path": "endpoint_qwen_002_console.log",
+      "source": "results/baseline_debug_20261019/endpoint_qwen_002_console.log",
+      "source_sha256": "5e8dccf539103820bf66e25e32a5529d2cdbf876b88f9307c8b9023855439c89",
+      "sha256": "5e8dccf539103820bf66e25e32a5529d2cdbf876b88f9307c8b9023855439c89",
+      "redacted": false
+    },
+    {
+      "path": "endpoint_qwen_console.log",
+      "source": "results/baseline_debug_20261019/endpoint_qwen_console.log",
+      "source_sha256": "618ba2fa327a9c290add0042e7fed4b79fce5415baea56eb73b6c00630c1cbf1",
+      "sha256": "618ba2fa327a9c290add0042e7fed4b79fce5415baea56eb73b6c00630c1cbf1",
+      "redacted": false
+    },
+    {
+      "path": "final_asset_integrity.json",
+      "source": "results/baseline_debug_20261019/final_asset_integrity.json",
+      "source_sha256": "64eb38ad987f0887eec31ef2cd0f6bab3efb07032b64e4b33a09e8d7f3d5c540",
+      "sha256": "64eb38ad987f0887eec31ef2cd0f6bab3efb07032b64e4b33a09e8d7f3d5c540",
+      "redacted": false
+    },
+    {
+      "path": "gui_config.json",
+      "source": "results/baseline_debug_20261019/gui_config.json",
+      "source_sha256": "5ce0c59854fd28a52f393a0e437c651ed6597578e1a28e41e9b3a056e40e8a3b",
+      "sha256": "5ce0c59854fd28a52f393a0e437c651ed6597578e1a28e41e9b3a056e40e8a3b",
+      "redacted": false
+    },
+    {
+      "path": "gui_serialization_fixed.log",
+      "source": "results/baseline_debug_20261019/gui_serialization_fixed.log",
+      "source_sha256": "f62856bf55710418544da7bb61bc3570a1a293c4053b2e85426b8068f0b37ac6",
+      "sha256": "f62856bf55710418544da7bb61bc3570a1a293c4053b2e85426b8068f0b37ac6",
+      "redacted": false
+    },
+    {
+      "path": "gui_serialization_regression.log",
+      "source": "results/baseline_debug_20261019/gui_serialization_regression.log",
+      "source_sha256": "6998454b23888198b394651d2744a1fc2c859d977aa8e6e67fb3e94acae9d481",
+      "sha256": "6998454b23888198b394651d2744a1fc2c859d977aa8e6e67fb3e94acae9d481",
+      "redacted": false
+    },
+    {
+      "path": "new_tests.log",
+      "source": "results/baseline_debug_20261019/new_tests.log",
+      "source_sha256": "5ef6cb511e5675e3db38e94e6e37f94ab5363cfdd501ffe79a871dbb733ad428",
+      "sha256": "5ef6cb511e5675e3db38e94e6e37f94ab5363cfdd501ffe79a871dbb733ad428",
+      "redacted": false
+    },
+    {
+      "path": "official_cli/baseline_cli_sketch_002/args.json",
+      "source": "results/official_cli/baseline_cli_sketch_002/args.json",
+      "source_sha256": "f331260d7c90e53c33b071e50b07da680ab2851a5f753666fad6033679d3c6ee",
+      "sha256": "c04f33ca26b206c1046ee65e7a39f3adfc64699cbcf5bda093dfe610a8eb8d61",
+      "redacted": true
+    },
+    {
+      "path": "official_cli/baseline_cli_sketch_002/freecad-sketch-061/evaluation.json",
+      "source": "results/official_cli/baseline_cli_sketch_002/freecad-sketch-061/evaluation.json",
+      "source_sha256": "9b60b8464a87036e1976ec7128bb736e2588af1a796446bfc2f1153b750c7493",
+      "sha256": "9b60b8464a87036e1976ec7128bb736e2588af1a796446bfc2f1153b750c7493",
+      "redacted": false
+    },
+    {
+      "path": "official_cli/baseline_cli_sketch_002/freecad-sketch-061/public_task.json",
+      "source": "results/official_cli/baseline_cli_sketch_002/freecad-sketch-061/public_task.json",
+      "source_sha256": "19e71e88f0b13ae7aac03bc16732faf183bbc9426eaf491654d588df036f4623",
+      "sha256": "19e71e88f0b13ae7aac03bc16732faf183bbc9426eaf491654d588df036f4623",
+      "redacted": false
+    },
+    {
+      "path": "official_cli/baseline_cli_sketch_002/freecad-sketch-061/result.json",
+      "source": "results/official_cli/baseline_cli_sketch_002/freecad-sketch-061/result.json",
+      "source_sha256": "9a2fc55686a99fdb8819b608f2c34030741695898a67a1e7c4ed3f303f1233b7",
+      "sha256": "9a2fc55686a99fdb8819b608f2c34030741695898a67a1e7c4ed3f303f1233b7",
+      "redacted": false
+    },
+    {
+      "path": "official_cli/baseline_cli_sketch_002/freecad-sketch-061/traj.jsonl",
+      "source": "results/official_cli/baseline_cli_sketch_002/freecad-sketch-061/traj.jsonl",
+      "source_sha256": "45b102f32799affb766f0e31493a930efc7aee0c3a477f06893b2cec8b51f918",
+      "sha256": "45b102f32799affb766f0e31493a930efc7aee0c3a477f06893b2cec8b51f918",
+      "redacted": false
+    },
+    {
+      "path": "official_cli/baseline_cli_sketch_002/freecad-sketch-061/trajectory.jsonl",
+      "source": "results/official_cli/baseline_cli_sketch_002/freecad-sketch-061/trajectory.jsonl",
+      "source_sha256": "bc341b1200f3f472105bfe471a1cc5ee616ce263f0fb8b229272226c9ea9949f",
+      "sha256": "bc341b1200f3f472105bfe471a1cc5ee616ce263f0fb8b229272226c9ea9949f",
+      "redacted": false
+    },
+    {
+      "path": "official_cli/baseline_cli_sketch_002/run.log",
+      "source": "results/official_cli/baseline_cli_sketch_002/run.log",
+      "source_sha256": "65760973a1d88018d2832459f15bf4caed123abd3d20880038c9bfd95243460e",
+      "sha256": "0072780783177403e9303208ece9b9ed5b9b93374028f238a9fb77ea30d3c83d",
+      "redacted": true
+    },
+    {
+      "path": "official_cli/baseline_cli_sketch_002/summary.json",
+      "source": "results/official_cli/baseline_cli_sketch_002/summary.json",
+      "source_sha256": "4d6cca4d2244cc5cf57f6766bd993191bed0e5b0c84d8d6f429c1b2de29fd911",
+      "sha256": "4d6cca4d2244cc5cf57f6766bd993191bed0e5b0c84d8d6f429c1b2de29fd911",
+      "redacted": false
+    },
+    {
+      "path": "official_gui/baseline_gui_part_001/args.json",
+      "source": "results/official_gui/baseline_gui_part_001/args.json",
+      "source_sha256": "67ec71d72412fc83de430e2174fe0b9169ac644b336f6741e3e1d5a9568540d2",
+      "sha256": "76a2470f0cfc3c88470178e420f368927c53f1b8cdfc1e3acbb42c8ca42137e4",
+      "redacted": true
+    },
+    {
+      "path": "official_gui/baseline_gui_part_001/freecad-part-076/evaluation.json",
+      "source": "results/official_gui/baseline_gui_part_001/freecad-part-076/evaluation.json",
+      "source_sha256": "bdab65f7914b1db7d87286c85dc7287eb3d07b72c1bb1f5f749300136613d650",
+      "sha256": "bdab65f7914b1db7d87286c85dc7287eb3d07b72c1bb1f5f749300136613d650",
+      "redacted": false
+    },
+    {
+      "path": "official_gui/baseline_gui_part_001/freecad-part-076/initial_state.png",
+      "source": "results/official_gui/baseline_gui_part_001/freecad-part-076/initial_state.png",
+      "source_sha256": "1d5489643dfaaec9c901ab6a2343f44886121606947797f2b8e9050448761ea3",
+      "sha256": "1d5489643dfaaec9c901ab6a2343f44886121606947797f2b8e9050448761ea3",
+      "redacted": false
+    },
+    {
+      "path": "official_gui/baseline_gui_part_001/freecad-part-076/result.txt",
+      "source": "results/official_gui/baseline_gui_part_001/freecad-part-076/result.txt",
+      "source_sha256": "51ff0d2f0d3a5d61edec31785532ea0d570f8c348d58b15b94ff9c2ca6e926a4",
+      "sha256": "51ff0d2f0d3a5d61edec31785532ea0d570f8c348d58b15b94ff9c2ca6e926a4",
+      "redacted": false
+    },
+    {
+      "path": "official_gui/baseline_gui_part_001/freecad-part-076/runtime.log",
+      "source": "results/official_gui/baseline_gui_part_001/freecad-part-076/runtime.log",
+      "source_sha256": "c7d01b444136509c201e27d1edabdf808352d93df92813024b4b2a5aa0346dfe",
+      "sha256": "c7d01b444136509c201e27d1edabdf808352d93df92813024b4b2a5aa0346dfe",
+      "redacted": false
+    },
+    {
+      "path": "official_gui/baseline_gui_part_001/freecad-part-076/step_1_20261019@161220921619.png",
+      "source": "results/official_gui/baseline_gui_part_001/freecad-part-076/step_1_20261019@161220921619.png",
+      "source_sha256": "8a457d3fe4dd0cdbf42b61393cc6335fb969e317e02b3a8940b8f0269a6656d9",
+      "sha256": "8a457d3fe4dd0cdbf42b61393cc6335fb969e317e02b3a8940b8f0269a6656d9",
+      "redacted": false
+    },
+    {
+      "path": "official_gui/baseline_gui_part_001/freecad-part-076/step_2_20261019@161228655060.png",
+      "source": "results/official_gui/baseline_gui_part_001/freecad-part-076/step_2_20261019@161228655060.png",
+      "source_sha256": "0257202644d191cc7baff4bf18491dbf9cb391d03ecd0455b8b0535278e7292f",
+      "sha256": "0257202644d191cc7baff4bf18491dbf9cb391d03ecd0455b8b0535278e7292f",
+      "redacted": false
+    },
+    {
+      "path": "official_gui/baseline_gui_part_001/freecad-part-076/step_3_20261019@161235823919.png",
+      "source": "results/official_gui/baseline_gui_part_001/freecad-part-076/step_3_20261019@161235823919.png",
+      "source_sha256": "0257202644d191cc7baff4bf18491dbf9cb391d03ecd0455b8b0535278e7292f",
+      "sha256": "0257202644d191cc7baff4bf18491dbf9cb391d03ecd0455b8b0535278e7292f",
+      "redacted": false
+    },
+    {
+      "path": "official_gui/baseline_gui_part_001/freecad-part-076/traj.jsonl",
+      "source": "results/official_gui/baseline_gui_part_001/freecad-part-076/traj.jsonl",
+      "source_sha256": "c344b8b5ae06cc8ab8dd14e7413e072318b5b6a0f160f9878cd324664f252b2d",
+      "sha256": "c344b8b5ae06cc8ab8dd14e7413e072318b5b6a0f160f9878cd324664f252b2d",
+      "redacted": false
+    },
+    {
+      "path": "official_gui/baseline_gui_sketch_001/args.json",
+      "source": "results/official_gui/baseline_gui_sketch_001/args.json",
+      "source_sha256": "1ddf150e60d442b49110f6f7d236c0f61dd9d58e30cf6a471cdd82578b1abac5",
+      "sha256": "177f1b3f9b009a0847203112bf45ede20da9a59913ab9f44b438fa552af8a97b",
+      "redacted": true
+    },
+    {
+      "path": "official_gui/baseline_gui_sketch_001/freecad-sketch-061/evaluation.json",
+      "source": "results/official_gui/baseline_gui_sketch_001/freecad-sketch-061/evaluation.json",
+      "source_sha256": "418a665284c1ac6f922fd2eda3675a10aa947070c7a941767c39299475b66615",
+      "sha256": "418a665284c1ac6f922fd2eda3675a10aa947070c7a941767c39299475b66615",
+      "redacted": false
+    },
+    {
+      "path": "official_gui/baseline_gui_sketch_001/freecad-sketch-061/initial_state.png",
+      "source": "results/official_gui/baseline_gui_sketch_001/freecad-sketch-061/initial_state.png",
+      "source_sha256": "6bd70330b83be8ef864f3482195a96634b12c31234bede5fb07d9199c9c5b1c4",
+      "sha256": "6bd70330b83be8ef864f3482195a96634b12c31234bede5fb07d9199c9c5b1c4",
+      "redacted": false
+    },
+    {
+      "path": "official_gui/baseline_gui_sketch_001/freecad-sketch-061/result.txt",
+      "source": "results/official_gui/baseline_gui_sketch_001/freecad-sketch-061/result.txt",
+      "source_sha256": "51ff0d2f0d3a5d61edec31785532ea0d570f8c348d58b15b94ff9c2ca6e926a4",
+      "sha256": "51ff0d2f0d3a5d61edec31785532ea0d570f8c348d58b15b94ff9c2ca6e926a4",
+      "redacted": false
+    },
+    {
+      "path": "official_gui/baseline_gui_sketch_001/freecad-sketch-061/runtime.log",
+      "source": "results/official_gui/baseline_gui_sketch_001/freecad-sketch-061/runtime.log",
+      "source_sha256": "05b29e01dc9babd4966f137451182458983b95a5a60524100e8912f73d50614b",
+      "sha256": "05b29e01dc9babd4966f137451182458983b95a5a60524100e8912f73d50614b",
+      "redacted": false
+    },
+    {
+      "path": "official_gui/baseline_gui_sketch_001/freecad-sketch-061/step_1_20261019@160231698398.png",
+      "source": "results/official_gui/baseline_gui_sketch_001/freecad-sketch-061/step_1_20261019@160231698398.png",
+      "source_sha256": "2f80ef4b4fc0dccc3c860b7ebfb26e1b0dcc8f5084c69cbcf783562e9cb1ac59",
+      "sha256": "2f80ef4b4fc0dccc3c860b7ebfb26e1b0dcc8f5084c69cbcf783562e9cb1ac59",
+      "redacted": false
+    },
+    {
+      "path": "official_gui/baseline_gui_sketch_001/freecad-sketch-061/step_2_20261019@160239842607.png",
+      "source": "results/official_gui/baseline_gui_sketch_001/freecad-sketch-061/step_2_20261019@160239842607.png",
+      "source_sha256": "dfea44d2225f119717610fb0734775908dc74e5cd60248a4700a9a8ccc6b9ae6",
+      "sha256": "dfea44d2225f119717610fb0734775908dc74e5cd60248a4700a9a8ccc6b9ae6",
+      "redacted": false
+    },
+    {
+      "path": "official_gui/baseline_gui_sketch_001/freecad-sketch-061/step_3_20261019@160247668136.png",
+      "source": "results/official_gui/baseline_gui_sketch_001/freecad-sketch-061/step_3_20261019@160247668136.png",
+      "source_sha256": "dfea44d2225f119717610fb0734775908dc74e5cd60248a4700a9a8ccc6b9ae6",
+      "sha256": "dfea44d2225f119717610fb0734775908dc74e5cd60248a4700a9a8ccc6b9ae6",
+      "redacted": false
+    },
+    {
+      "path": "official_gui/baseline_gui_sketch_001/freecad-sketch-061/traj.jsonl",
+      "source": "results/official_gui/baseline_gui_sketch_001/freecad-sketch-061/traj.jsonl",
+      "source_sha256": "aacea8c82e2ef40f091ae3a39163f57e05ef597d611327f277bf0569e64a5b31",
+      "sha256": "aacea8c82e2ef40f091ae3a39163f57e05ef597d611327f277bf0569e64a5b31",
+      "redacted": false
+    },
+    {
+      "path": "probe_tests.log",
+      "source": "results/baseline_debug_20261019/probe_tests.log",
+      "source_sha256": "e453d28d5aa13661e88f4eadf63d210590b1ceae2c962cc8ddb6373199d6c155",
+      "sha256": "e453d28d5aa13661e88f4eadf63d210590b1ceae2c962cc8ddb6373199d6c155",
+      "redacted": false
+    },
+    {
+      "path": "project_tests.log",
+      "source": "results/baseline_debug_20261019/project_tests.log",
+      "source_sha256": "6dfc446839de0db073a841306770584d2c3d47d5d06d3c56715b2202f6b2fd5f",
+      "sha256": "6dfc446839de0db073a841306770584d2c3d47d5d06d3c56715b2202f6b2fd5f",
+      "redacted": false
+    },
+    {
+      "path": "project_tests_final.log",
+      "source": "results/baseline_debug_20261019/project_tests_final.log",
+      "source_sha256": "ed585c5deb8daf0cb0efd03ce54e4a0873f55c8810af4582e660085d03a6d508",
+      "sha256": "ed585c5deb8daf0cb0efd03ce54e4a0873f55c8810af4582e660085d03a6d508",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_cli_sketch_002/vm_001/controller_dispatch.jsonl",
+      "source": "results/runtime_baseline_cli_sketch_002/vm_001/controller_dispatch.jsonl",
+      "source_sha256": "2c26cd00f8cb0d6cd7ab1092510f22c0fdb5c759cf09d731d98111b897152e62",
+      "sha256": "2c26cd00f8cb0d6cd7ab1092510f22c0fdb5c759cf09d731d98111b897152e62",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_cli_sketch_002/vm_001/final.png",
+      "source": "results/runtime_baseline_cli_sketch_002/vm_001/final.png",
+      "source_sha256": "b3de8c7eaa130e539814b06aa8bf9d1b331ebab09d2d689d89483eff5b506f9e",
+      "sha256": "b3de8c7eaa130e539814b06aa8bf9d1b331ebab09d2d689d89483eff5b506f9e",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_cli_sketch_002/vm_001/gui_launch.json",
+      "source": "results/runtime_baseline_cli_sketch_002/vm_001/gui_launch.json",
+      "source_sha256": "400786ff9fc4f1b32fb714ac4d2e853d0f5b87f55ea1941aab044467c487adb2",
+      "sha256": "400786ff9fc4f1b32fb714ac4d2e853d0f5b87f55ea1941aab044467c487adb2",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_cli_sketch_002/vm_001/gui_launch_source.py",
+      "source": "results/runtime_baseline_cli_sketch_002/vm_001/gui_launch_source.py",
+      "source_sha256": "18b1bf313d27775813642d121efbc689f609962568db6e69c27c5627034de8eb",
+      "sha256": "18b1bf313d27775813642d121efbc689f609962568db6e69c27c5627034de8eb",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_cli_sketch_002/vm_001/gui_poll.jsonl",
+      "source": "results/runtime_baseline_cli_sketch_002/vm_001/gui_poll.jsonl",
+      "source_sha256": "0d890aeb2c398b989b36e0ff7bc80435957b9f0a7b5d0ed7cb60becf14871c34",
+      "sha256": "0d890aeb2c398b989b36e0ff7bc80435957b9f0a7b5d0ed7cb60becf14871c34",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_cli_sketch_002/vm_001/gui_ready.json",
+      "source": "results/runtime_baseline_cli_sketch_002/vm_001/gui_ready.json",
+      "source_sha256": "d6d764525007a5e73343eb2689eacc0629731b695f6acc3f44dcf2974c5074a1",
+      "sha256": "d6d764525007a5e73343eb2689eacc0629731b695f6acc3f44dcf2974c5074a1",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_cli_sketch_002/vm_001/gui_singleton.json",
+      "source": "results/runtime_baseline_cli_sketch_002/vm_001/gui_singleton.json",
+      "source_sha256": "a9721dff1b105e7e5fb68273ac279eeec647de8473dba0c5e72e7307988c6b85",
+      "sha256": "a9721dff1b105e7e5fb68273ac279eeec647de8473dba0c5e72e7307988c6b85",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_cli_sketch_002/vm_001/gui_startup.jsonl",
+      "source": "results/runtime_baseline_cli_sketch_002/vm_001/gui_startup.jsonl",
+      "source_sha256": "7e9996e436dc5a9665d4b530255c03b00fcc70fb60bc867549fae25ac7da24a0",
+      "sha256": "7e9996e436dc5a9665d4b530255c03b00fcc70fb60bc867549fae25ac7da24a0",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_cli_sketch_002/vm_001/launch.json",
+      "source": "results/runtime_baseline_cli_sketch_002/vm_001/launch.json",
+      "source_sha256": "47ef894bf05d7f93d65c3d04fd59b8377c4da4c218974f85c3d5f6d9deb7d365",
+      "sha256": "47ef894bf05d7f93d65c3d04fd59b8377c4da4c218974f85c3d5f6d9deb7d365",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_cli_sketch_002/vm_001/qemu.log",
+      "source": "results/runtime_baseline_cli_sketch_002/vm_001/qemu.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_cli_sketch_002/vm_001/readiness.jsonl",
+      "source": "results/runtime_baseline_cli_sketch_002/vm_001/readiness.jsonl",
+      "source_sha256": "82828b8a14075d3e07a4bd1ca558ed6f52d36b47941f820c2fda4b0f3d920de1",
+      "sha256": "82828b8a14075d3e07a4bd1ca558ed6f52d36b47941f820c2fda4b0f3d920de1",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_cli_sketch_002/vm_001/ready.json",
+      "source": "results/runtime_baseline_cli_sketch_002/vm_001/ready.json",
+      "source_sha256": "033eb8e095a8bb6e777cd5fdbe621201eb67bb46d41f21b27cc818265c9f9627",
+      "sha256": "033eb8e095a8bb6e777cd5fdbe621201eb67bb46d41f21b27cc818265c9f9627",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_cli_sketch_002/vm_001/ready.png",
+      "source": "results/runtime_baseline_cli_sketch_002/vm_001/ready.png",
+      "source_sha256": "6d0428dbe8845decf7503746580eb3c73589845fd9b168fd50176f7fd060fff7",
+      "sha256": "6d0428dbe8845decf7503746580eb3c73589845fd9b168fd50176f7fd060fff7",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_cli_sketch_002/vm_001/serial.log",
+      "source": "results/runtime_baseline_cli_sketch_002/vm_001/serial.log",
+      "source_sha256": "b9f0f261cb82c547887770a795f7d95c64dde5de3aebeab0cc9b484fe727e990",
+      "sha256": "b9f0f261cb82c547887770a795f7d95c64dde5de3aebeab0cc9b484fe727e990",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_cli_sketch_002/vm_001/stopped.json",
+      "source": "results/runtime_baseline_cli_sketch_002/vm_001/stopped.json",
+      "source_sha256": "df0323f82686ada3ffc72e178b36bfbc8ffc8ee87579634f01afbe7a3ae7845e",
+      "sha256": "df0323f82686ada3ffc72e178b36bfbc8ffc8ee87579634f01afbe7a3ae7845e",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_part_001/vm_001/final.png",
+      "source": "results/runtime_baseline_gui_part_001/vm_001/final.png",
+      "source_sha256": "cd7ac6d28dbf3cd95f4080e8f5c546775f9ff6826d8c35ed3998734f79018d10",
+      "sha256": "cd7ac6d28dbf3cd95f4080e8f5c546775f9ff6826d8c35ed3998734f79018d10",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_part_001/vm_001/gui_dispatch.jsonl",
+      "source": "results/runtime_baseline_gui_part_001/vm_001/gui_dispatch.jsonl",
+      "source_sha256": "47035e6f1412e933fa0a98003df543bf18b5288a0e6d99d3ad60726064c47813",
+      "sha256": "47035e6f1412e933fa0a98003df543bf18b5288a0e6d99d3ad60726064c47813",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_part_001/vm_001/gui_launch.json",
+      "source": "results/runtime_baseline_gui_part_001/vm_001/gui_launch.json",
+      "source_sha256": "61d209ea66812c4f3b7f2f450db18fcb2f86c0d95748eed8db261e858fabd956",
+      "sha256": "61d209ea66812c4f3b7f2f450db18fcb2f86c0d95748eed8db261e858fabd956",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_part_001/vm_001/gui_launch_source.py",
+      "source": "results/runtime_baseline_gui_part_001/vm_001/gui_launch_source.py",
+      "source_sha256": "18b1bf313d27775813642d121efbc689f609962568db6e69c27c5627034de8eb",
+      "sha256": "18b1bf313d27775813642d121efbc689f609962568db6e69c27c5627034de8eb",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_part_001/vm_001/gui_poll.jsonl",
+      "source": "results/runtime_baseline_gui_part_001/vm_001/gui_poll.jsonl",
+      "source_sha256": "a392a6a31b54f5904242835e34936847d5e77ee665147c59270b04888cec40c8",
+      "sha256": "a392a6a31b54f5904242835e34936847d5e77ee665147c59270b04888cec40c8",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_part_001/vm_001/gui_ready.json",
+      "source": "results/runtime_baseline_gui_part_001/vm_001/gui_ready.json",
+      "source_sha256": "3cae4a08a068c43ba3699cc82d679014f76e8e495d34e1c459d8527d29e095f8",
+      "sha256": "3cae4a08a068c43ba3699cc82d679014f76e8e495d34e1c459d8527d29e095f8",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_part_001/vm_001/gui_singleton.json",
+      "source": "results/runtime_baseline_gui_part_001/vm_001/gui_singleton.json",
+      "source_sha256": "99823447ef4c0f8aed61c05150bbaad019833f85e50883c2b7ac180f692b0c4b",
+      "sha256": "99823447ef4c0f8aed61c05150bbaad019833f85e50883c2b7ac180f692b0c4b",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_part_001/vm_001/gui_startup.jsonl",
+      "source": "results/runtime_baseline_gui_part_001/vm_001/gui_startup.jsonl",
+      "source_sha256": "11ce150b3269d89068f7be08b4ffd6c39d00d45886afad13163090a0a7d13a5b",
+      "sha256": "11ce150b3269d89068f7be08b4ffd6c39d00d45886afad13163090a0a7d13a5b",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_part_001/vm_001/launch.json",
+      "source": "results/runtime_baseline_gui_part_001/vm_001/launch.json",
+      "source_sha256": "f7f284613e5e856d06c401f29b5777957cd5c0df3856ed4625b0b301b8746eb4",
+      "sha256": "f7f284613e5e856d06c401f29b5777957cd5c0df3856ed4625b0b301b8746eb4",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_part_001/vm_001/qemu.log",
+      "source": "results/runtime_baseline_gui_part_001/vm_001/qemu.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_part_001/vm_001/readiness.jsonl",
+      "source": "results/runtime_baseline_gui_part_001/vm_001/readiness.jsonl",
+      "source_sha256": "aba57add882ffa72b7c940e4bf5c96581b56ff3e6a7ea8a5610ff9bea8f2631b",
+      "sha256": "aba57add882ffa72b7c940e4bf5c96581b56ff3e6a7ea8a5610ff9bea8f2631b",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_part_001/vm_001/ready.json",
+      "source": "results/runtime_baseline_gui_part_001/vm_001/ready.json",
+      "source_sha256": "3067a4d7305ca30d1569bbe5f75b4201bf03a67bdff9aaa296d592980438272b",
+      "sha256": "3067a4d7305ca30d1569bbe5f75b4201bf03a67bdff9aaa296d592980438272b",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_part_001/vm_001/ready.png",
+      "source": "results/runtime_baseline_gui_part_001/vm_001/ready.png",
+      "source_sha256": "6d0428dbe8845decf7503746580eb3c73589845fd9b168fd50176f7fd060fff7",
+      "sha256": "6d0428dbe8845decf7503746580eb3c73589845fd9b168fd50176f7fd060fff7",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_part_001/vm_001/serial.log",
+      "source": "results/runtime_baseline_gui_part_001/vm_001/serial.log",
+      "source_sha256": "b9f0f261cb82c547887770a795f7d95c64dde5de3aebeab0cc9b484fe727e990",
+      "sha256": "b9f0f261cb82c547887770a795f7d95c64dde5de3aebeab0cc9b484fe727e990",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_part_001/vm_001/stopped.json",
+      "source": "results/runtime_baseline_gui_part_001/vm_001/stopped.json",
+      "source_sha256": "f858011d06e781dbc1dcfcbbb28ca495a585bf126f57eeeb6a0b693bd0425b2b",
+      "sha256": "f858011d06e781dbc1dcfcbbb28ca495a585bf126f57eeeb6a0b693bd0425b2b",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_sketch_001/vm_001/final.png",
+      "source": "results/runtime_baseline_gui_sketch_001/vm_001/final.png",
+      "source_sha256": "1fe79bf593e45379243a8ec01c40a8be49badb12b918c59fea5e2f0847f15ba3",
+      "sha256": "1fe79bf593e45379243a8ec01c40a8be49badb12b918c59fea5e2f0847f15ba3",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_sketch_001/vm_001/gui_dispatch.jsonl",
+      "source": "results/runtime_baseline_gui_sketch_001/vm_001/gui_dispatch.jsonl",
+      "source_sha256": "398d66c20a20601df2c53dc661ab266664dd2c349a347dd73617bb7806b3a074",
+      "sha256": "398d66c20a20601df2c53dc661ab266664dd2c349a347dd73617bb7806b3a074",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_sketch_001/vm_001/gui_launch.json",
+      "source": "results/runtime_baseline_gui_sketch_001/vm_001/gui_launch.json",
+      "source_sha256": "50e38c7a892c354d9f3e05fdfb5ff0fc7444d36728d18212d735c496aa8c25ca",
+      "sha256": "50e38c7a892c354d9f3e05fdfb5ff0fc7444d36728d18212d735c496aa8c25ca",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_sketch_001/vm_001/gui_launch_source.py",
+      "source": "results/runtime_baseline_gui_sketch_001/vm_001/gui_launch_source.py",
+      "source_sha256": "18b1bf313d27775813642d121efbc689f609962568db6e69c27c5627034de8eb",
+      "sha256": "18b1bf313d27775813642d121efbc689f609962568db6e69c27c5627034de8eb",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_sketch_001/vm_001/gui_poll.jsonl",
+      "source": "results/runtime_baseline_gui_sketch_001/vm_001/gui_poll.jsonl",
+      "source_sha256": "4a4e444cb3c31e628a0a8a7dec8020974c97037c5fd20089b5cfacea26046b8a",
+      "sha256": "4a4e444cb3c31e628a0a8a7dec8020974c97037c5fd20089b5cfacea26046b8a",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_sketch_001/vm_001/gui_ready.json",
+      "source": "results/runtime_baseline_gui_sketch_001/vm_001/gui_ready.json",
+      "source_sha256": "fb3464eecb074a3a2bbb8a6f73ee19e185fc2dc80e02daf97bda24e11f3fcf6e",
+      "sha256": "fb3464eecb074a3a2bbb8a6f73ee19e185fc2dc80e02daf97bda24e11f3fcf6e",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_sketch_001/vm_001/gui_singleton.json",
+      "source": "results/runtime_baseline_gui_sketch_001/vm_001/gui_singleton.json",
+      "source_sha256": "3777316d7188ed73a040b61bc7a3699705363aa45f1ccd783b3ec7d05246ed38",
+      "sha256": "3777316d7188ed73a040b61bc7a3699705363aa45f1ccd783b3ec7d05246ed38",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_sketch_001/vm_001/gui_startup.jsonl",
+      "source": "results/runtime_baseline_gui_sketch_001/vm_001/gui_startup.jsonl",
+      "source_sha256": "a43eeb98135bac497cfcfdcf2a88667b0da0a6ad5a25a354dfa078f6f4bf08b8",
+      "sha256": "a43eeb98135bac497cfcfdcf2a88667b0da0a6ad5a25a354dfa078f6f4bf08b8",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_sketch_001/vm_001/launch.json",
+      "source": "results/runtime_baseline_gui_sketch_001/vm_001/launch.json",
+      "source_sha256": "040f831d5609e9f6cf12df18fdf0a2a063d96d92c1a8c99062b0f249b6e7d0a2",
+      "sha256": "040f831d5609e9f6cf12df18fdf0a2a063d96d92c1a8c99062b0f249b6e7d0a2",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_sketch_001/vm_001/qemu.log",
+      "source": "results/runtime_baseline_gui_sketch_001/vm_001/qemu.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_sketch_001/vm_001/readiness.jsonl",
+      "source": "results/runtime_baseline_gui_sketch_001/vm_001/readiness.jsonl",
+      "source_sha256": "c3fa3c87cc2724492dd1bb1dcf09e0705dd6efec27ecd2d2706724e4a1a6eb40",
+      "sha256": "c3fa3c87cc2724492dd1bb1dcf09e0705dd6efec27ecd2d2706724e4a1a6eb40",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_sketch_001/vm_001/ready.json",
+      "source": "results/runtime_baseline_gui_sketch_001/vm_001/ready.json",
+      "source_sha256": "d3301d114ffb9c57330cd0836e3208ad63e4ebca9311ccffcdb65469e98c44fe",
+      "sha256": "d3301d114ffb9c57330cd0836e3208ad63e4ebca9311ccffcdb65469e98c44fe",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_sketch_001/vm_001/ready.png",
+      "source": "results/runtime_baseline_gui_sketch_001/vm_001/ready.png",
+      "source_sha256": "6d0428dbe8845decf7503746580eb3c73589845fd9b168fd50176f7fd060fff7",
+      "sha256": "6d0428dbe8845decf7503746580eb3c73589845fd9b168fd50176f7fd060fff7",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_sketch_001/vm_001/serial.log",
+      "source": "results/runtime_baseline_gui_sketch_001/vm_001/serial.log",
+      "source_sha256": "b9f0f261cb82c547887770a795f7d95c64dde5de3aebeab0cc9b484fe727e990",
+      "sha256": "b9f0f261cb82c547887770a795f7d95c64dde5de3aebeab0cc9b484fe727e990",
+      "redacted": false
+    },
+    {
+      "path": "runtime_baseline_gui_sketch_001/vm_001/stopped.json",
+      "source": "results/runtime_baseline_gui_sketch_001/vm_001/stopped.json",
+      "source_sha256": "9758d82be1c8f089c7c90440b216f82c0ccd7ad3261866c47496f258ddbf5269",
+      "sha256": "9758d82be1c8f089c7c90440b216f82c0ccd7ad3261866c47496f258ddbf5269",
+      "redacted": false
+    },
+    {
+      "path": "runtime_cli_sketch.json",
+      "source": "results/baseline_debug_20261019/runtime_cli_sketch.json",
+      "source_sha256": "1e96b4077db02ba0f29c02c7db4db05d89e606dbe41c5dd5788639ce5dcad226",
+      "sha256": "1e96b4077db02ba0f29c02c7db4db05d89e606dbe41c5dd5788639ce5dcad226",
+      "redacted": false
+    },
+    {
+      "path": "runtime_cli_sketch_002.json",
+      "source": "results/baseline_debug_20261019/runtime_cli_sketch_002.json",
+      "source_sha256": "dbd15c469bc18249c9b1c1f80f96f340e24a59035861868d0091d53803e590db",
+      "sha256": "dbd15c469bc18249c9b1c1f80f96f340e24a59035861868d0091d53803e590db",
+      "redacted": false
+    },
+    {
+      "path": "runtime_gui_part.json",
+      "source": "results/baseline_debug_20261019/runtime_gui_part.json",
+      "source_sha256": "c16f1e24ff3854e7e9f3e1475307a9e435cba671ff9e5aa823b48f623eeb5f55",
+      "sha256": "c16f1e24ff3854e7e9f3e1475307a9e435cba671ff9e5aa823b48f623eeb5f55",
+      "redacted": false
+    },
+    {
+      "path": "runtime_gui_sketch.json",
+      "source": "results/baseline_debug_20261019/runtime_gui_sketch.json",
+      "source_sha256": "5876dd41d5b9dfad21d6aeb58c0998b6ce8969203928275c73c4a636cf650ed5",
+      "sha256": "5876dd41d5b9dfad21d6aeb58c0998b6ce8969203928275c73c4a636cf650ed5",
+      "redacted": false
+    },
+    {
+      "path": "upstream_cli_tests.log",
+      "source": "results/baseline_debug_20261019/upstream_cli_tests.log",
+      "source_sha256": "83166b089fbcb82fac63f22522fa6ae99bb5e46368cd35d756277fd463dd6346",
+      "sha256": "83166b089fbcb82fac63f22522fa6ae99bb5e46368cd35d756277fd463dd6346",
+      "redacted": false
+    },
+    {
+      "path": "viewer.log",
+      "source": "results/baseline_debug_20261019/viewer.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false
+    },
+    {
+      "path": "viewer_002.log",
+      "source": "results/baseline_debug_20261019/viewer_002.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false
+    },
+    {
+      "path": "viewer_003.log",
+      "source": "results/baseline_debug_20261019/viewer_003.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false
+    },
+    {
+      "path": "visible_gui_001/deployed_macro.FCMacro",
+      "sha256": "a90916c51de89bb9b164bb6e12e5132f5db953a71eb1521f8486248d7de767dd",
+      "generated": true
+    },
+    {
+      "path": "visible_gui_001/diagnostic.jsonl",
+      "source": "results/baseline_debug_20261019/visible_gui_001/diagnostic.jsonl",
+      "source_sha256": "d2d309a00aecb092138cda5486aff357fc6a5a4e9d8460e9bc70bde32dde8bde",
+      "sha256": "d2d309a00aecb092138cda5486aff357fc6a5a4e9d8460e9bc70bde32dde8bde",
+      "redacted": false
+    },
+    {
+      "path": "visible_gui_001/diagnostic_trace.jsonl",
+      "source": "results/baseline_debug_20261019/visible_gui_001/diagnostic_trace.jsonl",
+      "source_sha256": "d2d309a00aecb092138cda5486aff357fc6a5a4e9d8460e9bc70bde32dde8bde",
+      "sha256": "d2d309a00aecb092138cda5486aff357fc6a5a4e9d8460e9bc70bde32dde8bde",
+      "redacted": false
+    },
+    {
+      "path": "visible_gui_001/direct_gui_phases.jsonl",
+      "source": "results/baseline_debug_20261019/visible_gui_001/direct_gui_phases.jsonl",
+      "source_sha256": "ae1f9913509b7370e7c800d2ec0c3fd793806543e393810abf2025181a8c93cd",
+      "sha256": "ae1f9913509b7370e7c800d2ec0c3fd793806543e393810abf2025181a8c93cd",
+      "redacted": false
+    },
+    {
+      "path": "visible_gui_001/direct_launch.json",
+      "source": "results/baseline_debug_20261019/visible_gui_001/direct_launch.json",
+      "source_sha256": "8e58255e48f0c3347c86dad001de6b75919518d2c75a7a923369cd304b697e70",
+      "sha256": "8e58255e48f0c3347c86dad001de6b75919518d2c75a7a923369cd304b697e70",
+      "redacted": false
+    },
+    {
+      "path": "visible_gui_001/direct_launch_source.py",
+      "source": "results/baseline_debug_20261019/visible_gui_001/direct_launch_source.py",
+      "source_sha256": "597039a504a66194e058af0f0fd7c68440ff37786c7f5afff627bc9a25ce5725",
+      "sha256": "597039a504a66194e058af0f0fd7c68440ff37786c7f5afff627bc9a25ce5725",
+      "redacted": false
+    },
+    {
+      "path": "visible_gui_001/direct_native_result.json",
+      "source": "results/baseline_debug_20261019/visible_gui_001/direct_native_result.json",
+      "source_sha256": "d1fcb718e5732b0a349ecc5f8000ff5f2cc888aa44e99d0318cba41c85e3ea15",
+      "sha256": "d1fcb718e5732b0a349ecc5f8000ff5f2cc888aa44e99d0318cba41c85e3ea15",
+      "redacted": false
+    },
+    {
+      "path": "visible_gui_001/direct_process_diagnostic.json",
+      "source": "results/baseline_debug_20261019/visible_gui_001/direct_process_diagnostic.json",
+      "source_sha256": "70408511d0fb3d003e8e4c7b8160711a058b6b81d25012abd67a14660da68793",
+      "sha256": "70408511d0fb3d003e8e4c7b8160711a058b6b81d25012abd67a14660da68793",
+      "redacted": false
+    },
+    {
+      "path": "visible_gui_001/direct_stdout.txt",
+      "source": "results/baseline_debug_20261019/visible_gui_001/direct_stdout.txt",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false
+    },
+    {
+      "path": "visible_gui_001/gui_inventory.json",
+      "source": "results/baseline_debug_20261019/visible_gui_001/gui_inventory.json",
+      "source_sha256": "7a9145dccd7363dbf8646b48c62710642bd13318220fc651a592f17b3886004c",
+      "sha256": "7a9145dccd7363dbf8646b48c62710642bd13318220fc651a592f17b3886004c",
+      "redacted": false
+    },
+    {
+      "path": "visible_gui_001/gui_native_pass.png",
+      "source": "results/baseline_debug_20261019/visible_gui_001/gui_native_pass.png",
+      "source_sha256": "8e9618e744c63f7a1d76c2007b5684d522995c3fce6c77b72f5e55c5b17f62bb",
+      "sha256": "8e9618e744c63f7a1d76c2007b5684d522995c3fce6c77b72f5e55c5b17f62bb",
+      "redacted": false
+    },
+    {
+      "path": "visible_gui_001/session.json",
+      "source": "results/baseline_debug_20261019/visible_gui_001/session.json",
+      "source_sha256": "ef1b2344906a2cff572b6ebbc728e0fcc40f813924b273238918fa6f8a054360",
+      "sha256": "ef1b2344906a2cff572b6ebbc728e0fcc40f813924b273238918fa6f8a054360",
+      "redacted": false
+    },
+    {
+      "path": "visible_gui_001/vm_001/final.png",
+      "source": "results/baseline_debug_20261019/visible_gui_001/vm_001/final.png",
+      "source_sha256": "8e9618e744c63f7a1d76c2007b5684d522995c3fce6c77b72f5e55c5b17f62bb",
+      "sha256": "8e9618e744c63f7a1d76c2007b5684d522995c3fce6c77b72f5e55c5b17f62bb",
+      "redacted": false
+    },
+    {
+      "path": "visible_gui_001/vm_001/launch.json",
+      "source": "results/baseline_debug_20261019/visible_gui_001/vm_001/launch.json",
+      "source_sha256": "9da6178f520001b85c98abd263b65af20e7b5788798819bfd2cbeb6924b0cd17",
+      "sha256": "9da6178f520001b85c98abd263b65af20e7b5788798819bfd2cbeb6924b0cd17",
+      "redacted": false
+    },
+    {
+      "path": "visible_gui_001/vm_001/qemu.log",
+      "source": "results/baseline_debug_20261019/visible_gui_001/vm_001/qemu.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false
+    },
+    {
+      "path": "visible_gui_001/vm_001/readiness.jsonl",
+      "source": "results/baseline_debug_20261019/visible_gui_001/vm_001/readiness.jsonl",
+      "source_sha256": "ff1dfdb91f3225b00fa67399d0f9e3bddf3cf61aadfaf88638c42779b5dab7cc",
+      "sha256": "ff1dfdb91f3225b00fa67399d0f9e3bddf3cf61aadfaf88638c42779b5dab7cc",
+      "redacted": false
+    },
+    {
+      "path": "visible_gui_001/vm_001/ready.json",
+      "source": "results/baseline_debug_20261019/visible_gui_001/vm_001/ready.json",
+      "source_sha256": "fd84a23f4f83c10a219d74648b7ccae5dc1932063db3a4f6b7a517668c979224",
+      "sha256": "fd84a23f4f83c10a219d74648b7ccae5dc1932063db3a4f6b7a517668c979224",
+      "redacted": false
+    },
+    {
+      "path": "visible_gui_001/vm_001/ready.png",
+      "source": "results/baseline_debug_20261019/visible_gui_001/vm_001/ready.png",
+      "source_sha256": "6d0428dbe8845decf7503746580eb3c73589845fd9b168fd50176f7fd060fff7",
+      "sha256": "6d0428dbe8845decf7503746580eb3c73589845fd9b168fd50176f7fd060fff7",
+      "redacted": false
+    },
+    {
+      "path": "visible_gui_001/vm_001/serial.log",
+      "source": "results/baseline_debug_20261019/visible_gui_001/vm_001/serial.log",
+      "source_sha256": "b9f0f261cb82c547887770a795f7d95c64dde5de3aebeab0cc9b484fe727e990",
+      "sha256": "b9f0f261cb82c547887770a795f7d95c64dde5de3aebeab0cc9b484fe727e990",
+      "redacted": false
+    },
+    {
+      "path": "visible_gui_001/vm_001/stopped.json",
+      "source": "results/baseline_debug_20261019/visible_gui_001/vm_001/stopped.json",
+      "source_sha256": "35a4f00406d64246025fd71ebca0c97dedd53cc48e34b32f3d49a39e1a740a13",
+      "sha256": "35a4f00406d64246025fd71ebca0c97dedd53cc48e34b32f3d49a39e1a740a13",
+      "redacted": false
+    },
+    {
+      "path": "visible_gui_console.log",
+      "source": "results/baseline_debug_20261019/visible_gui_console.log",
+      "source_sha256": "ae1bec81b17f97d968ca29db8befbcf8de59c494f2d1f7c911c70a3d42ca425b",
+      "sha256": "ae1bec81b17f97d968ca29db8befbcf8de59c494f2d1f7c911c70a3d42ca425b",
+      "redacted": false
+    },
+    {
+      "path": "writing_check.json",
+      "source": "results/baseline_debug_20261019/writing_check.json",
+      "source_sha256": "f81c5d667e2d89bb93b339e0b9d0ebf400c37522414c0dd53079cdc653d723cc",
+      "sha256": "f81c5d667e2d89bb93b339e0b9d0ebf400c37522414c0dd53079cdc653d723cc",
+      "redacted": false
+    }
+  ]
+}

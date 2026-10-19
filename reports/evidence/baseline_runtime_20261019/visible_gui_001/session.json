@@ -1,0 +1,6 @@
+{
+  "endpoint": "http://127.0.0.1:15010",
+  "ready": true,
+  "visible": true,
+  "deadline_seconds_after_boot": 1200
+}

@@ -1,0 +1,7 @@
+{
+  "base_bytes": 28310503424,
+  "base_sha256": "edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12",
+  "firmware_sha256": "2df617a6fd1bae41ec7c0e3bceca96c928a5a88d8dc198468d34733393ab2792",
+  "cadworld_commit": "e5d0ebab8bd28da6e98c68c61db05747d1647f7b",
+  "upstream_tracked_clean": true
+}

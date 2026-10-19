@@ -1,0 +1,2 @@
+[2026-10-19 16:14:43,051 INFO cadworld.cli] CLI-only tasks: ['freecad-sketch-061']
+[2026-10-19 16:14:43,052 INFO cadworld.cli] freecad-sketch-061: Sketch one horizontal normal-geometry line segment 10 mm long in the XY plane. Save the completed model to /home/user/Unnamed.FCStd.

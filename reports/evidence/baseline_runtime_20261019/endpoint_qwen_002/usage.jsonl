@@ -1,0 +1,2 @@
+{"call": 1, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 0}
+{"call": 1, "event": "model_usage", "input_tokens": 2077, "output_tokens": 3, "sequence": 1, "thinking_tokens": 0, "total_tokens": 2080, "usage_available": true}
