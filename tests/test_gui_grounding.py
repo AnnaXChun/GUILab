@@ -106,3 +106,22 @@ def test_offline_analysis_does_not_change_responses_or_treat_miss_as_success(tmp
     assert result['actc_pairs'] == 0 and result['benchmark_score'] is None
     with pytest.raises(FileExistsError):
         probe.analyze(path, annotations)
+
+
+def test_new_screenshot_original_prompt_protocol_scales_once(tmp_path):
+    value = probe.load_plan(probe.ROOT / 'configs/gui_grounding_transfer_20261020.json')
+    value['previous_ledgers'] = []
+    assert value['screenshot_sha256'] != plan()['screenshot_sha256']
+    seen = []
+    def handler(request):
+        body = json.loads(request.content)
+        text = '\n'.join(x['text'] for x in body['messages'][0]['content'] if x['type']=='text')
+        protocol = value['cases'][len(seen)]['protocol']
+        assert ('using pixel coordinates on the original screenshot' in text) == (protocol=='normalized1000-original-prompt')
+        seen.append(protocol)
+        return httpx.Response(200, json=completion(body))
+    result = probe.collect(value, tmp_path/'transfer', 'https://offline.invalid/v1', 'TEST-NON-SECRET',
+                           transport=httpx.MockTransport(handler))
+    assert result['model_generation_calls'] == 6
+    assert all(row['pixel_actions']==['pyautogui.click(x=960, y=540)'] for row in result['cases'])
+    assert result['gui_action_dispatches']==0

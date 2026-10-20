@@ -46,6 +46,10 @@ def load_plan(path):
     if not 0 < plan['request_timeout_seconds'] <= 60 or not 0 < plan['max_wall_seconds'] <= 720:
         raise ValueError('calibration deadline exceeds the plan')
     groups = {}
+    protocols = set(plan.get('protocols', ['pixels', 'normalized1000']))
+    allowed = {'pixels', 'normalized1000', 'normalized1000-original-prompt'}
+    if len(protocols) != 2 or not protocols <= allowed:
+        raise ValueError('two explicit supported coordinate protocols required')
     for case in plan['cases']:
         if set(case) != {'id', 'target', 'protocol', 'instruction'}:
             raise ValueError('only public target instructions are allowed in cases')
@@ -53,7 +57,7 @@ def load_plan(path):
     if len(groups) != 3 or len({c['id'] for c in plan['cases']}) != 6:
         raise ValueError('three distinct targets and six unique case IDs required')
     for cases in groups.values():
-        if ({c['protocol'] for c in cases} != {'pixels', 'normalized1000'}
+        if ({c['protocol'] for c in cases} != protocols
                 or len(cases) != 2 or cases[0]['instruction'] != cases[1]['instruction']):
             raise ValueError('same target and instruction required for both protocols')
     return plan
@@ -94,7 +98,7 @@ def collect(plan, output, base_url, api_key, *, transport=None):
     import httpx
     import openai
     from PIL import Image
-    from cad_cf.qwen_coordinates import NormalizedQwenAdapter
+    from cad_cf.qwen_coordinates import NormalizedQwenAdapter, OriginalPromptNormalizedQwenAdapter
 
     if transport is None and os.environ.get('ENABLE_PAID_RUNS', '0') != '1':
         raise RuntimeError('NOT_RUN_BUDGET: ENABLE_PAID_RUNS=0')
@@ -181,6 +185,8 @@ def collect(plan, output, base_url, api_key, *, transport=None):
                     base_url=base_url, max_trajectory_length=1, think_level='none', temperature=plan['temperature'])
                 if case['protocol'] == 'normalized1000':
                     agent.provider_adapter = NormalizedQwenAdapter(agent.provider_adapter)
+                elif case['protocol'] == 'normalized1000-original-prompt':
+                    agent.provider_adapter = OriginalPromptNormalizedQwenAdapter(agent.provider_adapter)
                 agent.reset(max_steps=1)
                 case_started = time.monotonic()
                 try:

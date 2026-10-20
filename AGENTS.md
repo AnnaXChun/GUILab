@@ -16,6 +16,8 @@
 
 ## 实验与预算
 
+2026-10-20用户再次明确“继续调试直到GUI测试通过”，授权本轮继续本机GUI调试。先执行`gui_grounding_transfer_20261020.json`的6次新截图协议对照，再按`gui_coordinate_fix_20261020.json`在同一sketch-061/Qwen3.5-122B上最多2次GUI尝试，每次40次生成，总80次/24000输出tokens，成功即停。使用新批次账本并保留此前7本账本；不恢复旧额度。新增`normalized1000-original-prompt`显式协议保留官方prompt、按归一化执行，历史同单位；原像素和原normalized协议保持不变。校准命中与GUI实际任务成功分开验收。
+
 2026-10-20用户“按你说的做”授权固定截图定位校准：`configs/gui_grounding_20261020.json`，同一Qwen3.5-122B、3个目标各pixels/normalized1000两种协议，最多6次生成、每次256输出tokens、总1536、SDK重试0。使用单独固定run目录中的账本并核对6本旧账本SHA，不恢复历史额度；模型不接收`gui_grounding_annotations_20261020.json`，标注只供收集后的离线分析。该轮不启动VM，不执行点击，不算CADWorld episode或ACTC pair。
 
 该批已消耗6次生成、14825输入/473输出tokens，剩余调用0；代码、配置与标注在首次请求前冻结于6caebeb。旧6本账本均未变，新账本和全部响应归档。不得重开这份配置或换ledger追加；后续实验须另行定义预算与新截图验证条件。

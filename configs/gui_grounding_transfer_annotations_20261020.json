@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "classification": "offline_visual_annotations_only_not_model_input",
+  "source": "Visual inspection of a different archived GUI control screenshot before any new requests; no Qt data or evaluator rules",
+  "screenshot_sha256": "b1b6597a408f61f23e15eeef299fe9a480fde9ef0f849805a13d509f44171a85",
+  "coordinate_unit": "original_screenshot_pixels",
+  "bounds_convention": "left,top inclusive; right,bottom exclusive",
+  "targets": {
+    "ok": {
+      "bounds": [
+        1618,
+        379,
+        1724,
+        404
+      ],
+      "center": [
+        1671,
+        391.5
+      ]
+    },
+    "cancel": {
+      "bounds": [
+        1730,
+        379,
+        1836,
+        404
+      ],
+      "center": [
+        1783,
+        391.5
+      ]
+    },
+    "xy": {
+      "bounds": [
+        1552,
+        462,
+        1901,
+        479
+      ],
+      "center": [
+        1726.5,
+        470.5
+      ]
+    }
+  },
+  "xy_note": "Visible selected XY-plane list row; no claim about actual Qt hitbox."
+}

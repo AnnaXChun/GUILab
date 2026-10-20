@@ -121,9 +121,12 @@ def main():
     parser.add_argument('--batch-ledger',type=Path)
     parser.add_argument('--campaign-config',type=Path)
     parser.add_argument('--qwen-normalized-coordinates',action='store_true')
+    parser.add_argument('--qwen-original-pixel-prompt',action='store_true')
     parser.add_argument('--per-call-tokens',type=int)
     parser.add_argument('runner_args',nargs=argparse.REMAINDER)
     args=parser.parse_args()
+    if args.qwen_original_pixel_prompt and not args.qwen_normalized_coordinates:
+        parser.error('--qwen-original-pixel-prompt requires --qwen-normalized-coordinates')
     options=args.runner_args[1:] if args.runner_args[:1]==['--'] else args.runner_args
     no_model=('--help' in options) or (args.kind=='cli' and '--dry-run' in options)
     if not no_model and os.environ.get('ENABLE_PAID_RUNS','0')!='1':
@@ -145,7 +148,7 @@ def main():
     if args.qwen_normalized_coordinates:
         if args.kind!='gui':raise ValueError('coordinate adapter is GUI-only')
         from .qwen_coordinates import install_qwen_coordinates
-        restore_coordinates=install_qwen_coordinates()
+        restore_coordinates=install_qwen_coordinates(preserve_pixel_prompt=args.qwen_original_pixel_prompt)
     restore=install_sdk_guards(gate)
     runner='scripts/python/run_cadworld.py' if args.kind=='gui' else 'CLI/run_cli.py'
     options=args.runner_args[1:] if args.runner_args[:1]==['--'] else args.runner_args

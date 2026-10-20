@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "run_id": "gui_grounding_transfer_qwen122_20261020_001",
+  "classification": "fixed_screenshot_grounding_calibration",
+  "authorization": "2026-10-20用户要求继续调试直到GUI测试通过；先6次新截图协议验证，再单题受限GUI，保留旧账本。",
+  "model": "qwen3.5-122b-a10b",
+  "think_level": "none",
+  "temperature": 0,
+  "max_calls": 6,
+  "per_call_tokens": 256,
+  "max_output_tokens": 1536,
+  "max_wall_seconds": 720,
+  "request_timeout_seconds": 60,
+  "screenshot": "reports/evidence/gui_controls_20261020/gui_controls_native_20261020_007/select_xy.png",
+  "screenshot_sha256": "b1b6597a408f61f23e15eeef299fe9a480fde9ef0f849805a13d509f44171a85",
+  "previous_generation_calls": 232,
+  "previous_ledgers": [
+    {
+      "path": "results/first_baseline_batch.sqlite",
+      "sha256": "05eeb7e0e1e4b0216d5110e355b13680e9db4a8c4ab87a3d25414cf68eca8cf9"
+    },
+    {
+      "path": "results/success_batch_20261019.sqlite",
+      "sha256": "30f0b18a63843d4e20d964b387f9a5604c974f41740897bb4e6c4029f32b0506"
+    },
+    {
+      "path": "results/gui100_batch_20261019.sqlite",
+      "sha256": "a18fb5d29bad608bd7b9c55424d7fb9c1de9780286b03ab6533a786677d4be06"
+    },
+    {
+      "path": "results/gui_recovery_batch_20261019.sqlite",
+      "sha256": "1c1239caaf7cfecd6953f59cf53d5120fe006ca60b6b544c01d73c0fa9d1c265"
+    },
+    {
+      "path": "results/qwen122_batch_20261019.sqlite",
+      "sha256": "01e545f43ea785cd9cc33403ba9329e53224e7d90686aec3ae0698c25c663202"
+    },
+    {
+      "path": "results/gui_validation_20261020/model_batch.sqlite",
+      "sha256": "d726b25cec950685cf683e34fe578941644b59a73fd1600cc68c18bea7a0445b"
+    },
+    {
+      "path": "results/gui_grounding_qwen122_20261020_001/model_batch.sqlite",
+      "sha256": "5ff6a7b59318c116df48857eb33bcf1222234d0b00c98a7be8f14fa74594f9ac"
+    }
+  ],
+  "cases": [
+    {
+      "id": "ok_original",
+      "target": "ok",
+      "protocol": "normalized1000-original-prompt",
+      "instruction": "Click the center of the OK button in the Select attachment task panel. Return only the single click for this visible target."
+    },
+    {
+      "id": "ok_normalized",
+      "target": "ok",
+      "protocol": "normalized1000",
+      "instruction": "Click the center of the OK button in the Select attachment task panel. Return only the single click for this visible target."
+    },
+    {
+      "id": "cancel_normalized",
+      "target": "cancel",
+      "protocol": "normalized1000",
+      "instruction": "Click the center of the Cancel button in the Select attachment task panel. Return only the single click for this visible target."
+    },
+    {
+      "id": "cancel_original",
+      "target": "cancel",
+      "protocol": "normalized1000-original-prompt",
+      "instruction": "Click the center of the Cancel button in the Select attachment task panel. Return only the single click for this visible target."
+    },
+    {
+      "id": "xy_original",
+      "target": "xy",
+      "protocol": "normalized1000-original-prompt",
+      "instruction": "Click the XY-plane (Base plane) row in the Select attachment task panel. Return only the single click for this visible target."
+    },
+    {
+      "id": "xy_normalized",
+      "target": "xy",
+      "protocol": "normalized1000",
+      "instruction": "Click the XY-plane (Base plane) row in the Select attachment task panel. Return only the single click for this visible target."
+    }
+  ],
+  "protocols": [
+    "normalized1000-original-prompt",
+    "normalized1000"
+  ]
+}

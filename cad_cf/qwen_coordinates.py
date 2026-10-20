@@ -58,7 +58,15 @@ class NormalizedQwenAdapter:
         return scaled
 
 
-def install_qwen_coordinates():
+class OriginalPromptNormalizedQwenAdapter(NormalizedQwenAdapter):
+    """Explicit service-unit experiment; preserve the pinned pixel prompt."""
+    name='Qwen3-6-normalized1000-original-prompt'
+
+    def prompt_suffix(self,agent):
+        return self.delegate.prompt_suffix(agent)
+
+
+def install_qwen_coordinates(*, preserve_pixel_prompt=False):
     from baseline import provider_adapter
     from scripts.python.api_agent import CADWorldAPIModelAgent
     original=provider_adapter.load_from_env
@@ -67,7 +75,8 @@ def install_qwen_coordinates():
         delegate=original(model=model,provider=provider)
         if not model or 'qwen3' not in model.lower() or delegate.name!='Qwen3-6':
             raise ValueError('normalized1000 requires the pinned Qwen3-6 adapter and a Qwen3 model')
-        return NormalizedQwenAdapter(delegate)
+        adapter=OriginalPromptNormalizedQwenAdapter if preserve_pixel_prompt else NormalizedQwenAdapter
+        return adapter(delegate)
     def remember(agent,obs,response,actions):
         adapter=agent.provider_adapter
         if isinstance(adapter,NormalizedQwenAdapter):
@@ -75,7 +84,8 @@ def install_qwen_coordinates():
             # The upstream prompt serializes both model_action and executed_action.
             # Keep their online units consistent; actual pixel execution remains
             # unchanged in the returned response and complete episode JSONL.
-            response['coordinate_mapping']={'protocol_version':2,'model_unit':'normalized1000',
+            response['coordinate_mapping']={'protocol_version':3 if preserve_pixel_prompt else 2,'model_unit':'normalized1000',
+                'prompt_protocol':'original_pixels' if preserve_pixel_prompt else 'explicit_normalized1000',
                 'history_unit':'normalized1000','model_actions':normalized,'executed_pixel_actions':list(actions)}
             return original_remember(agent,obs,response,normalized)
         return original_remember(agent,obs,response,actions)

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "name": "gui_coordinate_fix_20261020",
+  "authorization": "2026-10-20用户要求继续调试直到GUI测试通过。本轮同一sketch-061、Qwen3.5-122B，最多2次单题，每次40次生成；总80次/24000输出tokens。先独立6次截图校准，成功立即停止；不重开旧账本，不扩题、不下载模型、不训练。",
+  "prior_evidence": "reports/GUI_GROUNDING_20261020.md",
+  "max_calls": 80,
+  "max_output_tokens": 24000,
+  "gui": {
+    "turns": 40,
+    "per_call_tokens": 1024,
+    "output_tokens": 12000,
+    "wall_seconds": 1200,
+    "settle_seconds": 5
+  },
+  "cli": {
+    "turns": 8,
+    "per_call_tokens": 2048,
+    "output_tokens": 8192,
+    "wall_seconds": 600
+  }
+}

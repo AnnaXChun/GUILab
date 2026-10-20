@@ -21,7 +21,8 @@ def test_ambiguous_or_out_of_range_coordinates_are_not_executed(source):
     with pytest.raises(ValueError):scale_action(source,1920,1080)
 
 
-def test_real_upstream_multiturn_history_does_not_feed_pixel_actions_back(monkeypatch):
+@pytest.mark.parametrize('preserve_pixel_prompt', [False, True])
+def test_real_upstream_multiturn_history_does_not_feed_pixel_actions_back(monkeypatch,preserve_pixel_prompt):
     import io
     from pathlib import Path
     image=pytest.importorskip('PIL.Image')
@@ -33,7 +34,7 @@ def test_real_upstream_multiturn_history_does_not_feed_pixel_actions_back(monkey
     original_remember=CADWorldAPIModelAgent._remember_turn
     stream=io.BytesIO();image.new('RGB',(1920,1080),'white').save(stream,format='PNG')
     obs={'screenshot':stream.getvalue()}
-    restore=install_qwen_coordinates()
+    restore=install_qwen_coordinates(preserve_pixel_prompt=preserve_pixel_prompt)
     try:
         agent=CADWorldAPIModelAgent(provider='openai-compatible',model='qwen3.6-35b-a3b',think_level='none')
         agent.reset(max_steps=3)
@@ -51,6 +52,12 @@ def test_real_upstream_multiturn_history_does_not_feed_pixel_actions_back(monkey
         assert raw in prompts[1]
         assert 'pyautogui.click(x=1546, y=306)' not in prompts[1]
         assert agent.trajectory[-1]['executed_action']==raw
-        assert 'normalized coordinate system' in prompts[1]
+        if preserve_pixel_prompt:
+            assert agent.provider_adapter.prompt_suffix(agent)==agent.provider_adapter.delegate.prompt_suffix(agent)
+            assert 'using pixel coordinates on the original screenshot' in prompts[1]
+            assert 'normalized coordinate system' not in prompts[1]
+            assert response['coordinate_mapping']['protocol_version']==3
+        else:
+            assert 'normalized coordinate system' in prompts[1]
     finally:restore()
     assert CADWorldAPIModelAgent._remember_turn is original_remember

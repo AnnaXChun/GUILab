@@ -70,7 +70,7 @@ def main():
     p.add_argument('--dry-run',action='store_true')
     p.add_argument('--model')
     p.add_argument('--qwen-no-thinking',action='store_true',help='Use pinned Qwen adapter and disable thinking for the bounded smoke')
-    p.add_argument('--qwen-coordinates',choices=['pixels','normalized1000'],default='pixels')
+    p.add_argument('--qwen-coordinates',choices=['pixels','normalized1000','normalized1000-original-prompt'],default='pixels')
     p.add_argument('--base-url')
     p.add_argument('--api-provider',choices=['openai-compatible','openai','gemini'],default='openai-compatible')
     p.add_argument('--key-env',default='CADWORLD_API_KEY')
@@ -138,7 +138,8 @@ def main():
              '--per-call-tokens',str(route['per_call_tokens']),'--max-wall',str(route['wall_seconds']),
              '--batch-ledger',str(a.batch_ledger.resolve()),'--log',str(output/'provider_usage.jsonl')]
     if a.campaign_config:guarded+=['--campaign-config',str((output/'campaign.json').resolve())]
-    if a.qwen_coordinates=='normalized1000':guarded+=['--qwen-normalized-coordinates']
+    if a.qwen_coordinates!='pixels':guarded+=['--qwen-normalized-coordinates']
+    if a.qwen_coordinates=='normalized1000-original-prompt':guarded+=['--qwen-original-pixel-prompt']
     if a.runtime_config:
         for field in ('base','firmware','output'):config[field]=str(Path(config[field]).resolve())
         runtime_path=output/'runtime_config.json'
