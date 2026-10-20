@@ -48,6 +48,8 @@ def runner_plan(root,kind,model,base_url,provider,run_id,task_id=None,qwen_no_th
             cmd[cmd.index('--max-wall-seconds')+1]=str(route['wall_seconds'])
             cmd[cmd.index('--total-output-tokens')+1]=str(route['output_tokens'])
             cmd+=['--per-turn-tokens',str(route['per_call_tokens'])]
+        else:
+            cmd+=['--sleep_after_execution',str(route.get('settle_seconds',0.3))]
     return cmd
 
 

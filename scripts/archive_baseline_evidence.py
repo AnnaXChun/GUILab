@@ -60,7 +60,10 @@ def export(root,sources,output,private=()):
                 if match and int(match[1]) not in (1,2,10,20,24,25,50,100):
                     omitted.append({'path':str(rel),'sha256':digest(path.read_bytes()),'reason':'screenshot sample; full local image retained'})
                     continue
-                if path.name not in ('initial_state.png','reset.png','ready.png','final.png','empty_canvas.png') and not match:continue
+                if path.name not in ('initial_state.png','reset.png','ready.png','final.png','empty_canvas.png',
+                                     'welcome_done.png','new_document.png','new_body.png','new_sketch.png',
+                                     'select_xy.png','confirm_xy.png','leave_edit.png','save_dialog.png',
+                                     'save.png','close.png','open_dialog.png','reopen.png','live_http_002.png') and not match:continue
                 raw=path.read_bytes()
             elif path.suffix in TEXT_SUFFIXES:raw=path.read_bytes()
             else:continue

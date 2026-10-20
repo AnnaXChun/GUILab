@@ -9,5 +9,6 @@
   "visible": false,
   "boot_seconds": 600,
   "gui_ready": true,
-  "gui_seconds": 300
+  "gui_seconds": 300,
+  "gui_alive_timeout_ms": null
 }

@@ -1,5 +1,6 @@
 """Explicit bounded continuation batches; existing ledgers remain immutable."""
 import json
+import math
 from pathlib import Path
 
 
@@ -21,6 +22,9 @@ def load_campaign(path=None):
                 raise ValueError('invalid '+kind+' '+key)
         if route['turns']>value['max_calls'] or route['output_tokens']>value['max_output_tokens']:
             raise ValueError('route exceeds campaign limit')
+    settle=value['gui'].get('settle_seconds',0.3)
+    if type(settle) not in (int,float) or not math.isfinite(settle) or not 0<=settle<=10:
+        raise ValueError('invalid bounded GUI settle_seconds')
     return value
 
 

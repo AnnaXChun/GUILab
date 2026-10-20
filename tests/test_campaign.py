@@ -23,3 +23,20 @@ def test_unbounded_or_unattributed_campaign_is_rejected(tmp_path):
     campaign=load_campaign('configs/baseline_success_20261019.json');campaign['max_calls']=10000
     p=tmp_path/'bad.json';p.write_text(json.dumps(campaign))
     with pytest.raises(ValueError,match='bounded'):load_campaign(p)
+
+
+@pytest.mark.parametrize('settle',[float('nan'),float('inf'),-1,11,True])
+def test_invalid_gui_settle_is_rejected(tmp_path,settle):
+    campaign=load_campaign('configs/baseline_success_20261019.json')
+    campaign['gui']['settle_seconds']=settle
+    p=tmp_path/'bad_settle.json';p.write_text(json.dumps(campaign))
+    with pytest.raises(ValueError,match='settle_seconds'):load_campaign(p)
+
+
+def test_native_gui_settle_uses_the_pinned_runner_option(tmp_path):
+    campaign=load_campaign('configs/gui_validation_20261020.json')
+    gui=runner_plan(tmp_path,'gui','qwen3.5-122b-a10b',None,'openai-compatible','fresh','freecad-sketch-061',True,campaign)
+    assert gui[gui.index('--sleep_after_execution')+1]=='5'
+    assert gui[gui.index('--max_steps')+1]=='25'
+    original=runner_plan(tmp_path,'gui-connect','qwen3.5-122b-a10b',None,'openai-compatible','fresh','freecad-sketch-061',True)
+    assert '--sleep_after_execution' not in original
