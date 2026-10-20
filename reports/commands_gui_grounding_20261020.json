@@ -1,0 +1,14 @@
+{
+  "classification": "actual_grounding_calibration_commands",
+  "run_id": "gui_grounding_qwen122_20261020_001",
+  "historical_commands": "reports/commands_20261020.json",
+  "commands": [
+    {"command": "ENABLE_PAID_RUNS=0 .venv/bin/python -m pytest -q tests/test_gui_grounding.py tests/test_qwen_coordinates.py tests/test_provider_budget.py tests/test_batch_budget.py", "exit_code": 1, "result": "1 failed, 25 passed; incorrect empty-history assertion in the test, zero real model requests"},
+    {"command": "ENABLE_PAID_RUNS=0 bash scripts/probe_gui_grounding.sh --dry-run", "exit_code": 0, "result": "DRY_RUN; old ledger hashes and frozen PNG verified"},
+    {"command": "ENABLE_PAID_RUNS=0 .venv/bin/python -m pytest -q tests/test_gui_grounding.py tests/test_qwen_coordinates.py tests/test_provider_budget.py tests/test_batch_budget.py", "exit_code": 0, "result": "26 passed in 2.39s"},
+    {"command": "ENABLE_PAID_RUNS=0 .venv/bin/python -m pytest -q", "exit_code": 0, "result": "159 passed in 3.91s"},
+    {"command": "ENABLE_PAID_RUNS=1 bash scripts/probe_gui_grounding.sh", "exit_code": 0, "result": "COLLECTED; 6 calls; 14825 input / 473 output tokens; no errors; 0 remaining calls"},
+    {"command": "ENABLE_PAID_RUNS=0 bash scripts/probe_gui_grounding.sh --analyze results/gui_grounding_qwen122_20261020_001/summary.json --annotations configs/gui_grounding_annotations_20261020.json", "exit_code": 0, "result": "pixels 0/3; normalized1000 2/3 within frozen visible bounds"},
+    {"command": "ENABLE_PAID_RUNS=0 .venv/bin/python scripts/final_summary.py", "exit_code": 0, "result": "Grounding 6 calls and 0/3 vs 2/3 separated from latest GUI episode strict=0; cumulative calls=232, real pairs=0"}
+  ]
+}

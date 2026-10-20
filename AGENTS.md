@@ -10,11 +10,15 @@
 
 ## 当前事实
 
-最新事实以`reports/GUI_COORDINATE_AUDIT.md`、`reports/GUI_CONTROLS.md`、`reports/GUI_VALIDATION_20261020.md`、`reports/BASELINE_REPRO.md`和`handoff.json`为准。Qwen3.5-122B CLI sketch-061官方1.0、原生审计PASS；Qwen3.6 CLI官方1.0但原文件Invalid。GUI controls007完成Body/XY空Sketch、GUI保存关闭重开，PASS_GUI_CONTROL_CYCLE。随后122B GUI复测25次生成、2328输出tokens、官方strict=0、无文件，无API错误；后段点击落在Choose Orientation对话框外。官方Qwen要求原图像素、无缩放；最近normalized1000 v2为本项目额外协议。两路离线SDK对照通过不等于模型定位正确；可用scripts/replay_gui_protocol.py --protocol compare重验。累计226次生成，最新154项项目测试与4项官方Qwen测试通过，全部本项目VM停止，真实pairs=0。当前优先解决模型GUI坐标定位，正式TypedWorker/GUI bridge同步和same-S0后移；不新增本轮推理或重开已用尽账本。参考Linux/KVM gate保持原记录，远程须验证自己的环境。
+最新事实以`reports/GUI_GROUNDING_20261020.md`、`reports/GUI_CONTROLS.md`、`reports/GUI_VALIDATION_20261020.md`、`reports/BASELINE_REPRO.md`和`handoff.json`为准。Qwen3.5-122B CLI sketch-061官方1.0、原生审计PASS；Qwen3.6 CLI官方1.0但原文件Invalid。GUI controls007完成Body/XY空Sketch、GUI保存关闭重开；随后122B GUI复测25次生成、2328输出tokens、官方strict=0、无文件，无API错误。
+
+最新6次固定截图定位校准已完成：原定pixels组0/3，normalized1000组2/3。pixels组原始响应事后按1000换算为3/3，支持当前服务的输出单位与官方像素要求不一致；这是事后假设，不改原成绩，也未执行点击。累计232次生成，最新159项项目测试通过，此前4项官方Qwen测试通过，全部本项目VM停止，真实pairs=0。下一步先在新截图上验证显式坐标配置，再限步复测GUI；正式TypedWorker/GUI bridge同步和same-S0后移。参考Linux/KVM gate保持原记录，远程须验证自己的环境。
 
 ## 实验与预算
 
 2026-10-20用户“按你说的做”授权固定截图定位校准：`configs/gui_grounding_20261020.json`，同一Qwen3.5-122B、3个目标各pixels/normalized1000两种协议，最多6次生成、每次256输出tokens、总1536、SDK重试0。使用单独固定run目录中的账本并核对6本旧账本SHA，不恢复历史额度；模型不接收`gui_grounding_annotations_20261020.json`，标注只供收集后的离线分析。该轮不启动VM，不执行点击，不算CADWorld episode或ACTC pair。
+
+该批已消耗6次生成、14825输入/473输出tokens，剩余调用0；代码、配置与标注在首次请求前冻结于6caebeb。旧6本账本均未变，新账本和全部响应归档。不得重开这份配置或换ledger追加；后续实验须另行定义预算与新截图验证条件。
 
 按 P0 → P1 → P2 → P3 推进真实实验。P0/P1 未通过时，后续静态开发和 mock 可以继续，真实实验不能越级。`reports/stages.json` 只能依据新证据更新，禁止直接修改 PASS 绕过 gate。
 

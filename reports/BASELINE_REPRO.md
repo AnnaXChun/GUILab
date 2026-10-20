@@ -1,5 +1,9 @@
 # 基线复现
 
+最新6次[固定截图定位校准](GUI_GROUNDING_20261020.md)是独立诊断，未执行GUI或CADWorld episode。pixels组0/3、normalized1000组2/3；pixels原始返回事后按1000换算为3/3，仅支持单位假设，不改原定成绩。累计232次生成，baseline仍为11个attempt、9个有效评估episode、2个不同任务，GUI任务strict仍0且无成功文件。CLI122B单题官方1.0与原生审计PASS保留；论文GUI-only与扩展协议均未完成复现。159项项目测试通过，完整请求、响应与用量已归档。
+
+下方保留此前各轮结果及当时累计数。
+
 已按固定源码核对[GUI坐标协议](GUI_COORDINATE_AUDIT.md)：官方Qwen要求原图像素并原样执行，最近normalized1000 v2属于扩展协议。现有旧响应按两种解释都未命中按钮；离线对照通过不代表模型定位或任务成功。本轮0次真实调用，项目154项、官方Qwen 4项测试通过，优先继续GUI定位。
 
 2026-10-20新增[GUI控件验收](GUI_CONTROLS.md)：`controls007`完成12次单次派发的GUI操作，Body/XY空Sketch、保存关闭重开通过。7071-byte探针文件不计模型产物。代码已冻结于`77d10d0`，151项单测通过；正式模型GUI复测使用新的官方原始base overlay，结果与该可信探针分开统计。

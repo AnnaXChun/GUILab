@@ -1,12 +1,14 @@
 # GUILab 交接
 
-更新：2026-10-20。仓库：[AnnaXChun/GUILab](https://github.com/AnnaXChun/GUILab)，根目录就是项目。先读本文件、[GUI控件验收](reports/GUI_CONTROLS.md)、[GUI模型复测](reports/GUI_VALIDATION_20261020.md)与SPEC.md；历史CLI成功见[此前续跑](reports/BASELINE_SUCCESS_SMOKE.md)，机器记录见handoff.json。历史失败不可被后续成功覆盖。
+更新：2026-10-20。仓库：[AnnaXChun/GUILab](https://github.com/AnnaXChun/GUILab)，根目录就是项目。先读本文件、[定位校准](reports/GUI_GROUNDING_20261020.md)与SPEC.md；GUI任务失败见[模型复测](reports/GUI_VALIDATION_20261020.md)，历史CLI成功见[此前续跑](reports/BASELINE_SUCCESS_SMOKE.md)，机器记录见handoff.json。历史失败不可被后续成功覆盖。
 
 GUI控制闭环已通过：controls007在新官方base overlay中用12次单次派发操作创建Body/XY空Sketch、保存关闭重开，7071-byte文件字节不变，151项单测通过。已处理的具体问题为GNOME外部未响应弹窗、探针对话框移动后的旧坐标、30秒观察截止早于90秒阶段等待；不将这些统称为历史唯一根因。六次失败与一次PASS均已归档。
 
 模型复测使用代码提交77d10d0和新VM，Qwen3.5-122B GUI sketch-061官方strict=0、no_output_file；25次生成、88918输入/2328输出tokens、无API错误。第15–25轮未命中Choose Orientation的OK按钮，不能把可信探针成功写成模型成功。GUI模型仍无文件，无原生文件可审计；CLI历史的官方与122B原生成功不变。
 
-累计226次生成、11个attempt、9个有效评估episode，已知输入791185/输出25713 tokens；初次HTTP500未知usage与128-token占用保留，美元总费null。全部本项目VM已停，base/固件SHA前后不变。新25次账本和旧5本账本均保留，本轮不再追加。最新[坐标协议核对](reports/GUI_COORDINATE_AUDIT.md)确认官方Qwen使用原图像素，本项目normalized1000为额外协议；新增两路离线对照通过，最新154项项目单测、4项官方Qwen测试通过。下一步优先模型坐标定位校准，正式worker/Qt bridge同步和same-S0双clone后移，按[验收计划](docs/NEXT_ACTC_VALIDATION.md)推进。真实pairs=0，P3/P4继续NO-GO。
+最新6次固定截图定位校准使用Qwen3.5-122B，原定pixels组0/3、normalized1000组2/3。官方pixels要求下的原始值事后按1000换算后为3/3，支持服务输出单位不匹配；这项事后检查未增加模型请求，也未执行点击，不能改判原定组或算GUI成功。详见[校准报告](reports/GUI_GROUNDING_20261020.md)与[原始证据](reports/evidence/gui_grounding_20261020/INDEX.json)。代码、预算和标注在首次请求前冻结于6caebeb。
+
+累计232次生成、11个baseline attempt、9个有效评估episode、2个不同任务，已知输入806010/输出26186 tokens。新增校准单列为1个诊断run、6条预测；初次HTTP500未知usage与128-token占用保留，完整总量和美元总费null。全部本项目VM已停；本轮未启动VM。6次校准用量为14825输入/473输出tokens，剩余调用0，旧6本账本SHA不变。最新159项项目测试通过，此前4项官方Qwen测试通过。下一步在新截图上验证显式坐标配置，再限步复测GUI；正式worker/Qt bridge同步和same-S0双clone后移，见[验收计划](docs/NEXT_ACTC_VALIDATION.md)。真实pairs=0，P3/P4继续NO-GO。
 
 下方详细段落保留2026-10-19的历史，不把其中201次、122 tests或“先做控件诊断”等旧状态当作当前待办。
 
@@ -41,7 +43,7 @@ upstream固定`e5d0ebab8bd28da6e98c68c61db05747d1647f7b`，tracked文件不得�
 
 VM、固件、.env和SQLite不随Git上传。已有官方qcow2为28,310,503,424 bytes，SHA256为`edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12`；远程必须核验自己的资产，不能直接使用本机路径。按`configs/native_tcg.example.json`填写路径与SHA，重新运行`probe_baseline_env.py`取得本机验收。具体步骤见[TCG指南](docs/RUN_TCG_BASELINE.md)。
 
-下一阶段无模型检查无需API key。未来模型实验只收集缺项：`CADWORLD_API_BASE_URL`、`CADWORLD_API_KEY`和准确model ID；本轮使用过qwen3.6-35b-a3b和qwen3.5-122b-a10b，均thinking=false。服务别名不证明权重哈希。密钥通过secret、环境变量或ignored `.env`提供，不进Git、argv或报告，不假定GitHub secret自动进入远程环境。
+无模型检查无需API key。后续新截图模型验证只收集缺项：`CADWORLD_API_BASE_URL`、`CADWORLD_API_KEY`和准确model ID；已使用过qwen3.6-35b-a3b和qwen3.5-122b-a10b，均thinking=false。服务别名不证明权重哈希。密钥通过secret、环境变量或ignored `.env`提供，不进Git、argv或报告，不假定GitHub secret自动进入远程环境。
 
 ## 授权和预算
 
@@ -53,7 +55,7 @@ SDK重试为0，/execute非幂等变更单次派发；timeout或不确定写入�
 
 ## 下一步和有效性边界
 
-先做无模型GUI控件/事件循环诊断，通过后再定义单题GUI模型复测；当前不新增推理。官方sh可以复用原Python入口；GUI sh引用缺失test_rest.json且不透传参数，vLLM sh固定GPU3，CLI wave sh启动四个模型和50题，不能原样启动。
+GUI控件诊断和本轮6次定位校准已完成。当前服务配原样官方pixel adapter为NO-GO；下一项是在新截图和事前冻结目标上验证明确坐标单位，再做限步GUI单题。已有normalized1000为2/3，事后“官方prompt加归一化解释”为待验证候选，不加固定偏移、不反馈Qt坐标。后续预算与验收条件须预先定义，不重开已耗尽配置。官方sh复用原Python入口；GUI sh引用缺失test_rest.json且不透传参数，vLLM sh固定GPU3，CLI wave sh启动四个模型和50题，不能原样启动。
 
 P1必须部署正式guest_gui_bridge，验收Qt主线程ack、TypedWorker保存关闭重开和当前GUI刷新。之后P2才验证同一公开intent、同一S0、两个独立VM/磁盘/workdir；不能用同一base SHA或同任务ID代替S0证明，不能A后undo再B。真实pair、差异重测和训练GO门槛见stages.json，单路成功不自动放行P1–P4。
 

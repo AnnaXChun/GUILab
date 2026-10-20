@@ -1,5 +1,9 @@
 # Pilot 结果
 
+最新[定位校准](GUI_GROUNDING_20261020.md)新增6条真实模型预测，累计232次生成。预定pixels组0/3、normalized1000组2/3；事后单位解释独立记录。该轮无VM、无点击、无S0配对、无credit或preference标签。真实pair与差异重测仍为0，P3/P4继续NO-GO；正式TypedWorker同步和same-S0后移，优先在新截图验证坐标配置。159项项目测试通过不改变pilot验收状态。
+
+下方为此前各轮记录。
+
 最新[坐标协议核对](GUI_COORDINATE_AUDIT.md)仅做离线SDK对照与测试，不产生模型样本或pair。当前优先解决模型GUI定位，正式TypedWorker同步与same-S0后移；真实pair与差异重测仍为0，P3/P4继续NO-GO。
 
 2026-10-20的GUI控件探针已完成保存关闭重开，见[GUI控件验收](GUI_CONTROLS.md)。它未运行GUI/API候选配对，不新增preference、credit或有效pair；真实pair与差异重测仍为0。后续单路GUI模型复测也不作为pair或held-out效果估计。

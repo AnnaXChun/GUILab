@@ -1,0 +1,79 @@
+{
+  "classification": "fixed_screenshot_grounding_public_evidence",
+  "run_id": "gui_grounding_qwen122_20261020_001",
+  "synthetic": false,
+  "implementation_commit": "6caebeb65773d6eef178a2fd075d72f42255ac91",
+  "model_generation_calls": 6,
+  "gui_action_dispatches": 0,
+  "benchmark_episode": false,
+  "real_pairs": 0,
+  "files": [
+    {
+      "path": "manifest.json",
+      "source_path": "results/gui_grounding_qwen122_20261020_001/manifest.json",
+      "bytes": 5593,
+      "source_sha256": "c1562714e0c22757f78b7946e33afb316a10716e9f450df75f04f85a273c1b42",
+      "sha256": "c1562714e0c22757f78b7946e33afb316a10716e9f450df75f04f85a273c1b42",
+      "byte_identical": true
+    },
+    {
+      "path": "trajectory.jsonl",
+      "source_path": "results/gui_grounding_qwen122_20261020_001/trajectory.jsonl",
+      "bytes": 30886,
+      "source_sha256": "7086c83878acaceb32af2447e3d49fa1ae1b69e4372e080a68cd1d54088a21b5",
+      "sha256": "7086c83878acaceb32af2447e3d49fa1ae1b69e4372e080a68cd1d54088a21b5",
+      "byte_identical": true
+    },
+    {
+      "path": "provider_usage.jsonl",
+      "source_path": "results/gui_grounding_qwen122_20261020_001/provider_usage.jsonl",
+      "bytes": 1544,
+      "source_sha256": "b21d0d40282f6e74e97137648d4deb98a1d297d7e371326a4aa0594f87818560",
+      "sha256": "b21d0d40282f6e74e97137648d4deb98a1d297d7e371326a4aa0594f87818560",
+      "byte_identical": true
+    },
+    {
+      "path": "summary.json",
+      "source_path": "results/gui_grounding_qwen122_20261020_001/summary.json",
+      "bytes": 10103,
+      "source_sha256": "5d030afcf93716e71d33c49a46cc3779045cd9d130a10f5192a7b9e905e2dce4",
+      "sha256": "5d030afcf93716e71d33c49a46cc3779045cd9d130a10f5192a7b9e905e2dce4",
+      "byte_identical": true
+    },
+    {
+      "path": "analysis.json",
+      "source_path": "results/gui_grounding_qwen122_20261020_001/analysis.json",
+      "bytes": 2517,
+      "source_sha256": "3676b45d1e6435974e993b32ad585451466d32745cf6dde9f50bae3776db4674",
+      "sha256": "3676b45d1e6435974e993b32ad585451466d32745cf6dde9f50bae3776db4674",
+      "byte_identical": true
+    },
+    {
+      "path": "posthoc_unit_hypothesis.json",
+      "source_path": "results/gui_grounding_qwen122_20261020_001/posthoc_unit_hypothesis.json",
+      "bytes": 1482,
+      "source_sha256": "6a6cc63c5895d07c48294a8896099f58a19294b2eb53600eba2139e1b76c4361",
+      "sha256": "6a6cc63c5895d07c48294a8896099f58a19294b2eb53600eba2139e1b76c4361",
+      "byte_identical": true
+    },
+    {
+      "path": "project_tests.json",
+      "source_path": "results/gui_grounding_qwen122_20261020_001/project_tests.json",
+      "bytes": 366,
+      "source_sha256": "26a20a2b16816858c5cd03b263a9d6791dccfd46efbf104ed977d5519d3de4fb",
+      "sha256": "26a20a2b16816858c5cd03b263a9d6791dccfd46efbf104ed977d5519d3de4fb",
+      "byte_identical": true
+    }
+  ],
+  "screenshot": {
+    "path": "reports/evidence/gui_validation_20261020/official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_24_20261020@130728292029.png",
+    "sha256": "bcfb20058d2fcb44c72f5bd6f3c40fdc442264c81651ebad50773ee7fe6159bd",
+    "reused_existing_archive": true
+  },
+  "excluded": [
+    "model_batch.sqlite",
+    ".env"
+  ],
+  "annotation_path": "configs/gui_grounding_annotations_20261020.json",
+  "interpretation": "Prespecified pixels 0/3 and normalized1000 2/3; posthoc normalized reinterpretation is separate and is not a baseline success."
+}

@@ -1,0 +1,139 @@
+{
+  "classification": "posthoc_fixed_screenshot_grounding_only",
+  "results": [
+    {
+      "case_id": "ok_pixels",
+      "target": "ok",
+      "protocol": "pixels",
+      "pixel_point": [
+        483,
+        607
+      ],
+      "visible_target_bounds": [
+        884,
+        647,
+        990,
+        672
+      ],
+      "hit": false,
+      "center_offset_pixels": [
+        -454,
+        -52.5
+      ]
+    },
+    {
+      "case_id": "ok_normalized",
+      "target": "ok",
+      "protocol": "normalized1000",
+      "pixel_point": [
+        933,
+        647
+      ],
+      "visible_target_bounds": [
+        884,
+        647,
+        990,
+        672
+      ],
+      "hit": true,
+      "center_offset_pixels": [
+        -4,
+        -12.5
+      ]
+    },
+    {
+      "case_id": "cancel_normalized",
+      "target": "cancel",
+      "protocol": "normalized1000",
+      "pixel_point": [
+        1048,
+        645
+      ],
+      "visible_target_bounds": [
+        996,
+        647,
+        1102,
+        672
+      ],
+      "hit": false,
+      "center_offset_pixels": [
+        -1,
+        -14.5
+      ]
+    },
+    {
+      "case_id": "cancel_pixels",
+      "target": "cancel",
+      "protocol": "pixels",
+      "pixel_point": [
+        547,
+        609
+      ],
+      "visible_target_bounds": [
+        996,
+        647,
+        1102,
+        672
+      ],
+      "hit": false,
+      "center_offset_pixels": [
+        -502,
+        -50.5
+      ]
+    },
+    {
+      "case_id": "xy_pixels",
+      "target": "xy",
+      "protocol": "pixels",
+      "pixel_point": [
+        470,
+        473
+      ],
+      "visible_target_bounds": [
+        893,
+        505,
+        974,
+        523
+      ],
+      "hit": false,
+      "center_offset_pixels": [
+        -463.5,
+        -41
+      ]
+    },
+    {
+      "case_id": "xy_normalized",
+      "target": "xy",
+      "protocol": "normalized1000",
+      "pixel_point": [
+        912,
+        507
+      ],
+      "visible_target_bounds": [
+        893,
+        505,
+        974,
+        523
+      ],
+      "hit": true,
+      "center_offset_pixels": [
+        -21.5,
+        -7
+      ]
+    }
+  ],
+  "by_protocol": {
+    "pixels": {
+      "hits": 0,
+      "attempts": 3
+    },
+    "normalized1000": {
+      "hits": 2,
+      "attempts": 3
+    }
+  },
+  "annotation_sha256": "52379a0998f71e1121b5d0d2a49de7f2b02d9d87eba1585d06a3f928e01a70ca",
+  "benchmark_score": null,
+  "actc_pairs": 0,
+  "generalization": "three targets on one previously debugged screenshot, one prediction per protocol/target"
+}

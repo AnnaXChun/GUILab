@@ -1,0 +1,55 @@
+{
+  "classification": "posthoc_coordinate_unit_hypothesis_not_prespecified_arm",
+  "original_arm_hit_count": 0,
+  "hypothesis_hit_count": 3,
+  "n": 3,
+  "model_generation_calls": 0,
+  "gui_action_dispatches": 0,
+  "not_a_prospective_success": true,
+  "original_results_unchanged": true,
+  "hypothesis": "Responses elicited with the official pixel prompt align with targets when interpreted as normalized1000",
+  "rows": [
+    {
+      "case_id": "ok_pixels",
+      "model_action": "pyautogui.click(x=483, y=607)",
+      "actual_protocol_pixel_point": [
+        483,
+        607
+      ],
+      "hypothesis_normalized1000_point": [
+        927,
+        656
+      ],
+      "hypothesis_hits_frozen_visual_bounds": true,
+      "counterfactual_gui_action_executed": false
+    },
+    {
+      "case_id": "cancel_pixels",
+      "model_action": "pyautogui.click(x=547, y=609)",
+      "actual_protocol_pixel_point": [
+        547,
+        609
+      ],
+      "hypothesis_normalized1000_point": [
+        1050,
+        658
+      ],
+      "hypothesis_hits_frozen_visual_bounds": true,
+      "counterfactual_gui_action_executed": false
+    },
+    {
+      "case_id": "xy_pixels",
+      "model_action": "pyautogui.click(x=470, y=473)",
+      "actual_protocol_pixel_point": [
+        470,
+        473
+      ],
+      "hypothesis_normalized1000_point": [
+        902,
+        511
+      ],
+      "hypothesis_hits_frozen_visual_bounds": true,
+      "counterfactual_gui_action_executed": false
+    }
+  ]
+}

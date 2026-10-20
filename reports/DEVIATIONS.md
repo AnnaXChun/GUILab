@@ -1,5 +1,11 @@
 # 差异与适配
 
+## 固定截图定位校准
+
+2026-10-20新增`cad_cf/gui_grounding.py`、冻结配置/离线标注、shell入口及5项测试，复用pinned agent和现有预算保护。用户授权的6次真实请求已完成，159项全量测试通过。该轮只收集同图同目标的单轮预测，不接桌面controller；标注不进入模型请求，未读官方评分规则，upstream tracked源码未改。完整细节见[定位校准](GUI_GROUNDING_20261020.md)。
+
+代码、预算与标注在首次请求前提交为6caebeb。pixels使用官方prompt/adapter，normalized1000使用已有扩展后缀；原定命中0/3与2/3。看到结果后新增的“pixels原始值按1000解释”为3/3，单列事后假设，不重写analysis或冒充第三实验组。本轮14825输入/473输出tokens，旧6本账本SHA不变，累计232次生成；无VM、无点击、无新增episode或ACTC pair，默认付费和阶段gate不变。
+
 ## 官方坐标协议核对
 
 2026-10-20按用户要求复核pinned `baseline/Qwen3-6/adapter.py`：官方要求original screenshot pixels，`adapt_actions`原样返回。`normalized1000 v2`是本项目明确改变prompt和执行坐标的扩展，不是官方Qwen默认处理；不能把Holo的1000分母或OpenCUA的smart_resize自动套到Qwen服务。运行入口默认本来就是pixels，本轮未改默认或模型执行逻辑。

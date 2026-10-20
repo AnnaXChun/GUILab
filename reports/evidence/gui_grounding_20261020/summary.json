@@ -1,0 +1,234 @@
+{
+  "classification": "fixed_screenshot_grounding_calibration",
+  "status": "COLLECTED",
+  "stop_reason": null,
+  "run_id": "gui_grounding_qwen122_20261020_001",
+  "synthetic": false,
+  "model_generation_calls": 6,
+  "budget": {
+    "blocked": false,
+    "requests": 6,
+    "remaining_calls": 0,
+    "known_output_tokens": 473,
+    "unknown_output_reservation": 0,
+    "remaining_output_cap": 1063
+  },
+  "previous_generation_calls": 226,
+  "cumulative_generation_calls": 232,
+  "wall_seconds": 15.181491958210245,
+  "previous_ledgers_unchanged": true,
+  "ledger_sha256": "5ff6a7b59318c116df48857eb33bcf1222234d0b00c98a7be8f14fa74594f9ac",
+  "screenshot_sha256": "bcfb20058d2fcb44c72f5bd6f3c40fdc442264c81651ebad50773ee7fe6159bd",
+  "new_vm_launches": 0,
+  "gui_action_dispatches": 0,
+  "benchmark_episode": false,
+  "real_pairs": 0,
+  "total_cost_usd": null,
+  "cost_reason": "provider pricing not available",
+  "cases": [
+    {
+      "case_id": "ok_pixels",
+      "target": "ok",
+      "protocol": "pixels",
+      "response": {
+        "provider": "openai-compatible",
+        "model": "qwen3.5-122b-a10b",
+        "status": "ok",
+        "raw_response": "{\n  \"reason\": \"The 'Choose Orientation' dialog is open and visible, with the OK button clearly displayed at the bottom left of the dialog. The task requires clicking the center of this OK button to confirm the orientation selection.\",\n  \"action\": \"pyautogui.click(x=483, y=607)\"\n}",
+        "action": "pyautogui.click(x=483, y=607)",
+        "reason": "The 'Choose Orientation' dialog is open and visible, with the OK button clearly displayed at the bottom left of the dialog. The task requires clicking the center of this OK button to confirm the orientation selection.",
+        "actions": [
+          "pyautogui.click(x=483, y=607)"
+        ],
+        "usage": {
+          "input_tokens": 2443,
+          "output_tokens": 73,
+          "total_tokens": 2516,
+          "tokens_with_thinking": 2516,
+          "tokens_without_thinking": 2516
+        },
+        "finish_reason": "stop",
+        "parsed_actions": [
+          "pyautogui.click(x=483, y=607)"
+        ],
+        "executed_action": "pyautogui.click(x=483, y=607)",
+        "step_idx": 1
+      },
+      "pixel_actions": [
+        "pyautogui.click(x=483, y=607)"
+      ],
+      "wall_seconds": 5.081771834054962,
+      "actions_executed": false
+    },
+    {
+      "case_id": "ok_normalized",
+      "target": "ok",
+      "protocol": "normalized1000",
+      "response": {
+        "provider": "openai-compatible",
+        "model": "qwen3.5-122b-a10b",
+        "status": "ok",
+        "raw_response": "{\n  \"reason\": \"The 'Choose Orientation' dialog is visible with the OK button clearly displayed. The task requires clicking the center of this OK button to confirm the orientation selection.\",\n  \"action\": \"pyautogui.click(x=486, y=599)\"\n}",
+        "action": "pyautogui.click(x=933, y=647)",
+        "reason": "The 'Choose Orientation' dialog is visible with the OK button clearly displayed. The task requires clicking the center of this OK button to confirm the orientation selection.",
+        "actions": [
+          "pyautogui.click(x=933, y=647)"
+        ],
+        "usage": {
+          "input_tokens": 2500,
+          "output_tokens": 63,
+          "total_tokens": 2563,
+          "tokens_with_thinking": 2563,
+          "tokens_without_thinking": 2563
+        },
+        "finish_reason": "stop",
+        "parsed_actions": [
+          "pyautogui.click(x=486, y=599)"
+        ],
+        "executed_action": "pyautogui.click(x=933, y=647)",
+        "step_idx": 1
+      },
+      "pixel_actions": [
+        "pyautogui.click(x=933, y=647)"
+      ],
+      "wall_seconds": 1.5476804170757532,
+      "actions_executed": false
+    },
+    {
+      "case_id": "cancel_normalized",
+      "target": "cancel",
+      "protocol": "normalized1000",
+      "response": {
+        "provider": "openai-compatible",
+        "model": "qwen3.5-122b-a10b",
+        "status": "ok",
+        "raw_response": "{\n  \"reason\": \"The task requires clicking the center of the Cancel button in the 'Choose Orientation' dialog. The screenshot shows this dialog with a clearly visible Cancel button at the bottom right. Clicking it will dismiss the dialog without applying changes, which aligns with the task goal.\",\n  \"action\": \"pyautogui.click(x=546, y=597)\"\n}",
+        "action": "pyautogui.click(x=1048, y=645)",
+        "reason": "The task requires clicking the center of the Cancel button in the 'Choose Orientation' dialog. The screenshot shows this dialog with a clearly visible Cancel button at the bottom right. Clicking it will dismiss the dialog without applying changes, which aligns with the task goal.",
+        "actions": [
+          "pyautogui.click(x=1048, y=645)"
+        ],
+        "usage": {
+          "input_tokens": 2500,
+          "output_tokens": 85,
+          "total_tokens": 2585,
+          "tokens_with_thinking": 2585,
+          "tokens_without_thinking": 2585
+        },
+        "finish_reason": "stop",
+        "parsed_actions": [
+          "pyautogui.click(x=546, y=597)"
+        ],
+        "executed_action": "pyautogui.click(x=1048, y=645)",
+        "step_idx": 1
+      },
+      "pixel_actions": [
+        "pyautogui.click(x=1048, y=645)"
+      ],
+      "wall_seconds": 1.9792543749790639,
+      "actions_executed": false
+    },
+    {
+      "case_id": "cancel_pixels",
+      "target": "cancel",
+      "protocol": "pixels",
+      "response": {
+        "provider": "openai-compatible",
+        "model": "qwen3.5-122b-a10b",
+        "status": "ok",
+        "raw_response": "{\n  \"reason\": \"The task requires clicking the center of the Cancel button in the 'Choose Orientation' dialog. The screenshot shows this dialog with a clearly visible Cancel button at the bottom right, which is the target for this action.\",\n  \"action\": \"pyautogui.click(x=547, y=609)\"\n}",
+        "action": "pyautogui.click(x=547, y=609)",
+        "reason": "The task requires clicking the center of the Cancel button in the 'Choose Orientation' dialog. The screenshot shows this dialog with a clearly visible Cancel button at the bottom right, which is the target for this action.",
+        "actions": [
+          "pyautogui.click(x=547, y=609)"
+        ],
+        "usage": {
+          "input_tokens": 2443,
+          "output_tokens": 74,
+          "total_tokens": 2517,
+          "tokens_with_thinking": 2517,
+          "tokens_without_thinking": 2517
+        },
+        "finish_reason": "stop",
+        "parsed_actions": [
+          "pyautogui.click(x=547, y=609)"
+        ],
+        "executed_action": "pyautogui.click(x=547, y=609)",
+        "step_idx": 1
+      },
+      "pixel_actions": [
+        "pyautogui.click(x=547, y=609)"
+      ],
+      "wall_seconds": 1.6912863340694457,
+      "actions_executed": false
+    },
+    {
+      "case_id": "xy_pixels",
+      "target": "xy",
+      "protocol": "pixels",
+      "response": {
+        "provider": "openai-compatible",
+        "model": "qwen3.5-122b-a10b",
+        "status": "ok",
+        "raw_response": "{\n  \"reason\": \"The XY-plane option is already selected in the Choose Orientation dialog, so no action is needed to select it. However, since the task requires clicking the XY-plane option explicitly, I will click on the radio button for XY-plane to fulfill the requirement.\",\n  \"action\": \"pyautogui.click(x=470, y=473)\"\n}",
+        "action": "pyautogui.click(x=470, y=473)",
+        "reason": "The XY-plane option is already selected in the Choose Orientation dialog, so no action is needed to select it. However, since the task requires clicking the XY-plane option explicitly, I will click on the radio button for XY-plane to fulfill the requirement.",
+        "actions": [
+          "pyautogui.click(x=470, y=473)"
+        ],
+        "usage": {
+          "input_tokens": 2441,
+          "output_tokens": 82,
+          "total_tokens": 2523,
+          "tokens_with_thinking": 2523,
+          "tokens_without_thinking": 2523
+        },
+        "finish_reason": "stop",
+        "parsed_actions": [
+          "pyautogui.click(x=470, y=473)"
+        ],
+        "executed_action": "pyautogui.click(x=470, y=473)",
+        "step_idx": 1
+      },
+      "pixel_actions": [
+        "pyautogui.click(x=470, y=473)"
+      ],
+      "wall_seconds": 2.42525083408691,
+      "actions_executed": false
+    },
+    {
+      "case_id": "xy_normalized",
+      "target": "xy",
+      "protocol": "normalized1000",
+      "response": {
+        "provider": "openai-compatible",
+        "model": "qwen3.5-122b-a10b",
+        "status": "ok",
+        "raw_response": "{\n  \"reason\": \"The task requires selecting the XY-plane option in the Choose Orientation dialog. The screenshot shows that the XY-plane radio button is already selected, so no action is needed to change it. However, since the task specifies clicking the XY-plane option, I will perform a click on the XY-plane radio button to fulfill the requirement.\",\n  \"action\": \"pyautogui.click(x=475, y=469)\"\n}",
+        "action": "pyautogui.click(x=912, y=507)",
+        "reason": "The task requires selecting the XY-plane option in the Choose Orientation dialog. The screenshot shows that the XY-plane radio button is already selected, so no action is needed to change it. However, since the task specifies clicking the XY-plane option, I will perform a click on the XY-plane radio button to fulfill the requirement.",
+        "actions": [
+          "pyautogui.click(x=912, y=507)"
+        ],
+        "usage": {
+          "input_tokens": 2498,
+          "output_tokens": 96,
+          "total_tokens": 2594,
+          "tokens_with_thinking": 2594,
+          "tokens_without_thinking": 2594
+        },
+        "finish_reason": "stop",
+        "parsed_actions": [
+          "pyautogui.click(x=475, y=469)"
+        ],
+        "executed_action": "pyautogui.click(x=912, y=507)",
+        "step_idx": 1
+      },
+      "pixel_actions": [
+        "pyautogui.click(x=912, y=507)"
+      ],
+      "wall_seconds": 2.363166624912992,
+      "actions_executed": false
+    }
+  ]
+}

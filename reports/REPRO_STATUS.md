@@ -1,5 +1,9 @@
 # 复现状态
 
+2026-10-20最新[定位校准](GUI_GROUNDING_20261020.md)已完成6次真实请求：预定pixels组0/3、normalized1000组2/3；pixels返回值事后按1000换算为3/3，仅作单位假设。当前服务返回值与官方像素要求不一致已有实测支持，尚未验证实际点击或跨截图定位。本轮14825输入/473输出tokens、无API错误，0次VM启动、0个新增episode，旧6本账本不变。累计232次生成，159项项目测试通过；GUI baseline仍未成功，真实pairs=0。下一步在新截图验证显式单位，再做限步GUI复测，原样官方pixel adapter接当前服务为NO-GO。
+
+以下坐标审计、25次GUI任务和2026-10-19累计数为各轮历史记录。
+
 最新坐标核对见[GUI坐标协议](GUI_COORDINATE_AUDIT.md)：官方Qwen保留原图像素，本项目normalized1000是额外协议。两路离线SDK对照通过，最新项目154项、官方Qwen 4项测试通过；新增真实生成与VM启动均为0。下一步优先模型GUI定位校准，正式TypedWorker与same-S0验收后移；真实pair仍为0。
 
 2026-10-20 GUI专项：无模型控件验收`controls007`已通过，实际由GUI创建Body与XY空Sketch、保存关闭重开，关键对象树与文件字节保持；151项单测通过。随后Qwen3.5-122B GUI单题复测用满25次生成，官方strict=0、无文件，无API错误；后段点击落在Choose Orientation对话框外。详见[控件验收](GUI_CONTROLS.md)与[模型复测](GUI_VALIDATION_20261020.md)。累计226次生成，全部本项目VM停止，真实pairs=0。下方为2026-10-19的历史累计结果。

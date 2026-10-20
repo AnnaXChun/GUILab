@@ -1,10 +1,10 @@
 请接手GUILab，继续CADWorld ACTC的受限实验。
 
-先读AGENTS.md、HANDOFF.md、reports/GUI_CONTROLS.md、reports/GUI_VALIDATION_20261020.md、reports/REPRO_STATUS.md、handoff.json和SPEC.md。upstream固定e5d0ebab8bd28da6e98c68c61db05747d1647f7b，不重新调研论文或更换benchmark。
+先读AGENTS.md、HANDOFF.md、reports/GUI_GROUNDING_20261020.md、reports/GUI_VALIDATION_20261020.md、reports/REPRO_STATUS.md、handoff.json和SPEC.md。upstream固定e5d0ebab8bd28da6e98c68c61db05747d1647f7b，不重新调研论文或更换benchmark。
 
-截至2026-10-20，controls007通过GUI创建Body/XY空Sketch、保存关闭重开，151项单测通过。新122B GUI复测25次生成、2328输出tokens，官方strict=0、no_output_file，无API错误；后段点击在Choose Orientation对话框外。累计226次生成、11个attempt、9个有效评估episode，所有VM已停。本轮25次账本和此前5本账本都保留，不以新ledger重开已完成批次；默认付费仍0。
+截至2026-10-20，controls007通过GUI创建Body/XY空Sketch、保存关闭重开。最近122B GUI任务25次生成、2328输出tokens，官方strict=0、no_output_file，无API错误。随后6次固定截图定位校准已完成：pixels组0/3、normalized1000组2/3；pixels原始值事后按1000换算为3/3，仅作单位假设，未执行点击。代码和标注事前冻结于6caebeb，6次用量14825输入/473输出tokens，剩余0。累计232次生成、11个baseline attempt、9个有效评估episode、2个不同任务，另记本轮诊断run和6条预测。159项项目测试通过，所有VM已停。旧6本账本SHA不变，新旧账本都保留，不重开已完成批次；默认付费仍0。
 
-历史Qwen3.5-122B CLI sketch-061官方strict=1.0、8次生成/terminal、1869输出tokens，原生审计PASS、turn_limit结束；Qwen3.6 CLI官方1.0但原文件Invalid、工程审计FAIL。全部旧失败保留。累计已知输入791185/输出25713 tokens，初次HTTP500 usage和价格未知，完整总量与美元费null。
+历史Qwen3.5-122B CLI sketch-061官方strict=1.0、8次生成/terminal、1869输出tokens，原生审计PASS、turn_limit结束；Qwen3.6 CLI官方1.0但原文件Invalid、工程审计FAIL。全部旧失败保留。累计已知输入806010/输出26186 tokens，初次HTTP500 usage和价格未知，完整总量与美元费null。
 
 用户要求开源多模态Qwen3，本轮使用qwen3.6-35b-a3b与qwen3.5-122b-a10b，thinking=false。当前下一阶段不调用模型，不索取不需要的密钥；本机`.env`不随Git上传。未来GUI需要图片输入，CLI保持terminal-only。服务别名不是权重身份已核验，不下载模型。normalized1000适配改变坐标合同，须与原像素结果分开。
 
@@ -16,6 +16,8 @@
 
 官方sh核对已完成：GUI sh引用的test_rest.json在pinned commit缺失且不透传参数；vLLM sh固定GPU3；CLI wave sh启动四个模型与50题。复用原Python runner、prompt/tools/parser/evaluator，按报告做单题与VM生命周期最小适配，不原样启动整批脚本。
 
-按用户最新方向优先解决模型GUI坐标定位，先读reports/GUI_COORDINATE_AUDIT.md和docs/NEXT_ACTC_VALIDATION.md。官方Qwen要求原图像素、actions不缩放；最近normalized1000 v2是额外协议。scripts/replay_gui_protocol.py --protocol compare的真实截图/旧响应离线对照已通过，项目最新154项、官方Qwen 4项测试通过；这不验证模型定位或服务端图像处理。下一项模型实验先定义固定截图的小批定位校准，具体上限见报告，尚未执行；不重开本轮25次或此前耗尽账本。模型定位解决后，再验收正式worker/Qt bridge保存重开同步和same-S0/clone隔离。不要给模型Qt控件坐标或用可信文件补其产物。前置通过后才考虑最多3个真实paired smoke。真实ACTC pairs仍为0，P3/P4 NO-GO。sketch-061已用于调试/选模型，不作独立held-out结果。在线agent/router/verifier不读expected/reference/evaluation，官方评分仅在episode后使用。官方GUI-only、CLI、显式适配GUI与Hybrid分开报告，不从单题推断论文成功率。
+按用户最新方向优先解决模型GUI坐标定位，先读reports/GUI_GROUNDING_20261020.md和docs/NEXT_ACTC_VALIDATION.md。官方Qwen要求原图像素、actions不缩放；本轮真实响应支持当前服务仍返回normalized1000位置，原样官方pixel adapter接该服务为NO-GO。显式归一化仍有边界误差；下一项在新截图与事前冻结目标上验证坐标配置，再安排限步GUI单题。保留官方prompt、仅按1000解释输出是待验证候选，必须单列协议和预算，不能用同图事后3/3宣称已修复。不能猜单位、加固定偏移或给模型Qt控件坐标。本轮6次和此前25次均已用完，不重开旧配置或账本。
+
+模型定位解决后，再验收正式worker/Qt bridge保存重开同步和same-S0/clone隔离。不要用可信文件补模型产物。前置通过后才考虑最多3个真实paired smoke。真实ACTC pairs仍为0，P3/P4 NO-GO。sketch-061已用于调试/选模型，不作独立held-out结果。在线agent/router/verifier不读expected/reference/evaluation，官方评分仅在episode后使用。官方GUI-only、CLI、显式适配GUI与Hybrid分开报告，不从单题推断论文成功率。
 
 保留全部成功与失败、完整JSONL和成本，更新五份报告、交接和机器状态。/execute不自动重试，不确定写入隔离VM；费用未知用null。凭证、完整模型目录、二进制资产、编码后的FCStd与MCP缓存不上传。测试和secret检查通过后提交并推送AnnaXChun/GUILab，报告确切命令、任务、结果、阻塞和GO/NO-GO。

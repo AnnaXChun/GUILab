@@ -1,23 +1,55 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-20T06:10:12+00:00",
+  "updated_at": "2026-10-20T06:33:19+00:00",
   "latest_run": "gui_validation_20261020",
   "latest_gui_controls": "gui_controls_20261020",
-  "latest_commands_report": "reports/commands_20261020.json",
+  "latest_gui_grounding": "gui_grounding_20261020",
+  "latest_commands_report": "reports/commands_gui_grounding_20261020.json",
   "latest_totals": {
-    "generation_calls": 226,
+    "generation_calls": 232,
     "attempts": 11,
     "evaluated_episodes": 9,
     "historical_run_errors": 2,
     "unique_tasks": 2,
-    "known_input_tokens": 791185,
-    "known_output_tokens": 25713,
+    "known_input_tokens": 806010,
+    "known_output_tokens": 26186,
     "historical_unknown_output_reservation": 128,
     "total_output_tokens": null,
     "total_cost_usd": null,
     "real_pairs": 0,
-    "project_tests": 154,
+    "project_tests": 159,
     "all_project_vms_stopped": true
+  },
+  "gui_grounding_20261020": {
+    "run_id": "gui_grounding_qwen122_20261020_001",
+    "classification": "fixed_screenshot_grounding_calibration",
+    "implementation_commit": "6caebeb65773d6eef178a2fd075d72f42255ac91",
+    "model": "qwen3.5-122b-a10b",
+    "status": "COLLECTED",
+    "model_calls": 6,
+    "input_tokens": 14825,
+    "output_tokens": 473,
+    "model_errors": 0,
+    "remaining_generation_calls": 0,
+    "previous_ledgers_unchanged": true,
+    "ledger_sha256": "5ff6a7b59318c116df48857eb33bcf1222234d0b00c98a7be8f14fa74594f9ac",
+    "prespecified_visible_bounds": {
+      "pixels": {"hits": 0, "attempts": 3},
+      "normalized1000": {"hits": 2, "attempts": 3}
+    },
+    "posthoc_normalized_reinterpretation": {
+      "hits": 3,
+      "attempts": 3,
+      "prespecified_arm": false,
+      "original_results_unchanged": true
+    },
+    "finding": "当前服务在官方pixel要求下返回的数值呈normalized1000特征；显式normalized仍有边界误差，尚未验证跨截图定位或实际点击。",
+    "gui_action_dispatches": 0,
+    "new_vm_launches": 0,
+    "benchmark_episode": false,
+    "real_pairs": 0,
+    "report": "reports/GUI_GROUNDING_20261020.md",
+    "evidence": "reports/evidence/gui_grounding_20261020/INDEX.json"
   },
   "gui_controls_20261020": {
     "status": "PASS_GUI_CONTROL_CYCLE",
@@ -85,7 +117,7 @@
   "branch": "main",
   "read_first": [
     "AGENTS.md",
-    "reports/GUI_VALIDATION_20261020.md",
+    "reports/GUI_GROUNDING_20261020.md",
     "HANDOFF.md"
   ],
   "cadworld_commit": "e5d0ebab8bd28da6e98c68c61db05747d1647f7b",
@@ -102,7 +134,7 @@
     "real_episodes": 3
   },
   "next_phase": "P0",
-  "next_action": "优先解决模型GUI坐标定位，按reports/GUI_COORDINATE_AUDIT.md设计固定截图、同模型的官方pixels与扩展normalized1000校准；不提供目标坐标，不重开耗尽账本。校准方案尚未执行。定位通过后再安排单题GUI复测，正式TypedWorker/Qt bridge同步和same-S0隔离后移；真实pairs=0，P3/P4 NO-GO。",
+  "next_action": "读取reports/GUI_GROUNDING_20261020.md，在新截图与事前冻结目标上验证显式坐标配置，再安排限步GUI复测。原样官方pixel adapter接当前服务为NO-GO；同图事后3/3只是待验证单位假设。6次校准已用完，不重开旧账本；正式TypedWorker/Qt bridge同步与same-S0后移，真实pairs=0，P3/P4 NO-GO。",
   "paid_run_authorization_added": true,
   "defaults": {
     "ENABLE_PAID_RUNS": 0,
@@ -385,6 +417,9 @@
     "held_out_estimate": false
   },
   "go_no_go": {
+    "grounding_collection_20261020": "GO",
+    "unmodified_official_pixels_with_current_service": "NO-GO",
+    "additional_grounding_20261020_batch": "NO-GO",
     "gui_control_cycle": "GO",
     "offline_gui_protocol_replay": "GO",
     "additional_generation_20261020_batch": "NO-GO",

@@ -1,0 +1,138 @@
+{
+  "classification": "fixed_screenshot_grounding_calibration",
+  "synthetic": false,
+  "plan": {
+    "schema_version": 1,
+    "run_id": "gui_grounding_qwen122_20261020_001",
+    "classification": "fixed_screenshot_grounding_calibration",
+    "authorization": "User accepted the 6-call calibration plan with 按你说的做 on 2026-10-20",
+    "model": "qwen3.5-122b-a10b",
+    "think_level": "none",
+    "temperature": 0.0,
+    "max_calls": 6,
+    "per_call_tokens": 256,
+    "max_output_tokens": 1536,
+    "max_wall_seconds": 720,
+    "request_timeout_seconds": 60,
+    "screenshot": "reports/evidence/gui_validation_20261020/official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_24_20261020@130728292029.png",
+    "screenshot_sha256": "bcfb20058d2fcb44c72f5bd6f3c40fdc442264c81651ebad50773ee7fe6159bd",
+    "previous_generation_calls": 226,
+    "previous_ledgers": [
+      {
+        "path": "results/first_baseline_batch.sqlite",
+        "sha256": "05eeb7e0e1e4b0216d5110e355b13680e9db4a8c4ab87a3d25414cf68eca8cf9"
+      },
+      {
+        "path": "results/success_batch_20261019.sqlite",
+        "sha256": "30f0b18a63843d4e20d964b387f9a5604c974f41740897bb4e6c4029f32b0506"
+      },
+      {
+        "path": "results/gui100_batch_20261019.sqlite",
+        "sha256": "a18fb5d29bad608bd7b9c55424d7fb9c1de9780286b03ab6533a786677d4be06"
+      },
+      {
+        "path": "results/gui_recovery_batch_20261019.sqlite",
+        "sha256": "1c1239caaf7cfecd6953f59cf53d5120fe006ca60b6b544c01d73c0fa9d1c265"
+      },
+      {
+        "path": "results/qwen122_batch_20261019.sqlite",
+        "sha256": "01e545f43ea785cd9cc33403ba9329e53224e7d90686aec3ae0698c25c663202"
+      },
+      {
+        "path": "results/gui_validation_20261020/model_batch.sqlite",
+        "sha256": "d726b25cec950685cf683e34fe578941644b59a73fd1600cc68c18bea7a0445b"
+      }
+    ],
+    "cases": [
+      {
+        "id": "ok_pixels",
+        "target": "ok",
+        "protocol": "pixels",
+        "instruction": "Click the center of the OK button in the Choose Orientation dialog. Return only the single click for this visible target."
+      },
+      {
+        "id": "ok_normalized",
+        "target": "ok",
+        "protocol": "normalized1000",
+        "instruction": "Click the center of the OK button in the Choose Orientation dialog. Return only the single click for this visible target."
+      },
+      {
+        "id": "cancel_normalized",
+        "target": "cancel",
+        "protocol": "normalized1000",
+        "instruction": "Click the center of the Cancel button in the Choose Orientation dialog. Return only the single click for this visible target."
+      },
+      {
+        "id": "cancel_pixels",
+        "target": "cancel",
+        "protocol": "pixels",
+        "instruction": "Click the center of the Cancel button in the Choose Orientation dialog. Return only the single click for this visible target."
+      },
+      {
+        "id": "xy_pixels",
+        "target": "xy",
+        "protocol": "pixels",
+        "instruction": "Click the XY-plane option in the Choose Orientation dialog. Return only the single click for this visible target."
+      },
+      {
+        "id": "xy_normalized",
+        "target": "xy",
+        "protocol": "normalized1000",
+        "instruction": "Click the XY-plane option in the Choose Orientation dialog. Return only the single click for this visible target."
+      }
+    ]
+  },
+  "png_size": [
+    1920,
+    1080
+  ],
+  "git_commit": "6caebeb65773d6eef178a2fd075d72f42255ac91",
+  "git_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "upstream_pin_verified": true,
+  "source_sha256_before_first_request": {
+    "cad_cf/gui_grounding.py": "216d7fa0ec444c997696627b46158495bf82dfd8e28487e42625fe8ccc89157f",
+    "cad_cf/qwen_coordinates.py": "4520fdd66d4a624152efd3d7979fb848426b20a4ce0b961a5f7e045b80de1b9c",
+    "cad_cf/upstream_launch.py": "a6ddbcf887603796e71026abe280670328e34a262d98593def69933e61b3e1c8",
+    "cad_cf/batch_budget.py": "52953e7b0ab3deb3546927a02ae848fa3be323f773020092906b081ab70f8e02",
+    "vendor/CADWORLD/scripts/python/api_agent.py": "6631e8cca18a45dfca341177e2818dd1848147557b96b66b0b6904016bb90c3e",
+    "vendor/CADWORLD/baseline/Qwen3-6/adapter.py": "c167009389aa0d897ee85cc9fb7b754817cac66a4e1c280e94ce92878586c405"
+  },
+  "previous_ledgers": [
+    {
+      "path": "results/first_baseline_batch.sqlite",
+      "sha256": "05eeb7e0e1e4b0216d5110e355b13680e9db4a8c4ab87a3d25414cf68eca8cf9",
+      "unchanged": true
+    },
+    {
+      "path": "results/success_batch_20261019.sqlite",
+      "sha256": "30f0b18a63843d4e20d964b387f9a5604c974f41740897bb4e6c4029f32b0506",
+      "unchanged": true
+    },
+    {
+      "path": "results/gui100_batch_20261019.sqlite",
+      "sha256": "a18fb5d29bad608bd7b9c55424d7fb9c1de9780286b03ab6533a786677d4be06",
+      "unchanged": true
+    },
+    {
+      "path": "results/gui_recovery_batch_20261019.sqlite",
+      "sha256": "1c1239caaf7cfecd6953f59cf53d5120fe006ca60b6b544c01d73c0fa9d1c265",
+      "unchanged": true
+    },
+    {
+      "path": "results/qwen122_batch_20261019.sqlite",
+      "sha256": "01e545f43ea785cd9cc33403ba9329e53224e7d90686aec3ae0698c25c663202",
+      "unchanged": true
+    },
+    {
+      "path": "results/gui_validation_20261020/model_batch.sqlite",
+      "sha256": "d726b25cec950685cf683e34fe578941644b59a73fd1600cc68c18bea7a0445b",
+      "unchanged": true
+    }
+  ],
+  "sdk_max_retries": 0,
+  "new_vm_launches": 0,
+  "gui_action_dispatches": 0,
+  "benchmark_episode": false,
+  "annotations_available_to_collection": false,
+  "temperature_fixed": 0.0
+}
