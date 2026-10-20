@@ -10,7 +10,7 @@
 
 ## 当前事实
 
-最新事实以`reports/BASELINE_SUCCESS_SMOKE.md`、`reports/BASELINE_REPRO.md`和`handoff.json`为准。Qwen3.5-122B CLI sketch-061官方1.0、原生审计PASS，8次生成、1869输出tokens、turn_limit结束；Qwen3.6 CLI官方1.0但原文件Invalid，工程审计FAIL。GUI仍未成功，真实pairs=0。累计含探针201次生成，最新122 tests通过。下一步按`docs/NEXT_ACTC_VALIDATION.md`做无模型GUI诊断，不新增本轮推理。原生QEMU/TCG基础设施已通过；正式TypedWorker、GUI同步、ACTC配对与参考Linux/KVM环境仍未验收。远程须验证本环境，不把本机记录直接当远程验收。
+最新事实以`reports/GUI_CONTROLS.md`、`reports/GUI_VALIDATION_20261020.md`、`reports/BASELINE_REPRO.md`和`handoff.json`为准。Qwen3.5-122B CLI sketch-061官方1.0、原生审计PASS；Qwen3.6 CLI官方1.0但原文件Invalid。GUI controls007完成Body/XY空Sketch、GUI保存关闭重开，PASS_GUI_CONTROL_CYCLE。随后122B GUI复测25次生成、2328输出tokens、官方strict=0、无文件，无API错误；后段点击落在Choose Orientation对话框外。零网络的实际截图/动作两轮复放通过，图片字节与坐标/history链路已复核，可用scripts/replay_gui_protocol.py重验。累计226次生成，151 tests通过，全部本项目VM停止，真实pairs=0。下一步验收正式TypedWorker/GUI bridge同步和same-S0；不新增本轮推理或重开已用尽账本。参考Linux/KVM gate保持原记录，远程须验证自己的环境。
 
 ## 实验与预算
 
@@ -25,6 +25,8 @@
 后续用户明确要求“继续跑，直到模型任务能够成功，查看官方sh是否可复用”，授权单题续跑。采用显式campaign，保留所有旧账本。success账本上限50，先42次，最后122B CLI用剩余8次；gui100实际50后blocked，后50个WAIT不是模型请求；recovery为6+44，122B专用账本为图片1+GUI35。加首批15，合计201次生成。现已停止新增推理，完成原生审计与交接，不重开已完成批次，不覆盖run ID。
 
 GUI 新增的 `normalized1000` 是显式协议适配，必须单列，不能声称整段 prompt 完全未变。预热 ack 只能证明宏完成，不能证明欢迎页可操作；卡住原因尚未唯一确定。官方 sh 的 `test_rest.json` 在 pinned commit 缺失；vLLM sh 会启动 GPU 服务，CLI wave sh 会启动四个模型与50题，不能原样启动。复用原 Python 入口，详见 `reports/UPSTREAM_SH_REUSE.md`。
+
+2026-10-20用户要求继续解决GUI。新增无模型控件检查：保留001–006失败，007完整通过。新适配为启动前后单实例核验、最大化、私有overlay可选GNOME alive timeout（本轮5000→600000ms），以及仅用于可信探针的布局/exposure与90秒观察屏障。模型不接收Qt摘要、控件坐标或探针文件。本轮新25次账本已用满，配置`configs/gui_validation_20261020.json`不能与新ledger配合无限重开；新旧账本都保留。代码先冻结于77d10d0再运行模型，运行后核对37个源码文件并明确标记posthoc snapshot。
 
 无预热的recovery run在第6次请求因混合单位history失败，464输出tokens保留；模型照抄了前轮pixel执行值。坐标协议v2仅将在线history的action统一为normalized单位，原返回response和完整JSONL仍记录pixel执行与mapping。真实pinned agent两轮无网络回归已验证。`success_gui_qwen36_history_001`使用同一本recovery账本，自动收紧至剩余44次；不能改用新账本恢复50次。
 

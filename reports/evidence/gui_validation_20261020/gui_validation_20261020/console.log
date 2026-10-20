@@ -1,0 +1,407 @@
+[2026-10-20 12:56:22,352 INFO run_cadworld/469] Args: {'path_to_vm': '/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/vm_data/FreeCAD-Ubuntu.qcow2', 'download_vm': False, 'vm_download_url': 'https://huggingface.co/Zihan1004/CADWorld/resolve/main/vm_data/FreeCAD-Ubuntu.qcow2?download=true', 'provider_name': 'docker', 'headless': True, 'action_space': 'pyautogui', 'observation_type': 'screenshot', 'sleep_after_execution': 5.0, 'wait_after_reset': 15.0, 'wait_before_eval': 2.0, 'max_steps': 25, 'max_trajectory_length': 10, 'screen_width': 1920, 'screen_height': 1080, 'client_password': '', 'vm_disk_size': '64G', 'vm_ram_size': '8G', 'vm_cpu_cores': '8', 'test_config_base_dir': '/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/evaluation_examples', 'test_all_meta_path': '/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/manifests/smoke_2.json', 'domain': 'sketch', 'result_dir': '/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_gui/gui_validation_qwen122_20261020_001', 'api_provider': 'openai-compatible', 'model_name': 'qwen3.5-122b-a10b', 'think_level': 'none', 'temperature': None, 'api_base_url': '[REDACTED]', 'api_base_urls': None, 'num_shards': 1, 'shard_index': 0, 'run_id': 'gui_validation_qwen122_20261020_001', 'record': False, 'skip_finished': False, 'log_level': 'INFO'}
+[2026-10-20 12:56:22,353 INFO run_cadworld/479] Tasks to run: 1 (shard 0/1, api_base_url=[REDACTED])
+[2026-10-20 12:56:22,385 INFO desktop_env/183] Initializing...
+[2026-10-20 13:02:23,204 INFO run_cadworld/515] [Domain]: sketch
+[2026-10-20 13:02:23,205 INFO run_cadworld/516] [Example ID]: freecad-sketch-061
+[2026-10-20 13:02:23,205 INFO run_cadworld/517] [Instruction]: Use GUI, Sketch one horizontal normal-geometry line segment 10 mm long in the XY plane. Save the completed model to /home/user/Unnamed.FCStd.
+[2026-10-20 13:02:23,207 INFO run_single/186] Task started: freecad-sketch-061
+[2026-10-20 13:02:23,207 INFO run_single/187] Instruction: Use GUI, Sketch one horizontal normal-geometry line segment 10 mm long in the XY plane. Save the completed model to /home/user/Unnamed.FCStd.
+[2026-10-20 13:02:23,207 INFO desktop_env/246] Resetting environment...
+[2026-10-20 13:02:23,207 INFO desktop_env/247] Switching task...
+[2026-10-20 13:02:23,207 INFO desktop_env/248] Setting counters...
+[2026-10-20 13:02:23,207 INFO desktop_env/277] Environment is clean, skipping snapshot revert (provider: docker).
+[2026-10-20 13:02:23,276 INFO desktop_env/285] Setting up environment...
+[2026-10-20 13:02:23,276 INFO setup/71] try to connect http://127.0.0.1:15030
+[2026-10-20 13:02:28,868 INFO setup/96] Executing setup step 1/1: _execute_setup
+[2026-10-20 13:02:28,918 INFO setup/378] Command executed successfully: rm -f /home/user/Unnamed.FCStd -> {
+  "error": "",
+  "output": "",
+  "returncode": 0,
+  "status": "success"
+}
+
+[2026-10-20 13:02:28,918 INFO setup/99] SETUP COMPLETED: _execute_setup({'command': ['rm', '-f', '/home/user/Unnamed.FCStd'], 'shell': False})
+[2026-10-20 13:02:28,918 INFO desktop_env/302] Environment setup complete.
+[2026-10-20 13:02:31,377 INFO python/54] Got screenshot successfully
+[2026-10-20 13:02:31,378 INFO run_single/191] Waiting 15.0s after reset for FreeCAD startup before agent control; this grace period is outside the agent action loop.
+[2026-10-20 13:02:31,378 INFO run_single/196] Waiting 15.0s after reset before agent control.
+[2026-10-20 13:02:47,780 INFO python/54] Got screenshot successfully
+[2026-10-20 13:02:47,781 INFO run_single/202] Recording enabled: False; started: False
+[2026-10-20 13:02:48,169 INFO api_agent/455] Thinking configuration for openai-compatible/qwen3.5-122b-a10b: requested=none normalized=none native=chat_template_kwargs.enable_thinking=false
+[2026-10-20 13:02:50,388 INFO api_agent/455] Step 1 raw model output: {
+  "reason": "The welcome dialog is blocking the main interface. I need to close it by clicking the 'Done' button to proceed with creating a sketch.",
+  "action": "pyautogui.click(x=841, y=740)"
+}
+[2026-10-20 13:02:50,388 INFO api_agent/455] Step 1 parsed model response action: pyautogui.click(x=841, y=740)
+[2026-10-20 13:02:50,388 INFO api_agent/455] Step 1 parsed model response actions: ['pyautogui.click(x=841, y=740)']
+[2026-10-20 13:02:50,389 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=841, y=740)'] -> ['pyautogui.click(x=1615, y=799)']
+[2026-10-20 13:02:50,389 INFO api_agent/455] Step 1 sanitized executable actions: ['pyautogui.click(x=1615, y=799)']
+[2026-10-20 13:02:50,389 INFO run_single/215] Step 1: pyautogui.click(x=1615, y=799)
+[2026-10-20 13:02:50,389 INFO run_single/216] Step 1 action: pyautogui.click(x=1615, y=799)
+[2026-10-20 13:02:50,389 INFO desktop_env/398] Step 1 in trajectory 0 with action: pyautogui.click(x=1615, y=799)
+[2026-10-20 13:02:59,166 INFO python/54] Got screenshot successfully
+[2026-10-20 13:02:59,168 INFO run_single/221] Step 1 result: reward=0 done=False info={} screenshot=step_1_20261020@130250389435.png
+[2026-10-20 13:03:01,387 INFO api_agent/455] Step 2 raw model output: {
+"reason": "The welcome dialog has been closed. To sketch a line, I first need to create a new document. The 'Empty File' option is the most suitable starting point for creating a simple 2D sketch.",
+"action": "pyautogui.click(x=500, y=274)"
+}
+[2026-10-20 13:03:01,387 INFO api_agent/455] Step 2 parsed model response action: pyautogui.click(x=500, y=274)
+[2026-10-20 13:03:01,387 INFO api_agent/455] Step 2 parsed model response actions: ['pyautogui.click(x=500, y=274)']
+[2026-10-20 13:03:01,388 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=500, y=274)'] -> ['pyautogui.click(x=960, y=296)']
+[2026-10-20 13:03:01,388 INFO api_agent/455] Step 2 sanitized executable actions: ['pyautogui.click(x=960, y=296)']
+[2026-10-20 13:03:01,388 INFO run_single/215] Step 2: pyautogui.click(x=960, y=296)
+[2026-10-20 13:03:01,388 INFO run_single/216] Step 2 action: pyautogui.click(x=960, y=296)
+[2026-10-20 13:03:01,388 INFO desktop_env/398] Step 2 in trajectory 0 with action: pyautogui.click(x=960, y=296)
+[2026-10-20 13:03:11,805 INFO python/54] Got screenshot successfully
+[2026-10-20 13:03:11,808 INFO run_single/221] Step 2 result: reward=0 done=False info={} screenshot=step_2_20261020@130301388078.png
+[2026-10-20 13:03:14,012 INFO api_agent/455] Step 3 raw model output: {
+"reason": "The previous attempt to create a new file by clicking 'Empty File' at (500, 274) failed as the start page is still visible. The coordinates likely missed the target or were misinterpreted. I will retry clicking the 'Empty File' button, adjusting the normalized coordinates slightly to ensure accurate targeting of the button area.",
+"action": "pyautogui.click(x=813, y=289)"
+}
+[2026-10-20 13:03:14,012 INFO api_agent/455] Step 3 parsed model response action: pyautogui.click(x=813, y=289)
+[2026-10-20 13:03:14,012 INFO api_agent/455] Step 3 parsed model response actions: ['pyautogui.click(x=813, y=289)']
+[2026-10-20 13:03:14,012 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=813, y=289)'] -> ['pyautogui.click(x=1561, y=312)']
+[2026-10-20 13:03:14,012 INFO api_agent/455] Step 3 sanitized executable actions: ['pyautogui.click(x=1561, y=312)']
+[2026-10-20 13:03:14,012 INFO run_single/215] Step 3: pyautogui.click(x=1561, y=312)
+[2026-10-20 13:03:14,012 INFO run_single/216] Step 3 action: pyautogui.click(x=1561, y=312)
+[2026-10-20 13:03:14,012 INFO desktop_env/398] Step 3 in trajectory 0 with action: pyautogui.click(x=1561, y=312)
+[2026-10-20 13:03:25,060 INFO python/54] Got screenshot successfully
+[2026-10-20 13:03:25,061 INFO run_single/221] Step 3 result: reward=0 done=False info={} screenshot=step_3_20261020@130314012843.png
+[2026-10-20 13:03:28,378 INFO api_agent/455] Step 4 raw model output: {
+"reason": "The previous attempts to create a new file by clicking 'Empty File' failed. The screenshot still shows the Start page with the 'New File' options visible. I need to click the 'Empty File' button again, ensuring accurate coordinates this time. The button is located on the right side of the 'New File' section.",
+"action": "pyautogui.click(x=804, y=277)"
+}
+[2026-10-20 13:03:28,378 INFO api_agent/455] Step 4 parsed model response action: pyautogui.click(x=804, y=277)
+[2026-10-20 13:03:28,378 INFO api_agent/455] Step 4 parsed model response actions: ['pyautogui.click(x=804, y=277)']
+[2026-10-20 13:03:28,378 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=804, y=277)'] -> ['pyautogui.click(x=1544, y=299)']
+[2026-10-20 13:03:28,378 INFO api_agent/455] Step 4 sanitized executable actions: ['pyautogui.click(x=1544, y=299)']
+[2026-10-20 13:03:28,378 INFO run_single/215] Step 4: pyautogui.click(x=1544, y=299)
+[2026-10-20 13:03:28,378 INFO run_single/216] Step 4 action: pyautogui.click(x=1544, y=299)
+[2026-10-20 13:03:28,378 INFO desktop_env/398] Step 4 in trajectory 0 with action: pyautogui.click(x=1544, y=299)
+[2026-10-20 13:03:39,153 INFO python/54] Got screenshot successfully
+[2026-10-20 13:03:39,154 INFO run_single/221] Step 4 result: reward=0 done=False info={} screenshot=step_4_20261020@130328378827.png
+[2026-10-20 13:03:41,307 INFO api_agent/455] Step 5 raw model output: {
+"reason": "Previous attempts to click 'Empty File' have failed, likely due to coordinate inaccuracies. The Start page is still visible. I will try clicking the 'Empty File' button again, using slightly adjusted normalized coordinates (x=817, y=283) which should target the center of the button more accurately based on its position in the screenshot.",
+"action": "pyautogui.click(x=817, y=283)"
+}
+[2026-10-20 13:03:41,307 INFO api_agent/455] Step 5 parsed model response action: pyautogui.click(x=817, y=283)
+[2026-10-20 13:03:41,307 INFO api_agent/455] Step 5 parsed model response actions: ['pyautogui.click(x=817, y=283)']
+[2026-10-20 13:03:41,307 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=817, y=283)'] -> ['pyautogui.click(x=1569, y=306)']
+[2026-10-20 13:03:41,307 INFO api_agent/455] Step 5 sanitized executable actions: ['pyautogui.click(x=1569, y=306)']
+[2026-10-20 13:03:41,307 INFO run_single/215] Step 5: pyautogui.click(x=1569, y=306)
+[2026-10-20 13:03:41,307 INFO run_single/216] Step 5 action: pyautogui.click(x=1569, y=306)
+[2026-10-20 13:03:41,307 INFO desktop_env/398] Step 5 in trajectory 0 with action: pyautogui.click(x=1569, y=306)
+[2026-10-20 13:03:51,816 INFO python/54] Got screenshot successfully
+[2026-10-20 13:03:51,821 INFO run_single/221] Step 5 result: reward=0 done=False info={} screenshot=step_5_20261020@130341307926.png
+[2026-10-20 13:03:54,032 INFO api_agent/455] Step 6 raw model output: {
+  "reason": "A new document has been successfully created and the main FreeCAD interface is now visible with a 3D grid. To sketch a line in the XY plane, I need to enter the Part Design workbench and create a new sketch on the XY plane. The next step is to click on 'Part Design' in the workbench selector or use the menu to start a sketch.",
+  "action": "pyautogui.click(x=218, y=106)"
+}
+[2026-10-20 13:03:54,033 INFO api_agent/455] Step 6 parsed model response action: pyautogui.click(x=218, y=106)
+[2026-10-20 13:03:54,035 INFO api_agent/455] Step 6 parsed model response actions: ['pyautogui.click(x=218, y=106)']
+[2026-10-20 13:03:54,038 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=218, y=106)'] -> ['pyautogui.click(x=419, y=114)']
+[2026-10-20 13:03:54,038 INFO api_agent/455] Step 6 sanitized executable actions: ['pyautogui.click(x=419, y=114)']
+[2026-10-20 13:03:54,038 INFO run_single/215] Step 6: pyautogui.click(x=419, y=114)
+[2026-10-20 13:03:54,038 INFO run_single/216] Step 6 action: pyautogui.click(x=419, y=114)
+[2026-10-20 13:03:54,038 INFO desktop_env/398] Step 6 in trajectory 0 with action: pyautogui.click(x=419, y=114)
+[2026-10-20 13:04:06,054 INFO python/54] Got screenshot successfully
+[2026-10-20 13:04:06,058 INFO run_single/221] Step 6 result: reward=0 done=False info={} screenshot=step_6_20261020@130354038298.png
+[2026-10-20 13:04:08,200 INFO api_agent/455] Step 7 raw model output: {
+"reason": "The previous step successfully switched to the Part Design workbench. The dropdown menu for selecting a workbench is currently open, showing various options including 'Sketcher'. To draw a line segment in the XY plane, I need to enter the Sketcher workbench first. Therefore, clicking on 'Sketcher' from the dropdown menu is the correct next action.",
+"action": "pyautogui.click(x=218, y=304)"
+}
+[2026-10-20 13:04:08,200 INFO api_agent/455] Step 7 parsed model response action: pyautogui.click(x=218, y=304)
+[2026-10-20 13:04:08,200 INFO api_agent/455] Step 7 parsed model response actions: ['pyautogui.click(x=218, y=304)']
+[2026-10-20 13:04:08,200 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=218, y=304)'] -> ['pyautogui.click(x=419, y=328)']
+[2026-10-20 13:04:08,200 INFO api_agent/455] Step 7 sanitized executable actions: ['pyautogui.click(x=419, y=328)']
+[2026-10-20 13:04:08,200 INFO run_single/215] Step 7: pyautogui.click(x=419, y=328)
+[2026-10-20 13:04:08,200 INFO run_single/216] Step 7 action: pyautogui.click(x=419, y=328)
+[2026-10-20 13:04:08,200 INFO desktop_env/398] Step 7 in trajectory 0 with action: pyautogui.click(x=419, y=328)
+[2026-10-20 13:04:21,833 INFO python/54] Got screenshot successfully
+[2026-10-20 13:04:21,834 INFO run_single/221] Step 7 result: reward=0 done=False info={} screenshot=step_7_20261020@130408200722.png
+[2026-10-20 13:04:23,612 INFO api_agent/455] Step 8 raw model output: {
+"reason": "The interface is currently in the Draft workbench, which is suitable for drawing 2D lines. The 'Create objects' panel on the right shows a 'Line' tool at the top of the list. To draw the required horizontal line segment, I need to activate this Line tool first.",
+"action": "pyautogui.click(x=817, y=366)"
+}
+[2026-10-20 13:04:23,613 INFO api_agent/455] Step 8 parsed model response action: pyautogui.click(x=817, y=366)
+[2026-10-20 13:04:23,613 INFO api_agent/455] Step 8 parsed model response actions: ['pyautogui.click(x=817, y=366)']
+[2026-10-20 13:04:23,613 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=817, y=366)'] -> ['pyautogui.click(x=1569, y=395)']
+[2026-10-20 13:04:23,613 INFO api_agent/455] Step 8 sanitized executable actions: ['pyautogui.click(x=1569, y=395)']
+[2026-10-20 13:04:23,613 INFO run_single/215] Step 8: pyautogui.click(x=1569, y=395)
+[2026-10-20 13:04:23,613 INFO run_single/216] Step 8 action: pyautogui.click(x=1569, y=395)
+[2026-10-20 13:04:23,613 INFO desktop_env/398] Step 8 in trajectory 0 with action: pyautogui.click(x=1569, y=395)
+[2026-10-20 13:04:38,546 INFO python/54] Got screenshot successfully
+[2026-10-20 13:04:38,547 INFO run_single/221] Step 8 result: reward=0 done=False info={} screenshot=step_8_20261020@130423613764.png
+[2026-10-20 13:04:43,228 INFO api_agent/455] Step 9 raw model output: {
+"reason": "The interface is in the Sketcher workbench, but no sketch exists yet. To draw a line in the XY plane, I must first create a new sketch. The 'Create new sketch' button (icon with a pencil and square) is visible in the toolbar on the left side of the screen.",
+"action": "pyautogui.click(x=273, y=169)"
+}
+[2026-10-20 13:04:43,228 INFO api_agent/455] Step 9 parsed model response action: pyautogui.click(x=273, y=169)
+[2026-10-20 13:04:43,228 INFO api_agent/455] Step 9 parsed model response actions: ['pyautogui.click(x=273, y=169)']
+[2026-10-20 13:04:43,229 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=273, y=169)'] -> ['pyautogui.click(x=524, y=183)']
+[2026-10-20 13:04:43,229 INFO api_agent/455] Step 9 sanitized executable actions: ['pyautogui.click(x=524, y=183)']
+[2026-10-20 13:04:43,229 INFO run_single/215] Step 9: pyautogui.click(x=524, y=183)
+[2026-10-20 13:04:43,229 INFO run_single/216] Step 9 action: pyautogui.click(x=524, y=183)
+[2026-10-20 13:04:43,229 INFO desktop_env/398] Step 9 in trajectory 0 with action: pyautogui.click(x=524, y=183)
+[2026-10-20 13:04:52,569 INFO python/54] Got screenshot successfully
+[2026-10-20 13:04:52,570 INFO run_single/221] Step 9 result: reward=0 done=False info={} screenshot=step_9_20261020@130443229456.png
+[2026-10-20 13:04:55,121 INFO api_agent/455] Step 10 raw model output: {
+"reason": "The 'Create new sketch' button was clicked in the previous step. The interface is now in the Sketcher workbench, but no sketch has been created yet as the canvas is empty and no orientation dialog is visible. To proceed with drawing a line in the XY plane, I need to select the XY plane (or Top Plane) from the available planes and confirm to create a new sketch. Since the orientation dialog is not immediately visible or might be hidden behind another element, I will click on the 'Create new sketch' button again to ensure the dialog appears.",
+"action": "pyautogui.click(x=273, y=169)"
+}
+[2026-10-20 13:04:55,121 INFO api_agent/455] Step 10 parsed model response action: pyautogui.click(x=273, y=169)
+[2026-10-20 13:04:55,121 INFO api_agent/455] Step 10 parsed model response actions: ['pyautogui.click(x=273, y=169)']
+[2026-10-20 13:04:55,121 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=273, y=169)'] -> ['pyautogui.click(x=524, y=183)']
+[2026-10-20 13:04:55,121 INFO api_agent/455] Step 10 sanitized executable actions: ['pyautogui.click(x=524, y=183)']
+[2026-10-20 13:04:55,121 INFO run_single/215] Step 10: pyautogui.click(x=524, y=183)
+[2026-10-20 13:04:55,121 INFO run_single/216] Step 10 action: pyautogui.click(x=524, y=183)
+[2026-10-20 13:04:55,121 INFO desktop_env/398] Step 10 in trajectory 0 with action: pyautogui.click(x=524, y=183)
+[2026-10-20 13:05:02,241 INFO python/54] Got screenshot successfully
+[2026-10-20 13:05:02,242 INFO run_single/221] Step 10 result: reward=0 done=False info={} screenshot=step_10_20261020@130455121864.png
+[2026-10-20 13:05:04,089 INFO api_agent/455] Step 11 raw model output: {
+  "reason": "The previous attempts to create a new sketch by clicking the 'Create new sketch' button at (273, 169) have failed. The canvas remains empty and no orientation dialog appeared. I need to try clicking the same button again with slightly adjusted coordinates to ensure it registers correctly.",
+  "action": "pyautogui.click(x=280, y=175)"
+}
+[2026-10-20 13:05:04,089 INFO api_agent/455] Step 11 parsed model response action: pyautogui.click(x=280, y=175)
+[2026-10-20 13:05:04,089 INFO api_agent/455] Step 11 parsed model response actions: ['pyautogui.click(x=280, y=175)']
+[2026-10-20 13:05:04,089 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=280, y=175)'] -> ['pyautogui.click(x=538, y=189)']
+[2026-10-20 13:05:04,089 INFO api_agent/455] Step 11 sanitized executable actions: ['pyautogui.click(x=538, y=189)']
+[2026-10-20 13:05:04,089 INFO run_single/215] Step 11: pyautogui.click(x=538, y=189)
+[2026-10-20 13:05:04,089 INFO run_single/216] Step 11 action: pyautogui.click(x=538, y=189)
+[2026-10-20 13:05:04,089 INFO desktop_env/398] Step 11 in trajectory 0 with action: pyautogui.click(x=538, y=189)
+[2026-10-20 13:05:11,216 INFO python/54] Got screenshot successfully
+[2026-10-20 13:05:11,217 INFO run_single/221] Step 11 result: reward=0 done=False info={} screenshot=step_11_20261020@130504089593.png
+[2026-10-20 13:05:13,217 INFO api_agent/455] Step 12 raw model output: {
+"reason": "Previous attempts to click the 'Create new sketch' button in the toolbar have failed. The interface is in the Sketcher workbench but no sketch exists. I will try using the menu bar instead, clicking on 'Sketch' -> 'New sketch', which should reliably open the sketch creation dialog.",
+"action": "pyautogui.click(x=186, y=70)"
+}
+[2026-10-20 13:05:13,218 INFO api_agent/455] Step 12 parsed model response action: pyautogui.click(x=186, y=70)
+[2026-10-20 13:05:13,218 INFO api_agent/455] Step 12 parsed model response actions: ['pyautogui.click(x=186, y=70)']
+[2026-10-20 13:05:13,218 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=186, y=70)'] -> ['pyautogui.click(x=357, y=76)']
+[2026-10-20 13:05:13,218 INFO api_agent/455] Step 12 sanitized executable actions: ['pyautogui.click(x=357, y=76)']
+[2026-10-20 13:05:13,218 INFO run_single/215] Step 12: pyautogui.click(x=357, y=76)
+[2026-10-20 13:05:13,218 INFO run_single/216] Step 12 action: pyautogui.click(x=357, y=76)
+[2026-10-20 13:05:13,218 INFO desktop_env/398] Step 12 in trajectory 0 with action: pyautogui.click(x=357, y=76)
+[2026-10-20 13:05:20,328 INFO python/54] Got screenshot successfully
+[2026-10-20 13:05:20,330 INFO run_single/221] Step 12 result: reward=0 done=False info={} screenshot=step_12_20261020@130513218537.png
+[2026-10-20 13:05:22,418 INFO api_agent/455] Step 13 raw model output: {
+"reason": "The previous step clicked the 'Sketch' menu, which is now open. The next logical action is to click 'New Sketch' from this dropdown menu to create a new sketch and proceed with drawing the line.",
+"action": "pyautogui.click(x=208, y=96)"
+}
+[2026-10-20 13:05:22,418 INFO api_agent/455] Step 13 parsed model response action: pyautogui.click(x=208, y=96)
+[2026-10-20 13:05:22,418 INFO api_agent/455] Step 13 parsed model response actions: ['pyautogui.click(x=208, y=96)']
+[2026-10-20 13:05:22,418 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=208, y=96)'] -> ['pyautogui.click(x=399, y=104)']
+[2026-10-20 13:05:22,418 INFO api_agent/455] Step 13 sanitized executable actions: ['pyautogui.click(x=399, y=104)']
+[2026-10-20 13:05:22,418 INFO run_single/215] Step 13: pyautogui.click(x=399, y=104)
+[2026-10-20 13:05:22,418 INFO run_single/216] Step 13 action: pyautogui.click(x=399, y=104)
+[2026-10-20 13:05:22,418 INFO desktop_env/398] Step 13 in trajectory 0 with action: pyautogui.click(x=399, y=104)
+[2026-10-20 13:05:35,653 INFO python/54] Got screenshot successfully
+[2026-10-20 13:05:35,655 INFO run_single/221] Step 13 result: reward=0 done=False info={} screenshot=step_13_20261020@130522418564.png
+[2026-10-20 13:05:37,707 INFO api_agent/455] Step 14 raw model output: {"reason": "The 'Sketch' menu was clicked and 'New Sketch' selected in the previous step. The interface is now in the Sketcher workbench, but no sketch has been created yet as the canvas is empty. I need to click the 'Create new sketch' button in the toolbar to open the sketch creation dialog and select the XY plane.", "action": "pyautogui.click(x=280, y=175)"}
+[2026-10-20 13:05:37,707 INFO api_agent/455] Step 14 parsed model response action: pyautogui.click(x=280, y=175)
+[2026-10-20 13:05:37,707 INFO api_agent/455] Step 14 parsed model response actions: ['pyautogui.click(x=280, y=175)']
+[2026-10-20 13:05:37,707 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=280, y=175)'] -> ['pyautogui.click(x=538, y=189)']
+[2026-10-20 13:05:37,707 INFO api_agent/455] Step 14 sanitized executable actions: ['pyautogui.click(x=538, y=189)']
+[2026-10-20 13:05:37,707 INFO run_single/215] Step 14: pyautogui.click(x=538, y=189)
+[2026-10-20 13:05:37,707 INFO run_single/216] Step 14 action: pyautogui.click(x=538, y=189)
+[2026-10-20 13:05:37,708 INFO desktop_env/398] Step 14 in trajectory 0 with action: pyautogui.click(x=538, y=189)
+[2026-10-20 13:05:49,070 INFO python/54] Got screenshot successfully
+[2026-10-20 13:05:49,072 INFO run_single/221] Step 14 result: reward=0 done=False info={} screenshot=step_14_20261020@130537707951.png
+[2026-10-20 13:05:50,794 INFO api_agent/455] Step 15 raw model output: {
+"reason": "The 'Choose Orientation' dialog is now open with XY-plane already selected, which is the correct plane for drawing the horizontal line. The next step is to confirm this selection by clicking the OK button to create the sketch on the XY plane.",
+"action": "pyautogui.click(x=260, y=561)"
+}
+[2026-10-20 13:05:50,794 INFO api_agent/455] Step 15 parsed model response action: pyautogui.click(x=260, y=561)
+[2026-10-20 13:05:50,794 INFO api_agent/455] Step 15 parsed model response actions: ['pyautogui.click(x=260, y=561)']
+[2026-10-20 13:05:50,794 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=260, y=561)'] -> ['pyautogui.click(x=499, y=606)']
+[2026-10-20 13:05:50,794 INFO api_agent/455] Step 15 sanitized executable actions: ['pyautogui.click(x=499, y=606)']
+[2026-10-20 13:05:50,794 INFO run_single/215] Step 15: pyautogui.click(x=499, y=606)
+[2026-10-20 13:05:50,794 INFO run_single/216] Step 15 action: pyautogui.click(x=499, y=606)
+[2026-10-20 13:05:50,794 INFO desktop_env/398] Step 15 in trajectory 0 with action: pyautogui.click(x=499, y=606)
+[2026-10-20 13:06:05,548 INFO python/54] Got screenshot successfully
+[2026-10-20 13:06:05,549 INFO run_single/221] Step 15 result: reward=0 done=False info={} screenshot=step_15_20261020@130550794804.png
+[2026-10-20 13:06:07,481 INFO api_agent/455] Step 16 raw model output: {
+  "reason": "The 'Choose Orientation' dialog is open with XY-plane selected, which matches the task requirement to sketch in the XY plane. The next step is to confirm this selection by clicking OK to create the sketch and proceed to drawing the line.",
+  "action": "pyautogui.click(x=260, y=561)"
+}
+[2026-10-20 13:06:07,481 INFO api_agent/455] Step 16 parsed model response action: pyautogui.click(x=260, y=561)
+[2026-10-20 13:06:07,481 INFO api_agent/455] Step 16 parsed model response actions: ['pyautogui.click(x=260, y=561)']
+[2026-10-20 13:06:07,481 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=260, y=561)'] -> ['pyautogui.click(x=499, y=606)']
+[2026-10-20 13:06:07,481 INFO api_agent/455] Step 16 sanitized executable actions: ['pyautogui.click(x=499, y=606)']
+[2026-10-20 13:06:07,481 INFO run_single/215] Step 16: pyautogui.click(x=499, y=606)
+[2026-10-20 13:06:07,481 INFO run_single/216] Step 16 action: pyautogui.click(x=499, y=606)
+[2026-10-20 13:06:07,481 INFO desktop_env/398] Step 16 in trajectory 0 with action: pyautogui.click(x=499, y=606)
+[2026-10-20 13:06:18,230 INFO python/54] Got screenshot successfully
+[2026-10-20 13:06:18,231 INFO run_single/221] Step 16 result: reward=0 done=False info={} screenshot=step_16_20261020@130607481909.png
+[2026-10-20 13:06:19,889 INFO api_agent/455] Step 17 raw model output: {"reason": "The 'Choose Orientation' dialog is open with XY-plane already selected, which is the correct plane for drawing the horizontal line. The previous steps attempted to click OK but the dialog remains open, so I need to click the OK button again to confirm and create the sketch.", "action": "pyautogui.click(x=260, y=561)"}
+[2026-10-20 13:06:19,889 INFO api_agent/455] Step 17 parsed model response action: pyautogui.click(x=260, y=561)
+[2026-10-20 13:06:19,889 INFO api_agent/455] Step 17 parsed model response actions: ['pyautogui.click(x=260, y=561)']
+[2026-10-20 13:06:19,890 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=260, y=561)'] -> ['pyautogui.click(x=499, y=606)']
+[2026-10-20 13:06:19,890 INFO api_agent/455] Step 17 sanitized executable actions: ['pyautogui.click(x=499, y=606)']
+[2026-10-20 13:06:19,890 INFO run_single/215] Step 17: pyautogui.click(x=499, y=606)
+[2026-10-20 13:06:19,890 INFO run_single/216] Step 17 action: pyautogui.click(x=499, y=606)
+[2026-10-20 13:06:19,890 INFO desktop_env/398] Step 17 in trajectory 0 with action: pyautogui.click(x=499, y=606)
+[2026-10-20 13:06:28,910 INFO python/54] Got screenshot successfully
+[2026-10-20 13:06:28,911 INFO run_single/221] Step 17 result: reward=0 done=False info={} screenshot=step_17_20261020@130619890317.png
+[2026-10-20 13:06:30,822 INFO api_agent/455] Step 18 raw model output: {
+"reason": "The 'Choose Orientation' dialog is open with XY-plane correctly selected. Previous attempts to click OK at (260, 561) failed multiple times. I will try clicking the OK button again with slightly adjusted coordinates to ensure it registers properly and creates the sketch.",
+"action": "pyautogui.click(x=489, y=561)"
+}
+[2026-10-20 13:06:30,822 INFO api_agent/455] Step 18 parsed model response action: pyautogui.click(x=489, y=561)
+[2026-10-20 13:06:30,822 INFO api_agent/455] Step 18 parsed model response actions: ['pyautogui.click(x=489, y=561)']
+[2026-10-20 13:06:30,822 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=489, y=561)'] -> ['pyautogui.click(x=939, y=606)']
+[2026-10-20 13:06:30,822 INFO api_agent/455] Step 18 sanitized executable actions: ['pyautogui.click(x=939, y=606)']
+[2026-10-20 13:06:30,822 INFO run_single/215] Step 18: pyautogui.click(x=939, y=606)
+[2026-10-20 13:06:30,822 INFO run_single/216] Step 18 action: pyautogui.click(x=939, y=606)
+[2026-10-20 13:06:30,822 INFO desktop_env/398] Step 18 in trajectory 0 with action: pyautogui.click(x=939, y=606)
+[2026-10-20 13:06:41,570 INFO python/54] Got screenshot successfully
+[2026-10-20 13:06:41,572 INFO run_single/221] Step 18 result: reward=0 done=False info={} screenshot=step_18_20261020@130630822790.png
+[2026-10-20 13:06:43,495 INFO api_agent/455] Step 19 raw model output: {"reason":"The 'Choose Orientation' dialog is open with XY-plane correctly selected. Previous attempts to click OK at various coordinates have failed multiple times. The OK button appears to be located at the bottom-left of the dialog. I will try clicking it again with adjusted coordinates that better match its actual position on screen.","action":"pyautogui.click(x=260, y=561)"}
+[2026-10-20 13:06:43,495 INFO api_agent/455] Step 19 parsed model response action: pyautogui.click(x=260, y=561)
+[2026-10-20 13:06:43,495 INFO api_agent/455] Step 19 parsed model response actions: ['pyautogui.click(x=260, y=561)']
+[2026-10-20 13:06:43,496 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=260, y=561)'] -> ['pyautogui.click(x=499, y=606)']
+[2026-10-20 13:06:43,496 INFO api_agent/455] Step 19 sanitized executable actions: ['pyautogui.click(x=499, y=606)']
+[2026-10-20 13:06:43,496 INFO run_single/215] Step 19: pyautogui.click(x=499, y=606)
+[2026-10-20 13:06:43,496 INFO run_single/216] Step 19 action: pyautogui.click(x=499, y=606)
+[2026-10-20 13:06:43,496 INFO desktop_env/398] Step 19 in trajectory 0 with action: pyautogui.click(x=499, y=606)
+[2026-10-20 13:06:50,450 INFO python/54] Got screenshot successfully
+[2026-10-20 13:06:50,451 INFO run_single/221] Step 19 result: reward=0 done=False info={} screenshot=step_19_20261020@130643496818.png
+[2026-10-20 13:06:52,689 INFO api_agent/455] Step 20 raw model output: {
+  "reason": "The 'Choose Orientation' dialog is open with XY-plane correctly selected. Previous attempts to click OK at various coordinates have failed multiple times, likely due to coordinate misalignment. The OK button is clearly visible at the bottom-left of the dialog. I will try clicking it again with more precise coordinates based on visual inspection: approximately x=489 (normalized) and y=561 (normalized), which corresponds to the center of the OK button in pixel space.",
+  "action": "pyautogui.click(x=489, y=561)"
+}
+[2026-10-20 13:06:52,689 INFO api_agent/455] Step 20 parsed model response action: pyautogui.click(x=489, y=561)
+[2026-10-20 13:06:52,689 INFO api_agent/455] Step 20 parsed model response actions: ['pyautogui.click(x=489, y=561)']
+[2026-10-20 13:06:52,690 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=489, y=561)'] -> ['pyautogui.click(x=939, y=606)']
+[2026-10-20 13:06:52,690 INFO api_agent/455] Step 20 sanitized executable actions: ['pyautogui.click(x=939, y=606)']
+[2026-10-20 13:06:52,690 INFO run_single/215] Step 20: pyautogui.click(x=939, y=606)
+[2026-10-20 13:06:52,690 INFO run_single/216] Step 20 action: pyautogui.click(x=939, y=606)
+[2026-10-20 13:06:52,690 INFO desktop_env/398] Step 20 in trajectory 0 with action: pyautogui.click(x=939, y=606)
+[2026-10-20 13:06:59,683 INFO python/54] Got screenshot successfully
+[2026-10-20 13:06:59,684 INFO run_single/221] Step 20 result: reward=0 done=False info={} screenshot=step_20_20261020@130652690239.png
+[2026-10-20 13:07:01,455 INFO api_agent/455] Step 21 raw model output: {
+  "reason": "The 'Choose Orientation' dialog is open with XY-plane correctly selected, which matches the task requirement. Previous attempts to click OK at various coordinates have failed multiple times. The OK button is clearly visible at the bottom-left of the dialog. I will try clicking it again with adjusted coordinates to ensure it registers properly and creates the sketch.",
+  "action": "pyautogui.click(x=260, y=561)"
+}
+[2026-10-20 13:07:01,455 INFO api_agent/455] Step 21 parsed model response action: pyautogui.click(x=260, y=561)
+[2026-10-20 13:07:01,455 INFO api_agent/455] Step 21 parsed model response actions: ['pyautogui.click(x=260, y=561)']
+[2026-10-20 13:07:01,455 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=260, y=561)'] -> ['pyautogui.click(x=499, y=606)']
+[2026-10-20 13:07:01,455 INFO api_agent/455] Step 21 sanitized executable actions: ['pyautogui.click(x=499, y=606)']
+[2026-10-20 13:07:01,455 INFO run_single/215] Step 21: pyautogui.click(x=499, y=606)
+[2026-10-20 13:07:01,455 INFO run_single/216] Step 21 action: pyautogui.click(x=499, y=606)
+[2026-10-20 13:07:01,455 INFO desktop_env/398] Step 21 in trajectory 0 with action: pyautogui.click(x=499, y=606)
+[2026-10-20 13:07:08,439 INFO python/54] Got screenshot successfully
+[2026-10-20 13:07:08,441 INFO run_single/221] Step 21 result: reward=0 done=False info={} screenshot=step_21_20261020@130701455786.png
+[2026-10-20 13:07:10,770 INFO api_agent/455] Step 22 raw model output: {"reason": "The 'Choose Orientation' dialog is open with XY-plane correctly selected. Previous attempts to click the OK button at various coordinates have failed multiple times, likely due to coordinate misalignment. The OK button is clearly visible at the bottom-left of the dialog. I will try clicking it again with adjusted normalized coordinates (489, 561) to ensure it registers properly and creates the sketch.", "action": "pyautogui.click(x=489, y=561)"}
+[2026-10-20 13:07:10,770 INFO api_agent/455] Step 22 parsed model response action: pyautogui.click(x=489, y=561)
+[2026-10-20 13:07:10,770 INFO api_agent/455] Step 22 parsed model response actions: ['pyautogui.click(x=489, y=561)']
+[2026-10-20 13:07:10,770 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=489, y=561)'] -> ['pyautogui.click(x=939, y=606)']
+[2026-10-20 13:07:10,770 INFO api_agent/455] Step 22 sanitized executable actions: ['pyautogui.click(x=939, y=606)']
+[2026-10-20 13:07:10,770 INFO run_single/215] Step 22: pyautogui.click(x=939, y=606)
+[2026-10-20 13:07:10,770 INFO run_single/216] Step 22 action: pyautogui.click(x=939, y=606)
+[2026-10-20 13:07:10,770 INFO desktop_env/398] Step 22 in trajectory 0 with action: pyautogui.click(x=939, y=606)
+[2026-10-20 13:07:17,704 INFO python/54] Got screenshot successfully
+[2026-10-20 13:07:17,705 INFO run_single/221] Step 22 result: reward=0 done=False info={} screenshot=step_22_20261020@130710770806.png
+[2026-10-20 13:07:19,480 INFO api_agent/455] Step 23 raw model output: {
+  "reason": "The 'Choose Orientation' dialog is open with XY-plane correctly selected. Previous attempts to click the OK button at various coordinates have failed, likely due to coordinate misalignment. The OK button is clearly visible at the bottom-left of the dialog. I will try clicking it again with adjusted normalized coordinates to ensure it registers properly and creates the sketch.",
+  "action": "pyautogui.click(x=258, y=561)"
+}
+[2026-10-20 13:07:19,481 INFO api_agent/455] Step 23 parsed model response action: pyautogui.click(x=258, y=561)
+[2026-10-20 13:07:19,481 INFO api_agent/455] Step 23 parsed model response actions: ['pyautogui.click(x=258, y=561)']
+[2026-10-20 13:07:19,481 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=258, y=561)'] -> ['pyautogui.click(x=495, y=606)']
+[2026-10-20 13:07:19,481 INFO api_agent/455] Step 23 sanitized executable actions: ['pyautogui.click(x=495, y=606)']
+[2026-10-20 13:07:19,481 INFO run_single/215] Step 23: pyautogui.click(x=495, y=606)
+[2026-10-20 13:07:19,481 INFO run_single/216] Step 23 action: pyautogui.click(x=495, y=606)
+[2026-10-20 13:07:19,481 INFO desktop_env/398] Step 23 in trajectory 0 with action: pyautogui.click(x=495, y=606)
+[2026-10-20 13:07:26,419 INFO python/54] Got screenshot successfully
+[2026-10-20 13:07:26,420 INFO run_single/221] Step 23 result: reward=0 done=False info={} screenshot=step_23_20261020@130719481798.png
+[2026-10-20 13:07:28,291 INFO api_agent/455] Step 24 raw model output: {"reason": "The 'Choose Orientation' dialog is open with XY-plane correctly selected. Previous attempts to click OK at various coordinates have failed, likely due to coordinate misalignment. The OK button is clearly visible at the bottom-left of the dialog. I will try clicking it again with adjusted coordinates to ensure it registers properly and creates the sketch.", "action": "pyautogui.click(x=258, y=561)"}
+[2026-10-20 13:07:28,291 INFO api_agent/455] Step 24 parsed model response action: pyautogui.click(x=258, y=561)
+[2026-10-20 13:07:28,291 INFO api_agent/455] Step 24 parsed model response actions: ['pyautogui.click(x=258, y=561)']
+[2026-10-20 13:07:28,291 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=258, y=561)'] -> ['pyautogui.click(x=495, y=606)']
+[2026-10-20 13:07:28,291 INFO api_agent/455] Step 24 sanitized executable actions: ['pyautogui.click(x=495, y=606)']
+[2026-10-20 13:07:28,292 INFO run_single/215] Step 24: pyautogui.click(x=495, y=606)
+[2026-10-20 13:07:28,292 INFO run_single/216] Step 24 action: pyautogui.click(x=495, y=606)
+[2026-10-20 13:07:28,292 INFO desktop_env/398] Step 24 in trajectory 0 with action: pyautogui.click(x=495, y=606)
+[2026-10-20 13:07:35,182 INFO python/54] Got screenshot successfully
+[2026-10-20 13:07:35,187 INFO run_single/221] Step 24 result: reward=0 done=False info={} screenshot=step_24_20261020@130728292029.png
+[2026-10-20 13:07:37,420 INFO api_agent/455] Step 25 raw model output: {"reason": "The 'Choose Orientation' dialog is open with XY-plane correctly selected. Previous attempts to click the OK button at various coordinates have failed, likely due to coordinate misalignment. The OK button is clearly visible at the bottom-left of the dialog. I will try clicking it again with adjusted coordinates to ensure it registers properly and creates the sketch.", "action": "pyautogui.click(x=258, y=561)"}
+[2026-10-20 13:07:37,420 INFO api_agent/455] Step 25 parsed model response action: pyautogui.click(x=258, y=561)
+[2026-10-20 13:07:37,420 INFO api_agent/455] Step 25 parsed model response actions: ['pyautogui.click(x=258, y=561)']
+[2026-10-20 13:07:37,420 INFO api_agent/455] Qwen coordinate mapping normalized1000 -> pixels 1920x1080: ['pyautogui.click(x=258, y=561)'] -> ['pyautogui.click(x=495, y=606)']
+[2026-10-20 13:07:37,420 INFO api_agent/455] Step 25 sanitized executable actions: ['pyautogui.click(x=495, y=606)']
+[2026-10-20 13:07:37,420 INFO run_single/215] Step 25: pyautogui.click(x=495, y=606)
+[2026-10-20 13:07:37,420 INFO run_single/216] Step 25 action: pyautogui.click(x=495, y=606)
+[2026-10-20 13:07:37,420 INFO desktop_env/398] Step 25 in trajectory 0 with action: pyautogui.click(x=495, y=606)
+[2026-10-20 13:07:44,285 INFO python/54] Got screenshot successfully
+[2026-10-20 13:07:44,286 INFO run_single/221] Step 25 result: reward=0 done=False info={} screenshot=step_25_20261020@130737420822.png
+[2026-10-20 13:07:46,296 INFO setup/71] try to connect http://127.0.0.1:15030
+[2026-10-20 13:07:46,524 ERROR python/126] Failed to get file. Status code: 404
+[2026-10-20 13:07:46,525 INFO python/127] Retrying to get file.
+[2026-10-20 13:07:51,555 ERROR python/126] Failed to get file. Status code: 404
+[2026-10-20 13:07:51,556 INFO python/127] Retrying to get file.
+[2026-10-20 13:07:56,597 ERROR python/126] Failed to get file. Status code: 404
+[2026-10-20 13:07:56,599 INFO python/127] Retrying to get file.
+[2026-10-20 13:08:01,605 ERROR python/133] Failed to get file.
+[2026-10-20 13:08:01,605 ERROR freecad_sketch/250] Failed to download FCStd file: /home/user/Unnamed.FCStd
+[2026-10-20 13:08:01,605 INFO run_single/252] Evaluation result: 0.000
+[2026-10-20 13:08:01,624 ERROR python/126] Failed to get file. Status code: 404
+[2026-10-20 13:08:01,624 INFO python/127] Retrying to get file.
+[2026-10-20 13:08:06,656 ERROR python/126] Failed to get file. Status code: 404
+[2026-10-20 13:08:06,659 INFO python/127] Retrying to get file.
+[2026-10-20 13:08:11,679 ERROR python/126] Failed to get file. Status code: 404
+[2026-10-20 13:08:11,679 INFO python/127] Retrying to get file.
+[2026-10-20 13:08:16,689 ERROR python/133] Failed to get file.
+[2026-10-20 13:08:16,692 WARNING run_single/138] Generated FCStd not found in VM at /home/user/Unnamed.FCStd
+[2026-10-20 13:08:16,732 INFO run_single/164] Diagnostics written to /Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/evaluation.json (failure_class=no_output_file)
+[2026-10-20 13:08:16,736 INFO run_cadworld/541] [Result] sketch/freecad-sketch-061 = 0.000
+[2026-10-20 13:08:17,328 INFO run_cadworld/558] Average score: 0.000 over 1 task(s)
+[2026-10-20 13:08:17,328 INFO run_cadworld/559] Excel result: /Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_gui/gui_validation_qwen122_20261020_001/result.xlsx
+{
+  "kind": "gui",
+  "command": [
+    "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/.venv/bin/python",
+    "scripts/python/run_cadworld.py",
+    "--no-download_vm",
+    "--path_to_vm",
+    "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/vm_data/FreeCAD-Ubuntu.qcow2",
+    "--test_all_meta_path",
+    "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/manifests/smoke_2.json",
+    "--agent",
+    "api",
+    "--api_provider",
+    "openai-compatible",
+    "--model_name",
+    "qwen3.5-122b-a10b",
+    "--max_steps",
+    "25",
+    "--run_id",
+    "gui_validation_qwen122_20261020_001",
+    "--result_dir",
+    "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_gui",
+    "--no-skip_finished",
+    "--no-record",
+    "--headless",
+    "--api_base_url",
+    "[REDACTED]",
+    "--domain",
+    "sketch",
+    "--think_level",
+    "none",
+    "--sleep_after_execution",
+    "5"
+  ],
+  "cwd": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD",
+  "protocol": "exploratory_tcg",
+  "task_id": "freecad-sketch-061",
+  "model": "qwen3.5-122b-a10b",
+  "base_url": "[REDACTED]",
+  "key_env": "CADWORLD_API_KEY",
+  "key_present": true,
+  "qwen_no_thinking": true,
+  "qwen_coordinates": "normalized1000",
+  "campaign": "gui_validation_20261020",
+  "batch_ledger": "results/gui_validation_20261020/model_batch.sqlite",
+  "batch_max_calls": 25,
+  "batch_max_output_tokens": 16000
+}

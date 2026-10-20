@@ -1,5 +1,11 @@
 # 失败案例
 
+2026-10-20 GUI专项的新失败与处置见[GUI控件验收](GUI_CONTROLS.md)。其中controls004在新建文档后出现GNOME外部“FreeCAD未响应”弹窗，Qt心跳仍前进；单次New Body动作后状态等待失败，未重发。controls005越过平面选择并由GUI保存关闭，但重开对话框的文件名栏从y=675移到715，探针仍点击旧中心(968,688)，文件名为空，整轮FAIL。controls001人工中止、002截图超时、003观察器NULL Shape错误和重复Body均保留，不计模型episode或pair。
+
+controls006在确认XY后被观察器内部30秒超时截断，最终画面仍显示Recompute；不能写作90秒完整阶段失败或已证实死锁。统一观察等待到90秒后，controls007完整保存关闭重开通过。006保持FAIL，原截图和JSONL不覆写；所有探针都不生成训练标签。
+
+`gui_validation_qwen122_20261020_001`为一次有效任务失败，官方strict=0、no_output_file，25次生成且无API错误。模型先误点2D Draft，后在Choose Orientation里反复点击对话框外，未创建并保存目标。它不是宏超时，不以可信空Sketch补文件；完整证据和坐标映射见[本轮复测](GUI_VALIDATION_20261020.md)。GUI控制探针通过不能覆盖这次模型失败。
+
 synthetic 行是明确注入的单测场景。早期报告的模型/pair 样本为 0；最新真实模型失败见末节，真实 pair 仍为 0。基础设施失败单列，不当作 Agent 任务错误。
 
 | 样本 | 观察结果 | Trace |

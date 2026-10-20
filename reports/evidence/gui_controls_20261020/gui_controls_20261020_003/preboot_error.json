@@ -1,0 +1,1 @@
+{"status":"FAILED_BEFORE_VM_OR_ACTION","error":"AttributeError: 'str' object has no attribute 'open' in diagnostic sha256 call","correction":"Pass Path to the existing sha256 helper","model_calls":0,"vm_boots":0,"action_replayed":false}

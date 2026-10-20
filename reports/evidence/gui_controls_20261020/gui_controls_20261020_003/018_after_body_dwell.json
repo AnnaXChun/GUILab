@@ -1,0 +1,4 @@
+{
+  "ok": false,
+  "error": "Traceback (most recent call last):\n  File \"/home/user/.actc_gui_controls_20261020_003/bootstrap.FCMacro\", line 77, in tick\n    if request['op']=='snapshot':result=observe()\n                                        ^^^^^^^^^\n  File \"/home/user/.actc_gui_controls_20261020_003/bootstrap.FCMacro\", line 63, in observe\n    return dict(ticks=TICKS,pid=os.getpid(),documents=document_info(),\n                                                      ^^^^^^^^^^^^^^^\n  File \"/home/user/.actc_gui_controls_20261020_003/bootstrap.FCMacro\", line 55, in document_info\n    if hasattr(obj,'Shape'):row['shape_valid']=obj.Shape.isValid()\n                                               ^^^^^^^^^^^^^^^^^^^\nPart.OCCError: 19Standard_NullObject BRepCheck_Analyzer::Init() - NULL shape\n"
+}

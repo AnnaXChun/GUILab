@@ -1,0 +1,2239 @@
+{
+  "ok": true,
+  "result": {
+    "pid": 2181,
+    "ticks": 44,
+    "documents": [
+      {
+        "name": "Unnamed",
+        "file_name": "",
+        "objects": [
+          {
+            "name": "Body",
+            "type_id": "PartDesign::Body",
+            "state": [
+              "Expanded",
+              "Up-to-date"
+            ],
+            "shape_null": true,
+            "shape_valid": null
+          },
+          {
+            "name": "Origin",
+            "type_id": "App::Origin",
+            "state": [
+              "Up-to-date"
+            ]
+          },
+          {
+            "name": "X_Axis",
+            "type_id": "App::Line",
+            "state": [
+              "Up-to-date"
+            ],
+            "shape_null": false,
+            "shape_valid": true
+          },
+          {
+            "name": "Y_Axis",
+            "type_id": "App::Line",
+            "state": [
+              "Up-to-date"
+            ],
+            "shape_null": false,
+            "shape_valid": true
+          },
+          {
+            "name": "Z_Axis",
+            "type_id": "App::Line",
+            "state": [
+              "Up-to-date"
+            ],
+            "shape_null": false,
+            "shape_valid": true
+          },
+          {
+            "name": "XY_Plane",
+            "type_id": "App::Plane",
+            "state": [
+              "Up-to-date"
+            ],
+            "shape_null": false,
+            "shape_valid": true
+          },
+          {
+            "name": "XZ_Plane",
+            "type_id": "App::Plane",
+            "state": [
+              "Up-to-date"
+            ],
+            "shape_null": false,
+            "shape_valid": true
+          },
+          {
+            "name": "YZ_Plane",
+            "type_id": "App::Plane",
+            "state": [
+              "Up-to-date"
+            ],
+            "shape_null": false,
+            "shape_valid": true
+          },
+          {
+            "name": "Origin001",
+            "type_id": "App::Point",
+            "state": [
+              "Up-to-date"
+            ],
+            "shape_null": false,
+            "shape_valid": true
+          },
+          {
+            "name": "Sketch",
+            "type_id": "Sketcher::SketchObject",
+            "state": [
+              "Up-to-date"
+            ],
+            "geometry_count": 0,
+            "constraint_count": 0,
+            "shape_null": true,
+            "shape_valid": null,
+            "map_mode": "FlatFace"
+          }
+        ]
+      }
+    ],
+    "widgets": [
+      {
+        "cls": "QToolButton",
+        "name": "qt_toolbutton_menubutton",
+        "enabled": false,
+        "x": 388,
+        "y": 172,
+        "width": 46,
+        "height": 33,
+        "text": "Rectangle"
+      },
+      {
+        "cls": "Gui::MainWindow",
+        "name": "",
+        "enabled": true,
+        "x": 66,
+        "y": 69,
+        "width": 1854,
+        "height": 1011
+      },
+      {
+        "cls": "QMdiSubWindow",
+        "name": "",
+        "enabled": true,
+        "x": 332,
+        "y": 208,
+        "width": 408,
+        "height": 330
+      },
+      {
+        "cls": "QSint::TaskHeader",
+        "name": "",
+        "enabled": true,
+        "x": 1537,
+        "y": 421,
+        "width": 379,
+        "height": 27
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": true,
+        "x": 192,
+        "y": 94,
+        "width": 45,
+        "height": 33,
+        "text": "Undo"
+      },
+      {
+        "cls": "Gui::ToolBar",
+        "name": "Sketcher Tools",
+        "enabled": true,
+        "x": 1040,
+        "y": 169,
+        "width": 404,
+        "height": 39
+      },
+      {
+        "cls": "QMainWindowTabBar",
+        "name": "",
+        "enabled": true,
+        "x": -534,
+        "y": -461,
+        "width": 100,
+        "height": 30
+      },
+      {
+        "cls": "QScrollBar",
+        "name": "",
+        "enabled": true,
+        "x": 344,
+        "y": 481,
+        "width": 370,
+        "height": 14
+      },
+      {
+        "cls": "SketcherGui::TaskSketcherConstraints",
+        "name": "",
+        "enabled": true,
+        "x": 1537,
+        "y": 503,
+        "width": 379,
+        "height": 249
+      },
+      {
+        "cls": "QWidget",
+        "name": "CreateNewRow",
+        "enabled": true,
+        "x": 353,
+        "y": 303,
+        "width": 638,
+        "height": 213
+      },
+      {
+        "cls": "QPushButton",
+        "name": "newFileButton",
+        "enabled": true,
+        "x": 619,
+        "y": 376,
+        "width": 260,
+        "height": 67,
+        "text": ""
+      },
+      {
+        "cls": "SketcherGui::ConstraintView",
+        "name": "listWidgetConstraints",
+        "enabled": true,
+        "x": 1551,
+        "y": 569,
+        "width": 351,
+        "height": 169,
+        "items": []
+      },
+      {
+        "cls": "Gui::ToolBarAreaWidget",
+        "name": "StatusBarArea",
+        "enabled": true,
+        "x": 1584,
+        "y": 1051,
+        "width": 0,
+        "height": 27
+      },
+      {
+        "cls": "QLabel",
+        "name": "",
+        "enabled": true,
+        "x": 627,
+        "y": 457,
+        "width": 48,
+        "height": 51,
+        "text": ""
+      },
+      {
+        "cls": "QLabel",
+        "name": "",
+        "enabled": true,
+        "x": 417,
+        "y": 474,
+        "width": 180,
+        "height": 34,
+        "text": "Creates a new empty FreeCAD file"
+      },
+      {
+        "cls": "QWidget",
+        "name": "qt_scrollarea_viewport",
+        "enabled": true,
+        "x": 67,
+        "y": 611,
+        "width": 258,
+        "height": 410
+      },
+      {
+        "cls": "QScrollArea",
+        "name": "",
+        "enabled": true,
+        "x": 343,
+        "y": 245,
+        "width": 386,
+        "height": 251
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 1374,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Mirror"
+      },
+      {
+        "cls": "Gui::View3DInventorViewer",
+        "name": "",
+        "enabled": true,
+        "x": 332,
+        "y": 208,
+        "width": 1588,
+        "height": 810
+      },
+      {
+        "cls": "QPushButton",
+        "name": "newFileButton",
+        "enabled": true,
+        "x": 353,
+        "y": 303,
+        "width": 260,
+        "height": 67,
+        "text": ""
+      },
+      {
+        "cls": "Gui::ToolBar",
+        "name": "Edit Mode",
+        "enabled": true,
+        "x": 66,
+        "y": 169,
+        "width": 115,
+        "height": 39
+      },
+      {
+        "cls": "QWidget",
+        "name": "qt_scrollarea_viewport",
+        "enabled": true,
+        "x": 344,
+        "y": 246,
+        "width": 370,
+        "height": 235
+      },
+      {
+        "cls": "QToolBarSeparator",
+        "name": "",
+        "enabled": true,
+        "x": 682,
+        "y": 172,
+        "width": 11,
+        "height": 33
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 846,
+        "y": 94,
+        "width": 33,
+        "height": 33,
+        "text": "Measure"
+      },
+      {
+        "cls": "QFrame",
+        "name": "",
+        "enabled": true,
+        "x": 1537,
+        "y": 787,
+        "width": 379,
+        "height": 222
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 1523,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Decrease B-Spline Degree"
+      },
+      {
+        "cls": "Gui::ToolBar",
+        "name": "B-Spline Tools",
+        "enabled": true,
+        "x": 1444,
+        "y": 169,
+        "width": 230,
+        "height": 39
+      },
+      {
+        "cls": "QPushButton",
+        "name": "",
+        "enabled": true,
+        "x": 343,
+        "y": 502,
+        "width": 179,
+        "height": 25,
+        "text": "Open First Start Setup"
+      },
+      {
+        "cls": "QSint::TaskHeader",
+        "name": "",
+        "enabled": true,
+        "x": 1537,
+        "y": 503,
+        "width": 379,
+        "height": 27
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 1238,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Move / Array Transform"
+      },
+      {
+        "cls": "Gui::OverlayToolButton",
+        "name": "OBTN Float",
+        "enabled": true,
+        "x": 285,
+        "y": 209,
+        "width": 17,
+        "height": 17,
+        "text": ""
+      },
+      {
+        "cls": "QLabel",
+        "name": "",
+        "enabled": true,
+        "x": 417,
+        "y": 385,
+        "width": 180,
+        "height": 24,
+        "text": "2D Draft"
+      },
+      {
+        "cls": "QLabel",
+        "name": "",
+        "enabled": true,
+        "x": 627,
+        "y": 384,
+        "width": 48,
+        "height": 51,
+        "text": ""
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": true,
+        "x": 544,
+        "y": 94,
+        "width": 33,
+        "height": 33,
+        "text": "Fit All"
+      },
+      {
+        "cls": "Gui::OverlaySplitter",
+        "name": "",
+        "enabled": true,
+        "x": 1533,
+        "y": 370,
+        "width": 387,
+        "height": 647
+      },
+      {
+        "cls": "QLabel",
+        "name": "",
+        "enabled": true,
+        "x": 353,
+        "y": 531,
+        "width": 638,
+        "height": 33,
+        "text": "<h1>Examples</h1>"
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 809,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Perpendicular Constraint"
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 1719,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Select Associated Geometry"
+      },
+      {
+        "cls": "QHeaderView",
+        "name": "",
+        "enabled": true,
+        "x": 66,
+        "y": 227,
+        "width": 0,
+        "height": 0
+      },
+      {
+        "cls": "QToolButton",
+        "name": "settingsButton",
+        "enabled": true,
+        "x": 1860,
+        "y": 800,
+        "width": 42,
+        "height": 20,
+        "text": ""
+      },
+      {
+        "cls": "QCheckBox",
+        "name": "filterBox",
+        "enabled": true,
+        "x": 1551,
+        "y": 543,
+        "width": 25,
+        "height": 20,
+        "text": ""
+      },
+      {
+        "cls": "QWidget",
+        "name": "",
+        "enabled": true,
+        "x": 334,
+        "y": 236,
+        "width": 404,
+        "height": 300
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 1604,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Insert Knot"
+      },
+      {
+        "cls": "QFrame",
+        "name": "",
+        "enabled": true,
+        "x": 1537,
+        "y": 530,
+        "width": 379,
+        "height": 222
+      },
+      {
+        "cls": "QToolBarSeparator",
+        "name": "",
+        "enabled": true,
+        "x": 576,
+        "y": 172,
+        "width": 11,
+        "height": 33
+      },
+      {
+        "cls": "IndicatorButton",
+        "name": "NavigationIndicator",
+        "enabled": true,
+        "x": 1660,
+        "y": 1052,
+        "width": 81,
+        "height": 25,
+        "text": "CAD  "
+      },
+      {
+        "cls": "QToolButton",
+        "name": "qt_toolbutton_menubutton",
+        "enabled": false,
+        "x": 1145,
+        "y": 172,
+        "width": 46,
+        "height": 33,
+        "text": "External Geometry"
+      },
+      {
+        "cls": "QToolBarSeparator",
+        "name": "",
+        "enabled": true,
+        "x": 979,
+        "y": 172,
+        "width": 11,
+        "height": 33
+      },
+      {
+        "cls": "QLabel",
+        "name": "",
+        "enabled": true,
+        "x": 683,
+        "y": 474,
+        "width": 180,
+        "height": 34,
+        "text": "Opens an existing CAD file or 3D model"
+      },
+      {
+        "cls": "Gui::ToolBar",
+        "name": "View",
+        "enabled": true,
+        "x": 533,
+        "y": 91,
+        "width": 1387,
+        "height": 39
+      },
+      {
+        "cls": "Gui::OverlayTitleBar",
+        "name": "OverlayTitle",
+        "enabled": true,
+        "x": 1533,
+        "y": 350,
+        "width": 387,
+        "height": 21
+      },
+      {
+        "cls": "QToolButton",
+        "name": "settingsButton",
+        "enabled": true,
+        "x": 1860,
+        "y": 543,
+        "width": 42,
+        "height": 20,
+        "text": ""
+      },
+      {
+        "cls": "QWidget",
+        "name": "",
+        "enabled": true,
+        "x": 1532,
+        "y": 350,
+        "width": 388,
+        "height": 668
+      },
+      {
+        "cls": "QWidget",
+        "name": "qt_scrollarea_viewport",
+        "enabled": true,
+        "x": 66,
+        "y": 227,
+        "width": 0,
+        "height": 0
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 1192,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Carbon Copy"
+      },
+      {
+        "cls": "QToolButton",
+        "name": "manualUpdate",
+        "enabled": true,
+        "x": 1812,
+        "y": 461,
+        "width": 42,
+        "height": 20,
+        "text": ""
+      },
+      {
+        "cls": "QToolButton",
+        "name": "qt_toolbutton_menubutton",
+        "enabled": false,
+        "x": 294,
+        "y": 172,
+        "width": 46,
+        "height": 33,
+        "text": "Arc"
+      },
+      {
+        "cls": "QFrame",
+        "name": "",
+        "enabled": true,
+        "x": 1537,
+        "y": 448,
+        "width": 379,
+        "height": 0
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": true,
+        "x": 145,
+        "y": 94,
+        "width": 33,
+        "height": 33,
+        "text": "Save"
+      },
+      {
+        "cls": "QLabel",
+        "name": "",
+        "enabled": true,
+        "x": 683,
+        "y": 401,
+        "width": 180,
+        "height": 34,
+        "text": "Creates an architectural project"
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 843,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Tangent/Collinear Constraint"
+      },
+      {
+        "cls": "QLabel",
+        "name": "",
+        "enabled": true,
+        "x": 361,
+        "y": 385,
+        "width": 48,
+        "height": 48,
+        "text": ""
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": true,
+        "x": 77,
+        "y": 133,
+        "width": 33,
+        "height": 33,
+        "text": "What's This?"
+      },
+      {
+        "cls": "QWidget",
+        "name": "qt_scrollarea_viewport",
+        "enabled": true,
+        "x": 66,
+        "y": 227,
+        "width": 0,
+        "height": 0
+      },
+      {
+        "cls": "QWidget",
+        "name": "qt_scrollarea_hcontainer",
+        "enabled": true,
+        "x": 344,
+        "y": 481,
+        "width": 370,
+        "height": 14
+      },
+      {
+        "cls": "Gui::TreeWidget",
+        "name": "",
+        "enabled": true,
+        "x": 66,
+        "y": 227,
+        "width": 260,
+        "height": 374,
+        "items": [
+          {
+            "text": "Unnamed",
+            "selected": false,
+            "x": 201,
+            "y": 236,
+            "width": 248,
+            "height": 19
+          }
+        ]
+      },
+      {
+        "cls": "Gui::TaskView::TaskEditControl",
+        "name": "",
+        "enabled": true,
+        "x": 1533,
+        "y": 370,
+        "width": 387,
+        "height": 43
+      },
+      {
+        "cls": "CloseButton",
+        "name": "",
+        "enabled": true,
+        "x": 551,
+        "y": 1023,
+        "width": 20,
+        "height": 20,
+        "text": ""
+      },
+      {
+        "cls": "QSint::ActionLabel",
+        "name": "",
+        "enabled": true,
+        "x": 1542,
+        "y": 763,
+        "width": 342,
+        "height": 21,
+        "text": "Elements"
+      },
+      {
+        "cls": "QPushButton",
+        "name": "newFileButton",
+        "enabled": true,
+        "x": 619,
+        "y": 449,
+        "width": 260,
+        "height": 67,
+        "text": ""
+      },
+      {
+        "cls": "QWidget",
+        "name": "_fc_action_widget_",
+        "enabled": true,
+        "x": -34,
+        "y": -31,
+        "width": 100,
+        "height": 30
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 296,
+        "y": 94,
+        "width": 45,
+        "height": 33,
+        "text": "Recompute"
+      },
+      {
+        "cls": "SketcherGui::TaskSketcherMessages",
+        "name": "",
+        "enabled": true,
+        "x": 1537,
+        "y": 421,
+        "width": 379,
+        "height": 74
+      },
+      {
+        "cls": "QWidget",
+        "name": "qt_scrollarea_viewport",
+        "enabled": true,
+        "x": 1552,
+        "y": 827,
+        "width": 349,
+        "height": 167
+      },
+      {
+        "cls": "QOpenGLWidget",
+        "name": "",
+        "enabled": true,
+        "x": 332,
+        "y": 208,
+        "width": 1588,
+        "height": 810
+      },
+      {
+        "cls": "Gui::OverlayTabWidget",
+        "name": "OverlayRight",
+        "enabled": true,
+        "x": 1533,
+        "y": 350,
+        "width": 387,
+        "height": 668
+      },
+      {
+        "cls": "QLabel",
+        "name": "",
+        "enabled": true,
+        "x": 683,
+        "y": 457,
+        "width": 180,
+        "height": 17,
+        "text": "Open File"
+      },
+      {
+        "cls": "CloseButton",
+        "name": "",
+        "enabled": true,
+        "x": 403,
+        "y": 1023,
+        "width": 20,
+        "height": 20,
+        "text": ""
+      },
+      {
+        "cls": "Gui::StatusBarLabel",
+        "name": "rightSideLabel",
+        "enabled": true,
+        "x": 1590,
+        "y": 1051,
+        "width": 8,
+        "height": 27,
+        "text": ""
+      },
+      {
+        "cls": "QDockWidget",
+        "name": "Tasks",
+        "enabled": true,
+        "x": 1533,
+        "y": 370,
+        "width": 387,
+        "height": 647
+      },
+      {
+        "cls": "QLabel",
+        "name": "",
+        "enabled": true,
+        "x": 683,
+        "y": 312,
+        "width": 180,
+        "height": 24,
+        "text": "Assembly"
+      },
+      {
+        "cls": "QToolButton",
+        "name": "qt_toolbutton_menubutton",
+        "enabled": true,
+        "x": 635,
+        "y": 172,
+        "width": 46,
+        "height": 33,
+        "text": "Dimension"
+      },
+      {
+        "cls": "QToolButton",
+        "name": "qt_toolbutton_menubutton",
+        "enabled": false,
+        "x": 991,
+        "y": 172,
+        "width": 46,
+        "height": 33,
+        "text": "Toggle Constraints"
+      },
+      {
+        "cls": "Gui::OverlayToolButton",
+        "name": "OBTN AutoMode",
+        "enabled": true,
+        "x": 1592,
+        "y": 352,
+        "width": 17,
+        "height": 17,
+        "text": ""
+      },
+      {
+        "cls": "QLabel",
+        "name": "",
+        "enabled": true,
+        "x": 627,
+        "y": 312,
+        "width": 48,
+        "height": 48,
+        "text": ""
+      },
+      {
+        "cls": "QToolButton",
+        "name": "qt_toolbutton_menubutton",
+        "enabled": true,
+        "x": 705,
+        "y": 94,
+        "width": 46,
+        "height": 33,
+        "text": "Draw Style"
+      },
+      {
+        "cls": "Gui::TaskView::TaskPanel",
+        "name": "",
+        "enabled": true,
+        "x": 1533,
+        "y": 413,
+        "width": 387,
+        "height": 604
+      },
+      {
+        "cls": "QToolButton",
+        "name": "qt_toolbutton_menubutton",
+        "enabled": false,
+        "x": 341,
+        "y": 172,
+        "width": 46,
+        "height": 33,
+        "text": "Conic"
+      },
+      {
+        "cls": "QToolBarSeparator",
+        "name": "",
+        "enabled": true,
+        "x": 693,
+        "y": 94,
+        "width": 11,
+        "height": 33
+      },
+      {
+        "cls": "Gui::ToolBarAreaWidget",
+        "name": "MenuBarRightArea",
+        "enabled": true,
+        "x": 1920,
+        "y": 69,
+        "width": 0,
+        "height": 0
+      },
+      {
+        "cls": "Gui::ToolBar",
+        "name": "Geometries",
+        "enabled": true,
+        "x": 181,
+        "y": 169,
+        "width": 443,
+        "height": 39
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 111,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Align View to Sketch"
+      },
+      {
+        "cls": "QLabel",
+        "name": "",
+        "enabled": true,
+        "x": 1890,
+        "y": 765,
+        "width": 17,
+        "height": 17,
+        "text": ""
+      },
+      {
+        "cls": "QToolBarSeparator",
+        "name": "",
+        "enabled": true,
+        "x": 1753,
+        "y": 172,
+        "width": 11,
+        "height": 33
+      },
+      {
+        "cls": "Gui::DockWnd::ComboView",
+        "name": "Model",
+        "enabled": true,
+        "x": 66,
+        "y": 227,
+        "width": 260,
+        "height": 821
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 1638,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Join Curves"
+      },
+      {
+        "cls": "QTabWidget",
+        "name": "propertyTab",
+        "enabled": true,
+        "x": 66,
+        "y": 610,
+        "width": 260,
+        "height": 438
+      },
+      {
+        "cls": "QToolButton",
+        "name": "qt_toolbutton_menubutton",
+        "enabled": false,
+        "x": 529,
+        "y": 172,
+        "width": 46,
+        "height": 33,
+        "text": "B-Spline"
+      },
+      {
+        "cls": "QToolBarSeparator",
+        "name": "",
+        "enabled": true,
+        "x": 284,
+        "y": 94,
+        "width": 11,
+        "height": 33
+      },
+      {
+        "cls": "QLabel",
+        "name": "",
+        "enabled": true,
+        "x": 683,
+        "y": 336,
+        "width": 180,
+        "height": 24,
+        "text": "Creates an assembly project"
+      },
+      {
+        "cls": "QSint::ActionLabel",
+        "name": "",
+        "enabled": true,
+        "x": 1542,
+        "y": 424,
+        "width": 342,
+        "height": 21,
+        "text": "Sketch Edit"
+      },
+      {
+        "cls": "Gui::ToolBar",
+        "name": "Edit",
+        "enabled": true,
+        "x": 181,
+        "y": 91,
+        "width": 163,
+        "height": 39
+      },
+      {
+        "cls": "QPushButton",
+        "name": "newFileButton",
+        "enabled": true,
+        "x": 619,
+        "y": 303,
+        "width": 260,
+        "height": 67,
+        "text": ""
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 1489,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Increase B-Spline Degree"
+      },
+      {
+        "cls": "QToolButton",
+        "name": "showHideButton",
+        "enabled": true,
+        "x": 1831,
+        "y": 543,
+        "width": 23,
+        "height": 20,
+        "text": ""
+      },
+      {
+        "cls": "Gui::OverlayToolButton",
+        "name": "OBTN Overlay",
+        "enabled": true,
+        "x": 262,
+        "y": 209,
+        "width": 17,
+        "height": 17,
+        "text": ""
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 1272,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Rotate / Polar Transform"
+      },
+      {
+        "cls": "Gui::ToolBar",
+        "name": "File",
+        "enabled": true,
+        "x": 66,
+        "y": 91,
+        "width": 115,
+        "height": 39
+      },
+      {
+        "cls": "QPushButton",
+        "name": "",
+        "enabled": true,
+        "x": 1674,
+        "y": 379,
+        "width": 106,
+        "height": 25,
+        "text": "Close"
+      },
+      {
+        "cls": "QToolBarSeparator",
+        "name": "",
+        "enabled": true,
+        "x": 1226,
+        "y": 172,
+        "width": 11,
+        "height": 33
+      },
+      {
+        "cls": "QFrame",
+        "name": "",
+        "enabled": true,
+        "x": 1537,
+        "y": 448,
+        "width": 379,
+        "height": 47
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 1455,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Geometry to B-Spline"
+      },
+      {
+        "cls": "Gui::ToolBar",
+        "name": "Constraints",
+        "enabled": true,
+        "x": 624,
+        "y": 169,
+        "width": 416,
+        "height": 39
+      },
+      {
+        "cls": "Gui::View3DInventor",
+        "name": "",
+        "enabled": true,
+        "x": 332,
+        "y": 208,
+        "width": 1588,
+        "height": 810
+      },
+      {
+        "cls": "StartGui::FileCardView",
+        "name": "",
+        "enabled": true,
+        "x": 353,
+        "y": 579,
+        "width": 638,
+        "height": 659
+      },
+      {
+        "cls": "QToolButton",
+        "name": "qt_toolbutton_menubutton",
+        "enabled": false,
+        "x": 728,
+        "y": 172,
+        "width": 46,
+        "height": 33,
+        "text": "Horizontal/Vertical Constraint"
+      },
+      {
+        "cls": "QToolButton",
+        "name": "qt_toolbutton_menubutton",
+        "enabled": false,
+        "x": 1098,
+        "y": 172,
+        "width": 46,
+        "height": 33,
+        "text": "Edit Edges"
+      },
+      {
+        "cls": "QWidget",
+        "name": "TaskSolverMessages",
+        "enabled": true,
+        "x": 1542,
+        "y": 452,
+        "width": 369,
+        "height": 38
+      },
+      {
+        "cls": "QWidget",
+        "name": "SketcherGui__TaskSketcherElements",
+        "enabled": true,
+        "x": 1542,
+        "y": 791,
+        "width": 369,
+        "height": 213
+      },
+      {
+        "cls": "QPushButton",
+        "name": "notificationArea",
+        "enabled": true,
+        "x": 1604,
+        "y": 1052,
+        "width": 50,
+        "height": 24,
+        "text": ""
+      },
+      {
+        "cls": "QScrollBar",
+        "name": "",
+        "enabled": true,
+        "x": 714,
+        "y": 246,
+        "width": 14,
+        "height": 235
+      },
+      {
+        "cls": "QPushButton",
+        "name": "newFileButton",
+        "enabled": true,
+        "x": 353,
+        "y": 449,
+        "width": 260,
+        "height": 67,
+        "text": ""
+      },
+      {
+        "cls": "QStackedWidget",
+        "name": "qt_tabwidget_stackedwidget",
+        "enabled": true,
+        "x": 1532,
+        "y": 350,
+        "width": 388,
+        "height": 668
+      },
+      {
+        "cls": "QStackedWidget",
+        "name": "",
+        "enabled": true,
+        "x": 332,
+        "y": 208,
+        "width": 1588,
+        "height": 810
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 588,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Toggle Construction Geometry"
+      },
+      {
+        "cls": "QWidget",
+        "name": "qt_scrollarea_viewport",
+        "enabled": true,
+        "x": 1533,
+        "y": 413,
+        "width": 387,
+        "height": 604
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 1408,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Remove Axes Alignment"
+      },
+      {
+        "cls": "QMenuBar",
+        "name": "",
+        "enabled": true,
+        "x": 66,
+        "y": 69,
+        "width": 1854,
+        "height": 22
+      },
+      {
+        "cls": "QFrame",
+        "name": "",
+        "enabled": true,
+        "x": 1537,
+        "y": 530,
+        "width": 379,
+        "height": 0
+      },
+      {
+        "cls": "QSint::ActionLabel",
+        "name": "",
+        "enabled": true,
+        "x": 1542,
+        "y": 506,
+        "width": 342,
+        "height": 21,
+        "text": "Constraints"
+      },
+      {
+        "cls": "QStackedWidget",
+        "name": "",
+        "enabled": true,
+        "x": 334,
+        "y": 236,
+        "width": 404,
+        "height": 300
+      },
+      {
+        "cls": "Gui::OverlayToolButton",
+        "name": "OBTN Transparent",
+        "enabled": true,
+        "x": 1615,
+        "y": 352,
+        "width": 17,
+        "height": 17,
+        "text": ""
+      },
+      {
+        "cls": "QLabel",
+        "name": "",
+        "enabled": true,
+        "x": 353,
+        "y": 255,
+        "width": 638,
+        "height": 33,
+        "text": "<h1>New File</h1>"
+      },
+      {
+        "cls": "QCheckBox",
+        "name": "filterBox",
+        "enabled": true,
+        "x": 1551,
+        "y": 800,
+        "width": 25,
+        "height": 20,
+        "text": ""
+      },
+      {
+        "cls": "Gui::ToolBar",
+        "name": "Visual Helpers",
+        "enabled": true,
+        "x": 1674,
+        "y": 169,
+        "width": 246,
+        "height": 39
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 775,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Parallel Constraint"
+      },
+      {
+        "cls": "QDockWidget",
+        "name": "Model",
+        "enabled": true,
+        "x": 66,
+        "y": 208,
+        "width": 260,
+        "height": 840
+      },
+      {
+        "cls": "QLabel",
+        "name": "",
+        "enabled": true,
+        "x": 417,
+        "y": 311,
+        "width": 180,
+        "height": 17,
+        "text": "Parametric Body"
+      },
+      {
+        "cls": "QToolButton",
+        "name": "qt_toolbutton_menubutton",
+        "enabled": false,
+        "x": 482,
+        "y": 172,
+        "width": 46,
+        "height": 33,
+        "text": "Slot"
+      },
+      {
+        "cls": "QScrollArea",
+        "name": "",
+        "enabled": true,
+        "x": 1533,
+        "y": 413,
+        "width": 387,
+        "height": 604
+      },
+      {
+        "cls": "QOpenGLWidget",
+        "name": "",
+        "enabled": true,
+        "x": -34,
+        "y": -31,
+        "width": 100,
+        "height": 30
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 226,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Polyline"
+      },
+      {
+        "cls": "QToolButton",
+        "name": "qt_toolbutton_menubutton",
+        "enabled": false,
+        "x": 435,
+        "y": 172,
+        "width": 46,
+        "height": 33,
+        "text": "Polygon"
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 77,
+        "y": 94,
+        "width": 33,
+        "height": 33,
+        "text": "New Document"
+      },
+      {
+        "cls": "QToolButton",
+        "name": "settingsButton",
+        "enabled": true,
+        "x": 1860,
+        "y": 461,
+        "width": 42,
+        "height": 20,
+        "text": ""
+      },
+      {
+        "cls": "QWidget",
+        "name": "qt_scrollarea_viewport",
+        "enabled": true,
+        "x": 66,
+        "y": 227,
+        "width": 260,
+        "height": 374
+      },
+      {
+        "cls": "QCheckBox",
+        "name": "",
+        "enabled": true,
+        "x": 528,
+        "y": 504,
+        "width": 201,
+        "height": 21,
+        "text": "Do not show this Start page again (start with blank screen)"
+      },
+      {
+        "cls": "QToolButton",
+        "name": "qt_toolbutton_menubutton",
+        "enabled": true,
+        "x": 612,
+        "y": 94,
+        "width": 46,
+        "height": 33,
+        "text": "Standard Views"
+      },
+      {
+        "cls": "QToolButton",
+        "name": "filterButton",
+        "enabled": true,
+        "x": 1582,
+        "y": 543,
+        "width": 243,
+        "height": 20,
+        "text": "Filter"
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": true,
+        "x": 111,
+        "y": 94,
+        "width": 33,
+        "height": 33,
+        "text": "Open\u2026"
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 911,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Symmetric Constraint"
+      },
+      {
+        "cls": "QToolButton",
+        "name": "qt_toolbutton_menubutton",
+        "enabled": true,
+        "x": 752,
+        "y": 94,
+        "width": 46,
+        "height": 33,
+        "text": "Selection Filter"
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 260,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Line"
+      },
+      {
+        "cls": "QLabel",
+        "name": "",
+        "enabled": true,
+        "x": 417,
+        "y": 409,
+        "width": 180,
+        "height": 24,
+        "text": "Creates a 2D Draft document"
+      },
+      {
+        "cls": "QWidget",
+        "name": "qt_scrollarea_vcontainer",
+        "enabled": true,
+        "x": 714,
+        "y": 246,
+        "width": 14,
+        "height": 235
+      },
+      {
+        "cls": "Gui::OverlayTitleBar",
+        "name": "OverlayTitle",
+        "enabled": true,
+        "x": 66,
+        "y": 208,
+        "width": 260,
+        "height": 19
+      },
+      {
+        "cls": "Gui::WorkbenchComboBox",
+        "name": "",
+        "enabled": true,
+        "x": 355,
+        "y": 98,
+        "width": 175,
+        "height": 24
+      },
+      {
+        "cls": "QSplitterHandle",
+        "name": "qt_splithandle_",
+        "enabled": true,
+        "x": 66,
+        "y": 601,
+        "width": 260,
+        "height": 9
+      },
+      {
+        "cls": "QToolButton",
+        "name": "qt_toolbutton_menubutton",
+        "enabled": false,
+        "x": 1557,
+        "y": 172,
+        "width": 46,
+        "height": 33,
+        "text": "Modify Knot Multiplicity"
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 1685,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Select Associated Constraints"
+      },
+      {
+        "cls": "QToolButton",
+        "name": "qt_toolbutton_menubutton",
+        "enabled": false,
+        "x": 1799,
+        "y": 172,
+        "width": 46,
+        "height": 33,
+        "text": "Toggle B-Spline Information Layer"
+      },
+      {
+        "cls": "QTreeView",
+        "name": "DocumentTreeItems",
+        "enabled": true,
+        "x": 66,
+        "y": 227,
+        "width": 0,
+        "height": 0
+      },
+      {
+        "cls": "QWidget",
+        "name": "SketcherGui__TaskSketcherConstraints",
+        "enabled": true,
+        "x": 1542,
+        "y": 534,
+        "width": 369,
+        "height": 213
+      },
+      {
+        "cls": "QLabel",
+        "name": "",
+        "enabled": true,
+        "x": 361,
+        "y": 311,
+        "width": 48,
+        "height": 51,
+        "text": ""
+      },
+      {
+        "cls": "QLabel",
+        "name": "",
+        "enabled": true,
+        "x": 417,
+        "y": 328,
+        "width": 180,
+        "height": 34,
+        "text": "Creates a body with the Part Design workbench"
+      },
+      {
+        "cls": "Gui::StatefulLabel",
+        "name": "labelStatus",
+        "enabled": true,
+        "x": 1551,
+        "y": 461,
+        "width": 125,
+        "height": 20,
+        "text": "Empty sketch"
+      },
+      {
+        "cls": "QTabBar",
+        "name": "mdiAreaTabBar",
+        "enabled": true,
+        "x": 332,
+        "y": 1018,
+        "width": 1588,
+        "height": 30
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": true,
+        "x": 578,
+        "y": 94,
+        "width": 33,
+        "height": 33,
+        "text": "Fit Selection"
+      },
+      {
+        "cls": "StartGui::StartView",
+        "name": "StartView",
+        "enabled": true,
+        "x": 334,
+        "y": 236,
+        "width": 404,
+        "height": 300
+      },
+      {
+        "cls": "QLabel",
+        "name": "",
+        "enabled": true,
+        "x": 361,
+        "y": 457,
+        "width": 48,
+        "height": 51,
+        "text": ""
+      },
+      {
+        "cls": "Gui::PropertyEditor::PropertyEditor",
+        "name": "propertyEditorData",
+        "enabled": true,
+        "x": 67,
+        "y": 611,
+        "width": 258,
+        "height": 410
+      },
+      {
+        "cls": "Gui::PropertyView",
+        "name": "",
+        "enabled": true,
+        "x": 66,
+        "y": 610,
+        "width": 260,
+        "height": 438
+      },
+      {
+        "cls": "QStackedWidget",
+        "name": "qt_tabwidget_stackedwidget",
+        "enabled": true,
+        "x": 67,
+        "y": 611,
+        "width": 258,
+        "height": 410
+      },
+      {
+        "cls": "QLabel",
+        "name": "",
+        "enabled": true,
+        "x": 1890,
+        "y": 508,
+        "width": 17,
+        "height": 17,
+        "text": ""
+      },
+      {
+        "cls": "Gui::OverlayToolButton",
+        "name": "",
+        "enabled": true,
+        "x": 1546,
+        "y": 352,
+        "width": 17,
+        "height": 17,
+        "text": "Toggle Right"
+      },
+      {
+        "cls": "SketcherGui::TaskSketcherElements",
+        "name": "",
+        "enabled": true,
+        "x": 1537,
+        "y": 760,
+        "width": 379,
+        "height": 249
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 238,
+        "y": 94,
+        "width": 45,
+        "height": 33,
+        "text": "Redo"
+      },
+      {
+        "cls": "QToolButton",
+        "name": "qt_toolbutton_menubutton",
+        "enabled": true,
+        "x": 799,
+        "y": 94,
+        "width": 46,
+        "height": 33,
+        "text": "Tree View Actions"
+      },
+      {
+        "cls": "QWidget",
+        "name": "qt_scrollarea_viewport",
+        "enabled": true,
+        "x": 1552,
+        "y": 570,
+        "width": 349,
+        "height": 167
+      },
+      {
+        "cls": "Gui::ToolBar",
+        "name": "Workbench",
+        "enabled": true,
+        "x": 344,
+        "y": 91,
+        "width": 189,
+        "height": 39
+      },
+      {
+        "cls": "QLabel",
+        "name": "",
+        "enabled": true,
+        "x": 417,
+        "y": 457,
+        "width": 180,
+        "height": 17,
+        "text": "Empty File"
+      },
+      {
+        "cls": "Gui::OverlayToolButton",
+        "name": "OBTN Close",
+        "enabled": true,
+        "x": 308,
+        "y": 209,
+        "width": 17,
+        "height": 17,
+        "text": ""
+      },
+      {
+        "cls": "QMdiArea",
+        "name": "",
+        "enabled": true,
+        "x": 332,
+        "y": 208,
+        "width": 1588,
+        "height": 840
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 694,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Coincident Constraint"
+      },
+      {
+        "cls": "SketcherGui::ElementView",
+        "name": "listWidgetElements",
+        "enabled": true,
+        "x": 1551,
+        "y": 826,
+        "width": 351,
+        "height": 169,
+        "items": []
+      },
+      {
+        "cls": "QFrame",
+        "name": "",
+        "enabled": true,
+        "x": 1537,
+        "y": 787,
+        "width": 379,
+        "height": 0
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 1880,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Switch Virtual Space"
+      },
+      {
+        "cls": "QSint::TaskHeader",
+        "name": "",
+        "enabled": true,
+        "x": 1537,
+        "y": 760,
+        "width": 379,
+        "height": 27
+      },
+      {
+        "cls": "Gui::ToolBar",
+        "name": "Help",
+        "enabled": true,
+        "x": 66,
+        "y": 130,
+        "width": 1854,
+        "height": 39
+      },
+      {
+        "cls": "QPushButton",
+        "name": "newFileButton",
+        "enabled": true,
+        "x": 353,
+        "y": 376,
+        "width": 260,
+        "height": 67,
+        "text": ""
+      },
+      {
+        "cls": "Gui::OverlayToolButton",
+        "name": "OBTN Overlay",
+        "enabled": true,
+        "x": 1569,
+        "y": 352,
+        "width": 17,
+        "height": 17,
+        "text": ""
+      },
+      {
+        "cls": "Gui::ToolBarAreaWidget",
+        "name": "MenuBarLeftArea",
+        "enabled": true,
+        "x": 66,
+        "y": 80,
+        "width": 0,
+        "height": 0
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": true,
+        "x": 659,
+        "y": 94,
+        "width": 33,
+        "height": 33,
+        "text": "Align to Selection"
+      },
+      {
+        "cls": "QSplitter",
+        "name": "",
+        "enabled": true,
+        "x": 66,
+        "y": 227,
+        "width": 260,
+        "height": 821
+      },
+      {
+        "cls": "QMdiSubWindow",
+        "name": "",
+        "enabled": true,
+        "x": 332,
+        "y": 208,
+        "width": 1588,
+        "height": 810
+      },
+      {
+        "cls": "Gui::TaskView::TaskView",
+        "name": "Tasks",
+        "enabled": true,
+        "x": 1533,
+        "y": 370,
+        "width": 387,
+        "height": 647
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 145,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Toggle Section View"
+      },
+      {
+        "cls": "Gui::DimensionWidget",
+        "name": "",
+        "enabled": true,
+        "x": 1747,
+        "y": 1052,
+        "width": 172,
+        "height": 25,
+        "text": "196.05 mm x 100.00 mm"
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 877,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Equal Constraint"
+      },
+      {
+        "cls": "QWidget",
+        "name": "",
+        "enabled": true,
+        "x": 344,
+        "y": 246,
+        "width": 656,
+        "height": 1001
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 77,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Leave Sketch"
+      },
+      {
+        "cls": "QLabel",
+        "name": "",
+        "enabled": true,
+        "x": 683,
+        "y": 384,
+        "width": 180,
+        "height": 17,
+        "text": "BIM/Architecture"
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 945,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Block Constraint"
+      },
+      {
+        "cls": "QLabel",
+        "name": "",
+        "enabled": true,
+        "x": 1890,
+        "y": 426,
+        "width": 17,
+        "height": 17,
+        "text": ""
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 1765,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Toggle Circular Helper for Arcs"
+      },
+      {
+        "cls": "QToolButton",
+        "name": "filterButton",
+        "enabled": true,
+        "x": 1582,
+        "y": 800,
+        "width": 272,
+        "height": 20,
+        "text": "Filter"
+      },
+      {
+        "cls": "Gui::InputHintWidget",
+        "name": "hintLabel",
+        "enabled": true,
+        "x": 1570,
+        "y": 1051,
+        "width": 8,
+        "height": 27,
+        "text": ""
+      },
+      {
+        "cls": "Gui::TreePanel",
+        "name": "",
+        "enabled": true,
+        "x": 66,
+        "y": 227,
+        "width": 260,
+        "height": 374
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 1340,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Offset"
+      },
+      {
+        "cls": "Gui::OverlaySizeGrip",
+        "name": "",
+        "enabled": true,
+        "x": 1534,
+        "y": 351,
+        "width": 6,
+        "height": 21
+      },
+      {
+        "cls": "QToolButton",
+        "name": "qt_toolbutton_menubutton",
+        "enabled": false,
+        "x": 1051,
+        "y": 172,
+        "width": 46,
+        "height": 33,
+        "text": "Fillet/Chamfer"
+      },
+      {
+        "cls": "Gui::UrlLabel",
+        "name": "labelStatusLink",
+        "enabled": true,
+        "x": 1682,
+        "y": 461,
+        "width": 124,
+        "height": 20,
+        "text": ""
+      },
+      {
+        "cls": "QTabBar",
+        "name": "qt_tabwidget_tabbar",
+        "enabled": true,
+        "x": 155,
+        "y": 1021,
+        "width": 79,
+        "height": 27
+      },
+      {
+        "cls": "QDialogButtonBox",
+        "name": "",
+        "enabled": true,
+        "x": 1542,
+        "y": 379,
+        "width": 369,
+        "height": 25
+      },
+      {
+        "cls": "Gui::StatusBarLabel",
+        "name": "",
+        "enabled": true,
+        "x": 68,
+        "y": 1051,
+        "width": 1496,
+        "height": 27,
+        "text": ""
+      },
+      {
+        "cls": "QWidget",
+        "name": "qt_scrollarea_viewport",
+        "enabled": true,
+        "x": 354,
+        "y": 580,
+        "width": 636,
+        "height": 657
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 1306,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Scale"
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 1846,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Toggle Internal Geometry"
+      },
+      {
+        "cls": "QStatusBar",
+        "name": "statusBar",
+        "enabled": true,
+        "x": 66,
+        "y": 1048,
+        "width": 1854,
+        "height": 32
+      },
+      {
+        "cls": "QToolButton",
+        "name": "",
+        "enabled": false,
+        "x": 192,
+        "y": 172,
+        "width": 33,
+        "height": 33,
+        "text": "Point"
+      },
+      {
+        "cls": "QWidget",
+        "name": "",
+        "enabled": true,
+        "x": 332,
+        "y": 208,
+        "width": 1588,
+        "height": 810
+      }
+    ],
+    "modal": null,
+    "window_maximized": true,
+    "frame": [
+      66,
+      69,
+      1854,
+      1011
+    ]
+  }
+}

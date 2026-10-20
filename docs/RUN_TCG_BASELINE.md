@@ -1,5 +1,7 @@
 # 在无 KVM 环境执行小批 baseline
 
+2026-10-20：GUI controls007完整保存关闭重开通过；模型GUI复测仍strict=0、无文件。最新结果与25次账本见[GUI复测](../reports/GUI_VALIDATION_20261020.md)，累计226次生成。TCG可选`gui_alive_timeout_ms=600000`只改私有overlay中的GNOME桌面判定，默认null；本轮同时将`gui_seconds`设为600、campaign `settle_seconds`设为5。可信探针的布局/Qt屏障不提供给模型。当前不重开已完成批次，下方为历史命令。
+
 首批15次请求及失败保留，后续CLI单题已通过官方评分与122B原生审计；Qwen3.6原文件Invalid失败仍保留。GUI仍无成功文件，当前停止新增推理。最新结果见[单题续跑](../reports/BASELINE_SUCCESS_SMOKE.md)，下一步按[阶段验收](NEXT_ACTC_VALIDATION.md)做无模型GUI诊断与同步/隔离。下方Qwen3.5/15次命令属于历史首批，不能在新账本重复执行；原Python入口复用见[官方sh核对](../reports/UPSTREAM_SH_REUSE.md)。
 
 2026-10-19 用户要求当前会话继续解决 GUI 宏超时并真正开始 baseline。这项新授权将此前“本机只做无模型检查”的执行位置限制扩展到当前 Mac；模型请求仍受首批 15 次、16000 输出 tokens 上限约束。没有接口与凭证时不调用模型，也不以 mock 冒充真实实验。

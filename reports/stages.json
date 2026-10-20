@@ -1,4 +1,29 @@
 {
+  "latest_update": "2026-10-20",
+  "latest_gui_controls": {
+    "status": "PASS_GUI_CONTROL_CYCLE",
+    "model_calls": 0,
+    "real_pairs": 0,
+    "native_save_close_reopen": true,
+    "formal_typed_worker_accepted": false,
+    "evidence": "reports/evidence/gui_controls_20261020/gui_controls_20261020_summary/summary.json"
+  },
+  "latest_gui_model_validation": {
+    "status": "EVALUATED",
+    "strict": 0.0,
+    "model_calls": 25,
+    "input_tokens": 88918,
+    "output_tokens": 2328,
+    "model_errors": 0,
+    "artifacts": 0,
+    "native_audit": "NOT_RUN_NO_ARTIFACT",
+    "total_generation_calls_including_history": 226,
+    "real_pairs": 0,
+    "gui_model_success_go": false,
+    "offline_protocol_replay": "PASS_OFFLINE_PROTOCOL_REPLAY",
+    "evidence": "reports/evidence/gui_validation_20261020/gui_validation_20261020/summary.json"
+  },
+  "historical_exploratory_tcg_scope": "exploratory_tcg below retains 2026-10-19 history; latest GUI validation is separate",
   "P0": {
     "static_status": "PASS",
     "live_status": "BLOCKED_BY_ENV",

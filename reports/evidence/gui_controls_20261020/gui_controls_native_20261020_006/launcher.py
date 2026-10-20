@@ -1,0 +1,40 @@
+import base64,json,os,pathlib,signal,subprocess,hashlib
+root=pathlib.Path('/home/user/.actc_control_gui_controls_native_20261020_006')
+if root.exists():raise RuntimeError('refuse GUI bootstrap replay')
+root.mkdir()
+autostart=pathlib.Path('/home/user/.config/autostart/freecad.desktop')
+autostart_before=hashlib.sha256(autostart.read_bytes()).hexdigest() if autostart.exists() else None
+autostart.parent.mkdir(parents=True,exist_ok=True)
+autostart.write_text('[Desktop Entry]\nType=Application\nName=FreeCAD\nHidden=true\nX-GNOME-Autostart-enabled=false\n')
+macro=root/'bootstrap.FCMacro';macro.write_bytes(base64.b64decode('aW1wb3J0IGpzb24sb3MsdGltZSx0cmFjZWJhY2sKZnJvbSBwYXRobGliIGltcG9ydCBQYXRoClJPT1Q9UGF0aCgnL2hvbWUvdXNlci8uYWN0Y19jb250cm9sX2d1aV9jb250cm9sc19uYXRpdmVfMjAyNjEwMjBfMDA2JykKKFJPT1QvJ2luc3BlY3Rvcl9lbnRlcmVkLmpzb24nKS53cml0ZV90ZXh0KCd7fScpCnRyeToKIGltcG9ydCBGcmVlQ0FEIGFzIEFwcAogaW1wb3J0IEZyZWVDQURHdWkgYXMgR3VpCiBmcm9tIFB5U2lkZSBpbXBvcnQgUXRDb3JlLFF0V2lkZ2V0cwogTVc9R3VpLmdldE1haW5XaW5kb3coKQogTVcuc2hvd01heGltaXplZCgpO01XLnJhaXNlXygpO01XLmFjdGl2YXRlV2luZG93KCkKIEd1aS5hY3RpdmF0ZVdvcmtiZW5jaCgnUGFydERlc2lnbldvcmtiZW5jaCcpO0d1aS51cGRhdGVHdWkoKQogaWYgQXBwLmxpc3REb2N1bWVudHMoKTpyYWlzZSBSdW50aW1lRXJyb3IoJ3Byb2JlIHJlcXVpcmVzIGVtcHR5IGluaXRpYWwgZG9jdW1lbnQgc2V0JykKIChST09ULydpbmJveCcpLm1rZGlyKCkKIFRJQ0tTPTAKIGRlZiBhdG9tKG5hbWUsZGF0YSk6CiAgcD1ST09UL25hbWU7dD1wLndpdGhfc3VmZml4KCcudG1wJyk7dC53cml0ZV90ZXh0KGpzb24uZHVtcHMoZGF0YSkpO3QucmVwbGFjZShwKQogZGVmIHN0YXRlKCk6CiAgZG9jcz1bXQogIGZvciBkb2MgaW4gQXBwLmxpc3REb2N1bWVudHMoKS52YWx1ZXMoKToKICAgb2JqZWN0cz1bXQogICBmb3Igb2JqIGluIGRvYy5PYmplY3RzOgogICAgcm93PWRpY3QobmFtZT1vYmouTmFtZSx0eXBlX2lkPW9iai5UeXBlSWQsc3RhdGU9bGlzdChvYmouU3RhdGUpKQogICAgaWYgaGFzYXR0cihvYmosJ0dlb21ldHJ5Q291bnQnKTpyb3cudXBkYXRlKGdlb21ldHJ5X2NvdW50PW9iai5HZW9tZXRyeUNvdW50LGNvbnN0cmFpbnRfY291bnQ9b2JqLkNvbnN0cmFpbnRDb3VudCkKICAgIGlmIGhhc2F0dHIob2JqLCdTaGFwZScpOgogICAgIHNoYXBlPW9iai5TaGFwZTtyb3dbJ3NoYXBlX251bGwnXT1zaGFwZS5pc051bGwoKQogICAgIHJvd1snc2hhcGVfdmFsaWQnXT1Ob25lIGlmIHJvd1snc2hhcGVfbnVsbCddIGVsc2Ugc2hhcGUuaXNWYWxpZCgpCiAgICBpZiBoYXNhdHRyKG9iaiwnTWFwTW9kZScpOnJvd1snbWFwX21vZGUnXT1zdHIob2JqLk1hcE1vZGUpCiAgICBvYmplY3RzLmFwcGVuZChyb3cpCiAgIGRvY3MuYXBwZW5kKGRpY3QobmFtZT1kb2MuTmFtZSxmaWxlX25hbWU9ZG9jLkZpbGVOYW1lLG9iamVjdHM9b2JqZWN0cykpCiAgd2lkZ2V0cz1bXQogIGZvciB3IGluIFF0V2lkZ2V0cy5RQXBwbGljYXRpb24uYWxsV2lkZ2V0cygpOgogICBpZiBub3Qgdy5pc1Zpc2libGUoKTpjb250aW51ZQogICBwPXcubWFwVG9HbG9iYWwoUXRDb3JlLlFQb2ludCgwLDApKQogICByb3c9ZGljdChjbHM9dy5tZXRhT2JqZWN0KCkuY2xhc3NOYW1lKCksbmFtZT13Lm9iamVjdE5hbWUoKSxlbmFibGVkPXcuaXNFbmFibGVkKCkseD1wLngoKSx5PXAueSgpLHdpZHRoPXcud2lkdGgoKSxoZWlnaHQ9dy5oZWlnaHQoKSkKICAgaWYgaGFzYXR0cih3LCd0ZXh0Jyk6CiAgICB0cnk6cm93Wyd0ZXh0J109c3RyKHcudGV4dCgpKQogICAgZXhjZXB0IEV4Y2VwdGlvbjpwYXNzCiAgIGlmIGlzaW5zdGFuY2UodywoUXRXaWRnZXRzLlFMaXN0V2lkZ2V0LFF0V2lkZ2V0cy5RVHJlZVdpZGdldCkpOgogICAgaXRlbXM9W10KICAgIGNvdW50PXcuY291bnQoKSBpZiBpc2luc3RhbmNlKHcsUXRXaWRnZXRzLlFMaXN0V2lkZ2V0KSBlbHNlIHcudG9wTGV2ZWxJdGVtQ291bnQoKQogICAgZm9yIGkgaW4gcmFuZ2UoY291bnQpOgogICAgIGl0ZW09dy5pdGVtKGkpIGlmIGlzaW5zdGFuY2UodyxRdFdpZGdldHMuUUxpc3RXaWRnZXQpIGVsc2Ugdy50b3BMZXZlbEl0ZW0oaSkKICAgICByZWN0PXcudmlzdWFsSXRlbVJlY3QoaXRlbSk7cG9pbnQ9dy52aWV3cG9ydCgpLm1hcFRvR2xvYmFsKHJlY3QuY2VudGVyKCkpCiAgICAgaXRlbXMuYXBwZW5kKGRpY3QodGV4dD1pdGVtLnRleHQoKSBpZiBpc2luc3RhbmNlKHcsUXRXaWRnZXRzLlFMaXN0V2lkZ2V0KSBlbHNlIGl0ZW0udGV4dCgwKSxzZWxlY3RlZD1pdGVtLmlzU2VsZWN0ZWQoKSx4PXBvaW50LngoKSx5PXBvaW50LnkoKSx3aWR0aD1yZWN0LndpZHRoKCksaGVpZ2h0PXJlY3QuaGVpZ2h0KCkpKQogICAgcm93WydpdGVtcyddPWl0ZW1zCiAgIHdpZGdldHMuYXBwZW5kKHJvdykKICBtb2RhbD1RdFdpZGdldHMuUUFwcGxpY2F0aW9uLmFjdGl2ZU1vZGFsV2lkZ2V0KCkKICBwPU1XLm1hcFRvR2xvYmFsKFF0Q29yZS5RUG9pbnQoMCwwKSkKICBoYW5kbGU9bW9kYWwud2luZG93SGFuZGxlKCkgaWYgbW9kYWwgZWxzZSBOb25lCiAgcmV0dXJuIGRpY3QocGlkPW9zLmdldHBpZCgpLHRpY2tzPVRJQ0tTLGRvY3VtZW50cz1kb2NzLHdpZGdldHM9d2lkZ2V0cyxtb2RhbD1tb2RhbC53aW5kb3dUaXRsZSgpIGlmIG1vZGFsIGVsc2UgTm9uZSxtb2RhbF9hY3RpdmU9bW9kYWwuaXNBY3RpdmVXaW5kb3coKSBpZiBtb2RhbCBlbHNlIE5vbmUsbW9kYWxfZXhwb3NlZD1oYW5kbGUuaXNFeHBvc2VkKCkgaWYgaGFuZGxlIGVsc2UgTm9uZSx3aW5kb3dfbWF4aW1pemVkPU1XLmlzTWF4aW1pemVkKCksZnJhbWU9W3AueCgpLHAueSgpLE1XLndpZHRoKCksTVcuaGVpZ2h0KCldKQogZGVmIHRpY2soKToKICBnbG9iYWwgVElDS1MKICBUSUNLUys9MQogIGZvciByZXF1ZXN0IGluIChST09ULydpbmJveCcpLmdsb2IoJyouanNvbicpOgogICBpZiAoUk9PVC9yZXF1ZXN0Lm5hbWUpLmV4aXN0cygpOmNvbnRpbnVlCiAgIHRyeTphdG9tKHJlcXVlc3QubmFtZSxkaWN0KG9rPVRydWUscmVzdWx0PXN0YXRlKCkpKQogICBleGNlcHQgRXhjZXB0aW9uOmF0b20ocmVxdWVzdC5uYW1lLGRpY3Qob2s9RmFsc2UsZXJyb3I9dHJhY2ViYWNrLmZvcm1hdF9leGMoKSkpCiBUSU1FUj1RdENvcmUuUVRpbWVyKE1XKTtUSU1FUi50aW1lb3V0LmNvbm5lY3QodGljayk7VElNRVIuc3RhcnQoNTAwKQogTVcuQUNUQ19DT05UUk9MX1BST0JFX1RJTUVSPVRJTUVSCiBhdG9tKCdpbnNwZWN0b3JfcmVhZHkuanNvbicsZGljdChwaWQ9b3MuZ2V0cGlkKCksdmVyc2lvbj1saXN0KEFwcC5WZXJzaW9uKCkpLGRvY3VtZW50cz1bXSkpCmV4Y2VwdCBFeGNlcHRpb246CiAoUk9PVC8naW5zcGVjdG9yX2Vycm9yLmpzb24nKS53cml0ZV90ZXh0KGpzb24uZHVtcHMoeydlcnJvcic6dHJhY2ViYWNrLmZvcm1hdF9leGMoKX0pKQo='))
+env=dict(os.environ)
+env['DISPLAY']=':0';env['XAUTHORITY']='/run/user/1000/gdm/Xauthority';env['QT_QPA_PLATFORM']='xcb'
+for k in ('WAYLAND_DISPLAY','QT_PLUGIN_PATH','QML2_IMPORT_PATH'):env.pop(k,None)
+desktop_policy={'requested_alive_timeout_ms':600000,'changed':False}
+if desktop_policy['requested_alive_timeout_ms'] is not None:
+ settings_env=dict(env,DBUS_SESSION_BUS_ADDRESS='unix:path=/run/user/1000/bus',XDG_RUNTIME_DIR='/run/user/1000')
+ def setting(operation,*args):
+  response=subprocess.run(['/usr/bin/gsettings',operation,'org.gnome.mutter','check-alive-timeout',*args],env=settings_env,capture_output=True,text=True,timeout=15)
+  if response.returncode:raise RuntimeError('GNOME alive policy '+operation+' failed: '+response.stderr)
+  return response.stdout.strip()
+ desktop_policy.update(schema='org.gnome.mutter',key='check-alive-timeout',supported_range=setting('range'),before=setting('get'))
+ (root/'desktop_policy.json').write_text(json.dumps(desktop_policy))
+ setting('set',str(600000))
+ desktop_policy['after']=setting('get')
+ if desktop_policy['after']!='uint32 600000':raise RuntimeError('GNOME alive policy readback mismatch')
+ desktop_policy['changed']=desktop_policy['before']!=desktop_policy['after']
+ (root/'desktop_policy.json').write_text(json.dumps(desktop_policy))
+snap=pathlib.Path('/snap/freecad/current').resolve();kf=pathlib.Path('/snap/kf6-core24/current').resolve()
+env['PATH']=str(snap/'usr/bin')+':'+env.get('PATH','')
+env['PYTHONPATH']=str(snap/'usr/lib')+':'+str(snap/'usr/Mod')
+env['LD_LIBRARY_PATH']=':'.join([str(snap/'usr/lib'),str(snap/'usr/lib/x86_64-linux-gnu'),str(kf/'usr/lib/x86_64-linux-gnu')])
+terminated=[]
+for p in pathlib.Path('/proc').iterdir():
+ if not p.name.isdigit():continue
+ try:
+  if (p/'comm').read_text().strip()=='FreeCAD' and '/snap/freecad/' in (p/'cmdline').read_bytes().decode(errors='replace'):
+   os.kill(int(p.name),signal.SIGTERM);terminated.append(p.name)
+ except (PermissionError,FileNotFoundError,ProcessLookupError):pass
+with (root/'stdout.txt').open('w') as log:
+ p=subprocess.Popen([str(snap/'usr/bin/FreeCAD'),str(macro)],env=env,stdin=subprocess.DEVNULL,stdout=log,stderr=subprocess.STDOUT,start_new_session=True)
+print(json.dumps({'pid':p.pid,'executable':str(snap/'usr/bin/FreeCAD'),'terminated_startup_freecad_pids':terminated,'home_overridden':False,'autostart_disabled':True,'autostart_before_sha256':autostart_before,'desktop_policy':desktop_policy}))

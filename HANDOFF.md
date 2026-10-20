@@ -1,8 +1,14 @@
 # GUILab 交接
 
-更新：2026-10-19。仓库：[AnnaXChun/GUILab](https://github.com/AnnaXChun/GUILab)，根目录就是项目。先读本文件、[本轮续跑](reports/BASELINE_SUCCESS_SMOKE.md)、[官方sh核对](reports/UPSTREAM_SH_REUSE.md)、[阶段状态](reports/REPRO_STATUS.md)和SPEC.md，机器记录见handoff.json。历史失败不可被后续成功覆盖。
+更新：2026-10-20。仓库：[AnnaXChun/GUILab](https://github.com/AnnaXChun/GUILab)，根目录就是项目。先读本文件、[GUI控件验收](reports/GUI_CONTROLS.md)、[GUI模型复测](reports/GUI_VALIDATION_20261020.md)与SPEC.md；历史CLI成功见[此前续跑](reports/BASELINE_SUCCESS_SMOKE.md)，机器记录见handoff.json。历史失败不可被后续成功覆盖。
 
-下一步按[阶段验收计划](docs/NEXT_ACTC_VALIDATION.md)做无模型GUI诊断，不再增加本轮模型调用。CLI单题已有官方与原生成功，GUI和平面对话框、正式worker同步、same-S0双clone仍需验收。
+GUI控制闭环已通过：controls007在新官方base overlay中用12次单次派发操作创建Body/XY空Sketch、保存关闭重开，7071-byte文件字节不变，151项单测通过。已处理的具体问题为GNOME外部未响应弹窗、探针对话框移动后的旧坐标、30秒观察截止早于90秒阶段等待；不将这些统称为历史唯一根因。六次失败与一次PASS均已归档。
+
+模型复测使用代码提交77d10d0和新VM，Qwen3.5-122B GUI sketch-061官方strict=0、no_output_file；25次生成、88918输入/2328输出tokens、无API错误。第15–25轮未命中Choose Orientation的OK按钮，不能把可信探针成功写成模型成功。GUI模型仍无文件，无原生文件可审计；CLI历史的官方与122B原生成功不变。
+
+累计226次生成、11个attempt、9个有效评估episode，已知输入791185/输出25713 tokens；初次HTTP500未知usage与128-token占用保留，美元总费null。全部本项目VM已停，base/固件SHA前后不变。新25次账本和旧5本账本均保留，本轮不再追加。实际截图/动作的零网络mock SDK复放已通过，远程可直接用scripts/replay_gui_protocol.py对公开归档重验，无需VM或key。下一步按[阶段验收计划](docs/NEXT_ACTC_VALIDATION.md)验收正式worker/Qt bridge同步和same-S0双clone。真实pairs=0，P3/P4继续NO-GO。
+
+下方详细段落保留2026-10-19的历史，不把其中201次、122 tests或“先做控件诊断”等旧状态当作当前待办。
 
 ## 已验证的结果
 

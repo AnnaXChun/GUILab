@@ -1,0 +1,8 @@
+{
+  "classification": "trusted_diagnostic_only_stopped_disk_clone",
+  "source": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/gui_controls_20261020_002/runtime/vm_001/overlay.qcow2",
+  "source_sha256": "841946ae9b2c8cfdc075db8b0a8ad4dc115c422584522a5832503cc87a3be8d7",
+  "official_base_sha256": "edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12",
+  "benchmark_episode": false,
+  "valid_actc_pair": false
+}

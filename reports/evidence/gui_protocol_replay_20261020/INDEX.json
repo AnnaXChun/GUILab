@@ -1,0 +1,43 @@
+{
+  "classification": "sanitized_baseline_success_and_failure_evidence",
+  "excluded": [
+    ".env",
+    "API keys",
+    "private endpoint/hostname",
+    "full model directory",
+    "SQLite",
+    "qcow2",
+    "firmware",
+    "FCStd",
+    "encoded artifacts",
+    "MCP indexes/diagnostics"
+  ],
+  "files": [
+    {
+      "path": "gui_validation_20261020/offline_protocol_replay.json",
+      "source": "results/gui_validation_20261020/offline_protocol_replay.json",
+      "source_sha256": "aaf0ef27812883a6c1a8609a25fbd2a2404eae5b8cfe3c8b340b51395692ac57",
+      "sha256": "aaf0ef27812883a6c1a8609a25fbd2a2404eae5b8cfe3c8b340b51395692ac57",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_20261020/offline_protocol_replay_002.json",
+      "source": "results/gui_validation_20261020/offline_protocol_replay_002.json",
+      "source_sha256": "ea5853518cec579c024e19bfd692c35fd774c3dbe17aa0d062b0f3e1f3393eeb",
+      "sha256": "ea5853518cec579c024e19bfd692c35fd774c3dbe17aa0d062b0f3e1f3393eeb",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_20261020/offline_protocol_replay_002.log",
+      "source": "results/gui_validation_20261020/offline_protocol_replay_002.log",
+      "source_sha256": "4cf9ef1f33bd1b3fb99e0f5117e3bfc8af7e32ccdc51f187a28d92e8b55f54b9",
+      "sha256": "4cf9ef1f33bd1b3fb99e0f5117e3bfc8af7e32ccdc51f187a28d92e8b55f54b9",
+      "redacted": false,
+      "derived": false
+    }
+  ],
+  "omitted_screenshots": [],
+  "complete_agent_jsonl": true
+}

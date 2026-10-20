@@ -1,0 +1,128 @@
+{
+  "classification": "trusted_model_free_gui_control_acceptance",
+  "benchmark_episode": false,
+  "model_calls": 0,
+  "status": "PASS_GUI_CONTROL_CYCLE",
+  "real_pairs": 0,
+  "desktop_policy": {
+    "requested_alive_timeout_ms": 600000,
+    "changed": true,
+    "schema": "org.gnome.mutter",
+    "key": "check-alive-timeout",
+    "supported_range": "type u",
+    "before": "uint32 5000",
+    "after": "uint32 600000"
+  },
+  "freecad": {
+    "pid": 2138,
+    "version": [
+      "1",
+      "1",
+      "0",
+      "44227 +568 (Git)",
+      "git://github.com/FreeCAD/FreeCAD.git",
+      "2026/03/25 02:17:53",
+      "tag: 1.1.0",
+      "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+    ],
+    "documents": []
+  },
+  "native_tree_preserved": true,
+  "saved_file_unchanged": true,
+  "artifact_sha256": "d04da8e1d5c8e95101c3fb636d0e28de5c7d4093e97aad28e43c59a6024524b1",
+  "artifact_bytes": 7071,
+  "objects": [
+    {
+      "name": "Body",
+      "type_id": "PartDesign::Body",
+      "state": [
+        "Expanded",
+        "Up-to-date"
+      ],
+      "shape_null": true,
+      "shape_valid": null
+    },
+    {
+      "name": "Origin",
+      "type_id": "App::Origin",
+      "state": [
+        "Up-to-date"
+      ]
+    },
+    {
+      "name": "X_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_null": false,
+      "shape_valid": true
+    },
+    {
+      "name": "Y_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_null": false,
+      "shape_valid": true
+    },
+    {
+      "name": "Z_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_null": false,
+      "shape_valid": true
+    },
+    {
+      "name": "XY_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_null": false,
+      "shape_valid": true
+    },
+    {
+      "name": "XZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_null": false,
+      "shape_valid": true
+    },
+    {
+      "name": "YZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_null": false,
+      "shape_valid": true
+    },
+    {
+      "name": "Origin001",
+      "type_id": "App::Point",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_null": false,
+      "shape_valid": true
+    },
+    {
+      "name": "Sketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "geometry_count": 0,
+      "constraint_count": 0,
+      "shape_null": true,
+      "shape_valid": null,
+      "map_mode": "FlatFace"
+    }
+  ]
+}

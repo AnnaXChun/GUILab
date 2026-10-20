@@ -1,5 +1,7 @@
 # 下一步：真实 baseline smoke
 
+2026-10-20最新：GUI控制探针完整保存关闭重开通过；新25次GUI模型复测官方strict=0、无文件，模型未命中方向对话框的OK按钮。累计226次生成，151项单测通过，全部VM停止。当前步骤见[NEXT_ACTC_VALIDATION](NEXT_ACTC_VALIDATION.md)，证据见[GUI复测](../reports/GUI_VALIDATION_20261020.md)。下方201次和首批15次均为历史，不得据此再次开启同一批次。
+
 最新状态：CLI单题已通过官方评分和122B原生审计；GUI仍无成功文件，真实pairs=0。累计含探针201次生成，本轮不再新增推理。下一步按[阶段验收](NEXT_ACTC_VALIDATION.md)做无模型GUI诊断、正式worker同步和same-S0双clone。全部结果与预算见[单题续跑](../reports/BASELINE_SUCCESS_SMOKE.md)、[sh复用](../reports/UPSTREAM_SH_REUSE.md)和handoff.json。下方是**已经执行的首批历史计划**，不得重开或忽略后续证据。
 
 2026-10-16 用户更新要求：下一步应在远程 Codex 中收集 base URL、API key 与模型信息，真正运行少量实验，先跑通 baseline。用户随后要求本机“开始验证”；本机只做独立、限时、无模型的 VM 软件模拟检查，结果见 `../reports/MAC_VM_SMOKE.md`。本文件继续定义远程的模型 baseline 小批实验。2026-10-19 用户确认无法提供 KVM，后续先按 [无 KVM 路线](NO_KVM_RUN.md) 验证 TCG；本机最新证据见 [原生 QEMU 检查](../reports/MAC_NATIVE_QEMU_SMOKE.md)。

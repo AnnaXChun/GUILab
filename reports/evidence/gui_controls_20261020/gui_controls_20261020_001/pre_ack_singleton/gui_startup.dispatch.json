@@ -1,0 +1,13 @@
+{
+  "classification": "at_most_once_dispatch_audit",
+  "payload_policy": "digest only; action text remains in original agent trajectory",
+  "source_sha256": "dbab7a329daf9b00c74700deba31e4432774d74be6b1c60db8d553a303d6424f",
+  "rows": [
+    {
+      "execution_id": "gui-singleton-boundary-once",
+      "state": "complete",
+      "payload_sha256": "5bc5fa931b2af31baf32b5ab29f75d7a8634fbe940c1b57104970789f7b0b481",
+      "payload_excluded": true
+    }
+  ]
+}

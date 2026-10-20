@@ -1,8 +1,10 @@
 请接手GUILab，继续CADWorld ACTC的受限实验。
 
-先读AGENTS.md、HANDOFF.md、reports/BASELINE_SUCCESS_SMOKE.md、reports/UPSTREAM_SH_REUSE.md、reports/REPRO_STATUS.md、handoff.json和SPEC.md。upstream固定e5d0ebab8bd28da6e98c68c61db05747d1647f7b，不重新调研论文或更换benchmark。
+先读AGENTS.md、HANDOFF.md、reports/GUI_CONTROLS.md、reports/GUI_VALIDATION_20261020.md、reports/REPRO_STATUS.md、handoff.json和SPEC.md。upstream固定e5d0ebab8bd28da6e98c68c61db05747d1647f7b，不重新调研论文或更换benchmark。
 
-最新Qwen3.5-122B CLI sketch-061官方strict=1.0、8次生成/terminal、1869输出tokens，原生文件重开/重算/可编辑性审计PASS，agent以turn_limit结束。Qwen3.6 CLI也有官方1.0，但原文件Sketch.Invalid/attachment，工程审计FAIL。GUI v2两次有效复测仍无文件，官方0。全部失败与首批15次请求保留，不能用新账本重开历史批次。累计含探针201次生成、10个attempt、8个有效评估episode；价格和初次HTTP500 usage未知。
+截至2026-10-20，controls007通过GUI创建Body/XY空Sketch、保存关闭重开，151项单测通过。新122B GUI复测25次生成、2328输出tokens，官方strict=0、no_output_file，无API错误；后段点击在Choose Orientation对话框外。累计226次生成、11个attempt、9个有效评估episode，所有VM已停。本轮25次账本和此前5本账本都保留，不以新ledger重开已完成批次；默认付费仍0。
+
+历史Qwen3.5-122B CLI sketch-061官方strict=1.0、8次生成/terminal、1869输出tokens，原生审计PASS、turn_limit结束；Qwen3.6 CLI官方1.0但原文件Invalid、工程审计FAIL。全部旧失败保留。累计已知输入791185/输出25713 tokens，初次HTTP500 usage和价格未知，完整总量与美元费null。
 
 用户要求开源多模态Qwen3，本轮使用qwen3.6-35b-a3b与qwen3.5-122b-a10b，thinking=false。当前下一阶段不调用模型，不索取不需要的密钥；本机`.env`不随Git上传。未来GUI需要图片输入，CLI保持terminal-only。服务别名不是权重身份已核验，不下载模型。normalized1000适配改变坐标合同，须与原像素结果分开。
 
@@ -14,6 +16,6 @@
 
 官方sh核对已完成：GUI sh引用的test_rest.json在pinned commit缺失且不透传参数；vLLM sh固定GPU3；CLI wave sh启动四个模型与50题。复用原Python runner、prompt/tools/parser/evaluator，按报告做单题与VM生命周期最小适配，不原样启动整批脚本。
 
-按docs/NEXT_ACTC_VALIDATION.md继续：先做无模型GUI平面面板/事件循环诊断，再验收P1正式worker和Qt主线程保存重开同步，之后P2验证同intent/same-S0/clone隔离。前置通过后才考虑最多3个真实paired smoke。真实ACTC pairs仍为0，P3/P4 NO-GO。sketch-061已用于调试/选模型，不作独立held-out结果。在线agent/router/verifier不读expected/reference/evaluation，官方评分仅在episode后使用。官方GUI-only、CLI、显式适配GUI与Hybrid分开报告，不从单题推断论文成功率。
+按docs/NEXT_ACTC_VALIDATION.md继续：GUI控件验收与零网络协议复放均已完成；可用scripts/replay_gui_protocol.py先重验公开截图/轨迹，再验收正式worker和Qt主线程保存重开同步，之后验证同intent/same-S0/clone隔离。不要给模型Qt控件坐标或用可信文件补其产物，不继续本轮付费生成。前置通过后才考虑最多3个真实paired smoke。真实ACTC pairs仍为0，P3/P4 NO-GO。sketch-061已用于调试/选模型，不作独立held-out结果。在线agent/router/verifier不读expected/reference/evaluation，官方评分仅在episode后使用。官方GUI-only、CLI、显式适配GUI与Hybrid分开报告，不从单题推断论文成功率。
 
 保留全部成功与失败、完整JSONL和成本，更新五份报告、交接和机器状态。/execute不自动重试，不确定写入隔离VM；费用未知用null。凭证、完整模型目录、二进制资产、编码后的FCStd与MCP缓存不上传。测试和secret检查通过后提交并推送AnnaXChun/GUILab，报告确切命令、任务、结果、阻塞和GO/NO-GO。

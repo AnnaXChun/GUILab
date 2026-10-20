@@ -1,0 +1,5 @@
+{"event": "gui_action", "host_monotonic": 1789621.683757458, "label": "welcome_done", "source": "pyautogui.moveTo(1619,802,duration=.2); pyautogui.sleep(.7); pyautogui.click()"}
+{"event": "gui_boundary", "host_monotonic": 1789635.10013925, "label": "welcome_done", "pid": 2254, "documents": [], "screenshot_sha256": "0a8a01386062dc8eb164c5d92c84f6daa317c669857f872e165d875f6008d8ba"}
+{"event": "gui_action", "host_monotonic": 1789635.108938583, "label": "new_document", "source": "pyautogui.hotkey('ctrl','n')"}
+{"event": "gui_boundary", "host_monotonic": 1789661.700749541, "label": "new_document", "pid": 2254, "documents": [{"name": "Unnamed", "file_name": "", "objects": []}], "screenshot_sha256": "a94f391c955c9b0d4a00e1b525a8cfaf7568f115534e78f43e7f0415c28e7bb0"}
+{"event": "gui_action", "host_monotonic": 1789661.705438125, "label": "new_body", "source": "pyautogui.moveTo(350,150,duration=.2); pyautogui.sleep(.7); pyautogui.click()"}

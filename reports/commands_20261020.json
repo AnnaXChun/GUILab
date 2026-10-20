@@ -1,0 +1,14 @@
+{
+  "classification": "actual_experiment_and_verification_commands",
+  "scope": "主要实验与验证命令；不作为完整shell审计日志，Git与早期原型诊断另见工具记录及GUI_CONTROLS",
+  "commands": [
+    {"command": "ENABLE_PAID_RUNS=0 .venv/bin/python scripts/probe_gui_controls.py --config results/gui_controls_20261020_004/runtime_config.json --output results/gui_controls_native_20261020_004", "exit_code": 1},
+    {"command": "ENABLE_PAID_RUNS=0 .venv/bin/python scripts/probe_gui_controls.py --config results/gui_controls_20261020_005/runtime_config.json --output results/gui_controls_native_20261020_005", "exit_code": 1},
+    {"command": "ENABLE_PAID_RUNS=0 .venv/bin/python scripts/probe_gui_controls.py --config results/gui_controls_20261020_006/runtime_config.json --output results/gui_controls_native_20261020_006", "exit_code": 1},
+    {"command": "ENABLE_PAID_RUNS=0 .venv/bin/python scripts/probe_gui_controls.py --config results/gui_controls_20261020_007/runtime_config.json --output results/gui_controls_native_20261020_007", "exit_code": 0},
+    {"command": "ENABLE_PAID_RUNS=0 .venv/bin/python -m pytest -q", "exit_code": 0, "result": "151 passed in 7.94s"},
+    {"command": "ENABLE_PAID_RUNS=1 bash scripts/run_baseline.sh --kind gui --model qwen3.5-122b-a10b --qwen-no-thinking --qwen-coordinates normalized1000 --run-id gui_validation_qwen122_20261020_001 --task-id freecad-sketch-061 --runtime-config results/gui_validation_20261020/runtime_config.json --environment-evidence results/baseline_debug_20261019/desktop_env_acceptance_003/acceptance.json --batch-ledger results/gui_validation_20261020/model_batch.sqlite --campaign-config configs/gui_validation_20261020.json", "exit_code": 0, "result": "EVALUATED strict=0; no_output_file; 25 model calls"},
+    {"command": "ENABLE_PAID_RUNS=0 .venv/bin/python scripts/replay_gui_protocol.py --episode results/official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061 --output results/gui_validation_20261020/offline_protocol_replay_002.json", "exit_code": 0, "result": "PASS_OFFLINE_PROTOCOL_REPLAY; zero network/generation"},
+    {"command": "ENABLE_PAID_RUNS=0 .venv/bin/python scripts/replay_gui_protocol.py --episode reports/evidence/gui_validation_20261020/official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061 --output results/gui_validation_20261020/offline_protocol_public_003.json", "exit_code": 0, "result": "PASS_OFFLINE_PROTOCOL_REPLAY from public archive"}
+  ]
+}

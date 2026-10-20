@@ -1,10 +1,14 @@
 # 下一阶段验收
 
-截至2026-10-19，CLI单题流程已有完整证据：`qwen3.5-122b-a10b`在`freecad-sketch-061`官方得分1.0，模型保存的文件通过独立原生审计。GUI仍未成功，真实ACTC pairs=0。下一阶段先定位GUI，再验证正式同步与隔离；当前不新增模型请求，不训练router或接入veRL。
+截至2026-10-20，CLI单题官方与122B原生审计通过；GUI controls007也已完成Body/XY空Sketch、GUI保存关闭重开。随后25次GUI模型复测仍strict=0、无文件，后段点击落在Choose Orientation对话框外。最新见[控件验收](../reports/GUI_CONTROLS.md)与[模型复测](../reports/GUI_VALIDATION_20261020.md)。累计226次生成，151项单测通过，真实ACTC pairs=0。
+
+实际截图与原始动作的两轮mock SDK复放已通过：当前1920×1080 PNG字节、normalized→pixel映射和history单位均符合预期，零网络、零生成。远程可先按GUI_VALIDATION的scripts/replay_gui_protocol.py命令重验归档。保留本轮模型定位失败，不用可信脚本替其完成；本地复放不验证服务端内部图像处理。下一步验证正式TypedWorker/Qt bridge同步与隔离。当前不新增模型请求，不训练router或接入veRL。
 
 结果与成本见[单题报告](../reports/BASELINE_SUCCESS_SMOKE.md)，完整轨迹见[证据清单](../reports/evidence/baseline_success_20261019/INDEX.json)。该题反复用于调试与模型选择，不能作为独立held-out效果估计。
 
-## 先定位GUI控件
+## GUI控件验收已通过
+
+下方方法已在controls007完整执行，详情和失败记录见GUI_CONTROLS；不重复开启模型批次。原生GUI对象树关键字段与保存字节保持，不等于正式TypedWorker同步通过。
 
 使用新overlay和现有官方镜像，不调用模型。保持与失败run相同的FreeCAD版本、窗口分辨率、工作台和无预热设置；只执行预先写定的GUI诊断序列，保留逐步截图、时间、活动窗口与Qt控件状态。
 
@@ -12,7 +16,7 @@
 
 验收条件是：在新clone中通过GUI选择XY平面，创建空Sketch并退出编辑，保存后关闭重开；截图、文档对象摘要与文件状态一致。可信诊断若执行了建模，只证明基础设施，不计模型baseline成绩，也不提供给下一轮模型作为答案。失败则保留日志、明确停在哪一步，不增加模型轮数掩盖问题。
 
-通过后才定义一个有明确调用上限的新GUI模型批次。保留原像素协议与normalized1000 v2结果的区别，新的模型run不能覆盖已有目录或重开已耗尽的账本。
+通过后已执行一次25次生成上限的GUI复测，官方strict=0，当前剩余调用为0。保留原像素协议与normalized1000 v2结果的区别；不能覆盖目录或重开已耗尽账本。本轮证据提示模型定位问题，不能靠继续加轮数替代协议核对。
 
 ## 再验收正式Typed API与同步
 
@@ -30,6 +34,6 @@ P1和P2通过后，才在既定小样本范围内安排最多3个真实paired sm
 
 ## GO与NO-GO
 
-当前GO是离线分析与无模型GUI诊断。CLI单题官方得分和122B原生文件验收通过；GUI任务成功、正式P1/P2、真实配对、论文成功率复现和P4训练均未通过。参考Linux/KVM gate保持原记录，用户不能提供KVM，不再索取；TCG探索环境要以自己的真实验收证据推进，不能直接改gate为PASS。
+当前GO是GUI控制基础设施与离线分析，控件诊断已完成。CLI单题官方与122B原生验收通过；GUI模型任务成功、正式P1/P2、真实配对、论文成功率复现和P4训练均未通过。参考Linux/KVM gate保持原记录，用户不能提供KVM，不再索取；TCG探索环境以自己的真实证据推进，不能直接改gate为PASS。
 
 每项完成后同步五份报告、`handoff.json`、`reports/stages.json`和本文件。默认`ENABLE_PAID_RUNS=0`保留；本轮生成已停止，已完成批次不再发请求。

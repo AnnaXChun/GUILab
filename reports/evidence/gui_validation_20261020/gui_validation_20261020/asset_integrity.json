@@ -1,0 +1,8 @@
+{
+  "classification": "postrun_asset_integrity",
+  "base_sha256": "edbeb3a08d2d75ac4154441d774a0baf92ad8f64a53180ff347960f436ca2f12",
+  "firmware_sha256": "2df617a6fd1bae41ec7c0e3bceca96c928a5a88d8dc198468d34733393ab2792",
+  "base_unchanged": true,
+  "firmware_unchanged": true,
+  "project_qemu_pids_alive": []
+}

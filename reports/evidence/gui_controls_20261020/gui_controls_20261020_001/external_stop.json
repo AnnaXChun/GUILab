@@ -1,0 +1,7 @@
+{
+  "classification": "model_free_startup_diagnostic_stopped",
+  "model_calls": 0,
+  "reason": "Controller ready but desktop framebuffer remained black and observer acknowledgement absent. Empty autostart FreeCAD PID was verified and terminated once; GUI readiness still absent. Preserve this visible-Cocoa attempt and return to the previously verified headless-display configuration in a new clone.",
+  "root_cause": null,
+  "action_replayed": false
+}

@@ -1,0 +1,6 @@
+{
+  "error": "",
+  "output": "{\"pid\": 2181, \"executable\": \"/snap/freecad/2266/usr/bin/FreeCAD\", \"terminated_startup_freecad_pids\": [], \"home_overridden\": false, \"autostart_disabled\": true, \"autostart_before_sha256\": \"27defea3b993f8f9f2434d22e2d104f59b245248087df3a82ff49cbcec4ee41c\", \"desktop_policy\": {\"requested_alive_timeout_ms\": 600000, \"changed\": true, \"schema\": \"org.gnome.mutter\", \"key\": \"check-alive-timeout\", \"supported_range\": \"type u\", \"before\": \"uint32 5000\", \"after\": \"uint32 600000\"}}\n",
+  "returncode": 0,
+  "status": "success"
+}

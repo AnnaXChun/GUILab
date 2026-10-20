@@ -1,27 +1,41 @@
 #!/usr/bin/env python3
+"""Print the current handoff evidence without launching a VM or a model."""
 import argparse
 import json
-import re
 from pathlib import Path
 
-p=argparse.ArgumentParser(description='打印实际运行命令、任务数、阻塞与 GO/NO-GO。')
-p.add_argument('--dry-run',action='store_true')
-a=p.parse_args()
-if a.dry_run:
- print('只读 reports/commands.json、PILOT.json、preflight.json 与 stages.json。')
- raise SystemExit(0)
-commands=json.loads(Path('reports/commands.json').read_text())
-summary=json.loads(Path('reports/PILOT.json').read_text())
-env=json.loads(Path('reports/preflight.json').read_text())
-print('直接执行：')
-for row in commands:
- print(f"exit={row['exit_code']}  {' '.join(row['command'])}")
-test_output=next(r['output'] for r in commands if r['command']==['bash','scripts/test.sh'])
-pytest_count=re.search(r'(\d+) passed',test_output)[1]
-cli_count=re.search(r'Ran (\d+) tests',test_output)[1]
-print(f'结果：{pytest_count} 个本项目测试、{cli_count} 个上游 CLI 单测通过；synthetic cases='+str(summary['N_synthetic']))
-print('真实 CADWorld 任务数=0；真实 pairs='+str(summary['N_real'])+'；实际 provider API 请求=0；实际 VM 启动=0。')
-print('计划任务：freecad-sketch-061、freecad-part-076，均未真实执行。')
-print('阻塞：'+', '.join(k+'='+v['status'] for k,v in env['checks'].items() if v['status'] not in ('PASS',)))
-print('原始 CLI dry-run 缺 dotenv；full upstream sync 只做 dry-run，未完成依赖安装。')
-print('深度交互：P0 live / P3 / P4 均 NO-GO。没有 >0 个有效真实工具差异；先补 Linux KVM、VM 和凭证，验收原生文件保存重开与 3 个真实隔离 pairs。')
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--dry-run', action='store_true')
+    args = parser.parse_args()
+    root = Path(__file__).resolve().parents[1]
+    if args.dry_run:
+        print('只读handoff.json、最新命令清单与reports/stages.json，不启动VM或模型。')
+        return
+    handoff = json.loads((root / 'handoff.json').read_text())
+    stages = json.loads((root / 'reports/stages.json').read_text())
+    command_file = root / handoff.get('latest_commands_report', 'reports/commands.json')
+    commands = json.loads(command_file.read_text())
+    rows = commands.get('commands', []) if isinstance(commands, dict) else commands
+    print('直接执行：')
+    for row in rows:
+        command = row['command']
+        if isinstance(command, list):
+            command = ' '.join(command)
+        print(f"exit={row['exit_code']}  {command}")
+    totals = handoff.get('latest_totals', {})
+    gui = handoff.get(handoff.get('latest_run', ''), {})
+    controls = handoff.get(handoff.get('latest_gui_controls', ''), {})
+    replay = handoff.get('offline_gui_protocol_replay', {})
+    print(f"GUI控件={controls.get('status', 'NOT_RECORDED')}；离线协议复放={replay.get('status', 'NOT_RECORDED')}。")
+    print(f"模型任务={gui.get('task_id')}；状态={gui.get('status')}；strict={gui.get('strict')}；文件={gui.get('artifact_count')}。")
+    print(f"本轮生成={gui.get('model_calls')}，input/output tokens={gui.get('input_tokens')}/{gui.get('output_tokens')}；剩余调用={gui.get('remaining_generation_calls')}。")
+    print(f"累计生成={totals.get('generation_calls')}；有效评估episode={totals.get('evaluated_episodes')}；不同任务={totals.get('unique_tasks')}；真实pairs={totals.get('real_pairs')}。")
+    print(f"项目单测={totals.get('project_tests')}；全部项目VM已停={totals.get('all_project_vms_stopped')}；美元总费={json.dumps(totals.get('total_cost_usd'))}。")
+    print(f"参考P0={stages['P0']['live_status']}；正式TypedWorker/GUI同步与same-S0仍未验收；本轮模型未命中方向对话框按钮。")
+    print('深度交互：GUI控制与原生保存重开通过，模型GUI任务仍未成功。下一步验收正式同步与隔离；真实pairs=0，P3/P4 NO-GO，不重开耗尽账本，不再索取KVM。')
+
+
+if __name__ == '__main__':
+    main()

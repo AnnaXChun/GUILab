@@ -3,3 +3,5 @@ reports/evidence/baseline_runtime_20261019/*.log -whitespace
 reports/evidence/baseline_runtime_20261019/**/serial.log -whitespace
 # Keep captured console/serial logs byte-for-byte in the continuation archive.
 reports/evidence/baseline_success_20261019/**/*.log -whitespace -text
+# Serial evidence retains its original CRLF; source whitespace checks stay on.
+reports/evidence/**/serial.log whitespace=cr-at-eol -text

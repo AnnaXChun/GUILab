@@ -1,5 +1,9 @@
 # Pilot 结果
 
+2026-10-20的GUI控件探针已完成保存关闭重开，见[GUI控件验收](GUI_CONTROLS.md)。它未运行GUI/API候选配对，不新增preference、credit或有效pair；真实pair与差异重测仍为0。后续单路GUI模型复测也不作为pair或held-out效果估计。
+
+该单路复测现已完成：25次生成、官方strict=0、无文件、无API错误，见[模型复测](GUI_VALIDATION_20261020.md)。累计226次生成；本轮没有同S0配对或方向标签，P3/P4仍为NO-GO。
+
 [本项目新增] 本报告由保存的 pair trace 离线生成。
 
 真实 pair 数 N=0；有效真实 pair 数 N=0。

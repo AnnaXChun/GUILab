@@ -1,0 +1,9 @@
+{
+  "classification": "read_only_models_healthcheck",
+  "model": "qwen3.5-122b-a10b",
+  "generation_calls": 0,
+  "http_status": 200,
+  "model_present": true,
+  "directory_size": 200,
+  "wall_seconds": 0.277
+}

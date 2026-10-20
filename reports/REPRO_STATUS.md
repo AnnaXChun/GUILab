@@ -1,5 +1,7 @@
 # 复现状态
 
+2026-10-20 GUI专项：无模型控件验收`controls007`已通过，实际由GUI创建Body与XY空Sketch、保存关闭重开，关键对象树与文件字节保持；151项单测通过。随后Qwen3.5-122B GUI单题复测用满25次生成，官方strict=0、无文件，无API错误；后段点击落在Choose Orientation对话框外。详见[控件验收](GUI_CONTROLS.md)与[模型复测](GUI_VALIDATION_20261020.md)。累计226次生成，全部本项目VM停止，真实pairs=0。下方为2026-10-19的历史累计结果。
+
 2026-10-19最终更新：Qwen3.5-122B CLI在sketch-061获得官方strict=1.0，保存的模型文件通过独立原生审计；8次生成、1869输出tokens、turn_limit结束。Qwen3.6 CLI也有官方1.0，但原文件Invalid，工程审计FAIL。GUI仍未成功，真实pairs=0。全部成功、失败和成本见[单题续跑](BASELINE_SUCCESS_SMOKE.md)，下一方向见[下一阶段验收](../docs/NEXT_ACTC_VALIDATION.md)。以下状态分别指代码、基础设施、官方任务得分或原生工程质量，不互相替代。
 
 | 检查项 | 状态 | 证据与限制 |

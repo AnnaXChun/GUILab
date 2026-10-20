@@ -1,0 +1,29 @@
+{
+  "classification": "delivery_integrity_and_chinese_prose_scan",
+  "json_and_new_script_syntax": "PASS",
+  "archive_hashes": [
+    {
+      "archive": "gui_controls_20261020",
+      "files": 544,
+      "hashes_valid": true
+    },
+    {
+      "archive": "gui_validation_20261020",
+      "files": 78,
+      "hashes_valid": true
+    },
+    {
+      "archive": "gui_protocol_replay_20261020",
+      "files": 3,
+      "hashes_valid": true
+    }
+  ],
+  "broken_local_links": [],
+  "new_prose_scan": {
+    "ascii_punctuation": [],
+    "numbered_headings": [],
+    "meta_words": [],
+    "contrast_tell": []
+  },
+  "scan_scope": "new/changed Markdown lines excluding code fences, inline code and URLs; historical prose kept"
+}

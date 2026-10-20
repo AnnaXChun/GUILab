@@ -1,5 +1,9 @@
 # 基线复现
 
+2026-10-20新增[GUI控件验收](GUI_CONTROLS.md)：`controls007`完成12次单次派发的GUI操作，Body/XY空Sketch、保存关闭重开通过。7071-byte探针文件不计模型产物。代码已冻结于`77d10d0`，151项单测通过；正式模型GUI复测使用新的官方原始base overlay，结果与该可信探针分开统计。
+
+本轮[GUI单题复测](GUI_VALIDATION_20261020.md)已完成有效官方评估，strict=0、no_output_file；25次生成、88918输入/2328输出tokens，API错误0。模型从第15轮起反复未命中Choose Orientation的OK按钮，没有产物可做原生审计。累计226次生成、11个attempt、9个有效评估episode，全部VM已停；旧201次与旧失败不覆写。GUI控制能力通过，模型GUI任务仍未成功，真实pairs=0。
+
 复用 [CADWorld](https://github.com/Zdong104/CADWORLD) 的 pinned commit `e5d0ebab8bd28da6e98c68c61db05747d1647f7b`，不修改上游tracked文件。Mac ARM原生QEMU/TCG已接入原GUI/CLI runner；最新结果、成本和命令见 [单题续跑](BASELINE_SUCCESS_SMOKE.md)，脚本核对见 [UPSTREAM_SH_REUSE](UPSTREAM_SH_REUSE.md)。限定单题结果不能声称复现论文full-200或17.5%。
 
 Qwen3.6 CLI `success_cli_qwen36_001` 已获得官方strict=1.0，14次生成、13次terminal、5823输出tokens，保存原生Body/Sketch/LineSegment。独立审计发现原文件Sketch.Invalid和attachment错误，因此官方任务成功与工程质量通过分开。模型文件未修复，官方评分器未修改，不进入有效训练数据。

@@ -1,5 +1,25 @@
 # 差异与适配
 
+## 2026-10-20 GUI专项
+
+本轮新增固定、无模型的`cad_cf/gui_control_probe.py`，只读Qt宏观察状态，建模与保存全部使用PyAutoGUI。它的控件坐标来自Qt，仅用于可信基础设施探针，不提供给模型；不能作为GUI baseline、在线修复器或ACTC候选。完整经过见[GUI控件验收](GUI_CONTROLS.md)。
+
+| 来源或实际差异 | 最小适配 | 结论边界 |
+| --- | --- | --- |
+| 冷启动时已排队的FreeCAD自动实例可能在关闭autostart后才出现 | `gui_startup.prepare_gui`在等待宏前和ack后分别核验单实例，启动PID与ack PID必须一致 | 只结束验证过的空启动实例；不能用宏ack替代GUI操作验收 |
+| 非最大化窗口可能将欢迎页Done裁出屏幕 | 启动时最大化、raise/activate并记录几何，未最大化拒绝ready | 控件可见性需实际截图与操作再验收 |
+| controls004截图显示GNOME外部未响应弹窗，Qt activeModalWidget仍为null、心跳仍在前进 | 新可选`gui_alive_timeout_ms`，默认null；本轮新overlay显式600000ms，设置前记录原值5000ms与schema，设置后读回核验 | 这是TCG桌面超时适配；保留应用执行deadline，不改评分规则，不声称历史唯一根因 |
+| pinned `scripts/python/run_cadworld.py`已有`--sleep_after_execution`，默认0.3秒 | campaign可选`settle_seconds`，仅接受0..10有限数值，通过同一原参数透传；本轮GUI复测计划为5秒 | 原始默认保留；等待时间变化单列，不直接用于等硬件时延比较 |
+| FreeCAD空Body/Sketch的Shape为NULL | 只读观察器先isNull，再决定是否isValid；NULL有效性写null | 不把观察器异常或空Shape当作模型工程错误 |
+| controls005对话框显示后还会改变位置，截图前读到的坐标已过期 | 可信探针新增布局稳定、模态active/exposed及截图后重读屏障，只重复观察，不重复GUI动作 | 只用于探针，不给模型Qt信息，不更改模型baseline的动作逻辑；失败原样保留 |
+| controls006的内部只读观察截止30秒，早于阶段的90秒等待，进入Sketch时被提前截断 | 统一到90秒且服从1800秒总时限；同一个观察请求只提交一次，等待迟到ack | 007完整通过；006保持FAIL，不把观察超时直接判为CAD死锁 |
+
+本轮模型复测为25次/16000输出tokens上限，实际25次、2328输出tokens、官方strict=0。它使用normalized1000 v2、5秒settle与600000ms GNOME alive timeout，不能与历史设置合并归因或计算成功率。可信探针的Qt信息和鼠标停留未加入模型。实现先提交为`77d10d0`再启动模型；运行后核对并归档37个cad_cf文件，明确标作posthoc snapshot，不声称在本轮首次请求前自动采集。全部数据与原生审计未运行原因见[本轮复测](GUI_VALIDATION_20261020.md)。
+
+新增`scripts/replay_gui_protocol.py`用于已完成轨迹的零网络mock SDK复放，未参与模型运行；真实截图和公开归档两路均PASS。另修正`scripts/final_summary.py`读取最新handoff与命令清单，移除早期写死的“0真实任务、缺VM/凭证、应补KVM”等陈旧摘要，不改变实验执行与评分。
+
+下方为之前各轮的历史差异，不能把其中的“未接入”“无凭证”等旧状态当成本轮最新阻塞。
+
 | 来源与确切路径 | 实际差异 | 影响与本项目适配 |
 | --- | --- | --- |
 | `vendor/CADWORLD/desktop_env/providers/docker/provider.py:362` | `save_state` 抛出 `NotImplementedError`；revert 只停止 emulator | 不调用它伪造快照。`snapshot.create_overlay` 要求停机 source disk + SHA；两路独立 disk/VM/endpoint，原生状态与截图再比对 |

@@ -1,0 +1,739 @@
+{
+  "classification": "sanitized_baseline_success_and_failure_evidence",
+  "excluded": [
+    ".env",
+    "API keys",
+    "private endpoint/hostname",
+    "full model directory",
+    "SQLite",
+    "qcow2",
+    "firmware",
+    "FCStd",
+    "encoded artifacts",
+    "MCP indexes/diagnostics"
+  ],
+  "files": [
+    {
+      "path": "gui_validation_20261020/asset_integrity.json",
+      "source": "results/gui_validation_20261020/asset_integrity.json",
+      "source_sha256": "52436ce060e068c68f2da05bffe30dcb088e36f82dfa12ebc098aaa3ec495e39",
+      "sha256": "52436ce060e068c68f2da05bffe30dcb088e36f82dfa12ebc098aaa3ec495e39",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_20261020/budget_status.json",
+      "source": "results/gui_validation_20261020/budget_status.json",
+      "source_sha256": "f44689034d706b1089c0264e78cf5faf94043b9186fc4e829e49b6fd2fca8bf2",
+      "sha256": "f44689034d706b1089c0264e78cf5faf94043b9186fc4e829e49b6fd2fca8bf2",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_20261020/console.log",
+      "source": "results/gui_validation_20261020/console.log",
+      "source_sha256": "7ceab810f54a3b86bebdfd2a2c800c8f55ab9dd5facc3a68d794a39a072f8c04",
+      "sha256": "39054f6339f120f9db1985665cdd52bedd52975170ac1e5c0534c4de88d7f9c7",
+      "redacted": true,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_20261020/dry_run.json",
+      "source": "results/gui_validation_20261020/dry_run.json",
+      "source_sha256": "ff3e0a3ae2bf807bacb92c9e1478511416cfa6f5a1a33c0d271e1ce4075b1515",
+      "sha256": "db5e0c7893e026e322dfe0457362746ce4a5a880393bce761f09a7d61f53b265",
+      "redacted": true,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_20261020/episode_summary.json",
+      "source": "results/gui_validation_20261020/episode_summary.json",
+      "source_sha256": "59ab88d085ea4fda37891bf79780b39b21b0248bf9bdff2c376521fd1c0bab4f",
+      "sha256": "59ab88d085ea4fda37891bf79780b39b21b0248bf9bdff2c376521fd1c0bab4f",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_20261020/models_health.json",
+      "source": "results/gui_validation_20261020/models_health.json",
+      "source_sha256": "0ff59a86b431419d69a73c757737b54b23dfe0e739405bb8ef24732c8f022880",
+      "sha256": "0ff59a86b431419d69a73c757737b54b23dfe0e739405bb8ef24732c8f022880",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_20261020/runtime_config.json",
+      "source": "results/gui_validation_20261020/runtime_config.json",
+      "source_sha256": "92eaec7234bdc19842bae111be5b5aa848c485870cb2c8f33f0e63ee9d7aafbf",
+      "sha256": "92eaec7234bdc19842bae111be5b5aa848c485870cb2c8f33f0e63ee9d7aafbf",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_20261020/summary.json",
+      "source": "results/gui_validation_20261020/summary.json",
+      "source_sha256": "24bd184ae71bee1f13bb4b02b77ea36b0f14594ed1a7f4d4ba952d26d001929a",
+      "sha256": "24bd184ae71bee1f13bb4b02b77ea36b0f14594ed1a7f4d4ba952d26d001929a",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/campaign.json",
+      "source": "results/gui_validation_qwen122_20261020_001/campaign.json",
+      "source_sha256": "c34cc58ad8f240c3cf67254a4264fd2ce79336602856f01454db0266785784ee",
+      "sha256": "c34cc58ad8f240c3cf67254a4264fd2ce79336602856f01454db0266785784ee",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/launch.json",
+      "source": "results/gui_validation_qwen122_20261020_001/launch.json",
+      "source_sha256": "651adfead53f17eff2fb6df2a2543d4d165409aa113cc31bbb317c4c315ec039",
+      "sha256": "dea38933de6cbf77532c00e177af94e10f298a1e14110c8399e247603b2df215",
+      "redacted": true,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/__init__.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/__init__.py",
+      "source_sha256": "e4543047e38d02220643e77b882f3b44602fc8883ace518fef7ae812c87a61e8",
+      "sha256": "e4543047e38d02220643e77b882f3b44602fc8883ace518fef7ae812c87a61e8",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/artifact_state.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/artifact_state.py",
+      "source_sha256": "01f7fa94c495991dee700152e7b17104d8566ef74e7b5e0bcdf82bd49263a025",
+      "sha256": "01f7fa94c495991dee700152e7b17104d8566ef74e7b5e0bcdf82bd49263a025",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/baseline.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/baseline.py",
+      "source_sha256": "27355342b80d638e9f44e9653ccd078a967c5ebd842cb7c8703a5eb2407cdd62",
+      "sha256": "27355342b80d638e9f44e9653ccd078a967c5ebd842cb7c8703a5eb2407cdd62",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/baseline_results.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/baseline_results.py",
+      "source_sha256": "5988d3db9a4379ee957a21dddaa2aa477efe8451fd150acf1bd6b8c583390813",
+      "sha256": "5988d3db9a4379ee957a21dddaa2aa477efe8451fd150acf1bd6b8c583390813",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/batch_budget.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/batch_budget.py",
+      "source_sha256": "52953e7b0ab3deb3546927a02ae848fa3be323f773020092906b081ab70f8e02",
+      "sha256": "52953e7b0ab3deb3546927a02ae848fa3be323f773020092906b081ab70f8e02",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/budget.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/budget.py",
+      "source_sha256": "779cd9d19ebafd3ec0642e3f8b56a8d9abb4757ee763a5305f6ef5c7d0f30257",
+      "sha256": "779cd9d19ebafd3ec0642e3f8b56a8d9abb4757ee763a5305f6ef5c7d0f30257",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/cadworld_adapter.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/cadworld_adapter.py",
+      "source_sha256": "cd53b375eeb725367d514be1e7101093ded05307b576f1397aa14b422e2325ce",
+      "sha256": "cd53b375eeb725367d514be1e7101093ded05307b576f1397aa14b422e2325ce",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/campaign.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/campaign.py",
+      "source_sha256": "756d27e2ca4d812636c581b219a8bf9f816a6e830440304d5f352faa35a9fd3c",
+      "sha256": "756d27e2ca4d812636c581b219a8bf9f816a6e830440304d5f352faa35a9fd3c",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/candidate_generator.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/candidate_generator.py",
+      "source_sha256": "29921a5955cb3ac3b05b24162492e2ffac45c0821f4c41ebcbe3f303a9226b17",
+      "sha256": "29921a5955cb3ac3b05b24162492e2ffac45c0821f4c41ebcbe3f303a9226b17",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/controller_guard.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/controller_guard.py",
+      "source_sha256": "8015190fe290039b470e7a66a6d63bbda46c2a1ee8787383ef0365457e767da2",
+      "sha256": "8015190fe290039b470e7a66a6d63bbda46c2a1ee8787383ef0365457e767da2",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/counterfactual.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/counterfactual.py",
+      "source_sha256": "8c0ebfada50d58c579fe56dcc09ed51a105ff8685439540d767803e1e5449767",
+      "sha256": "8c0ebfada50d58c579fe56dcc09ed51a105ff8685439540d767803e1e5449767",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/dataset.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/dataset.py",
+      "source_sha256": "b1c7c7f78c906a79a099a674d38a45646de7bdda237799186fafe82c74130ad1",
+      "sha256": "b1c7c7f78c906a79a099a674d38a45646de7bdda237799186fafe82c74130ad1",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/desktop_viewer.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/desktop_viewer.py",
+      "source_sha256": "1c42e7581e357fa2216992bafd32227498ce913cb2e1da355e72a20101d035a2",
+      "sha256": "1c42e7581e357fa2216992bafd32227498ce913cb2e1da355e72a20101d035a2",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/freecad_worker.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/freecad_worker.py",
+      "source_sha256": "c85c212b66e0bfb55237dc71017062888c8e7ea82a9cf7892c5c62e1addb5aaa",
+      "sha256": "c85c212b66e0bfb55237dc71017062888c8e7ea82a9cf7892c5c62e1addb5aaa",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/guest_gui_bridge.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/guest_gui_bridge.py",
+      "source_sha256": "8696ae0cbe9bce4fd3630012ac81a34ac10ffea53ecf2bc8fb334c76c93e67b0",
+      "sha256": "8696ae0cbe9bce4fd3630012ac81a34ac10ffea53ecf2bc8fb334c76c93e67b0",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/gui_control_probe.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/gui_control_probe.py",
+      "source_sha256": "66f430ce79bcb7b7b3cedff9af18e5fab0b2af266204bdd8fd68f8a79adf851e",
+      "sha256": "66f430ce79bcb7b7b3cedff9af18e5fab0b2af266204bdd8fd68f8a79adf851e",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/gui_startup.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/gui_startup.py",
+      "source_sha256": "d0c7322bd3c865d93c9cc335dd50138920ba207e4a6c673653ef59c93b08add4",
+      "sha256": "d0c7322bd3c865d93c9cc335dd50138920ba207e4a6c673653ef59c93b08add4",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/instruction.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/instruction.py",
+      "source_sha256": "422fa6b6658b5a30e927977149022baec8b81112dabaee8c6612e86d0a76addf",
+      "sha256": "422fa6b6658b5a30e927977149022baec8b81112dabaee8c6612e86d0a76addf",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/live.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/live.py",
+      "source_sha256": "364f9aa1fdf099683fcf69ae8b48db70b4df09a66782192b9f1c5a43c578eee2",
+      "sha256": "364f9aa1fdf099683fcf69ae8b48db70b4df09a66782192b9f1c5a43c578eee2",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/metrics.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/metrics.py",
+      "source_sha256": "9299ed7153673d8882374fbf3ced95b77dbed2905f5e92acb554667639f150fb",
+      "sha256": "9299ed7153673d8882374fbf3ced95b77dbed2905f5e92acb554667639f150fb",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/mock_backend.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/mock_backend.py",
+      "source_sha256": "c14acefb8955d77d05b027b78a7031f1272bd51c6d3c1bcf3428c2fc40bed3b5",
+      "sha256": "c14acefb8955d77d05b027b78a7031f1272bd51c6d3c1bcf3428c2fc40bed3b5",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/model_probe.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/model_probe.py",
+      "source_sha256": "1f1b6a073ca1aafea6bc27be459c058c4becd44d6455a1afa8a8b8606e6b2710",
+      "sha256": "1f1b6a073ca1aafea6bc27be459c058c4becd44d6455a1afa8a8b8606e6b2710",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/native_backend.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/native_backend.py",
+      "source_sha256": "8b765bed5cbde6d4b87019c24fed57be7ed5fbcde95241782afaf7a1335ec272",
+      "sha256": "8b765bed5cbde6d4b87019c24fed57be7ed5fbcde95241782afaf7a1335ec272",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/posthoc.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/posthoc.py",
+      "source_sha256": "7b47c02672356a21d94eda8d7cb5974157dfc6e9b45d45d65a23a9ae9fb604ad",
+      "sha256": "7b47c02672356a21d94eda8d7cb5974157dfc6e9b45d45d65a23a9ae9fb604ad",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/preflight.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/preflight.py",
+      "source_sha256": "e83f68ddc4a0d1bcacc8f42f6615835d3955823d80e41a6203af2ae2bb4bc993",
+      "sha256": "e83f68ddc4a0d1bcacc8f42f6615835d3955823d80e41a6203af2ae2bb4bc993",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/provenance.json",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/provenance.json",
+      "source_sha256": "3e8016966aed5ca4fccaf5d03cb1541533491b7ed010a345f8cd05862a272243",
+      "sha256": "3e8016966aed5ca4fccaf5d03cb1541533491b7ed010a345f8cd05862a272243",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/qemu_runtime.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/qemu_runtime.py",
+      "source_sha256": "1b6e4ab22ea1c5e6771d0b1caa38c107a9cd6a54e771f90d8924e3f6469215ff",
+      "sha256": "1b6e4ab22ea1c5e6771d0b1caa38c107a9cd6a54e771f90d8924e3f6469215ff",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/qwen_coordinates.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/qwen_coordinates.py",
+      "source_sha256": "4520fdd66d4a624152efd3d7979fb848426b20a4ce0b961a5f7e045b80de1b9c",
+      "sha256": "4520fdd66d4a624152efd3d7979fb848426b20a4ce0b961a5f7e045b80de1b9c",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/router.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/router.py",
+      "source_sha256": "b1ed294cd09c49c1d5b6f0dddd106a7ef41fbf94ffcde036a55f476a4cf39b5c",
+      "sha256": "b1ed294cd09c49c1d5b6f0dddd106a7ef41fbf94ffcde036a55f476a4cf39b5c",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/selection.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/selection.py",
+      "source_sha256": "f6671e0fa7360da3b0710d97fd8f2afe481b125db58d2460a8ba9d372732db45",
+      "sha256": "f6671e0fa7360da3b0710d97fd8f2afe481b125db58d2460a8ba9d372732db45",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/self_verifier.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/self_verifier.py",
+      "source_sha256": "0345e3e6e325466b0d976da56d96bfb900c0d02558737c9f418e3ec04b22e08f",
+      "sha256": "0345e3e6e325466b0d976da56d96bfb900c0d02558737c9f418e3ec04b22e08f",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/snapshot.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/snapshot.py",
+      "source_sha256": "b202ba6229fb7addba696091f56483fb4de3560383485dac64310a0af2bab6e9",
+      "sha256": "b202ba6229fb7addba696091f56483fb4de3560383485dac64310a0af2bab6e9",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/terminal_bridge.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/terminal_bridge.py",
+      "source_sha256": "3f410b8d2eb071e3d230ca623501f785ee0bfbdf015540f4666b961eea5d3190",
+      "sha256": "3f410b8d2eb071e3d230ca623501f785ee0bfbdf015540f4666b961eea5d3190",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/tool_protocol.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/tool_protocol.py",
+      "source_sha256": "eb7603d882290e7f84ef27dc350eb0148826372a5a25b120c6311af61958b15e",
+      "sha256": "eb7603d882290e7f84ef27dc350eb0148826372a5a25b120c6311af61958b15e",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/trace.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/trace.py",
+      "source_sha256": "62210e8dc57c55c3a72f70771ceec60b8d4414e7e981eaa4fe9a908f3dd9a177",
+      "sha256": "62210e8dc57c55c3a72f70771ceec60b8d4414e7e981eaa4fe9a908f3dd9a177",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/typed_freecad.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/typed_freecad.py",
+      "source_sha256": "f21f85c59bbd16cdae1ea2cb3e658b64a55bc092aa016d2509e1b9725f0088dd",
+      "sha256": "f21f85c59bbd16cdae1ea2cb3e658b64a55bc092aa016d2509e1b9725f0088dd",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/upstream_launch.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/upstream_launch.py",
+      "source_sha256": "a6ddbcf887603796e71026abe280670328e34a262d98593def69933e61b3e1c8",
+      "sha256": "a6ddbcf887603796e71026abe280670328e34a262d98593def69933e61b3e1c8",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/posthoc_source_snapshot/upstream_runtime.py",
+      "source": "results/gui_validation_qwen122_20261020_001/posthoc_source_snapshot/upstream_runtime.py",
+      "source_sha256": "121635a6539f29bbb76ccb517128aa6403f42ba6eb5420e9b546effa775dc667",
+      "sha256": "121635a6539f29bbb76ccb517128aa6403f42ba6eb5420e9b546effa775dc667",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/provider_usage.jsonl",
+      "source": "results/gui_validation_qwen122_20261020_001/provider_usage.jsonl",
+      "source_sha256": "d7ffc90ba5e5a5147a41ae855bb4e86417e963632b9f8481686f976f8e11b641",
+      "sha256": "d7ffc90ba5e5a5147a41ae855bb4e86417e963632b9f8481686f976f8e11b641",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_qwen122_20261020_001/runtime_config.json",
+      "source": "results/gui_validation_qwen122_20261020_001/runtime_config.json",
+      "source_sha256": "b9a252ab6199b15df49c55accacf2356686fcbf0a9c6065044b13a6782d27887",
+      "sha256": "b9a252ab6199b15df49c55accacf2356686fcbf0a9c6065044b13a6782d27887",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/args.json",
+      "source": "results/official_gui/gui_validation_qwen122_20261020_001/args.json",
+      "source_sha256": "8569e92527c0ade21035d02d427d20caa5e9290b8543f6d3c3e5f3f349cdf970",
+      "sha256": "d4918b7d38b8cb48fde5f1e0b8b873b1aa7e3dd0c64b76ad3cf1f8b01d811f19",
+      "redacted": true,
+      "derived": false
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/evaluation.json",
+      "source": "results/official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/evaluation.json",
+      "source_sha256": "6343d0d70d59e93fc14d4dee3a3b96550ff9255d3470928200b6a684c6b6ad43",
+      "sha256": "6343d0d70d59e93fc14d4dee3a3b96550ff9255d3470928200b6a684c6b6ad43",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/initial_state.png",
+      "source": "results/official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/initial_state.png",
+      "source_sha256": "7ca24f5c13c35f6aa49b905e348d0376a3922d62e5c0a1a9c6f904470dbb1fca",
+      "sha256": "7ca24f5c13c35f6aa49b905e348d0376a3922d62e5c0a1a9c6f904470dbb1fca",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/result.txt",
+      "source": "results/official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/result.txt",
+      "source_sha256": "51ff0d2f0d3a5d61edec31785532ea0d570f8c348d58b15b94ff9c2ca6e926a4",
+      "sha256": "51ff0d2f0d3a5d61edec31785532ea0d570f8c348d58b15b94ff9c2ca6e926a4",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/runtime.log",
+      "source": "results/official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/runtime.log",
+      "source_sha256": "c485e4aea91c37a1501be8420230b56848dce2a0b94d0ecd396b51ea4a015a09",
+      "sha256": "c485e4aea91c37a1501be8420230b56848dce2a0b94d0ecd396b51ea4a015a09",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_10_20261020@130455121864.png",
+      "source": "results/official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_10_20261020@130455121864.png",
+      "source_sha256": "440dca97d0ca9131f2510da76d22a6d069d0dee85a8f97e141d70038a2a4f9d5",
+      "sha256": "440dca97d0ca9131f2510da76d22a6d069d0dee85a8f97e141d70038a2a4f9d5",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_1_20261020@130250389435.png",
+      "source": "results/official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_1_20261020@130250389435.png",
+      "source_sha256": "53a76dd6e8830348d7a862ca8661c71f4e61c66bd38f76da89d14145f05c01a3",
+      "sha256": "53a76dd6e8830348d7a862ca8661c71f4e61c66bd38f76da89d14145f05c01a3",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_20_20261020@130652690239.png",
+      "source": "results/official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_20_20261020@130652690239.png",
+      "source_sha256": "15c45b6c069e4869cd9c829f818e795f5fc388a76e35cf2d6551d48d0cdfd7ac",
+      "sha256": "15c45b6c069e4869cd9c829f818e795f5fc388a76e35cf2d6551d48d0cdfd7ac",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_24_20261020@130728292029.png",
+      "source": "results/official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_24_20261020@130728292029.png",
+      "source_sha256": "bcfb20058d2fcb44c72f5bd6f3c40fdc442264c81651ebad50773ee7fe6159bd",
+      "sha256": "bcfb20058d2fcb44c72f5bd6f3c40fdc442264c81651ebad50773ee7fe6159bd",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_25_20261020@130737420822.png",
+      "source": "results/official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_25_20261020@130737420822.png",
+      "source_sha256": "100102d2c4c91ee45d35f891a96449da0a6509bac2fdc829fc09f2cbdaa3fa80",
+      "sha256": "100102d2c4c91ee45d35f891a96449da0a6509bac2fdc829fc09f2cbdaa3fa80",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_2_20261020@130301388078.png",
+      "source": "results/official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_2_20261020@130301388078.png",
+      "source_sha256": "f9c39f013e1ce68c6cb7d69076bc849b41e72acfe1b1f8d2fd438f2da50b2b40",
+      "sha256": "f9c39f013e1ce68c6cb7d69076bc849b41e72acfe1b1f8d2fd438f2da50b2b40",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/traj.jsonl",
+      "source": "results/official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/traj.jsonl",
+      "source_sha256": "f64340210e8564f14b4bd03844aad685529fc46769212e256a97dee7188af487",
+      "sha256": "f64340210e8564f14b4bd03844aad685529fc46769212e256a97dee7188af487",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "runtime_gui_validation_qwen122_20261020_001/vm_001/final.png",
+      "source": "results/runtime_gui_validation_qwen122_20261020_001/vm_001/final.png",
+      "source_sha256": "1a6f6149170457ed913fc8f5da5676cf85bbcf2ead8052671c60a3aff5de8123",
+      "sha256": "1a6f6149170457ed913fc8f5da5676cf85bbcf2ead8052671c60a3aff5de8123",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "runtime_gui_validation_qwen122_20261020_001/vm_001/gui_dispatch.dispatch.json",
+      "source": "results/runtime_gui_validation_qwen122_20261020_001/vm_001/gui_dispatch.sqlite",
+      "source_sha256": "add8f2e19139d5baac874c5c080fe643cc8255273bde6908f825feea8e47034b",
+      "sha256": "110ff8c98f42526b9f89494ceb10f507293a47f6f49f32bec7046962cc254320",
+      "redacted": false,
+      "derived": true
+    },
+    {
+      "path": "runtime_gui_validation_qwen122_20261020_001/vm_001/gui_launch.json",
+      "source": "results/runtime_gui_validation_qwen122_20261020_001/vm_001/gui_launch.json",
+      "source_sha256": "d90ad41fbfd149d8376a397fee78a04a5edc582ef6349c60234df58a425c070b",
+      "sha256": "d90ad41fbfd149d8376a397fee78a04a5edc582ef6349c60234df58a425c070b",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "runtime_gui_validation_qwen122_20261020_001/vm_001/gui_launch_source.py",
+      "source": "results/runtime_gui_validation_qwen122_20261020_001/vm_001/gui_launch_source.py",
+      "source_sha256": "f655f0745c6b970761ed0ded9ed867f6f8164d0d59576cbe587d1dc87c8bea26",
+      "sha256": "f655f0745c6b970761ed0ded9ed867f6f8164d0d59576cbe587d1dc87c8bea26",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "runtime_gui_validation_qwen122_20261020_001/vm_001/gui_poll.jsonl",
+      "source": "results/runtime_gui_validation_qwen122_20261020_001/vm_001/gui_poll.jsonl",
+      "source_sha256": "f1ba71eacb1c8f6ebe734cf00b52f42992782bb98b2a3f562812768a1beb66d1",
+      "sha256": "f1ba71eacb1c8f6ebe734cf00b52f42992782bb98b2a3f562812768a1beb66d1",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "runtime_gui_validation_qwen122_20261020_001/vm_001/gui_ready.json",
+      "source": "results/runtime_gui_validation_qwen122_20261020_001/vm_001/gui_ready.json",
+      "source_sha256": "df134cf236c9228cdda4e677cb07776d4f0881e447425aad33577a0db4280c35",
+      "sha256": "df134cf236c9228cdda4e677cb07776d4f0881e447425aad33577a0db4280c35",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "runtime_gui_validation_qwen122_20261020_001/vm_001/gui_singleton.json",
+      "source": "results/runtime_gui_validation_qwen122_20261020_001/vm_001/gui_singleton.json",
+      "source_sha256": "cc8142fa1a9086f0b0d9e12f63e1d314d68b42080f62738477abfdfaec00a500",
+      "sha256": "cc8142fa1a9086f0b0d9e12f63e1d314d68b42080f62738477abfdfaec00a500",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "runtime_gui_validation_qwen122_20261020_001/vm_001/gui_singleton_startup.json",
+      "source": "results/runtime_gui_validation_qwen122_20261020_001/vm_001/gui_singleton_startup.json",
+      "source_sha256": "df7b11ea9a5b2e2883aba07c3fef4afff2053cc19214f449b02ff53325e654e1",
+      "sha256": "df7b11ea9a5b2e2883aba07c3fef4afff2053cc19214f449b02ff53325e654e1",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "runtime_gui_validation_qwen122_20261020_001/vm_001/gui_startup.dispatch.json",
+      "source": "results/runtime_gui_validation_qwen122_20261020_001/vm_001/gui_startup.sqlite",
+      "source_sha256": "091df1a8c517f5f06203d8fb3f0fc91c0a69775fb41b8862169d20fc91f04626",
+      "sha256": "4c9116fe4127a706bc85dfd685d0f64eec1bf190866b51c73968cfa88ee1365b",
+      "redacted": false,
+      "derived": true
+    },
+    {
+      "path": "runtime_gui_validation_qwen122_20261020_001/vm_001/launch.json",
+      "source": "results/runtime_gui_validation_qwen122_20261020_001/vm_001/launch.json",
+      "source_sha256": "5123ffd63f04f24f77f4a71547d77cc06af02758538eafaab00964668082cd69",
+      "sha256": "5123ffd63f04f24f77f4a71547d77cc06af02758538eafaab00964668082cd69",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "runtime_gui_validation_qwen122_20261020_001/vm_001/qemu.log",
+      "source": "results/runtime_gui_validation_qwen122_20261020_001/vm_001/qemu.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "runtime_gui_validation_qwen122_20261020_001/vm_001/readiness.jsonl",
+      "source": "results/runtime_gui_validation_qwen122_20261020_001/vm_001/readiness.jsonl",
+      "source_sha256": "a99e18d8a2fc3f0cfe9ceb51db9467d30616090160e86540daf3b3da95ab73a0",
+      "sha256": "a99e18d8a2fc3f0cfe9ceb51db9467d30616090160e86540daf3b3da95ab73a0",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "runtime_gui_validation_qwen122_20261020_001/vm_001/ready.json",
+      "source": "results/runtime_gui_validation_qwen122_20261020_001/vm_001/ready.json",
+      "source_sha256": "2a1b3796b13d1f3ec0812b03b26e647080fcacb56f04767412b211c2cd13aa5d",
+      "sha256": "2a1b3796b13d1f3ec0812b03b26e647080fcacb56f04767412b211c2cd13aa5d",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "runtime_gui_validation_qwen122_20261020_001/vm_001/ready.png",
+      "source": "results/runtime_gui_validation_qwen122_20261020_001/vm_001/ready.png",
+      "source_sha256": "6d0428dbe8845decf7503746580eb3c73589845fd9b168fd50176f7fd060fff7",
+      "sha256": "6d0428dbe8845decf7503746580eb3c73589845fd9b168fd50176f7fd060fff7",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "runtime_gui_validation_qwen122_20261020_001/vm_001/serial.log",
+      "source": "results/runtime_gui_validation_qwen122_20261020_001/vm_001/serial.log",
+      "source_sha256": "b9f0f261cb82c547887770a795f7d95c64dde5de3aebeab0cc9b484fe727e990",
+      "sha256": "b9f0f261cb82c547887770a795f7d95c64dde5de3aebeab0cc9b484fe727e990",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "runtime_gui_validation_qwen122_20261020_001/vm_001/stopped.json",
+      "source": "results/runtime_gui_validation_qwen122_20261020_001/vm_001/stopped.json",
+      "source_sha256": "a6ee9e262f2889a1fc5164cbdfc15a6d4fde6580be4bb3b0ef8a1836c715c41e",
+      "sha256": "a6ee9e262f2889a1fc5164cbdfc15a6d4fde6580be4bb3b0ef8a1836c715c41e",
+      "redacted": false,
+      "derived": false
+    }
+  ],
+  "omitted_screenshots": [
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_11_20261020@130504089593.png",
+      "sha256": "a71da00ad83708eadfb0f92899015bea2237e0c5158d54a06717205460b0d722",
+      "reason": "screenshot sample; full local image retained"
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_12_20261020@130513218537.png",
+      "sha256": "b8b1753e7d1c1e2ac685a76473301584b1f10fffbdf383060c891011a2d04d73",
+      "reason": "screenshot sample; full local image retained"
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_13_20261020@130522418564.png",
+      "sha256": "64e2bd3040d9833a22b0529415ae5382448d5f2e3a6d48fdb0ed21e964811dc4",
+      "reason": "screenshot sample; full local image retained"
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_14_20261020@130537707951.png",
+      "sha256": "0dcf352fa765a8cb858d441077fa107e9f43ae09cb2109926780a24e67411bb5",
+      "reason": "screenshot sample; full local image retained"
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_15_20261020@130550794804.png",
+      "sha256": "8f3bfb015278a1bd6d2004e708e12893a8ee9d21146fb3751ddd720b313f9b3e",
+      "reason": "screenshot sample; full local image retained"
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_16_20261020@130607481909.png",
+      "sha256": "9c8970e27a86b03a31bc1fcd750120e398d755aa5067d544e5026a3b652fbff0",
+      "reason": "screenshot sample; full local image retained"
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_17_20261020@130619890317.png",
+      "sha256": "9dcea6829727a9c26934b9a968c9b560444117b8c454b1d9c98c049629aafbed",
+      "reason": "screenshot sample; full local image retained"
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_18_20261020@130630822790.png",
+      "sha256": "5f25ee0f12422c3462f891d77a20c4633321596b5122eaf82f80975774d4c35b",
+      "reason": "screenshot sample; full local image retained"
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_19_20261020@130643496818.png",
+      "sha256": "dce66ad2267f9872deceaaf3fca24b594ec71cc892f7b4d127a9c6347e9de4cf",
+      "reason": "screenshot sample; full local image retained"
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_21_20261020@130701455786.png",
+      "sha256": "53aa21f8cef4609b3cd895b1800b077924884dea43141f95ca664e7426bea964",
+      "reason": "screenshot sample; full local image retained"
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_22_20261020@130710770806.png",
+      "sha256": "8a50d99e370f94214b3bc7b681f8d2d216c5c458909a0b75626903a2a50db4e3",
+      "reason": "screenshot sample; full local image retained"
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_23_20261020@130719481798.png",
+      "sha256": "100102d2c4c91ee45d35f891a96449da0a6509bac2fdc829fc09f2cbdaa3fa80",
+      "reason": "screenshot sample; full local image retained"
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_3_20261020@130314012843.png",
+      "sha256": "0390f60023f5ba85cf39bcc7140f1135c9fa182872970c80f14a44cae5da6bc2",
+      "reason": "screenshot sample; full local image retained"
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_4_20261020@130328378827.png",
+      "sha256": "0e768533c7ee48d63bc8ac786a8ea60b66cbc1c9813cde7ff24b60235323994f",
+      "reason": "screenshot sample; full local image retained"
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_5_20261020@130341307926.png",
+      "sha256": "24fed3a64aec87ba06d4580edab8ae666e71e716dcb9cb76444b17b49495c5ca",
+      "reason": "screenshot sample; full local image retained"
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_6_20261020@130354038298.png",
+      "sha256": "2a1adc2222d0946e5504678e7a75c2ade737be8a6566e9435ccd8b73504c5e03",
+      "reason": "screenshot sample; full local image retained"
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_7_20261020@130408200722.png",
+      "sha256": "fc33e4533d6a9df0ab32e793a9bcc23ff7c2ebd71ec28e8e4d4c2c0f12ec1564",
+      "reason": "screenshot sample; full local image retained"
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_8_20261020@130423613764.png",
+      "sha256": "7d46fb0525a4f091822e772f2672f14f69bab53dfae52bb3cd326f4532921f66",
+      "reason": "screenshot sample; full local image retained"
+    },
+    {
+      "path": "official_gui/gui_validation_qwen122_20261020_001/freecad-sketch-061/step_9_20261020@130443229456.png",
+      "sha256": "132d666f919d4304b150c7fa0c72e026c4f18b90a8f9b70c814d7e79207b47b7",
+      "reason": "screenshot sample; full local image retained"
+    }
+  ],
+  "complete_agent_jsonl": true
+}

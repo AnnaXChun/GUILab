@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "name": "gui_validation_20261020",
+  "authorization": "2026-10-20用户要求继续解决GUI问题。无模型控件、保存重开检查通过后，仅对已有sketch-061题和Qwen3.5-122B服务做一次受限GUI复测；工程上限25次生成、16000输出tokens，保留全部历史账本与失败，不下载模型、不扩题、不训练。",
+  "prior_evidence": "reports/BASELINE_SUCCESS_SMOKE.md",
+  "max_calls": 25,
+  "max_output_tokens": 16000,
+  "gui": {
+    "turns": 25,
+    "per_call_tokens": 1024,
+    "output_tokens": 16000,
+    "wall_seconds": 1200,
+    "settle_seconds": 5
+  },
+  "cli": {
+    "turns": 8,
+    "per_call_tokens": 2048,
+    "output_tokens": 8192,
+    "wall_seconds": 600
+  }
+}

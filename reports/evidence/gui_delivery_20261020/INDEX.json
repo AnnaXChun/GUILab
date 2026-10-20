@@ -1,0 +1,59 @@
+{
+  "classification": "sanitized_baseline_success_and_failure_evidence",
+  "excluded": [
+    ".env",
+    "API keys",
+    "private endpoint/hostname",
+    "full model directory",
+    "SQLite",
+    "qcow2",
+    "firmware",
+    "FCStd",
+    "encoded artifacts",
+    "MCP indexes/diagnostics"
+  ],
+  "files": [
+    {
+      "path": "gui_delivery_20261020/checks.json",
+      "source": "results/gui_delivery_20261020/checks.json",
+      "source_sha256": "6ab04d91cbd185b8e7a2fbf980842d674b0929d254055bedfc23f26ef20df716",
+      "sha256": "6ab04d91cbd185b8e7a2fbf980842d674b0929d254055bedfc23f26ef20df716",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_delivery_20261020/terminal_summary.txt",
+      "source": "results/gui_delivery_20261020/terminal_summary.txt",
+      "source_sha256": "71279a6e054d22271864a21555b55467b7908791c61acfcfcc66406cc7f8ad2a",
+      "sha256": "71279a6e054d22271864a21555b55467b7908791c61acfcfcc66406cc7f8ad2a",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_controls_20261020_007/project_tests.log",
+      "source": "results/gui_controls_20261020_007/project_tests.log",
+      "source_sha256": "09a58d6b3fcb5d30b1c067222a7ce0a3968f36a7d2b3150abd360d7cb3322678",
+      "sha256": "09a58d6b3fcb5d30b1c067222a7ce0a3968f36a7d2b3150abd360d7cb3322678",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_20261020/offline_protocol_public_003.json",
+      "source": "results/gui_validation_20261020/offline_protocol_public_003.json",
+      "source_sha256": "b4cb12f3958473bc2f5f7d721cac929cc2603ce0ee4973e89966988290ceaf13",
+      "sha256": "b4cb12f3958473bc2f5f7d721cac929cc2603ce0ee4973e89966988290ceaf13",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "gui_validation_20261020/offline_protocol_public_003.log",
+      "source": "results/gui_validation_20261020/offline_protocol_public_003.log",
+      "source_sha256": "5dd79372a75b1bc57b09582194e448aa499cd473fd05908624deb6748b348c47",
+      "sha256": "5dd79372a75b1bc57b09582194e448aa499cd473fd05908624deb6748b348c47",
+      "redacted": false,
+      "derived": false
+    }
+  ],
+  "omitted_screenshots": [],
+  "complete_agent_jsonl": true
+}
