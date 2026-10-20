@@ -272,7 +272,7 @@ def analyze(summary_path, annotations_path):
                         [point[i] - target['center'][i] for i in (0, 1)]})
     rates = {protocol: {'hits': sum(row['hit'] for row in results if row['protocol'] == protocol),
                         'attempts': sum(row['protocol'] == protocol for row in results)}
-             for protocol in ('pixels', 'normalized1000')}
+             for protocol in sorted({row['protocol'] for row in results})}
     result = {'classification': 'posthoc_fixed_screenshot_grounding_only', 'results': results,
               'by_protocol': rates, 'annotation_sha256': sha(Path(annotations_path).read_bytes()),
               'benchmark_score': None, 'actc_pairs': 0,

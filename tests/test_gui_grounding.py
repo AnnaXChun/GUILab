@@ -125,3 +125,7 @@ def test_new_screenshot_original_prompt_protocol_scales_once(tmp_path):
     assert result['model_generation_calls'] == 6
     assert all(row['pixel_actions']==['pyautogui.click(x=960, y=540)'] for row in result['cases'])
     assert result['gui_action_dispatches']==0
+    analysis = probe.analyze(tmp_path/'transfer/summary.json',
+                             probe.ROOT/'configs/gui_grounding_transfer_annotations_20261020.json')
+    assert set(analysis['by_protocol'])=={'normalized1000-original-prompt','normalized1000'}
+    assert all(row['attempts']==3 for row in analysis['by_protocol'].values())
