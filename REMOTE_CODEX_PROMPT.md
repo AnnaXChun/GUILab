@@ -16,6 +16,6 @@
 
 官方sh核对已完成：GUI sh引用的test_rest.json在pinned commit缺失且不透传参数；vLLM sh固定GPU3；CLI wave sh启动四个模型与50题。复用原Python runner、prompt/tools/parser/evaluator，按报告做单题与VM生命周期最小适配，不原样启动整批脚本。
 
-按docs/NEXT_ACTC_VALIDATION.md继续：GUI控件验收与零网络协议复放均已完成；可用scripts/replay_gui_protocol.py先重验公开截图/轨迹，再验收正式worker和Qt主线程保存重开同步，之后验证同intent/same-S0/clone隔离。不要给模型Qt控件坐标或用可信文件补其产物，不继续本轮付费生成。前置通过后才考虑最多3个真实paired smoke。真实ACTC pairs仍为0，P3/P4 NO-GO。sketch-061已用于调试/选模型，不作独立held-out结果。在线agent/router/verifier不读expected/reference/evaluation，官方评分仅在episode后使用。官方GUI-only、CLI、显式适配GUI与Hybrid分开报告，不从单题推断论文成功率。
+按用户最新方向优先解决模型GUI坐标定位，先读reports/GUI_COORDINATE_AUDIT.md和docs/NEXT_ACTC_VALIDATION.md。官方Qwen要求原图像素、actions不缩放；最近normalized1000 v2是额外协议。scripts/replay_gui_protocol.py --protocol compare的真实截图/旧响应离线对照已通过，项目最新154项、官方Qwen 4项测试通过；这不验证模型定位或服务端图像处理。下一项模型实验先定义固定截图的小批定位校准，具体上限见报告，尚未执行；不重开本轮25次或此前耗尽账本。模型定位解决后，再验收正式worker/Qt bridge保存重开同步和same-S0/clone隔离。不要给模型Qt控件坐标或用可信文件补其产物。前置通过后才考虑最多3个真实paired smoke。真实ACTC pairs仍为0，P3/P4 NO-GO。sketch-061已用于调试/选模型，不作独立held-out结果。在线agent/router/verifier不读expected/reference/evaluation，官方评分仅在episode后使用。官方GUI-only、CLI、显式适配GUI与Hybrid分开报告，不从单题推断论文成功率。
 
 保留全部成功与失败、完整JSONL和成本，更新五份报告、交接和机器状态。/execute不自动重试，不确定写入隔离VM；费用未知用null。凭证、完整模型目录、二进制资产、编码后的FCStd与MCP缓存不上传。测试和secret检查通过后提交并推送AnnaXChun/GUILab，报告确切命令、任务、结果、阻塞和GO/NO-GO。

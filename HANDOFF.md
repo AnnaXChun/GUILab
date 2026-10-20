@@ -6,7 +6,7 @@ GUI控制闭环已通过：controls007在新官方base overlay中用12次单次�
 
 模型复测使用代码提交77d10d0和新VM，Qwen3.5-122B GUI sketch-061官方strict=0、no_output_file；25次生成、88918输入/2328输出tokens、无API错误。第15–25轮未命中Choose Orientation的OK按钮，不能把可信探针成功写成模型成功。GUI模型仍无文件，无原生文件可审计；CLI历史的官方与122B原生成功不变。
 
-累计226次生成、11个attempt、9个有效评估episode，已知输入791185/输出25713 tokens；初次HTTP500未知usage与128-token占用保留，美元总费null。全部本项目VM已停，base/固件SHA前后不变。新25次账本和旧5本账本均保留，本轮不再追加。实际截图/动作的零网络mock SDK复放已通过，远程可直接用scripts/replay_gui_protocol.py对公开归档重验，无需VM或key。下一步按[阶段验收计划](docs/NEXT_ACTC_VALIDATION.md)验收正式worker/Qt bridge同步和same-S0双clone。真实pairs=0，P3/P4继续NO-GO。
+累计226次生成、11个attempt、9个有效评估episode，已知输入791185/输出25713 tokens；初次HTTP500未知usage与128-token占用保留，美元总费null。全部本项目VM已停，base/固件SHA前后不变。新25次账本和旧5本账本均保留，本轮不再追加。最新[坐标协议核对](reports/GUI_COORDINATE_AUDIT.md)确认官方Qwen使用原图像素，本项目normalized1000为额外协议；新增两路离线对照通过，最新154项项目单测、4项官方Qwen测试通过。下一步优先模型坐标定位校准，正式worker/Qt bridge同步和same-S0双clone后移，按[验收计划](docs/NEXT_ACTC_VALIDATION.md)推进。真实pairs=0，P3/P4继续NO-GO。
 
 下方详细段落保留2026-10-19的历史，不把其中201次、122 tests或“先做控件诊断”等旧状态当作当前待办。
 

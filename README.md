@@ -2,7 +2,7 @@
 
 GUILab 当前承载 CADWorld Counterfactual Tool Credit（ACTC）复现工程。仓库根目录即项目根目录。
 
-CLI单题流程已跑通，GUI控件的创建、保存关闭重开也已通过；模型GUI任务与ACTC配对尚未通过。最新[GUI控件验收](reports/GUI_CONTROLS.md)和[25轮模型复测](reports/GUI_VALIDATION_20261020.md)分开报告：后者官方strict=0、无文件，模型未命中方向对话框的OK按钮。下一阶段见[验收计划](docs/NEXT_ACTC_VALIDATION.md)。远程接手读[HANDOFF](HANDOFF.md)和[REMOTE_CODEX_PROMPT](REMOTE_CODEX_PROMPT.md)，执行约束见[AGENTS](AGENTS.md)。
+CLI单题流程已跑通，GUI控件的创建、保存关闭重开也已通过；模型GUI任务与ACTC配对尚未通过。最新[坐标协议核对](reports/GUI_COORDINATE_AUDIT.md)确认官方Qwen使用原图像素，normalized1000为本项目额外协议；当前优先解决模型GUI定位。[GUI控件验收](reports/GUI_CONTROLS.md)和[25轮模型复测](reports/GUI_VALIDATION_20261020.md)分开报告，后者官方strict=0、无文件。下一阶段见[验收计划](docs/NEXT_ACTC_VALIDATION.md)。远程接手读[HANDOFF](HANDOFF.md)和[REMOTE_CODEX_PROMPT](REMOTE_CODEX_PROMPT.md)，执行约束见[AGENTS](AGENTS.md)。
 
 `qwen3.5-122b-a10b`的CLI在`freecad-sketch-061`获得官方1.0，模型文件通过原生重开、重算和可编辑性审计；8次生成、1869输出tokens，以turn_limit结束。此前Qwen3.6 CLI官方也为1.0，但原文件attachment/Invalid，工程审计FAIL。GUI仍无成功模型文件。此前201次与本轮25次合计226次生成，历史见[单题续跑](reports/BASELINE_SUCCESS_SMOKE.md)，本轮见[GUI复测](reports/GUI_VALIDATION_20261020.md)，不合并为论文成功率。
 
@@ -17,7 +17,7 @@ bash scripts/test.sh
 
 [本项目新增] 在同一原生工程状态、同一公开语义子目标下，用隔离 GUI/API 分支采集工程自检 preference。规格见 [SPEC.md](SPEC.md)。上游固定 `e5d0ebab8bd28da6e98c68c61db05747d1647f7b`。
 
-Mac ARM原生QEMU/TCG已接入pinned baseline runner，无需KVM。可信GUI参数化保存重开、单实例空GUI的DesktopEnv闭环已通过；Qwen3.5/3.6图片接口已实测。项目151 tests通过，上游此前7个CLI tests和9个synthetic case通过；真实ACTC pairs仍为0，P3/P4 NO-GO，见[复现状态](reports/REPRO_STATUS.md)。
+Mac ARM原生QEMU/TCG已接入pinned baseline runner，无需KVM。可信GUI参数化保存重开、单实例空GUI的DesktopEnv闭环已通过；Qwen3.5/3.6图片接口已实测。最新项目154 tests与4个官方Qwen tests通过，上游此前7个CLI tests和9个synthetic case通过；真实ACTC pairs仍为0，P3/P4 NO-GO，见[复现状态](reports/REPRO_STATUS.md)。
 
 ```bash
 bash scripts/bootstrap.sh

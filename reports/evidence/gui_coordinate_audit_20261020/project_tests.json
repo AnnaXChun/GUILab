@@ -1,0 +1,7 @@
+{
+  "classification": "tool_execution_verification",
+  "command": "ENABLE_PAID_RUNS=0 .venv/bin/python -m pytest -q",
+  "exit_code": 0,
+  "stdout": "........................................................................ [ 46%]\n........................................................................ [ 93%]\n..........                                                               [100%]\n154 passed in 3.09s\n",
+  "network_model_calls": 0
+}

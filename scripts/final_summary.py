@@ -34,7 +34,8 @@ def main():
     print(f"累计生成={totals.get('generation_calls')}；有效评估episode={totals.get('evaluated_episodes')}；不同任务={totals.get('unique_tasks')}；真实pairs={totals.get('real_pairs')}。")
     print(f"项目单测={totals.get('project_tests')}；全部项目VM已停={totals.get('all_project_vms_stopped')}；美元总费={json.dumps(totals.get('total_cost_usd'))}。")
     print(f"参考P0={stages['P0']['live_status']}；正式TypedWorker/GUI同步与same-S0仍未验收；本轮模型未命中方向对话框按钮。")
-    print('深度交互：GUI控制与原生保存重开通过，模型GUI任务仍未成功。下一步验收正式同步与隔离；真实pairs=0，P3/P4 NO-GO，不重开耗尽账本，不再索取KVM。')
+    print('深度交互：GUI控制与原生保存重开通过，模型GUI任务仍未成功；真实pairs=0，P3/P4 NO-GO。')
+    print(f"下一步：{handoff['next_action']}")
 
 
 if __name__ == '__main__':

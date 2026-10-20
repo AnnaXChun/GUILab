@@ -2,9 +2,17 @@
 
 截至2026-10-20，CLI单题官方与122B原生审计通过；GUI controls007也已完成Body/XY空Sketch、GUI保存关闭重开。随后25次GUI模型复测仍strict=0、无文件，后段点击落在Choose Orientation对话框外。最新见[控件验收](../reports/GUI_CONTROLS.md)与[模型复测](../reports/GUI_VALIDATION_20261020.md)。累计226次生成，151项单测通过，真实ACTC pairs=0。
 
-实际截图与原始动作的两轮mock SDK复放已通过：当前1920×1080 PNG字节、normalized→pixel映射和history单位均符合预期，零网络、零生成。远程可先按GUI_VALIDATION的scripts/replay_gui_protocol.py命令重验归档。保留本轮模型定位失败，不用可信脚本替其完成；本地复放不验证服务端内部图像处理。下一步验证正式TypedWorker/Qt bridge同步与隔离。当前不新增模型请求，不训练router或接入veRL。
+实际截图与原始动作的两轮mock SDK复放已通过：当前1920×1080 PNG字节、normalized→pixel映射和history单位均符合额外协议，零网络、零生成。2026-10-20进一步核对发现，官方Qwen使用原图像素、不缩放；normalized1000是本项目的协议扩展，复放PASS不能证明该扩展适合当前服务。当前优先解决模型GUI定位，正式TypedWorker同步与隔离后移。详见[坐标协议核对](../reports/GUI_COORDINATE_AUDIT.md)，项目最新154项单测通过。当前不新增模型请求，不训练router或接入veRL。
 
 结果与成本见[单题报告](../reports/BASELINE_SUCCESS_SMOKE.md)，完整轨迹见[证据清单](../reports/evidence/baseline_success_20261019/INDEX.json)。该题反复用于调试与模型选择，不能作为独立held-out效果估计。
+
+## 先解决模型坐标定位
+
+使用`scripts/replay_gui_protocol.py --protocol compare`可离线对照同一旧响应在官方pixels和normalized1000 v2下的执行结果。已确认`(258,561)`分别执行为原值或`(495,606)`，都未命中截图约`(937,659)`的OK按钮；不能直接宣布删掉乘法即可修复，也不能从本地PNG一致推断服务端没有resize。
+
+下一项模型实验先做固定截图的定位校准，不直接增加完整任务轮数。设计为同一模型、原图、目标，分别使用官方pixel要求和额外normalized1000要求，3个目标各2种协议、最多6次生成，每次256输出tokens，SDK重试0；不提供Qt信息或目标坐标，事后检查命中。设计尚未执行，保留全部旧账本，不以新ledger重开已耗尽25次批次。
+
+定位校准通过后再定义单题GUI复测，并显式记录`--qwen-coordinates pixels`或所选扩展协议。仓库默认本来就是pixels，无需改默认。当前模型定位成功尚未验证；后续正式worker与same-S0依然必须独立验收，不能用这次离线比较放行。
 
 ## GUI控件验收已通过
 

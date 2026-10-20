@@ -1,5 +1,11 @@
 # 差异与适配
 
+## 官方坐标协议核对
+
+2026-10-20按用户要求复核pinned `baseline/Qwen3-6/adapter.py`：官方要求original screenshot pixels，`adapt_actions`原样返回。`normalized1000 v2`是本项目明确改变prompt和执行坐标的扩展，不是官方Qwen默认处理；不能把Holo的1000分母或OpenCUA的smart_resize自动套到Qwen服务。运行入口默认本来就是pixels，本轮未改默认或模型执行逻辑。
+
+仅扩展离线`scripts/replay_gui_protocol.py`增加官方pixel与原扩展协议的相同响应对照，添加真实SDK/原图/history的回归测试。项目154项、官方Qwen 4项测试通过，新增网络、生成、VM启动均为0。结论、原始链接和命令见[坐标核对](GUI_COORDINATE_AUDIT.md)。下一步按用户方向优先模型GUI定位校准，正式TypedWorker同步后移；未新增实验额度，未改变任何gate。
+
 ## 2026-10-20 GUI专项
 
 本轮新增固定、无模型的`cad_cf/gui_control_probe.py`，只读Qt宏观察状态，建模与保存全部使用PyAutoGUI。它的控件坐标来自Qt，仅用于可信基础设施探针，不提供给模型；不能作为GUI baseline、在线修复器或ACTC候选。完整经过见[GUI控件验收](GUI_CONTROLS.md)。

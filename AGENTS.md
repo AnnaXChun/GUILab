@@ -10,7 +10,7 @@
 
 ## 当前事实
 
-最新事实以`reports/GUI_CONTROLS.md`、`reports/GUI_VALIDATION_20261020.md`、`reports/BASELINE_REPRO.md`和`handoff.json`为准。Qwen3.5-122B CLI sketch-061官方1.0、原生审计PASS；Qwen3.6 CLI官方1.0但原文件Invalid。GUI controls007完成Body/XY空Sketch、GUI保存关闭重开，PASS_GUI_CONTROL_CYCLE。随后122B GUI复测25次生成、2328输出tokens、官方strict=0、无文件，无API错误；后段点击落在Choose Orientation对话框外。零网络的实际截图/动作两轮复放通过，图片字节与坐标/history链路已复核，可用scripts/replay_gui_protocol.py重验。累计226次生成，151 tests通过，全部本项目VM停止，真实pairs=0。下一步验收正式TypedWorker/GUI bridge同步和same-S0；不新增本轮推理或重开已用尽账本。参考Linux/KVM gate保持原记录，远程须验证自己的环境。
+最新事实以`reports/GUI_COORDINATE_AUDIT.md`、`reports/GUI_CONTROLS.md`、`reports/GUI_VALIDATION_20261020.md`、`reports/BASELINE_REPRO.md`和`handoff.json`为准。Qwen3.5-122B CLI sketch-061官方1.0、原生审计PASS；Qwen3.6 CLI官方1.0但原文件Invalid。GUI controls007完成Body/XY空Sketch、GUI保存关闭重开，PASS_GUI_CONTROL_CYCLE。随后122B GUI复测25次生成、2328输出tokens、官方strict=0、无文件，无API错误；后段点击落在Choose Orientation对话框外。官方Qwen要求原图像素、无缩放；最近normalized1000 v2为本项目额外协议。两路离线SDK对照通过不等于模型定位正确；可用scripts/replay_gui_protocol.py --protocol compare重验。累计226次生成，最新154项项目测试与4项官方Qwen测试通过，全部本项目VM停止，真实pairs=0。当前优先解决模型GUI坐标定位，正式TypedWorker/GUI bridge同步和same-S0后移；不新增本轮推理或重开已用尽账本。参考Linux/KVM gate保持原记录，远程须验证自己的环境。
 
 ## 实验与预算
 
