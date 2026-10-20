@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "classification": "offline_visual_annotations_only_not_model_input",
+  "source": "Manual visual inspection of the archived PNG before the first new model request; no Qt data or evaluator rules",
+  "screenshot_sha256": "bcfb20058d2fcb44c72f5bd6f3c40fdc442264c81651ebad50773ee7fe6159bd",
+  "coordinate_unit": "original_screenshot_pixels",
+  "bounds_convention": "left,top inclusive; right,bottom exclusive",
+  "targets": {
+    "ok": {"bounds": [884,647,990,672], "center": [937,659.5]},
+    "cancel": {"bounds": [996,647,1102,672], "center": [1049,659.5]},
+    "xy": {"bounds": [893,505,974,523], "center": [933.5,514]}
+  },
+  "xy_note": "Visible radio and label region; clicking either can select the option. No claim about full Qt hitbox."
+}
