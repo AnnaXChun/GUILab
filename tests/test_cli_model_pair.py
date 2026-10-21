@@ -175,3 +175,11 @@ def test_guided_paid_gate_and_mock(monkeypatch,tmp_path):
     result=json.loads((tmp_path/'mock/summary.json').read_text())
     assert result['mode']=='MOCK_ONLY' and result['model_calls']==0
     assert result['A']==result['B']==1 and result['credit']==0
+
+
+def test_explicit_json_fence_adapter_preserves_model_code():
+    wrapped='```json\n'+json.dumps({'code':FORMULA})+'\n```'
+    with pytest.raises(ValueError):candidate_code(wrapped)
+    assert candidate_code(wrapped,allow_json_fence=True)==FORMULA
+    for invalid in ('prose\n'+wrapped,wrapped+'\nprose',wrapped+'\n'+wrapped,wrapped.replace('```json','```python')):
+        with pytest.raises(ValueError):candidate_code(invalid,allow_json_fence=True)

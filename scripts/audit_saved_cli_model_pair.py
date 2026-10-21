@@ -6,6 +6,8 @@ import json
 from pathlib import Path
 import sqlite3
 import sys
+import xml.etree.ElementTree as ET
+import zipfile
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from cad_cf.cli_model_pair import candidate_code, selection_controls
@@ -26,7 +28,7 @@ def audit(run):
         response=run/('model_response_'+b+'.json')
         assert hashlib.sha256(response.read_bytes()).hexdigest()==reference['model_response_sha256'][b]
         text=json.loads(response.read_text())['choices'][0]['message']['content']
-        assert candidate_code(text)==pair['candidates'][b]
+        assert candidate_code(text,allow_json_fence=reference.get('response_envelope_adapter')=='single_json_fence')==pair['candidates'][b]
     with sqlite3.connect('file:'+str((run/'dispatch.sqlite').resolve())+'?mode=ro',uri=True) as db:
         rows=list(db.execute('SELECT key,payload,state FROM dispatch ORDER BY rowid'))
     assert len(rows)==3 and all(s=='complete' for _,_,s in rows)
@@ -46,7 +48,19 @@ def audit(run):
                 assert obs['candidate_sha256']==digest(pair['candidates'][b]) and obs['candidate_executions']==1
                 assert hashlib.sha256((run/name/'artifact.FCStd').read_bytes()).hexdigest()==obs['artifact_sha256']
                 assert obs['native_reopen_equal'] and obs['saved_file_unchanged']
-                artifacts.append({'branch':b,'artifact_sha256':obs['artifact_sha256']})
+                with zipfile.ZipFile(run/name/'artifact.FCStd') as archive:
+                    meta=ET.fromstring(archive.read('Document.xml'))
+                types={o.attrib['name']:o.attrib['type'] for o in meta.findall('./Objects/Object')}
+                assert types=={'Torus':'Part::Torus','Guard':'Part::Box'}
+                native=next(o for o in obs['dependency_state']['objects'] if o['name']=='Torus')
+                obj=next(o for o in meta.findall('./ObjectData/Object') if o.get('name')=='Torus')
+                prop=next(p for p in obj.findall('./Properties/Property') if p.get('name')=='ExpressionEngine')
+                expressions={e.get('path'):e.get('expression') for e in prop.findall('.//Expression')}
+                if native['expressions']:
+                    assert ['SurfaceArea_mm2',expressions['SurfaceArea_mm2']] in native['expressions']
+                assert len(obs['probes'])==6 and all(p['model_fragment_reexecuted'] is False for p in obs['probes'])
+                artifacts.append({'branch':b,'artifact_sha256':obs['artifact_sha256'],'native_types':types,
+                                  'expression_bindings':native['expressions']})
             else:
                 observations[b]={};error=json.loads((run/name/'error.json').read_text())
                 assert error['reason']=='RuntimeError'

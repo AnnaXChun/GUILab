@@ -1,6 +1,7 @@
 """Prospective model-generated CAD blocks on a captured, identical native S0."""
 import ast
 import json
+import re
 
 from .cli_replay import review_fragment
 from .structural_credit import digest
@@ -49,7 +50,12 @@ def freeze_pair(pair):
     return pair
 
 
-def candidate_code(text):
+def candidate_code(text, *, allow_json_fence=False):
+    if allow_json_fence:
+        # An explicit response-envelope adapter; never edits the code string.
+        match = re.fullmatch(r'\s*```json\s*\n(.*?)\n```\s*', text, re.S)
+        if match:
+            text = match.group(1)
     raw = json.loads(text)
     if not isinstance(raw, dict) or set(raw) != {"code"} or not isinstance(raw["code"], str):
         raise ValueError("response must contain exactly one code string")
