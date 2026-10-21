@@ -1,5 +1,11 @@
 # GUILab 交接
 
+**2026-10-21 模型代码重放交接**：已把结构检查推进到真实 Qwen 轨迹代码，先读 [模型重放报告](reports/CLI_REPLAY_CREDIT_20261021.md)、[执行协议](docs/CLI_REPLAY_CREDIT.md)与 [机器状态](reports/CLI_REPLAY_STATUS.json)。第6/7轮代码在新建同S0静态圆环上重放，数值存储proxy为0/1，但缺半径绑定，响应Q均null。模型第7轮在原生圆环上的直接赋值初始正确、参数响应失败；人工追加公开半径公式后，保存重开及参数响应Q=1，credit=-1。原`Shape.Area`绑定失败及mock预设被真实结果推翻的记录保留。
+
+本批8次无模型原生派发、6个文件、全部complete，两台VM已停止。231项目tests与7上游CLI tests通过。历史中间S0未保存，本批是model-sourced prospective replay，不能写成历史精确恢复；模型原文件SHA未变。人工修正候选、工程响应目标与原官方任务分开报告，新增官方episode/ACTC pair/训练样本均0。证据入口为`reports/evidence/cli_replay_credit_20261021/INDEX.json`。
+
+下一步在新CLI任务执行候选前捕获S0，让模型提出替代代码块，冻结同intent/绑定/续执行及任务划分和预算，再做相同终局检查器、逐步验证、等预算Best-of-2与打乱信用对照。当前响应检查GO，方法增益和训练NO-GO；不重开旧账本，不直接启动RL。远程可先用`run_cli_replay_credit.py --dry-run`；真实重放无需key，但要自己的已核验VM配置。
+
 **2026-10-21 最新验证**：用户指出普通 SFT/RL 缺少方法创新并要求继续验证，当前先看 [CLI 结构信用结果](reports/CLI_STRUCTURAL_CREDIT_20261021.md)、[执行协议](docs/CLI_STRUCTURAL_CREDIT.md)与 [机器状态](reports/CLI_STRUCTURAL_CREDIT_STATUS.json)。三个可信 fixture 已在真实 FreeCAD 完成，修正版 credit `[1, 0, 1]`；首轮包围盒误判 `[0, 0, 1]` 和全部失败保留。共 14 次单次派发，无模型调用、无不确定执行，两轮 VM 均停止，210 项项目测试与 7 项上游 CLI 测试通过。
 
 这批只验证原生参数响应与固定续执行下的相对信用，不增加 CADWorld episode、原 ACTC pair 或训练样本。真实脚本与 `.FCStd` 类型树/状态/SHA 对应关系已独立审计。图只作记录；当前信用与同一终局检查器 Q 的差值一致，方法创新和训练仍 NO-GO。下一步冻结真实 CLI 构造块的同 intent/S0/续执行、独立任务分组和预算，再比较终局奖励、逐步验证、Best-of-2、打乱信用；不直接启动 RL。

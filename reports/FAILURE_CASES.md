@@ -1,5 +1,7 @@
 # 失败案例
 
+最新 [模型代码重放](CLI_REPLAY_CREDIT_20261021.md)保留四类问题：第6轮测量字符串未赋值，第7轮数值赋值在半径变化后陈旧，Shape.Area表达式保存后仍不刷新，以及单组runner完成条件写死。前两者来自真实模型片段；表达式为人工候选失败，runner由单测修正。静态圆环缺原生半径属性记unknown，历史中间S0缺失不冒充恢复。
+
 2026-10-21 [结构信用诊断](CLI_STRUCTURAL_CREDIT_20261021.md)新增检查器失败：圆环 `Shape.BoundBox` 返回 ±7.5767454，解析值为 ±7，首轮原生参数对象也被误判 Q=0。保留源码与结果后，实测 `optimalBoundingBox(False, False)` 返回 ±7.0000001，原容差通过。修正版静态圆环/圆柱的假参数仍无法驱动几何，下游测量修改也不能消除上游故障，均保留为受控失败。单测另验证缺 runtime、缺 VM/固件资产返回 `BLOCKED_BY_ENV`，不派发、不造原生结果。
 
 2026-10-21 当前优先分析 CLI，见 [CLI_FOCUS_20261021](CLI_FOCUS_20261021.md)。part-077 最新一次实际只有 8 轮，末轮为 `Sketcher.Horizontal` 不存在的 AttributeError，且未保存文件；此前“已跑 24 轮”的表述撤回。part-076 后续终端输出已出现原生对象无有效 shape，不能只用此前“几何正确、过程错误”的摘要解释全部重试。CLI 可以创建原生参数化对象，任务错误记录为 failure；只有真实环境或凭证问题才使用 BLOCKED_BY_ENV / BLOCKED_BY_CREDENTIALS。

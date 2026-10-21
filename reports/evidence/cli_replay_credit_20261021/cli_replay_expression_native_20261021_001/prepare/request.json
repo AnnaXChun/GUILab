@@ -1,0 +1,82 @@
+{
+  "mode": "prepare",
+  "root": "/home/user/.structural_credit_41585983ae40/seeds",
+  "pairs": [
+    {
+      "id": "model-value-vs-expression",
+      "intent": {
+        "primitive": "torus",
+        "parameters": {
+          "Radius1": 5.0,
+          "Radius2": 2.0
+        },
+        "target": "Torus",
+        "measurement": "stored torus surface area",
+        "preserved": "Guard",
+        "instruction": "Create a torus with major radius 5 mm and minor radius 2 mm in FreeCAD, measure its surface area, include that measurement in the finished FreeCAD file, and save the completed document to /home/user/Unnamed.FCStd.",
+        "engineering_extension": "stored area responds to exposed native radius edits; separate from official task score"
+      },
+      "probes": [
+        {
+          "id": "zero",
+          "object": "Torus",
+          "parameter": null,
+          "factor": 1.0
+        },
+        {
+          "id": "Radius1-0.8",
+          "object": "Torus",
+          "parameter": "Radius1",
+          "factor": 0.8
+        },
+        {
+          "id": "Radius1-1.2",
+          "object": "Torus",
+          "parameter": "Radius1",
+          "factor": 1.2
+        },
+        {
+          "id": "Radius2-0.8",
+          "object": "Torus",
+          "parameter": "Radius2",
+          "factor": 0.8
+        },
+        {
+          "id": "Radius2-1.2",
+          "object": "Torus",
+          "parameter": "Radius2",
+          "factor": 1.2
+        },
+        {
+          "id": "guard-negative-control",
+          "object": "Guard",
+          "parameter": "Length",
+          "factor": 1.2
+        }
+      ],
+      "seed_code": "torus_obj=doc.addObject('Part::Torus','Torus')\ntorus_obj.Radius1=5\ntorus_obj.Radius2=2\n",
+      "prefix": "",
+      "continuation": "doc.recompute()\n",
+      "candidates": {
+        "A": "torus_obj = doc.getObject(\"Torus\")\n\n# Calculate surface area\nsurface_area = sum(face.Area for face in torus_obj.Shape.Faces)\n\n# Add a Float property to store the surface area as a number\ntorus_obj.addProperty(\"App::PropertyFloat\", \"SurfaceArea_mm2\", \"Measurements\", \"Surface area of torus in mm\u00b2\")\ntorus_obj.SurfaceArea_mm2 = surface_area\n\nprint(f\"Set SurfaceArea_mm2 property to: {torus_obj.SurfaceArea_mm2}\")\n\n# Also add a descriptive string property\ntorus_obj.addProperty(\"App::PropertyString\", \"MeasurementNote\", \"Notes\", \"Surface area measurement note\")\ntorus_obj.MeasurementNote = f\"Torus with major radius 5mm, minor radius 2mm has surface area {surface_area:.4f} mm\u00b2\"\n\nprint(f\"Set MeasurementNote property to: {torus_obj.MeasurementNote}\")\n",
+        "B": "torus_obj = doc.getObject(\"Torus\")\n\n# Calculate surface area\nsurface_area = sum(face.Area for face in torus_obj.Shape.Faces)\n\n# Add a Float property to store the surface area as a number\ntorus_obj.addProperty(\"App::PropertyFloat\", \"SurfaceArea_mm2\", \"Measurements\", \"Surface area of torus in mm\u00b2\")\ntorus_obj.SurfaceArea_mm2 = surface_area\n\nprint(f\"Set SurfaceArea_mm2 property to: {torus_obj.SurfaceArea_mm2}\")\n\n# Also add a descriptive string property\ntorus_obj.addProperty(\"App::PropertyString\", \"MeasurementNote\", \"Notes\", \"Surface area measurement note\")\ntorus_obj.MeasurementNote = f\"Torus with major radius 5mm, minor radius 2mm has surface area {surface_area:.4f} mm\u00b2\"\n\nprint(f\"Set MeasurementNote property to: {torus_obj.MeasurementNote}\")\ntorus_obj.setExpression('SurfaceArea_mm2','39.47841760435743 * Radius1 * Radius2 / (1 mm^2)')\n"
+      },
+      "candidate_origins": {
+        "A": "model_turn_7",
+        "B": "expert_binding_extension_of_model_turn_7"
+      },
+      "seed_origin": "trusted_native_torus_for_measurement_dependency_test",
+      "hashes": {
+        "intent_sha256": "7db27e3aea73b025852d8b47a7b103f841a53c81d377c066b0166fafa0418ace",
+        "probes_sha256": "6ea479ce56151db2c3aa4627ef6d777073e1470459241bd2714944e4804db3fa",
+        "seed_code_sha256": "8e91c3c01d67b2625f9d4c61f372a5d00d67c5beaa02d1a4f017e544307d414a",
+        "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "continuation_sha256": "58d729e142684a938910b38259f96c79d7000b470db9ae878a810ef2788847eb",
+        "candidate_sha256": {
+          "A": "e020c95273a0da1d70feb79a555f99993436ccfc31159233b49a1498e7f583a7",
+          "B": "67e6046bc7472cb5fa9e5386605c57eea02ef9937d01010709a3ab64e3f337ad"
+        }
+      }
+    }
+  ]
+}

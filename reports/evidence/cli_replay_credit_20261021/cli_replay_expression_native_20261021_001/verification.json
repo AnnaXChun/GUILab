@@ -1,0 +1,39 @@
+{
+  "classification": "offline_model_sourced_replay_audit",
+  "status": "PASS",
+  "dispatches": 3,
+  "native_artifacts": 2,
+  "pair_results_recomputed": 1,
+  "historical_s0_available": false,
+  "training_eligible": false,
+  "checks": [
+    {
+      "id": "prepare",
+      "executed_request_and_worker_verified": true
+    },
+    {
+      "id": "model-value-vs-expression-A",
+      "executed_request_and_worker_verified": true,
+      "native_archive_types": {
+        "Guard": "Part::Box",
+        "Torus": "Part::Torus"
+      },
+      "artifact_sha256": "f0269677c7f8f60ac10ac95253fcb8112e2bd890f90b006aa9fa4865179522ed",
+      "pid": 1862,
+      "cwd": "/home/user/.structural_credit_41585983ae40/model-value-vs-expression-A",
+      "parameter_probes_without_code_replay": true
+    },
+    {
+      "id": "model-value-vs-expression-B",
+      "executed_request_and_worker_verified": true,
+      "native_archive_types": {
+        "Guard": "Part::Box",
+        "Torus": "Part::Torus"
+      },
+      "artifact_sha256": "ee39d6d6159256b7d3bbf7ee4276c751d46a09a8a4820ba684698e3a6919be4b",
+      "pid": 2287,
+      "cwd": "/home/user/.structural_credit_41585983ae40/model-value-vs-expression-B",
+      "parameter_probes_without_code_replay": true
+    }
+  ]
+}

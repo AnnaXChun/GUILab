@@ -1,0 +1,50 @@
+[
+  {
+    "id": "model-value-vs-expression",
+    "classification": "model_sourced_prospective_cli_block_replay",
+    "pair_valid": true,
+    "invalid_reasons": [],
+    "A": {
+      "q": 0,
+      "initial_proxy_q": 1,
+      "reason": null,
+      "unavailable_probes": [],
+      "failures": [
+        {
+          "probe": "Radius1-0.8",
+          "check": "stored_area_response"
+        },
+        {
+          "probe": "Radius1-1.2",
+          "check": "stored_area_response"
+        },
+        {
+          "probe": "Radius2-0.8",
+          "check": "stored_area_response"
+        },
+        {
+          "probe": "Radius2-1.2",
+          "check": "stored_area_response"
+        }
+      ]
+    },
+    "B": {
+      "q": 1,
+      "initial_proxy_q": 1,
+      "reason": null,
+      "unavailable_probes": [],
+      "failures": []
+    },
+    "credit": -1,
+    "initial_proxy_credit": 0,
+    "training_eligible": false,
+    "historical_s0_available": false,
+    "candidate_origins": {
+      "A": "model_turn_7",
+      "B": "expert_binding_extension_of_model_turn_7"
+    },
+    "credit_reason": null,
+    "graph_additional_discrimination": 0,
+    "training_effect": "NOT_MEASURED"
+  }
+]

@@ -1,5 +1,9 @@
 # 差异与适配
 
+## 模型代码块重放
+
+新增`cad_cf.cli_replay`与可信worker，复用实际Qwen轨迹第4/6/7轮的连续AST源码；适配只移除shell、import、文档open/new和save/close外层，保留原片段与SHA。历史S0未捕获，新建同S0的prospective replay单列。首轮Shape.Area表达式不刷新，原数据保留；修正版仅改为公开半径公式，保持续执行与容差。探针只重算FreeCAD，不重放模型代码。人工候选、数值proxy与工程响应目标均标明来源/范围，不作为官方episode或训练数据。通用runner只新增worker/evaluator注入点，原默认fixture协议保留。
+
 ## CLI 结构信用诊断
 
 2026-10-21 用户要求验证 CLI 方法方向，新增三个可信程序 fixture，不调用模型、训练或官方评分器。它们是 controlled synthetic，训练 eligibility 为 false，原 ACTC gate 不改判。每分支独立 FreeCAD 进程、文档和 artifact 目录，共用 VM；第二轮显式设定独立 cwd，未冒充双 VM 或强 OS sandbox。

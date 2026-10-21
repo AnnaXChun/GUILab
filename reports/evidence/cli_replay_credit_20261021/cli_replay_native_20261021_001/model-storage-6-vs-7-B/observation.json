@@ -1,0 +1,1523 @@
+{
+  "classification": "native_model_sourced_prospective_cli_replay",
+  "benchmark_episode": false,
+  "training_eligible": false,
+  "intent_sha256": "7db27e3aea73b025852d8b47a7b103f841a53c81d377c066b0166fafa0418ace",
+  "probes_sha256": "6ea479ce56151db2c3aa4627ef6d777073e1470459241bd2714944e4804db3fa",
+  "seed_code_sha256": "b0d187282d36776c128d5cd27a276f2bb6e9b9758fb8a019f37b1f656279dc54",
+  "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "continuation_sha256": "58d729e142684a938910b38259f96c79d7000b470db9ae878a810ef2788847eb",
+  "candidate_sha256": "e020c95273a0da1d70feb79a555f99993436ccfc31159233b49a1498e7f583a7",
+  "model_calls": 0,
+  "pid": 2569,
+  "workdir": "/home/user/.structural_credit_89df2be76f87/model-storage-6-vs-7-B",
+  "cwd": "/home/user/.structural_credit_89df2be76f87/model-storage-6-vs-7-B",
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "seed_sha256": "fb42db1814946be2b837b5c49ab2c56f1932ebe8b31ef446d4cfbe8b1d48df0d",
+  "seed_state_sha256": "efb0cd127d8233134922b75c68b17b45bc0063877d7c0cef78f00a303b41911f",
+  "artifact_sha256": "9b1c9909716cdafc2ad34613c8959335ede3face64fcb8cfc61c73f1e7e70003",
+  "saved_file_unchanged": true,
+  "native_reopen_equal": true,
+  "probes_from_artifact_copies": true,
+  "candidate_executions": 1,
+  "initial": {
+    "Guard": {
+      "valid": true,
+      "area": 94.0,
+      "volume": 60.0,
+      "bbox": [
+        30.0,
+        0.0,
+        0.0,
+        33.0,
+        4.0,
+        5.0
+      ],
+      "com": [
+        31.5,
+        2.0,
+        2.5
+      ],
+      "legacy_bbox": [
+        30.0,
+        0.0,
+        0.0,
+        33.0,
+        4.0,
+        5.0
+      ],
+      "bbox_method": "optimalBoundingBox(False,False)"
+    },
+    "Torus": {
+      "valid": true,
+      "area": 394.78417604,
+      "volume": 394.78417604,
+      "bbox": [
+        -7.0000001,
+        -7.0000001,
+        -2.0000001,
+        7.0000001,
+        7.0000001,
+        2.0000001
+      ],
+      "com": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "legacy_bbox": [
+        -7.5767454,
+        -7.5767454,
+        -2.0,
+        7.5767454,
+        7.5767454,
+        2.0
+      ],
+      "bbox_method": "optimalBoundingBox(False,False)",
+      "stored_area_mm2": 394.78417604,
+      "stored_area_reason": null,
+      "expression_bindings": [],
+      "measurement_properties": {
+        "SurfaceArea_mm2": {
+          "type": "App::PropertyFloat",
+          "value": 394.78417604
+        },
+        "MeasurementNote": {
+          "type": "App::PropertyString",
+          "value": "Torus with major radius 5mm, minor radius 2mm has surface area 394.7842 mm\u00b2"
+        }
+      }
+    }
+  },
+  "reopened": {
+    "Guard": {
+      "valid": true,
+      "area": 94.0,
+      "volume": 60.0,
+      "bbox": [
+        30.0,
+        0.0,
+        0.0,
+        33.0,
+        4.0,
+        5.0
+      ],
+      "com": [
+        31.5,
+        2.0,
+        2.5
+      ],
+      "legacy_bbox": [
+        30.0,
+        0.0,
+        0.0,
+        33.0,
+        4.0,
+        5.0
+      ],
+      "bbox_method": "optimalBoundingBox(False,False)"
+    },
+    "Torus": {
+      "valid": true,
+      "area": 394.78417604,
+      "volume": 394.78417604,
+      "bbox": [
+        -7.0000001,
+        -7.0000001,
+        -2.0000001,
+        7.0000001,
+        7.0000001,
+        2.0000001
+      ],
+      "com": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "legacy_bbox": [
+        -7.5767454,
+        -7.5767454,
+        -2.0,
+        7.5767454,
+        7.5767454,
+        2.0
+      ],
+      "bbox_method": "optimalBoundingBox(False,False)",
+      "stored_area_mm2": 394.78417604,
+      "stored_area_reason": null,
+      "expression_bindings": [],
+      "measurement_properties": {
+        "SurfaceArea_mm2": {
+          "type": "App::PropertyFloat",
+          "value": 394.78417604
+        },
+        "MeasurementNote": {
+          "type": "App::PropertyString",
+          "value": "Torus with major radius 5mm, minor radius 2mm has surface area 394.7842 mm\u00b2"
+        }
+      }
+    }
+  },
+  "dependency_state": {
+    "objects": [
+      {
+        "name": "Guard",
+        "type_id": "Part::Box",
+        "errors": [],
+        "dependencies": [],
+        "parameters": {
+          "Height": 5.0,
+          "Length": 3.0,
+          "Width": 4.0
+        },
+        "placement": [
+          1.0,
+          0.0,
+          0.0,
+          30.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "geometry": {
+          "valid": true,
+          "area": 94.0,
+          "volume": 60.0,
+          "bbox": [
+            30.0,
+            0.0,
+            0.0,
+            33.0,
+            4.0,
+            5.0
+          ],
+          "com": [
+            31.5,
+            2.0,
+            2.5
+          ],
+          "legacy_bbox": [
+            30.0,
+            0.0,
+            0.0,
+            33.0,
+            4.0,
+            5.0
+          ],
+          "bbox_method": "optimalBoundingBox(False,False)"
+        },
+        "label": "Guard",
+        "expressions": [],
+        "measurement_properties": {}
+      },
+      {
+        "name": "Torus",
+        "type_id": "Part::Feature",
+        "errors": [],
+        "dependencies": [],
+        "parameters": {},
+        "placement": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "geometry": {
+          "valid": true,
+          "area": 394.78417604,
+          "volume": 394.78417604,
+          "bbox": [
+            -7.0000001,
+            -7.0000001,
+            -2.0000001,
+            7.0000001,
+            7.0000001,
+            2.0000001
+          ],
+          "com": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "legacy_bbox": [
+            -7.5767454,
+            -7.5767454,
+            -2.0,
+            7.5767454,
+            7.5767454,
+            2.0
+          ],
+          "bbox_method": "optimalBoundingBox(False,False)"
+        },
+        "label": "Torus_R5_r2_SA_394.7842",
+        "expressions": [],
+        "measurement_properties": {
+          "SurfaceArea_mm2": {
+            "type": "App::PropertyFloat",
+            "value": 394.78417604
+          },
+          "MeasurementNote": {
+            "type": "App::PropertyString",
+            "value": "Torus with major radius 5mm, minor radius 2mm has surface area 394.7842 mm\u00b2"
+          }
+        }
+      }
+    ]
+  },
+  "probes": [
+    {
+      "id": "zero",
+      "applied": true,
+      "reason": null,
+      "state": {
+        "Guard": {
+          "valid": true,
+          "area": 94.0,
+          "volume": 60.0,
+          "bbox": [
+            30.0,
+            0.0,
+            0.0,
+            33.0,
+            4.0,
+            5.0
+          ],
+          "com": [
+            31.5,
+            2.0,
+            2.5
+          ],
+          "legacy_bbox": [
+            30.0,
+            0.0,
+            0.0,
+            33.0,
+            4.0,
+            5.0
+          ],
+          "bbox_method": "optimalBoundingBox(False,False)"
+        },
+        "Torus": {
+          "valid": true,
+          "area": 394.78417604,
+          "volume": 394.78417604,
+          "bbox": [
+            -7.0000001,
+            -7.0000001,
+            -2.0000001,
+            7.0000001,
+            7.0000001,
+            2.0000001
+          ],
+          "com": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "legacy_bbox": [
+            -7.5767454,
+            -7.5767454,
+            -2.0,
+            7.5767454,
+            7.5767454,
+            2.0
+          ],
+          "bbox_method": "optimalBoundingBox(False,False)",
+          "stored_area_mm2": 394.78417604,
+          "stored_area_reason": null,
+          "expression_bindings": [],
+          "measurement_properties": {
+            "SurfaceArea_mm2": {
+              "type": "App::PropertyFloat",
+              "value": 394.78417604
+            },
+            "MeasurementNote": {
+              "type": "App::PropertyString",
+              "value": "Torus with major radius 5mm, minor radius 2mm has surface area 394.7842 mm\u00b2"
+            }
+          }
+        }
+      },
+      "dependency_state": {
+        "objects": [
+          {
+            "name": "Guard",
+            "type_id": "Part::Box",
+            "errors": [],
+            "dependencies": [],
+            "parameters": {
+              "Height": 5.0,
+              "Length": 3.0,
+              "Width": 4.0
+            },
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              30.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "geometry": {
+              "valid": true,
+              "area": 94.0,
+              "volume": 60.0,
+              "bbox": [
+                30.0,
+                0.0,
+                0.0,
+                33.0,
+                4.0,
+                5.0
+              ],
+              "com": [
+                31.5,
+                2.0,
+                2.5
+              ],
+              "legacy_bbox": [
+                30.0,
+                0.0,
+                0.0,
+                33.0,
+                4.0,
+                5.0
+              ],
+              "bbox_method": "optimalBoundingBox(False,False)"
+            },
+            "label": "Guard",
+            "expressions": [],
+            "measurement_properties": {}
+          },
+          {
+            "name": "Torus",
+            "type_id": "Part::Feature",
+            "errors": [],
+            "dependencies": [],
+            "parameters": {},
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "geometry": {
+              "valid": true,
+              "area": 394.78417604,
+              "volume": 394.78417604,
+              "bbox": [
+                -7.0000001,
+                -7.0000001,
+                -2.0000001,
+                7.0000001,
+                7.0000001,
+                2.0000001
+              ],
+              "com": [
+                -0.0,
+                -0.0,
+                -0.0
+              ],
+              "legacy_bbox": [
+                -7.5767454,
+                -7.5767454,
+                -2.0,
+                7.5767454,
+                7.5767454,
+                2.0
+              ],
+              "bbox_method": "optimalBoundingBox(False,False)"
+            },
+            "label": "Torus_R5_r2_SA_394.7842",
+            "expressions": [],
+            "measurement_properties": {
+              "SurfaceArea_mm2": {
+                "type": "App::PropertyFloat",
+                "value": 394.78417604
+              },
+              "MeasurementNote": {
+                "type": "App::PropertyString",
+                "value": "Torus with major radius 5mm, minor radius 2mm has surface area 394.7842 mm\u00b2"
+              }
+            }
+          }
+        ]
+      },
+      "source_artifact_sha256": "9b1c9909716cdafc2ad34613c8959335ede3face64fcb8cfc61c73f1e7e70003",
+      "changes_performed_only_in_memory": true,
+      "model_fragment_reexecuted": false
+    },
+    {
+      "id": "Radius1-0.8",
+      "applied": false,
+      "reason": "missing_native_parameter_binding",
+      "state": {
+        "Guard": {
+          "valid": true,
+          "area": 94.0,
+          "volume": 60.0,
+          "bbox": [
+            30.0,
+            0.0,
+            0.0,
+            33.0,
+            4.0,
+            5.0
+          ],
+          "com": [
+            31.5,
+            2.0,
+            2.5
+          ],
+          "legacy_bbox": [
+            30.0,
+            0.0,
+            0.0,
+            33.0,
+            4.0,
+            5.0
+          ],
+          "bbox_method": "optimalBoundingBox(False,False)"
+        },
+        "Torus": {
+          "valid": true,
+          "area": 394.78417604,
+          "volume": 394.78417604,
+          "bbox": [
+            -7.0000001,
+            -7.0000001,
+            -2.0000001,
+            7.0000001,
+            7.0000001,
+            2.0000001
+          ],
+          "com": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "legacy_bbox": [
+            -7.5767454,
+            -7.5767454,
+            -2.0,
+            7.5767454,
+            7.5767454,
+            2.0
+          ],
+          "bbox_method": "optimalBoundingBox(False,False)",
+          "stored_area_mm2": 394.78417604,
+          "stored_area_reason": null,
+          "expression_bindings": [],
+          "measurement_properties": {
+            "SurfaceArea_mm2": {
+              "type": "App::PropertyFloat",
+              "value": 394.78417604
+            },
+            "MeasurementNote": {
+              "type": "App::PropertyString",
+              "value": "Torus with major radius 5mm, minor radius 2mm has surface area 394.7842 mm\u00b2"
+            }
+          }
+        }
+      },
+      "dependency_state": {
+        "objects": [
+          {
+            "name": "Guard",
+            "type_id": "Part::Box",
+            "errors": [],
+            "dependencies": [],
+            "parameters": {
+              "Height": 5.0,
+              "Length": 3.0,
+              "Width": 4.0
+            },
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              30.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "geometry": {
+              "valid": true,
+              "area": 94.0,
+              "volume": 60.0,
+              "bbox": [
+                30.0,
+                0.0,
+                0.0,
+                33.0,
+                4.0,
+                5.0
+              ],
+              "com": [
+                31.5,
+                2.0,
+                2.5
+              ],
+              "legacy_bbox": [
+                30.0,
+                0.0,
+                0.0,
+                33.0,
+                4.0,
+                5.0
+              ],
+              "bbox_method": "optimalBoundingBox(False,False)"
+            },
+            "label": "Guard",
+            "expressions": [],
+            "measurement_properties": {}
+          },
+          {
+            "name": "Torus",
+            "type_id": "Part::Feature",
+            "errors": [],
+            "dependencies": [],
+            "parameters": {},
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "geometry": {
+              "valid": true,
+              "area": 394.78417604,
+              "volume": 394.78417604,
+              "bbox": [
+                -7.0000001,
+                -7.0000001,
+                -2.0000001,
+                7.0000001,
+                7.0000001,
+                2.0000001
+              ],
+              "com": [
+                -0.0,
+                -0.0,
+                -0.0
+              ],
+              "legacy_bbox": [
+                -7.5767454,
+                -7.5767454,
+                -2.0,
+                7.5767454,
+                7.5767454,
+                2.0
+              ],
+              "bbox_method": "optimalBoundingBox(False,False)"
+            },
+            "label": "Torus_R5_r2_SA_394.7842",
+            "expressions": [],
+            "measurement_properties": {
+              "SurfaceArea_mm2": {
+                "type": "App::PropertyFloat",
+                "value": 394.78417604
+              },
+              "MeasurementNote": {
+                "type": "App::PropertyString",
+                "value": "Torus with major radius 5mm, minor radius 2mm has surface area 394.7842 mm\u00b2"
+              }
+            }
+          }
+        ]
+      },
+      "source_artifact_sha256": "9b1c9909716cdafc2ad34613c8959335ede3face64fcb8cfc61c73f1e7e70003",
+      "changes_performed_only_in_memory": true,
+      "model_fragment_reexecuted": false
+    },
+    {
+      "id": "Radius1-1.2",
+      "applied": false,
+      "reason": "missing_native_parameter_binding",
+      "state": {
+        "Guard": {
+          "valid": true,
+          "area": 94.0,
+          "volume": 60.0,
+          "bbox": [
+            30.0,
+            0.0,
+            0.0,
+            33.0,
+            4.0,
+            5.0
+          ],
+          "com": [
+            31.5,
+            2.0,
+            2.5
+          ],
+          "legacy_bbox": [
+            30.0,
+            0.0,
+            0.0,
+            33.0,
+            4.0,
+            5.0
+          ],
+          "bbox_method": "optimalBoundingBox(False,False)"
+        },
+        "Torus": {
+          "valid": true,
+          "area": 394.78417604,
+          "volume": 394.78417604,
+          "bbox": [
+            -7.0000001,
+            -7.0000001,
+            -2.0000001,
+            7.0000001,
+            7.0000001,
+            2.0000001
+          ],
+          "com": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "legacy_bbox": [
+            -7.5767454,
+            -7.5767454,
+            -2.0,
+            7.5767454,
+            7.5767454,
+            2.0
+          ],
+          "bbox_method": "optimalBoundingBox(False,False)",
+          "stored_area_mm2": 394.78417604,
+          "stored_area_reason": null,
+          "expression_bindings": [],
+          "measurement_properties": {
+            "SurfaceArea_mm2": {
+              "type": "App::PropertyFloat",
+              "value": 394.78417604
+            },
+            "MeasurementNote": {
+              "type": "App::PropertyString",
+              "value": "Torus with major radius 5mm, minor radius 2mm has surface area 394.7842 mm\u00b2"
+            }
+          }
+        }
+      },
+      "dependency_state": {
+        "objects": [
+          {
+            "name": "Guard",
+            "type_id": "Part::Box",
+            "errors": [],
+            "dependencies": [],
+            "parameters": {
+              "Height": 5.0,
+              "Length": 3.0,
+              "Width": 4.0
+            },
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              30.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "geometry": {
+              "valid": true,
+              "area": 94.0,
+              "volume": 60.0,
+              "bbox": [
+                30.0,
+                0.0,
+                0.0,
+                33.0,
+                4.0,
+                5.0
+              ],
+              "com": [
+                31.5,
+                2.0,
+                2.5
+              ],
+              "legacy_bbox": [
+                30.0,
+                0.0,
+                0.0,
+                33.0,
+                4.0,
+                5.0
+              ],
+              "bbox_method": "optimalBoundingBox(False,False)"
+            },
+            "label": "Guard",
+            "expressions": [],
+            "measurement_properties": {}
+          },
+          {
+            "name": "Torus",
+            "type_id": "Part::Feature",
+            "errors": [],
+            "dependencies": [],
+            "parameters": {},
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "geometry": {
+              "valid": true,
+              "area": 394.78417604,
+              "volume": 394.78417604,
+              "bbox": [
+                -7.0000001,
+                -7.0000001,
+                -2.0000001,
+                7.0000001,
+                7.0000001,
+                2.0000001
+              ],
+              "com": [
+                -0.0,
+                -0.0,
+                -0.0
+              ],
+              "legacy_bbox": [
+                -7.5767454,
+                -7.5767454,
+                -2.0,
+                7.5767454,
+                7.5767454,
+                2.0
+              ],
+              "bbox_method": "optimalBoundingBox(False,False)"
+            },
+            "label": "Torus_R5_r2_SA_394.7842",
+            "expressions": [],
+            "measurement_properties": {
+              "SurfaceArea_mm2": {
+                "type": "App::PropertyFloat",
+                "value": 394.78417604
+              },
+              "MeasurementNote": {
+                "type": "App::PropertyString",
+                "value": "Torus with major radius 5mm, minor radius 2mm has surface area 394.7842 mm\u00b2"
+              }
+            }
+          }
+        ]
+      },
+      "source_artifact_sha256": "9b1c9909716cdafc2ad34613c8959335ede3face64fcb8cfc61c73f1e7e70003",
+      "changes_performed_only_in_memory": true,
+      "model_fragment_reexecuted": false
+    },
+    {
+      "id": "Radius2-0.8",
+      "applied": false,
+      "reason": "missing_native_parameter_binding",
+      "state": {
+        "Guard": {
+          "valid": true,
+          "area": 94.0,
+          "volume": 60.0,
+          "bbox": [
+            30.0,
+            0.0,
+            0.0,
+            33.0,
+            4.0,
+            5.0
+          ],
+          "com": [
+            31.5,
+            2.0,
+            2.5
+          ],
+          "legacy_bbox": [
+            30.0,
+            0.0,
+            0.0,
+            33.0,
+            4.0,
+            5.0
+          ],
+          "bbox_method": "optimalBoundingBox(False,False)"
+        },
+        "Torus": {
+          "valid": true,
+          "area": 394.78417604,
+          "volume": 394.78417604,
+          "bbox": [
+            -7.0000001,
+            -7.0000001,
+            -2.0000001,
+            7.0000001,
+            7.0000001,
+            2.0000001
+          ],
+          "com": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "legacy_bbox": [
+            -7.5767454,
+            -7.5767454,
+            -2.0,
+            7.5767454,
+            7.5767454,
+            2.0
+          ],
+          "bbox_method": "optimalBoundingBox(False,False)",
+          "stored_area_mm2": 394.78417604,
+          "stored_area_reason": null,
+          "expression_bindings": [],
+          "measurement_properties": {
+            "SurfaceArea_mm2": {
+              "type": "App::PropertyFloat",
+              "value": 394.78417604
+            },
+            "MeasurementNote": {
+              "type": "App::PropertyString",
+              "value": "Torus with major radius 5mm, minor radius 2mm has surface area 394.7842 mm\u00b2"
+            }
+          }
+        }
+      },
+      "dependency_state": {
+        "objects": [
+          {
+            "name": "Guard",
+            "type_id": "Part::Box",
+            "errors": [],
+            "dependencies": [],
+            "parameters": {
+              "Height": 5.0,
+              "Length": 3.0,
+              "Width": 4.0
+            },
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              30.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "geometry": {
+              "valid": true,
+              "area": 94.0,
+              "volume": 60.0,
+              "bbox": [
+                30.0,
+                0.0,
+                0.0,
+                33.0,
+                4.0,
+                5.0
+              ],
+              "com": [
+                31.5,
+                2.0,
+                2.5
+              ],
+              "legacy_bbox": [
+                30.0,
+                0.0,
+                0.0,
+                33.0,
+                4.0,
+                5.0
+              ],
+              "bbox_method": "optimalBoundingBox(False,False)"
+            },
+            "label": "Guard",
+            "expressions": [],
+            "measurement_properties": {}
+          },
+          {
+            "name": "Torus",
+            "type_id": "Part::Feature",
+            "errors": [],
+            "dependencies": [],
+            "parameters": {},
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "geometry": {
+              "valid": true,
+              "area": 394.78417604,
+              "volume": 394.78417604,
+              "bbox": [
+                -7.0000001,
+                -7.0000001,
+                -2.0000001,
+                7.0000001,
+                7.0000001,
+                2.0000001
+              ],
+              "com": [
+                -0.0,
+                -0.0,
+                -0.0
+              ],
+              "legacy_bbox": [
+                -7.5767454,
+                -7.5767454,
+                -2.0,
+                7.5767454,
+                7.5767454,
+                2.0
+              ],
+              "bbox_method": "optimalBoundingBox(False,False)"
+            },
+            "label": "Torus_R5_r2_SA_394.7842",
+            "expressions": [],
+            "measurement_properties": {
+              "SurfaceArea_mm2": {
+                "type": "App::PropertyFloat",
+                "value": 394.78417604
+              },
+              "MeasurementNote": {
+                "type": "App::PropertyString",
+                "value": "Torus with major radius 5mm, minor radius 2mm has surface area 394.7842 mm\u00b2"
+              }
+            }
+          }
+        ]
+      },
+      "source_artifact_sha256": "9b1c9909716cdafc2ad34613c8959335ede3face64fcb8cfc61c73f1e7e70003",
+      "changes_performed_only_in_memory": true,
+      "model_fragment_reexecuted": false
+    },
+    {
+      "id": "Radius2-1.2",
+      "applied": false,
+      "reason": "missing_native_parameter_binding",
+      "state": {
+        "Guard": {
+          "valid": true,
+          "area": 94.0,
+          "volume": 60.0,
+          "bbox": [
+            30.0,
+            0.0,
+            0.0,
+            33.0,
+            4.0,
+            5.0
+          ],
+          "com": [
+            31.5,
+            2.0,
+            2.5
+          ],
+          "legacy_bbox": [
+            30.0,
+            0.0,
+            0.0,
+            33.0,
+            4.0,
+            5.0
+          ],
+          "bbox_method": "optimalBoundingBox(False,False)"
+        },
+        "Torus": {
+          "valid": true,
+          "area": 394.78417604,
+          "volume": 394.78417604,
+          "bbox": [
+            -7.0000001,
+            -7.0000001,
+            -2.0000001,
+            7.0000001,
+            7.0000001,
+            2.0000001
+          ],
+          "com": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "legacy_bbox": [
+            -7.5767454,
+            -7.5767454,
+            -2.0,
+            7.5767454,
+            7.5767454,
+            2.0
+          ],
+          "bbox_method": "optimalBoundingBox(False,False)",
+          "stored_area_mm2": 394.78417604,
+          "stored_area_reason": null,
+          "expression_bindings": [],
+          "measurement_properties": {
+            "SurfaceArea_mm2": {
+              "type": "App::PropertyFloat",
+              "value": 394.78417604
+            },
+            "MeasurementNote": {
+              "type": "App::PropertyString",
+              "value": "Torus with major radius 5mm, minor radius 2mm has surface area 394.7842 mm\u00b2"
+            }
+          }
+        }
+      },
+      "dependency_state": {
+        "objects": [
+          {
+            "name": "Guard",
+            "type_id": "Part::Box",
+            "errors": [],
+            "dependencies": [],
+            "parameters": {
+              "Height": 5.0,
+              "Length": 3.0,
+              "Width": 4.0
+            },
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              30.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "geometry": {
+              "valid": true,
+              "area": 94.0,
+              "volume": 60.0,
+              "bbox": [
+                30.0,
+                0.0,
+                0.0,
+                33.0,
+                4.0,
+                5.0
+              ],
+              "com": [
+                31.5,
+                2.0,
+                2.5
+              ],
+              "legacy_bbox": [
+                30.0,
+                0.0,
+                0.0,
+                33.0,
+                4.0,
+                5.0
+              ],
+              "bbox_method": "optimalBoundingBox(False,False)"
+            },
+            "label": "Guard",
+            "expressions": [],
+            "measurement_properties": {}
+          },
+          {
+            "name": "Torus",
+            "type_id": "Part::Feature",
+            "errors": [],
+            "dependencies": [],
+            "parameters": {},
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "geometry": {
+              "valid": true,
+              "area": 394.78417604,
+              "volume": 394.78417604,
+              "bbox": [
+                -7.0000001,
+                -7.0000001,
+                -2.0000001,
+                7.0000001,
+                7.0000001,
+                2.0000001
+              ],
+              "com": [
+                -0.0,
+                -0.0,
+                -0.0
+              ],
+              "legacy_bbox": [
+                -7.5767454,
+                -7.5767454,
+                -2.0,
+                7.5767454,
+                7.5767454,
+                2.0
+              ],
+              "bbox_method": "optimalBoundingBox(False,False)"
+            },
+            "label": "Torus_R5_r2_SA_394.7842",
+            "expressions": [],
+            "measurement_properties": {
+              "SurfaceArea_mm2": {
+                "type": "App::PropertyFloat",
+                "value": 394.78417604
+              },
+              "MeasurementNote": {
+                "type": "App::PropertyString",
+                "value": "Torus with major radius 5mm, minor radius 2mm has surface area 394.7842 mm\u00b2"
+              }
+            }
+          }
+        ]
+      },
+      "source_artifact_sha256": "9b1c9909716cdafc2ad34613c8959335ede3face64fcb8cfc61c73f1e7e70003",
+      "changes_performed_only_in_memory": true,
+      "model_fragment_reexecuted": false
+    },
+    {
+      "id": "guard-negative-control",
+      "applied": true,
+      "reason": null,
+      "state": {
+        "Guard": {
+          "valid": true,
+          "area": 104.8,
+          "volume": 72.0,
+          "bbox": [
+            30.0,
+            0.0,
+            0.0,
+            33.6,
+            4.0,
+            5.0
+          ],
+          "com": [
+            31.8,
+            2.0,
+            2.5
+          ],
+          "legacy_bbox": [
+            30.0,
+            0.0,
+            0.0,
+            33.6,
+            4.0,
+            5.0
+          ],
+          "bbox_method": "optimalBoundingBox(False,False)"
+        },
+        "Torus": {
+          "valid": true,
+          "area": 394.78417604,
+          "volume": 394.78417604,
+          "bbox": [
+            -7.0000001,
+            -7.0000001,
+            -2.0000001,
+            7.0000001,
+            7.0000001,
+            2.0000001
+          ],
+          "com": [
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "legacy_bbox": [
+            -7.5767454,
+            -7.5767454,
+            -2.0,
+            7.5767454,
+            7.5767454,
+            2.0
+          ],
+          "bbox_method": "optimalBoundingBox(False,False)",
+          "stored_area_mm2": 394.78417604,
+          "stored_area_reason": null,
+          "expression_bindings": [],
+          "measurement_properties": {
+            "SurfaceArea_mm2": {
+              "type": "App::PropertyFloat",
+              "value": 394.78417604
+            },
+            "MeasurementNote": {
+              "type": "App::PropertyString",
+              "value": "Torus with major radius 5mm, minor radius 2mm has surface area 394.7842 mm\u00b2"
+            }
+          }
+        }
+      },
+      "dependency_state": {
+        "objects": [
+          {
+            "name": "Guard",
+            "type_id": "Part::Box",
+            "errors": [],
+            "dependencies": [],
+            "parameters": {
+              "Height": 5.0,
+              "Length": 3.6,
+              "Width": 4.0
+            },
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              30.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "geometry": {
+              "valid": true,
+              "area": 104.8,
+              "volume": 72.0,
+              "bbox": [
+                30.0,
+                0.0,
+                0.0,
+                33.6,
+                4.0,
+                5.0
+              ],
+              "com": [
+                31.8,
+                2.0,
+                2.5
+              ],
+              "legacy_bbox": [
+                30.0,
+                0.0,
+                0.0,
+                33.6,
+                4.0,
+                5.0
+              ],
+              "bbox_method": "optimalBoundingBox(False,False)"
+            },
+            "label": "Guard",
+            "expressions": [],
+            "measurement_properties": {}
+          },
+          {
+            "name": "Torus",
+            "type_id": "Part::Feature",
+            "errors": [],
+            "dependencies": [],
+            "parameters": {},
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "geometry": {
+              "valid": true,
+              "area": 394.78417604,
+              "volume": 394.78417604,
+              "bbox": [
+                -7.0000001,
+                -7.0000001,
+                -2.0000001,
+                7.0000001,
+                7.0000001,
+                2.0000001
+              ],
+              "com": [
+                -0.0,
+                -0.0,
+                -0.0
+              ],
+              "legacy_bbox": [
+                -7.5767454,
+                -7.5767454,
+                -2.0,
+                7.5767454,
+                7.5767454,
+                2.0
+              ],
+              "bbox_method": "optimalBoundingBox(False,False)"
+            },
+            "label": "Torus_R5_r2_SA_394.7842",
+            "expressions": [],
+            "measurement_properties": {
+              "SurfaceArea_mm2": {
+                "type": "App::PropertyFloat",
+                "value": 394.78417604
+              },
+              "MeasurementNote": {
+                "type": "App::PropertyString",
+                "value": "Torus with major radius 5mm, minor radius 2mm has surface area 394.7842 mm\u00b2"
+              }
+            }
+          }
+        ]
+      },
+      "source_artifact_sha256": "9b1c9909716cdafc2ad34613c8959335ede3face64fcb8cfc61c73f1e7e70003",
+      "changes_performed_only_in_memory": true,
+      "model_fragment_reexecuted": false
+    }
+  ]
+}

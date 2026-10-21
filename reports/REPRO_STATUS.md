@@ -1,5 +1,7 @@
 # 复现状态
 
+最新 [模型代码重放](CLI_REPLAY_CREDIT_20261021.md)完成8次无模型派发和6文件审计，真实模型直接赋值初始正确但参数响应失败，人工半径公式保存重开后Q=1。历史S0未捕获，静态圆环缺参数绑定时响应null，Shape.Area表达式失败保留。231项目tests/7上游CLI tests通过，两台VM停止；未增加官方episode或训练样本，方法优势仍NO-GO。
+
 2026-10-21 新增 [CLI 结构信用验证](CLI_STRUCTURAL_CREDIT_20261021.md)：三组真实 FreeCAD 受控对照完成，修正后的 credit 为 `[1, 0, 1]`，14 次无模型派发全部 complete、两轮 VM 已停止，210 项项目测试与 7 项上游 CLI 测试通过。首轮圆环包围盒检查器失败及原始 `[0, 0, 1]` 保留。当前参数响应检查 GO；方法优势与训练 NO-GO。该诊断不增加官方 baseline episode、原 ACTC pair 或 SFT 样本，具体状态见 `CLI_STRUCTURAL_CREDIT_STATUS.json`。
 
 2026-10-21 当前主线转为 CLI 数据清洗、RL 和成功率改进，GUI 停止。最新事实见 [CLI_FOCUS_20261021](CLI_FOCUS_20261021.md)及 [CLI 研究计划](../docs/CLI_RESEARCH_PLAN.md)。本轮 sketch-063 官方 1.0 且原生编辑 PASS，measure-003 官方 0.0、参数编辑未验证；两题正常 finish、共 17 次生成。6 个文件审计完成，11 个 CLI episode 清洗后导出 3 条 SFT，183 项本地单测与 7 项 upstream CLI 测试通过，全部 VM 停止。采集和清洗 GO，真实训练 NO-GO，详见 CLI_STATUS.json。下方 GUI/ACTC 状态保留为历史，不作为 CLI 训练前置，也不改判为通过。

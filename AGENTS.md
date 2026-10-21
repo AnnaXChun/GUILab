@@ -4,6 +4,8 @@
 
 ## 接手入口
 
+**2026-10-21 模型代码重放入口**：最新为`reports/CLI_REPLAY_CREDIT_20261021.md`、`docs/CLI_REPLAY_CREDIT.md`和`reports/CLI_REPLAY_STATUS.json`。真实模型第6/7轮代码在新建同S0重放，历史中间S0不可恢复，响应缺绑定时null。直接赋值/人工半径公式绑定在保存重开后Q=0/1，原Shape.Area表达式失败保留。8次无模型派发与6文件审计通过，231项目tests/7上游CLI tests，两台VM停止。当前GO为新CLI任务先捕获S0、模型提出代码块和等预算对照设计；方法创新与训练NO-GO，不自动启动模型批次或训练。
+
 **2026-10-21 最新验证入口**：用户指出普通 SFT/RL 缺少方法创新并要求继续验证。`reports/CLI_STRUCTURAL_CREDIT_20261021.md`、`docs/CLI_STRUCTURAL_CREDIT.md` 和 `reports/CLI_STRUCTURAL_CREDIT_STATUS.json` 为当前方法验证入口。三个可信 CLI fixture 的修正版原生信用 `[1,0,1]`，首轮包围盒误判保留；共14次无模型派发、210项目tests与7上游CLI tests通过，两轮VM已停止。这是 controlled synthetic，不增加官方episode、ACTC pair或训练样本。图仅作影响范围记录，与相同终局检查器差值尚无方法增益。下一步先冻结真实CLI代码块的同intent/S0/续执行与独立任务对照，不自动启动训练或额外模型批次。
 
 **2026-10-21 当前方向覆盖下方历史计划**：用户明确停止 GUI，后续只针对 CLI 做数据清洗、RL 和成功率改进。先读 `docs/CLI_RESEARCH_PLAN.md`、`reports/CLI_FOCUS_20261021.md` 和新的 `HANDOFF.md` 入口。原 `SPEC.md` 和 ACTC gate 是历史方案，不改判为 PASS，也不以未完成 GUI 阻止 CLI 研发。保留原 prompt 的 baseline，改 prompt、API 提示或模型权重后另列实验设置。先收集/审计/清洗，不自动启动 RL 训练、大模型下载或全量评测。

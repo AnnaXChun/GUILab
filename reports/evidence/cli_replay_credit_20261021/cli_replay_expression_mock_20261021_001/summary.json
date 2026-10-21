@@ -1,0 +1,16 @@
+{
+  "status": "INCOMPLETE",
+  "mode": "MOCK_ONLY",
+  "historical_s0_available": false,
+  "model_calls": 0,
+  "new_benchmark_episodes": 0,
+  "training_rows_added": 0,
+  "historical_artifact_unchanged": true,
+  "credits": {
+    "model-value-vs-expression": -1
+  },
+  "initial_proxy_credits": {
+    "model-value-vs-expression": 0
+  },
+  "method_advantage": "NOT_MEASURED"
+}

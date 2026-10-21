@@ -1,0 +1,86 @@
+{
+  "mode": "execute",
+  "root": "/home/user/.structural_credit_89df2be76f87/model-storage-6-vs-7-B",
+  "pair": {
+    "id": "model-storage-6-vs-7",
+    "intent": {
+      "primitive": "torus",
+      "parameters": {
+        "Radius1": 5.0,
+        "Radius2": 2.0
+      },
+      "target": "Torus",
+      "measurement": "stored torus surface area",
+      "preserved": "Guard",
+      "instruction": "Create a torus with major radius 5 mm and minor radius 2 mm in FreeCAD, measure its surface area, include that measurement in the finished FreeCAD file, and save the completed document to /home/user/Unnamed.FCStd.",
+      "engineering_extension": "stored area responds to exposed native radius edits; separate from official task score"
+    },
+    "probes": [
+      {
+        "id": "zero",
+        "object": "Torus",
+        "parameter": null,
+        "factor": 1.0
+      },
+      {
+        "id": "Radius1-0.8",
+        "object": "Torus",
+        "parameter": "Radius1",
+        "factor": 0.8
+      },
+      {
+        "id": "Radius1-1.2",
+        "object": "Torus",
+        "parameter": "Radius1",
+        "factor": 1.2
+      },
+      {
+        "id": "Radius2-0.8",
+        "object": "Torus",
+        "parameter": "Radius2",
+        "factor": 0.8
+      },
+      {
+        "id": "Radius2-1.2",
+        "object": "Torus",
+        "parameter": "Radius2",
+        "factor": 1.2
+      },
+      {
+        "id": "guard-negative-control",
+        "object": "Guard",
+        "parameter": "Length",
+        "factor": 1.2
+      }
+    ],
+    "seed_code": "torus = Part.makeTorus(5, 2)\n\n# Calculate surface area by summing all face areas\nsurface_area = 0\nfor face in torus.Faces:\n    surface_area += face.Area\n    \nprint(f\"Torus Surface Area (sum of faces): {surface_area} mm\u00b2\")\n\n# Create a shape object in the document\nshape_obj = doc.addObject(\"Part::Feature\", \"Torus\")\nshape_obj.Shape = torus\n\n# Add label with surface area measurement\nshape_obj.Label = f\"Torus_R5_r2_SA_{surface_area:.4f}\"\n",
+    "prefix": "",
+    "continuation": "doc.recompute()\n",
+    "candidates": {
+      "A": "torus_obj = doc.getObject(\"Torus\")\n\n# Add a custom property to store the surface area measurement\nsurface_area = sum(face.Area for face in torus_obj.Shape.Faces)\n\n# Add a String property to store the measurement\ntorus_obj.addProperty(\"App::PropertyString\", \"SurfaceAreaMeasurement\", \"Measurements\", f\"Surface Area: {surface_area:.4f} mm\u00b2\")\n\nprint(f\"Added SurfaceAreaMeasurement property: {torus_obj.SurfaceAreaMeasurement}\")\n",
+      "B": "torus_obj = doc.getObject(\"Torus\")\n\n# Calculate surface area\nsurface_area = sum(face.Area for face in torus_obj.Shape.Faces)\n\n# Add a Float property to store the surface area as a number\ntorus_obj.addProperty(\"App::PropertyFloat\", \"SurfaceArea_mm2\", \"Measurements\", \"Surface area of torus in mm\u00b2\")\ntorus_obj.SurfaceArea_mm2 = surface_area\n\nprint(f\"Set SurfaceArea_mm2 property to: {torus_obj.SurfaceArea_mm2}\")\n\n# Also add a descriptive string property\ntorus_obj.addProperty(\"App::PropertyString\", \"MeasurementNote\", \"Notes\", \"Surface area measurement note\")\ntorus_obj.MeasurementNote = f\"Torus with major radius 5mm, minor radius 2mm has surface area {surface_area:.4f} mm\u00b2\"\n\nprint(f\"Set MeasurementNote property to: {torus_obj.MeasurementNote}\")\n"
+    },
+    "candidate_origins": {
+      "A": "model_turn_6",
+      "B": "model_turn_7"
+    },
+    "seed_origin": "model_turn_4_fragment_on_new_document",
+    "hashes": {
+      "intent_sha256": "7db27e3aea73b025852d8b47a7b103f841a53c81d377c066b0166fafa0418ace",
+      "probes_sha256": "6ea479ce56151db2c3aa4627ef6d777073e1470459241bd2714944e4804db3fa",
+      "seed_code_sha256": "b0d187282d36776c128d5cd27a276f2bb6e9b9758fb8a019f37b1f656279dc54",
+      "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "continuation_sha256": "58d729e142684a938910b38259f96c79d7000b470db9ae878a810ef2788847eb",
+      "candidate_sha256": {
+        "A": "5f5af7ab277e6a9305082084479f07849a87e0717cefb884b6532bf507f53671",
+        "B": "e020c95273a0da1d70feb79a555f99993436ccfc31159233b49a1498e7f583a7"
+      }
+    }
+  },
+  "branch": "B",
+  "seed": {
+    "path": "/home/user/.structural_credit_89df2be76f87/seeds/model-storage-6-vs-7.FCStd",
+    "seed_sha256": "fb42db1814946be2b837b5c49ab2c56f1932ebe8b31ef446d4cfbe8b1d48df0d",
+    "seed_state_sha256": "efb0cd127d8233134922b75c68b17b45bc0063877d7c0cef78f00a303b41911f"
+  }
+}

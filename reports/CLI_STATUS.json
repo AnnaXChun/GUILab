@@ -75,7 +75,7 @@
     "public_copy": "reports/evidence/cli_focus_20261021/cli_data_20261021"
   },
   "verification": {
-    "project_tests": 210,
+    "project_tests": 231,
     "upstream_cli_tests": 7,
     "pinned_cli_dry_run": "PASS",
     "all_vms_stopped": true
@@ -103,7 +103,7 @@
       "Only 3 audited SFT examples",
       "Trainable weights, training GPU and trainer not configured or validated"
     ],
-    "next_action": "Controlled structural-credit fixtures completed. Freeze real CLI block substitutions, intent/S0/continuations and task-family splits; compare against the same terminal checker, step validation, equal-budget Best-of-2 and shuffled credit before training."
+    "next_action": "Model-sourced prospective replay completed. Capture S0 before new model blocks; freeze intent/bindings/continuations, task splits and equal-budget terminal checker, step validation, Best-of-2 and shuffled credit controls before training."
   },
   "structural_credit_diagnostic": {
     "status_file": "reports/CLI_STRUCTURAL_CREDIT_STATUS.json",
@@ -115,6 +115,19 @@
     "benchmark_episodes_added": 0,
     "training_rows_added": 0,
     "strong_os_isolation_validated": false,
+    "method_advantage_measured": false
+  },
+  "model_sourced_replay": {
+    "status_file": "reports/CLI_REPLAY_STATUS.json",
+    "source_task": "freecad-measure-003",
+    "historical_s0_available": false,
+    "dispatches": 8,
+    "new_model_calls": 0,
+    "initial_numeric_proxy_credits": [-1, 0],
+    "response_credit_formula_fix": -1,
+    "native_artifacts": 6,
+    "benchmark_episodes_added": 0,
+    "training_rows_added": 0,
     "method_advantage_measured": false
   },
   "original_actc": {

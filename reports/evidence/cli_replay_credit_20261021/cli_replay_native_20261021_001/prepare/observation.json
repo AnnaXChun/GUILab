@@ -1,0 +1,51 @@
+{
+  "classification": "controlled_native_seed_preparation",
+  "seeds": {
+    "model-storage-6-vs-7": {
+      "path": "/home/user/.structural_credit_89df2be76f87/seeds/model-storage-6-vs-7.FCStd",
+      "seed_sha256": "fb42db1814946be2b837b5c49ab2c56f1932ebe8b31ef446d4cfbe8b1d48df0d",
+      "seed_state_sha256": "efb0cd127d8233134922b75c68b17b45bc0063877d7c0cef78f00a303b41911f"
+    },
+    "model-value-vs-expression": {
+      "path": "/home/user/.structural_credit_89df2be76f87/seeds/model-value-vs-expression.FCStd",
+      "seed_sha256": "cb5bfa1a700e075d0228b0b4516654f823a4282b8154e983009fcb962183afeb",
+      "seed_state_sha256": "b3dde05a4a770a9b5431a77a1203ddd00cd3430b7c0781adfe91ada94a12f1da"
+    }
+  },
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "bbox_api_probe": {
+    "method_doc": "Get the optimal bounding box\noptimalBoundingBox([useTriangulation = True, useShapeTolerance = False]) -> bound box",
+    "legacy_bbox": [
+      -7.5767454,
+      -7.5767454,
+      -2.0,
+      7.5767454,
+      7.5767454,
+      2.0
+    ],
+    "optimal_bbox": [
+      -7.0000001,
+      -7.0000001,
+      -2.0000001,
+      7.0000001,
+      7.0000001,
+      2.0000001
+    ]
+  },
+  "pid": 1779,
+  "cwd": "/home/user/.structural_credit_89df2be76f87/seeds",
+  "native_expression_probe": {
+    "status": "UNAVAILABLE",
+    "reason": "RuntimeError",
+    "message": "shape is invalid"
+  }
+}

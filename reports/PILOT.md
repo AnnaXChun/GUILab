@@ -1,5 +1,7 @@
 # Pilot 结果
 
+最新 [模型代码重放](CLI_REPLAY_CREDIT_20261021.md)：第6/7轮同静态圆环的响应Q均null、数值proxy 0/1；第7轮直接赋值/人工半径公式在同原生圆环的初始proxy均1，响应Q为0/1。首轮Shape.Area绑定失败Q=0保留。8次无模型派发、6文件审计通过；这是同一开发任务的新建S0重放，历史S0不可恢复，训练样本增加0，方法优势未测量。
+
 2026-10-21 新增三个可信 CLI fixture 的真实 FreeCAD 诊断，见 [结构信用报告](CLI_STRUCTURAL_CREDIT_20261021.md)。首轮 `[0, 0, 1]` 揭示圆环保守包围盒误判，保留后用精确 API 复测得到 `[1, 0, 1]`。同一 seed 字节与原生状态、相同 intent/续执行、进程和工作目录隔离、单次候选执行、保存重开与完整 trace 均核验通过；共用 VM，强 OS 隔离未验收。三个语义 fixture 两轮执行不增加 benchmark episode 或训练样本；相同检查器终局奖励与图记录尚未体现方法增益，RL 效果未测量。
 
 2026-10-21 用户停止 GUI，当前 pilot 改为 CLI 开发样本采集、原生审计和清洗，见 [CLI_FOCUS_20261021](CLI_FOCUS_20261021.md)。本轮不是 ACTC pair，也不构造 GUI/API credit。旧真实 pair N=0 保留；CLI 的公开奖励与后续 RL 效果分开报告。

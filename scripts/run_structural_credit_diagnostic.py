@@ -47,8 +47,8 @@ def parse_response(response):
     return next(json.loads(line) for line in response["output"].splitlines() if line.startswith('{"classification":'))
 
 
-def run_native(plan, config, runtime, output):
-    worker = WORKER.read_text()
+def run_native(plan, config, runtime, output, *, worker_path=WORKER, evaluator=evaluate_pair):
+    worker = worker_path.read_text()
     runtime.update(output=str((output/"runtime").resolve()), port=config["port"], vnc_port=config["vnc_port"],
                    gui_ready=False, gui_warmup=False, visible=False)
     provider = None
@@ -114,7 +114,7 @@ def run_native(plan, config, runtime, output):
                     raise  # Stop and quarantine VM, never replay.
                 except Exception:
                     observations[name] = {}
-            row = evaluate_pair(pair, observations[pair["id"]+"-A"], observations[pair["id"]+"-B"])
+            row = evaluator(pair, observations[pair["id"]+"-A"], observations[pair["id"]+"-B"])
             rows.append(row)
             print(json.dumps({"id": row["id"], "pair_valid": row["pair_valid"], "credit": row["credit"], "A": row["A"]["q"], "B": row["B"]["q"]}), flush=True)
     except Exception as exc:

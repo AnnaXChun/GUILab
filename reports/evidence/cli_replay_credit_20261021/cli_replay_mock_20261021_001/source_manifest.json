@@ -1,0 +1,8 @@
+{
+  "cad_cf/cli_replay.py": "368964d11959f2526262bbcd18a0175d2d07a94c60ba104922fa425e08bb2640",
+  "scripts/cli_replay_worker.py": "63ac3605acc7bb912edcdf6409b17d88b8f3b85f15e92f883dd04efbf7d83158",
+  "scripts/structural_credit_worker.py": "6461deb43c1d243237657706d93548480fb9aaa6b38a10a4a71519b599bf16fb",
+  "scripts/run_structural_credit_diagnostic.py": "293bcafbb742f2e1ce9048b4ebdb2f76d141a2aeac4d0c85fc536df587e0fab9",
+  "scripts/run_cli_replay_credit.py": "a99e38b178250642215a333b779b18490789b5596b00b0248accf32225ab9bdf",
+  "deployed_worker.py": "3ed728f86c46e61d0ed976bb84713faa1cb50f6b56ca5b2b540c23fd6134a4e5"
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "cases": [
+    "model-value-vs-expression"
+  ],
+  "trace": "reports/evidence/cli_focus_20261021/official_cli/cli_focus_20261021_001/freecad-measure-003/trajectory.jsonl",
+  "episodes": "reports/evidence/cli_focus_20261021/cli_data_20261021/episodes.jsonl",
+  "historical_artifact": "results/official_cli/cli_focus_20261021_001/freecad-measure-003/freecad-measure-003.FCStd",
+  "historical_artifact_sha256": "bac6abd0941f1db7e0d03c2d5c783012eb4744b2878d812e7d3217ef42be7b30",
+  "max_dispatches": 3,
+  "worker_timeout_seconds": 110,
+  "max_wall_seconds": 900,
+  "model_calls": 0,
+  "training_eligible": false,
+  "measurement_expression": "39.47841760435743 * Radius1 * Radius2 / (1 mm^2)",
+  "port": 15060,
+  "vnc_port": 15960
+}

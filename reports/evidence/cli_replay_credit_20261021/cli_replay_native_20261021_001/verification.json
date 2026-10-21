@@ -1,0 +1,63 @@
+{
+  "classification": "offline_model_sourced_replay_audit",
+  "status": "PASS",
+  "dispatches": 5,
+  "native_artifacts": 4,
+  "pair_results_recomputed": 2,
+  "historical_s0_available": false,
+  "training_eligible": false,
+  "checks": [
+    {
+      "id": "prepare",
+      "executed_request_and_worker_verified": true
+    },
+    {
+      "id": "model-storage-6-vs-7-A",
+      "executed_request_and_worker_verified": true,
+      "native_archive_types": {
+        "Guard": "Part::Box",
+        "Torus": "Part::Feature"
+      },
+      "artifact_sha256": "7c98e0c993c267b1b1822a616ec626165f095aff1cc4e5fba9e3106521ea8317",
+      "pid": 2220,
+      "cwd": "/home/user/.structural_credit_89df2be76f87/model-storage-6-vs-7-A",
+      "parameter_probes_without_code_replay": true
+    },
+    {
+      "id": "model-storage-6-vs-7-B",
+      "executed_request_and_worker_verified": true,
+      "native_archive_types": {
+        "Guard": "Part::Box",
+        "Torus": "Part::Feature"
+      },
+      "artifact_sha256": "9b1c9909716cdafc2ad34613c8959335ede3face64fcb8cfc61c73f1e7e70003",
+      "pid": 2569,
+      "cwd": "/home/user/.structural_credit_89df2be76f87/model-storage-6-vs-7-B",
+      "parameter_probes_without_code_replay": true
+    },
+    {
+      "id": "model-value-vs-expression-A",
+      "executed_request_and_worker_verified": true,
+      "native_archive_types": {
+        "Guard": "Part::Box",
+        "Torus": "Part::Torus"
+      },
+      "artifact_sha256": "d8d38bfda86ccf96819659fd399e85333ccb766bc49ca3e62e8179f3f29a2fbe",
+      "pid": 2752,
+      "cwd": "/home/user/.structural_credit_89df2be76f87/model-value-vs-expression-A",
+      "parameter_probes_without_code_replay": true
+    },
+    {
+      "id": "model-value-vs-expression-B",
+      "executed_request_and_worker_verified": true,
+      "native_archive_types": {
+        "Guard": "Part::Box",
+        "Torus": "Part::Torus"
+      },
+      "artifact_sha256": "f88e0c660dd61ae54d5785a1f8bd43c88cb85a49793d7a79a6453c2579f9be2b",
+      "pid": 2880,
+      "cwd": "/home/user/.structural_credit_89df2be76f87/model-value-vs-expression-B",
+      "parameter_probes_without_code_replay": true
+    }
+  ]
+}

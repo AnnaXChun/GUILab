@@ -1,0 +1,51 @@
+{
+  "classification": "controlled_native_seed_preparation",
+  "seeds": {
+    "model-value-vs-expression": {
+      "path": "/home/user/.structural_credit_41585983ae40/seeds/model-value-vs-expression.FCStd",
+      "seed_sha256": "a1d6ea6af5a57e4844ca053668cb2a952e03438ea7092d4780ded84a70107f9f",
+      "seed_state_sha256": "b3dde05a4a770a9b5431a77a1203ddd00cd3430b7c0781adfe91ada94a12f1da"
+    }
+  },
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "bbox_api_probe": {
+    "method_doc": "Get the optimal bounding box\noptimalBoundingBox([useTriangulation = True, useShapeTolerance = False]) -> bound box",
+    "legacy_bbox": [
+      -7.5767454,
+      -7.5767454,
+      -2.0,
+      7.5767454,
+      7.5767454,
+      2.0
+    ],
+    "optimal_bbox": [
+      -7.0000001,
+      -7.0000001,
+      -2.0000001,
+      7.0000001,
+      7.0000001,
+      2.0000001
+    ]
+  },
+  "pid": 1787,
+  "cwd": "/home/user/.structural_credit_41585983ae40/seeds",
+  "native_expression_probe": {
+    "status": "PASS",
+    "expression": "39.47841760435743 * Radius1 * Radius2 / (1 mm^2)",
+    "initial_area": 394.78417604357435,
+    "edited_stored_area": 473.7410112522892,
+    "edited_shape_area": 473.7410112522892,
+    "object_state": [
+      "Up-to-date"
+    ]
+  }
+}

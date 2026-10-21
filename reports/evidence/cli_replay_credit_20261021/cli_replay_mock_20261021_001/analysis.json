@@ -1,0 +1,130 @@
+{
+  "classification": "offline_model_sourced_prospective_replay_analysis",
+  "comparisons": [
+    {
+      "id": "model-storage-6-vs-7",
+      "initial_proxy_q": {
+        "A": 0,
+        "B": 1
+      },
+      "terminal_response_q": {
+        "A": null,
+        "B": null
+      },
+      "initial_proxy_credit": -1,
+      "response_credit": null,
+      "best_of_2_response_q": null,
+      "best_of_2_reason": "required_response_unknown_or_invalid_pair",
+      "check_failures": {
+        "A": [
+          {
+            "probe": "initial",
+            "check": "stored_numeric_area_proxy"
+          },
+          {
+            "probe": "zero",
+            "check": "stored_area_response"
+          },
+          {
+            "probe": "guard-negative-control",
+            "check": "stored_area_response"
+          }
+        ],
+        "B": []
+      },
+      "unknowns": {
+        "A": [
+          {
+            "probe": "Radius1-0.8",
+            "reason": "missing_native_parameter_binding"
+          },
+          {
+            "probe": "Radius1-1.2",
+            "reason": "missing_native_parameter_binding"
+          },
+          {
+            "probe": "Radius2-0.8",
+            "reason": "missing_native_parameter_binding"
+          },
+          {
+            "probe": "Radius2-1.2",
+            "reason": "missing_native_parameter_binding"
+          }
+        ],
+        "B": [
+          {
+            "probe": "Radius1-0.8",
+            "reason": "missing_native_parameter_binding"
+          },
+          {
+            "probe": "Radius1-1.2",
+            "reason": "missing_native_parameter_binding"
+          },
+          {
+            "probe": "Radius2-0.8",
+            "reason": "missing_native_parameter_binding"
+          },
+          {
+            "probe": "Radius2-1.2",
+            "reason": "missing_native_parameter_binding"
+          }
+        ]
+      }
+    },
+    {
+      "id": "model-value-vs-expression",
+      "initial_proxy_q": {
+        "A": 1,
+        "B": 1
+      },
+      "terminal_response_q": {
+        "A": 0,
+        "B": 1
+      },
+      "initial_proxy_credit": 0,
+      "response_credit": -1,
+      "best_of_2_response_q": 1,
+      "best_of_2_reason": null,
+      "check_failures": {
+        "A": [
+          {
+            "probe": "Radius1-0.8",
+            "check": "stored_area_response"
+          },
+          {
+            "probe": "Radius1-1.2",
+            "check": "stored_area_response"
+          },
+          {
+            "probe": "Radius2-0.8",
+            "check": "stored_area_response"
+          },
+          {
+            "probe": "Radius2-1.2",
+            "check": "stored_area_response"
+          }
+        ],
+        "B": []
+      },
+      "unknowns": {
+        "A": [],
+        "B": []
+      }
+    }
+  ],
+  "same_checker_terminal_difference": [
+    null,
+    -1
+  ],
+  "correspondence_permutation": [
+    -1,
+    null
+  ],
+  "graph_additional_discrimination": 0,
+  "independently_run_policy_controls": false,
+  "method_advantage_over_same_terminal_checker": "NOT_ESTABLISHED",
+  "training_effect": "NOT_MEASURED",
+  "historical_s0_recovery": "UNAVAILABLE",
+  "held_out_result": false,
+  "training_rows": 0
+}

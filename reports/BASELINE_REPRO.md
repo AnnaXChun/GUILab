@@ -1,5 +1,7 @@
 # 基线复现
 
+后续 [模型轨迹代码重放](CLI_REPLAY_CREDIT_20261021.md)只复用已有Qwen代码，没有新增模型baseline episode。新建S0重放、人工绑定修正与官方CLI成绩分开；原历史文件未变，参数响应结果不能回写官方成功率。
+
 2026-10-21 后续 [CLI 结构信用诊断](CLI_STRUCTURAL_CREDIT_20261021.md)已完成，属于无模型的 controlled synthetic，不是新增 baseline 跑题。三组 fixture 的修正版信用 `[1, 0, 1]` 只用于原生参数响应与配对机制验证，不能计入官方 CLI 成功率。GUI-only、已有 CLI 和该诊断继续分开报告。
 
 2026-10-21 CLI 小批已完成，GUI 停止。sketch-063 官方 strict=1.0、原生编辑通过；measure-003 官方 strict=0.0、measurement 类型或结构错误。两题正常 finish，原 prompt/tools/parser 和离线评分保持 pinned 实现。详细任务、17 次请求成本、6 文件审计及 3 条训练候选见 [CLI_FOCUS_20261021](CLI_FOCUS_20261021.md)。不同模型、重复任务和预算的历史结果不合并成正式成功率；原论文 GUI-only 全量复现仍未完成。

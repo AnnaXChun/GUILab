@@ -1,0 +1,8 @@
+{
+  "dispatches": 3,
+  "uncertain": 0,
+  "elapsed_seconds": 303.879,
+  "vm_stopped": true,
+  "model_calls": 0,
+  "isolation": "reviewed CAD fragments; document/process/workdir within one shared VM, no strong OS sandbox claim"
+}

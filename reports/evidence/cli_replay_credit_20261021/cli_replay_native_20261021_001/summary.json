@@ -1,0 +1,18 @@
+{
+  "status": "COMPLETE_WITH_UNKNOWN_RESPONSE",
+  "mode": "MODEL_SOURCED_PROSPECTIVE_REPLAY",
+  "historical_s0_available": false,
+  "model_calls": 0,
+  "new_benchmark_episodes": 0,
+  "training_rows_added": 0,
+  "historical_artifact_unchanged": true,
+  "credits": {
+    "model-storage-6-vs-7": null,
+    "model-value-vs-expression": 0
+  },
+  "initial_proxy_credits": {
+    "model-storage-6-vs-7": -1,
+    "model-value-vs-expression": 0
+  },
+  "method_advantage": "NOT_MEASURED"
+}
