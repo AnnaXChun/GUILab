@@ -60,7 +60,7 @@ print(json.dumps({{'pid':p.pid,'executable':str(snap/'usr/bin/FreeCAD'),'termina
 '''
 
 
-def prepare_gui(endpoint,output,seconds=300,warm_canvas=False,*,alive_timeout_ms=None):
+def prepare_gui(endpoint,output,seconds=300,warm_canvas=False,*,alive_timeout_ms=None,idle_monitor=False):
     """Empty GUI; optional renderer warmup closes its geometry-free document."""
     if not 1<=seconds<=600:raise ValueError('bounded GUI startup deadline required')
     output=Path(output)
@@ -97,12 +97,15 @@ try:
   if docs:raise RuntimeError('warmup must restore empty document set')
   result.update(canvas_warmed=True,warmup_object_count=0)
   phase('empty_canvas_closed')
+ __ACTC_IDLE_MONITOR__
  frame=window.frameGeometry()
  result.update(status='PASS_GUI_READY',pid=os.getpid(),freecad_version=list(App.Version()),documents=docs,workbench=Gui.activeWorkbench().name(),window_visible=window.isVisible(),window_maximized=window.isMaximized(),window_active=window.isActiveWindow(),window_frame={'x':frame.x(),'y':frame.y(),'width':frame.width(),'height':frame.height()})
 except Exception as exc:
  result.update(status='FAIL',error=type(exc).__name__,message=str(exc),traceback=traceback.format_exc())
 (root/'gui_ready.json').write_text(json.dumps(result))
 '''.replace('__ACTC_RENDER_WARMUP__',repr(bool(warm_canvas)))
+    from .gui_idle import MONITOR
+    macro=macro.replace(' __ACTC_IDLE_MONITOR__',' '+('exec('+repr(MONITOR)+')' if idle_monitor else 'pass'))
     source=gui_launch_source(guest,macro,alive_timeout_ms=alive_timeout_ms)
     (output/'gui_launch_source.py').write_text(source)
     bridge=TerminalBridge(endpoint,endpoint,output/'gui_startup.sqlite')

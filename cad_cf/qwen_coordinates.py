@@ -27,12 +27,23 @@ def scale_action(source,width,height):
             if set(pairs)!= {'x','y'}:raise ValueError('normalized GUI action requires both x and y')
             for axis,(kind,target) in pairs.items():
                 old=node.args[target] if kind=='arg' else target.value
-                if not isinstance(old,ast.Constant) or type(old.value) not in (int,float) or not math.isfinite(old.value) or not 0<=old.value<=1000:
-                    raise ValueError('literal Qwen coordinates must be in 0..1000')
+                # Handle negative literals: ast.UnaryOp(USub, Constant(5)) -> -5
+                if isinstance(old, ast.UnaryOp) and isinstance(old.op, ast.USub) and isinstance(old.operand, ast.Constant):
+                    v = -old.operand.value
+                elif isinstance(old, ast.Constant) and type(old.value) in (int, float) and math.isfinite(old.value):
+                    v = old.value
+                else:
+                    raise ValueError('unparseable literal coordinate')
+                # Clamp: models occasionally emit values slightly outside 0..1000.
+                # A hard rejection kills the episode; clamping preserves the intent.
+                clamped = max(0, min(1000, v))
                 bound=width if axis=='x' else height
-                new=ast.copy_location(ast.Constant(min(bound-1,int(round(old.value*bound/1000)))),old)
-                if kind=='arg':node.args[target]=new
-                else:target.value=new
+                new_pixel = min(bound - 1, int(round(clamped * bound / 1000)))
+                new = ast.copy_location(ast.Constant(new_pixel), old)
+                if kind == 'arg':
+                    node.args[target] = new
+                else:
+                    target.value = new
             return node
     tree=Coordinates().visit(ast.parse(source));ast.fix_missing_locations(tree)
     return ast.unparse(tree)

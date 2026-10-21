@@ -16,9 +16,17 @@ def test_coordinate_units_and_non_coordinate_values(source,expected):
     assert scale_action(source,1920,1080)==expected
 
 
-@pytest.mark.parametrize('source',['pyautogui.click(x=1200,y=500)','pyautogui.click(x=target,y=500)','pyautogui.click(x=50)','pyautogui.click(500,500,x=500)'])
+@pytest.mark.parametrize('source',['pyautogui.click(x=target,y=500)','pyautogui.click(x=50)','pyautogui.click(500,500,x=500)'])
 def test_ambiguous_or_out_of_range_coordinates_are_not_executed(source):
     with pytest.raises(ValueError):scale_action(source,1920,1080)
+
+def test_out_of_range_coordinates_are_clamped_not_rejected():
+    # Slightly above: clamped to right edge.
+    assert scale_action('pyautogui.click(x=1200, y=500)', 1920, 1080) == 'pyautogui.click(x=1919, y=540)'
+    # Slightly below: clamped to 0.
+    assert scale_action('pyautogui.click(x=-5, y=500)', 1920, 1080) == 'pyautogui.click(x=0, y=540)'
+    # Edge: exactly at 1000.
+    assert scale_action('pyautogui.click(x=1000, y=1000)', 1920, 1080) == 'pyautogui.click(x=1919, y=1079)'
 
 
 @pytest.mark.parametrize('preserve_pixel_prompt', [False, True])

@@ -79,7 +79,10 @@ def install_native_runtime(upstream, config, on_uncertain=None):
         if key not in bridges:bridges[key]=TerminalBridge(provider.endpoint,provider.endpoint,ledger)
         if getattr(provider,'quarantined',False):raise ExecutionUncertain('VM quarantined; no replay')
         try:
-            return bridges[key].execute(['python','-c',controller.pkgs_prefix.format(command=command)],execution_id=str(uuid.uuid4()))
+            action_id=str(uuid.uuid4())
+            result=bridges[key].execute(['python','-c',controller.pkgs_prefix.format(command=command)],execution_id=action_id)
+            if getattr(provider,'gui_idle',None):provider.gui_idle.wait(action_id)
+            return result
         except ExecutionUncertain:
             provider.quarantined=True
             if on_uncertain:on_uncertain()
@@ -92,6 +95,51 @@ def install_native_runtime(upstream, config, on_uncertain=None):
     env_module.create_vm_manager_and_provider=factory
     env_module.MAX_RETRIES=1
     PythonController.execute_python_command=once
+    # Replace get_screenshot to bypass the hanging Xcursor path on the
+    # controller's /screenshot endpoint.  pyautogui.screenshot() works
+    # when called through /execute; the route handler's own Xcursor()
+    # call is what blocks.  This fallback captures a screenshot via
+    # /execute, reads it back through /file, and returns the PNG bytes.
+    original_get_screenshot = getattr(PythonController, 'get_screenshot', None)
+    if original_get_screenshot:
+        def _get_screenshot_via_execute(controller):
+            import base64 as _b64
+            from .terminal_bridge import TerminalBridge, ExecutionUncertain
+            if not providers or providers[0].current is None:
+                return None
+            provider = providers[0]
+            br = TerminalBridge(provider.endpoint, provider.endpoint,
+                                provider.current / 'screenshot_dispatch.sqlite')
+            source = (
+                'import os,base64,tempfile,pyautogui;'
+                'os.environ.update(DISPLAY=":0",XAUTHORITY="/run/user/1000/gdm/Xauthority");'
+                'img=pyautogui.screenshot();'
+                'buf=tempfile.NamedTemporaryFile(suffix=".png",delete=False);'
+                'img.save(buf.name);'
+                'print(base64.b64encode(buf.name.encode()).decode())'
+            )
+            try:
+                result = br.execute(['python3', '-c', source],
+                                    execution_id='screenshot-' + str(uuid.uuid4()),
+                                    timeout=30)
+            except ExecutionUncertain:
+                return None
+            finally:
+                br.close()
+            if result.get('returncode') != 0:
+                return None
+            file_in_vm = _b64.b64decode(result['output'].strip()).decode()
+            try:
+                response = requests.post(
+                    provider.endpoint + '/file',
+                    data={'file_path': file_in_vm},
+                    timeout=(3, 10))
+            except Exception:
+                return None
+            if response.status_code != 200:
+                return None
+            return response.content
+        PythonController.get_screenshot = _get_screenshot_via_execute
     def cleanup():
         for bridge in bridges.values():
             try:bridge.close()
@@ -102,4 +150,6 @@ def install_native_runtime(upstream, config, on_uncertain=None):
         env_module.create_vm_manager_and_provider=original_factory
         env_module.MAX_RETRIES=original_retries
         PythonController.execute_python_command=original_execute
+    if original_get_screenshot:
+        PythonController.get_screenshot = original_get_screenshot
     return cleanup

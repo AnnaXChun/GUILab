@@ -46,8 +46,12 @@ class NativeQemuProvider:
     """One fresh overlay per boot. Reset discards a VM, never replays actions."""
     def __init__(self, base, base_sha, firmware, firmware_sha, output, *, port=15010,
                  vnc_port=15910, visible=False, boot_seconds=600, gui_ready=False, gui_seconds=300,gui_warmup=False,
-                 gui_alive_timeout_ms=None):
+                 gui_alive_timeout_ms=None,gui_idle_seconds=None):
         from .gui_startup import validate_alive_timeout
+        from .gui_idle import validate_idle_seconds
+        self.gui_idle_seconds=validate_idle_seconds(gui_idle_seconds)
+        if self.gui_idle_seconds is not None and not gui_ready:raise ValueError('GUI idle monitor requires GUI bootstrap')
+        self.gui_idle=None
         self.gui_alive_timeout_ms=validate_alive_timeout(gui_alive_timeout_ms)
         self.base, self.firmware = Path(base).resolve(), Path(firmware).resolve()
         self.base_sha, self.firmware_sha = base_sha, firmware_sha
@@ -119,8 +123,15 @@ class NativeQemuProvider:
                         self._save('ready.json',event)
                         if self.gui_ready:
                             from .gui_startup import prepare_gui
-                            prepare_gui(self.endpoint,self.current,self.gui_seconds,warm_canvas=self.gui_warmup,
-                                        alive_timeout_ms=self.gui_alive_timeout_ms)
+                            ready=prepare_gui(self.endpoint,self.current,self.gui_seconds,warm_canvas=self.gui_warmup,
+                                        alive_timeout_ms=self.gui_alive_timeout_ms,idle_monitor=self.gui_idle_seconds is not None)
+                            if self.gui_idle_seconds is not None:
+                                from .gui_idle import GuiIdleBarrier
+                                self.gui_idle=GuiIdleBarrier(self.endpoint,self.current,ready['pid'],self.gui_idle_seconds)
+                                # Startup idle wait removed: slow TCG boot + Qt startup
+                                # can push the bootstrap past the 600s cap.  Per-action
+                                # idle in upstream_runtime still works once the monitor
+                                # is running.
                         return
                 with (self.current/'readiness.jsonl').open('a') as stream: stream.write(json.dumps(event)+'\n')
                 time.sleep(3)
