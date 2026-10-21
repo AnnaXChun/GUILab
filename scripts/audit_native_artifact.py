@@ -4,6 +4,7 @@ import argparse
 import base64
 import hashlib
 import json
+import math
 import requests
 from pathlib import Path
 import sys
@@ -106,6 +107,21 @@ print(json.dumps(result))
 '''
 
 
+def normalize_native_numbers(record):
+    """Keep non-finite FreeCAD observations as explicit unknowns in strict JSON."""
+    missing=[]
+    def clean(value,path):
+        if isinstance(value,float) and not math.isfinite(value):
+            missing.append({'path':path,'reason':'non_finite_FreeCAD_value'})
+            return None
+        if isinstance(value,dict):return {k:clean(v,path+'/'+str(k)) for k,v in value.items()}
+        if isinstance(value,list):return [clean(v,path+'/'+str(i)) for i,v in enumerate(value)]
+        return value
+    result=clean(record,'')
+    if missing:result['unavailable_numeric_fields']=missing
+    return result
+
+
 def review_audit(record):
     reviewed=dict(record)
     errors=[]
@@ -165,10 +181,10 @@ raise SystemExit(proc.returncode)
         bridge=TerminalBridge(provider.endpoint,provider.endpoint,a.output/'dispatch.sqlite',session=CaptureSession())
         response=bridge.execute(['/usr/bin/python3','-c',deployed],execution_id='native-artifact-audit-once',timeout=120)
         (a.output/'response.json').write_text(json.dumps(response,indent=2)+'\n')
-        result=next(json.loads(line) for line in response['output'].splitlines() if line.startswith('{"classification":'))
-        (a.output/'audit_raw.json').write_text(json.dumps(result,indent=2)+'\n')
+        result=normalize_native_numbers(next(json.loads(line) for line in response['output'].splitlines() if line.startswith('{"classification":')))
+        (a.output/'audit_raw.json').write_text(json.dumps(result,indent=2,allow_nan=False)+'\n')
         result=review_audit(result)
-        (a.output/'audit.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result))
+        (a.output/'audit.json').write_text(json.dumps(result,indent=2,allow_nan=False)+'\n');print(json.dumps(result,allow_nan=False))
     except Exception as exc:
         (a.output/'error.json').write_text(json.dumps({'error':type(exc).__name__,'message':str(exc)})+'\n');raise
     finally:

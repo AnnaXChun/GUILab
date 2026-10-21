@@ -1,6 +1,6 @@
 # 复现状态
 
-2026-10-21 当前主线转为 CLI 数据清洗、RL 和成功率改进，GUI 停止。最新事实见 [CLI_FOCUS_20261021](CLI_FOCUS_20261021.md)及 [CLI 研究计划](../docs/CLI_RESEARCH_PLAN.md)。本轮 sketch-063 官方 1.0 且原生编辑 PASS，measure-003 官方 0.0、参数编辑未验证；两题正常 finish、共 17 次生成。6 个文件审计完成，11 个 CLI episode 清洗后导出 3 条 SFT，181 项本地单测与 7 项 upstream CLI 测试通过，全部 VM 停止。采集和清洗 GO，真实训练 NO-GO，详见 CLI_STATUS.json。下方 GUI/ACTC 状态保留为历史，不作为 CLI 训练前置，也不改判为通过。
+2026-10-21 当前主线转为 CLI 数据清洗、RL 和成功率改进，GUI 停止。最新事实见 [CLI_FOCUS_20261021](CLI_FOCUS_20261021.md)及 [CLI 研究计划](../docs/CLI_RESEARCH_PLAN.md)。本轮 sketch-063 官方 1.0 且原生编辑 PASS，measure-003 官方 0.0、参数编辑未验证；两题正常 finish、共 17 次生成。6 个文件审计完成，11 个 CLI episode 清洗后导出 3 条 SFT，183 项本地单测与 7 项 upstream CLI 测试通过，全部 VM 停止。采集和清洗 GO，真实训练 NO-GO，详见 CLI_STATUS.json。下方 GUI/ACTC 状态保留为历史，不作为 CLI 训练前置，也不改判为通过。
 
 2026-10-20最新[定位校准](GUI_GROUNDING_20261020.md)已完成6次真实请求：预定pixels组0/3、normalized1000组2/3；pixels返回值事后按1000换算为3/3，仅作单位假设。当前服务返回值与官方像素要求不一致已有实测支持，尚未验证实际点击或跨截图定位。本轮14825输入/473输出tokens、无API错误，0次VM启动、0个新增episode，旧6本账本不变。累计232次生成，159项项目测试通过；GUI baseline仍未成功，真实pairs=0。下一步在新截图验证显式单位，再做限步GUI复测，原样官方pixel adapter接当前服务为NO-GO。
 

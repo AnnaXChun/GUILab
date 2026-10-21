@@ -2,6 +2,8 @@
 
 ## CLI 方向切换
 
+最终归档的 106 份 JSON 通过严格解析与 SHA 核验。MCP 对两份审计记录的 App::Plane 面积 `8e+100` 给出局部解析告警；它是有限的合法 JSON 数值，本轮没有观察到 NaN。审计器新增 `normalize_native_numbers` 和严格 JSON 编码，未来非有限数值写为 null 并记录字段路径与原因。本轮未触发数值转换，原始响应、诊断字节、模型文件和评分均不变；新增两项通用序列化回归，无新 API 或 VM 执行。
+
 2026-10-21 用户明确停止 GUI，转为 CLI 数据清洗、RL 和成功率改进。原 SPEC 作为历史保留，新执行协议见 [CLI_RESEARCH_PLAN](../docs/CLI_RESEARCH_PLAN.md)。GUI/API 反事实路由不再作为本方向目标，旧 gate 不改判为 PASS。
 
 `cad_cf.baseline` 新增显式 `--tasks-file`，单次 CLI launch 限制为至多两个任务；`cad_cf.campaign` 允许只配置 CLI，缺失 GUI route 时拒绝启动 GUI。多题共享请求与输出账本，每题保留原 runner 的限步和 reset。复用的是 runner 进程，TCG reset 仍会重启新 VM overlay；不是同 VM 连续跨任务，也不是 same-S0 pair。官方 prompt/tools/parser 和评分规则不修改。

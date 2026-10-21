@@ -4,7 +4,7 @@
 
 新增小批 CLI 选择和原生批量审计，复用 pinned 官方 runner、terminal tools 和离线评分。清洗入口为 `python -m cad_cf.cli_data`；它保留失败轨迹，导出通过原生质量和公开目标审计的 SFT 候选。官方分数只用于离线报告。当前不启动模型训练或大模型下载。
 
-最新两题完成：竖直构造线通过，圆环测量未通过；17 次生成、6517 输出 tokens。6 个文件原生审计后，11 个 CLI episode 导出 [3 条 SFT 候选](reports/evidence/cli_focus_20261021/cli_data_20261021/sft.jsonl)。181 项项目测试及 7 项 upstream CLI 测试通过，全部 VM 已停止。后续先扩充任务家族和公开奖励，再做小模型 SFT/RL；详见 [机器状态](reports/CLI_STATUS.json)。
+最新两题完成：竖直构造线通过，圆环测量未通过；17 次生成、6517 输出 tokens。6 个文件原生审计后，11 个 CLI episode 导出 [3 条 SFT 候选](reports/evidence/cli_focus_20261021/cli_data_20261021/sft.jsonl)。183 项项目测试及 7 项 upstream CLI 测试通过，全部 VM 已停止。后续先扩充任务家族和公开奖励，再做小模型 SFT/RL；详见 [机器状态](reports/CLI_STATUS.json)。
 
 GUILab 当前承载 CADWorld Counterfactual Tool Credit（ACTC）复现工程。仓库根目录即项目根目录。
 

@@ -10,7 +10,7 @@ import sys
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from cad_cf.qemu_runtime import NativeQemuProvider
 from cad_cf.terminal_bridge import TerminalBridge,ExecutionUncertain
-from scripts.audit_native_artifact import WORKER,review_audit
+from scripts.audit_native_artifact import WORKER,review_audit,normalize_native_numbers
 
 
 def audit_command(data, guest):
@@ -65,8 +65,9 @@ def main():
                 raw=next(json.loads(line) for line in result['output'].splitlines() if line.startswith('{"classification":'))
                 if raw['artifact_sha256']!=digest or hashlib.sha256(path.read_bytes()).hexdigest()!=digest:
                     raise RuntimeError('audit artifact SHA mismatch')
-                (directory/'audit_raw.json').write_text(json.dumps(raw,indent=2)+'\n')
-                reviewed=review_audit(raw);(directory/'audit.json').write_text(json.dumps(reviewed,indent=2)+'\n')
+                raw=normalize_native_numbers(raw)
+                (directory/'audit_raw.json').write_text(json.dumps(raw,indent=2,allow_nan=False)+'\n')
+                reviewed=review_audit(raw);(directory/'audit.json').write_text(json.dumps(reviewed,indent=2,allow_nan=False)+'\n')
                 rows.append({'source_artifact':str(path),'artifact_sha256':digest,'status':reviewed['status'],'parameter_editability':reviewed['parameter_editability'],'audit':str(directory/'audit.json')})
                 print(json.dumps(rows[-1]),flush=True)
             except Exception as exc:

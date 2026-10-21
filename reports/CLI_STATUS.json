@@ -75,10 +75,17 @@
     "public_copy": "reports/evidence/cli_focus_20261021/cli_data_20261021"
   },
   "verification": {
-    "project_tests": 181,
+    "project_tests": 183,
     "upstream_cli_tests": 7,
     "pinned_cli_dry_run": "PASS",
     "all_vms_stopped": true
+  },
+  "code_index": {
+    "status": "READY",
+    "partial_evidence_json_files": 2,
+    "strict_json_evidence_files_checked": 106,
+    "strict_json_validation": "PASS",
+    "note": "MCP parser warns at finite App::Plane surface area 8e+100; this is valid JSON."
   },
   "go_no_go": {
     "cli_collection": "GO",
