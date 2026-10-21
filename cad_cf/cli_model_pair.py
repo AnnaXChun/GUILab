@@ -18,6 +18,17 @@ The stored measurement must update after exposed radii change and FreeCAD recomp
 including after saving, closing and reopening, without running this block again.
 """
 
+# Generic interface knowledge, deliberately no task-specific geometry formula.
+API_GUIDANCE = """FreeCAD API notes verified in this runtime:
+Check an object's property using 'PropertyName' in obj.PropertiesList. Do not use hasProperty.
+setExpression takes a FreeCAD expression string, not Python code: pi is a built-in constant,
+and ^ is exponentiation. Python math.pi and ** are not expression-language syntax.
+Native length properties carry units. For a dimensionless App::PropertyFloat, divide a
+length by (1 mm), or an area by (1 mm^2). Generic box example:
+obj.setExpression('NumericArea', 'Width * Height / (1 mm^2)').
+Use named native parameters for persisted dependencies. The caller runs recompute.
+"""
+
 
 def template_pair(instruction):
     pair = {"id": "model-generated-torus-measurement", "intent": {"primitive": "torus", "parameters": {"Radius1": 5., "Radius2": 2.},
@@ -87,12 +98,13 @@ def candidate_code(text):
     return code
 
 
-def model_messages(pair, seed):
+def model_messages(pair, seed, *, api_guidance=False):
     # Native object observations only; source task config and verifier output are excluded.
     public = {"instruction": pair["intent"]["instruction"], "semantic_subgoal": "Store torus surface area with persisted radius-response dependency",
               "existing_native_document": seed["native_state"], "seed_sha256": seed["seed_sha256"],
               "seed_state_sha256": seed["seed_state_sha256"], "output_property": "SurfaceArea_mm2 (numeric mm^2)"}
-    return [{"role": "system", "content": SYSTEM}, {"role": "user", "content": json.dumps(public, sort_keys=True, allow_nan=False)}]
+    return [{"role": "system", "content": SYSTEM + (API_GUIDANCE if api_guidance else "")},
+            {"role": "user", "content": json.dumps(public, sort_keys=True, allow_nan=False)}]
 
 
 def selection_controls(result):

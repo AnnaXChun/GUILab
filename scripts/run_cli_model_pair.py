@@ -62,7 +62,7 @@ def collect_candidates(pair, seed, output, config, *, client=None):
         raise ValueError('native S0 must be captured before model request')
     if client is None and os.environ.get('ENABLE_PAID_RUNS', '0') != '1':
         raise RuntimeError('NOT_RUN_BUDGET: ENABLE_PAID_RUNS=0')
-    messages = model_messages(pair, seed)
+    messages = model_messages(pair, seed, api_guidance=config.get('api_guidance', False))
     save(output/"model_input.json", {'messages': messages, 'prompt_sha256': digest(messages), 'seed_sha256': seed['seed_sha256'],
                                   'seed_state_sha256': seed['seed_state_sha256'], 'official_evaluation_available': False})
     from openai import OpenAI

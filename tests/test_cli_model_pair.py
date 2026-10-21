@@ -116,3 +116,62 @@ def test_read_only_property_query_is_allowed_for_fixed_measurement():
     code="torus_obj=doc.getObject('Torus')\nif not torus_obj.hasProperty('SurfaceArea_mm2'):\n    torus_obj.addProperty('App::PropertyFloat','SurfaceArea_mm2')\n"
     assert candidate_code(json.dumps({'code':code}))==code
     with pytest.raises(ValueError):candidate_code(json.dumps({'code':code.replace('SurfaceArea_mm2','Radius1')}))
+
+
+def test_guidance_is_generic_and_old_prompt_unchanged():
+    from cad_cf.cli_model_pair import API_GUIDANCE, SYSTEM
+    p=template_pair('public task')
+    old=model_messages(p,seed())
+    guided=model_messages(p,seed(),api_guidance=True)
+    assert old[0]['content']==SYSTEM
+    assert guided[0]['content']==SYSTEM+API_GUIDANCE
+    assert old[1]==guided[1]
+    assert all(answer not in API_GUIDANCE for answer in ('Radius1','Radius2','39.478','4 * pi','Torus','394.78'))
+    assert 'PropertiesList' in API_GUIDANCE and 'Width * Height' in API_GUIDANCE
+
+
+def test_properties_list_model_source_allowed_without_rewrite():
+    code="torus_obj=doc.getObject('Torus')\nif 'SurfaceArea_mm2' not in torus_obj.PropertiesList:\n    torus_obj.addProperty('App::PropertyFloat','SurfaceArea_mm2')\n"
+    assert candidate_code(json.dumps({'code':code}))==code
+
+
+def test_guided_native_probe_gate_and_saved_s0_hashes(tmp_path):
+    from scripts.run_guided_cli_model_pair import after_prepare, restore_worker
+    config=json.loads(CONFIG.read_text());s=seed()
+    config.update(api_guidance=True,seed_sha256=s['seed_sha256'],seed_state_sha256=s['seed_state_sha256'])
+    plan={'pairs':[template_pair(config['public_instruction'])]}
+    prepared={'seeds':{plan['pairs'][0]['id']:s},'generic_api_probe':{'status':'FAIL'}}
+    client=Client([])
+    with pytest.raises(RuntimeError,match='no model requests'):
+        after_prepare(plan,prepared,tmp_path,config,client=client)
+    assert client.requests==[]
+    assert not (tmp_path/'model_batch.sqlite').exists()
+    prepared['generic_api_probe']['status']='PASS'
+    client=Client([json.dumps({'code':FORMULA})]*2)
+    after_prepare(plan,prepared,tmp_path,config,client=client)
+    assert plan['generic_api_verified_before_requests']
+    assert 'PropertiesList' in client.requests[0]['messages'][0]['content']
+    assert client.requests[0]['messages']==client.requests[1]['messages']
+    compile(restore_worker(s),'restore','exec')
+
+
+def test_guided_same_s0_mismatch_blocks_requests(tmp_path):
+    from scripts.run_guided_cli_model_pair import after_prepare
+    config={'seed_sha256':'different','seed_state_sha256':'state'}
+    plan={'pairs':[template_pair('public task')]}
+    client=Client([])
+    prepared={'seeds':{plan['pairs'][0]['id']:seed()},'generic_api_probe':{'status':'PASS'}}
+    with pytest.raises(ValueError,match='S0 differs'):
+        after_prepare(plan,prepared,tmp_path,config,client=client)
+    assert not (tmp_path/'captured_s0.json').exists() and client.requests==[]
+
+
+def test_guided_paid_gate_and_mock(monkeypatch,tmp_path):
+    from scripts.run_guided_cli_model_pair import main as guided_main
+    monkeypatch.setenv('ENABLE_PAID_RUNS','0')
+    with pytest.raises(SystemExit):guided_main(['--output',str(tmp_path/'blocked')])
+    assert not (tmp_path/'blocked').exists()
+    assert guided_main(['--dry-run','--output',str(tmp_path/'mock')])==0
+    result=json.loads((tmp_path/'mock/summary.json').read_text())
+    assert result['mode']=='MOCK_ONLY' and result['model_calls']==0
+    assert result['A']==result['B']==1 and result['credit']==0
