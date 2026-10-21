@@ -75,7 +75,7 @@
     "public_copy": "reports/evidence/cli_focus_20261021/cli_data_20261021"
   },
   "verification": {
-    "project_tests": 183,
+    "project_tests": 210,
     "upstream_cli_tests": 7,
     "pinned_cli_dry_run": "PASS",
     "all_vms_stopped": true
@@ -93,7 +93,9 @@
     "public_reward_smoke": "GO",
     "sft_rl_training": "NO-GO",
     "paper_reproduction": "NO-GO",
-    "actc_research": "STOPPED_BY_USER"
+    "actc_research": "STOPPED_BY_USER",
+    "controlled_structural_credit_diagnostics": "GO",
+    "structural_credit_method_advantage": "NO-GO"
   },
   "training": {
     "started": false,
@@ -101,7 +103,19 @@
       "Only 3 audited SFT examples",
       "Trainable weights, training GPU and trainer not configured or validated"
     ],
-    "next_action": "Freeze CLI task-family splits, compare original prompt with public API guidance under equal budgets, expand public native rewards and collect data before small-model SFT/RL."
+    "next_action": "Controlled structural-credit fixtures completed. Freeze real CLI block substitutions, intent/S0/continuations and task-family splits; compare against the same terminal checker, step validation, equal-budget Best-of-2 and shuffled credit before training."
+  },
+  "structural_credit_diagnostic": {
+    "status_file": "reports/CLI_STRUCTURAL_CREDIT_STATUS.json",
+    "report": "reports/CLI_STRUCTURAL_CREDIT_20261021.md",
+    "unique_controlled_fixtures": 3,
+    "corrected_credits": [1, 0, 1],
+    "dispatches": 14,
+    "model_calls": 0,
+    "benchmark_episodes_added": 0,
+    "training_rows_added": 0,
+    "strong_os_isolation_validated": false,
+    "method_advantage_measured": false
   },
   "original_actc": {
     "real_pairs": 0,

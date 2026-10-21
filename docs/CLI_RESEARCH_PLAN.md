@@ -2,6 +2,8 @@
 
 本文件落实 2026-10-21 用户的新方向：停止 GUI，围绕 CADWorld CLI 做数据清洗、RL 和成功率改进。`SPEC.md` 保留原 ACTC 方案，涉及 GUI/API 路由的 RQ、P1–P3 gate 和 novelty 不再作为本方向的研究主张。旧 GUI 成绩和失败仍保留，不能据此声称 ACTC 已完成。
 
+用户随后指出普通 SFT/RL 缺少方法创新，并要求继续验证。当前优先验证 [CLI 结构信用](CLI_STRUCTURAL_CREDIT.md)：在初始几何相同的条件下，参数干预能否识别错误依赖，固定续执行下的代码替换能否产生可归因的相对收益。先用三个可信 fixture 排查信号和检查器，再决定是否收集模型配对轨迹。SFT/RL 作为后续优化对照，研究价值取决于相同检查器、相同预算下的实际收益。
+
 ## 当前要解决的问题
 
 FreeCAD CLI 能创建原生参数化工程。现有失败包括 API 名称错误、草图 attachment 错误、缺失有效 feature 以及未保存文件。先逐条核查轨迹与原生 artifact，再选择改进方法；不将所有失败概括成 CLI 的能力上限。
@@ -31,6 +33,6 @@ FreeCAD CLI 能创建原生参数化工程。现有失败包括 API 名称错误
 
 首个真实小批结果与 native audit 完成后，依据失败类型决定下一批：优先减少错误 API 调用和原生结构失效，随后扩充任务家族。真实 RL、训练效果及总体成功率目前不作预期数值。
 
-本轮已完成：两题 1 通过、1 失败，6 文件审计后导出 3 条 SFT，见 `reports/CLI_FOCUS_20261021.md`。下一批围绕 attachment、native feature 和测量对象，用相同模型与预算比较原 prompt 和通用 API 使用说明。资料只取自公开 FreeCAD API，不能输入任务 evaluator 或参考答案。
+此前模型小批已完成：两题 1 通过、1 失败，6 文件审计后导出 3 条 SFT，见 `reports/CLI_FOCUS_20261021.md`。当前新增结构信用诊断单列为 controlled synthetic，不增加 CADWorld episode 或训练样本。先处理诊断失败，再在真实 CLI 轨迹中冻结构造块、公开目标、S0 和后续执行，收集少量严格配对证据。通用 API 使用说明仍可作为成功率对照，资料只取自公开 API，不包含 evaluator 或参考答案。
 
 后续训练采集可以单独验证 Linux 容器中的 FreeCADCmd，减少 TCG 冷启动成本；这条路径不依赖 KVM。先核对 FreeCAD 版本、对象行为、任务重置和原生文件检查，通过后再作为扩展执行协议单列。当前小批仍使用官方 VM，不把容器方案写成已验证环境。

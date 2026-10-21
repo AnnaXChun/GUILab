@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-21",
+  "classification": "controlled_synthetic_cli_diagnostic",
+  "report": "reports/CLI_STRUCTURAL_CREDIT_20261021.md",
+  "evidence_index": "reports/evidence/cli_structural_credit_20261021/INDEX.json",
+  "platform": "macOS ARM QEMU TCG, official Ubuntu VM, FreeCAD 1.1.0",
+  "unique_fixtures": 3,
+  "runs": [
+    {"id": "structural_credit_native_20261021_001", "credits": [0, 0, 1], "dispatches": 7, "elapsed_seconds": 371.261, "initial_checks_pass": 2, "probe_failures": 40, "note": "torus conservative BoundBox caused checker false negatives; raw result retained"},
+    {"id": "structural_credit_native_20261021_002", "credits": [1, 0, 1], "dispatches": 7, "elapsed_seconds": 429.346, "initial_checks_pass": 6, "probe_failures": 20, "native_bbox_method": "optimalBoundingBox(False,False)"}
+  ],
+  "dispatches": 14,
+  "uncertain_dispatches": 0,
+  "model_calls": 0,
+  "benchmark_episodes": 0,
+  "original_actc_pairs": 0,
+  "training_rows_added": 0,
+  "native_artifacts": 12,
+  "same_s0_seed_bytes_and_native_state": "PASS",
+  "same_intent_and_fixed_continuation": "PASS",
+  "executed_payload_and_source_audit": "PASS",
+  "native_save_close_reopen_and_sha": "PASS",
+  "isolation": "document/process/workdir within shared VM; strong OS sandbox not validated",
+  "corrected_run_independent_cwd_count": 6,
+  "all_vms_stopped": true,
+  "project_tests": 210,
+  "upstream_cli_tests": 7,
+  "graph_additional_discrimination": 0,
+  "control_scope": "offline reuse of identical observations; independent training comparisons not run",
+  "go_no_go": {
+    "controlled_parameter_response_diagnostics": "GO",
+    "design_small_model_trajectory_credit_pilot": "GO",
+    "method_novelty_claim": "NO-GO",
+    "sft_rl_training": "NO-GO"
+  },
+  "next_action": "Freeze real CLI block substitutions, task-family splits and fixed continuations; compare credit against the same terminal checker, step validation, equal-budget Best-of-2 and shuffled credit."
+}

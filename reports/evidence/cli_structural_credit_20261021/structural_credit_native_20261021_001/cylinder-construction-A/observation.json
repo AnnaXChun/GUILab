@@ -1,0 +1,1213 @@
+{
+  "classification": "controlled_native_cli_diagnostic",
+  "benchmark_episode": false,
+  "training_eligible": false,
+  "model_calls": 0,
+  "pid": 3010,
+  "workdir": "/home/user/.structural_credit_508a2c68e880/cylinder-construction-A",
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "intent_sha256": "16fea26e3705e1deefbf08d0330613950bc30e3d1800bb8d95043792ed47dc5d",
+  "probes_sha256": "6f6830ac2a8789f35666972d6d26cf2e36698e19629e1998894b8499f3bf6530",
+  "seed_code_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "prefix_sha256": "c50ee46bf32974baaad1c61b07860f5f4cf8c1bace6e116cd0b950648e252759",
+  "continuation_sha256": "62f800c03966a7421ee32b56c410586c2a223f529a1cd1661ab8b4ef7a7e1b82",
+  "candidate_sha256": "60cc76b3fe0b87f38be72dac62b59700fb5a67eb2697adac6ba2f4210c07f8d5",
+  "seed_sha256": "994146fce2337920c791d6c7f5dc4edbf353cf20bf2922fe56f6fabe77881502",
+  "seed_state_sha256": "61d42896690ba3210cc7b86d29917e85206a8c3bd1f134feff77171be2022b95",
+  "artifact_sha256": "34d1bcbce84f7db7e351b88d04e8de885140ed0968310a6e7d4474fa9ac87d55",
+  "saved_file_unchanged": true,
+  "native_reopen_equal": true,
+  "probes_from_artifact_copies": true,
+  "candidate_executions": 1,
+  "continuation_executions": 7,
+  "initial": {
+    "Guard": {
+      "valid": true,
+      "area": 94.0,
+      "volume": 60.0,
+      "bbox": [
+        30.0,
+        0.0,
+        0.0,
+        33.0,
+        4.0,
+        5.0
+      ],
+      "com": [
+        31.5,
+        2.0,
+        2.5
+      ]
+    },
+    "Measure": {
+      "valid": true,
+      "area": 188.49555922,
+      "volume": 197.92033718
+    },
+    "Target": {
+      "valid": true,
+      "area": 188.49555922,
+      "volume": 197.92033718,
+      "bbox": [
+        -3.0,
+        -3.0,
+        0.0,
+        3.0,
+        3.0,
+        7.0
+      ],
+      "com": [
+        -0.0,
+        0.0,
+        3.5
+      ]
+    }
+  },
+  "reopened": {
+    "Guard": {
+      "valid": true,
+      "area": 94.0,
+      "volume": 60.0,
+      "bbox": [
+        30.0,
+        0.0,
+        0.0,
+        33.0,
+        4.0,
+        5.0
+      ],
+      "com": [
+        31.5,
+        2.0,
+        2.5
+      ]
+    },
+    "Measure": {
+      "valid": true,
+      "area": 188.49555922,
+      "volume": 197.92033718
+    },
+    "Target": {
+      "valid": true,
+      "area": 188.49555922,
+      "volume": 197.92033718,
+      "bbox": [
+        -3.0,
+        -3.0,
+        0.0,
+        3.0,
+        3.0,
+        7.0
+      ],
+      "com": [
+        -0.0,
+        -0.0,
+        3.5
+      ]
+    }
+  },
+  "dependency_state": {
+    "objects": [
+      {
+        "name": "Guard",
+        "type_id": "Part::Box",
+        "errors": [],
+        "dependencies": [],
+        "parameters": {
+          "Height": 5.0,
+          "Length": 3.0,
+          "Width": 4.0
+        },
+        "placement": [
+          1.0,
+          0.0,
+          0.0,
+          30.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "geometry": {
+          "valid": true,
+          "area": 94.0,
+          "volume": 60.0,
+          "bbox": [
+            30.0,
+            0.0,
+            0.0,
+            33.0,
+            4.0,
+            5.0
+          ],
+          "com": [
+            31.5,
+            2.0,
+            2.5
+          ]
+        }
+      },
+      {
+        "name": "Measure",
+        "type_id": "App::FeaturePython",
+        "errors": [],
+        "dependencies": [
+          "Target"
+        ],
+        "parameters": {
+          "Area": 188.49555922,
+          "Volume": 197.92033718
+        },
+        "placement": null,
+        "geometry": {
+          "valid": true,
+          "area": 188.49555922,
+          "volume": 197.92033718
+        }
+      },
+      {
+        "name": "Target",
+        "type_id": "Part::Cylinder",
+        "errors": [],
+        "dependencies": [],
+        "parameters": {
+          "Radius": 3.0,
+          "Height": 7.0
+        },
+        "placement": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "geometry": {
+          "valid": true,
+          "area": 188.49555922,
+          "volume": 197.92033718,
+          "bbox": [
+            -3.0,
+            -3.0,
+            0.0,
+            3.0,
+            3.0,
+            7.0
+          ],
+          "com": [
+            -0.0,
+            -0.0,
+            3.5
+          ]
+        }
+      }
+    ]
+  },
+  "probes": [
+    {
+      "id": "zero",
+      "state": {
+        "Guard": {
+          "valid": true,
+          "area": 94.0,
+          "volume": 60.0,
+          "bbox": [
+            30.0,
+            0.0,
+            0.0,
+            33.0,
+            4.0,
+            5.0
+          ],
+          "com": [
+            31.5,
+            2.0,
+            2.5
+          ]
+        },
+        "Measure": {
+          "valid": true,
+          "area": 188.49555922,
+          "volume": 197.92033718
+        },
+        "Target": {
+          "valid": true,
+          "area": 188.49555922,
+          "volume": 197.92033718,
+          "bbox": [
+            -3.0,
+            -3.0,
+            0.0,
+            3.0,
+            3.0,
+            7.0
+          ],
+          "com": [
+            -0.0,
+            0.0,
+            3.5
+          ]
+        }
+      },
+      "dependency_state": {
+        "objects": [
+          {
+            "name": "Guard",
+            "type_id": "Part::Box",
+            "errors": [],
+            "dependencies": [],
+            "parameters": {
+              "Height": 5.0,
+              "Length": 3.0,
+              "Width": 4.0
+            },
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              30.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "geometry": {
+              "valid": true,
+              "area": 94.0,
+              "volume": 60.0,
+              "bbox": [
+                30.0,
+                0.0,
+                0.0,
+                33.0,
+                4.0,
+                5.0
+              ],
+              "com": [
+                31.5,
+                2.0,
+                2.5
+              ]
+            }
+          },
+          {
+            "name": "Measure",
+            "type_id": "App::FeaturePython",
+            "errors": [],
+            "dependencies": [
+              "Target"
+            ],
+            "parameters": {
+              "Area": 188.49555922,
+              "Volume": 197.92033718
+            },
+            "placement": null,
+            "geometry": {
+              "valid": true,
+              "area": 188.49555922,
+              "volume": 197.92033718
+            }
+          },
+          {
+            "name": "Target",
+            "type_id": "Part::Cylinder",
+            "errors": [],
+            "dependencies": [],
+            "parameters": {
+              "Radius": 3.0,
+              "Height": 7.0
+            },
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "geometry": {
+              "valid": true,
+              "area": 188.49555922,
+              "volume": 197.92033718,
+              "bbox": [
+                -3.0,
+                -3.0,
+                0.0,
+                3.0,
+                3.0,
+                7.0
+              ],
+              "com": [
+                -0.0,
+                0.0,
+                3.5
+              ]
+            }
+          }
+        ]
+      },
+      "source_artifact_sha256": "34d1bcbce84f7db7e351b88d04e8de885140ed0968310a6e7d4474fa9ac87d55",
+      "changes_performed_only_in_memory": true
+    },
+    {
+      "id": "Radius-0.8",
+      "state": {
+        "Guard": {
+          "valid": true,
+          "area": 94.0,
+          "volume": 60.0,
+          "bbox": [
+            30.0,
+            0.0,
+            0.0,
+            33.0,
+            4.0,
+            5.0
+          ],
+          "com": [
+            31.5,
+            2.0,
+            2.5
+          ]
+        },
+        "Measure": {
+          "valid": true,
+          "area": 141.74866053,
+          "volume": 126.66901579
+        },
+        "Target": {
+          "valid": true,
+          "area": 141.74866053,
+          "volume": 126.66901579,
+          "bbox": [
+            -2.4,
+            -2.4,
+            0.0,
+            2.4,
+            2.4,
+            7.0
+          ],
+          "com": [
+            -0.0,
+            -0.0,
+            3.5
+          ]
+        }
+      },
+      "dependency_state": {
+        "objects": [
+          {
+            "name": "Guard",
+            "type_id": "Part::Box",
+            "errors": [],
+            "dependencies": [],
+            "parameters": {
+              "Height": 5.0,
+              "Length": 3.0,
+              "Width": 4.0
+            },
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              30.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "geometry": {
+              "valid": true,
+              "area": 94.0,
+              "volume": 60.0,
+              "bbox": [
+                30.0,
+                0.0,
+                0.0,
+                33.0,
+                4.0,
+                5.0
+              ],
+              "com": [
+                31.5,
+                2.0,
+                2.5
+              ]
+            }
+          },
+          {
+            "name": "Measure",
+            "type_id": "App::FeaturePython",
+            "errors": [],
+            "dependencies": [
+              "Target"
+            ],
+            "parameters": {
+              "Area": 141.74866053,
+              "Volume": 126.66901579
+            },
+            "placement": null,
+            "geometry": {
+              "valid": true,
+              "area": 141.74866053,
+              "volume": 126.66901579
+            }
+          },
+          {
+            "name": "Target",
+            "type_id": "Part::Cylinder",
+            "errors": [],
+            "dependencies": [],
+            "parameters": {
+              "Radius": 2.4,
+              "Height": 7.0
+            },
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "geometry": {
+              "valid": true,
+              "area": 141.74866053,
+              "volume": 126.66901579,
+              "bbox": [
+                -2.4,
+                -2.4,
+                0.0,
+                2.4,
+                2.4,
+                7.0
+              ],
+              "com": [
+                -0.0,
+                -0.0,
+                3.5
+              ]
+            }
+          }
+        ]
+      },
+      "source_artifact_sha256": "34d1bcbce84f7db7e351b88d04e8de885140ed0968310a6e7d4474fa9ac87d55",
+      "changes_performed_only_in_memory": true
+    },
+    {
+      "id": "Radius-1.2",
+      "state": {
+        "Guard": {
+          "valid": true,
+          "area": 94.0,
+          "volume": 60.0,
+          "bbox": [
+            30.0,
+            0.0,
+            0.0,
+            33.0,
+            4.0,
+            5.0
+          ],
+          "com": [
+            31.5,
+            2.0,
+            2.5
+          ]
+        },
+        "Measure": {
+          "valid": true,
+          "area": 239.76635132,
+          "volume": 285.00528553
+        },
+        "Target": {
+          "valid": true,
+          "area": 239.76635132,
+          "volume": 285.00528553,
+          "bbox": [
+            -3.6,
+            -3.6,
+            0.0,
+            3.6,
+            3.6,
+            7.0
+          ],
+          "com": [
+            0.0,
+            0.0,
+            3.5
+          ]
+        }
+      },
+      "dependency_state": {
+        "objects": [
+          {
+            "name": "Guard",
+            "type_id": "Part::Box",
+            "errors": [],
+            "dependencies": [],
+            "parameters": {
+              "Height": 5.0,
+              "Length": 3.0,
+              "Width": 4.0
+            },
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              30.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "geometry": {
+              "valid": true,
+              "area": 94.0,
+              "volume": 60.0,
+              "bbox": [
+                30.0,
+                0.0,
+                0.0,
+                33.0,
+                4.0,
+                5.0
+              ],
+              "com": [
+                31.5,
+                2.0,
+                2.5
+              ]
+            }
+          },
+          {
+            "name": "Measure",
+            "type_id": "App::FeaturePython",
+            "errors": [],
+            "dependencies": [
+              "Target"
+            ],
+            "parameters": {
+              "Area": 239.76635132,
+              "Volume": 285.00528553
+            },
+            "placement": null,
+            "geometry": {
+              "valid": true,
+              "area": 239.76635132,
+              "volume": 285.00528553
+            }
+          },
+          {
+            "name": "Target",
+            "type_id": "Part::Cylinder",
+            "errors": [],
+            "dependencies": [],
+            "parameters": {
+              "Radius": 3.6,
+              "Height": 7.0
+            },
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "geometry": {
+              "valid": true,
+              "area": 239.76635132,
+              "volume": 285.00528553,
+              "bbox": [
+                -3.6,
+                -3.6,
+                0.0,
+                3.6,
+                3.6,
+                7.0
+              ],
+              "com": [
+                0.0,
+                0.0,
+                3.5
+              ]
+            }
+          }
+        ]
+      },
+      "source_artifact_sha256": "34d1bcbce84f7db7e351b88d04e8de885140ed0968310a6e7d4474fa9ac87d55",
+      "changes_performed_only_in_memory": true
+    },
+    {
+      "id": "Height-0.8",
+      "state": {
+        "Guard": {
+          "valid": true,
+          "area": 94.0,
+          "volume": 60.0,
+          "bbox": [
+            30.0,
+            0.0,
+            0.0,
+            33.0,
+            4.0,
+            5.0
+          ],
+          "com": [
+            31.5,
+            2.0,
+            2.5
+          ]
+        },
+        "Measure": {
+          "valid": true,
+          "area": 162.10618093,
+          "volume": 158.33626974
+        },
+        "Target": {
+          "valid": true,
+          "area": 162.10618093,
+          "volume": 158.33626974,
+          "bbox": [
+            -3.0,
+            -3.0,
+            0.0,
+            3.0,
+            3.0,
+            5.6
+          ],
+          "com": [
+            -0.0,
+            0.0,
+            2.8
+          ]
+        }
+      },
+      "dependency_state": {
+        "objects": [
+          {
+            "name": "Guard",
+            "type_id": "Part::Box",
+            "errors": [],
+            "dependencies": [],
+            "parameters": {
+              "Height": 5.0,
+              "Length": 3.0,
+              "Width": 4.0
+            },
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              30.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "geometry": {
+              "valid": true,
+              "area": 94.0,
+              "volume": 60.0,
+              "bbox": [
+                30.0,
+                0.0,
+                0.0,
+                33.0,
+                4.0,
+                5.0
+              ],
+              "com": [
+                31.5,
+                2.0,
+                2.5
+              ]
+            }
+          },
+          {
+            "name": "Measure",
+            "type_id": "App::FeaturePython",
+            "errors": [],
+            "dependencies": [
+              "Target"
+            ],
+            "parameters": {
+              "Area": 162.10618093,
+              "Volume": 158.33626974
+            },
+            "placement": null,
+            "geometry": {
+              "valid": true,
+              "area": 162.10618093,
+              "volume": 158.33626974
+            }
+          },
+          {
+            "name": "Target",
+            "type_id": "Part::Cylinder",
+            "errors": [],
+            "dependencies": [],
+            "parameters": {
+              "Radius": 3.0,
+              "Height": 5.6
+            },
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "geometry": {
+              "valid": true,
+              "area": 162.10618093,
+              "volume": 158.33626974,
+              "bbox": [
+                -3.0,
+                -3.0,
+                0.0,
+                3.0,
+                3.0,
+                5.6
+              ],
+              "com": [
+                -0.0,
+                0.0,
+                2.8
+              ]
+            }
+          }
+        ]
+      },
+      "source_artifact_sha256": "34d1bcbce84f7db7e351b88d04e8de885140ed0968310a6e7d4474fa9ac87d55",
+      "changes_performed_only_in_memory": true
+    },
+    {
+      "id": "Height-1.2",
+      "state": {
+        "Guard": {
+          "valid": true,
+          "area": 94.0,
+          "volume": 60.0,
+          "bbox": [
+            30.0,
+            0.0,
+            0.0,
+            33.0,
+            4.0,
+            5.0
+          ],
+          "com": [
+            31.5,
+            2.0,
+            2.5
+          ]
+        },
+        "Measure": {
+          "valid": true,
+          "area": 214.88493751,
+          "volume": 237.50440461
+        },
+        "Target": {
+          "valid": true,
+          "area": 214.88493751,
+          "volume": 237.50440461,
+          "bbox": [
+            -3.0,
+            -3.0,
+            0.0,
+            3.0,
+            3.0,
+            8.4
+          ],
+          "com": [
+            0.0,
+            0.0,
+            4.2
+          ]
+        }
+      },
+      "dependency_state": {
+        "objects": [
+          {
+            "name": "Guard",
+            "type_id": "Part::Box",
+            "errors": [],
+            "dependencies": [],
+            "parameters": {
+              "Height": 5.0,
+              "Length": 3.0,
+              "Width": 4.0
+            },
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              30.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "geometry": {
+              "valid": true,
+              "area": 94.0,
+              "volume": 60.0,
+              "bbox": [
+                30.0,
+                0.0,
+                0.0,
+                33.0,
+                4.0,
+                5.0
+              ],
+              "com": [
+                31.5,
+                2.0,
+                2.5
+              ]
+            }
+          },
+          {
+            "name": "Measure",
+            "type_id": "App::FeaturePython",
+            "errors": [],
+            "dependencies": [
+              "Target"
+            ],
+            "parameters": {
+              "Area": 214.88493751,
+              "Volume": 237.50440461
+            },
+            "placement": null,
+            "geometry": {
+              "valid": true,
+              "area": 214.88493751,
+              "volume": 237.50440461
+            }
+          },
+          {
+            "name": "Target",
+            "type_id": "Part::Cylinder",
+            "errors": [],
+            "dependencies": [],
+            "parameters": {
+              "Radius": 3.0,
+              "Height": 8.4
+            },
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "geometry": {
+              "valid": true,
+              "area": 214.88493751,
+              "volume": 237.50440461,
+              "bbox": [
+                -3.0,
+                -3.0,
+                0.0,
+                3.0,
+                3.0,
+                8.4
+              ],
+              "com": [
+                0.0,
+                0.0,
+                4.2
+              ]
+            }
+          }
+        ]
+      },
+      "source_artifact_sha256": "34d1bcbce84f7db7e351b88d04e8de885140ed0968310a6e7d4474fa9ac87d55",
+      "changes_performed_only_in_memory": true
+    },
+    {
+      "id": "guard-negative-control",
+      "state": {
+        "Guard": {
+          "valid": true,
+          "area": 104.8,
+          "volume": 72.0,
+          "bbox": [
+            30.0,
+            0.0,
+            0.0,
+            33.6,
+            4.0,
+            5.0
+          ],
+          "com": [
+            31.8,
+            2.0,
+            2.5
+          ]
+        },
+        "Measure": {
+          "valid": true,
+          "area": 188.49555922,
+          "volume": 197.92033718
+        },
+        "Target": {
+          "valid": true,
+          "area": 188.49555922,
+          "volume": 197.92033718,
+          "bbox": [
+            -3.0,
+            -3.0,
+            0.0,
+            3.0,
+            3.0,
+            7.0
+          ],
+          "com": [
+            -0.0,
+            -0.0,
+            3.5
+          ]
+        }
+      },
+      "dependency_state": {
+        "objects": [
+          {
+            "name": "Guard",
+            "type_id": "Part::Box",
+            "errors": [],
+            "dependencies": [],
+            "parameters": {
+              "Height": 5.0,
+              "Length": 3.6,
+              "Width": 4.0
+            },
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              30.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "geometry": {
+              "valid": true,
+              "area": 104.8,
+              "volume": 72.0,
+              "bbox": [
+                30.0,
+                0.0,
+                0.0,
+                33.6,
+                4.0,
+                5.0
+              ],
+              "com": [
+                31.8,
+                2.0,
+                2.5
+              ]
+            }
+          },
+          {
+            "name": "Measure",
+            "type_id": "App::FeaturePython",
+            "errors": [],
+            "dependencies": [
+              "Target"
+            ],
+            "parameters": {
+              "Area": 188.49555922,
+              "Volume": 197.92033718
+            },
+            "placement": null,
+            "geometry": {
+              "valid": true,
+              "area": 188.49555922,
+              "volume": 197.92033718
+            }
+          },
+          {
+            "name": "Target",
+            "type_id": "Part::Cylinder",
+            "errors": [],
+            "dependencies": [],
+            "parameters": {
+              "Radius": 3.0,
+              "Height": 7.0
+            },
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "geometry": {
+              "valid": true,
+              "area": 188.49555922,
+              "volume": 197.92033718,
+              "bbox": [
+                -3.0,
+                -3.0,
+                0.0,
+                3.0,
+                3.0,
+                7.0
+              ],
+              "com": [
+                -0.0,
+                -0.0,
+                3.5
+              ]
+            }
+          }
+        ]
+      },
+      "source_artifact_sha256": "34d1bcbce84f7db7e351b88d04e8de885140ed0968310a6e7d4474fa9ac87d55",
+      "changes_performed_only_in_memory": true
+    }
+  ]
+}

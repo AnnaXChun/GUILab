@@ -1,0 +1,216 @@
+{
+  "mode": "prepare",
+  "root": "/home/user/.structural_credit_cbe0912ca3ef/seeds",
+  "pairs": [
+    {
+      "id": "torus-construction",
+      "block": "construction",
+      "intent": {
+        "primitive": "torus",
+        "parameters": {
+          "Radius1": 5.0,
+          "Radius2": 2.0
+        },
+        "target": "Target",
+        "measurement": "Measure",
+        "preserved": "Guard"
+      },
+      "probes": [
+        {
+          "id": "zero",
+          "object": "Target",
+          "parameter": "Radius1",
+          "factor": 1.0
+        },
+        {
+          "id": "Radius1-0.8",
+          "object": "Target",
+          "parameter": "Radius1",
+          "factor": 0.8
+        },
+        {
+          "id": "Radius1-1.2",
+          "object": "Target",
+          "parameter": "Radius1",
+          "factor": 1.2
+        },
+        {
+          "id": "Radius2-0.8",
+          "object": "Target",
+          "parameter": "Radius2",
+          "factor": 0.8
+        },
+        {
+          "id": "Radius2-1.2",
+          "object": "Target",
+          "parameter": "Radius2",
+          "factor": 1.2
+        },
+        {
+          "id": "guard-negative-control",
+          "object": "Guard",
+          "parameter": "Length",
+          "factor": 1.2
+        }
+      ],
+      "seed_code": "",
+      "prefix": "def read_measure(doc):\n    s=doc.getObject('Target').Shape\n    return s.Area,s.Volume\n",
+      "continuation": "doc.recompute()\nmeasure=doc.getObject('Measure')\nif measure is None:\n    measure=doc.addObject('App::FeaturePython','Measure')\n    measure.addProperty('App::PropertyLink','Source')\n    measure.addProperty('App::PropertyArea','Area')\n    measure.addProperty('App::PropertyVolume','Volume')\nmeasure.Source=doc.getObject('Target')\narea,volume=read_measure(doc)\nmeasure.Area=area\nmeasure.Volume=volume\ndoc.recompute()\n",
+      "candidates": {
+        "A": "target=doc.addObject('Part::Torus','Target')\ntarget.Radius1=5.0\ntarget.Radius2=2.0\n",
+        "B": "target=doc.addObject('Part::Feature','Target')\ntarget.addProperty('App::PropertyLength','Radius1')\ntarget.Radius1=5.0\ntarget.addProperty('App::PropertyLength','Radius2')\ntarget.Radius2=2.0\ntarget.Shape=Part.makeTorus(5,2)\n"
+      },
+      "hashes": {
+        "intent_sha256": "b512ca20c0d2914e012bfcb23d34500b6f56f9068ab89f15d68c1c98e556be40",
+        "probes_sha256": "7219e4637b69550656b11f8db00375233dbb34b587e313567f576e72b69b9a01",
+        "seed_code_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "prefix_sha256": "c50ee46bf32974baaad1c61b07860f5f4cf8c1bace6e116cd0b950648e252759",
+        "continuation_sha256": "62f800c03966a7421ee32b56c410586c2a223f529a1cd1661ab8b4ef7a7e1b82",
+        "candidate_sha256": {
+          "A": "10aa3f6a82cdeda9dc8e70d0eeed0ecf685e14a518fae1c7345dc3ea19000249",
+          "B": "074026063b23f737f5027b707e7b52d19584938fe0a971093a878da6035482c8"
+        }
+      }
+    },
+    {
+      "id": "torus-measurement",
+      "block": "measurement",
+      "intent": {
+        "primitive": "torus",
+        "parameters": {
+          "Radius1": 5.0,
+          "Radius2": 2.0
+        },
+        "target": "Target",
+        "measurement": "Measure",
+        "preserved": "Guard"
+      },
+      "probes": [
+        {
+          "id": "zero",
+          "object": "Target",
+          "parameter": "Radius1",
+          "factor": 1.0
+        },
+        {
+          "id": "Radius1-0.8",
+          "object": "Target",
+          "parameter": "Radius1",
+          "factor": 0.8
+        },
+        {
+          "id": "Radius1-1.2",
+          "object": "Target",
+          "parameter": "Radius1",
+          "factor": 1.2
+        },
+        {
+          "id": "Radius2-0.8",
+          "object": "Target",
+          "parameter": "Radius2",
+          "factor": 0.8
+        },
+        {
+          "id": "Radius2-1.2",
+          "object": "Target",
+          "parameter": "Radius2",
+          "factor": 1.2
+        },
+        {
+          "id": "guard-negative-control",
+          "object": "Guard",
+          "parameter": "Length",
+          "factor": 1.2
+        }
+      ],
+      "seed_code": "target=doc.addObject('Part::Feature','Target')\ntarget.addProperty('App::PropertyLength','Radius1')\ntarget.Radius1=5.0\ntarget.addProperty('App::PropertyLength','Radius2')\ntarget.Radius2=2.0\ntarget.Shape=Part.makeTorus(5,2)\n",
+      "prefix": "",
+      "continuation": "doc.recompute()\nmeasure=doc.getObject('Measure')\nif measure is None:\n    measure=doc.addObject('App::FeaturePython','Measure')\n    measure.addProperty('App::PropertyLink','Source')\n    measure.addProperty('App::PropertyArea','Area')\n    measure.addProperty('App::PropertyVolume','Volume')\nmeasure.Source=doc.getObject('Target')\narea,volume=read_measure(doc)\nmeasure.Area=area\nmeasure.Volume=volume\ndoc.recompute()\n",
+      "candidates": {
+        "A": "def read_measure(doc):\n    s=doc.getObject('Target').Shape\n    return s.Area,s.Volume\n",
+        "B": "def read_measure(doc):\n    t=doc.getObject('Target')\n    R,r=t.Radius1.Value,t.Radius2.Value\n    return 4*math.pi**2*R*r,2*math.pi**2*R*r*r\n"
+      },
+      "hashes": {
+        "intent_sha256": "b512ca20c0d2914e012bfcb23d34500b6f56f9068ab89f15d68c1c98e556be40",
+        "probes_sha256": "7219e4637b69550656b11f8db00375233dbb34b587e313567f576e72b69b9a01",
+        "seed_code_sha256": "074026063b23f737f5027b707e7b52d19584938fe0a971093a878da6035482c8",
+        "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "continuation_sha256": "62f800c03966a7421ee32b56c410586c2a223f529a1cd1661ab8b4ef7a7e1b82",
+        "candidate_sha256": {
+          "A": "c50ee46bf32974baaad1c61b07860f5f4cf8c1bace6e116cd0b950648e252759",
+          "B": "c9c18b1390b6bb37f85b6be71033d3b1a5a4081f1b7e812ddb5075c9d81d4ca2"
+        }
+      }
+    },
+    {
+      "id": "cylinder-construction",
+      "block": "construction",
+      "intent": {
+        "primitive": "cylinder",
+        "parameters": {
+          "Radius": 3.0,
+          "Height": 7.0
+        },
+        "target": "Target",
+        "measurement": "Measure",
+        "preserved": "Guard"
+      },
+      "probes": [
+        {
+          "id": "zero",
+          "object": "Target",
+          "parameter": "Radius",
+          "factor": 1.0
+        },
+        {
+          "id": "Radius-0.8",
+          "object": "Target",
+          "parameter": "Radius",
+          "factor": 0.8
+        },
+        {
+          "id": "Radius-1.2",
+          "object": "Target",
+          "parameter": "Radius",
+          "factor": 1.2
+        },
+        {
+          "id": "Height-0.8",
+          "object": "Target",
+          "parameter": "Height",
+          "factor": 0.8
+        },
+        {
+          "id": "Height-1.2",
+          "object": "Target",
+          "parameter": "Height",
+          "factor": 1.2
+        },
+        {
+          "id": "guard-negative-control",
+          "object": "Guard",
+          "parameter": "Length",
+          "factor": 1.2
+        }
+      ],
+      "seed_code": "",
+      "prefix": "def read_measure(doc):\n    s=doc.getObject('Target').Shape\n    return s.Area,s.Volume\n",
+      "continuation": "doc.recompute()\nmeasure=doc.getObject('Measure')\nif measure is None:\n    measure=doc.addObject('App::FeaturePython','Measure')\n    measure.addProperty('App::PropertyLink','Source')\n    measure.addProperty('App::PropertyArea','Area')\n    measure.addProperty('App::PropertyVolume','Volume')\nmeasure.Source=doc.getObject('Target')\narea,volume=read_measure(doc)\nmeasure.Area=area\nmeasure.Volume=volume\ndoc.recompute()\n",
+      "candidates": {
+        "A": "target=doc.addObject('Part::Cylinder','Target')\ntarget.Radius=3.0\ntarget.Height=7.0\n",
+        "B": "target=doc.addObject('Part::Feature','Target')\ntarget.addProperty('App::PropertyLength','Radius')\ntarget.Radius=3.0\ntarget.addProperty('App::PropertyLength','Height')\ntarget.Height=7.0\ntarget.Shape=Part.makeCylinder(3,7)\n"
+      },
+      "hashes": {
+        "intent_sha256": "16fea26e3705e1deefbf08d0330613950bc30e3d1800bb8d95043792ed47dc5d",
+        "probes_sha256": "6f6830ac2a8789f35666972d6d26cf2e36698e19629e1998894b8499f3bf6530",
+        "seed_code_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "prefix_sha256": "c50ee46bf32974baaad1c61b07860f5f4cf8c1bace6e116cd0b950648e252759",
+        "continuation_sha256": "62f800c03966a7421ee32b56c410586c2a223f529a1cd1661ab8b4ef7a7e1b82",
+        "candidate_sha256": {
+          "A": "60cc76b3fe0b87f38be72dac62b59700fb5a67eb2697adac6ba2f4210c07f8d5",
+          "B": "04a8e2b3b2734a6812910364c08e219f01cb80ab04a8d2b17b75507fbbe429b6"
+        }
+      }
+    }
+  ]
+}

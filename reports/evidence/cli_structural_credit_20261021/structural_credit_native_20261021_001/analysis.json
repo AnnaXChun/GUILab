@@ -1,0 +1,292 @@
+{
+  "classification": "offline_controlled_fixture_comparisons",
+  "benchmark_episodes": 0,
+  "initial_step_checks": [
+    {
+      "id": "torus-construction-A",
+      "initial_checks_pass": false,
+      "terminal_q": 0
+    },
+    {
+      "id": "torus-construction-B",
+      "initial_checks_pass": false,
+      "terminal_q": 0
+    },
+    {
+      "id": "torus-measurement-A",
+      "initial_checks_pass": false,
+      "terminal_q": 0
+    },
+    {
+      "id": "torus-measurement-B",
+      "initial_checks_pass": false,
+      "terminal_q": 0
+    },
+    {
+      "id": "cylinder-construction-A",
+      "initial_checks_pass": true,
+      "terminal_q": 1
+    },
+    {
+      "id": "cylinder-construction-B",
+      "initial_checks_pass": true,
+      "terminal_q": 0
+    }
+  ],
+  "probe_failures": [
+    {
+      "id": "torus-construction-A",
+      "probe": "initial",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-construction-A",
+      "probe": "zero",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-construction-A",
+      "probe": "Radius1-0.8",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-construction-A",
+      "probe": "Radius1-1.2",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-construction-A",
+      "probe": "Radius2-0.8",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-construction-A",
+      "probe": "Radius2-1.2",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-construction-A",
+      "probe": "guard-negative-control",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-construction-A",
+      "probe": "guard-negative-control",
+      "check": "negative_control"
+    },
+    {
+      "id": "torus-construction-B",
+      "probe": "initial",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-construction-B",
+      "probe": "zero",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-construction-B",
+      "probe": "Radius1-0.8",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-construction-B",
+      "probe": "Radius1-1.2",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-construction-B",
+      "probe": "Radius2-0.8",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-construction-B",
+      "probe": "Radius2-1.2",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-construction-B",
+      "probe": "guard-negative-control",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-construction-B",
+      "probe": "guard-negative-control",
+      "check": "negative_control"
+    },
+    {
+      "id": "torus-measurement-A",
+      "probe": "initial",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-measurement-A",
+      "probe": "zero",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-measurement-A",
+      "probe": "Radius1-0.8",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-measurement-A",
+      "probe": "Radius1-1.2",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-measurement-A",
+      "probe": "Radius2-0.8",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-measurement-A",
+      "probe": "Radius2-1.2",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-measurement-A",
+      "probe": "guard-negative-control",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-measurement-A",
+      "probe": "guard-negative-control",
+      "check": "negative_control"
+    },
+    {
+      "id": "torus-measurement-B",
+      "probe": "initial",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-measurement-B",
+      "probe": "zero",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-measurement-B",
+      "probe": "Radius1-0.8",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-measurement-B",
+      "probe": "Radius1-0.8",
+      "check": "measurement_consistency"
+    },
+    {
+      "id": "torus-measurement-B",
+      "probe": "Radius1-1.2",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-measurement-B",
+      "probe": "Radius1-1.2",
+      "check": "measurement_consistency"
+    },
+    {
+      "id": "torus-measurement-B",
+      "probe": "Radius2-0.8",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-measurement-B",
+      "probe": "Radius2-0.8",
+      "check": "measurement_consistency"
+    },
+    {
+      "id": "torus-measurement-B",
+      "probe": "Radius2-1.2",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-measurement-B",
+      "probe": "Radius2-1.2",
+      "check": "measurement_consistency"
+    },
+    {
+      "id": "torus-measurement-B",
+      "probe": "guard-negative-control",
+      "check": "geometry_response"
+    },
+    {
+      "id": "torus-measurement-B",
+      "probe": "guard-negative-control",
+      "check": "negative_control"
+    },
+    {
+      "id": "cylinder-construction-B",
+      "probe": "Radius-0.8",
+      "check": "geometry_response"
+    },
+    {
+      "id": "cylinder-construction-B",
+      "probe": "Radius-1.2",
+      "check": "geometry_response"
+    },
+    {
+      "id": "cylinder-construction-B",
+      "probe": "Height-0.8",
+      "check": "geometry_response"
+    },
+    {
+      "id": "cylinder-construction-B",
+      "probe": "Height-1.2",
+      "check": "geometry_response"
+    }
+  ],
+  "same_checker_terminal_reward": [
+    {
+      "id": "torus-construction",
+      "A": 0,
+      "B": 0,
+      "difference": 0
+    },
+    {
+      "id": "torus-measurement",
+      "A": 0,
+      "B": 0,
+      "difference": 0
+    },
+    {
+      "id": "cylinder-construction",
+      "A": 1,
+      "B": 0,
+      "difference": 1
+    }
+  ],
+  "best_of_2_offline_selection": [
+    {
+      "id": "torus-construction",
+      "selected_q": 0
+    },
+    {
+      "id": "torus-measurement",
+      "selected_q": 0
+    },
+    {
+      "id": "cylinder-construction",
+      "selected_q": 1
+    }
+  ],
+  "graph_ablation": {
+    "all_credits_equal": true,
+    "additional_discrimination": 0
+  },
+  "credit_correspondence_sanity": {
+    "observed": [
+      0,
+      0,
+      1
+    ],
+    "cyclic_permutation": [
+      0,
+      1,
+      0
+    ],
+    "interpretation": "offline deterministic permutation only; no training or attribution accuracy estimate"
+  },
+  "control_scope": "reuse identical native observations; no independently executed training/Best-of-2 method comparison",
+  "method_advantage_over_terminal_reward": "NOT_ESTABLISHED",
+  "training_effect": "NOT_MEASURED"
+}

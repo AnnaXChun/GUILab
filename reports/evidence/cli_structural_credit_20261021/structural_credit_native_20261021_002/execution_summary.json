@@ -1,0 +1,8 @@
+{
+  "dispatches": 7,
+  "uncertain": 0,
+  "elapsed_seconds": 429.346,
+  "vm_stopped": true,
+  "model_calls": 0,
+  "isolation": "document/process/workdir; shared VM, no OS sandbox proof"
+}

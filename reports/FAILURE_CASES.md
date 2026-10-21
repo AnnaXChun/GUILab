@@ -1,5 +1,7 @@
 # 失败案例
 
+2026-10-21 [结构信用诊断](CLI_STRUCTURAL_CREDIT_20261021.md)新增检查器失败：圆环 `Shape.BoundBox` 返回 ±7.5767454，解析值为 ±7，首轮原生参数对象也被误判 Q=0。保留源码与结果后，实测 `optimalBoundingBox(False, False)` 返回 ±7.0000001，原容差通过。修正版静态圆环/圆柱的假参数仍无法驱动几何，下游测量修改也不能消除上游故障，均保留为受控失败。单测另验证缺 runtime、缺 VM/固件资产返回 `BLOCKED_BY_ENV`，不派发、不造原生结果。
+
 2026-10-21 当前优先分析 CLI，见 [CLI_FOCUS_20261021](CLI_FOCUS_20261021.md)。part-077 最新一次实际只有 8 轮，末轮为 `Sketcher.Horizontal` 不存在的 AttributeError，且未保存文件；此前“已跑 24 轮”的表述撤回。part-076 后续终端输出已出现原生对象无有效 shape，不能只用此前“几何正确、过程错误”的摘要解释全部重试。CLI 可以创建原生参数化对象，任务错误记录为 failure；只有真实环境或凭证问题才使用 BLOCKED_BY_ENV / BLOCKED_BY_CREDENTIALS。
 
 新增独立审计确认 `cli_part076_2` 的 Sketch、Pad 有 Invalid，solver 失败，参数编辑 FAIL，原文件 SHA 未改。本轮 measure-003 保存了 Part::Feature，面积数值正确、文件可重开，但官方 measurement 类型或结构未通过，原生参数编辑 UNAVAILABLE。它不进入 SFT，公开目标因表示覆盖不足返回 null。历史 Qwen3.6 官方通过但原生 Invalid 的文件继续排除；8 条训练排除记录均保留，未补文件或修改原分数。

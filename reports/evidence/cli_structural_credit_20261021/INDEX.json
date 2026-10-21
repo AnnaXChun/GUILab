@@ -1,0 +1,751 @@
+{
+  "classification": "sanitized_controlled_synthetic_cli_diagnostic_evidence",
+  "excluded": [
+    ".env",
+    "API keys",
+    "private endpoint/hostname",
+    "full model directory",
+    "SQLite",
+    "qcow2",
+    "firmware",
+    "FCStd",
+    "encoded artifacts",
+    "MCP indexes/diagnostics"
+  ],
+  "files": [
+    {
+      "path": "structural_credit_mock_20261021_001/plan.json",
+      "source": "results/structural_credit_mock_20261021_001/plan.json",
+      "source_sha256": "0855a27dfe677e4178f315469ceb39333a1f36ca60de34011d72ecd7fe49deff",
+      "sha256": "0855a27dfe677e4178f315469ceb39333a1f36ca60de34011d72ecd7fe49deff",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_mock_20261021_001/config.json",
+      "source": "results/structural_credit_mock_20261021_001/config.json",
+      "source_sha256": "654c4b71043ae0d72cd213e0c947016a09aea6b9e550c2a3b664d74e05e7e59c",
+      "sha256": "654c4b71043ae0d72cd213e0c947016a09aea6b9e550c2a3b664d74e05e7e59c",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_mock_20261021_001/source_manifest.json",
+      "source": "results/structural_credit_mock_20261021_001/source_manifest.json",
+      "source_sha256": "3465807a33ffd04fa9dc111518f8f173d15e0e60c06694c9d3ecef5c25d1cea6",
+      "sha256": "3465807a33ffd04fa9dc111518f8f173d15e0e60c06694c9d3ecef5c25d1cea6",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_mock_20261021_001/pairs.json",
+      "source": "results/structural_credit_mock_20261021_001/pairs.json",
+      "source_sha256": "b61690ea0c2cd3f07c37feaf656e38db3020ab9e4b22ce1b1cf900f331bd79ef",
+      "sha256": "b61690ea0c2cd3f07c37feaf656e38db3020ab9e4b22ce1b1cf900f331bd79ef",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_mock_20261021_001/summary.json",
+      "source": "results/structural_credit_mock_20261021_001/summary.json",
+      "source_sha256": "62347f54df85b09769c74c5d43fca9b65a4701a07cd73578c526abc440a982a9",
+      "sha256": "62347f54df85b09769c74c5d43fca9b65a4701a07cd73578c526abc440a982a9",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_mock_20261021_001/trace.jsonl",
+      "source": "results/structural_credit_mock_20261021_001/trace.jsonl",
+      "source_sha256": "148ff88221b779f552655dc767795c206d05f2dcb09714524e6cb3addf457b79",
+      "sha256": "148ff88221b779f552655dc767795c206d05f2dcb09714524e6cb3addf457b79",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_mock_20261021_001/analysis.json",
+      "source": "results/structural_credit_mock_20261021_001/analysis.json",
+      "source_sha256": "dedfcfa84e1d5056cf8cc9de04751d4942da81d98a772185548db1c794117f31",
+      "sha256": "dedfcfa84e1d5056cf8cc9de04751d4942da81d98a772185548db1c794117f31",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_mock_20261021_002/plan.json",
+      "source": "results/structural_credit_mock_20261021_002/plan.json",
+      "source_sha256": "0855a27dfe677e4178f315469ceb39333a1f36ca60de34011d72ecd7fe49deff",
+      "sha256": "0855a27dfe677e4178f315469ceb39333a1f36ca60de34011d72ecd7fe49deff",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_mock_20261021_002/config.json",
+      "source": "results/structural_credit_mock_20261021_002/config.json",
+      "source_sha256": "3b50315b4d3e64a4f073dd2bac8a4a0de9fa0ee2ef8c65e481a6d47185f10798",
+      "sha256": "3b50315b4d3e64a4f073dd2bac8a4a0de9fa0ee2ef8c65e481a6d47185f10798",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_mock_20261021_002/source_manifest.json",
+      "source": "results/structural_credit_mock_20261021_002/source_manifest.json",
+      "source_sha256": "66f0393037e8ede4096303288d92f27dbe12c4b35f4bf594201b775cbfe1768e",
+      "sha256": "66f0393037e8ede4096303288d92f27dbe12c4b35f4bf594201b775cbfe1768e",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_mock_20261021_002/pairs.json",
+      "source": "results/structural_credit_mock_20261021_002/pairs.json",
+      "source_sha256": "b61690ea0c2cd3f07c37feaf656e38db3020ab9e4b22ce1b1cf900f331bd79ef",
+      "sha256": "b61690ea0c2cd3f07c37feaf656e38db3020ab9e4b22ce1b1cf900f331bd79ef",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_mock_20261021_002/summary.json",
+      "source": "results/structural_credit_mock_20261021_002/summary.json",
+      "source_sha256": "344d9f7776cf3cb585d9c1bb276172a3067f262952179326dae5da0c52ed04d2",
+      "sha256": "344d9f7776cf3cb585d9c1bb276172a3067f262952179326dae5da0c52ed04d2",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_mock_20261021_002/trace.jsonl",
+      "source": "results/structural_credit_mock_20261021_002/trace.jsonl",
+      "source_sha256": "148ff88221b779f552655dc767795c206d05f2dcb09714524e6cb3addf457b79",
+      "sha256": "148ff88221b779f552655dc767795c206d05f2dcb09714524e6cb3addf457b79",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_mock_20261021_002/analysis.json",
+      "source": "results/structural_credit_mock_20261021_002/analysis.json",
+      "source_sha256": "dedfcfa84e1d5056cf8cc9de04751d4942da81d98a772185548db1c794117f31",
+      "sha256": "dedfcfa84e1d5056cf8cc9de04751d4942da81d98a772185548db1c794117f31",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_mock_20261021_002/pair_trace.jsonl",
+      "source": "results/structural_credit_mock_20261021_002/pair_trace.jsonl",
+      "source_sha256": "058cc376aa37ee676c6ceef9adbc1f06f4478ae48ebd36bf951c35e5705c610b",
+      "sha256": "058cc376aa37ee676c6ceef9adbc1f06f4478ae48ebd36bf951c35e5705c610b",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/plan.json",
+      "source": "results/structural_credit_native_20261021_001/plan.json",
+      "source_sha256": "0855a27dfe677e4178f315469ceb39333a1f36ca60de34011d72ecd7fe49deff",
+      "sha256": "0855a27dfe677e4178f315469ceb39333a1f36ca60de34011d72ecd7fe49deff",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/config.json",
+      "source": "results/structural_credit_native_20261021_001/config.json",
+      "source_sha256": "654c4b71043ae0d72cd213e0c947016a09aea6b9e550c2a3b664d74e05e7e59c",
+      "sha256": "654c4b71043ae0d72cd213e0c947016a09aea6b9e550c2a3b664d74e05e7e59c",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/source_manifest.json",
+      "source": "results/structural_credit_native_20261021_001/source_manifest.json",
+      "source_sha256": "3465807a33ffd04fa9dc111518f8f173d15e0e60c06694c9d3ecef5c25d1cea6",
+      "sha256": "3465807a33ffd04fa9dc111518f8f173d15e0e60c06694c9d3ecef5c25d1cea6",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/pairs.json",
+      "source": "results/structural_credit_native_20261021_001/pairs.json",
+      "source_sha256": "fff61dcf321de51b1a088e812a8a81b8e74acab768381401c91359c3e27ec08f",
+      "sha256": "fff61dcf321de51b1a088e812a8a81b8e74acab768381401c91359c3e27ec08f",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/summary.json",
+      "source": "results/structural_credit_native_20261021_001/summary.json",
+      "source_sha256": "4fbb5137395ac9779fc6159e54986429dda775fe607e5f5b3d41457403e1b281",
+      "sha256": "4fbb5137395ac9779fc6159e54986429dda775fe607e5f5b3d41457403e1b281",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/trace.jsonl",
+      "source": "results/structural_credit_native_20261021_001/trace.jsonl",
+      "source_sha256": "3755503e1431b06d87d016ecd0b9ea1b001db9cbc17df07da1580ab490597c4c",
+      "sha256": "3755503e1431b06d87d016ecd0b9ea1b001db9cbc17df07da1580ab490597c4c",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/analysis.json",
+      "source": "results/structural_credit_native_20261021_001/analysis.json",
+      "source_sha256": "ffeddf68a163ae082763d32b4acbaeb105d03855a13abe52479bd7a18e680f04",
+      "sha256": "ffeddf68a163ae082763d32b4acbaeb105d03855a13abe52479bd7a18e680f04",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/pair_trace.jsonl",
+      "source": "results/structural_credit_native_20261021_001/pair_trace.jsonl",
+      "source_sha256": "e5720b98c8a2321ff07a11ee2452f436e5eabda45cf26f5b52e2250aa9730933",
+      "sha256": "e5720b98c8a2321ff07a11ee2452f436e5eabda45cf26f5b52e2250aa9730933",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/execution_summary.json",
+      "source": "results/structural_credit_native_20261021_001/execution_summary.json",
+      "source_sha256": "5f1b109a2f4da7377e88153955b2256898b701a8325de1202958c05889ac5e23",
+      "sha256": "5f1b109a2f4da7377e88153955b2256898b701a8325de1202958c05889ac5e23",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/dispatch_public.json",
+      "source": "results/structural_credit_native_20261021_001/dispatch_public.json",
+      "source_sha256": "332a747c8d9ddb1d8110b4764e1846c066d6e4c510fe4ff21a009a5167329af6",
+      "sha256": "332a747c8d9ddb1d8110b4764e1846c066d6e4c510fe4ff21a009a5167329af6",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/verification.json",
+      "source": "results/structural_credit_native_20261021_001/verification.json",
+      "source_sha256": "0f6a4e72dd20f5b648b873951c85f28985fd31c730018c3c6d0b542cd8247326",
+      "sha256": "0f6a4e72dd20f5b648b873951c85f28985fd31c730018c3c6d0b542cd8247326",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/cylinder-construction-A/request.json",
+      "source": "results/structural_credit_native_20261021_001/cylinder-construction-A/request.json",
+      "source_sha256": "b44e16c1c77cd891a2cb39fc47e31c1f50a76f05aeafeb539506ca154ee220e9",
+      "sha256": "b44e16c1c77cd891a2cb39fc47e31c1f50a76f05aeafeb539506ca154ee220e9",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/cylinder-construction-A/provenance.json",
+      "source": "results/structural_credit_native_20261021_001/cylinder-construction-A/provenance.json",
+      "source_sha256": "84efb88938ae04bcd03f8af1b42eebb25f33498a5ff4496d66afd3dd48cbc2eb",
+      "sha256": "84efb88938ae04bcd03f8af1b42eebb25f33498a5ff4496d66afd3dd48cbc2eb",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/cylinder-construction-A/observation.json",
+      "source": "results/structural_credit_native_20261021_001/cylinder-construction-A/observation.json",
+      "source_sha256": "a9e397a0d0f8e330a14df05d370dddfad318471c87cdbeb09177a3625577d6ff",
+      "sha256": "a9e397a0d0f8e330a14df05d370dddfad318471c87cdbeb09177a3625577d6ff",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/cylinder-construction-B/request.json",
+      "source": "results/structural_credit_native_20261021_001/cylinder-construction-B/request.json",
+      "source_sha256": "e2193f4d7a9b6c3dda10104bd95b11657e19e07223d9f682467060af6d8871f9",
+      "sha256": "e2193f4d7a9b6c3dda10104bd95b11657e19e07223d9f682467060af6d8871f9",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/cylinder-construction-B/provenance.json",
+      "source": "results/structural_credit_native_20261021_001/cylinder-construction-B/provenance.json",
+      "source_sha256": "bdb2b20f5e1876094634615d930e09e106e01d5729a5ed503df34da83d269fdd",
+      "sha256": "bdb2b20f5e1876094634615d930e09e106e01d5729a5ed503df34da83d269fdd",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/cylinder-construction-B/observation.json",
+      "source": "results/structural_credit_native_20261021_001/cylinder-construction-B/observation.json",
+      "source_sha256": "91007d18b4d51e87533315e74c5be3daa7b1fe8de3efeaf1648565ab0838f930",
+      "sha256": "91007d18b4d51e87533315e74c5be3daa7b1fe8de3efeaf1648565ab0838f930",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/prepare/request.json",
+      "source": "results/structural_credit_native_20261021_001/prepare/request.json",
+      "source_sha256": "18b48684a166f35b87b3a9e5cd3b29823cd9705fa29aa615350531dd84570929",
+      "sha256": "18b48684a166f35b87b3a9e5cd3b29823cd9705fa29aa615350531dd84570929",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/prepare/provenance.json",
+      "source": "results/structural_credit_native_20261021_001/prepare/provenance.json",
+      "source_sha256": "b68af20807f08dbc065ce15a7ebd5cc421de7ad00be20e4e9fdcd0e2fbe42a29",
+      "sha256": "b68af20807f08dbc065ce15a7ebd5cc421de7ad00be20e4e9fdcd0e2fbe42a29",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/prepare/observation.json",
+      "source": "results/structural_credit_native_20261021_001/prepare/observation.json",
+      "source_sha256": "ecbec62dbaa0d45e9dca54b56658577891797a76c34d873a92546b367d852759",
+      "sha256": "ecbec62dbaa0d45e9dca54b56658577891797a76c34d873a92546b367d852759",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/torus-construction-A/request.json",
+      "source": "results/structural_credit_native_20261021_001/torus-construction-A/request.json",
+      "source_sha256": "facb3b41fd46a84932c1e7151a3b72a8e623d6ee0854a76c709a4223396085be",
+      "sha256": "facb3b41fd46a84932c1e7151a3b72a8e623d6ee0854a76c709a4223396085be",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/torus-construction-A/provenance.json",
+      "source": "results/structural_credit_native_20261021_001/torus-construction-A/provenance.json",
+      "source_sha256": "72574f69849797f7eab133deb65c156eea38eb7750e67d01418daa0bb84b3126",
+      "sha256": "72574f69849797f7eab133deb65c156eea38eb7750e67d01418daa0bb84b3126",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/torus-construction-A/observation.json",
+      "source": "results/structural_credit_native_20261021_001/torus-construction-A/observation.json",
+      "source_sha256": "165533e28c479f5161710eb682127832c7978d1e60cff98d353f8f5cee44c5d9",
+      "sha256": "165533e28c479f5161710eb682127832c7978d1e60cff98d353f8f5cee44c5d9",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/torus-construction-B/request.json",
+      "source": "results/structural_credit_native_20261021_001/torus-construction-B/request.json",
+      "source_sha256": "8e8bdd57bff8c8904bf2d4508558d793f17623d7aa58410d5b30369dd0049275",
+      "sha256": "8e8bdd57bff8c8904bf2d4508558d793f17623d7aa58410d5b30369dd0049275",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/torus-construction-B/provenance.json",
+      "source": "results/structural_credit_native_20261021_001/torus-construction-B/provenance.json",
+      "source_sha256": "65fa7bf59aa67a01bc19be246316d93fd8124f83fc1187326ebb321638afc0e7",
+      "sha256": "65fa7bf59aa67a01bc19be246316d93fd8124f83fc1187326ebb321638afc0e7",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/torus-construction-B/observation.json",
+      "source": "results/structural_credit_native_20261021_001/torus-construction-B/observation.json",
+      "source_sha256": "e28f3627a5612743ff1f0225c163a5d82771b2167ace807e69c7f401160386d1",
+      "sha256": "e28f3627a5612743ff1f0225c163a5d82771b2167ace807e69c7f401160386d1",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/torus-measurement-A/request.json",
+      "source": "results/structural_credit_native_20261021_001/torus-measurement-A/request.json",
+      "source_sha256": "7d5b523c911f5894e69f79a18beec62c761e1afcd66a20a9c793a830857694c5",
+      "sha256": "7d5b523c911f5894e69f79a18beec62c761e1afcd66a20a9c793a830857694c5",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/torus-measurement-A/provenance.json",
+      "source": "results/structural_credit_native_20261021_001/torus-measurement-A/provenance.json",
+      "source_sha256": "c16e8d42c11c058908272453e5f0a210f01c7ffac091abebf6981a09e75bfc56",
+      "sha256": "c16e8d42c11c058908272453e5f0a210f01c7ffac091abebf6981a09e75bfc56",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/torus-measurement-A/observation.json",
+      "source": "results/structural_credit_native_20261021_001/torus-measurement-A/observation.json",
+      "source_sha256": "2ff8ff3ebd6fbe59e140b1989f452685f2a1978e28cbd7d18302536a7049fa67",
+      "sha256": "2ff8ff3ebd6fbe59e140b1989f452685f2a1978e28cbd7d18302536a7049fa67",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/torus-measurement-B/request.json",
+      "source": "results/structural_credit_native_20261021_001/torus-measurement-B/request.json",
+      "source_sha256": "312d971c66cc176c8053c868a0925c6b25ef61fb1e4108337c60f1a75e19bbcf",
+      "sha256": "312d971c66cc176c8053c868a0925c6b25ef61fb1e4108337c60f1a75e19bbcf",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/torus-measurement-B/provenance.json",
+      "source": "results/structural_credit_native_20261021_001/torus-measurement-B/provenance.json",
+      "source_sha256": "cf6109f4d77399a1c617eb209fd9d7fec26758bd94204a2e98f903a413355139",
+      "sha256": "cf6109f4d77399a1c617eb209fd9d7fec26758bd94204a2e98f903a413355139",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/torus-measurement-B/observation.json",
+      "source": "results/structural_credit_native_20261021_001/torus-measurement-B/observation.json",
+      "source_sha256": "fb84474904f2f402fd153f60f49808ae71a54d17d701fe5e3ed23c7a3bf070e3",
+      "sha256": "fb84474904f2f402fd153f60f49808ae71a54d17d701fe5e3ed23c7a3bf070e3",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/source_snapshot/cad_cf/structural_credit.py",
+      "source": "results/structural_credit_native_20261021_001/source_snapshot/cad_cf/structural_credit.py",
+      "source_sha256": "ebc2b8485d4aaec3ff3054238979c3202ecf7e8a7545f0fe84fec4c1d7e5cf6a",
+      "sha256": "ebc2b8485d4aaec3ff3054238979c3202ecf7e8a7545f0fe84fec4c1d7e5cf6a",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/source_snapshot/scripts/run_structural_credit_diagnostic.py",
+      "source": "results/structural_credit_native_20261021_001/source_snapshot/scripts/run_structural_credit_diagnostic.py",
+      "source_sha256": "471c5d593fca962a2dbbc76a555e9aac6e450bd437c68269721e4faa7f29e6d2",
+      "sha256": "471c5d593fca962a2dbbc76a555e9aac6e450bd437c68269721e4faa7f29e6d2",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/source_snapshot/scripts/structural_credit_worker.py",
+      "source": "results/structural_credit_native_20261021_001/source_snapshot/scripts/structural_credit_worker.py",
+      "source_sha256": "ef2503fd1268a0fabf02476b47c6cb5fd6e65e77332a8bcaa44f0475c776fd19",
+      "sha256": "ef2503fd1268a0fabf02476b47c6cb5fd6e65e77332a8bcaa44f0475c776fd19",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/runtime/vm_001/launch.json",
+      "source": "results/structural_credit_native_20261021_001/runtime/vm_001/launch.json",
+      "source_sha256": "abc22e3c17d338bdfc69dcbac829d5d81476bcc63c00391cfb650d6c3fa72189",
+      "sha256": "abc22e3c17d338bdfc69dcbac829d5d81476bcc63c00391cfb650d6c3fa72189",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/runtime/vm_001/ready.json",
+      "source": "results/structural_credit_native_20261021_001/runtime/vm_001/ready.json",
+      "source_sha256": "53a79c562baae6d04c0168719297c8da70e7f3a7ee207a9afe757452163ec409",
+      "sha256": "53a79c562baae6d04c0168719297c8da70e7f3a7ee207a9afe757452163ec409",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_001/runtime/vm_001/stopped.json",
+      "source": "results/structural_credit_native_20261021_001/runtime/vm_001/stopped.json",
+      "source_sha256": "6303e7e0c6f60c364b35130ad537f79f02631616151d57ece42b3b11b78d67bb",
+      "sha256": "6303e7e0c6f60c364b35130ad537f79f02631616151d57ece42b3b11b78d67bb",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/plan.json",
+      "source": "results/structural_credit_native_20261021_002/plan.json",
+      "source_sha256": "0855a27dfe677e4178f315469ceb39333a1f36ca60de34011d72ecd7fe49deff",
+      "sha256": "0855a27dfe677e4178f315469ceb39333a1f36ca60de34011d72ecd7fe49deff",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/config.json",
+      "source": "results/structural_credit_native_20261021_002/config.json",
+      "source_sha256": "3b50315b4d3e64a4f073dd2bac8a4a0de9fa0ee2ef8c65e481a6d47185f10798",
+      "sha256": "3b50315b4d3e64a4f073dd2bac8a4a0de9fa0ee2ef8c65e481a6d47185f10798",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/source_manifest.json",
+      "source": "results/structural_credit_native_20261021_002/source_manifest.json",
+      "source_sha256": "66f0393037e8ede4096303288d92f27dbe12c4b35f4bf594201b775cbfe1768e",
+      "sha256": "66f0393037e8ede4096303288d92f27dbe12c4b35f4bf594201b775cbfe1768e",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/pairs.json",
+      "source": "results/structural_credit_native_20261021_002/pairs.json",
+      "source_sha256": "b61690ea0c2cd3f07c37feaf656e38db3020ab9e4b22ce1b1cf900f331bd79ef",
+      "sha256": "b61690ea0c2cd3f07c37feaf656e38db3020ab9e4b22ce1b1cf900f331bd79ef",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/summary.json",
+      "source": "results/structural_credit_native_20261021_002/summary.json",
+      "source_sha256": "e7daa6cdde37908f2c217628a6f1845783f808e12a9ee89f8256a2c450523d23",
+      "sha256": "e7daa6cdde37908f2c217628a6f1845783f808e12a9ee89f8256a2c450523d23",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/trace.jsonl",
+      "source": "results/structural_credit_native_20261021_002/trace.jsonl",
+      "source_sha256": "ed2e8a8c3b806e43e49925261e2aa009760e8099c45a591e70137df40282ac19",
+      "sha256": "ed2e8a8c3b806e43e49925261e2aa009760e8099c45a591e70137df40282ac19",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/analysis.json",
+      "source": "results/structural_credit_native_20261021_002/analysis.json",
+      "source_sha256": "dedfcfa84e1d5056cf8cc9de04751d4942da81d98a772185548db1c794117f31",
+      "sha256": "dedfcfa84e1d5056cf8cc9de04751d4942da81d98a772185548db1c794117f31",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/pair_trace.jsonl",
+      "source": "results/structural_credit_native_20261021_002/pair_trace.jsonl",
+      "source_sha256": "058cc376aa37ee676c6ceef9adbc1f06f4478ae48ebd36bf951c35e5705c610b",
+      "sha256": "058cc376aa37ee676c6ceef9adbc1f06f4478ae48ebd36bf951c35e5705c610b",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/execution_summary.json",
+      "source": "results/structural_credit_native_20261021_002/execution_summary.json",
+      "source_sha256": "2d2f40d056898a4b86a0e1958ceb6dee01ae06d4a094f9485651164afa9aae3c",
+      "sha256": "2d2f40d056898a4b86a0e1958ceb6dee01ae06d4a094f9485651164afa9aae3c",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/dispatch_public.json",
+      "source": "results/structural_credit_native_20261021_002/dispatch_public.json",
+      "source_sha256": "ccfeed4a6702a59cb7ef74e883c12adcbc971a9924e2a5fd35d2f9137e033be6",
+      "sha256": "ccfeed4a6702a59cb7ef74e883c12adcbc971a9924e2a5fd35d2f9137e033be6",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/verification.json",
+      "source": "results/structural_credit_native_20261021_002/verification.json",
+      "source_sha256": "78dd6c5468e6ef3645d3c8e043edf476e726d895830d061f3c510998aa005f57",
+      "sha256": "78dd6c5468e6ef3645d3c8e043edf476e726d895830d061f3c510998aa005f57",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/cylinder-construction-A/request.json",
+      "source": "results/structural_credit_native_20261021_002/cylinder-construction-A/request.json",
+      "source_sha256": "cabe89d632065cdb0702bb4e513650d07c061ec1f1cd04912b7d416dda7ecddf",
+      "sha256": "cabe89d632065cdb0702bb4e513650d07c061ec1f1cd04912b7d416dda7ecddf",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/cylinder-construction-A/provenance.json",
+      "source": "results/structural_credit_native_20261021_002/cylinder-construction-A/provenance.json",
+      "source_sha256": "f0e383433eefc053eaa7ed02fc67f3e4b14d1dc8a14d873fc1d97902cee9adb7",
+      "sha256": "f0e383433eefc053eaa7ed02fc67f3e4b14d1dc8a14d873fc1d97902cee9adb7",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/cylinder-construction-A/observation.json",
+      "source": "results/structural_credit_native_20261021_002/cylinder-construction-A/observation.json",
+      "source_sha256": "ff138b615652105f7c416f284573ee8ebc745fd86ecd848fb2e7adebec754a07",
+      "sha256": "ff138b615652105f7c416f284573ee8ebc745fd86ecd848fb2e7adebec754a07",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/cylinder-construction-B/request.json",
+      "source": "results/structural_credit_native_20261021_002/cylinder-construction-B/request.json",
+      "source_sha256": "164001cd9ad86ff4437bcf8ebade8f7b69cdabe61cc19fc5f52648fa048b933d",
+      "sha256": "164001cd9ad86ff4437bcf8ebade8f7b69cdabe61cc19fc5f52648fa048b933d",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/cylinder-construction-B/provenance.json",
+      "source": "results/structural_credit_native_20261021_002/cylinder-construction-B/provenance.json",
+      "source_sha256": "3c62512ae4cd61c6fdb0b712d4d43fd8f679890839d199a4bcb937e842dedbae",
+      "sha256": "3c62512ae4cd61c6fdb0b712d4d43fd8f679890839d199a4bcb937e842dedbae",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/cylinder-construction-B/observation.json",
+      "source": "results/structural_credit_native_20261021_002/cylinder-construction-B/observation.json",
+      "source_sha256": "5c6e1d21c5b9fe05011e24d2ab16d6fedf09789b16cfdc88fb064b29c0c4212f",
+      "sha256": "5c6e1d21c5b9fe05011e24d2ab16d6fedf09789b16cfdc88fb064b29c0c4212f",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/prepare/request.json",
+      "source": "results/structural_credit_native_20261021_002/prepare/request.json",
+      "source_sha256": "8e75c8af45d23d005c6dc21595708fed30be66cd9c5365dc521c4847e65ff69a",
+      "sha256": "8e75c8af45d23d005c6dc21595708fed30be66cd9c5365dc521c4847e65ff69a",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/prepare/provenance.json",
+      "source": "results/structural_credit_native_20261021_002/prepare/provenance.json",
+      "source_sha256": "463e3f3a0b470b11aaee0b6ebb806eaafa3b65182bebbe82d128cb07ea4a776a",
+      "sha256": "463e3f3a0b470b11aaee0b6ebb806eaafa3b65182bebbe82d128cb07ea4a776a",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/prepare/observation.json",
+      "source": "results/structural_credit_native_20261021_002/prepare/observation.json",
+      "source_sha256": "56a73509b6eb0d7964a0f8e1631baf334b5b21972c2e2608267617dc5d07c9fb",
+      "sha256": "56a73509b6eb0d7964a0f8e1631baf334b5b21972c2e2608267617dc5d07c9fb",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/torus-construction-A/request.json",
+      "source": "results/structural_credit_native_20261021_002/torus-construction-A/request.json",
+      "source_sha256": "3cee646b1ab981fd47a796a00ff60a7e863f9ca12c02d58d1c3f267670094c36",
+      "sha256": "3cee646b1ab981fd47a796a00ff60a7e863f9ca12c02d58d1c3f267670094c36",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/torus-construction-A/provenance.json",
+      "source": "results/structural_credit_native_20261021_002/torus-construction-A/provenance.json",
+      "source_sha256": "e99ce7bb5e9952a2e0a5526ebe72f1cb8718bb7aa82a7c26a154ce9e96cb88e2",
+      "sha256": "e99ce7bb5e9952a2e0a5526ebe72f1cb8718bb7aa82a7c26a154ce9e96cb88e2",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/torus-construction-A/observation.json",
+      "source": "results/structural_credit_native_20261021_002/torus-construction-A/observation.json",
+      "source_sha256": "a57b44b579ba087a89039104a3fa506b591bfffd28441f5e730005af5b8bb0fe",
+      "sha256": "a57b44b579ba087a89039104a3fa506b591bfffd28441f5e730005af5b8bb0fe",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/torus-construction-B/request.json",
+      "source": "results/structural_credit_native_20261021_002/torus-construction-B/request.json",
+      "source_sha256": "5ff0a8ae0a6ace1d56af3c9ef8f2f5d1c050599943eb36056fae852fca691172",
+      "sha256": "5ff0a8ae0a6ace1d56af3c9ef8f2f5d1c050599943eb36056fae852fca691172",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/torus-construction-B/provenance.json",
+      "source": "results/structural_credit_native_20261021_002/torus-construction-B/provenance.json",
+      "source_sha256": "7c39a5345273e187b2360e3cafcaed25e183bf0be5f0b6b1eb992b006582a4c5",
+      "sha256": "7c39a5345273e187b2360e3cafcaed25e183bf0be5f0b6b1eb992b006582a4c5",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/torus-construction-B/observation.json",
+      "source": "results/structural_credit_native_20261021_002/torus-construction-B/observation.json",
+      "source_sha256": "7b90f820da34d46c318268fa99441785d4266fd903d32f4e9f9fb3ac3fbe1d66",
+      "sha256": "7b90f820da34d46c318268fa99441785d4266fd903d32f4e9f9fb3ac3fbe1d66",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/torus-measurement-A/request.json",
+      "source": "results/structural_credit_native_20261021_002/torus-measurement-A/request.json",
+      "source_sha256": "25b4dc407fa3b47f47de3ba78993a026d2da634578eea008690f3675374fc240",
+      "sha256": "25b4dc407fa3b47f47de3ba78993a026d2da634578eea008690f3675374fc240",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/torus-measurement-A/provenance.json",
+      "source": "results/structural_credit_native_20261021_002/torus-measurement-A/provenance.json",
+      "source_sha256": "09a207038db057e5b545cd2ff05ae3d28d957844cf426af35fa290be0db952a9",
+      "sha256": "09a207038db057e5b545cd2ff05ae3d28d957844cf426af35fa290be0db952a9",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/torus-measurement-A/observation.json",
+      "source": "results/structural_credit_native_20261021_002/torus-measurement-A/observation.json",
+      "source_sha256": "c434e8cde4f9e67bdcb0f98f87f7d358d7c5a915da28a352c8c63fdd42861f68",
+      "sha256": "c434e8cde4f9e67bdcb0f98f87f7d358d7c5a915da28a352c8c63fdd42861f68",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/torus-measurement-B/request.json",
+      "source": "results/structural_credit_native_20261021_002/torus-measurement-B/request.json",
+      "source_sha256": "30e493707cf47323f6516464992ec70e2941f9c142d26f419b92dda175de671e",
+      "sha256": "30e493707cf47323f6516464992ec70e2941f9c142d26f419b92dda175de671e",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/torus-measurement-B/provenance.json",
+      "source": "results/structural_credit_native_20261021_002/torus-measurement-B/provenance.json",
+      "source_sha256": "99e87d9f481db9be9799a9edeffae9ec2d01c2a3bb0f5d3fcf50de0e38948703",
+      "sha256": "99e87d9f481db9be9799a9edeffae9ec2d01c2a3bb0f5d3fcf50de0e38948703",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/torus-measurement-B/observation.json",
+      "source": "results/structural_credit_native_20261021_002/torus-measurement-B/observation.json",
+      "source_sha256": "a6c319f2acb3f4b646def8f10f142a37254ada27b0c984a60826eee674b5a19b",
+      "sha256": "a6c319f2acb3f4b646def8f10f142a37254ada27b0c984a60826eee674b5a19b",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/source_snapshot/cad_cf/structural_credit.py",
+      "source": "results/structural_credit_native_20261021_002/source_snapshot/cad_cf/structural_credit.py",
+      "source_sha256": "ebc2b8485d4aaec3ff3054238979c3202ecf7e8a7545f0fe84fec4c1d7e5cf6a",
+      "sha256": "ebc2b8485d4aaec3ff3054238979c3202ecf7e8a7545f0fe84fec4c1d7e5cf6a",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/source_snapshot/scripts/run_structural_credit_diagnostic.py",
+      "source": "results/structural_credit_native_20261021_002/source_snapshot/scripts/run_structural_credit_diagnostic.py",
+      "source_sha256": "f19c5f14390a6cb5c4a8140018317823e10e8051b9991af09a5d1f43e60240a1",
+      "sha256": "f19c5f14390a6cb5c4a8140018317823e10e8051b9991af09a5d1f43e60240a1",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/source_snapshot/scripts/structural_credit_worker.py",
+      "source": "results/structural_credit_native_20261021_002/source_snapshot/scripts/structural_credit_worker.py",
+      "source_sha256": "6461deb43c1d243237657706d93548480fb9aaa6b38a10a4a71519b599bf16fb",
+      "sha256": "6461deb43c1d243237657706d93548480fb9aaa6b38a10a4a71519b599bf16fb",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/runtime/vm_001/launch.json",
+      "source": "results/structural_credit_native_20261021_002/runtime/vm_001/launch.json",
+      "source_sha256": "2edaf81acaf76cdb529cc0b6988f77e8d3bac158bf3006200e8f86fc188bff71",
+      "sha256": "2edaf81acaf76cdb529cc0b6988f77e8d3bac158bf3006200e8f86fc188bff71",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/runtime/vm_001/ready.json",
+      "source": "results/structural_credit_native_20261021_002/runtime/vm_001/ready.json",
+      "source_sha256": "2b9ab5adca870fbf842e6ee5737cd8d0896e81ad48c29eae59584871e7670c40",
+      "sha256": "2b9ab5adca870fbf842e6ee5737cd8d0896e81ad48c29eae59584871e7670c40",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "structural_credit_native_20261021_002/runtime/vm_001/stopped.json",
+      "source": "results/structural_credit_native_20261021_002/runtime/vm_001/stopped.json",
+      "source_sha256": "43ff0b39c8b628c293d273a8b585671b5bda31e635f5d64c1ae141c96e026a8c",
+      "sha256": "43ff0b39c8b628c293d273a8b585671b5bda31e635f5d64c1ae141c96e026a8c",
+      "redacted": false,
+      "derived": false
+    }
+  ],
+  "omitted_screenshots": [],
+  "complete_agent_jsonl": false,
+  "complete_pair_execution_jsonl": true,
+  "benchmark_episodes": 0,
+  "training_eligible": false,
+  "raw_controller_responses_excluded_due_to_native_base64": true
+}

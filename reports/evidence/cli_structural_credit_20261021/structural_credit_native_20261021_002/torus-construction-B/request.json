@@ -1,0 +1,80 @@
+{
+  "mode": "execute",
+  "root": "/home/user/.structural_credit_cbe0912ca3ef/torus-construction-B",
+  "pair": {
+    "id": "torus-construction",
+    "block": "construction",
+    "intent": {
+      "primitive": "torus",
+      "parameters": {
+        "Radius1": 5.0,
+        "Radius2": 2.0
+      },
+      "target": "Target",
+      "measurement": "Measure",
+      "preserved": "Guard"
+    },
+    "probes": [
+      {
+        "id": "zero",
+        "object": "Target",
+        "parameter": "Radius1",
+        "factor": 1.0
+      },
+      {
+        "id": "Radius1-0.8",
+        "object": "Target",
+        "parameter": "Radius1",
+        "factor": 0.8
+      },
+      {
+        "id": "Radius1-1.2",
+        "object": "Target",
+        "parameter": "Radius1",
+        "factor": 1.2
+      },
+      {
+        "id": "Radius2-0.8",
+        "object": "Target",
+        "parameter": "Radius2",
+        "factor": 0.8
+      },
+      {
+        "id": "Radius2-1.2",
+        "object": "Target",
+        "parameter": "Radius2",
+        "factor": 1.2
+      },
+      {
+        "id": "guard-negative-control",
+        "object": "Guard",
+        "parameter": "Length",
+        "factor": 1.2
+      }
+    ],
+    "seed_code": "",
+    "prefix": "def read_measure(doc):\n    s=doc.getObject('Target').Shape\n    return s.Area,s.Volume\n",
+    "continuation": "doc.recompute()\nmeasure=doc.getObject('Measure')\nif measure is None:\n    measure=doc.addObject('App::FeaturePython','Measure')\n    measure.addProperty('App::PropertyLink','Source')\n    measure.addProperty('App::PropertyArea','Area')\n    measure.addProperty('App::PropertyVolume','Volume')\nmeasure.Source=doc.getObject('Target')\narea,volume=read_measure(doc)\nmeasure.Area=area\nmeasure.Volume=volume\ndoc.recompute()\n",
+    "candidates": {
+      "A": "target=doc.addObject('Part::Torus','Target')\ntarget.Radius1=5.0\ntarget.Radius2=2.0\n",
+      "B": "target=doc.addObject('Part::Feature','Target')\ntarget.addProperty('App::PropertyLength','Radius1')\ntarget.Radius1=5.0\ntarget.addProperty('App::PropertyLength','Radius2')\ntarget.Radius2=2.0\ntarget.Shape=Part.makeTorus(5,2)\n"
+    },
+    "hashes": {
+      "intent_sha256": "b512ca20c0d2914e012bfcb23d34500b6f56f9068ab89f15d68c1c98e556be40",
+      "probes_sha256": "7219e4637b69550656b11f8db00375233dbb34b587e313567f576e72b69b9a01",
+      "seed_code_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "prefix_sha256": "c50ee46bf32974baaad1c61b07860f5f4cf8c1bace6e116cd0b950648e252759",
+      "continuation_sha256": "62f800c03966a7421ee32b56c410586c2a223f529a1cd1661ab8b4ef7a7e1b82",
+      "candidate_sha256": {
+        "A": "10aa3f6a82cdeda9dc8e70d0eeed0ecf685e14a518fae1c7345dc3ea19000249",
+        "B": "074026063b23f737f5027b707e7b52d19584938fe0a971093a878da6035482c8"
+      }
+    }
+  },
+  "branch": "B",
+  "seed": {
+    "path": "/home/user/.structural_credit_cbe0912ca3ef/seeds/torus-construction.FCStd",
+    "seed_sha256": "4770ff055d5e1d8afa0ad4bfac7125028bb060a0b36117b9e4a1071af8a36ba8",
+    "seed_state_sha256": "d410d62631bd9793419948460b5d185b57caecc632528e906acd74225912cef9"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "classification": "controlled_synthetic_cli_diagnostic",
+  "cases": ["torus-construction", "torus-measurement", "cylinder-construction"],
+  "max_dispatches": 7,
+  "worker_timeout_seconds": 110,
+  "max_wall_seconds": 1200,
+  "model_calls": 0,
+  "training_eligible": false,
+  "native_bbox_method": "optimalBoundingBox(False,False)",
+  "port": 15058,
+  "vnc_port": 15958
+}

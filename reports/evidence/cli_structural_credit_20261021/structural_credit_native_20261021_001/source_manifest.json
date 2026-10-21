@@ -1,0 +1,5 @@
+{
+  "cad_cf/structural_credit.py": "ebc2b8485d4aaec3ff3054238979c3202ecf7e8a7545f0fe84fec4c1d7e5cf6a",
+  "scripts/structural_credit_worker.py": "ef2503fd1268a0fabf02476b47c6cb5fd6e65e77332a8bcaa44f0475c776fd19",
+  "scripts/run_structural_credit_diagnostic.py": "471c5d593fca962a2dbbc76a555e9aac6e450bd437c68269721e4faa7f29e6d2"
+}

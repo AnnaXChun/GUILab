@@ -1,5 +1,17 @@
 # GUILab 交接
 
+**2026-10-21 最新验证**：用户指出普通 SFT/RL 缺少方法创新并要求继续验证，当前先看 [CLI 结构信用结果](reports/CLI_STRUCTURAL_CREDIT_20261021.md)、[执行协议](docs/CLI_STRUCTURAL_CREDIT.md)与 [机器状态](reports/CLI_STRUCTURAL_CREDIT_STATUS.json)。三个可信 fixture 已在真实 FreeCAD 完成，修正版 credit `[1, 0, 1]`；首轮包围盒误判 `[0, 0, 1]` 和全部失败保留。共 14 次单次派发，无模型调用、无不确定执行，两轮 VM 均停止，210 项项目测试与 7 项上游 CLI 测试通过。
+
+这批只验证原生参数响应与固定续执行下的相对信用，不增加 CADWorld episode、原 ACTC pair 或训练样本。真实脚本与 `.FCStd` 类型树/状态/SHA 对应关系已独立审计。图只作记录；当前信用与同一终局检查器 Q 的差值一致，方法创新和训练仍 NO-GO。下一步冻结真实 CLI 构造块的同 intent/S0/续执行、独立任务分组和预算，再比较终局奖励、逐步验证、Best-of-2、打乱信用；不直接启动 RL。
+
+远程先执行下方 mock 命令，真实诊断无需 API key，只需自己的已核验 native runtime 配置。每次 output 必须为新目录；历史两轮不覆盖，也不把其 fixture 导入 SFT。公开 trace 与两轮源码快照见 `reports/evidence/cli_structural_credit_20261021/INDEX.json`，原 FCStd/base64/controller 原响应不上传。
+
+```bash
+ENABLE_PAID_RUNS=0 .venv/bin/python -m pytest tests/test_structural_credit.py -q
+ENABLE_PAID_RUNS=0 .venv/bin/python scripts/run_structural_credit_diagnostic.py \
+  --dry-run --output results/new_structural_mock
+```
+
 **2026-10-21 当前交接**：用户停止 GUI，转向 CLI 的数据清洗、RL 和成功率改进。先读 [CLI 研究计划](docs/CLI_RESEARCH_PLAN.md)、[本轮 CLI 记录](reports/CLI_FOCUS_20261021.md)和 [CLI 数据清单](manifests/cli_dataset_20261021.json)。下方 2026-10-20 及更早段落保留为历史，不按旧 GUI 下一步执行。
 
 本轮两题已结束：sketch-063 官方 1.0，measure-003 官方 0.0；均正常 finish，共 17 次生成、57833 输入 / 6517 输出 tokens，API 错误 0。6 个文件原生审计完成，4 个草图通过参数编辑，part-076 Invalid、圆环 editability UNAVAILABLE；所有原文件 SHA 保持。最终 11 个 CLI episode / 6 个任务导出 3 条 SFT，其他 8 条保留排除理由。数据公开副本见 `reports/evidence/cli_focus_20261021/cli_data_20261021/`，完整机器状态见 `reports/CLI_STATUS.json`。全部 VM 停止，当前批次结束，余下 3 次请求不追加。

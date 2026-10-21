@@ -1,0 +1,37 @@
+[
+  {
+    "id": "prepare",
+    "payload_sha256": "b6a19feda956c4320f8de6f5eb456cb3c70c7ea3a5d84cf7a4a0c1cba3f357a5",
+    "state": "complete"
+  },
+  {
+    "id": "torus-construction-A",
+    "payload_sha256": "aeace32c0059f6fd6fac88cadbf8399e6302eebd6a3af2eec7864f9762339f17",
+    "state": "complete"
+  },
+  {
+    "id": "torus-construction-B",
+    "payload_sha256": "e4698eeb1ef0854c6ddbcef5fed8600c2990073c03d4ede0bda4968bd858177a",
+    "state": "complete"
+  },
+  {
+    "id": "torus-measurement-A",
+    "payload_sha256": "98e477280d61b552ba52cb7041140abb629a57425b7a1bf12b0e50a703ee340a",
+    "state": "complete"
+  },
+  {
+    "id": "torus-measurement-B",
+    "payload_sha256": "d4bb711d246f6ae660c4b2a46b2e8c526082329f0401c6b78bdafbb84d242e46",
+    "state": "complete"
+  },
+  {
+    "id": "cylinder-construction-A",
+    "payload_sha256": "a1eecdfa4b03add5325d208c418f371292cacbd82aaeb46fa3405c18244be3ce",
+    "state": "complete"
+  },
+  {
+    "id": "cylinder-construction-B",
+    "payload_sha256": "084ec49dec91a7973da1d4bff38382c25f041f0574c727a32250e634cf54725c",
+    "state": "complete"
+  }
+]

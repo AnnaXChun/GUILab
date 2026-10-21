@@ -1,0 +1,112 @@
+{
+  "classification": "offline_controlled_native_execution_audit",
+  "status": "PASS",
+  "dispatches": 7,
+  "native_artifacts": 6,
+  "pair_results_recomputed": 3,
+  "model_calls": 0,
+  "checks": [
+    {
+      "id": "prepare",
+      "executed_request_matches_trace": true,
+      "executed_worker_sha_matches_frozen_source": true,
+      "dispatch_state": "complete"
+    },
+    {
+      "id": "torus-construction-A",
+      "executed_request_matches_trace": true,
+      "executed_worker_sha_matches_frozen_source": true,
+      "dispatch_state": "complete",
+      "source_hashes_recomputed": true,
+      "artifact_sha_verified": true,
+      "native_archive_types": {
+        "Guard": "Part::Box",
+        "Target": "Part::Torus",
+        "Measure": "App::FeaturePython"
+      },
+      "pid": 2420,
+      "workdir": "/home/user/.structural_credit_cbe0912ca3ef/torus-construction-A",
+      "cwd": "/home/user/.structural_credit_cbe0912ca3ef/torus-construction-A"
+    },
+    {
+      "id": "torus-construction-B",
+      "executed_request_matches_trace": true,
+      "executed_worker_sha_matches_frozen_source": true,
+      "dispatch_state": "complete",
+      "source_hashes_recomputed": true,
+      "artifact_sha_verified": true,
+      "native_archive_types": {
+        "Guard": "Part::Box",
+        "Target": "Part::Feature",
+        "Measure": "App::FeaturePython"
+      },
+      "pid": 2679,
+      "workdir": "/home/user/.structural_credit_cbe0912ca3ef/torus-construction-B",
+      "cwd": "/home/user/.structural_credit_cbe0912ca3ef/torus-construction-B"
+    },
+    {
+      "id": "torus-measurement-A",
+      "executed_request_matches_trace": true,
+      "executed_worker_sha_matches_frozen_source": true,
+      "dispatch_state": "complete",
+      "source_hashes_recomputed": true,
+      "artifact_sha_verified": true,
+      "native_archive_types": {
+        "Guard": "Part::Box",
+        "Target": "Part::Feature",
+        "Measure": "App::FeaturePython"
+      },
+      "pid": 3012,
+      "workdir": "/home/user/.structural_credit_cbe0912ca3ef/torus-measurement-A",
+      "cwd": "/home/user/.structural_credit_cbe0912ca3ef/torus-measurement-A"
+    },
+    {
+      "id": "torus-measurement-B",
+      "executed_request_matches_trace": true,
+      "executed_worker_sha_matches_frozen_source": true,
+      "dispatch_state": "complete",
+      "source_hashes_recomputed": true,
+      "artifact_sha_verified": true,
+      "native_archive_types": {
+        "Guard": "Part::Box",
+        "Target": "Part::Feature",
+        "Measure": "App::FeaturePython"
+      },
+      "pid": 3249,
+      "workdir": "/home/user/.structural_credit_cbe0912ca3ef/torus-measurement-B",
+      "cwd": "/home/user/.structural_credit_cbe0912ca3ef/torus-measurement-B"
+    },
+    {
+      "id": "cylinder-construction-A",
+      "executed_request_matches_trace": true,
+      "executed_worker_sha_matches_frozen_source": true,
+      "dispatch_state": "complete",
+      "source_hashes_recomputed": true,
+      "artifact_sha_verified": true,
+      "native_archive_types": {
+        "Guard": "Part::Box",
+        "Target": "Part::Cylinder",
+        "Measure": "App::FeaturePython"
+      },
+      "pid": 3620,
+      "workdir": "/home/user/.structural_credit_cbe0912ca3ef/cylinder-construction-A",
+      "cwd": "/home/user/.structural_credit_cbe0912ca3ef/cylinder-construction-A"
+    },
+    {
+      "id": "cylinder-construction-B",
+      "executed_request_matches_trace": true,
+      "executed_worker_sha_matches_frozen_source": true,
+      "dispatch_state": "complete",
+      "source_hashes_recomputed": true,
+      "artifact_sha_verified": true,
+      "native_archive_types": {
+        "Guard": "Part::Box",
+        "Target": "Part::Feature",
+        "Measure": "App::FeaturePython"
+      },
+      "pid": 3656,
+      "workdir": "/home/user/.structural_credit_cbe0912ca3ef/cylinder-construction-B",
+      "cwd": "/home/user/.structural_credit_cbe0912ca3ef/cylinder-construction-B"
+    }
+  ]
+}

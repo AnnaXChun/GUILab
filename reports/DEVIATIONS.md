@@ -1,5 +1,11 @@
 # 差异与适配
 
+## CLI 结构信用诊断
+
+2026-10-21 用户要求验证 CLI 方法方向，新增三个可信程序 fixture，不调用模型、训练或官方评分器。它们是 controlled synthetic，训练 eligibility 为 false，原 ACTC gate 不改判。每分支独立 FreeCAD 进程、文档和 artifact 目录，共用 VM；第二轮显式设定独立 cwd，未冒充双 VM 或强 OS sandbox。
+
+首轮固定 Q 的原始结果 `[0, 0, 1]` 保留。真实圆环 `Shape.BoundBox` 是保守值，修正版使用实际 VM 的 `optimalBoundingBox(False, False)`，保留旧值与 API 说明，Q 公式和容差未改。两轮执行前后源码 SHA 和实际派发 payload 核验通过；第一轮源码快照单独保留，第二轮结果 `[1, 0, 1]` 单列。FreeCAD remote 源码读取遇到 404/403，适配依据为原生 API 实测。依赖图目前仅记录影响范围，信用与同一终局 Q 差值相同；方法优势、独立算法对照和 RL 效果均待测量。
+
 ## CLI 方向切换
 
 最终归档的 106 份 JSON 通过严格解析与 SHA 核验。MCP 对两份审计记录的 App::Plane 面积 `8e+100` 给出局部解析告警；它是有限的合法 JSON 数值，本轮没有观察到 NaN。审计器新增 `normalize_native_numbers` 和严格 JSON 编码，未来非有限数值写为 null 并记录字段路径与原因。本轮未触发数值转换，原始响应、诊断字节、模型文件和评分均不变；新增两项通用序列化回归，无新 API 或 VM 执行。

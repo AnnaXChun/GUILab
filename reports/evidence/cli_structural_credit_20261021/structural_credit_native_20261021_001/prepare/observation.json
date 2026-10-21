@@ -1,0 +1,31 @@
+{
+  "classification": "controlled_native_seed_preparation",
+  "seeds": {
+    "torus-construction": {
+      "path": "/home/user/.structural_credit_508a2c68e880/seeds/torus-construction.FCStd",
+      "seed_sha256": "2b8ef1b8364eaa23037f91afe3441420d63d57aae561ad3c26dab21755ef03f8",
+      "seed_state_sha256": "61d42896690ba3210cc7b86d29917e85206a8c3bd1f134feff77171be2022b95"
+    },
+    "torus-measurement": {
+      "path": "/home/user/.structural_credit_508a2c68e880/seeds/torus-measurement.FCStd",
+      "seed_sha256": "a14e0f65f91af16e67aa012d7806299344b4bd1e9d11aaf2d7a4c782b91def53",
+      "seed_state_sha256": "75e07d0ac8329a2b873b5a17a0272172b4c318efa7f0d5c17ce5996d3e4464e9"
+    },
+    "cylinder-construction": {
+      "path": "/home/user/.structural_credit_508a2c68e880/seeds/cylinder-construction.FCStd",
+      "seed_sha256": "994146fce2337920c791d6c7f5dc4edbf353cf20bf2922fe56f6fabe77881502",
+      "seed_state_sha256": "61d42896690ba3210cc7b86d29917e85206a8c3bd1f134feff77171be2022b95"
+    }
+  },
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "pid": 2297
+}

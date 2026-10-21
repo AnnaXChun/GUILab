@@ -1,0 +1,51 @@
+{
+  "classification": "controlled_native_seed_preparation",
+  "seeds": {
+    "torus-construction": {
+      "path": "/home/user/.structural_credit_cbe0912ca3ef/seeds/torus-construction.FCStd",
+      "seed_sha256": "4770ff055d5e1d8afa0ad4bfac7125028bb060a0b36117b9e4a1071af8a36ba8",
+      "seed_state_sha256": "d410d62631bd9793419948460b5d185b57caecc632528e906acd74225912cef9"
+    },
+    "torus-measurement": {
+      "path": "/home/user/.structural_credit_cbe0912ca3ef/seeds/torus-measurement.FCStd",
+      "seed_sha256": "d4071440b2a1e23549cbef522dec0555e7824fd0e2538153a1a7a744f812b5d6",
+      "seed_state_sha256": "e2e6b03f7bede2aff8788cfa21c237108ea789dd16ee476c2b4c959c8b368b13"
+    },
+    "cylinder-construction": {
+      "path": "/home/user/.structural_credit_cbe0912ca3ef/seeds/cylinder-construction.FCStd",
+      "seed_sha256": "91422a67659dfab6e7f57cc97176efb0a9faf9fd226c6645cdb8311eacfa6a42",
+      "seed_state_sha256": "d410d62631bd9793419948460b5d185b57caecc632528e906acd74225912cef9"
+    }
+  },
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "bbox_api_probe": {
+    "method_doc": "Get the optimal bounding box\noptimalBoundingBox([useTriangulation = True, useShapeTolerance = False]) -> bound box",
+    "legacy_bbox": [
+      -7.5767454,
+      -7.5767454,
+      -2.0,
+      7.5767454,
+      7.5767454,
+      2.0
+    ],
+    "optimal_bbox": [
+      -7.0000001,
+      -7.0000001,
+      -2.0000001,
+      7.0000001,
+      7.0000001,
+      2.0000001
+    ]
+  },
+  "pid": 2306,
+  "cwd": "/home/user/.structural_credit_cbe0912ca3ef/seeds"
+}

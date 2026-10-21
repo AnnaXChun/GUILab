@@ -1,0 +1,14 @@
+{
+  "status": "COMPLETE",
+  "mode": "MOCK_ONLY",
+  "model_calls": 0,
+  "benchmark_episodes": 0,
+  "actc_pairs": 0,
+  "training_rows": 0,
+  "credits": {
+    "torus-construction": 1,
+    "torus-measurement": 0,
+    "cylinder-construction": 1
+  },
+  "novelty_or_training_effect": "NOT_MEASURED"
+}

@@ -4,6 +4,8 @@
 
 ## 接手入口
 
+**2026-10-21 最新验证入口**：用户指出普通 SFT/RL 缺少方法创新并要求继续验证。`reports/CLI_STRUCTURAL_CREDIT_20261021.md`、`docs/CLI_STRUCTURAL_CREDIT.md` 和 `reports/CLI_STRUCTURAL_CREDIT_STATUS.json` 为当前方法验证入口。三个可信 CLI fixture 的修正版原生信用 `[1,0,1]`，首轮包围盒误判保留；共14次无模型派发、210项目tests与7上游CLI tests通过，两轮VM已停止。这是 controlled synthetic，不增加官方episode、ACTC pair或训练样本。图仅作影响范围记录，与相同终局检查器差值尚无方法增益。下一步先冻结真实CLI代码块的同intent/S0/续执行与独立任务对照，不自动启动训练或额外模型批次。
+
 **2026-10-21 当前方向覆盖下方历史计划**：用户明确停止 GUI，后续只针对 CLI 做数据清洗、RL 和成功率改进。先读 `docs/CLI_RESEARCH_PLAN.md`、`reports/CLI_FOCUS_20261021.md` 和新的 `HANDOFF.md` 入口。原 `SPEC.md` 和 ACTC gate 是历史方案，不改判为 PASS，也不以未完成 GUI 阻止 CLI 研发。保留原 prompt 的 baseline，改 prompt、API 提示或模型权重后另列实验设置。先收集/审计/清洗，不自动启动 RL 训练、大模型下载或全量评测。
 
 当前小批为 `configs/cli_focus_20261021.json`：两个公开开发任务、20 次生成、16000 输出 tokens，SDK 重试 0。新批次承接用户“继续推进 CLI”的授权，旧 100 次账本已耗尽并保留。CLI runner 进程支持两个任务；官方 reset 仍恢复新 VM overlay，不能声称跨任务复用同一 VM 或 same-S0。无模型批量原生审计可复用 VM，每个文件使用独立临时目录。
