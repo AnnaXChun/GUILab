@@ -1,0 +1,55 @@
+{
+  "classification": "at_most_once_dispatch_audit",
+  "payload_policy": "digest only; action text remains in original agent trajectory",
+  "source_sha256": "9b19e36cb1e59803584355f43a1625b715506ffb3cdac53b3c594babcdee0ccc",
+  "rows": [
+    {
+      "execution_id": "0914f36f-5659-457a-96e0-10251b454a44",
+      "state": "complete",
+      "payload_sha256": "778e609136d77d68a0ddb95a33bae39c8ae3ee984d571dee9756f98c03e5f9e6",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "15465457-e59f-4da4-9a90-e2487446f79f",
+      "state": "complete",
+      "payload_sha256": "4e0043ffcd65586e16a0d5510f3d7cb4de8ac97beff07c349724cee5c01aeeb5",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "902b34d9-0074-4aa6-a31a-69c6effc8f89",
+      "state": "complete",
+      "payload_sha256": "e4ee6efb7246971c14c4358ce823015f1cd37c357f44be1b0578bc4909a4de4f",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "300bccfd-39f0-4185-8541-7c1c7f6910ed",
+      "state": "complete",
+      "payload_sha256": "a6f85dcaf769c4cb5932937afbdac1b8c61c3cb62806c09f8896f1056460a5a3",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "a35ac08f-65f2-4f9b-a413-83a2777edfb7",
+      "state": "complete",
+      "payload_sha256": "319adb99a35c0b2eb81eba7efdd399fbfbd12cadbebb760a6816f49f59849dd3",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "afc072d9-9bdf-4ea6-98b3-ee7715ed9672",
+      "state": "complete",
+      "payload_sha256": "0eed8da82ca3ed716ee4dedbcfb5c15ccdc11a11bb33a8ca94e57c28956fbbb5",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "b356a722-cac9-4bd7-b6dd-791fab0b48f9",
+      "state": "complete",
+      "payload_sha256": "ea29b2529fbae78fcc2c27deab83015a242dea139da686e8b8d8d7f70fa17589",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "d9950f2e-129b-468d-a884-c5c64cc4f5c2",
+      "state": "complete",
+      "payload_sha256": "23d9189f0b00f9bf4c15181cc4007b36afc63719a9d304cd6fc21cb9c60b8ff3",
+      "payload_excluded": true
+    }
+  ]
+}

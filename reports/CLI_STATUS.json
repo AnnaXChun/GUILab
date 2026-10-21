@@ -7,6 +7,13 @@
   "platform": "macOS ARM native QEMU TCG, official Ubuntu VM",
   "latest_report": "reports/CLI_FOCUS_20261021.md",
   "evidence_index": "reports/evidence/cli_focus_20261021/INDEX.json",
+  "runtime_evidence_index": "reports/evidence/cli_focus_runtime_20261021/INDEX.json",
+  "execution_audit": {
+    "terminal_dispatches": 15,
+    "complete": 15,
+    "uncertain": 0,
+    "isolated_reset_overlays": 2
+  },
   "model": "qwen3.5-122b-a10b",
   "baseline_batch": {
     "run_id": "cli_focus_20261021_001",

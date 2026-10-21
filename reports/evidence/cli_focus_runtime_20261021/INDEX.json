@@ -1,0 +1,163 @@
+{
+  "classification": "sanitized_baseline_success_and_failure_evidence",
+  "excluded": [
+    ".env",
+    "API keys",
+    "private endpoint/hostname",
+    "full model directory",
+    "SQLite",
+    "qcow2",
+    "firmware",
+    "FCStd",
+    "encoded artifacts",
+    "MCP indexes/diagnostics"
+  ],
+  "files": [
+    {
+      "path": "cli_focus_runtime_20261021/vm_001/controller_dispatch.dispatch.json",
+      "source": "results/cli_focus_runtime_20261021/vm_001/controller_dispatch.sqlite",
+      "source_sha256": "6fd323211f0937caa047bbe80fe2c839a13fef15112887fb18ec7f8dd8f6c0d0",
+      "sha256": "cfad30698873e3538688130f4db14aa6e4d19fef3bcf5e9a64e9a531dd079bb9",
+      "redacted": false,
+      "derived": true
+    },
+    {
+      "path": "cli_focus_runtime_20261021/vm_001/final.png",
+      "source": "results/cli_focus_runtime_20261021/vm_001/final.png",
+      "source_sha256": "c1161e09bb43363d2777bdb410b3e59e98b33eae3b374322b5e86079ab089a12",
+      "sha256": "c1161e09bb43363d2777bdb410b3e59e98b33eae3b374322b5e86079ab089a12",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_focus_runtime_20261021/vm_001/launch.json",
+      "source": "results/cli_focus_runtime_20261021/vm_001/launch.json",
+      "source_sha256": "ca08aa2685037cb09d8bacb75b5dac11d99da7814a91a3a8556db1850812fdb2",
+      "sha256": "ca08aa2685037cb09d8bacb75b5dac11d99da7814a91a3a8556db1850812fdb2",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_focus_runtime_20261021/vm_001/qemu.log",
+      "source": "results/cli_focus_runtime_20261021/vm_001/qemu.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_focus_runtime_20261021/vm_001/readiness.jsonl",
+      "source": "results/cli_focus_runtime_20261021/vm_001/readiness.jsonl",
+      "source_sha256": "9ef94fa266458191ce0f6c11e54f94c4f10e075860a6567c7d1d29a7515306b9",
+      "sha256": "9ef94fa266458191ce0f6c11e54f94c4f10e075860a6567c7d1d29a7515306b9",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_focus_runtime_20261021/vm_001/ready.json",
+      "source": "results/cli_focus_runtime_20261021/vm_001/ready.json",
+      "source_sha256": "7001dc3723e7f7ff9e37cf2bd1c12fa01077e1d29352b863c116fa16d5912215",
+      "sha256": "7001dc3723e7f7ff9e37cf2bd1c12fa01077e1d29352b863c116fa16d5912215",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_focus_runtime_20261021/vm_001/ready.png",
+      "source": "results/cli_focus_runtime_20261021/vm_001/ready.png",
+      "source_sha256": "6d0428dbe8845decf7503746580eb3c73589845fd9b168fd50176f7fd060fff7",
+      "sha256": "6d0428dbe8845decf7503746580eb3c73589845fd9b168fd50176f7fd060fff7",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_focus_runtime_20261021/vm_001/serial.log",
+      "source": "results/cli_focus_runtime_20261021/vm_001/serial.log",
+      "source_sha256": "b9f0f261cb82c547887770a795f7d95c64dde5de3aebeab0cc9b484fe727e990",
+      "sha256": "b9f0f261cb82c547887770a795f7d95c64dde5de3aebeab0cc9b484fe727e990",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_focus_runtime_20261021/vm_001/stopped.json",
+      "source": "results/cli_focus_runtime_20261021/vm_001/stopped.json",
+      "source_sha256": "aa0359c10a39220bbd0d714b79bae6488a701dbfac76c8fd7bf19369507a7de0",
+      "sha256": "aa0359c10a39220bbd0d714b79bae6488a701dbfac76c8fd7bf19369507a7de0",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_focus_runtime_20261021/vm_002/controller_dispatch.dispatch.json",
+      "source": "results/cli_focus_runtime_20261021/vm_002/controller_dispatch.sqlite",
+      "source_sha256": "9b19e36cb1e59803584355f43a1625b715506ffb3cdac53b3c594babcdee0ccc",
+      "sha256": "340f4ead48fb98c5e3b15707c8dd465b8043b5b4dbdb59cc4f97f02cb4a3479d",
+      "redacted": false,
+      "derived": true
+    },
+    {
+      "path": "cli_focus_runtime_20261021/vm_002/final.png",
+      "source": "results/cli_focus_runtime_20261021/vm_002/final.png",
+      "source_sha256": "c1161e09bb43363d2777bdb410b3e59e98b33eae3b374322b5e86079ab089a12",
+      "sha256": "c1161e09bb43363d2777bdb410b3e59e98b33eae3b374322b5e86079ab089a12",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_focus_runtime_20261021/vm_002/launch.json",
+      "source": "results/cli_focus_runtime_20261021/vm_002/launch.json",
+      "source_sha256": "8f5766036da444d2003175f5a889edc66c30fbc5cfad05745381d96cb61e7af7",
+      "sha256": "8f5766036da444d2003175f5a889edc66c30fbc5cfad05745381d96cb61e7af7",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_focus_runtime_20261021/vm_002/qemu.log",
+      "source": "results/cli_focus_runtime_20261021/vm_002/qemu.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_focus_runtime_20261021/vm_002/readiness.jsonl",
+      "source": "results/cli_focus_runtime_20261021/vm_002/readiness.jsonl",
+      "source_sha256": "ccb0e47e50325aaa96272acf910ae8d8cbb77bd3a78b03563fefcf1a3a98c6f5",
+      "sha256": "ccb0e47e50325aaa96272acf910ae8d8cbb77bd3a78b03563fefcf1a3a98c6f5",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_focus_runtime_20261021/vm_002/ready.json",
+      "source": "results/cli_focus_runtime_20261021/vm_002/ready.json",
+      "source_sha256": "037306f9983344b22ee08f6398d37f9ef141665f0d3958a817b67e7e405dafb2",
+      "sha256": "037306f9983344b22ee08f6398d37f9ef141665f0d3958a817b67e7e405dafb2",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_focus_runtime_20261021/vm_002/ready.png",
+      "source": "results/cli_focus_runtime_20261021/vm_002/ready.png",
+      "source_sha256": "6d0428dbe8845decf7503746580eb3c73589845fd9b168fd50176f7fd060fff7",
+      "sha256": "6d0428dbe8845decf7503746580eb3c73589845fd9b168fd50176f7fd060fff7",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_focus_runtime_20261021/vm_002/serial.log",
+      "source": "results/cli_focus_runtime_20261021/vm_002/serial.log",
+      "source_sha256": "b9f0f261cb82c547887770a795f7d95c64dde5de3aebeab0cc9b484fe727e990",
+      "sha256": "b9f0f261cb82c547887770a795f7d95c64dde5de3aebeab0cc9b484fe727e990",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_focus_runtime_20261021/vm_002/stopped.json",
+      "source": "results/cli_focus_runtime_20261021/vm_002/stopped.json",
+      "source_sha256": "83320df7db7a22dba46a00c39062338e79aab6080e69c56f1537f90d5c9fbc6e",
+      "sha256": "83320df7db7a22dba46a00c39062338e79aab6080e69c56f1537f90d5c9fbc6e",
+      "redacted": false,
+      "derived": false
+    }
+  ],
+  "omitted_screenshots": [],
+  "complete_agent_jsonl": true
+}
