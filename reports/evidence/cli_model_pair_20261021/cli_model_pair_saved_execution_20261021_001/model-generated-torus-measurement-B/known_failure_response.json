@@ -1,0 +1,5 @@
+{
+  "returncode": 1,
+  "output": "\nTraceback (most recent call last):\n  File \"<string>\", line 369, in <module>\n  File \"<string>\", line 284, in execute\n  File \"<string>\", line 2, in <module>\nAttributeError: 'PrimitivePy' object has no attribute 'hasProperty'\n\n",
+  "error": ""
+}

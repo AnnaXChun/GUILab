@@ -1,0 +1,51 @@
+[
+  {
+    "id": "model-generated-torus-measurement",
+    "classification": "prospective_model_generated_cli_pair",
+    "pair_valid": true,
+    "invalid_reasons": [],
+    "A": {
+      "q": 0,
+      "initial_proxy_q": 1,
+      "reason": null,
+      "unavailable_probes": [],
+      "failures": [
+        {
+          "probe": "Radius1-0.8",
+          "check": "stored_area_response"
+        },
+        {
+          "probe": "Radius1-1.2",
+          "check": "stored_area_response"
+        },
+        {
+          "probe": "Radius2-0.8",
+          "check": "stored_area_response"
+        },
+        {
+          "probe": "Radius2-1.2",
+          "check": "stored_area_response"
+        }
+      ]
+    },
+    "B": {
+      "q": 1,
+      "initial_proxy_q": 1,
+      "reason": null,
+      "unavailable_probes": [],
+      "failures": []
+    },
+    "credit": -1,
+    "initial_proxy_credit": 0,
+    "training_eligible": false,
+    "candidate_origins": {
+      "A": "new_independent_model_sample",
+      "B": "new_independent_model_sample"
+    },
+    "credit_reason": null,
+    "graph_additional_discrimination": 0,
+    "training_effect": "NOT_MEASURED",
+    "s0_origin": "native_capture_before_this_model_batch",
+    "prospective_s0_captured_before_requests": true
+  }
+]

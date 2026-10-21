@@ -1,5 +1,7 @@
 # 基线复现
 
+最新[模型代码块小批](CLI_MODEL_PAIR_20261021.md)使用扩展接口和capture-before-request，不是官方terminal baseline完整episode。真实两候选在FreeCAD中失败，原始错误保留；旧官方CLI得分未修改。
+
 后续 [模型轨迹代码重放](CLI_REPLAY_CREDIT_20261021.md)只复用已有Qwen代码，没有新增模型baseline episode。新建S0重放、人工绑定修正与官方CLI成绩分开；原历史文件未变，参数响应结果不能回写官方成功率。
 
 2026-10-21 后续 [CLI 结构信用诊断](CLI_STRUCTURAL_CREDIT_20261021.md)已完成，属于无模型的 controlled synthetic，不是新增 baseline 跑题。三组 fixture 的修正版信用 `[1, 0, 1]` 只用于原生参数响应与配对机制验证，不能计入官方 CLI 成功率。GUI-only、已有 CLI 和该诊断继续分开报告。

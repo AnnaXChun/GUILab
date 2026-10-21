@@ -13,7 +13,7 @@ SAFE_METHODS = {"doc": {"getObject", "addObject", "recompute"}, "Part": {"makeTo
                 "shape_obj": set(), "torus_obj": {"addProperty", "setExpression"}}
 
 
-def review_fragment(code):
+def review_fragment(code, *, safe_methods=None):
     tree = ast.parse(code)
     for node in ast.walk(tree):
         if isinstance(node, (ast.Import, ast.ImportFrom, ast.FunctionDef, ast.ClassDef, ast.With, ast.Try, ast.While, ast.Delete)):
@@ -26,7 +26,7 @@ def review_fragment(code):
             f = node.func
             if isinstance(f, ast.Name) and f.id in SAFE_BUILTINS:
                 continue
-            if isinstance(f, ast.Attribute) and isinstance(f.value, ast.Name) and f.attr in SAFE_METHODS.get(f.value.id, set()):
+            if isinstance(f, ast.Attribute) and isinstance(f.value, ast.Name) and f.attr in (safe_methods or SAFE_METHODS).get(f.value.id, set()):
                 continue
             raise ValueError("fragment call outside reviewed CAD allowlist")
     return code

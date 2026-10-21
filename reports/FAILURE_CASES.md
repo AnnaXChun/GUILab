@@ -1,5 +1,7 @@
 # 失败案例
 
+捕获S0模型小批新增：60秒API超时无usage，circuit阻断；110秒新批B的只读hasProperty被白名单遗漏拒绝，保留后最小放行；恢复原S0执行A表达式Base.ParserError，B当前PrimitivePy无hasProperty，未进入表达式调用。两原代码不修改、不假设B表达式也已解析失败，pair invalid而非Q=0/0。[详情](CLI_MODEL_PAIR_20261021.md)。
+
 最新 [模型代码重放](CLI_REPLAY_CREDIT_20261021.md)保留四类问题：第6轮测量字符串未赋值，第7轮数值赋值在半径变化后陈旧，Shape.Area表达式保存后仍不刷新，以及单组runner完成条件写死。前两者来自真实模型片段；表达式为人工候选失败，runner由单测修正。静态圆环缺原生半径属性记unknown，历史中间S0缺失不冒充恢复。
 
 2026-10-21 [结构信用诊断](CLI_STRUCTURAL_CREDIT_20261021.md)新增检查器失败：圆环 `Shape.BoundBox` 返回 ±7.5767454，解析值为 ±7，首轮原生参数对象也被误判 Q=0。保留源码与结果后，实测 `optimalBoundingBox(False, False)` 返回 ±7.0000001，原容差通过。修正版静态圆环/圆柱的假参数仍无法驱动几何，下游测量修改也不能消除上游故障，均保留为受控失败。单测另验证缺 runtime、缺 VM/固件资产返回 `BLOCKED_BY_ENV`，不派发、不造原生结果。

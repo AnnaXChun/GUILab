@@ -75,7 +75,7 @@
     "public_copy": "reports/evidence/cli_focus_20261021/cli_data_20261021"
   },
   "verification": {
-    "project_tests": 231,
+    "project_tests": 251,
     "upstream_cli_tests": 7,
     "pinned_cli_dry_run": "PASS",
     "all_vms_stopped": true
@@ -103,7 +103,7 @@
       "Only 3 audited SFT examples",
       "Trainable weights, training GPU and trainer not configured or validated"
     ],
-    "next_action": "Model-sourced prospective replay completed. Capture S0 before new model blocks; freeze intent/bindings/continuations, task splits and equal-budget terminal checker, step validation, Best-of-2 and shuffled credit controls before training."
+    "next_action": "Capture-before-request model pair attempted; returned candidates failed FreeCAD expression/API execution. Freeze equal-budget public API/expression guidance comparison for new blocks, keep all failed responses and ledgers."
   },
   "structural_credit_diagnostic": {
     "status_file": "reports/CLI_STRUCTURAL_CREDIT_STATUS.json",
@@ -129,6 +129,19 @@
     "benchmark_episodes_added": 0,
     "training_rows_added": 0,
     "method_advantage_measured": false
+  },
+  "captured_model_pair": {
+    "status_file":"reports/CLI_MODEL_PAIR_STATUS.json",
+    "status":"MODEL_CANDIDATES_FAILED_NATIVE_EXECUTION",
+    "model_requests":3,
+    "known_input_tokens":2144,
+    "known_output_tokens":1283,
+    "unknown_output_reservation":2048,
+    "native_dispatches":5,
+    "valid_model_pairs":0,
+    "credit":null,
+    "training_rows_added":0,
+    "next_action":"Freeze API/expression guidance control before new model batch; do not replay old responses or reset ledgers."
   },
   "original_actc": {
     "real_pairs": 0,

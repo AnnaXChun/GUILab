@@ -1,0 +1,5 @@
+{
+  "returncode": 1,
+  "output": "\nTraceback (most recent call last):\n  File \"<string>\", line 369, in <module>\n  File \"<string>\", line 284, in execute\n  File \"<string>\", line 3, in <module>\nBase.ParserError: Failed to parse expression.\n\n",
+  "error": ""
+}

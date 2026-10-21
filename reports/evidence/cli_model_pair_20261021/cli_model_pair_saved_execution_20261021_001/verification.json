@@ -1,0 +1,28 @@
+{
+  "status": "PASS_PROTOCOL_ACCOUNTING",
+  "model_response_original_text_verified": true,
+  "original_capture_s0_verified": true,
+  "new_model_requests": 0,
+  "native_dispatches": 3,
+  "complete_dispatches": 3,
+  "uncertain_dispatches": 0,
+  "successful_artifacts": [],
+  "known_worker_failures": [
+    {
+      "branch": "A",
+      "reason": "known_nonzero_worker_exit",
+      "returncode": 1,
+      "controller_response_sha256": "c4028095c07efb9270ea9f920d2425db5cca4c744eec22b77ba61f1f8e980993"
+    },
+    {
+      "branch": "B",
+      "reason": "known_nonzero_worker_exit",
+      "returncode": 1,
+      "controller_response_sha256": "4bf51e575c729cc62e999b4d25ab599de7cbb993c537b83d9ea0ce2f4a6f4d6b"
+    }
+  ],
+  "pair_valid": false,
+  "credit": null,
+  "vm_stopped": true,
+  "training_rows": 0
+}

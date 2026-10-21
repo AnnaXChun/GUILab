@@ -1,5 +1,9 @@
 # GUILab 交接
 
+**捕获S0的模型候选已实际执行**：先读[本批报告](reports/CLI_MODEL_PAIR_20261021.md)、[协议](docs/CLI_MODEL_PAIR.md)、[状态](reports/CLI_MODEL_PAIR_STATUS.json)。S0在模型请求前保存重开，60秒首请求超时并保留2048未知预留；110秒新批返回两候选、2144输入/1283输出tokens。初始白名单拒绝B的只读hasProperty查询，复核放行后不改response，在停止捕获磁盘的新overlay恢复原S0并执行。A表达式ParserError，B当前PrimitivePy无hasProperty，均未保存artifact，pair invalid/credit=null。
+
+本轮3次模型请求、5次native派发，原始请求/账本/拒绝/原生失败均保留，三VM停止，251项目tests/7上游CLI tests。没有自动transport重试、原模型代码修补或新增训练样本。旧7份模型账本SHA未变。下一步先冻结公开FreeCAD API/表达式说明的等预算对照再生成新代码，当前不重开本批；有效模型pair和方法优势仍NO-GO。
+
 **2026-10-21 模型代码重放交接**：已把结构检查推进到真实 Qwen 轨迹代码，先读 [模型重放报告](reports/CLI_REPLAY_CREDIT_20261021.md)、[执行协议](docs/CLI_REPLAY_CREDIT.md)与 [机器状态](reports/CLI_REPLAY_STATUS.json)。第6/7轮代码在新建同S0静态圆环上重放，数值存储proxy为0/1，但缺半径绑定，响应Q均null。模型第7轮在原生圆环上的直接赋值初始正确、参数响应失败；人工追加公开半径公式后，保存重开及参数响应Q=1，credit=-1。原`Shape.Area`绑定失败及mock预设被真实结果推翻的记录保留。
 
 本批8次无模型原生派发、6个文件、全部complete，两台VM已停止。231项目tests与7上游CLI tests通过。历史中间S0未保存，本批是model-sourced prospective replay，不能写成历史精确恢复；模型原文件SHA未变。人工修正候选、工程响应目标与原官方任务分开报告，新增官方episode/ACTC pair/训练样本均0。证据入口为`reports/evidence/cli_replay_credit_20261021/INDEX.json`。

@@ -1,0 +1,134 @@
+{
+  "classification": "restore_existing_precaptured_model_s0",
+  "seeds": {
+    "model-generated-torus-measurement": {
+      "path": "/home/user/.structural_credit_dc19bb040b65/seeds/model-generated-torus-measurement.FCStd",
+      "seed_sha256": "65d32a355a16b483e52b84b55230765d3c35d838f47f5b354524c8e70b7a16b0",
+      "seed_state_sha256": "b3dde05a4a770a9b5431a77a1203ddd00cd3430b7c0781adfe91ada94a12f1da",
+      "native_state": {
+        "objects": [
+          {
+            "name": "Guard",
+            "type_id": "Part::Box",
+            "errors": [],
+            "dependencies": [],
+            "parameters": {
+              "Height": 5.0,
+              "Length": 3.0,
+              "Width": 4.0
+            },
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              30.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "geometry": {
+              "valid": true,
+              "area": 94.0,
+              "volume": 60.0,
+              "bbox": [
+                30.0,
+                0.0,
+                0.0,
+                33.0,
+                4.0,
+                5.0
+              ],
+              "com": [
+                31.5,
+                2.0,
+                2.5
+              ],
+              "legacy_bbox": [
+                30.0,
+                0.0,
+                0.0,
+                33.0,
+                4.0,
+                5.0
+              ],
+              "bbox_method": "optimalBoundingBox(False,False)"
+            },
+            "label": "Guard",
+            "expressions": [],
+            "measurement_properties": {}
+          },
+          {
+            "name": "Torus",
+            "type_id": "Part::Torus",
+            "errors": [],
+            "dependencies": [],
+            "parameters": {
+              "Radius1": 5.0,
+              "Radius2": 2.0
+            },
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "geometry": {
+              "valid": true,
+              "area": 394.78417604,
+              "volume": 394.78417604,
+              "bbox": [
+                -7.0000001,
+                -7.0000001,
+                -2.0000001,
+                7.0,
+                7.0000001,
+                2.0000001
+              ],
+              "com": [
+                -0.0,
+                0.0,
+                0.0
+              ],
+              "legacy_bbox": [
+                -7.5767454,
+                -7.5767454,
+                -2.0,
+                7.5767454,
+                7.5767454,
+                2.0
+              ],
+              "bbox_method": "optimalBoundingBox(False,False)"
+            },
+            "label": "Torus",
+            "expressions": [],
+            "measurement_properties": {}
+          }
+        ]
+      },
+      "captured_before_model_requests": true,
+      "captured_wall_unix_seconds": 1792573470.9212818
+    }
+  },
+  "new_model_calls": 0
+}

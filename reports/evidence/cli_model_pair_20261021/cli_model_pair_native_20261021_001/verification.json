@@ -1,0 +1,17 @@
+{
+  "status": "PASS_FAILURE_ACCOUNTING",
+  "experiment_status": "BLOCKED_BY_MODEL_SERVICE",
+  "classification": "captured_s0_failed_model_request_audit",
+  "s0_capture_verified": true,
+  "model_requests": 1,
+  "native_dispatches": 1,
+  "candidate_executions": 0,
+  "usage": null,
+  "usage_reason": "provider timed out without response",
+  "unknown_output_reservation": 2048,
+  "credit": null,
+  "credit_reason": "no generated candidates or paired executions",
+  "automatic_retries": 0,
+  "vm_stopped": true,
+  "training_eligible": false
+}

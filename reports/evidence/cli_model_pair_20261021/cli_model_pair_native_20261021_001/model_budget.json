@@ -1,0 +1,12 @@
+{
+  "blocked": true,
+  "requests": 1,
+  "remaining_calls": 1,
+  "known_output_tokens": 0,
+  "unknown_output_reservation": 2048,
+  "remaining_output_cap": 2048,
+  "model_calls": 1,
+  "input_tokens": 0,
+  "total_cost_usd": null,
+  "cost_reason": "provider pricing unavailable"
+}

@@ -1,0 +1,12 @@
+{
+  "cad_cf/cli_model_pair.py": "1957d3a468ff6e2340d625ab2327d4727f8267daba24ebf68698a5b3e55c9fd1",
+  "cad_cf/cli_replay.py": "50ea7c7fd2acd3bf0cfa17a6b4dd4c819ec8b02189f7ab59f05a77a6bc575328",
+  "cad_cf/batch_budget.py": "52953e7b0ab3deb3546927a02ae848fa3be323f773020092906b081ab70f8e02",
+  "cad_cf/upstream_launch.py": "39353dd1bcb5bc906a17da49da9a42d2206f23e7c8d3e426fb6f84469f96ada0",
+  "scripts/run_cli_model_pair.py": "b14ddd14b13b54e2ca1f1f578c33b0fbb40c5fe75a6014d87babcfe19b130fbe",
+  "scripts/run_cli_replay_credit.py": "da1e3b1e25940f3b5e59e23182fb91ef9711b01ced8ba45de9fc827c23f6806f",
+  "scripts/cli_replay_worker.py": "fb0925f5371b5f022c579994c8610e26b4f5b256c9e3cf0f9eb9626efca5823a",
+  "scripts/structural_credit_worker.py": "6461deb43c1d243237657706d93548480fb9aaa6b38a10a4a71519b599bf16fb",
+  "scripts/run_structural_credit_diagnostic.py": "51efb4bb427018e1cddd17c549683aaae299d7b7cb5c2f4db412464bc72ad79b",
+  "deployed_worker.py": "640a5ca44ba047c8a7c27cea9c50e666dc904be5efc04816a99466ae5003f5e3"
+}

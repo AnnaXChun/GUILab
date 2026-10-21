@@ -1,0 +1,7 @@
+{
+  "event": "error",
+  "id": "model-generated-torus-measurement-A",
+  "quality": null,
+  "reason": "RuntimeError",
+  "message": "VM command failed: "
+}

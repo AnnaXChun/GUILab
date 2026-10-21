@@ -1,0 +1,12 @@
+{
+  "source_run": "results/cli_model_pair_service_native_20261021_001",
+  "new_model_calls": 0,
+  "model_response_sha256": {
+    "A": "3c19d94c3aa0d6f90276e8cb578babdf74c5c2d7aaaeaf52ac18e3f39d640ae3",
+    "B": "cda27405908e45da8681de58521ba10dc31efb8a6a450785b8b3759aaf7df9f2"
+  },
+  "source_disk_sha256": "e0b2e6625dbe92015c4834217a145fdc876ff011b1a653ef3b6509d792f04938",
+  "source_disk_stopped": true,
+  "same_s0_seed_sha256": "65d32a355a16b483e52b84b55230765d3c35d838f47f5b354524c8e70b7a16b0",
+  "review": "read-only hasProperty for SurfaceArea_mm2 allowed; response text unchanged; original rejection retained"
+}

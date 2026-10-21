@@ -1,0 +1,12 @@
+{
+  "status": "DIAGNOSTIC_ERROR",
+  "mode": "PROSPECTIVE_MODEL_GENERATED",
+  "model_calls": 1,
+  "new_official_baseline_episodes": 0,
+  "original_actc_pairs": 0,
+  "training_rows": 0,
+  "credit": null,
+  "initial_proxy_credit": null,
+  "method_advantage": "NOT_ESTABLISHED",
+  "old_ledgers_unchanged": true
+}

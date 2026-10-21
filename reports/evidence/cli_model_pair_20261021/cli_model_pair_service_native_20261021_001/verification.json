@@ -1,0 +1,16 @@
+{
+  "status": "PASS_REJECTION_ACCOUNTING",
+  "experiment_status": "CANDIDATE_REJECTED",
+  "classification": "captured_s0_candidate_interface_rejection_audit",
+  "s0_capture_verified": true,
+  "model_requests": 2,
+  "native_dispatches": 1,
+  "candidate_executions": 0,
+  "total_input_tokens": 2144,
+  "total_output_tokens": 1283,
+  "credit": null,
+  "credit_reason": "interface rejection prevented both branch executions",
+  "automatic_retries": 0,
+  "vm_stopped": true,
+  "training_eligible": false
+}

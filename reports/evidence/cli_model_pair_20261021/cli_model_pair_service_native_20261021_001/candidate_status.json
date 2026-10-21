@@ -1,0 +1,14 @@
+[
+  {
+    "branch": "A",
+    "status": "READY",
+    "candidate_sha256": "6f0ee16f495e03013f904551a3f9300d194ff16e4e891092ebb34e7fb3afb846",
+    "origin": "model_generated"
+  },
+  {
+    "branch": "B",
+    "status": "CANDIDATE_REJECTED",
+    "reason": "ValueError",
+    "message": "fragment call outside reviewed CAD allowlist"
+  }
+]

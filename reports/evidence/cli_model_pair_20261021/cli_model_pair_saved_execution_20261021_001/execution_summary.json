@@ -1,0 +1,8 @@
+{
+  "dispatches": 3,
+  "uncertain": 0,
+  "elapsed_seconds": 245.641,
+  "vm_stopped": true,
+  "model_calls": 0,
+  "isolation": "independent document/process/workdir; shared VM; reviewed measurement blocks"
+}

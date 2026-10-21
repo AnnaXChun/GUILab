@@ -1,5 +1,7 @@
 # 复现状态
 
+最新[捕获S0模型小批](CLI_MODEL_PAIR_20261021.md)已实测：模型前保存S0，首超时保留，服务适配返回两代码；恢复原S0执行后分别ParserError/AttributeError，无artifact，credit=null。累计3模型请求/5native派发、251项目tests/7上游CLI tests，全部VM停止。pipeline失败审计通过，模型pair与方法优势NO-GO；不新增官方episode或训练样本。
+
 最新 [模型代码重放](CLI_REPLAY_CREDIT_20261021.md)完成8次无模型派发和6文件审计，真实模型直接赋值初始正确但参数响应失败，人工半径公式保存重开后Q=1。历史S0未捕获，静态圆环缺参数绑定时响应null，Shape.Area表达式失败保留。231项目tests/7上游CLI tests通过，两台VM停止；未增加官方episode或训练样本，方法优势仍NO-GO。
 
 2026-10-21 新增 [CLI 结构信用验证](CLI_STRUCTURAL_CREDIT_20261021.md)：三组真实 FreeCAD 受控对照完成，修正后的 credit 为 `[1, 0, 1]`，14 次无模型派发全部 complete、两轮 VM 已停止，210 项项目测试与 7 项上游 CLI 测试通过。首轮圆环包围盒检查器失败及原始 `[0, 0, 1]` 保留。当前参数响应检查 GO；方法优势与训练 NO-GO。该诊断不增加官方 baseline episode、原 ACTC pair 或 SFT 样本，具体状态见 `CLI_STRUCTURAL_CREDIT_STATUS.json`。

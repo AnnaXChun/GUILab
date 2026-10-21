@@ -1,0 +1,23 @@
+{
+  "status": "BLOCKED_BY_MODEL_SERVICE",
+  "mode": "PROSPECTIVE_MODEL_GENERATED",
+  "model_calls": 1,
+  "new_official_baseline_episodes": 0,
+  "original_actc_pairs": 0,
+  "training_rows": 0,
+  "credit": null,
+  "initial_proxy_credit": null,
+  "method_advantage": "NOT_ESTABLISHED",
+  "old_ledgers_unchanged": true,
+  "reason": "APITimeoutError after configured 60-second request timeout; no model response/usage or automatic retry",
+  "total_input_tokens": null,
+  "total_output_tokens": null,
+  "usage_reason": "provider did not return usage",
+  "known_input_tokens": 0,
+  "known_output_tokens": 0,
+  "unknown_output_reservation": 2048,
+  "candidate_executions": 0,
+  "s0_capture_verified": true,
+  "raw_summary_sha256": "6f8160a889a9ead495d9d69804feed452330b85119ded7aa463c7a7c9ace5122",
+  "review_kind": "posthoc classification and unknown-usage clarification; original records retained"
+}

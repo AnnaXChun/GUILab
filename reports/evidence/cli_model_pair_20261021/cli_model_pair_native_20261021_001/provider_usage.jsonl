@@ -1,0 +1,2 @@
+{"call": 1, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 0}
+{"call": 1, "error": "APITimeoutError", "event": "model_error", "sequence": 1}

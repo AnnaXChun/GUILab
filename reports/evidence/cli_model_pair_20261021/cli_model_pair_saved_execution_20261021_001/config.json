@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "authorization": "Bounded continuation of user's real model-pair validation; prior 60-second timeout retained; this batch adds at most two independent requests with 110-second timeout, cumulative cap three actual requests",
+  "task_id": "freecad-measure-003",
+  "split": "development",
+  "public_instruction": "Create a torus with major radius 5 mm and minor radius 2 mm in FreeCAD, measure its surface area, include that measurement in the finished FreeCAD file, and save the completed document to /home/user/Unnamed.FCStd.",
+  "model": "qwen3.5-122b-a10b",
+  "temperature": 0.7,
+  "max_model_calls": 2,
+  "per_call_tokens": 2048,
+  "max_model_output_tokens": 4096,
+  "model_timeout_seconds": 110,
+  "model_wall_seconds": 300,
+  "max_dispatches": 3,
+  "worker_timeout_seconds": 110,
+  "max_wall_seconds": 1200,
+  "port": 15063,
+  "vnc_port": 15963,
+  "training_eligible": false
+}

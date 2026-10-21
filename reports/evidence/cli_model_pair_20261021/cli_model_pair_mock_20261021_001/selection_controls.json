@@ -1,0 +1,12 @@
+{
+  "first_sample": "A",
+  "initial_checker_selection": "A",
+  "response_checker_selection": "B",
+  "equal_generation_budget_best_of_2": "B",
+  "relative_credit_selection": "B",
+  "shuffled_credit_selection": "A",
+  "selected_q": 1,
+  "method_advantage_over_same_terminal_checker": "NOT_ESTABLISHED",
+  "selection_scope": "offline reuse of identical two samples and executed observations; tie chooses A",
+  "training_effect": "NOT_MEASURED"
+}

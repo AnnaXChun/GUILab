@@ -1,5 +1,9 @@
 # 差异与适配
 
+## 捕获S0的模型代码块
+
+新增模型前保存重开S0、同prompt两独立采样与durable模型限额，扩展接口仅允许数值测量属性。首60秒超时保留，110秒新批限2请求，累计实际3请求，SDK重试0。B的hasProperty只读查询原白名单遗漏，保留原拒绝后只放行固定测量查询；实际API仍不存在，失败不改代码。停止捕获overlay作为只读backing，新overlay恢复原seed/native state后执行原responses，无新增模型请求。原非幂等候选只执行一次、失败无artifact、credit=null，旧账本未改，原baseline协议不替换。
+
 ## 模型代码块重放
 
 新增`cad_cf.cli_replay`与可信worker，复用实际Qwen轨迹第4/6/7轮的连续AST源码；适配只移除shell、import、文档open/new和save/close外层，保留原片段与SHA。历史S0未捕获，新建同S0的prospective replay单列。首轮Shape.Area表达式不刷新，原数据保留；修正版仅改为公开半径公式，保持续执行与容差。探针只重算FreeCAD，不重放模型代码。人工候选、数值proxy与工程响应目标均标明来源/范围，不作为官方episode或训练数据。通用runner只新增worker/evaluator注入点，原默认fixture协议保留。

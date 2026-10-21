@@ -47,7 +47,7 @@ def parse_response(response):
     return next(json.loads(line) for line in response["output"].splitlines() if line.startswith('{"classification":'))
 
 
-def run_native(plan, config, runtime, output, *, worker_path=WORKER, evaluator=evaluate_pair):
+def run_native(plan, config, runtime, output, *, worker_path=WORKER, evaluator=evaluate_pair, on_prepared=None):
     worker = worker_path.read_text()
     runtime.update(output=str((output/"runtime").resolve()), port=config["port"], vnc_port=config["vnc_port"],
                    gui_ready=False, gui_warmup=False, visible=False)
@@ -104,6 +104,9 @@ def run_native(plan, config, runtime, output, *, worker_path=WORKER, evaluator=e
         provider.start_emulator(runtime["base"])
         bridge = TerminalBridge(provider.endpoint, provider.endpoint, output/"dispatch.sqlite", session=session)
         prepared = dispatch({"mode": "prepare", "root": guest+"/seeds", "pairs": plan["pairs"]}, "prepare")
+        if on_prepared is not None:
+            on_prepared(plan, prepared)
+            save(output/"plan.json", plan)
         for pair in plan["pairs"]:
             for branch in ("A", "B"):
                 name = pair["id"]+"-"+branch

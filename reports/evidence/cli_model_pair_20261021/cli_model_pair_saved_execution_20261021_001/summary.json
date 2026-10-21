@@ -1,0 +1,10 @@
+{
+  "status": "PAIR_INVALID_OR_EXECUTION_FAILED",
+  "new_model_calls": 0,
+  "source_model_requests": 2,
+  "credit": null,
+  "initial_proxy_credit": null,
+  "s0_origin": "exact saved seed captured before source model requests",
+  "candidate_response_unchanged": true,
+  "training_rows": 0
+}
