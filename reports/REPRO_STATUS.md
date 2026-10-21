@@ -1,5 +1,7 @@
 # 复现状态
 
+最新[CLI 接口修复](CLI_API_GUIDED_PAIR_20261021.md)已通过：两条新模型原文在同 S0 上各执行一次，保存重开和六个参数/控制探针 Q=1/1，credit=0。原 JSON 围栏拒绝保留，显式适配只去封装。当前有效模型 pair 为一个 tie；本轮新增 2 模型请求、4 native 派发，257 项项目测试/7 项上游 CLI 测试通过，VM 均停止。官方 baseline 历史结果保持，方法收益与训练仍 NO-GO。下方模型 pair=0 是该修复前的历史记录。
+
 最新[捕获S0模型小批](CLI_MODEL_PAIR_20261021.md)已实测：模型前保存S0，首超时保留，服务适配返回两代码；恢复原S0执行后分别ParserError/AttributeError，无artifact，credit=null。累计3模型请求/5native派发、251项目tests/7上游CLI tests，全部VM停止。pipeline失败审计通过，模型pair与方法优势NO-GO；不新增官方episode或训练样本。
 
 最新 [模型代码重放](CLI_REPLAY_CREDIT_20261021.md)完成8次无模型派发和6文件审计，真实模型直接赋值初始正确但参数响应失败，人工半径公式保存重开后Q=1。历史S0未捕获，静态圆环缺参数绑定时响应null，Shape.Area表达式失败保留。231项目tests/7上游CLI tests通过，两台VM停止；未增加官方episode或训练样本，方法优势仍NO-GO。

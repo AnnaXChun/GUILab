@@ -132,16 +132,18 @@
   },
   "captured_model_pair": {
     "status_file":"reports/CLI_MODEL_PAIR_STATUS.json",
-    "status":"MODEL_CANDIDATES_FAILED_NATIVE_EXECUTION",
-    "model_requests":3,
-    "known_input_tokens":2144,
-    "known_output_tokens":1283,
+    "status":"API_GUIDED_MODEL_PAIR_PASSED",
+    "report":"reports/CLI_API_GUIDED_PAIR_20261021.md",
+    "model_requests":5,
+    "known_input_tokens":4574,
+    "known_output_tokens":2430,
     "unknown_output_reservation":2048,
-    "native_dispatches":5,
-    "valid_model_pairs":0,
-    "credit":null,
+    "native_dispatches":9,
+    "valid_model_pairs":1,
+    "credit":0,
+    "pair_quality":{"A":1,"B":1,"tie":true},
     "training_rows_added":0,
-    "next_action":"Freeze API/expression guidance control before new model batch; do not replay old responses or reset ledgers."
+    "next_action":"Freeze independent CLI construction tasks and equal-budget terminal/response/Best-of-2 comparisons. Preserve failures and response-envelope adaptation; no old budget reset or training."
   },
   "original_actc": {
     "real_pairs": 0,

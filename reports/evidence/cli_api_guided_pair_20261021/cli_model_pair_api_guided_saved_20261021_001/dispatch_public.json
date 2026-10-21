@@ -1,0 +1,17 @@
+[
+  {
+    "id": "prepare",
+    "payload_sha256": "ee7710c2f97c6173d181467da42e57a5a2dba88e44ad36f2bc146c8e588de053",
+    "state": "complete"
+  },
+  {
+    "id": "model-generated-torus-measurement-A",
+    "payload_sha256": "425550a6ab4178a31231b8c0682d68c877045ad4bbab1fe3babcdad22933c2f5",
+    "state": "complete"
+  },
+  {
+    "id": "model-generated-torus-measurement-B",
+    "payload_sha256": "90ac500852f7b2233890dfe8bdf32d6332a9a6465597ce93f5fa99ca07a53ab0",
+    "state": "complete"
+  }
+]

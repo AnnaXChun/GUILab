@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-5711ce09-f477-9e08-bc76-56dcdcf5758c",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "```json\n{\"code\": \"torus_obj = doc.getObject('Torus')\\nif 'SurfaceArea_mm2' not in torus_obj.PropertiesList:\\n    torus_obj.addProperty('App::PropertyFloat','SurfaceArea_mm2')\\ntorus_obj.setExpression('SurfaceArea_mm2','4 * pi^2 * Radius1 * Radius2 / (1 mm^2)')\"}\n```",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning_content": "The user wants me to create a FreeCAD Python measurement block that:\n1. Gets the existing Torus object from the document\n2. Adds a SurfaceArea_mm2 property to it\n3. Sets an expression that calculates the surface area and persists the dependency on radii\n4. The measurement should update automatically when radii change\n\nFor a torus, the surface area formula is: 4 * \u03c0\u00b2 * R * r\nWhere R is Radius1 (major radius) and r is Radius2 (minor radius)\n\nI need to use setExpression with FreeCAD expression language syntax:\n- Use 'pi' not math.pi\n- Use '^' for exponentiation\n- Divide by (1 mm^2) to make it dimensionless for App::PropertyFloat\n- Reference the native parameters directly (Radius1, Radius2)\n\nLet me write the code:\n\n```python\ntorus_obj = doc.getObject('Torus')\nif 'SurfaceArea_mm2' not in torus_obj.PropertiesList:\n    torus_obj.addProperty('App::PropertyFloat', 'SurfaceArea_mm2')\ntorus_obj.setExpression('SurfaceArea_mm2', '4 * pi^2 * Radius1 * Radius2 / (1 mm^2)')\n```\n\nThis uses:\n- torus_obj to get the Torus object\n- PropertiesList check to avoid duplicate properties\n- addProperty to create the float property\n- setExpression with FreeCAD expression syntax (pi, ^ for power, native parameter names)\n- Division by (1 mm^2) to convert from mm^2 to dimensionless number\n\nThe expression will persist and recalculate when Radii change, even after save/reopen."
+      }
+    }
+  ],
+  "created": 1792575476,
+  "model": "qwen3.5-122b-a10b",
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 444,
+    "prompt_tokens": 1215,
+    "total_tokens": 1659,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 354,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 444
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": null,
+      "text_tokens": 1215
+    }
+  }
+}

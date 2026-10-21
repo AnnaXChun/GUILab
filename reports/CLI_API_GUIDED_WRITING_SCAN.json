@@ -1,0 +1,107 @@
+{
+  "skills": [
+    "haohao-shuohua",
+    "anti-defensive-writing"
+  ],
+  "mechanical_scan": "exact documented four regex categories, executed once; code/URLs preserved",
+  "files": [
+    {
+      "path": "reports/CLI_API_GUIDED_PAIR_20261021.md",
+      "sha256": "5f008302e9b7644a5d8b547928a3efab8b20b271749eff7e65e5bbc046886212",
+      "hits": {
+        "numbered_headings": [],
+        "b2": [],
+        "meta": [],
+        "chinese_ascii_punctuation": []
+      }
+    },
+    {
+      "path": "docs/CLI_API_GUIDED_PAIR.md",
+      "sha256": "f6212e47782d01184c4cb11bd95e966f708b8e28f3f99d7c655d4865248d597f",
+      "hits": {
+        "numbered_headings": [],
+        "b2": [],
+        "meta": [],
+        "chinese_ascii_punctuation": []
+      }
+    },
+    {
+      "path": "HANDOFF.md",
+      "sha256": "19abe0cbf478245ccdbbdae7ab40fc6ac8db393d64a77320b0f13532d75da404",
+      "hits": {
+        "numbered_headings": [],
+        "b2": [],
+        "meta": [],
+        "chinese_ascii_punctuation": []
+      }
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "9c42e1baaa592a1afbb9dcdfce3837417ad544bdfee186e49b0d1def7d83e292",
+      "hits": {
+        "numbered_headings": [],
+        "b2": [],
+        "meta": [],
+        "chinese_ascii_punctuation": []
+      }
+    },
+    {
+      "path": "reports/REPRO_STATUS.md",
+      "sha256": "f1ac46b49f79587ea048d5d066e817f0c4053f63bfb65a69bad495941769545a",
+      "hits": {
+        "numbered_headings": [],
+        "b2": [],
+        "meta": [],
+        "chinese_ascii_punctuation": []
+      }
+    },
+    {
+      "path": "reports/BASELINE_REPRO.md",
+      "sha256": "896a3e5d5b2ade9ee5e50957ce7a56fadd07a262cc34a44b45c51bbd44ea320f",
+      "hits": {
+        "numbered_headings": [],
+        "b2": [],
+        "meta": [],
+        "chinese_ascii_punctuation": []
+      }
+    },
+    {
+      "path": "reports/PILOT.md",
+      "sha256": "9079a822588864a72c8e3fb30e1198f73f021996977d93ab0a8e2dc0c537ae98",
+      "hits": {
+        "numbered_headings": [],
+        "b2": [],
+        "meta": [],
+        "chinese_ascii_punctuation": []
+      }
+    },
+    {
+      "path": "reports/FAILURE_CASES.md",
+      "sha256": "5db546a2144edd73f8eee31964b3d7755220d00e23f83a319540e151dbe24dc3",
+      "hits": {
+        "numbered_headings": [],
+        "b2": [],
+        "meta": [],
+        "chinese_ascii_punctuation": []
+      }
+    },
+    {
+      "path": "reports/DEVIATIONS.md",
+      "sha256": "a956d28ca9beba218032fde12ffe30ee9f57fe39abb9f160f8aeab8d960a1dac",
+      "hits": {
+        "numbered_headings": [],
+        "b2": [],
+        "meta": [],
+        "chinese_ascii_punctuation": []
+      }
+    }
+  ],
+  "facts_checked": [
+    "Q=1/1 credit=0",
+    "2 new requests 2430/1147 tokens",
+    "4 new dispatches",
+    "257/7 tests",
+    "old failures retained and original ACTC separate"
+  ],
+  "exemptions": []
+}

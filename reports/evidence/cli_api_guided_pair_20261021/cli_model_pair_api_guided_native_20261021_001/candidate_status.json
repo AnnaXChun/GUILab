@@ -1,0 +1,14 @@
+[
+  {
+    "branch": "A",
+    "status": "CANDIDATE_REJECTED",
+    "reason": "JSONDecodeError",
+    "message": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "branch": "B",
+    "status": "CANDIDATE_REJECTED",
+    "reason": "JSONDecodeError",
+    "message": "Expecting value: line 1 column 1 (char 0)"
+  }
+]

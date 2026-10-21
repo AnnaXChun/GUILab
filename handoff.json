@@ -132,7 +132,7 @@
   "branch": "main",
   "read_first": [
     "AGENTS.md",
-    "reports/GUI_GROUNDING_20261020.md",
+    "reports/CLI_API_GUIDED_PAIR_20261021.md",
     "HANDOFF.md"
   ],
   "cadworld_commit": "e5d0ebab8bd28da6e98c68c61db05747d1647f7b",
@@ -149,7 +149,7 @@
     "real_episodes": 3
   },
   "next_phase": "P0",
-  "next_action": "读取reports/GUI_GROUNDING_20261020.md，在新截图与事前冻结目标上验证显式坐标配置，再安排限步GUI复测。原样官方pixel adapter接当前服务为NO-GO；同图事后3/3只是待验证单位假设。6次校准已用完，不重开旧账本；正式TypedWorker/Qt bridge同步与same-S0后移，真实pairs=0，P3/P4 NO-GO。",
+  "next_action": "读取 reports/CLI_API_GUIDED_PAIR_20261021.md 与 HANDOFF.md；新模型同 S0 执行已通过，Q=1/1、credit=0。冻结两个新 CLI 构造任务、任务划分和相同预算，每次模型前捕获 S0，比较终局检查、参数干预与 Best-of-2；不重开已结束账本、不恢复 GUI、不启动训练。",
   "paid_run_authorization_added": true,
   "defaults": {
     "ENABLE_PAID_RUNS": 0,
@@ -450,7 +450,9 @@
     "P4_training": "NO-GO",
     "cli_collection": "GO",
     "cli_data_cleaning": "GO",
-    "cli_sft_rl_training": "NO-GO"
+    "cli_sft_rl_training": "NO-GO",
+    "same_s0_model_block_execution": "GO",
+    "structural_credit_method_advantage": "NO-GO"
   },
   "baseline_continuation_authorized": true,
   "baseline_history_first_batch": {
@@ -462,8 +464,8 @@
     "unknown_output_reservation": 128
   },
   "active_research_protocol": "CLI_ONLY",
-  "current_focus": "CLI数据清洗、公开奖励、后续SFT/RL与成功率改进；GUI停止",
+  "current_focus": "CLI 同 S0 模型代码块与持久参数响应已通过；下一步独立构造任务对照，GUI 停止",
   "latest_cli_status": "reports/CLI_STATUS.json",
-  "latest_cli_report": "reports/CLI_FOCUS_20261021.md",
-  "current_next_step": "按docs/CLI_RESEARCH_PLAN.md冻结更多任务家族与等预算对照，扩充原生质量奖励；不恢复GUI，不重开已完成批次。"
+  "latest_cli_report": "reports/CLI_API_GUIDED_PAIR_20261021.md",
+  "current_next_step": "冻结两个新 CLI 构造任务、任务划分与相同预算，模型请求前捕获 S0，比较终局检查、参数干预检查和 Best-of-2；方法收益与训练仍 NO-GO。"
 }

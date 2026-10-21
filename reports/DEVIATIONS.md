@@ -1,5 +1,9 @@
 # 差异与适配
 
+## CLI 通用接口说明与响应封装
+
+新增通用 FreeCAD API 说明，先在独立 Box 文档实测 PropertiesList、pi、^、单位、保存重开与参数响应，通过后才发新模型请求。说明不含圆环公式。两响应有 JSON 围栏，保留原严格 JSON 拒绝后启用显式 single_json_fence，只去单个完整围栏，代码字符串不改；以新 overlay 恢复原 seed 执行既有响应，无新增模型请求。两候选 Q=1/1、credit=0，原生 XML 与六探针审计通过。该设置是扩展测量协议，原 baseline prompt 和历史成绩保留；历史失败与新成功不能当作等预算因果对照。服务请求 thinking=false 仍返回 reasoning_content/962 reasoning tokens，按完整 completion 用量保留。详情见 [CLI 接口修复](CLI_API_GUIDED_PAIR_20261021.md)。
+
 ## 捕获S0的模型代码块
 
 新增模型前保存重开S0、同prompt两独立采样与durable模型限额，扩展接口仅允许数值测量属性。首60秒超时保留，110秒新批限2请求，累计实际3请求，SDK重试0。B的hasProperty只读查询原白名单遗漏，保留原拒绝后只放行固定测量查询；实际API仍不存在，失败不改代码。停止捕获overlay作为只读backing，新overlay恢复原seed/native state后执行原responses，无新增模型请求。原非幂等候选只执行一次、失败无artifact、credit=null，旧账本未改，原baseline协议不替换。

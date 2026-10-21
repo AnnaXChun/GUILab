@@ -1,0 +1,4 @@
+{"call": 1, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 0}
+{"call": 1, "event": "model_usage", "input_tokens": 1215, "output_tokens": 703, "sequence": 1, "thinking_tokens": 0, "total_tokens": 1918, "usage_available": true}
+{"call": 2, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 2}
+{"call": 2, "event": "model_usage", "input_tokens": 1215, "output_tokens": 444, "sequence": 3, "thinking_tokens": 0, "total_tokens": 1659, "usage_available": true}

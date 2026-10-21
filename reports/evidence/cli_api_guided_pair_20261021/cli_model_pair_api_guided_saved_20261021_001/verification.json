@@ -1,0 +1,44 @@
+{
+  "status": "PASS_PROTOCOL_ACCOUNTING",
+  "model_response_original_text_verified": true,
+  "original_capture_s0_verified": true,
+  "new_model_requests": 0,
+  "native_dispatches": 3,
+  "complete_dispatches": 3,
+  "uncertain_dispatches": 0,
+  "successful_artifacts": [
+    {
+      "branch": "A",
+      "artifact_sha256": "aa79f92d57339b34a9dfb81cd62b1b4bb615db9303af987662f513e44a0cdf08",
+      "native_types": {
+        "Guard": "Part::Box",
+        "Torus": "Part::Torus"
+      },
+      "expression_bindings": [
+        [
+          "SurfaceArea_mm2",
+          "4 * pi ^ 2 * Radius1 * Radius2 / 1 (mm ^ 2)"
+        ]
+      ]
+    },
+    {
+      "branch": "B",
+      "artifact_sha256": "485045deda4eb128faf85920fb63a9de647184ac75fe497d8717af10e980108f",
+      "native_types": {
+        "Guard": "Part::Box",
+        "Torus": "Part::Torus"
+      },
+      "expression_bindings": [
+        [
+          "SurfaceArea_mm2",
+          "4 * pi ^ 2 * Radius1 * Radius2 / 1 (mm ^ 2)"
+        ]
+      ]
+    }
+  ],
+  "known_worker_failures": [],
+  "pair_valid": true,
+  "credit": 0,
+  "vm_stopped": true,
+  "training_rows": 0
+}

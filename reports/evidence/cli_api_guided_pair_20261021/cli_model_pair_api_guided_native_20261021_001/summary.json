@@ -1,0 +1,16 @@
+{
+  "status": "DIAGNOSTIC_ERROR",
+  "mode": "API_GUIDED_MODEL_GENERATED",
+  "model_calls": 2,
+  "credit": null,
+  "A": null,
+  "B": null,
+  "total_input_tokens": 2430,
+  "total_output_tokens": 1147,
+  "total_cost_usd": null,
+  "old_ledgers_unchanged": true,
+  "reason": "CANDIDATE_REJECTED: both blocks required; no automatic repair or replay",
+  "official_episodes_added": 0,
+  "training_rows": 0,
+  "method_advantage": "NOT_ESTABLISHED"
+}

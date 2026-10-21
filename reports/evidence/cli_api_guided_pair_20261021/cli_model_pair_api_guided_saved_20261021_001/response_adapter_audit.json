@@ -1,0 +1,9 @@
+{
+  "adapter": "single_json_fence",
+  "code_strings_edited": false,
+  "source_responses_edited": false,
+  "candidate_sha256": {
+    "A": "e7bdc7b3d3467c63bb0c97e02507d6f6b7e5d94ddfcecc57f4f3eff21331e33a",
+    "B": "9c652f2665d896594123443e6bdc06d310126b996c6c4c52723a2bc79693306d"
+  }
+}

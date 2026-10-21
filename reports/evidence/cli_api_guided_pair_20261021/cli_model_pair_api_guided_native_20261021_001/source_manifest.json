@@ -1,0 +1,17 @@
+{
+  "cad_cf/cli_model_pair.py": "0ef83fdb1414e69f2e5ea7aa9e0c68b2c1afcb9a6c8289fae232074075dc19d0",
+  "cad_cf/cli_replay.py": "de83b9f89a5aae486d20f8c91605144809223039f4ff341d37b2f536db6bb702",
+  "cad_cf/batch_budget.py": "52953e7b0ab3deb3546927a02ae848fa3be323f773020092906b081ab70f8e02",
+  "cad_cf/upstream_launch.py": "39353dd1bcb5bc906a17da49da9a42d2206f23e7c8d3e426fb6f84469f96ada0",
+  "scripts/run_guided_cli_model_pair.py": "d4194960d130d13f17b0e043643bbb295a977425547752180f79a8c7c4a2bf4b",
+  "scripts/freecad_api_probe_worker.py": "402557c079b268295f25a508d327f73d68fce4d549288b187f24a51aea428fa2",
+  "scripts/run_cli_model_pair.py": "7137f1e540ce6dbcedc07b16dbd7fe743def6381b8d29bba36fb3c873f262bef",
+  "scripts/run_cli_replay_credit.py": "da1e3b1e25940f3b5e59e23182fb91ef9711b01ced8ba45de9fc827c23f6806f",
+  "scripts/cli_replay_worker.py": "fb0925f5371b5f022c579994c8610e26b4f5b256c9e3cf0f9eb9626efca5823a",
+  "scripts/structural_credit_worker.py": "6461deb43c1d243237657706d93548480fb9aaa6b38a10a4a71519b599bf16fb",
+  "scripts/run_structural_credit_diagnostic.py": "51efb4bb427018e1cddd17c549683aaae299d7b7cb5c2f4db412464bc72ad79b",
+  "scripts/audit_guided_cli_model_pair.py": "b637d3be506a4077d79d522c626a8e77cb3f2ffb762603221de51e9ddc710c30",
+  "scripts/audit_cli_model_pair.py": "29bdac262a9976a9d0430414dd1c2d319e24c9d588916f75be90bc776f529ac2",
+  "configs/cli_model_pair_api_guided_20261021.json": "626984e24097af7c09d8330dfcce5628b27860b4d57959c9e30f1c1f36a32e4e",
+  "deployed_worker.py": "a4772ce53c830630835ada9f58ec18fe566afb1a8bc7b0f277abf5d24d50b47d"
+}

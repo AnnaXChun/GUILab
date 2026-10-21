@@ -1,5 +1,7 @@
 # 基线复现
 
+最新[CLI 接口修复验证](CLI_API_GUIDED_PAIR_20261021.md)取得两个原生测量候选成功、一个有效 tie 配对，Q=1/1。它使用通用 API 说明和显式 JSON 围栏适配，属于扩展测量协议。官方 terminal CLI 历史成绩、原 prompt baseline 与 GUI-only 结果分别保留；本轮新增官方 episode 为 0。
+
 最新[模型代码块小批](CLI_MODEL_PAIR_20261021.md)使用扩展接口和capture-before-request，不是官方terminal baseline完整episode。真实两候选在FreeCAD中失败，原始错误保留；旧官方CLI得分未修改。
 
 后续 [模型轨迹代码重放](CLI_REPLAY_CREDIT_20261021.md)只复用已有Qwen代码，没有新增模型baseline episode。新建S0重放、人工绑定修正与官方CLI成绩分开；原历史文件未变，参数响应结果不能回写官方成功率。

@@ -1,5 +1,11 @@
 # GUILab 交接
 
+**最新 CLI 模型候选已通过**：先读[接口修复结果](reports/CLI_API_GUIDED_PAIR_20261021.md)、[协议](docs/CLI_API_GUIDED_PAIR.md)和[当前状态](reports/CLI_MODEL_PAIR_STATUS.json)。通用 FreeCAD API 探针通过后，两次模型独立生成半径绑定；原响应的 JSON 围栏先被严格接口拒绝，随后显式封装适配提取原代码，恢复相同 S0 执行。A、B 均保存关闭重开并通过六个探针，Q=1/1、credit=0。原生 XML 验证为 Part::Torus 加 ExpressionEngine，模型代码字符串未编辑。
+
+本轮 2 次模型请求、2430 输入/1147 输出 tokens、4 次 native 派发，uncertain=0；两 VM 停止，257 项项目测试和 7 项上游 CLI 测试通过，8 份旧模型账本 SHA 未变。完整模型/执行 JSONL 与失败、成功证据见 `reports/evidence/cli_api_guided_pair_20261021/INDEX.json`。此前超时、白名单拒绝和 API/表达式失败均保留；该系列累计 5 请求、9 派发，有效模型 pair 为一个 tie，原 GUI/API ACTC pair 和训练样本均为 0。
+
+下一步冻结两个新 CLI 构造任务、任务划分与相同预算，每次新请求前捕获 S0，比较终局检查、参数干预检查与 Best-of-2。当前同 S0 模型块执行 GO，方法收益和训练 NO-GO。远程历史路径仅为 provenance，需自己的已核验 S0/runtime；不重开已结束账本，不恢复 GUI。下方模型失败段落为历史记录。
+
 **捕获S0的模型候选已实际执行**：先读[本批报告](reports/CLI_MODEL_PAIR_20261021.md)、[协议](docs/CLI_MODEL_PAIR.md)、[状态](reports/CLI_MODEL_PAIR_STATUS.json)。S0在模型请求前保存重开，60秒首请求超时并保留2048未知预留；110秒新批返回两候选、2144输入/1283输出tokens。初始白名单拒绝B的只读hasProperty查询，复核放行后不改response，在停止捕获磁盘的新overlay恢复原S0并执行。A表达式ParserError，B当前PrimitivePy无hasProperty，均未保存artifact，pair invalid/credit=null。
 
 本轮3次模型请求、5次native派发，原始请求/账本/拒绝/原生失败均保留，三VM停止，251项目tests/7上游CLI tests。没有自动transport重试、原模型代码修补或新增训练样本。旧7份模型账本SHA未变。下一步先冻结公开FreeCAD API/表达式说明的等预算对照再生成新代码，当前不重开本批；有效模型pair和方法优势仍NO-GO。

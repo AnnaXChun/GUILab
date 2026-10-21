@@ -1,0 +1,10 @@
+{
+  "status": "COMPLETE",
+  "new_model_calls": 0,
+  "source_model_requests": 2,
+  "credit": 0,
+  "initial_proxy_credit": 0,
+  "s0_origin": "exact saved seed captured before source model requests",
+  "candidate_response_unchanged": true,
+  "training_rows": 0
+}

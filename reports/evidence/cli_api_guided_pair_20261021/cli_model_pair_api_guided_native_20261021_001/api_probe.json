@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "checks": {
+    "properties_list_query": true,
+    "has_property_absent": true,
+    "properties_list_after_add": true,
+    "pi_constant": true,
+    "power_operator": true,
+    "length_units": true,
+    "area_units": true,
+    "python_expression_error": "ParserError",
+    "python_expression_rejected": true,
+    "saved_reopened_value": true,
+    "persisted_parameter_response": true,
+    "native_validity": true,
+    "saved_file_unchanged": true
+  },
+  "expressions": {
+    "pi_constant": "pi",
+    "power_operator": "2^3",
+    "length_units": "Length / (1 mm)",
+    "area_units": "Width * Height / (1 mm^2)"
+  },
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "scope": "generic box API syntax only",
+  "file_sha256": "59dc9a00b5628f4cf42465f9b2694b51d68605283052afb10e6e69e53ad8b1ed"
+}

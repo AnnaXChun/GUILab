@@ -1,5 +1,7 @@
 # Pilot 结果
 
+最新[CLI 模型配对验证](CLI_API_GUIDED_PAIR_20261021.md)已完成：相同 S0、两条独立模型候选、原生保存重开、六个探针均通过，Q=1/1，credit=0。本轮 2 次模型请求、2430 输入/1147 输出 tokens、4 次 native 派发；原围栏拒绝和显式封装适配单列。当前一个有效 tie，训练 eligibility 为 false；方法比较与独立任务 pilot 待冻结。下方失败小批保留为历史。
+
 捕获S0后模型两次采样已返回，但原文执行A ParserError、B缺hasProperty API，pair invalid、credit=null；首超时与白名单拒绝记录保留。共3模型请求/5native派发，已知2144输入/1283输出tokens及2048未知预留单列；无有效模型pair和训练样本。[本批报告](CLI_MODEL_PAIR_20261021.md)记录完整同S0恢复与失败审计。
 
 最新 [模型代码重放](CLI_REPLAY_CREDIT_20261021.md)：第6/7轮同静态圆环的响应Q均null、数值proxy 0/1；第7轮直接赋值/人工半径公式在同原生圆环的初始proxy均1，响应Q为0/1。首轮Shape.Area绑定失败Q=0保留。8次无模型派发、6文件审计通过；这是同一开发任务的新建S0重放，历史S0不可恢复，训练样本增加0，方法优势未测量。

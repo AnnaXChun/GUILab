@@ -1,0 +1,10 @@
+{
+  "results/cli_model_pair_service_native_20261021_001/model_batch.sqlite": "ce51078108f57f79dbccef1235624a89c0498ca992b2ffd2ac2360abeeafb65f",
+  "results/gui_tcg_extended/model_batch.sqlite": "c419b16950f5989ac969210f72df1e81da91ab05e5ce6995314b29c6cb3aa8e7",
+  "results/gui_coordinate_fix_20261020/model_batch.sqlite": "5236025c09a6a455023e4ca5639afef8b72f0964fdd1f88e5f0a46769909f619",
+  "results/cli_model_pair_native_20261021_001/model_batch.sqlite": "7f946fb841e628312c6cdf8aa557f10783b8e252276fdd147aa28488de768a4e",
+  "results/gui_grounding_transfer_qwen122_20261020_001/model_batch.sqlite": "a1a2a87cb8fe9c0a8c95b6fb65e1223f0256f2953425cd2dc1bbb70f4df4380b",
+  "results/cli_focus_20261021/model_batch.sqlite": "951c0a28f018780fc0d90db6088b70873c8dbef179f873ba38f8c7e4535992da",
+  "results/gui_grounding_qwen122_20261020_001/model_batch.sqlite": "5ff6a7b59318c116df48857eb33bcf1222234d0b00c98a7be8f14fa74594f9ac",
+  "results/gui_validation_20261020/model_batch.sqlite": "d726b25cec950685cf683e34fe578941644b59a73fd1600cc68c18bea7a0445b"
+}

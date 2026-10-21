@@ -4,6 +4,8 @@
 
 ## 接手入口
 
+**最新 CLI 接口问题已解决**：读取 `reports/CLI_API_GUIDED_PAIR_20261021.md`、`docs/CLI_API_GUIDED_PAIR.md` 和 `reports/CLI_MODEL_PAIR_STATUS.json`。通用 API 说明在独立原生 Box 先验证；新模型两响应使用 JSON 围栏，原拒绝保留，显式 single_json_fence 只去封装不改代码。恢复原捕获 S0 执行后两候选 Q=1/1、credit=0，保存重开和六个探针均通过，原生 XML 类型与表达式核验 PASS。本轮新 2 请求/4 派发、257 tests/7 upstream tests、两 VM 停止，旧账本不变。当前模型 pair 为一个有效 tie，训练和方法增益仍 NO-GO；下一步冻结新 CLI 构造任务和等预算对照，不重开结束批次或恢复 GUI。下方“下一步 API 说明”与“有效 pair=0”为历史状态。
+
 **最新模型候选实测**：入口`reports/CLI_MODEL_PAIR_20261021.md`、`docs/CLI_MODEL_PAIR.md`、`reports/CLI_MODEL_PAIR_STATUS.json`。capture-before-request已通过；60秒请求超时保留，110秒新批两response返回。hasProperty查询原白名单拒绝保留并最小放行后，停止磁盘clone恢复原S0执行已有原文，A表达式ParserError/B API不存在，pair invalid、credit=null。总模型3请求/native5派发、251项目tests与7上游CLI tests，全部VM停止；不追加API调用或重开额度。下一步公开API/表达式说明等预算对照先冻结，不把失败Q设0或造preference。
 
 **2026-10-21 模型代码重放入口**：最新为`reports/CLI_REPLAY_CREDIT_20261021.md`、`docs/CLI_REPLAY_CREDIT.md`和`reports/CLI_REPLAY_STATUS.json`。真实模型第6/7轮代码在新建同S0重放，历史中间S0不可恢复，响应缺绑定时null。直接赋值/人工半径公式绑定在保存重开后Q=0/1，原Shape.Area表达式失败保留。8次无模型派发与6文件审计通过，231项目tests/7上游CLI tests，两台VM停止。当前GO为新CLI任务先捕获S0、模型提出代码块和等预算对照设计；方法创新与训练NO-GO，不自动启动模型批次或训练。

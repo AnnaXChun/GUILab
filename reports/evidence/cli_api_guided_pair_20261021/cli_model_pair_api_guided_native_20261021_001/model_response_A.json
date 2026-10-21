@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-05ba4495-673a-91e9-88dd-b4bef3b6c94b",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "```json\n{\n  \"code\": \"torus_obj = doc.getObject('Torus')\\nif 'SurfaceArea_mm2' not in torus_obj.PropertiesList:\\n    torus_obj.addProperty('App::PropertyFloat','SurfaceArea_mm2')\\ntorus_obj.setExpression('SurfaceArea_mm2', '4 * pi^2 * Radius1 * Radius2 / (1 mm^2)')\"\n}\n```",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning_content": "The user wants me to create a FreeCAD Python measurement block that:\n1. Gets the existing Torus object from the document\n2. Adds a SurfaceArea_mm2 property if it doesn't exist\n3. Sets up an expression so the measurement updates automatically when radii change\n4. The expression should use FreeCAD expression language (not Python)\n\nKey constraints:\n- Return only JSON with \"code\" field containing the string\n- No imports, functions, classes, etc.\n- Use torus_obj = doc.getObject('Torus')\n- Property must update after radii change and FreeCAD recomputes\n- Must work after save/reopen without running block again\n- For App::PropertyFloat (dimensionless), divide area by (1 mm^2)\n- Use named native parameters for persisted dependencies\n- setExpression uses FreeCAD expression syntax: pi is built-in, ^ is exponentiation\n\nFor a torus surface area formula: 4 * \u03c0\u00b2 * R * r where R is major radius (Radius1) and r is minor radius (Radius2)\n\nThe expression should reference the native properties directly. Looking at the torus parameters in the document: {\"Radius1\": 5.0, \"Radius2\": 2.0}\n\nIn FreeCAD expressions, I can reference properties like Radius1 and Radius2. The expression would be something like:\n'4 * pi^2 * Radius1 * Radius2 / (1 mm^2)'\n\nWait, but I need to make sure this references the actual object's properties. In FreeCAD expressions, you typically reference the object itself like 'Torus.Radius1' or just 'Radius1' if we're on that object.\n\nActually, looking at the API notes: \"Use named native parameters for persisted dependencies\" - this suggests I should reference the native properties of the torus object.\n\nSince we're setting an expression on torus_obj, the expression can reference its own properties directly. \n\nFor a dimensionless float property storing area in mm\u00b2, I need to divide by (1 mm^2).\n\nThe code should:\n1. Check if SurfaceArea_mm2 property exists\n2. Add it if not\n3. Set an expression that calculates the torus surface area using the native Radius1 and Radius2 parameters\n\nLet me write this as a single Python block:\n\n```python\ntorus_obj = doc.getObject('Torus')\nif 'SurfaceArea_mm2' not in torus_obj.PropertiesList:\n    torus_obj.addProperty('App::PropertyFloat','SurfaceArea_mm2')\ntorus_obj.setExpression('SurfaceArea_mm2', '4 * pi^2 * Radius1 * Radius2 / (1 mm^2)')\n```\n\nThis checks whether the property already exists, creates it if needed, then links the surface area calculation to the object's native radius parameters so it recalculates automatically whenever those values change."
+      }
+    }
+  ],
+  "created": 1792575470,
+  "model": "qwen3.5-122b-a10b",
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 703,
+    "prompt_tokens": 1215,
+    "total_tokens": 1918,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 608,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 703
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": null,
+      "text_tokens": 1215
+    }
+  }
+}

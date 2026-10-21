@@ -1,0 +1,87 @@
+{
+  "classification": "api_guided_model_generated_cli_pair",
+  "benchmark_episode": false,
+  "training_eligible": false,
+  "task_id": "freecad-measure-003",
+  "split": "development",
+  "pairs": [
+    {
+      "id": "model-generated-torus-measurement",
+      "intent": {
+        "primitive": "torus",
+        "parameters": {
+          "Radius1": 5.0,
+          "Radius2": 2.0
+        },
+        "target": "Torus",
+        "measurement": "SurfaceArea_mm2",
+        "preserved": "Guard",
+        "instruction": "Create a torus with major radius 5 mm and minor radius 2 mm in FreeCAD, measure its surface area, include that measurement in the finished FreeCAD file, and save the completed document to /home/user/Unnamed.FCStd.",
+        "engineering_extension": "persisted native parameter-response measurement"
+      },
+      "seed_code": "torus_obj=doc.addObject('Part::Torus','Torus')\ntorus_obj.Radius1=5\ntorus_obj.Radius2=2\n",
+      "prefix": "",
+      "continuation": "doc.recompute()\n",
+      "candidates": {
+        "A": "",
+        "B": ""
+      },
+      "candidate_origins": {
+        "A": "new_independent_model_sample",
+        "B": "new_independent_model_sample"
+      },
+      "probes": [
+        {
+          "id": "zero",
+          "object": "Torus",
+          "parameter": null,
+          "factor": 1.0
+        },
+        {
+          "id": "Radius1-0.8",
+          "object": "Torus",
+          "parameter": "Radius1",
+          "factor": 0.8
+        },
+        {
+          "id": "Radius1-1.2",
+          "object": "Torus",
+          "parameter": "Radius1",
+          "factor": 1.2
+        },
+        {
+          "id": "Radius2-0.8",
+          "object": "Torus",
+          "parameter": "Radius2",
+          "factor": 0.8
+        },
+        {
+          "id": "Radius2-1.2",
+          "object": "Torus",
+          "parameter": "Radius2",
+          "factor": 1.2
+        },
+        {
+          "id": "guard-negative-control",
+          "object": "Guard",
+          "parameter": "Length",
+          "factor": 1.2
+        }
+      ],
+      "hashes": {
+        "intent_sha256": "c5d5b24839ffc01b735957f83b23d73dfaf5613f1cbc9863938787ccf67eeb4e",
+        "probes_sha256": "6ea479ce56151db2c3aa4627ef6d777073e1470459241bd2714944e4804db3fa",
+        "seed_code_sha256": "8e91c3c01d67b2625f9d4c61f372a5d00d67c5beaa02d1a4f017e544307d414a",
+        "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "continuation_sha256": "58d729e142684a938910b38259f96c79d7000b470db9ae878a810ef2788847eb",
+        "candidate_sha256": {
+          "A": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "B": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    }
+  ],
+  "max_dispatches": 3,
+  "isolation": "independent document/process/workdir; shared VM; reviewed measurement blocks",
+  "api_guidance": true
+}

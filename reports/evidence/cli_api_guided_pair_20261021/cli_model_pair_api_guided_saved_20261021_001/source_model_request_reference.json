@@ -1,0 +1,13 @@
+{
+  "source_run": "results/cli_model_pair_api_guided_native_20261021_001",
+  "new_model_calls": 0,
+  "model_response_sha256": {
+    "A": "1aa4388906e6e9eb0b8145e216c03d335080bfa56e588f691afac58b6311298f",
+    "B": "1501f6e024822321b4278859a543065f332b1f0492acf5d662c2c514e0031621"
+  },
+  "source_disk_sha256": "f934cd96e9141e695d8e0a9f73c61a2f7789ae7f114431fb57108aa1f9997d01",
+  "source_disk_stopped": true,
+  "same_s0_seed_sha256": "65d32a355a16b483e52b84b55230765d3c35d838f47f5b354524c8e70b7a16b0",
+  "response_envelope_adapter": "single_json_fence",
+  "review": "response text and code string unchanged; explicit envelope/interface adapter; original rejection retained"
+}
