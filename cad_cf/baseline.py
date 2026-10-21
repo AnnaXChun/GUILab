@@ -22,7 +22,30 @@ def safe_endpoint(value):
     return value.rstrip('/')
 
 
-def runner_plan(root,kind,model,base_url,provider,run_id,task_id=None,qwen_no_thinking=False,campaign=None):
+def cli_task_selection(root, tasks_file, task_id=None):
+    """Validate a small explicit task set without reading evaluator rules."""
+    manifest=json.loads(Path(tasks_file).read_text())
+    if not isinstance(manifest,dict):raise ValueError('CLI tasks file must be a category mapping')
+    tasks=[]
+    for category,ids in manifest.items():
+        if not isinstance(ids,list):raise ValueError('CLI task IDs must be lists')
+        for ident in ids:
+            if not isinstance(ident,str) or Path(ident).name!=ident or ident in ('.','..'):
+                raise ValueError('invalid CLI task ID')
+            if not isinstance(category,str) or Path(category).name!=category or category in ('.','..'):
+                raise ValueError('invalid CLI category')
+            if not (root/'vendor/CADWORLD/evaluation_examples/examples'/category/(ident+'.json')).is_file():
+                raise ValueError('unknown CLI task ID: '+ident)
+            tasks.append(ident)
+    if len(tasks)!=len(set(tasks)):raise ValueError('duplicate CLI task ID')
+    if task_id:
+        if task_id not in tasks:raise ValueError('CLI task ID missing from tasks file')
+        tasks=[task_id]
+    if not 1<=len(tasks)<=2:raise ValueError('CLI launch must select one or two tasks')
+    return tasks
+
+
+def runner_plan(root,kind,model,base_url,provider,run_id,task_id=None,qwen_no_thinking=False,campaign=None,tasks_file=None):
     upstream=root/'vendor/CADWORLD'
     if kind.startswith('gui'):
         cmd=['scripts/python/run_cadworld.py','--no-download_vm','--path_to_vm',str(upstream/'vm_data/FreeCAD-Ubuntu.qcow2'),
@@ -31,13 +54,14 @@ def runner_plan(root,kind,model,base_url,provider,run_id,task_id=None,qwen_no_th
              '--run_id',run_id,'--result_dir',str(root/'results/official_gui'),'--no-skip_finished','--no-record','--headless']
         if base_url:cmd+=['--api_base_url',base_url]
         if task_id:
-            domains={'freecad-sketch-061':'sketch','freecad-part-076':'part'}
+            domains={'freecad-sketch-061':'sketch','freecad-sketch-062':'sketch','freecad-part-076':'part','freecad-part-077':'part'}
             cmd+=['--domain',domains[task_id]]
     else:
-        cmd=['CLI/run_cli.py','--task-id','freecad-sketch-061','--run-id',run_id,
+        cmd=['CLI/run_cli.py','--tasks-file',str(tasks_file or root/'manifests/cli_pilot.json'),'--run-id',run_id,
              '--model',model or '<model-id-required>','--base-url',base_url or '<base-url-required>',
              '--vm',str(upstream/'vm_data/FreeCAD-Ubuntu.qcow2'),'--results-dir',str(upstream/'CLI/results/actc'),
              '--max-turns','8','--max-terminal-calls','8','--max-wall-seconds','600','--total-output-tokens','12000']
+        if task_id or tasks_file is None:cmd+=['--task-id',task_id or 'freecad-sketch-061']
     if qwen_no_thinking:
         cmd+=['--send-chat-template-kwargs'] if kind=='cli' else ['--think_level','none']
     if campaign:
@@ -76,17 +100,28 @@ def main():
     p.add_argument('--key-env',default='CADWORLD_API_KEY')
     p.add_argument('--env-file',type=Path,default=Path('.env'))
     p.add_argument('--run-id',default='bounded_smoke')
-    p.add_argument('--task-id',choices=['freecad-sketch-061','freecad-part-076'])
+    p.add_argument('--task-id')
+    p.add_argument('--tasks-file',type=Path,help='Explicit CLI subset, at most two tasks in one VM process')
     p.add_argument('--runtime-config',type=Path)
     p.add_argument('--environment-evidence',type=Path)
     p.add_argument('--batch-ledger',type=Path,default=Path('results/first_baseline_batch.sqlite'))
     p.add_argument('--campaign-config',type=Path)
     a=p.parse_args()
     campaign=load_campaign(a.campaign_config)
-    route=campaign['cli' if a.kind=='cli' else 'gui']
-    if a.campaign_config and not a.task_id:p.error('continuation campaign requires one explicit task-id')
+    route_name='cli' if a.kind=='cli' else 'gui'
+    if route_name not in campaign:p.error('route disabled by campaign')
+    route=campaign[route_name]
+    if a.tasks_file and a.kind!='cli':p.error('--tasks-file is only supported for CLI')
+    if a.campaign_config and not (a.task_id or a.tasks_file):p.error('continuation campaign requires an explicit task selection')
     if Path(a.run_id).name!=a.run_id or a.run_id in ('.','..'):p.error('run-id must be a single new directory name')
     root=Path.cwd();upstream=root/'vendor/CADWORLD';verify_pin(upstream)
+    if a.kind=='cli':
+        tasks=cli_task_selection(root,a.tasks_file or root/'manifests/cli_pilot.json',a.task_id or (None if a.tasks_file else 'freecad-sketch-061'))
+        if campaign.get('task_ids') and not set(tasks)<=set(campaign['task_ids']):p.error('tasks outside campaign selection')
+    else:
+        if a.task_id not in (None,'freecad-sketch-061','freecad-part-076'):p.error('GUI task outside smoke manifest')
+        tasks=[a.task_id] if a.task_id else ['freecad-sketch-061','freecad-part-076']
+    task_count=len(tasks) if a.kind=='cli' else 1
     values={}
     if a.env_file.exists():
         from dotenv import dotenv_values
@@ -95,16 +130,15 @@ def main():
     model=a.model or setting('CADWORLD_MODEL_NAME')
     base_url=safe_endpoint(a.base_url or setting('CADWORLD_API_BASE_URL'))
     secret=setting(a.key_env)
-    if a.kind=='cli' and a.task_id not in (None,'freecad-sketch-061'):p.error('CLI first batch only allows sketch-061')
     if a.qwen_no_thinking and (not model or 'qwen3' not in model.lower()):p.error('Qwen3 model required for --qwen-no-thinking')
     if a.qwen_coordinates!='pixels' and (a.kind=='cli' or not a.qwen_no_thinking):p.error('normalized GUI coordinates require GUI and --qwen-no-thinking')
-    command=runner_plan(root,a.kind,model,base_url,a.api_provider,a.run_id,a.task_id,a.qwen_no_thinking,campaign if a.campaign_config else None)
+    command=runner_plan(root,a.kind,model,base_url,a.api_provider,a.run_id,a.task_id,a.qwen_no_thinking,campaign if a.campaign_config else None,a.tasks_file.resolve() if a.tasks_file else None)
     if a.runtime_config:
         config=json.loads(a.runtime_config.read_text())
         command[command.index('--path_to_vm')+1 if a.kind.startswith('gui') else command.index('--vm')+1]=str(Path(config['base']).resolve())
     print(json.dumps({'kind':a.kind,'command':[sys.executable,*command],'cwd':str(upstream),
                       'protocol':'exploratory_tcg' if a.runtime_config else 'reference_environment',
-                      'task_id':a.task_id,'model':model,'base_url':base_url,'key_env':a.key_env,'key_present':bool(secret),
+                      'task_id':a.task_id,'tasks':tasks,'model':model,'base_url':base_url,'key_env':a.key_env,'key_present':bool(secret),
                       'qwen_no_thinking':a.qwen_no_thinking,
                       'qwen_coordinates':a.qwen_coordinates,
                       'campaign':campaign['name'],'batch_ledger':str(a.batch_ledger),'batch_max_calls':campaign['max_calls'],'batch_max_output_tokens':campaign['max_output_tokens']},indent=2))
@@ -122,20 +156,21 @@ def main():
     try:batch_state=batch.status()
     finally:batch.close()
     if batch_state['blocked']:raise SystemExit('NOT_RUN_BUDGET: shared model circuit open; configuration correction required')
-    cap=min(route['turns'] if a.campaign_config or a.kind=='cli' or a.task_id else 6,batch_state['remaining_calls'])
+    per_task_cap=min(route['turns'] if a.campaign_config or a.kind=='cli' or a.task_id else 6,batch_state['remaining_calls']//task_count)
+    cap=per_task_cap*task_count
     if cap<=0:raise SystemExit('NOT_RUN_BUDGET: shared request budget exhausted')
     if a.kind=='cli':
-        command[command.index('--max-turns')+1]=str(cap)
-        command[command.index('--max-terminal-calls')+1]=str(cap)
+        command[command.index('--max-turns')+1]=str(per_task_cap)
+        command[command.index('--max-terminal-calls')+1]=str(per_task_cap)
     elif a.task_id:command[command.index('--max_steps')+1]=str(cap)
     if a.kind=='cli' and (Path(command[command.index('--results-dir')+1])/a.run_id).exists():
         raise SystemExit('CLI run-id already exists; preserve prior output and choose a new run-id')
     output=root/'results'/a.run_id;output.mkdir(parents=True,exist_ok=False)
     if a.campaign_config:(output/'campaign.json').write_text(json.dumps(campaign,ensure_ascii=False,indent=2)+'\n')
-    output_cap=route['output_tokens'] if a.task_id or a.kind=='cli' else 3072
+    output_cap=min(route['output_tokens']*task_count,campaign['max_output_tokens']) if a.task_id or a.kind=='cli' else 3072
     guarded=[sys.executable,'-m','cad_cf.upstream_launch','--kind','cli' if a.kind=='cli' else 'gui',
              '--max-calls',str(cap),'--max-output-tokens',str(output_cap),
-             '--per-call-tokens',str(route['per_call_tokens']),'--max-wall',str(route['wall_seconds']),
+             '--per-call-tokens',str(route['per_call_tokens']),'--max-wall',str(route['wall_seconds']*task_count),
              '--batch-ledger',str(a.batch_ledger.resolve()),'--log',str(output/'provider_usage.jsonl')]
     if a.campaign_config:guarded+=['--campaign-config',str((output/'campaign.json').resolve())]
     if a.qwen_coordinates!='pixels':guarded+=['--qwen-normalized-coordinates']

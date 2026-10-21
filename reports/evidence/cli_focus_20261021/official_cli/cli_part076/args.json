@@ -1,0 +1,24 @@
+{
+  "tasks_file": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/manifests/cli_pilot.json",
+  "tasks": [
+    "freecad-part-076"
+  ],
+  "model": "qwen3.5-122b-a10b",
+  "base_url": "[REDACTED]",
+  "vm": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/vm_data/FreeCAD-Ubuntu.qcow2",
+  "total_output_tokens": 8192,
+  "per_turn_tokens": 2048,
+  "max_turns": 8,
+  "max_terminal_calls": 8,
+  "max_wall_seconds": 600,
+  "max_history_bytes": null,
+  "enable_thinking": false,
+  "send_chat_template_kwargs": true,
+  "reasoning_effort": null,
+  "use_max_completion_tokens": false,
+  "tool_mode": "native",
+  "structured_json": false,
+  "gui_results": null,
+  "interaction": "terminal_only",
+  "retry_termination": []
+}

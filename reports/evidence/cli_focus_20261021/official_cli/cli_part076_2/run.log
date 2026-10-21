@@ -1,0 +1,27 @@
+[2026-10-21 13:32:14,923 INFO cadworld.cli] CLI-only tasks: ['freecad-part-076']
+[2026-10-21 13:32:16,461 INFO cadworld.cli] Model endpoint healthy; advertised models: [PRIVATE DIRECTORY EXCLUDED]
+[2026-10-21 13:32:16,480 INFO desktopenv.env] Initializing...
+[2026-10-21 13:34:20,973 INFO cadworld.cli] Resetting task freecad-part-076
+[2026-10-21 13:34:20,974 INFO desktopenv.env] Resetting environment...
+[2026-10-21 13:34:20,974 INFO desktopenv.env] Switching task...
+[2026-10-21 13:34:20,974 INFO desktopenv.env] Setting counters...
+[2026-10-21 13:34:20,974 INFO desktopenv.env] Environment is clean, skipping snapshot revert (provider: docker).
+[2026-10-21 13:34:21,052 INFO desktopenv.env] Setting up environment...
+[2026-10-21 13:34:21,053 INFO desktopenv.setup] try to connect http://127.0.0.1:15054
+[2026-10-21 13:34:36,220 INFO desktopenv.setup] Executing setup step 1/1: _execute_setup
+[2026-10-21 13:34:36,285 INFO desktopenv.setup] Command executed successfully: rm -f /home/user/Unnamed.FCStd -> {
+  "error": "",
+  "output": "",
+  "returncode": 0,
+  "status": "success"
+}
+
+[2026-10-21 13:34:36,285 INFO desktopenv.setup] SETUP COMPLETED: _execute_setup({'command': ['rm', '-f', '/home/user/Unnamed.FCStd'], 'shell': False})
+[2026-10-21 13:34:36,286 INFO desktopenv.env] Environment setup complete.
+[2026-10-21 13:40:53,639 INFO desktopenv.setup] try to connect http://127.0.0.1:15054
+[2026-10-21 13:40:57,866 INFO desktopenv.pycontroller] File downloaded successfully
+[2026-10-21 13:40:57,969 INFO desktopenv.pycontroller] File downloaded successfully
+[2026-10-21 13:40:57,970 INFO desktopenv.experiment] Saved generated FCStd to /Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_part076_2/freecad-part-076/freecad-part-076.FCStd (4255 bytes)
+[2026-10-21 13:40:57,989 INFO cadworld.cli.freecad-part-076] Diagnostics written to /Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_part076_2/freecad-part-076/evaluation.json (failure_class=shape_correct_process_wrong)
+[2026-10-21 13:40:57,993 INFO cadworld.cli] Task freecad-part-076 score=0.000 termination=turn_limit
+[2026-10-21 13:40:59,574 INFO cadworld.cli] Finished 1 task(s); mean score 0.000; results: /Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_part076_2

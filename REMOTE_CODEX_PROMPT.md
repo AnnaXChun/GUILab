@@ -1,4 +1,14 @@
-请接手GUILab，继续CADWorld ACTC的受限实验。
+请接手 GUILab，继续 CADWorld CLI 的受限实验。
+
+**2026-10-21 最新用户决定覆盖下方旧任务**：停止 GUI，主要针对 CLI 做 RL、数据清洗和成功率改进。先读 AGENTS.md、HANDOFF.md、docs/CLI_RESEARCH_PLAN.md、reports/CLI_FOCUS_20261021.md 和 manifests/cli_dataset_20261021.json。原 SPEC 和下方 GUI/ACTC 计划仅作历史，不恢复 GUI 定位或要求完成 GUI/API pairs。
+
+当前实现包含显式小批任务选择、共享有界预算、完整 CLI JSONL 清洗、公开奖励和批量原生文件审计。复用 pinned 官方 CLI runner、prompt、工具和离线评分；新模型或 prompt 提升另列实验设置。正常 finish、原生审计、参数编辑、公开目标检查通过才导出 SFT。官方 score 不进在线反馈和训练奖励；未知语义不造标签。保留 API 错误、未保存文件、Invalid 文件及全部成本。
+
+先完成小批 CLI 和 artifact 审计，分析清洗统计；再用相同模型/任务/预算验证通用 API 使用说明能否减少错误调用。训练需要可训练权重、GPU、稳定奖励和独立任务分组。托管 endpoint 用于推理采集，不能当作训练权重；暂不接 veRL，不自动下载大模型或启动 full-200。
+
+默认付费调用仍为 0，已授权小批在单次进程设为 1。配置 cli_focus_20261021 只开放两个公开任务、20 次生成和 16000 输出 tokens；不能复用新 ledger 无限重开同一配置。原 100 次账本已耗尽并保留。新主机先核验自己的镜像、controller 和 endpoint，缺少凭证只补缺项，不要求 KVM。实际结果、代码提交和下一步以最新 CLI 报告为准。
+
+以下为 2026-10-20 的历史交接，不作为当前执行任务。
 
 先读AGENTS.md、HANDOFF.md、reports/GUI_GROUNDING_20261020.md、reports/GUI_VALIDATION_20261020.md、reports/REPRO_STATUS.md、handoff.json和SPEC.md。upstream固定e5d0ebab8bd28da6e98c68c61db05747d1647f7b，不重新调研论文或更换benchmark。
 

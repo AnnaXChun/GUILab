@@ -1,0 +1,99 @@
+[2026-10-21 14:49:23,926 INFO cadworld.cli] CLI-only tasks: ['freecad-sketch-063', 'freecad-measure-003']
+[2026-10-21 14:49:24,618 INFO cadworld.cli] Model endpoint healthy; advertised models: [PRIVATE DIRECTORY EXCLUDED]
+[2026-10-21 14:49:24,636 INFO desktopenv.env] Initializing...
+[2026-10-21 14:52:21,176 INFO cadworld.cli] Resetting task freecad-sketch-063
+[2026-10-21 14:52:21,177 INFO desktopenv.env] Resetting environment...
+[2026-10-21 14:52:21,177 INFO desktopenv.env] Switching task...
+[2026-10-21 14:52:21,177 INFO desktopenv.env] Setting counters...
+[2026-10-21 14:52:21,177 INFO desktopenv.env] Environment is clean, skipping snapshot revert (provider: docker).
+[2026-10-21 14:52:21,241 INFO desktopenv.env] Setting up environment...
+[2026-10-21 14:52:21,241 INFO desktopenv.setup] try to connect http://127.0.0.1:15056
+[2026-10-21 14:52:37,051 INFO desktopenv.setup] Executing setup step 1/1: _execute_setup
+[2026-10-21 14:52:37,238 INFO desktopenv.setup] Command executed successfully: rm -f /home/user/Unnamed.FCStd -> {
+  "error": "",
+  "output": "",
+  "returncode": 0,
+  "status": "success"
+}
+
+[2026-10-21 14:52:37,238 INFO desktopenv.setup] SETUP COMPLETED: _execute_setup({'command': ['rm', '-f', '/home/user/Unnamed.FCStd'], 'shell': False})
+[2026-10-21 14:52:37,238 INFO desktopenv.env] Environment setup complete.
+[2026-10-21 14:54:53,028 INFO desktopenv.setup] try to connect http://127.0.0.1:15056
+[2026-10-21 14:54:55,375 INFO desktopenv.pycontroller] File downloaded successfully
+[2026-10-21 14:54:55,599 INFO desktopenv.pycontroller] File downloaded successfully
+[2026-10-21 14:54:55,600 INFO desktopenv.experiment] Saved generated FCStd to /Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_focus_20261021_001/freecad-sketch-063/freecad-sketch-063.FCStd (2326 bytes)
+[2026-10-21 14:54:55,636 INFO cadworld.cli.freecad-sketch-063] Diagnostics written to /Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_focus_20261021_001/freecad-sketch-063/evaluation.json (failure_class=pass)
+[2026-10-21 14:54:55,638 INFO cadworld.cli] Task freecad-sketch-063 score=1.000 termination=finish
+[2026-10-21 14:54:55,641 INFO cadworld.cli] Resetting task freecad-measure-003
+[2026-10-21 14:54:55,641 INFO desktopenv.env] Resetting environment...
+[2026-10-21 14:54:55,641 INFO desktopenv.env] Switching task...
+[2026-10-21 14:54:55,641 INFO desktopenv.env] Setting counters...
+[2026-10-21 14:54:55,641 INFO desktopenv.env] Environment has been used, reverting to snapshot init_state...
+[2026-10-21 14:54:55,991 INFO desktopenv.env] Starting emulator...
+[2026-10-21 14:57:37,096 INFO desktopenv.env] Emulator started.
+[2026-10-21 14:57:37,112 INFO desktopenv.env] Setting up environment...
+[2026-10-21 14:57:37,112 INFO desktopenv.setup] try to connect http://127.0.0.1:15056
+[2026-10-21 14:57:52,878 INFO desktopenv.setup] Executing setup step 1/1: _execute_setup
+[2026-10-21 14:57:52,990 INFO desktopenv.setup] Command executed successfully: rm -f /home/user/Unnamed.FCStd -> {
+  "error": "",
+  "output": "",
+  "returncode": 0,
+  "status": "success"
+}
+
+[2026-10-21 14:57:52,990 INFO desktopenv.setup] SETUP COMPLETED: _execute_setup({'command': ['rm', '-f', '/home/user/Unnamed.FCStd'], 'shell': False})
+[2026-10-21 14:57:52,990 INFO desktopenv.env] Environment setup complete.
+[2026-10-21 15:00:30,658 INFO desktopenv.setup] try to connect http://127.0.0.1:15056
+[2026-10-21 15:00:32,657 INFO desktopenv.pycontroller] File downloaded successfully
+[2026-10-21 15:00:32,697 INFO desktopenv.pycontroller] File downloaded successfully
+[2026-10-21 15:00:32,698 INFO desktopenv.experiment] Saved generated FCStd to /Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_focus_20261021_001/freecad-measure-003/freecad-measure-003.FCStd (2052 bytes)
+[2026-10-21 15:00:32,714 INFO cadworld.cli.freecad-measure-003] Diagnostics written to /Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_focus_20261021_001/freecad-measure-003/evaluation.json (failure_class=wrong_document_structure)
+[2026-10-21 15:00:32,717 INFO cadworld.cli] Task freecad-measure-003 score=0.000 termination=finish
+[2026-10-21 15:00:33,004 INFO cadworld.cli] Finished 2 task(s); mean score 0.500; results: /Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_focus_20261021_001
+{
+  "kind": "cli",
+  "command": [
+    "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/.venv/bin/python",
+    "CLI/run_cli.py",
+    "--tasks-file",
+    "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/manifests/cli_focus_20261021.json",
+    "--run-id",
+    "cli_focus_20261021_001",
+    "--model",
+    "qwen3.5-122b-a10b",
+    "--base-url",
+    "[REDACTED]",
+    "--vm",
+    "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/vm_data/FreeCAD-Ubuntu.qcow2",
+    "--results-dir",
+    "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc",
+    "--max-turns",
+    "10",
+    "--max-terminal-calls",
+    "10",
+    "--max-wall-seconds",
+    "900",
+    "--total-output-tokens",
+    "8000",
+    "--send-chat-template-kwargs",
+    "--per-turn-tokens",
+    "2048"
+  ],
+  "cwd": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD",
+  "protocol": "exploratory_tcg",
+  "task_id": null,
+  "tasks": [
+    "freecad-sketch-063",
+    "freecad-measure-003"
+  ],
+  "model": "qwen3.5-122b-a10b",
+  "base_url": "[REDACTED]",
+  "key_env": "CADWORLD_API_KEY",
+  "key_present": true,
+  "qwen_no_thinking": true,
+  "qwen_coordinates": "pixels",
+  "campaign": "cli_focus_20261021",
+  "batch_ledger": "results/cli_focus_20261021/model_batch.sqlite",
+  "batch_max_calls": 20,
+  "batch_max_output_tokens": 16000
+}

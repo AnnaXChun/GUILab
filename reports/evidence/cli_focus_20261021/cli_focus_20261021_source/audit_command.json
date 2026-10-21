@@ -1,0 +1,20 @@
+[
+  ".venv/bin/python",
+  "scripts/audit_cli_artifacts.py",
+  "--runtime-config",
+  "results/cli_focus_runtime_20261021.json",
+  "--output",
+  "results/cli_native_audits_20261021",
+  "--artifact",
+  "results/official_cli/cli_smoke_061/freecad-sketch-061/freecad-sketch-061.FCStd",
+  "--artifact",
+  "results/official_cli/cli_062/freecad-sketch-062/freecad-sketch-062.FCStd",
+  "--artifact",
+  "results/official_cli/success_cli_qwen122_001/freecad-sketch-061/freecad-sketch-061.FCStd",
+  "--artifact",
+  "results/official_cli/cli_part076_2/freecad-part-076/freecad-part-076.FCStd",
+  "--artifact",
+  "results/official_cli/cli_focus_20261021_001/freecad-sketch-063/freecad-sketch-063.FCStd",
+  "--artifact",
+  "results/official_cli/cli_focus_20261021_001/freecad-measure-003/freecad-measure-003.FCStd"
+]

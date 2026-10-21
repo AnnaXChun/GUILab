@@ -1,5 +1,13 @@
 # 差异与适配
 
+## CLI 方向切换
+
+2026-10-21 用户明确停止 GUI，转为 CLI 数据清洗、RL 和成功率改进。原 SPEC 作为历史保留，新执行协议见 [CLI_RESEARCH_PLAN](../docs/CLI_RESEARCH_PLAN.md)。GUI/API 反事实路由不再作为本方向目标，旧 gate 不改判为 PASS。
+
+`cad_cf.baseline` 新增显式 `--tasks-file`，单次 CLI launch 限制为至多两个任务；`cad_cf.campaign` 允许只配置 CLI，缺失 GUI route 时拒绝启动 GUI。多题共享请求与输出账本，每题保留原 runner 的限步和 reset。复用的是 runner 进程，TCG reset 仍会重启新 VM overlay；不是同 VM 连续跨任务，也不是 same-S0 pair。官方 prompt/tools/parser 和评分规则不修改。
+
+`cad_cf.cli_data` 是本项目新增的离线清洗入口，官方分数只进 `offline_evaluation`。公开目标检查仅支持三类明确语义，其他返回 null。原生批量审计扩展了圆半径和圆环参数编辑探针，并记录全局几何位置与原生面积属性；仅在独立临时副本中编辑，原 artifact SHA 保持不变。训练接口不接 veRL，也未启动 RL。
+
 ## 固定截图定位校准
 
 2026-10-20新增`cad_cf/gui_grounding.py`、冻结配置/离线标注、shell入口及5项测试，复用pinned agent和现有预算保护。用户授权的6次真实请求已完成，159项全量测试通过。该轮只收集同图同目标的单轮预测，不接桌面controller；标注不进入模型请求，未读官方评分规则，upstream tracked源码未改。完整细节见[定位校准](GUI_GROUNDING_20261020.md)。

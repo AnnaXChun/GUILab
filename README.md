@@ -1,5 +1,11 @@
 # GUILab
 
+**当前方向已切换到 CLI。** 2026-10-21 用户决定停止 GUI，继续 CADWorld CLI 的数据清洗、RL 和成功率改进。当前入口为 [CLI 研究计划](docs/CLI_RESEARCH_PLAN.md)、[本轮记录](reports/CLI_FOCUS_20261021.md)和 [交接](HANDOFF.md)。下方 ACTC/GUI 内容保留为历史。
+
+新增小批 CLI 选择和原生批量审计，复用 pinned 官方 runner、terminal tools 和离线评分。清洗入口为 `python -m cad_cf.cli_data`；它保留失败轨迹，导出通过原生质量和公开目标审计的 SFT 候选。官方分数只用于离线报告。当前不启动模型训练或大模型下载。
+
+最新两题完成：竖直构造线通过，圆环测量未通过；17 次生成、6517 输出 tokens。6 个文件原生审计后，11 个 CLI episode 导出 [3 条 SFT 候选](reports/evidence/cli_focus_20261021/cli_data_20261021/sft.jsonl)。181 项项目测试及 7 项 upstream CLI 测试通过，全部 VM 已停止。后续先扩充任务家族和公开奖励，再做小模型 SFT/RL；详见 [机器状态](reports/CLI_STATUS.json)。
+
 GUILab 当前承载 CADWorld Counterfactual Tool Credit（ACTC）复现工程。仓库根目录即项目根目录。
 
 CLI单题流程已跑通，GUI控件的创建、保存关闭重开也已通过；模型GUI任务与ACTC配对尚未通过。最新[6次定位校准](reports/GUI_GROUNDING_20261020.md)发现当前服务返回值呈归一化坐标特征，与官方像素要求不一致：原定pixels组0/3、normalized1000组2/3；像素组事后按1000换算为3/3，仅作待验证假设。[GUI控件验收](reports/GUI_CONTROLS.md)和[25轮模型复测](reports/GUI_VALIDATION_20261020.md)分开报告，后者官方strict=0、无文件。下一阶段见[验收计划](docs/NEXT_ACTC_VALIDATION.md)。远程接手读[HANDOFF](HANDOFF.md)和[REMOTE_CODEX_PROMPT](REMOTE_CODEX_PROMPT.md)，执行约束见[AGENTS](AGENTS.md)。

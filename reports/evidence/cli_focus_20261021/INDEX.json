@@ -1,0 +1,1267 @@
+{
+  "classification": "sanitized_baseline_success_and_failure_evidence",
+  "excluded": [
+    ".env",
+    "API keys",
+    "private endpoint/hostname",
+    "full model directory",
+    "SQLite",
+    "qcow2",
+    "firmware",
+    "FCStd",
+    "encoded artifacts",
+    "MCP indexes/diagnostics"
+  ],
+  "files": [
+    {
+      "path": "cli_focus_20261021_source/audit_command.json",
+      "source": "results/cli_focus_20261021_source/audit_command.json",
+      "source_sha256": "dab942af15b73cb93b18ddc52e5676d21f4ed3c3ff454b7998fad38798fd65b1",
+      "sha256": "dab942af15b73cb93b18ddc52e5676d21f4ed3c3ff454b7998fad38798fd65b1",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_focus_20261021_source/audit_inputs.json",
+      "source": "results/cli_focus_20261021_source/audit_inputs.json",
+      "source_sha256": "17ba6d99fd5e1e816b15f4967b5356da073672196ab537bd38c2d9e9988a4361",
+      "sha256": "17ba6d99fd5e1e816b15f4967b5356da073672196ab537bd38c2d9e9988a4361",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_focus_20261021_source/batch_summary.json",
+      "source": "results/cli_focus_20261021_source/batch_summary.json",
+      "source_sha256": "c7e0c1894a15022ffc33af6fdf4de18c004b3436d3c733b43026522e01af9630",
+      "sha256": "c7e0c1894a15022ffc33af6fdf4de18c004b3436d3c733b43026522e01af9630",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_focus_20261021_source/launch.log",
+      "source": "results/cli_focus_20261021_source/launch.log",
+      "source_sha256": "ee787f235d4735a60af6558ddb8df4f2f667394c32042985ddb325de9210a9dd",
+      "sha256": "fd132198cd7e02fd755adbcf5c6b7d5e327ab3affc3c72d4fcf978e0cff8aaeb",
+      "redacted": true,
+      "derived": false
+    },
+    {
+      "path": "cli_focus_20261021_source/native_audit.log",
+      "source": "results/cli_focus_20261021_source/native_audit.log",
+      "source_sha256": "f23f5fd810648a2a4e3168bccc9874169cda4b899f68f1240f4b63eeb6d07c67",
+      "sha256": "f23f5fd810648a2a4e3168bccc9874169cda4b899f68f1240f4b63eeb6d07c67",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_focus_20261021_source/source_manifest.json",
+      "source": "results/cli_focus_20261021_source/source_manifest.json",
+      "source_sha256": "54ee5c2b0af1cd0ecf68a6e6e5f91d8a61de2beef69067272084c26a9e83a7ce",
+      "sha256": "54ee5c2b0af1cd0ecf68a6e6e5f91d8a61de2beef69067272084c26a9e83a7ce",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_focus_20261021_001/campaign.json",
+      "source": "results/cli_focus_20261021_001/campaign.json",
+      "source_sha256": "c885ef4fbbaafd82ba6b7f1a1d830a2ff4316610aa273ea9e40ccc97c955a081",
+      "sha256": "c885ef4fbbaafd82ba6b7f1a1d830a2ff4316610aa273ea9e40ccc97c955a081",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_focus_20261021_001/launch.json",
+      "source": "results/cli_focus_20261021_001/launch.json",
+      "source_sha256": "736be1e3cf306740514a441165e5400c91f06d3768d65fa22b7d677051436f3e",
+      "sha256": "5bdef603ad415db37b5080654b72b301e34a979a00136e7156150c3f60b795d3",
+      "redacted": true,
+      "derived": false
+    },
+    {
+      "path": "cli_focus_20261021_001/provider_usage.jsonl",
+      "source": "results/cli_focus_20261021_001/provider_usage.jsonl",
+      "source_sha256": "0c209fe36f3f331ff87e7cb54deaef75c2f1c373ccac6215efcdae13a5c6fe43",
+      "sha256": "0c209fe36f3f331ff87e7cb54deaef75c2f1c373ccac6215efcdae13a5c6fe43",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_focus_20261021_001/runtime_config.json",
+      "source": "results/cli_focus_20261021_001/runtime_config.json",
+      "source_sha256": "168d0694012f4a165b6489b6397575bdbcb320fb335fb43bed25cbbbc092d0a5",
+      "sha256": "168d0694012f4a165b6489b6397575bdbcb320fb335fb43bed25cbbbc092d0a5",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_focus_20261021_001/analysis.md",
+      "source": "results/official_cli/cli_focus_20261021_001/analysis.md",
+      "source_sha256": "abb0353b29cae735f70a70682c7cbc230d2c6e5bf09c0dff46dce50799866918",
+      "sha256": "abb0353b29cae735f70a70682c7cbc230d2c6e5bf09c0dff46dce50799866918",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_focus_20261021_001/args.json",
+      "source": "results/official_cli/cli_focus_20261021_001/args.json",
+      "source_sha256": "2b2cd01a0f58af16765d9e050e01fa5a5750af7a28a973f95485041852ea535a",
+      "sha256": "1cad4336d4bd9c25d7a07b94345928f4c076e4f1d478469eb366ad869b1ed0d2",
+      "redacted": true,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_focus_20261021_001/freecad-measure-003/evaluation.json",
+      "source": "results/official_cli/cli_focus_20261021_001/freecad-measure-003/evaluation.json",
+      "source_sha256": "98bfc5aabb1e50de73d5398b8518b5914859204a344bd8aa3ff57ed43a885658",
+      "sha256": "98bfc5aabb1e50de73d5398b8518b5914859204a344bd8aa3ff57ed43a885658",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_focus_20261021_001/freecad-measure-003/public_task.json",
+      "source": "results/official_cli/cli_focus_20261021_001/freecad-measure-003/public_task.json",
+      "source_sha256": "112183d43d0b9124dd009413bf6931657f4fd16bca9a4f2f7c98ab0e8193dce4",
+      "sha256": "112183d43d0b9124dd009413bf6931657f4fd16bca9a4f2f7c98ab0e8193dce4",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_focus_20261021_001/freecad-measure-003/result.json",
+      "source": "results/official_cli/cli_focus_20261021_001/freecad-measure-003/result.json",
+      "source_sha256": "36f0ef1b8bb0d7db9b8c42de74d6c9094d197dab7c977d9e1ab02dbf921d6832",
+      "sha256": "36f0ef1b8bb0d7db9b8c42de74d6c9094d197dab7c977d9e1ab02dbf921d6832",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_focus_20261021_001/freecad-measure-003/traj.jsonl",
+      "source": "results/official_cli/cli_focus_20261021_001/freecad-measure-003/traj.jsonl",
+      "source_sha256": "0baeeff8da0be565e36f644424f299eee635b94321791cdfd69bf400ae9afe4e",
+      "sha256": "0baeeff8da0be565e36f644424f299eee635b94321791cdfd69bf400ae9afe4e",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_focus_20261021_001/freecad-measure-003/trajectory.jsonl",
+      "source": "results/official_cli/cli_focus_20261021_001/freecad-measure-003/trajectory.jsonl",
+      "source_sha256": "97f9a43208e1ad41b9e2edc7853cf67db23428c12a0a57c29f19d752206d4520",
+      "sha256": "97f9a43208e1ad41b9e2edc7853cf67db23428c12a0a57c29f19d752206d4520",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_focus_20261021_001/freecad-sketch-063/evaluation.json",
+      "source": "results/official_cli/cli_focus_20261021_001/freecad-sketch-063/evaluation.json",
+      "source_sha256": "863a45750a0a4bd5c3e1f5d3d55924b7ea54d4af69cdf79534c837720db7a41b",
+      "sha256": "863a45750a0a4bd5c3e1f5d3d55924b7ea54d4af69cdf79534c837720db7a41b",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_focus_20261021_001/freecad-sketch-063/public_task.json",
+      "source": "results/official_cli/cli_focus_20261021_001/freecad-sketch-063/public_task.json",
+      "source_sha256": "1b74f378937da6d517990456311a75da3369ee100444f3aa65252917e32549e2",
+      "sha256": "1b74f378937da6d517990456311a75da3369ee100444f3aa65252917e32549e2",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_focus_20261021_001/freecad-sketch-063/result.json",
+      "source": "results/official_cli/cli_focus_20261021_001/freecad-sketch-063/result.json",
+      "source_sha256": "4025a00549095efa52eb0b946dfa6d5092dd880d18b3608fd2708bcac6275852",
+      "sha256": "4025a00549095efa52eb0b946dfa6d5092dd880d18b3608fd2708bcac6275852",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_focus_20261021_001/freecad-sketch-063/traj.jsonl",
+      "source": "results/official_cli/cli_focus_20261021_001/freecad-sketch-063/traj.jsonl",
+      "source_sha256": "7658619013b0eba8dd7316e8ea83c34f3949e09760e2c6180ba1cf65cbe8faf5",
+      "sha256": "7658619013b0eba8dd7316e8ea83c34f3949e09760e2c6180ba1cf65cbe8faf5",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_focus_20261021_001/freecad-sketch-063/trajectory.jsonl",
+      "source": "results/official_cli/cli_focus_20261021_001/freecad-sketch-063/trajectory.jsonl",
+      "source_sha256": "e8d958d787494db87ba6fb70871e1036a0788f7877d62744481eb0beb937e1b5",
+      "sha256": "e8d958d787494db87ba6fb70871e1036a0788f7877d62744481eb0beb937e1b5",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_focus_20261021_001/run.log",
+      "source": "results/official_cli/cli_focus_20261021_001/run.log",
+      "source_sha256": "423c00712aed7cdb2dadc1a3df7d1845231cee817bddf331042b9b6f67a99e34",
+      "sha256": "4c2f1e2d00bf6fde45a696ac514aa4ae3a5388094d69cec323e635c1e3350b98",
+      "redacted": true,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_focus_20261021_001/summary.json",
+      "source": "results/official_cli/cli_focus_20261021_001/summary.json",
+      "source_sha256": "c90cc16b28e346884916433960b7b2b8bba490448887a786c65af1c65ddc702c",
+      "sha256": "c90cc16b28e346884916433960b7b2b8bba490448887a786c65af1c65ddc702c",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/baseline_cli_sketch_002/analysis.md",
+      "source": "results/official_cli/baseline_cli_sketch_002/analysis.md",
+      "source_sha256": "ad6679af37d62fff705597f89482febe40d287ac4867d0b9d5820cf7e6c6d221",
+      "sha256": "ad6679af37d62fff705597f89482febe40d287ac4867d0b9d5820cf7e6c6d221",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/baseline_cli_sketch_002/args.json",
+      "source": "results/official_cli/baseline_cli_sketch_002/args.json",
+      "source_sha256": "f331260d7c90e53c33b071e50b07da680ab2851a5f753666fad6033679d3c6ee",
+      "sha256": "c04f33ca26b206c1046ee65e7a39f3adfc64699cbcf5bda093dfe610a8eb8d61",
+      "redacted": true,
+      "derived": false
+    },
+    {
+      "path": "official_cli/baseline_cli_sketch_002/freecad-sketch-061/evaluation.json",
+      "source": "results/official_cli/baseline_cli_sketch_002/freecad-sketch-061/evaluation.json",
+      "source_sha256": "9b60b8464a87036e1976ec7128bb736e2588af1a796446bfc2f1153b750c7493",
+      "sha256": "9b60b8464a87036e1976ec7128bb736e2588af1a796446bfc2f1153b750c7493",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/baseline_cli_sketch_002/freecad-sketch-061/public_task.json",
+      "source": "results/official_cli/baseline_cli_sketch_002/freecad-sketch-061/public_task.json",
+      "source_sha256": "19e71e88f0b13ae7aac03bc16732faf183bbc9426eaf491654d588df036f4623",
+      "sha256": "19e71e88f0b13ae7aac03bc16732faf183bbc9426eaf491654d588df036f4623",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/baseline_cli_sketch_002/freecad-sketch-061/result.json",
+      "source": "results/official_cli/baseline_cli_sketch_002/freecad-sketch-061/result.json",
+      "source_sha256": "9a2fc55686a99fdb8819b608f2c34030741695898a67a1e7c4ed3f303f1233b7",
+      "sha256": "9a2fc55686a99fdb8819b608f2c34030741695898a67a1e7c4ed3f303f1233b7",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/baseline_cli_sketch_002/freecad-sketch-061/traj.jsonl",
+      "source": "results/official_cli/baseline_cli_sketch_002/freecad-sketch-061/traj.jsonl",
+      "source_sha256": "45b102f32799affb766f0e31493a930efc7aee0c3a477f06893b2cec8b51f918",
+      "sha256": "45b102f32799affb766f0e31493a930efc7aee0c3a477f06893b2cec8b51f918",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/baseline_cli_sketch_002/freecad-sketch-061/trajectory.jsonl",
+      "source": "results/official_cli/baseline_cli_sketch_002/freecad-sketch-061/trajectory.jsonl",
+      "source_sha256": "bc341b1200f3f472105bfe471a1cc5ee616ce263f0fb8b229272226c9ea9949f",
+      "sha256": "bc341b1200f3f472105bfe471a1cc5ee616ce263f0fb8b229272226c9ea9949f",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/baseline_cli_sketch_002/run.log",
+      "source": "results/official_cli/baseline_cli_sketch_002/run.log",
+      "source_sha256": "65760973a1d88018d2832459f15bf4caed123abd3d20880038c9bfd95243460e",
+      "sha256": "0072780783177403e9303208ece9b9ed5b9b93374028f238a9fb77ea30d3c83d",
+      "redacted": true,
+      "derived": false
+    },
+    {
+      "path": "official_cli/baseline_cli_sketch_002/summary.json",
+      "source": "results/official_cli/baseline_cli_sketch_002/summary.json",
+      "source_sha256": "4d6cca4d2244cc5cf57f6766bd993191bed0e5b0c84d8d6f429c1b2de29fd911",
+      "sha256": "4d6cca4d2244cc5cf57f6766bd993191bed0e5b0c84d8d6f429c1b2de29fd911",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/success_cli_qwen36_001/analysis.md",
+      "source": "results/official_cli/success_cli_qwen36_001/analysis.md",
+      "source_sha256": "c8782a5463211759131877e3a22488b608b380c7df00eeddf6865eba62bca789",
+      "sha256": "c8782a5463211759131877e3a22488b608b380c7df00eeddf6865eba62bca789",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/success_cli_qwen36_001/args.json",
+      "source": "results/official_cli/success_cli_qwen36_001/args.json",
+      "source_sha256": "910bb674e7c8045a6c9863cc5681a2c9153637a4fe36e15f2d12647594756817",
+      "sha256": "a39978bd3b5eed748c54c94fbf711ced78c61cae59fe711b8df3ab19ac544762",
+      "redacted": true,
+      "derived": false
+    },
+    {
+      "path": "official_cli/success_cli_qwen36_001/freecad-sketch-061/evaluation.json",
+      "source": "results/official_cli/success_cli_qwen36_001/freecad-sketch-061/evaluation.json",
+      "source_sha256": "879696b137ede0f75407d5539c92bf65405ee921e755744398534d6360868ac9",
+      "sha256": "879696b137ede0f75407d5539c92bf65405ee921e755744398534d6360868ac9",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/success_cli_qwen36_001/freecad-sketch-061/public_task.json",
+      "source": "results/official_cli/success_cli_qwen36_001/freecad-sketch-061/public_task.json",
+      "source_sha256": "19e71e88f0b13ae7aac03bc16732faf183bbc9426eaf491654d588df036f4623",
+      "sha256": "19e71e88f0b13ae7aac03bc16732faf183bbc9426eaf491654d588df036f4623",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/success_cli_qwen36_001/freecad-sketch-061/result.json",
+      "source": "results/official_cli/success_cli_qwen36_001/freecad-sketch-061/result.json",
+      "source_sha256": "0ac709cfad30fb129c415faf263965a4c89d2f278c5bde2d7a312a799d566baf",
+      "sha256": "0ac709cfad30fb129c415faf263965a4c89d2f278c5bde2d7a312a799d566baf",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/success_cli_qwen36_001/freecad-sketch-061/traj.jsonl",
+      "source": "results/official_cli/success_cli_qwen36_001/freecad-sketch-061/traj.jsonl",
+      "source_sha256": "aa89d87864f89a74766bd68a9bf3316c5d39526c49ca3c4d3814d087a2abb092",
+      "sha256": "aa89d87864f89a74766bd68a9bf3316c5d39526c49ca3c4d3814d087a2abb092",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/success_cli_qwen36_001/freecad-sketch-061/trajectory.jsonl",
+      "source": "results/official_cli/success_cli_qwen36_001/freecad-sketch-061/trajectory.jsonl",
+      "source_sha256": "2e19f916e35a93bf6b68461796c86d8c3470e665ba712df90d1cc61c99f72c75",
+      "sha256": "2e19f916e35a93bf6b68461796c86d8c3470e665ba712df90d1cc61c99f72c75",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/success_cli_qwen36_001/run.log",
+      "source": "results/official_cli/success_cli_qwen36_001/run.log",
+      "source_sha256": "285297df0d684ed005f17a2e8afa5615b783845c8d4c6570761cc8cf44ba51b7",
+      "sha256": "a3d455cb8d8173c3dc584dcf25b4566c00526b581f79d49ce64e6b745a891105",
+      "redacted": true,
+      "derived": false
+    },
+    {
+      "path": "official_cli/success_cli_qwen36_001/summary.json",
+      "source": "results/official_cli/success_cli_qwen36_001/summary.json",
+      "source_sha256": "c8a67e6b0775ce39ede267983beb59626f3f15248b03c91502f1486cca8658ac",
+      "sha256": "c8a67e6b0775ce39ede267983beb59626f3f15248b03c91502f1486cca8658ac",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/success_cli_qwen122_001/analysis.md",
+      "source": "results/official_cli/success_cli_qwen122_001/analysis.md",
+      "source_sha256": "0eb91e485de5b56781e7ddafbb7e3720bad26699a382ade850100b1cfc667af7",
+      "sha256": "0eb91e485de5b56781e7ddafbb7e3720bad26699a382ade850100b1cfc667af7",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/success_cli_qwen122_001/args.json",
+      "source": "results/official_cli/success_cli_qwen122_001/args.json",
+      "source_sha256": "5238d787b8ba8789a86e6ff33f77368b05cf5db64d89eea01d4fa410bddc8710",
+      "sha256": "f9a16a2ccb3eb2c6f61232e0bc820e06be19c1c3cddcf02911838b771a37d56e",
+      "redacted": true,
+      "derived": false
+    },
+    {
+      "path": "official_cli/success_cli_qwen122_001/freecad-sketch-061/evaluation.json",
+      "source": "results/official_cli/success_cli_qwen122_001/freecad-sketch-061/evaluation.json",
+      "source_sha256": "1fd86e3ddfb3382b88d4d7a53e6bbfe451e3ac6c8157f5977ffa74d04c6a40a4",
+      "sha256": "1fd86e3ddfb3382b88d4d7a53e6bbfe451e3ac6c8157f5977ffa74d04c6a40a4",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/success_cli_qwen122_001/freecad-sketch-061/public_task.json",
+      "source": "results/official_cli/success_cli_qwen122_001/freecad-sketch-061/public_task.json",
+      "source_sha256": "19e71e88f0b13ae7aac03bc16732faf183bbc9426eaf491654d588df036f4623",
+      "sha256": "19e71e88f0b13ae7aac03bc16732faf183bbc9426eaf491654d588df036f4623",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/success_cli_qwen122_001/freecad-sketch-061/result.json",
+      "source": "results/official_cli/success_cli_qwen122_001/freecad-sketch-061/result.json",
+      "source_sha256": "66ea1c46c63e6b6830581a9ae7f9dcdffa817db66005c7a24cad1c7a696376b2",
+      "sha256": "66ea1c46c63e6b6830581a9ae7f9dcdffa817db66005c7a24cad1c7a696376b2",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/success_cli_qwen122_001/freecad-sketch-061/traj.jsonl",
+      "source": "results/official_cli/success_cli_qwen122_001/freecad-sketch-061/traj.jsonl",
+      "source_sha256": "8e45d0c9d5c21ca1510f2da5b2191edb4de02170e7b6e5bd7172edbc698c36f9",
+      "sha256": "8e45d0c9d5c21ca1510f2da5b2191edb4de02170e7b6e5bd7172edbc698c36f9",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/success_cli_qwen122_001/freecad-sketch-061/trajectory.jsonl",
+      "source": "results/official_cli/success_cli_qwen122_001/freecad-sketch-061/trajectory.jsonl",
+      "source_sha256": "7f2f51985d469e7e34cc404849d7aa4797529887fcd7772d746930d1a512ac41",
+      "sha256": "7f2f51985d469e7e34cc404849d7aa4797529887fcd7772d746930d1a512ac41",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/success_cli_qwen122_001/run.log",
+      "source": "results/official_cli/success_cli_qwen122_001/run.log",
+      "source_sha256": "71b6f767985c5b741b38aebdf143245700a83101784c32237fa1ffe41393581d",
+      "sha256": "87076124f71c78cd8d5236c2d81fc122079157e138aed6db879745206f62ff4c",
+      "redacted": true,
+      "derived": false
+    },
+    {
+      "path": "official_cli/success_cli_qwen122_001/summary.json",
+      "source": "results/official_cli/success_cli_qwen122_001/summary.json",
+      "source_sha256": "3c46a575a7a306dd7cbf2d034389f012983ed95618e82089cf36e0102e8f3312",
+      "sha256": "3c46a575a7a306dd7cbf2d034389f012983ed95618e82089cf36e0102e8f3312",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_smoke_061/analysis.md",
+      "source": "results/official_cli/cli_smoke_061/analysis.md",
+      "source_sha256": "0956183f80c557585bd16e0de615ff8346162530a47e3b7adb617d228db02467",
+      "sha256": "0956183f80c557585bd16e0de615ff8346162530a47e3b7adb617d228db02467",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_smoke_061/args.json",
+      "source": "results/official_cli/cli_smoke_061/args.json",
+      "source_sha256": "dd3f1c18e180768a865b2ee52e0e8b5f5ee881d57a13eb8b8632cf2ec9f5b196",
+      "sha256": "80895c6f03e069e78e9b109c5531ff1d0ce65273feacf75d27543910315e4311",
+      "redacted": true,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_smoke_061/freecad-sketch-061/evaluation.json",
+      "source": "results/official_cli/cli_smoke_061/freecad-sketch-061/evaluation.json",
+      "source_sha256": "9ab00ec5caef22775fd23c864ffcdf81493da796e9a77db6961b0488a0c72c5b",
+      "sha256": "9ab00ec5caef22775fd23c864ffcdf81493da796e9a77db6961b0488a0c72c5b",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_smoke_061/freecad-sketch-061/public_task.json",
+      "source": "results/official_cli/cli_smoke_061/freecad-sketch-061/public_task.json",
+      "source_sha256": "19e71e88f0b13ae7aac03bc16732faf183bbc9426eaf491654d588df036f4623",
+      "sha256": "19e71e88f0b13ae7aac03bc16732faf183bbc9426eaf491654d588df036f4623",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_smoke_061/freecad-sketch-061/result.json",
+      "source": "results/official_cli/cli_smoke_061/freecad-sketch-061/result.json",
+      "source_sha256": "f72ef79d0d7a28fc5759238a75c266625b3a13c17ff7e3a5dd628dc099cf2c04",
+      "sha256": "f72ef79d0d7a28fc5759238a75c266625b3a13c17ff7e3a5dd628dc099cf2c04",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_smoke_061/freecad-sketch-061/traj.jsonl",
+      "source": "results/official_cli/cli_smoke_061/freecad-sketch-061/traj.jsonl",
+      "source_sha256": "c16110a536d871f7f06c4839cee1687e207492004883111cb9328be9fa6c75e0",
+      "sha256": "c16110a536d871f7f06c4839cee1687e207492004883111cb9328be9fa6c75e0",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_smoke_061/freecad-sketch-061/trajectory.jsonl",
+      "source": "results/official_cli/cli_smoke_061/freecad-sketch-061/trajectory.jsonl",
+      "source_sha256": "403db69c4d120532e31cc913e351733d91d13830e903eedd7aa7ef5a26cce4a0",
+      "sha256": "403db69c4d120532e31cc913e351733d91d13830e903eedd7aa7ef5a26cce4a0",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_smoke_061/run.log",
+      "source": "results/official_cli/cli_smoke_061/run.log",
+      "source_sha256": "0b0ab88597c85313d20cbc8103ef2abeecc6b83e49e064b3b4d5df1bd104524f",
+      "sha256": "f25ca219fcc353f6c122c1b3cdacb4fdee675eee5f023b93bbc945c7fa747671",
+      "redacted": true,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_smoke_061/summary.json",
+      "source": "results/official_cli/cli_smoke_061/summary.json",
+      "source_sha256": "ce556fcbe314ecbcaaf90748721bbd5f20c8e6739ff0e3a2c9f23a3577022aec",
+      "sha256": "ce556fcbe314ecbcaaf90748721bbd5f20c8e6739ff0e3a2c9f23a3577022aec",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_062/analysis.md",
+      "source": "results/official_cli/cli_062/analysis.md",
+      "source_sha256": "f471acf220749a6539bf83ae2630a9cc3eabdcdbdbca07ce80521f14fe97e329",
+      "sha256": "f471acf220749a6539bf83ae2630a9cc3eabdcdbdbca07ce80521f14fe97e329",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_062/args.json",
+      "source": "results/official_cli/cli_062/args.json",
+      "source_sha256": "73a252632d870a369e62b8ce9d8e1bddeaf1d4d4112a23d9d0d387cc41e4865a",
+      "sha256": "e71233f737088250781009abf49ce5338df5a06496ed556e22c662ec307bd5e6",
+      "redacted": true,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_062/freecad-sketch-062/evaluation.json",
+      "source": "results/official_cli/cli_062/freecad-sketch-062/evaluation.json",
+      "source_sha256": "c3b3efb5b21aa2cc43baeed1bf17852b23d0d716975fd13292edd3342fa87402",
+      "sha256": "c3b3efb5b21aa2cc43baeed1bf17852b23d0d716975fd13292edd3342fa87402",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_062/freecad-sketch-062/public_task.json",
+      "source": "results/official_cli/cli_062/freecad-sketch-062/public_task.json",
+      "source_sha256": "2f1021cd1b5f161165bda5be49de2d3191996d6d874837722934a4f610563cce",
+      "sha256": "2f1021cd1b5f161165bda5be49de2d3191996d6d874837722934a4f610563cce",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_062/freecad-sketch-062/result.json",
+      "source": "results/official_cli/cli_062/freecad-sketch-062/result.json",
+      "source_sha256": "83239f6f62d57527218f62724b1ab78f2cf0a4bd642c54d5f9b1915cf7087852",
+      "sha256": "83239f6f62d57527218f62724b1ab78f2cf0a4bd642c54d5f9b1915cf7087852",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_062/freecad-sketch-062/traj.jsonl",
+      "source": "results/official_cli/cli_062/freecad-sketch-062/traj.jsonl",
+      "source_sha256": "c16110a536d871f7f06c4839cee1687e207492004883111cb9328be9fa6c75e0",
+      "sha256": "c16110a536d871f7f06c4839cee1687e207492004883111cb9328be9fa6c75e0",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_062/freecad-sketch-062/trajectory.jsonl",
+      "source": "results/official_cli/cli_062/freecad-sketch-062/trajectory.jsonl",
+      "source_sha256": "2f7f0bf11ed5733741059dac7ff9189f5326568b6c295a45e94fcc5505b28e4b",
+      "sha256": "2f7f0bf11ed5733741059dac7ff9189f5326568b6c295a45e94fcc5505b28e4b",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_062/run.log",
+      "source": "results/official_cli/cli_062/run.log",
+      "source_sha256": "a7ff51e8c4c2d03f5073ae8678b9df513915f5188a04af00157fcace200f0d4b",
+      "sha256": "643be91a731866ad52112b6f4e9e46be2baf8e0f8269d6bdebd72d05808a28e3",
+      "redacted": true,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_062/summary.json",
+      "source": "results/official_cli/cli_062/summary.json",
+      "source_sha256": "d45b7af0a02933325222a816e695176293be5f9bc1c2cb6e410107c0712450ca",
+      "sha256": "d45b7af0a02933325222a816e695176293be5f9bc1c2cb6e410107c0712450ca",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part076/analysis.md",
+      "source": "results/official_cli/cli_part076/analysis.md",
+      "source_sha256": "bfa1c5360d615ea2d01ef18ef1f421da97d053ed8d99c0931fb0e8227a9167fc",
+      "sha256": "bfa1c5360d615ea2d01ef18ef1f421da97d053ed8d99c0931fb0e8227a9167fc",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part076/args.json",
+      "source": "results/official_cli/cli_part076/args.json",
+      "source_sha256": "fdfb62d8b04166368a646dc1faa2ba2630f153d266eb27a8a29c3f056659855f",
+      "sha256": "e02da8f02ae0737817c3fb4335236c2d5f45d2ef174f26a33579c797b395c183",
+      "redacted": true,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part076/freecad-part-076/evaluation.json",
+      "source": "results/official_cli/cli_part076/freecad-part-076/evaluation.json",
+      "source_sha256": "05892f631bd84c93e921485c3885143293ec3ea2731af3e5231353e226f5352c",
+      "sha256": "05892f631bd84c93e921485c3885143293ec3ea2731af3e5231353e226f5352c",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part076/freecad-part-076/public_task.json",
+      "source": "results/official_cli/cli_part076/freecad-part-076/public_task.json",
+      "source_sha256": "a9aefa5188c8fafc03ff642ffe027dd0090c4ea92ad356e9069317af7df5f017",
+      "sha256": "a9aefa5188c8fafc03ff642ffe027dd0090c4ea92ad356e9069317af7df5f017",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part076/freecad-part-076/result.json",
+      "source": "results/official_cli/cli_part076/freecad-part-076/result.json",
+      "source_sha256": "88fef093b6cca585ddd95fd59000dabb1d9a853858bf36e69f49c1c14e2ca6c2",
+      "sha256": "88fef093b6cca585ddd95fd59000dabb1d9a853858bf36e69f49c1c14e2ca6c2",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part076/freecad-part-076/traj.jsonl",
+      "source": "results/official_cli/cli_part076/freecad-part-076/traj.jsonl",
+      "source_sha256": "8e45d0c9d5c21ca1510f2da5b2191edb4de02170e7b6e5bd7172edbc698c36f9",
+      "sha256": "8e45d0c9d5c21ca1510f2da5b2191edb4de02170e7b6e5bd7172edbc698c36f9",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part076/freecad-part-076/trajectory.jsonl",
+      "source": "results/official_cli/cli_part076/freecad-part-076/trajectory.jsonl",
+      "source_sha256": "3cbcda00f15fda97c2acd25cca935e289fc519cced095a75c372f1cc1cbdce53",
+      "sha256": "3cbcda00f15fda97c2acd25cca935e289fc519cced095a75c372f1cc1cbdce53",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part076/run.log",
+      "source": "results/official_cli/cli_part076/run.log",
+      "source_sha256": "dc1f547a310e95bdcaa670bcc57996d8435c2eb77ef94e92c8fd2b72d4f20191",
+      "sha256": "22313d0b5bd3c34f26dbcb23bbb574063afbc3401082d052df0fb5f1fa3f1be9",
+      "redacted": true,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part076/summary.json",
+      "source": "results/official_cli/cli_part076/summary.json",
+      "source_sha256": "3890d8d63387bcfbe222d2cb9b2dcfa1c5250bd63bf78dc9d8be313261e49bc4",
+      "sha256": "3890d8d63387bcfbe222d2cb9b2dcfa1c5250bd63bf78dc9d8be313261e49bc4",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part076_2/analysis.md",
+      "source": "results/official_cli/cli_part076_2/analysis.md",
+      "source_sha256": "3d84736c34fbfbe2ec0d8ae971ebea2f67e538a48a5629d140c8ec724b2afc93",
+      "sha256": "3d84736c34fbfbe2ec0d8ae971ebea2f67e538a48a5629d140c8ec724b2afc93",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part076_2/args.json",
+      "source": "results/official_cli/cli_part076_2/args.json",
+      "source_sha256": "e0fadcb735e51f094d8f0f76ef55c7c02a6527d56a8172ce4cba2a71de9a512c",
+      "sha256": "89cd443f356107475aa450c4ea0596f75efe399f4768b5578a46ff60b8416d0a",
+      "redacted": true,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part076_2/freecad-part-076/evaluation.json",
+      "source": "results/official_cli/cli_part076_2/freecad-part-076/evaluation.json",
+      "source_sha256": "43a801462c1d591c3476dd2dfdb2d0085e733191894ad3a0537bcb0d5f4caac7",
+      "sha256": "43a801462c1d591c3476dd2dfdb2d0085e733191894ad3a0537bcb0d5f4caac7",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part076_2/freecad-part-076/public_task.json",
+      "source": "results/official_cli/cli_part076_2/freecad-part-076/public_task.json",
+      "source_sha256": "a9aefa5188c8fafc03ff642ffe027dd0090c4ea92ad356e9069317af7df5f017",
+      "sha256": "a9aefa5188c8fafc03ff642ffe027dd0090c4ea92ad356e9069317af7df5f017",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part076_2/freecad-part-076/result.json",
+      "source": "results/official_cli/cli_part076_2/freecad-part-076/result.json",
+      "source_sha256": "0407f99b9ac5ff9c606f75ec7066727d4efd89a2733c7c53e4f987a01f5f37ed",
+      "sha256": "0407f99b9ac5ff9c606f75ec7066727d4efd89a2733c7c53e4f987a01f5f37ed",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part076_2/freecad-part-076/traj.jsonl",
+      "source": "results/official_cli/cli_part076_2/freecad-part-076/traj.jsonl",
+      "source_sha256": "4e9b5f2fa99ee720febba7f877bd20bce141f24832836440e5ae8f1695d69ae7",
+      "sha256": "4e9b5f2fa99ee720febba7f877bd20bce141f24832836440e5ae8f1695d69ae7",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part076_2/freecad-part-076/trajectory.jsonl",
+      "source": "results/official_cli/cli_part076_2/freecad-part-076/trajectory.jsonl",
+      "source_sha256": "47f92659d9d18b83e894c807cd7ba4c620c3ff538132ce04535a56538902efa5",
+      "sha256": "47f92659d9d18b83e894c807cd7ba4c620c3ff538132ce04535a56538902efa5",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part076_2/run.log",
+      "source": "results/official_cli/cli_part076_2/run.log",
+      "source_sha256": "b98255f11ede7daceeca6344468a86bfe276c7fce809f6809b7520909bb4b12a",
+      "sha256": "cc2563631aaf7c805166943b4d4eb0023b929cdae294dbc1fa8faaf06d47ccef",
+      "redacted": true,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part076_2/summary.json",
+      "source": "results/official_cli/cli_part076_2/summary.json",
+      "source_sha256": "04c1804e66ed3a521936251ab99957a1e8fae15496cbd14ed72ad37890fef2af",
+      "sha256": "04c1804e66ed3a521936251ab99957a1e8fae15496cbd14ed72ad37890fef2af",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part077/analysis.md",
+      "source": "results/official_cli/cli_part077/analysis.md",
+      "source_sha256": "34d9ddda2d825624883bde481a3df18124a24d6a6a079c5efa34ef911bbc2d9e",
+      "sha256": "34d9ddda2d825624883bde481a3df18124a24d6a6a079c5efa34ef911bbc2d9e",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part077/args.json",
+      "source": "results/official_cli/cli_part077/args.json",
+      "source_sha256": "36f9aa3da1d3ccdfc3cbd733b320f93649db1e2f198e38c536f07ed7933a968c",
+      "sha256": "1c25f845da87a488b599f5321996a59cab3904cd59050972eee5b84906f7d1ab",
+      "redacted": true,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part077/freecad-part-077/evaluation.json",
+      "source": "results/official_cli/cli_part077/freecad-part-077/evaluation.json",
+      "source_sha256": "a640738fcac6fcd5a1726498a1fded06e07363d36212f7608cfd8ebaa5c55005",
+      "sha256": "a640738fcac6fcd5a1726498a1fded06e07363d36212f7608cfd8ebaa5c55005",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part077/freecad-part-077/public_task.json",
+      "source": "results/official_cli/cli_part077/freecad-part-077/public_task.json",
+      "source_sha256": "9810cd0b181581cdeee3d2d1431fa091b3048eeb03709ff85e243244d697583d",
+      "sha256": "9810cd0b181581cdeee3d2d1431fa091b3048eeb03709ff85e243244d697583d",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part077/freecad-part-077/result.json",
+      "source": "results/official_cli/cli_part077/freecad-part-077/result.json",
+      "source_sha256": "061f61dbaca42b8f6fb4dfa6c87d4775b0ad17e84b87f0f0b9278185936899dd",
+      "sha256": "061f61dbaca42b8f6fb4dfa6c87d4775b0ad17e84b87f0f0b9278185936899dd",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part077/freecad-part-077/traj.jsonl",
+      "source": "results/official_cli/cli_part077/freecad-part-077/traj.jsonl",
+      "source_sha256": "8e45d0c9d5c21ca1510f2da5b2191edb4de02170e7b6e5bd7172edbc698c36f9",
+      "sha256": "8e45d0c9d5c21ca1510f2da5b2191edb4de02170e7b6e5bd7172edbc698c36f9",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part077/freecad-part-077/trajectory.jsonl",
+      "source": "results/official_cli/cli_part077/freecad-part-077/trajectory.jsonl",
+      "source_sha256": "69190c5c97989ce93d3fdce090f4d8bac491ff44a567d3a9c520c67883cf71c1",
+      "sha256": "69190c5c97989ce93d3fdce090f4d8bac491ff44a567d3a9c520c67883cf71c1",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part077/run.log",
+      "source": "results/official_cli/cli_part077/run.log",
+      "source_sha256": "8e0ef84223a656afbb1223835df2313cd388347c675ae415b6def08dd6f4aaa0",
+      "sha256": "cc70c8a415449b1ed6d26fcc529f8791f62e2326939eb158bd5bdcfd7bd5da72",
+      "redacted": true,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_part077/summary.json",
+      "source": "results/official_cli/cli_part077/summary.json",
+      "source_sha256": "7cb6c81c984b657ffe398cda82b97eaad451d01a3d8a87c56724b85c68632cd0",
+      "sha256": "7cb6c81c984b657ffe398cda82b97eaad451d01a3d8a87c56724b85c68632cd0",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_077_v2/analysis.md",
+      "source": "results/official_cli/cli_077_v2/analysis.md",
+      "source_sha256": "3a760a9a7f7d1669caf261ef6160e789fd8cd04152724867c815ecf615c979f4",
+      "sha256": "3a760a9a7f7d1669caf261ef6160e789fd8cd04152724867c815ecf615c979f4",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_077_v2/args.json",
+      "source": "results/official_cli/cli_077_v2/args.json",
+      "source_sha256": "ab84a43dd14d33937f091bed1e8263a509198a56e2c3f4316afb3ab4fc9ba146",
+      "sha256": "dc46ceacb504250f6c2adc6b67260a2f9753594d4509f9741457a1063f374fa6",
+      "redacted": true,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_077_v2/freecad-part-077/evaluation.json",
+      "source": "results/official_cli/cli_077_v2/freecad-part-077/evaluation.json",
+      "source_sha256": "a640738fcac6fcd5a1726498a1fded06e07363d36212f7608cfd8ebaa5c55005",
+      "sha256": "a640738fcac6fcd5a1726498a1fded06e07363d36212f7608cfd8ebaa5c55005",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_077_v2/freecad-part-077/public_task.json",
+      "source": "results/official_cli/cli_077_v2/freecad-part-077/public_task.json",
+      "source_sha256": "9810cd0b181581cdeee3d2d1431fa091b3048eeb03709ff85e243244d697583d",
+      "sha256": "9810cd0b181581cdeee3d2d1431fa091b3048eeb03709ff85e243244d697583d",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_077_v2/freecad-part-077/result.json",
+      "source": "results/official_cli/cli_077_v2/freecad-part-077/result.json",
+      "source_sha256": "cd57e71e6c54dea65bc4caac98aa465ff865473e372fa9051efeda5cebcec0fa",
+      "sha256": "cd57e71e6c54dea65bc4caac98aa465ff865473e372fa9051efeda5cebcec0fa",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_077_v2/freecad-part-077/traj.jsonl",
+      "source": "results/official_cli/cli_077_v2/freecad-part-077/traj.jsonl",
+      "source_sha256": "8e45d0c9d5c21ca1510f2da5b2191edb4de02170e7b6e5bd7172edbc698c36f9",
+      "sha256": "8e45d0c9d5c21ca1510f2da5b2191edb4de02170e7b6e5bd7172edbc698c36f9",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_077_v2/freecad-part-077/trajectory.jsonl",
+      "source": "results/official_cli/cli_077_v2/freecad-part-077/trajectory.jsonl",
+      "source_sha256": "e18302950d3712abab66a1d1840bcc4b55b287c73ce1e0cbe5c16abed96b0aa6",
+      "sha256": "e18302950d3712abab66a1d1840bcc4b55b287c73ce1e0cbe5c16abed96b0aa6",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_077_v2/run.log",
+      "source": "results/official_cli/cli_077_v2/run.log",
+      "source_sha256": "e1ecd7043658c450135ff64f95cd5435c5501bc918ba97d6bf6b835c5ca40f9e",
+      "sha256": "de32961d9024822c6d42e4b353420a05dc9f0f30198747f282e960e20bbdc00b",
+      "redacted": true,
+      "derived": false
+    },
+    {
+      "path": "official_cli/cli_077_v2/summary.json",
+      "source": "results/official_cli/cli_077_v2/summary.json",
+      "source_sha256": "ce3d416c3963f4e98eb9a8412d281b41a145ddab7693245d570f54322452ebc6",
+      "sha256": "ce3d416c3963f4e98eb9a8412d281b41a145ddab7693245d570f54322452ebc6",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_000/audit.json",
+      "source": "results/cli_native_audits_20261021/artifact_000/audit.json",
+      "source_sha256": "2ef4bb2545ceb88f2f3db37cff99dfcd1588e4f87f84e1e5064a9ac02964ef3b",
+      "sha256": "2ef4bb2545ceb88f2f3db37cff99dfcd1588e4f87f84e1e5064a9ac02964ef3b",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_000/audit_raw.json",
+      "source": "results/cli_native_audits_20261021/artifact_000/audit_raw.json",
+      "source_sha256": "ce93c725dafcd9a337726b2c814031dafb511abf0f9a77098cc28e9098c236e8",
+      "sha256": "ce93c725dafcd9a337726b2c814031dafb511abf0f9a77098cc28e9098c236e8",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_000/controller_response.json",
+      "source": "results/cli_native_audits_20261021/artifact_000/controller_response.json",
+      "source_sha256": "ef7cc705d592d497d0ae2776f0babf10f6e355ef56b7e24e910376048550372b",
+      "sha256": "ef7cc705d592d497d0ae2776f0babf10f6e355ef56b7e24e910376048550372b",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_000/provenance.json",
+      "source": "results/cli_native_audits_20261021/artifact_000/provenance.json",
+      "source_sha256": "a972809e4e89f63f1c3943ae9ef40b1f977561f16bee4c01618f36cd9ebcade4",
+      "sha256": "a972809e4e89f63f1c3943ae9ef40b1f977561f16bee4c01618f36cd9ebcade4",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_000/response.json",
+      "source": "results/cli_native_audits_20261021/artifact_000/response.json",
+      "source_sha256": "ef7cc705d592d497d0ae2776f0babf10f6e355ef56b7e24e910376048550372b",
+      "sha256": "ef7cc705d592d497d0ae2776f0babf10f6e355ef56b7e24e910376048550372b",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_000/worker.py",
+      "source": "results/cli_native_audits_20261021/artifact_000/worker.py",
+      "source_sha256": "ec71d47b43777116be561025c82c28095f851fd947c8d0944ca5d2ae14084c14",
+      "sha256": "ec71d47b43777116be561025c82c28095f851fd947c8d0944ca5d2ae14084c14",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_001/audit.json",
+      "source": "results/cli_native_audits_20261021/artifact_001/audit.json",
+      "source_sha256": "f9c5b6d7942e88c494b2020c4ddca37f04adf88421179fa4f0498fc506394508",
+      "sha256": "f9c5b6d7942e88c494b2020c4ddca37f04adf88421179fa4f0498fc506394508",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_001/audit_raw.json",
+      "source": "results/cli_native_audits_20261021/artifact_001/audit_raw.json",
+      "source_sha256": "77af4c51172f1b32d52b88e44a79ef3278f07675cb52b53f0d555746e59e8b24",
+      "sha256": "77af4c51172f1b32d52b88e44a79ef3278f07675cb52b53f0d555746e59e8b24",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_001/controller_response.json",
+      "source": "results/cli_native_audits_20261021/artifact_001/controller_response.json",
+      "source_sha256": "db8db4ed6f09c50f3721c50f7e59b81efbfb9357699ad58f69a4f97b176164ed",
+      "sha256": "db8db4ed6f09c50f3721c50f7e59b81efbfb9357699ad58f69a4f97b176164ed",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_001/provenance.json",
+      "source": "results/cli_native_audits_20261021/artifact_001/provenance.json",
+      "source_sha256": "efd2a0221be0b4051ae9a1a830ecfcaf1d62cf367077eb179e58d9effac0c3db",
+      "sha256": "efd2a0221be0b4051ae9a1a830ecfcaf1d62cf367077eb179e58d9effac0c3db",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_001/response.json",
+      "source": "results/cli_native_audits_20261021/artifact_001/response.json",
+      "source_sha256": "db8db4ed6f09c50f3721c50f7e59b81efbfb9357699ad58f69a4f97b176164ed",
+      "sha256": "db8db4ed6f09c50f3721c50f7e59b81efbfb9357699ad58f69a4f97b176164ed",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_001/worker.py",
+      "source": "results/cli_native_audits_20261021/artifact_001/worker.py",
+      "source_sha256": "c013dbb2d716100c0250f59c4d2aa2c687023ab9acd2580d0fee3c3d04a57be2",
+      "sha256": "c013dbb2d716100c0250f59c4d2aa2c687023ab9acd2580d0fee3c3d04a57be2",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_002/audit.json",
+      "source": "results/cli_native_audits_20261021/artifact_002/audit.json",
+      "source_sha256": "91122298d19f37793d47defb9cc637bdef7efb72ab7efc3668dd6d6e69a2cbe4",
+      "sha256": "91122298d19f37793d47defb9cc637bdef7efb72ab7efc3668dd6d6e69a2cbe4",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_002/audit_raw.json",
+      "source": "results/cli_native_audits_20261021/artifact_002/audit_raw.json",
+      "source_sha256": "77f1497e908263d0bfd5e335dbd53958a658f93945d068e333945798e1728f5d",
+      "sha256": "77f1497e908263d0bfd5e335dbd53958a658f93945d068e333945798e1728f5d",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_002/controller_response.json",
+      "source": "results/cli_native_audits_20261021/artifact_002/controller_response.json",
+      "source_sha256": "eddabe01333f28ba51d238451c2192efef3d2b57997a1957ed01d08aa168a714",
+      "sha256": "eddabe01333f28ba51d238451c2192efef3d2b57997a1957ed01d08aa168a714",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_002/provenance.json",
+      "source": "results/cli_native_audits_20261021/artifact_002/provenance.json",
+      "source_sha256": "376d74ad7a061ba265c958c8619717243f1d51f09e273938ea41be3b7d27dc77",
+      "sha256": "376d74ad7a061ba265c958c8619717243f1d51f09e273938ea41be3b7d27dc77",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_002/response.json",
+      "source": "results/cli_native_audits_20261021/artifact_002/response.json",
+      "source_sha256": "eddabe01333f28ba51d238451c2192efef3d2b57997a1957ed01d08aa168a714",
+      "sha256": "eddabe01333f28ba51d238451c2192efef3d2b57997a1957ed01d08aa168a714",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_002/worker.py",
+      "source": "results/cli_native_audits_20261021/artifact_002/worker.py",
+      "source_sha256": "51160c52dd50be804630a2a11bb70cad851658d6e997ed08bc409cbb94245745",
+      "sha256": "51160c52dd50be804630a2a11bb70cad851658d6e997ed08bc409cbb94245745",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_003/audit.json",
+      "source": "results/cli_native_audits_20261021/artifact_003/audit.json",
+      "source_sha256": "0a6747fd2984c07635c6947ca26be836c535744896478fe547d780e03d625e1f",
+      "sha256": "0a6747fd2984c07635c6947ca26be836c535744896478fe547d780e03d625e1f",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_003/audit_raw.json",
+      "source": "results/cli_native_audits_20261021/artifact_003/audit_raw.json",
+      "source_sha256": "cc7fa87807af80af5953997c9adc80958dd6148e92c82a30078a6d5f9349df51",
+      "sha256": "cc7fa87807af80af5953997c9adc80958dd6148e92c82a30078a6d5f9349df51",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_003/controller_response.json",
+      "source": "results/cli_native_audits_20261021/artifact_003/controller_response.json",
+      "source_sha256": "478a959d7518267a96deb815b4b4c74e24dc127bb4e1e192396dc7bb7a99cede",
+      "sha256": "478a959d7518267a96deb815b4b4c74e24dc127bb4e1e192396dc7bb7a99cede",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_003/provenance.json",
+      "source": "results/cli_native_audits_20261021/artifact_003/provenance.json",
+      "source_sha256": "c46dbcfebefa3a55ed0e61e5e00f6c87c4dd9681ef35f3b2f29f2d282717bafa",
+      "sha256": "c46dbcfebefa3a55ed0e61e5e00f6c87c4dd9681ef35f3b2f29f2d282717bafa",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_003/response.json",
+      "source": "results/cli_native_audits_20261021/artifact_003/response.json",
+      "source_sha256": "478a959d7518267a96deb815b4b4c74e24dc127bb4e1e192396dc7bb7a99cede",
+      "sha256": "478a959d7518267a96deb815b4b4c74e24dc127bb4e1e192396dc7bb7a99cede",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_003/worker.py",
+      "source": "results/cli_native_audits_20261021/artifact_003/worker.py",
+      "source_sha256": "8d2d9d8fe1e5f593f886cbd99c3c596951bd6a490313e851fd977a57002635a4",
+      "sha256": "8d2d9d8fe1e5f593f886cbd99c3c596951bd6a490313e851fd977a57002635a4",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_004/audit.json",
+      "source": "results/cli_native_audits_20261021/artifact_004/audit.json",
+      "source_sha256": "820f5c4b6c73e60a515285cab32e5a97bd2c2a549bba1a90811fd3d618b90926",
+      "sha256": "820f5c4b6c73e60a515285cab32e5a97bd2c2a549bba1a90811fd3d618b90926",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_004/audit_raw.json",
+      "source": "results/cli_native_audits_20261021/artifact_004/audit_raw.json",
+      "source_sha256": "2b4f91def200b480ee4ce44bda0ad650a423ea846444ac32495afbd7a15ff30d",
+      "sha256": "2b4f91def200b480ee4ce44bda0ad650a423ea846444ac32495afbd7a15ff30d",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_004/controller_response.json",
+      "source": "results/cli_native_audits_20261021/artifact_004/controller_response.json",
+      "source_sha256": "3b0dac4dc5cb0f9c11fa422e29bee05758d82b2c2c907b416cd577260515050a",
+      "sha256": "3b0dac4dc5cb0f9c11fa422e29bee05758d82b2c2c907b416cd577260515050a",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_004/provenance.json",
+      "source": "results/cli_native_audits_20261021/artifact_004/provenance.json",
+      "source_sha256": "cf75bb4a2aeaeb38758901afb59670d0642d8d68124737f2ebfb05300d043941",
+      "sha256": "cf75bb4a2aeaeb38758901afb59670d0642d8d68124737f2ebfb05300d043941",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_004/response.json",
+      "source": "results/cli_native_audits_20261021/artifact_004/response.json",
+      "source_sha256": "3b0dac4dc5cb0f9c11fa422e29bee05758d82b2c2c907b416cd577260515050a",
+      "sha256": "3b0dac4dc5cb0f9c11fa422e29bee05758d82b2c2c907b416cd577260515050a",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_004/worker.py",
+      "source": "results/cli_native_audits_20261021/artifact_004/worker.py",
+      "source_sha256": "842cc844e0aecec29d1ca1d21a6ad2790e11aa33d32c12992be3be2695f7f24c",
+      "sha256": "842cc844e0aecec29d1ca1d21a6ad2790e11aa33d32c12992be3be2695f7f24c",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_005/audit.json",
+      "source": "results/cli_native_audits_20261021/artifact_005/audit.json",
+      "source_sha256": "95dcee01d8f7c87360acdfa875d371d023ada62c77d91d523537ee7793a78ab1",
+      "sha256": "95dcee01d8f7c87360acdfa875d371d023ada62c77d91d523537ee7793a78ab1",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_005/audit_raw.json",
+      "source": "results/cli_native_audits_20261021/artifact_005/audit_raw.json",
+      "source_sha256": "bd945de1a291b5e8b9aa8c2263f55e790b3a83a66246bb301e3336330eaee20a",
+      "sha256": "bd945de1a291b5e8b9aa8c2263f55e790b3a83a66246bb301e3336330eaee20a",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_005/controller_response.json",
+      "source": "results/cli_native_audits_20261021/artifact_005/controller_response.json",
+      "source_sha256": "b4f0db4c4f7166625a3e445c4755057ec89a4e613d5449743f14032ac4b16266",
+      "sha256": "b4f0db4c4f7166625a3e445c4755057ec89a4e613d5449743f14032ac4b16266",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_005/provenance.json",
+      "source": "results/cli_native_audits_20261021/artifact_005/provenance.json",
+      "source_sha256": "b12427c8cdee1115e93def786f19bd2c60e7831a25594e3f2e16176145bf1c37",
+      "sha256": "b12427c8cdee1115e93def786f19bd2c60e7831a25594e3f2e16176145bf1c37",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_005/response.json",
+      "source": "results/cli_native_audits_20261021/artifact_005/response.json",
+      "source_sha256": "b4f0db4c4f7166625a3e445c4755057ec89a4e613d5449743f14032ac4b16266",
+      "sha256": "b4f0db4c4f7166625a3e445c4755057ec89a4e613d5449743f14032ac4b16266",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/artifact_005/worker.py",
+      "source": "results/cli_native_audits_20261021/artifact_005/worker.py",
+      "source_sha256": "3705b3b8211a7510ceab757f1c8e37b86849cef9c56d87be2317093607cbe611",
+      "sha256": "3705b3b8211a7510ceab757f1c8e37b86849cef9c56d87be2317093607cbe611",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/dispatch.dispatch.json",
+      "source": "results/cli_native_audits_20261021/dispatch.sqlite",
+      "source_sha256": "e51fa58ab78dc3c47050d6c896631bf18673bba6520f0dc219e7d8fcf4b61085",
+      "sha256": "b71e13ee05db9be65f6b1696b34ed3153d0567507a8aa969663110577e8a0b7f",
+      "redacted": false,
+      "derived": true
+    },
+    {
+      "path": "cli_native_audits_20261021/runtime/vm_001/final.png",
+      "source": "results/cli_native_audits_20261021/runtime/vm_001/final.png",
+      "source_sha256": "c1161e09bb43363d2777bdb410b3e59e98b33eae3b374322b5e86079ab089a12",
+      "sha256": "c1161e09bb43363d2777bdb410b3e59e98b33eae3b374322b5e86079ab089a12",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/runtime/vm_001/launch.json",
+      "source": "results/cli_native_audits_20261021/runtime/vm_001/launch.json",
+      "source_sha256": "cc086b5d0eeb78da74eb8fe2eb8368535ffd3db4c8a16a5beab813b662846a79",
+      "sha256": "cc086b5d0eeb78da74eb8fe2eb8368535ffd3db4c8a16a5beab813b662846a79",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/runtime/vm_001/qemu.log",
+      "source": "results/cli_native_audits_20261021/runtime/vm_001/qemu.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/runtime/vm_001/readiness.jsonl",
+      "source": "results/cli_native_audits_20261021/runtime/vm_001/readiness.jsonl",
+      "source_sha256": "d4ed356614e6d43531eb8b9cc5e466a3de1840c578392c26e8f203e849901c15",
+      "sha256": "d4ed356614e6d43531eb8b9cc5e466a3de1840c578392c26e8f203e849901c15",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/runtime/vm_001/ready.json",
+      "source": "results/cli_native_audits_20261021/runtime/vm_001/ready.json",
+      "source_sha256": "e57df02eaa6ceb2e3e6d6c5bdbf6c80bb0099922a731a70e5bf2b0ac3387bd33",
+      "sha256": "e57df02eaa6ceb2e3e6d6c5bdbf6c80bb0099922a731a70e5bf2b0ac3387bd33",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/runtime/vm_001/ready.png",
+      "source": "results/cli_native_audits_20261021/runtime/vm_001/ready.png",
+      "source_sha256": "6d0428dbe8845decf7503746580eb3c73589845fd9b168fd50176f7fd060fff7",
+      "sha256": "6d0428dbe8845decf7503746580eb3c73589845fd9b168fd50176f7fd060fff7",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/runtime/vm_001/serial.log",
+      "source": "results/cli_native_audits_20261021/runtime/vm_001/serial.log",
+      "source_sha256": "b9f0f261cb82c547887770a795f7d95c64dde5de3aebeab0cc9b484fe727e990",
+      "sha256": "b9f0f261cb82c547887770a795f7d95c64dde5de3aebeab0cc9b484fe727e990",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/runtime/vm_001/stopped.json",
+      "source": "results/cli_native_audits_20261021/runtime/vm_001/stopped.json",
+      "source_sha256": "34e253f5d66fc6bae1052250670189852cc498191580a3d90d7805b2b8122a6b",
+      "sha256": "34e253f5d66fc6bae1052250670189852cc498191580a3d90d7805b2b8122a6b",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_native_audits_20261021/summary.json",
+      "source": "results/cli_native_audits_20261021/summary.json",
+      "source_sha256": "f46bead789bd1d980e700b84f4118e4bfc8ae210568ac999e5bb9eeadeea36a9",
+      "sha256": "f46bead789bd1d980e700b84f4118e4bfc8ae210568ac999e5bb9eeadeea36a9",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_data_20261021/episodes.jsonl",
+      "source": "results/cli_data_20261021/episodes.jsonl",
+      "source_sha256": "7a5ac59fade5cfb5e82dc1f77c3c91a1bbdeb7192dac6700a4a5812af9555147",
+      "sha256": "7a5ac59fade5cfb5e82dc1f77c3c91a1bbdeb7192dac6700a4a5812af9555147",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_data_20261021/quarantine.jsonl",
+      "source": "results/cli_data_20261021/quarantine.jsonl",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_data_20261021/rejected_training.jsonl",
+      "source": "results/cli_data_20261021/rejected_training.jsonl",
+      "source_sha256": "0a2e77297f77edaeca3c91033b590889128681f6f360a9682ccf99e2181b91f1",
+      "sha256": "0a2e77297f77edaeca3c91033b590889128681f6f360a9682ccf99e2181b91f1",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_data_20261021/sft.jsonl",
+      "source": "results/cli_data_20261021/sft.jsonl",
+      "source_sha256": "bedc1a98966b074d1afe6ccf8ed6e1661089dcbcfba29571153775582fa507ee",
+      "sha256": "bedc1a98966b074d1afe6ccf8ed6e1661089dcbcfba29571153775582fa507ee",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_data_20261021/summary.json",
+      "source": "results/cli_data_20261021/summary.json",
+      "source_sha256": "08358739fa2511fd5609446e935e4d4eefe2388a4d5a4fddcc0d994b94acd71c",
+      "sha256": "08358739fa2511fd5609446e935e4d4eefe2388a4d5a4fddcc0d994b94acd71c",
+      "redacted": false,
+      "derived": false
+    }
+  ],
+  "omitted_screenshots": [],
+  "complete_agent_jsonl": true
+}

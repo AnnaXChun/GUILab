@@ -40,3 +40,26 @@ def test_native_gui_settle_uses_the_pinned_runner_option(tmp_path):
     assert gui[gui.index('--max_steps')+1]=='25'
     original=runner_plan(tmp_path,'gui-connect','qwen3.5-122b-a10b',None,'openai-compatible','fresh','freecad-sketch-061',True)
     assert '--sleep_after_execution' not in original
+
+
+def test_cli_only_campaign_cannot_enable_gui(tmp_path):
+    campaign=load_campaign('configs/cli_focus_20261021.json')
+    assert 'gui' not in campaign
+    tasks=tmp_path/'tasks.json'
+    cmd=runner_plan(tmp_path,'cli','qwen3.5-122b-a10b',None,'openai-compatible','batch',campaign=campaign,tasks_file=tasks)
+    assert '--task-id' not in cmd
+    assert cmd[cmd.index('--tasks-file')+1]==str(tasks)
+    assert cmd[cmd.index('--max-turns')+1]=='10'
+
+
+def test_explicit_cli_subset_is_bounded_without_evaluator_access(tmp_path):
+    from cad_cf.baseline import cli_task_selection
+    directory=tmp_path/'vendor/CADWORLD/evaluation_examples/examples/sketch'
+    directory.mkdir(parents=True)
+    ids=['freecad-sketch-061','freecad-sketch-062','freecad-sketch-063']
+    for ident in ids:(directory/(ident+'.json')).write_text('not parsed by selector')
+    tasks=tmp_path/'tasks.json';tasks.write_text(json.dumps({'sketch':ids}))
+    with pytest.raises(ValueError,match='one or two'):cli_task_selection(tmp_path,tasks)
+    assert cli_task_selection(tmp_path,tasks,ids[2])==[ids[2]]
+    tasks.write_text(json.dumps({'sketch':[ids[0],ids[0]]}))
+    with pytest.raises(ValueError,match='duplicate'):cli_task_selection(tmp_path,tasks)

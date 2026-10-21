@@ -12,17 +12,20 @@ def load_campaign(path=None):
     value=json.loads(Path(path).read_text())
     if value.get('schema_version')!=1 or not value.get('authorization') or not value.get('prior_evidence'):
         raise ValueError('explicit authorization and prior campaign evidence required')
-    for key,ceiling in (('max_calls',100),('max_output_tokens',102400)):
+    for key,ceiling in (('max_calls',300),('max_output_tokens',102400)):
         if type(value.get(key)) is not int or not 1<=value[key]<=ceiling:
             raise ValueError('invalid bounded campaign '+key)
+    if not {'gui','cli'} & value.keys():
+        raise ValueError('campaign needs at least one route')
     for kind in ('gui','cli'):
+        if kind not in value:continue
         route=value[kind]
-        for key,ceiling in (('turns',100),('per_call_tokens',8192),('output_tokens',102400),('wall_seconds',1200)):
+        for key,ceiling in (('turns',120),('per_call_tokens',8192),('output_tokens',102400),('wall_seconds',3600)):
             if type(route.get(key)) is not int or not 1<=route[key]<=ceiling:
                 raise ValueError('invalid '+kind+' '+key)
         if route['turns']>value['max_calls'] or route['output_tokens']>value['max_output_tokens']:
             raise ValueError('route exceeds campaign limit')
-    settle=value['gui'].get('settle_seconds',0.3)
+    settle=value.get('gui',{}).get('settle_seconds',0.3)
     if type(settle) not in (int,float) or not math.isfinite(settle) or not 0<=settle<=10:
         raise ValueError('invalid bounded GUI settle_seconds')
     return value

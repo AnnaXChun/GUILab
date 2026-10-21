@@ -4,6 +4,14 @@
 
 ## 接手入口
 
+**2026-10-21 当前方向覆盖下方历史计划**：用户明确停止 GUI，后续只针对 CLI 做数据清洗、RL 和成功率改进。先读 `docs/CLI_RESEARCH_PLAN.md`、`reports/CLI_FOCUS_20261021.md` 和新的 `HANDOFF.md` 入口。原 `SPEC.md` 和 ACTC gate 是历史方案，不改判为 PASS，也不以未完成 GUI 阻止 CLI 研发。保留原 prompt 的 baseline，改 prompt、API 提示或模型权重后另列实验设置。先收集/审计/清洗，不自动启动 RL 训练、大模型下载或全量评测。
+
+当前小批为 `configs/cli_focus_20261021.json`：两个公开开发任务、20 次生成、16000 输出 tokens，SDK 重试 0。新批次承接用户“继续推进 CLI”的授权，旧 100 次账本已耗尽并保留。CLI runner 进程支持两个任务；官方 reset 仍恢复新 VM overlay，不能声称跨任务复用同一 VM 或 same-S0。无模型批量原生审计可复用 VM，每个文件使用独立临时目录。
+
+`cad_cf.cli_data` 的官方评分只进 `offline_evaluation`。训练候选只用公开 instruction 和原生审计，排除未知、未完成、held-out、泄漏、重复、不确定执行及未支持的对话格式。脚本的已知非零退出保留，不能删掉错误修正历史。清洗记录和 RL 效果分开报告。
+
+下方日期更早的 GUI、ACTC 和预算段落只作为历史证据，不再作为当前下一步。
+
 先读 `docs/NEXT_BASELINE_RUN.md`、`HANDOFF.md` 和 `SPEC.md`，再读 `reports/REPRO_STATUS.md`、`reports/BASELINE_REPRO.md`、`reports/DEVIATIONS.md`。`REMOTE_CODEX_PROMPT.md` 可直接作为远程会话的首条任务消息。
 
 仓库根目录就是原 `cad-cf-hybrid` 项目，不需要再套一层同名目录。`vendor/CADWORLD` 是 Git submodule，固定 commit 为 `e5d0ebab8bd28da6e98c68c61db05747d1647f7b`。按 pinned 源码做最小适配，不重新调研论文或更换 benchmark。

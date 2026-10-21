@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "name": "cli_focus_20261021",
+  "authorization": "2026-10-21 user: continue CLI tasks; future focus on CLI RL, data cleaning and improvement; stop GUI research",
+  "prior_evidence": "reports/CLI_FOCUS_20261021.md",
+  "task_ids": [
+    "freecad-sketch-063",
+    "freecad-measure-003"
+  ],
+  "max_calls": 20,
+  "max_output_tokens": 16000,
+  "cli": {
+    "turns": 10,
+    "per_call_tokens": 2048,
+    "output_tokens": 8000,
+    "wall_seconds": 900
+  }
+}

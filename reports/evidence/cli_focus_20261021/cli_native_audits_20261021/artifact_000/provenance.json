@@ -1,0 +1,6 @@
+{
+  "source_artifact": "results/official_cli/cli_smoke_061/freecad-sketch-061/freecad-sketch-061.FCStd",
+  "artifact_sha256": "2bef5bf8080baa4e2d255220949da97b209af5e192cc7a0b81f212c0d74d903a",
+  "artifact_bytes": 2922,
+  "command_sha256": "b7c54d569f84183587e1384e565d869925f263b6b10d2641b81f17933eac7fc1"
+}

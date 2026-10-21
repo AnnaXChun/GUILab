@@ -1,0 +1,39 @@
+[2026-10-21 13:41:34,477 INFO cadworld.cli] CLI-only tasks: ['freecad-part-077']
+[2026-10-21 13:41:35,770 INFO cadworld.cli] Model endpoint healthy; advertised models: [PRIVATE DIRECTORY EXCLUDED]
+[2026-10-21 13:41:35,791 INFO desktopenv.env] Initializing...
+[2026-10-21 13:44:03,885 INFO cadworld.cli] Resetting task freecad-part-077
+[2026-10-21 13:44:03,886 INFO desktopenv.env] Resetting environment...
+[2026-10-21 13:44:03,886 INFO desktopenv.env] Switching task...
+[2026-10-21 13:44:03,886 INFO desktopenv.env] Setting counters...
+[2026-10-21 13:44:03,886 INFO desktopenv.env] Environment is clean, skipping snapshot revert (provider: docker).
+[2026-10-21 13:44:03,955 INFO desktopenv.env] Setting up environment...
+[2026-10-21 13:44:03,955 INFO desktopenv.setup] try to connect http://127.0.0.1:15055
+[2026-10-21 13:44:19,699 INFO desktopenv.setup] Executing setup step 1/1: _execute_setup
+[2026-10-21 13:44:20,147 INFO desktopenv.setup] Command executed successfully: rm -f /home/user/Unnamed.FCStd -> {
+  "error": "",
+  "output": "",
+  "returncode": 0,
+  "status": "success"
+}
+
+[2026-10-21 13:44:20,147 INFO desktopenv.setup] SETUP COMPLETED: _execute_setup({'command': ['rm', '-f', '/home/user/Unnamed.FCStd'], 'shell': False})
+[2026-10-21 13:44:20,147 INFO desktopenv.env] Environment setup complete.
+[2026-10-21 13:51:12,569 INFO desktopenv.setup] try to connect http://127.0.0.1:15055
+[2026-10-21 13:51:14,527 ERROR desktopenv.pycontroller] Failed to get file. Status code: 404
+[2026-10-21 13:51:14,528 INFO desktopenv.pycontroller] Retrying to get file.
+[2026-10-21 13:51:19,662 ERROR desktopenv.pycontroller] Failed to get file. Status code: 404
+[2026-10-21 13:51:19,662 INFO desktopenv.pycontroller] Retrying to get file.
+[2026-10-21 13:51:25,194 ERROR desktopenv.pycontroller] Failed to get file. Status code: 404
+[2026-10-21 13:51:25,194 INFO desktopenv.pycontroller] Retrying to get file.
+[2026-10-21 13:51:30,204 ERROR desktopenv.pycontroller] Failed to get file.
+[2026-10-21 13:51:30,344 ERROR desktopenv.pycontroller] Failed to get file. Status code: 404
+[2026-10-21 13:51:30,345 INFO desktopenv.pycontroller] Retrying to get file.
+[2026-10-21 13:51:35,420 ERROR desktopenv.pycontroller] Failed to get file. Status code: 404
+[2026-10-21 13:51:35,421 INFO desktopenv.pycontroller] Retrying to get file.
+[2026-10-21 13:51:40,689 ERROR desktopenv.pycontroller] Failed to get file. Status code: 404
+[2026-10-21 13:51:40,689 INFO desktopenv.pycontroller] Retrying to get file.
+[2026-10-21 13:51:45,693 ERROR desktopenv.pycontroller] Failed to get file.
+[2026-10-21 13:51:45,694 WARNING desktopenv.experiment] Generated FCStd not found in VM at /home/user/Unnamed.FCStd
+[2026-10-21 13:51:45,719 INFO cadworld.cli.freecad-part-077] Diagnostics written to /Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_077_v2/freecad-part-077/evaluation.json (failure_class=no_output_file)
+[2026-10-21 13:51:45,722 INFO cadworld.cli] Task freecad-part-077 score=0.000 termination=turn_limit
+[2026-10-21 13:51:47,174 INFO cadworld.cli] Finished 1 task(s); mean score 0.000; results: /Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_077_v2

@@ -1,5 +1,15 @@
 # GUILab 交接
 
+**2026-10-21 当前交接**：用户停止 GUI，转向 CLI 的数据清洗、RL 和成功率改进。先读 [CLI 研究计划](docs/CLI_RESEARCH_PLAN.md)、[本轮 CLI 记录](reports/CLI_FOCUS_20261021.md)和 [CLI 数据清单](manifests/cli_dataset_20261021.json)。下方 2026-10-20 及更早段落保留为历史，不按旧 GUI 下一步执行。
+
+本轮两题已结束：sketch-063 官方 1.0，measure-003 官方 0.0；均正常 finish，共 17 次生成、57833 输入 / 6517 输出 tokens，API 错误 0。6 个文件原生审计完成，4 个草图通过参数编辑，part-076 Invalid、圆环 editability UNAVAILABLE；所有原文件 SHA 保持。最终 11 个 CLI episode / 6 个任务导出 3 条 SFT，其他 8 条保留排除理由。数据公开副本见 `reports/evidence/cli_focus_20261021/cli_data_20261021/`，完整机器状态见 `reports/CLI_STATUS.json`。全部 VM 停止，当前批次结束，余下 3 次请求不追加。
+
+新增 CLI 小批复用 pinned runner，一次 launch 选择至多两个任务，官方 reset 保留；TCG reset 仍会为下一题创建新的 VM overlay。配置只开放 CLI，最多 20 次生成、16000 输出 tokens。原 100 次账本已耗尽，23316 输出 tokens；不修改历史额度。任务、模型、实际消耗和审计结果以本轮报告及脱敏证据为准。
+
+新增 `python -m cad_cf.cli_data --manifest manifests/cli_dataset_20261021.json --output results/<new-dataset>`，只做离线清洗，无模型调用。输出包括完整样本索引、quarantine、SFT 候选和排除原因。此前 9 个历史 episode 的审计前快照为 0 条 SFT；完成本轮及审计后更新为 11 个 episode、3 条 SFT。官方分数仅用于离线报告，不进入 SFT 奖励。远程可直接使用脱敏 JSONL；重跑 native audit 仍需原始 artifact 或自己生成的新文件，不能把公开 SHA 当作文件。
+
+原生审计入口 `scripts/audit_cli_artifacts.py` 支持多次 `--artifact`，一次无模型 VM 检查多个文件，每个文件独立临时目录、一次派发、SHA 校验；不会修复模型文件。后续训练需有可训练权重、GPU、任务分组和稳定公开奖励，当前托管 API 只用于采集。暂不接 veRL，不启动 full-200。
+
 更新：2026-10-20。仓库：[AnnaXChun/GUILab](https://github.com/AnnaXChun/GUILab)，根目录就是项目。先读本文件、[定位校准](reports/GUI_GROUNDING_20261020.md)与SPEC.md；GUI任务失败见[模型复测](reports/GUI_VALIDATION_20261020.md)，历史CLI成功见[此前续跑](reports/BASELINE_SUCCESS_SMOKE.md)，机器记录见handoff.json。历史失败不可被后续成功覆盖。
 
 GUI控制闭环已通过：controls007在新官方base overlay中用12次单次派发操作创建Body/XY空Sketch、保存关闭重开，7071-byte文件字节不变，151项单测通过。已处理的具体问题为GNOME外部未响应弹窗、探针对话框移动后的旧坐标、30秒观察截止早于90秒阶段等待；不将这些统称为历史唯一根因。六次失败与一次PASS均已归档。

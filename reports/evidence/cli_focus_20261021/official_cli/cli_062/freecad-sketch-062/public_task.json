@@ -1,0 +1,6 @@
+{
+  "instruction": "Sketch one normal-geometry circle with radius 10 mm in the XY plane. Save the completed model to /home/user/Unnamed.FCStd.",
+  "precondition_path": null,
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 0
+}

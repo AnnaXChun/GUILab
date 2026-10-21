@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-21",
+  "active_protocol": "CADWorld_CLI",
+  "gui_research": "STOPPED_BY_USER",
+  "cadworld_commit": "e5d0ebab8bd28da6e98c68c61db05747d1647f7b",
+  "platform": "macOS ARM native QEMU TCG, official Ubuntu VM",
+  "latest_report": "reports/CLI_FOCUS_20261021.md",
+  "evidence_index": "reports/evidence/cli_focus_20261021/INDEX.json",
+  "model": "qwen3.5-122b-a10b",
+  "baseline_batch": {
+    "run_id": "cli_focus_20261021_001",
+    "status": "COMPLETE",
+    "tasks": [
+      {
+        "task_id": "freecad-sketch-063",
+        "strict": 1,
+        "termination": "finish",
+        "model_calls": 8,
+        "terminal_calls": 7,
+        "output_tokens": 2436,
+        "native_editability": "PASS"
+      },
+      {
+        "task_id": "freecad-measure-003",
+        "strict": 0,
+        "termination": "finish",
+        "model_calls": 9,
+        "terminal_calls": 8,
+        "output_tokens": 4081,
+        "native_editability": "UNAVAILABLE"
+      }
+    ],
+    "model_calls": 17,
+    "input_tokens": 57833,
+    "output_tokens": 6517,
+    "api_errors": 0,
+    "max_calls": 20,
+    "max_output_tokens": 16000,
+    "remaining_calls_not_to_be_reused": 3,
+    "total_cost_usd": null,
+    "cost_unavailable_reason": "provider price unavailable",
+    "baseline_source_sha_unchanged": true
+  },
+  "native_audit": {
+    "artifacts": 6,
+    "valid_native_open_recompute_reopen": 5,
+    "parameter_editability_pass": 4,
+    "native_invalid": 1,
+    "editability_unavailable": 1,
+    "model_calls": 0,
+    "all_original_artifact_shas_unchanged": true
+  },
+  "dataset": {
+    "episodes": 11,
+    "unique_tasks": 6,
+    "model_calls": 96,
+    "output_tokens": 33626,
+    "sft_rows": 3,
+    "quarantine_rows": 0,
+    "training_rejections": {
+      "incomplete_episode": 6,
+      "native_quality_unverified_or_failed": 1,
+      "editability_unverified_or_failed": 1
+    },
+    "official_score_used_as_training_reward": false,
+    "held_out_effect_measured": false,
+    "public_copy": "reports/evidence/cli_focus_20261021/cli_data_20261021"
+  },
+  "verification": {
+    "project_tests": 181,
+    "upstream_cli_tests": 7,
+    "pinned_cli_dry_run": "PASS",
+    "all_vms_stopped": true
+  },
+  "go_no_go": {
+    "cli_collection": "GO",
+    "native_audit_and_cleaning": "GO",
+    "public_reward_smoke": "GO",
+    "sft_rl_training": "NO-GO",
+    "paper_reproduction": "NO-GO",
+    "actc_research": "STOPPED_BY_USER"
+  },
+  "training": {
+    "started": false,
+    "blockers": [
+      "Only 3 audited SFT examples",
+      "Trainable weights, training GPU and trainer not configured or validated"
+    ],
+    "next_action": "Freeze CLI task-family splits, compare original prompt with public API guidance under equal budgets, expand public native rewards and collect data before small-model SFT/RL."
+  },
+  "original_actc": {
+    "real_pairs": 0,
+    "original_gate_results_not_overwritten": true
+  }
+}

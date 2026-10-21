@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "episodes": 11,
+  "unique_tasks": 6,
+  "sft_rows": 3,
+  "quarantine_rows": 0,
+  "training_rejections": {
+    "incomplete_episode": 6,
+    "native_quality_unverified_or_failed": 1,
+    "editability_unverified_or_failed": 1
+  },
+  "model_calls": 96,
+  "output_tokens": 33626,
+  "official_score_is_training_reward": false,
+  "rl_training_started": false
+}

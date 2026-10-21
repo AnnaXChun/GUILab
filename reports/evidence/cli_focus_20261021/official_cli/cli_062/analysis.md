@@ -1,0 +1,5 @@
+# CLI evaluation summary
+
+| Task | CLI score | GUI score | Output | Termination | Turns | Output tokens |
+|---|---:|---:|---|---|---:|---:|
+| freecad-sketch-062 | 1.0 |  | 通过 | finish | 5 | 1121 |

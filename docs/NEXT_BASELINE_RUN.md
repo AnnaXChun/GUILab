@@ -1,5 +1,7 @@
 # 下一步：真实 baseline smoke
 
+> 2026-10-21 用户停止 GUI，后续执行以 [CLI_RESEARCH_PLAN](CLI_RESEARCH_PLAN.md)和 [CLI_FOCUS_20261021](../reports/CLI_FOCUS_20261021.md)为准。以下 GUI/ACTC 计划保留为历史，不再执行。
+
 2026-10-20最新：6次[定位校准](../reports/GUI_GROUNDING_20261020.md)已完成，原定pixels组0/3、normalized1000组2/3。pixels原始值事后按1000换算为3/3，支持服务坐标约定不一致；没有执行点击，不算GUI任务成功。GUI控制探针已通过，最近25次GUI任务仍strict=0、无文件。累计232次生成，159项项目测试通过，全部VM停止。本轮6次已用完，下一步在新截图验证显式单位，再限步复测GUI，见[NEXT_ACTC_VALIDATION](NEXT_ACTC_VALIDATION.md)。下方201次和首批15次均为历史，不得据此再次开启同一批次。
 
 2026-10-19历史：CLI单题已通过官方评分和122B原生审计，GUI仍无成功文件，真实pairs=0；当时累计含探针201次生成。全部结果与预算见[单题续跑](../reports/BASELINE_SUCCESS_SMOKE.md)、[sh复用](../reports/UPSTREAM_SH_REUSE.md)和handoff.json。下方是**已经执行的首批历史计划**，不得重开或忽略后续证据。

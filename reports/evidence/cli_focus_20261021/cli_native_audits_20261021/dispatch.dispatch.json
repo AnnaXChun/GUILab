@@ -1,0 +1,43 @@
+{
+  "classification": "at_most_once_dispatch_audit",
+  "payload_policy": "digest only; action text remains in original agent trajectory",
+  "source_sha256": "e51fa58ab78dc3c47050d6c896631bf18673bba6520f0dc219e7d8fcf4b61085",
+  "rows": [
+    {
+      "execution_id": "cli-native-audit-000",
+      "state": "complete",
+      "payload_sha256": "b7c54d569f84183587e1384e565d869925f263b6b10d2641b81f17933eac7fc1",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-001",
+      "state": "complete",
+      "payload_sha256": "63ca3490c6ffa135c4970eb993efe543c8c39b807b6ef072e651e1a96bda29c0",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-002",
+      "state": "complete",
+      "payload_sha256": "64b28429a0cfa26db0e6cebccfd7a39e063012bc0406e134a8b056b1bd917b0a",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-003",
+      "state": "complete",
+      "payload_sha256": "09e6e5401a0ce93f0ea4a756d25b58d85a82ed3535bcbfb7f54ef0d2865bfd49",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-004",
+      "state": "complete",
+      "payload_sha256": "274b473ee833ae9531002d70a84e2ceca99c636cb1bb9ef9d6e760a2fe4cebaf",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-005",
+      "state": "complete",
+      "payload_sha256": "0f4cbe4ccffa65763a666ce4567b7000f376b62a5cb21618ac787e1282e4889f",
+      "payload_excluded": true
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "task_id": "freecad-part-076",
+  "category": "part",
+  "scores": {
+    "stored": 0.0,
+    "recomputed": 0.0
+  },
+  "completion": {
+    "available": true,
+    "steps": 8,
+    "termination": "max_steps_or_stopped",
+    "claimed_done": false,
+    "error_type": null
+  },
+  "artifacts": [
+    {
+      "vm_path": "/home/user/Unnamed.FCStd",
+      "host_path": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_part076/freecad-part-076/freecad-part-076.FCStd",
+      "saved": true,
+      "valid": {
+        "ok": true,
+        "archive_ok": true,
+        "document_xml_present": true,
+        "document_xml_parses": true,
+        "size_bytes": 6343
+      }
+    }
+  ],
+  "stages": {
+    "completion": {
+      "ok": false,
+      "termination": "max_steps_or_stopped",
+      "claimed_done": false,
+      "steps": 8,
+      "error_type": null,
+      "available": true
+    },
+    "file_saved": {
+      "ok": true
+    },
+    "file_valid": {
+      "ok": true
+    },
+    "precondition": {
+      "required": false,
+      "applicable": false,
+      "checkable": false,
+      "ok": null
+    },
+    "structure": {
+      "ok": true,
+      "n_checks": 8,
+      "units": [
+        {
+          "ok": true,
+          "n_checks": 4,
+          "checks": {
+            "required_type_contains": true,
+            "object_0": true,
+            "object_1": true,
+            "object_2": true
+          }
+        },
+        {
+          "ok": true,
+          "n_checks": 4,
+          "checks": {
+            "entity_counts": true,
+            "entities_matched": true,
+            "extra_geometry": true,
+            "units": true
+          }
+        }
+      ]
+    },
+    "geometry": {
+      "ok": true,
+      "n_checks": 1,
+      "units": [
+        {
+          "ok": true,
+          "n_checks": 1,
+          "checks": {
+            "profiles": true
+          },
+          "profile_reports": []
+        }
+      ]
+    },
+    "process": {
+      "ok": false,
+      "n_checks": 6,
+      "units": [
+        {
+          "ok": false,
+          "n_checks": 3,
+          "checks": {
+            "object_0": false,
+            "object_1": true,
+            "object_2": true
+          }
+        },
+        {
+          "ok": true,
+          "n_checks": 3,
+          "checks": {
+            "relations": true,
+            "fully_constrained": true,
+            "solver_status": true
+          },
+          "failed_relations": []
+        }
+      ]
+    },
+    "strict": {
+      "ok": false,
+      "score": 0.0
+    }
+  },
+  "units": [
+    {
+      "kind": "model",
+      "structure": {
+        "ok": true,
+        "n_checks": 4,
+        "checks": {
+          "required_type_contains": true,
+          "object_0": true,
+          "object_1": true,
+          "object_2": true
+        }
+      },
+      "geometry": {
+        "ok": true,
+        "n_checks": 0,
+        "checks": {},
+        "continuous": {}
+      },
+      "process": {
+        "ok": false,
+        "n_checks": 3,
+        "checks": {
+          "object_0": false,
+          "object_1": true,
+          "object_2": true
+        }
+      },
+      "strict_score": 0.0,
+      "document": {
+        "object_count": 11,
+        "shape_object_count": 3,
+        "types": [
+          "PartDesign::Body",
+          "App::Origin",
+          "App::Line",
+          "App::Line",
+          "App::Line",
+          "App::Plane",
+          "App::Plane",
+          "App::Plane",
+          "App::Point",
+          "Sketcher::SketchObject",
+          "PartDesign::Pad"
+        ],
+        "labels": [
+          "Body",
+          "Origin",
+          "X-axis",
+          "Y-axis",
+          "Z-axis",
+          "XY-plane",
+          "XZ-plane",
+          "YZ-plane",
+          "Origin001",
+          "Sketch",
+          "Pad"
+        ],
+        "total_volume": 0.0,
+        "total_area": 0.0,
+        "bbox": null
+      },
+      "func": "check_freecad_part_model"
+    },
+    {
+      "kind": "sketch",
+      "structure": {
+        "ok": true,
+        "n_checks": 4,
+        "checks": {
+          "entity_counts": true,
+          "entities_matched": true,
+          "extra_geometry": true,
+          "units": true
+        }
+      },
+      "geometry": {
+        "ok": true,
+        "n_checks": 1,
+        "checks": {
+          "profiles": true
+        },
+        "profile_reports": []
+      },
+      "process": {
+        "ok": true,
+        "n_checks": 3,
+        "checks": {
+          "relations": true,
+          "fully_constrained": true,
+          "solver_status": true
+        },
+        "failed_relations": []
+      },
+      "strict_score": 1.0,
+      "document": {
+        "geometry_count": 1,
+        "constraint_count": 0,
+        "fully_constrained": false,
+        "solver_status": {
+          "fully_constrained": false,
+          "underconstrained": true,
+          "overconstrained": false
+        },
+        "unit_system": "Standard (mm, kg, s, °)"
+      },
+      "func": "check_freecad_sketch"
+    }
+  ],
+  "failure_class": "shape_correct_process_wrong"
+}

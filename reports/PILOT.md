@@ -1,5 +1,9 @@
 # Pilot 结果
 
+2026-10-21 用户停止 GUI，当前 pilot 改为 CLI 开发样本采集、原生审计和清洗，见 [CLI_FOCUS_20261021](CLI_FOCUS_20261021.md)。本轮不是 ACTC pair，也不构造 GUI/API credit。旧真实 pair N=0 保留；CLI 的公开奖励与后续 RL 效果分开报告。
+
+本轮两题 1 通过、1 失败，17 次生成、6517 输出 tokens；6 个模型文件独立原生审计，最终 11 个 CLI episode 导出 3 条 SFT。全部任务位于开发/训练侧，无独立效果估计。真实训练未启动，采集/清洗 GO、训练 NO-GO。
+
 最新[定位校准](GUI_GROUNDING_20261020.md)新增6条真实模型预测，累计232次生成。预定pixels组0/3、normalized1000组2/3；事后单位解释独立记录。该轮无VM、无点击、无S0配对、无credit或preference标签。真实pair与差异重测仍为0，P3/P4继续NO-GO；正式TypedWorker同步和same-S0后移，优先在新截图验证坐标配置。159项项目测试通过不改变pilot验收状态。
 
 下方为此前各轮记录。

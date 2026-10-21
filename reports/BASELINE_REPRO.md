@@ -1,5 +1,7 @@
 # 基线复现
 
+2026-10-21 CLI 小批已完成，GUI 停止。sketch-063 官方 strict=1.0、原生编辑通过；measure-003 官方 strict=0.0、measurement 类型或结构错误。两题正常 finish，原 prompt/tools/parser 和离线评分保持 pinned 实现。详细任务、17 次请求成本、6 文件审计及 3 条训练候选见 [CLI_FOCUS_20261021](CLI_FOCUS_20261021.md)。不同模型、重复任务和预算的历史结果不合并成正式成功率；原论文 GUI-only 全量复现仍未完成。
+
 最新6次[固定截图定位校准](GUI_GROUNDING_20261020.md)是独立诊断，未执行GUI或CADWorld episode。pixels组0/3、normalized1000组2/3；pixels原始返回事后按1000换算为3/3，仅支持单位假设，不改原定成绩。累计232次生成，baseline仍为11个attempt、9个有效评估episode、2个不同任务，GUI任务strict仍0且无成功文件。CLI122B单题官方1.0与原生审计PASS保留；论文GUI-only与扩展协议均未完成复现。159项项目测试通过，完整请求、响应与用量已归档。
 
 下方保留此前各轮结果及当时累计数。

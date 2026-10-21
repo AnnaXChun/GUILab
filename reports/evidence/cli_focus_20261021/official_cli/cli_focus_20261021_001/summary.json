@@ -1,0 +1,32 @@
+[
+  {
+    "task_id": "freecad-sketch-063",
+    "category": "sketch",
+    "score": 1.0,
+    "termination": "finish",
+    "turns": 8,
+    "terminal_calls": 7,
+    "output_tokens": 2436,
+    "agent_seconds": 133.774,
+    "task_seconds": 154.462,
+    "artifact_paths": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_focus_20261021_001/freecad-sketch-063/freecad-sketch-063.FCStd",
+    "error": "",
+    "gui_score": null,
+    "failure_reason": "通过"
+  },
+  {
+    "task_id": "freecad-measure-003",
+    "category": "measure",
+    "score": 0.0,
+    "termination": "finish",
+    "turns": 9,
+    "terminal_calls": 8,
+    "output_tokens": 4081,
+    "agent_seconds": 155.655,
+    "task_seconds": 337.075,
+    "artifact_paths": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_focus_20261021_001/freecad-measure-003/freecad-measure-003.FCStd",
+    "error": "",
+    "gui_score": null,
+    "failure_reason": "FCStd 有效，但 measurement native object 类型/结构错误"
+  }
+]

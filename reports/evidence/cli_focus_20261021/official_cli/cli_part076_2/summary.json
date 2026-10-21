@@ -1,0 +1,17 @@
+[
+  {
+    "task_id": "freecad-part-076",
+    "category": "part",
+    "score": 0.0,
+    "termination": "turn_limit",
+    "turns": 16,
+    "terminal_calls": 16,
+    "output_tokens": 6296,
+    "agent_seconds": 375.328,
+    "task_seconds": 397.008,
+    "artifact_paths": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_part076_2/freecad-part-076/freecad-part-076.FCStd",
+    "error": "",
+    "gui_score": null,
+    "failure_reason": "几何正确，但 native construction process/关系错误"
+  }
+]

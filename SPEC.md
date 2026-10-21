@@ -1,5 +1,7 @@
 # CADWorld Counterfactual Tool Credit：Codex 可执行技术规格（v1.0）
 
+> 2026-10-21 用户已将目标改为 CLI 数据清洗、RL 和成功率改进，并停止 GUI。当前执行计划见 [CLI_RESEARCH_PLAN](docs/CLI_RESEARCH_PLAN.md)。本 SPEC 保留为原 ACTC 方案的历史记录，GUI/API 配对结果不改判为完成。
+
 **日期**：2026-10-15  
 **目标**：先复现 CADWorld 官方 GUI 与已有 CLI 基线，再建立同状态、同子目标的 GUI / FreeCAD Typed API 反事实执行实验，为学习 Tool Router 提供可验证的偏好监督。  
 **交付边界**：本轮实现 P0–P3，包括代码、测试、少量 smoke 运行与实验报告；**不启动大规模付费推理、完整 200 题评测、模型训练或 RL**。P4–P5 只交付可运行接口与实验方案，等待前置验收。  

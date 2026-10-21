@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "task_id": "freecad-measure-003",
+  "category": "measure",
+  "scores": {
+    "stored": 0.0,
+    "recomputed": 0.0
+  },
+  "completion": {
+    "available": true,
+    "steps": 10,
+    "termination": "done",
+    "claimed_done": true,
+    "error_type": null
+  },
+  "artifacts": [
+    {
+      "vm_path": "/home/user/Unnamed.FCStd",
+      "host_path": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_focus_20261021_001/freecad-measure-003/freecad-measure-003.FCStd",
+      "saved": true,
+      "valid": {
+        "ok": true,
+        "archive_ok": true,
+        "document_xml_present": true,
+        "document_xml_parses": true,
+        "size_bytes": 2052
+      }
+    }
+  ],
+  "stages": {
+    "completion": {
+      "ok": true,
+      "termination": "done",
+      "claimed_done": true,
+      "steps": 10,
+      "error_type": null,
+      "available": true
+    },
+    "file_saved": {
+      "ok": true
+    },
+    "file_valid": {
+      "ok": true
+    },
+    "precondition": {
+      "required": false,
+      "applicable": false,
+      "checkable": false,
+      "ok": null
+    },
+    "structure": {
+      "ok": false,
+      "n_checks": 4,
+      "units": [
+        {
+          "ok": false,
+          "n_checks": 4,
+          "checks": {
+            "required_label_contains": false,
+            "required_type_contains": false,
+            "object_0": false,
+            "object_1": false
+          }
+        }
+      ]
+    },
+    "geometry": {
+      "ok": false,
+      "n_checks": 1,
+      "units": [
+        {
+          "ok": false,
+          "n_checks": 1,
+          "checks": {
+            "object_0": false
+          },
+          "continuous": {}
+        }
+      ]
+    },
+    "process": {
+      "ok": false,
+      "n_checks": 2,
+      "units": [
+        {
+          "ok": false,
+          "n_checks": 2,
+          "checks": {
+            "object_0": false,
+            "object_1": false
+          }
+        }
+      ]
+    },
+    "strict": {
+      "ok": false,
+      "score": 0.0
+    }
+  },
+  "units": [
+    {
+      "kind": "model",
+      "structure": {
+        "ok": false,
+        "n_checks": 4,
+        "checks": {
+          "required_label_contains": false,
+          "required_type_contains": false,
+          "object_0": false,
+          "object_1": false
+        }
+      },
+      "geometry": {
+        "ok": false,
+        "n_checks": 1,
+        "checks": {
+          "object_0": false
+        },
+        "continuous": {}
+      },
+      "process": {
+        "ok": false,
+        "n_checks": 2,
+        "checks": {
+          "object_0": false,
+          "object_1": false
+        }
+      },
+      "strict_score": 0.0,
+      "document": {
+        "object_count": 1,
+        "shape_object_count": 1,
+        "types": [
+          "Part::Feature"
+        ],
+        "labels": [
+          "Torus_R5_r2_SA_394.7842"
+        ],
+        "total_volume": 0.0,
+        "total_area": 0.0,
+        "bbox": null
+      },
+      "func": "check_freecad_measure_model"
+    }
+  ],
+  "failure_class": "wrong_document_structure"
+}

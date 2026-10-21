@@ -34,8 +34,14 @@
     "previous_ledgers_unchanged": true,
     "ledger_sha256": "5ff6a7b59318c116df48857eb33bcf1222234d0b00c98a7be8f14fa74594f9ac",
     "prespecified_visible_bounds": {
-      "pixels": {"hits": 0, "attempts": 3},
-      "normalized1000": {"hits": 2, "attempts": 3}
+      "pixels": {
+        "hits": 0,
+        "attempts": 3
+      },
+      "normalized1000": {
+        "hits": 2,
+        "attempts": 3
+      }
     },
     "posthoc_normalized_reinterpretation": {
       "hits": 3,
@@ -71,7 +77,7 @@
     "model": "qwen3.5-122b-a10b",
     "protocol": "exploratory_tcg_normalized1000_v2",
     "status": "EVALUATED",
-    "strict": 0.0,
+    "strict": 0,
     "failure_class": "no_output_file",
     "model_calls": 25,
     "input_tokens": 88918,
@@ -89,7 +95,16 @@
     "status": "PASS_OFFLINE_PROTOCOL_REPLAY",
     "network_requests": 0,
     "model_generation_calls": 0,
-    "wire_image_sizes": [[1920, 1080], [1920, 1080]],
+    "wire_image_sizes": [
+      [
+        1920,
+        1080
+      ],
+      [
+        1920,
+        1080
+      ]
+    ],
     "wire_png_byte_identical": true,
     "pixel_execution_matches_recorded_action": true,
     "online_history_unit": "normalized1000",
@@ -258,8 +273,8 @@
         "coordinate_history_protocol": null,
         "task_id": "freecad-sketch-061",
         "status": "EVALUATED",
-        "strict": 1.0,
-        "upstream_raw_score": 1.0,
+        "strict": 1,
+        "upstream_raw_score": 1,
         "model_calls": 14,
         "known_output_tokens": 5823,
         "artifact_count": 1
@@ -271,8 +286,8 @@
         "coordinate_history_protocol": 1,
         "task_id": "freecad-sketch-061",
         "status": "EVALUATED",
-        "strict": 0.0,
-        "upstream_raw_score": 0.0,
+        "strict": 0,
+        "upstream_raw_score": 0,
         "model_calls": 25,
         "known_output_tokens": 2393,
         "artifact_count": 0
@@ -285,7 +300,7 @@
         "task_id": "freecad-sketch-061",
         "status": "RUN_ERROR",
         "strict": null,
-        "upstream_raw_score": 0.0,
+        "upstream_raw_score": 0,
         "model_calls": 50,
         "known_output_tokens": 4343,
         "artifact_count": 0
@@ -310,8 +325,8 @@
         "coordinate_history_protocol": 2,
         "task_id": "freecad-sketch-061",
         "status": "EVALUATED",
-        "strict": 0.0,
-        "upstream_raw_score": 0.0,
+        "strict": 0,
+        "upstream_raw_score": 0,
         "model_calls": 44,
         "known_output_tokens": 3558,
         "artifact_count": 0
@@ -323,8 +338,8 @@
         "coordinate_history_protocol": 2,
         "task_id": "freecad-sketch-061",
         "status": "EVALUATED",
-        "strict": 0.0,
-        "upstream_raw_score": 0.0,
+        "strict": 0,
+        "upstream_raw_score": 0,
         "model_calls": 35,
         "known_output_tokens": 3405,
         "artifact_count": 0
@@ -336,8 +351,8 @@
         "coordinate_history_protocol": null,
         "task_id": "freecad-sketch-061",
         "status": "EVALUATED",
-        "strict": 1.0,
-        "upstream_raw_score": 1.0,
+        "strict": 1,
+        "upstream_raw_score": 1,
         "model_calls": 8,
         "known_output_tokens": 1869,
         "artifact_count": 1
@@ -432,7 +447,10 @@
     "paper_reproduction": "NO-GO",
     "more_generation_in_completed_batches": "NO-GO",
     "actc_pairs": "NO-GO",
-    "P4_training": "NO-GO"
+    "P4_training": "NO-GO",
+    "cli_collection": "GO",
+    "cli_data_cleaning": "GO",
+    "cli_sft_rl_training": "NO-GO"
   },
   "baseline_continuation_authorized": true,
   "baseline_history_first_batch": {
@@ -442,5 +460,10 @@
     "remaining_output_cap": 14503,
     "requests": 15,
     "unknown_output_reservation": 128
-  }
+  },
+  "active_research_protocol": "CLI_ONLY",
+  "current_focus": "CLI数据清洗、公开奖励、后续SFT/RL与成功率改进；GUI停止",
+  "latest_cli_status": "reports/CLI_STATUS.json",
+  "latest_cli_report": "reports/CLI_FOCUS_20261021.md",
+  "current_next_step": "按docs/CLI_RESEARCH_PLAN.md冻结更多任务家族与等预算对照，扩充原生质量奖励；不恢复GUI，不重开已完成批次。"
 }

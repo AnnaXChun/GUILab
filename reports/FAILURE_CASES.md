@@ -1,5 +1,9 @@
 # 失败案例
 
+2026-10-21 当前优先分析 CLI，见 [CLI_FOCUS_20261021](CLI_FOCUS_20261021.md)。part-077 最新一次实际只有 8 轮，末轮为 `Sketcher.Horizontal` 不存在的 AttributeError，且未保存文件；此前“已跑 24 轮”的表述撤回。part-076 后续终端输出已出现原生对象无有效 shape，不能只用此前“几何正确、过程错误”的摘要解释全部重试。CLI 可以创建原生参数化对象，任务错误记录为 failure；只有真实环境或凭证问题才使用 BLOCKED_BY_ENV / BLOCKED_BY_CREDENTIALS。
+
+新增独立审计确认 `cli_part076_2` 的 Sketch、Pad 有 Invalid，solver 失败，参数编辑 FAIL，原文件 SHA 未改。本轮 measure-003 保存了 Part::Feature，面积数值正确、文件可重开，但官方 measurement 类型或结构未通过，原生参数编辑 UNAVAILABLE。它不进入 SFT，公开目标因表示覆盖不足返回 null。历史 Qwen3.6 官方通过但原生 Invalid 的文件继续排除；8 条训练排除记录均保留，未补文件或修改原分数。
+
 最新[定位校准](GUI_GROUNDING_20261020.md)保留6条完整响应。官方pixels要求下OK、Cancel、XY分别返回`(483,607)`、`(547,609)`、`(470,473)`，全部偏左、0/3落入预定标注；事后按1000换算为3/3，支持当前服务单位不匹配。显式normalized组Cancel执行点应为`(1048,645)`，比按钮上边界高2像素，其余两个命中也靠近边界，尚不足以稳定操作GUI。该轮未执行点击，不把事后解释当修复结果，不将历史长任务的每次失败都归为同一个原因。
 
 校准首次离线测试出现1 failed/25 passed，原因是空history断言误判了协议后缀中的说明文字；修正断言后26项相关测试和159项全量测试通过，未改模型prompt。旧GUI任务失败和原生Invalid文件均保留，以下为各轮记录。

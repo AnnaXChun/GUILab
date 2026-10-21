@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "origin": "live",
+  "split_policy": "All previously inspected or debugged tasks are development/train only; no held-out claim.",
+  "runs": [
+    "results/official_cli/baseline_cli_sketch_002",
+    "results/official_cli/success_cli_qwen36_001",
+    "results/official_cli/success_cli_qwen122_001",
+    "results/official_cli/cli_smoke_061",
+    "results/official_cli/cli_062",
+    "results/official_cli/cli_part076",
+    "results/official_cli/cli_part076_2",
+    "results/official_cli/cli_part077",
+    "results/official_cli/cli_077_v2",
+    "results/official_cli/cli_focus_20261021_001"
+  ],
+  "live_usage": {
+    "baseline_cli_sketch_002": "results/baseline_cli_sketch_002/provider_usage.jsonl",
+    "success_cli_qwen36_001": "results/success_cli_qwen36_001/provider_usage.jsonl",
+    "success_cli_qwen122_001": "results/success_cli_qwen122_001/provider_usage.jsonl",
+    "cli_smoke_061": "results/cli_smoke_061/provider_usage.jsonl",
+    "cli_062": "results/cli_062/provider_usage.jsonl",
+    "cli_part076": "results/cli_part076/provider_usage.jsonl",
+    "cli_part076_2": "results/cli_part076_2/provider_usage.jsonl",
+    "cli_part077": "results/cli_part077/provider_usage.jsonl",
+    "cli_077_v2": "results/cli_077_v2/provider_usage.jsonl",
+    "cli_focus_20261021_001": "results/cli_focus_20261021_001/provider_usage.jsonl"
+  },
+  "task_splits": {
+    "freecad-sketch-061": "train",
+    "freecad-sketch-062": "train",
+    "freecad-sketch-063": "train",
+    "freecad-part-076": "train",
+    "freecad-part-077": "train",
+    "freecad-measure-003": "train"
+  },
+  "task_families": {
+    "freecad-sketch-061": "single_line",
+    "freecad-sketch-063": "single_line",
+    "freecad-sketch-062": "single_circle",
+    "freecad-part-076": "simple_part_solid",
+    "freecad-part-077": "simple_part_solid",
+    "freecad-measure-003": "torus_measurement"
+  },
+  "native_audits": [
+    "results/native_artifact_audit_qwen36_003/audit_review.json",
+    "results/native_artifact_audit_cli_qwen122_001/audit.json",
+    "results/cli_native_audits_20261021/artifact_000/audit.json",
+    "results/cli_native_audits_20261021/artifact_001/audit.json",
+    "results/cli_native_audits_20261021/artifact_002/audit.json",
+    "results/cli_native_audits_20261021/artifact_003/audit.json",
+    "results/cli_native_audits_20261021/artifact_004/audit.json",
+    "results/cli_native_audits_20261021/artifact_005/audit.json"
+  ]
+}

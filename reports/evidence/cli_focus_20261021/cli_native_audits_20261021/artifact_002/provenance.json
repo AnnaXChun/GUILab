@@ -1,0 +1,6 @@
+{
+  "source_artifact": "results/official_cli/success_cli_qwen122_001/freecad-sketch-061/freecad-sketch-061.FCStd",
+  "artifact_sha256": "ebc2e5cbcee52bc49f0b081d67d5d3979a6e10f7205795d6945771403f47d673",
+  "artifact_bytes": 2924,
+  "command_sha256": "64b28429a0cfa26db0e6cebccfd7a39e063012bc0406e134a8b056b1bd917b0a"
+}

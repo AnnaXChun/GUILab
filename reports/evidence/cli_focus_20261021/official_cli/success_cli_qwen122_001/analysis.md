@@ -1,0 +1,5 @@
+# CLI evaluation summary
+
+| Task | CLI score | GUI score | Output | Termination | Turns | Output tokens |
+|---|---:|---:|---|---|---:|---:|
+| freecad-sketch-061 | 1.0 |  | 通过 | turn_limit | 8 | 1869 |
