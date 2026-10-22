@@ -112,6 +112,11 @@ def run_native(plan, config, runtime, output, *, worker_path=WORKER, evaluator=e
             on_prepared(plan, prepared)
             save(output/"plan.json", plan)
         for pair in plan["pairs"]:
+            if pair.get('candidate_interface_rejected'):
+                row=evaluator(pair,{},{});rows.append(row)
+                with (output/'trace.jsonl').open('a') as stream:
+                    stream.write(json.dumps({'event':'candidate_pair_rejected','id':pair['id'],'quality':None})+'\n')
+                continue
             for branch in ("A", "B"):
                 name = pair["id"]+"-"+branch
                 try:

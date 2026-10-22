@@ -161,9 +161,13 @@ def main(argv=None):
                 model_config={'model':config['candidate_generation']['model'],'temperature':.7,
                     'max_model_calls':4,'max_model_output_tokens':8192,'per_call_tokens':2048,
                     'model_timeout_seconds':110,'model_wall_seconds':600}
-                collect_candidates(pair,seed,directory,model_config,
-                    code_parser=lambda text:candidate_code(text,body_name=b['body'],sketch_name=b['sketch']),
-                    message_builder=messages,budget_path=output/'model_batch.sqlite')
+                try:
+                    collect_candidates(pair,seed,directory,model_config,
+                        code_parser=lambda text:candidate_code(text,body_name=b['body'],sketch_name=b['sketch']),
+                        message_builder=messages,budget_path=output/'model_batch.sqlite')
+                except RuntimeError as exc:
+                    if str(exc).startswith('CANDIDATE_REJECTED:'):pair['candidate_interface_rejected']=True
+                    else:raise
                 freeze(pair)
     native_config={'port':15067,'vnc_port':15967,'worker_timeout_seconds':110,'max_wall_seconds':1800}
     rows=run_native(plan,native_config,runtime,output,worker_path=worker,evaluator=evaluate,on_pair_completed=on_pair)
