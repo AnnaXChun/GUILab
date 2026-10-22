@@ -1,5 +1,7 @@
 # 失败案例
 
+XML 诊断中零项 geometry 检查与 `total_volume=0` 均需单独解释：前者没有执行该阶段的规则检查，后者可能来自不支持 Pad/Pocket BRep 的属性推算。它们不能代替 FreeCAD 内核的形状与参数响应检查，也不能据此将原生质量设为 0。官方 strict=0 的结果与独立原生质量分别保留。
+
 全量 `part-018` 在 controller 启动 deadline 前没有完成 ready 检查，模型请求为 0，VM 已关闭，没有重试。该题记运行错误和未知质量，与 `part-011` 的非幂等执行不确定分开；错误日志脱敏后归档，缺少官方 result.json 的事实保留。
 
 全量 CLI 的 `freecad-part-011` 有 4 次完整模型用量记录，controller 账本为 3 complete/1 uncertain；执行不确定触发该题后续请求停止，独立 VM 已关闭。原始 pipeline_error/score=0 保留，严格质量为 unknown，未重放该题；模型服务无错误记录，其他题继续。`part-001/002/015/016` 的上游失败标签含“几何正确”，但实际 n_checks=0，只能判为未检查几何；原生构造过程或关系失败另记。`part-014/017` 20 轮后没有文件，`part-013` 官方 score=1，几何检查 3 项通过。全量尚在运行，这些是进度快照。

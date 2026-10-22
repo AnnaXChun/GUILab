@@ -1,0 +1,20 @@
+{
+  "classification": "synthetic_schema_probe_only",
+  "files": [
+    {
+      "path": "cli_pinned_link_schema_probe_20261022_001/error.json",
+      "source": "results/cli_pinned_link_schema_probe_20261022_001/error.json",
+      "sha256": "44f088ac8e46f6e6f011bee9e18740e120cb9d0fd5162fbdb742132238ff08b5"
+    },
+    {
+      "path": "cli_pinned_link_schema_probe_20261022_002/probe.json",
+      "source": "results/cli_pinned_link_schema_probe_20261022_002/probe.json",
+      "sha256": "e082730af04f56e79ef4c53cd71a61a52ac7502baba5800b07b826d3939910a6"
+    }
+  ],
+  "model_requests": 0,
+  "official_task_rules_read": false,
+  "benchmark_scores_changed": false,
+  "case_attribution": "not established",
+  "pinned_commit": "e5d0ebab8bd28da6e98c68c61db05747d1647f7b"
+}

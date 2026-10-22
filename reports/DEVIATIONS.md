@@ -1,5 +1,9 @@
 # 差异与适配
 
+零 API 的 [Link schema 探针](evidence/cli_link_schema_20261022/INDEX.json) 使用自定义公开名称 `ReferenceSketch`，验证 pinned getter 将普通 Link 解析为字符串、无子元素的 LinkSub 解析为字典；与同一字符串条件比较的结果为 true/false。它只证明通用 schema 区别，没有读取任务规则、没有将某题失败归因于此，也没有规范化链接或改分。首次独立加载 metric 缺少相对包上下文的 ImportError 保留；在独立命名空间补齐包上下文后探针成功。
+
+上游 `getters/freecad.py::parse_part_fcstd` 从 XML 属性推算支持的 primitive/scale 形状，并不通过 FreeCAD 内核读取 BRep。Pad/Pocket 等不在 primitive 推算分支，文档摘要中的 `total_volume=0` 不能当作原生 `Shape.Volume=0`。原评分保持，真实重开和参数响应另做原生核验；该解析边界属于结果解释，不放宽评分或修改模型输入。
+
 上游 `CLI/run_cli.py::describe_result` 在 geometry.ok=True 时使用“几何正确”，没有检查 n_checks 是否为零。本项目只修正离线分析口径：零项标为 UNCHECKED，原始失败标签、分数和任务轨迹保留，不改官方 evaluator。活动进程继续使用原报告函数，结束后由 `summarize_cli_full_sweep.py` 离线刷新完整表格。
 
 全量汇总的结果路径补齐 pinned runner 的 `CLI/results/actc/<run_id>/<task_id>` 层级。活动调度进程沿用旧读取代码，仅增加指向原结果的本地只读 symlink 兼容；没有修改轨迹、官方分数或已启动任务。离线表格改为从同一 JSON 快照渲染，区分仍待完成与全部尝试后含未知评分；运行错误保留完整分母。

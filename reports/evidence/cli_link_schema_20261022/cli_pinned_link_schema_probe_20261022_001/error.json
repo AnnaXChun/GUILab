@@ -1,0 +1,1 @@
+{"classification": "static_probe_import_failure", "error": "ImportError", "reason": "relative freecad_cam import without package context", "model_calls": 0}

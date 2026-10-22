@@ -1,0 +1,14 @@
+{
+  "classification": "synthetic_pinned_link_schema_probe",
+  "plain_link": "ReferenceSketch",
+  "unqualified_link_sub": {
+    "value": "ReferenceSketch",
+    "subs": []
+  },
+  "plain_link_matches_public_scalar": true,
+  "unqualified_link_sub_matches_public_scalar": false,
+  "model_calls": 0,
+  "official_task_rules_read": false,
+  "benchmark_scores_changed": false,
+  "case_attribution": "not established; this probe demonstrates a generic schema distinction only"
+}
