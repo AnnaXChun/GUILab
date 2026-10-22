@@ -182,7 +182,9 @@ def main(argv=None):
                     if str(exc).startswith('CANDIDATE_REJECTED:'):pair['candidate_interface_rejected']=True
                     else:raise
                 freeze(pair)
-    native_config={'port':15067,'vnc_port':15967,'worker_timeout_seconds':110,'max_wall_seconds':1800}
+    native_config={'port':15067,'vnc_port':15967,
+        'worker_timeout_seconds':config['budget'].get('worker_timeout_seconds',110),
+        'max_wall_seconds':config['budget']['max_batch_wall_seconds']}
     rows=run_native(plan,native_config,runtime,output,worker_path=worker,evaluator=evaluate,on_pair_completed=on_pair)
     if file_sha(disk)!=disk_sha:raise RuntimeError('source stopped disk changed')
     unchanged=all(file_sha(ROOT/name)==value for name,value in before.items())

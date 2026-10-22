@@ -25,3 +25,24 @@ def test_no_double_mutation(tmp_path,failure):
     assert len(transport.calls)==1
     assert transport.calls[0][0][0].endswith('/execute')
     bridge.close()
+
+
+def test_long_trusted_worker_deadline_requires_explicit_ceiling(tmp_path):
+    class Complete:
+        def __init__(self):self.calls=[]
+        def post(self,*args,**kwargs):
+            self.calls.append(kwargs)
+            response=requests.Response();response.status_code=200
+            response._content=b'{"returncode":0,"status":"success"}'
+            return response
+    transport=Complete()
+    bridge=TerminalBridge('http://vm:5000','http://vm:5000',tmp_path/'default.sqlite',transport)
+    with pytest.raises(ValueError):bridge.execute(['python3','worker.py'],execution_id='x',timeout=180)
+    assert not transport.calls
+    bridge.close()
+    bridge=TerminalBridge('http://vm:5000','http://vm:5000',tmp_path/'explicit.sqlite',transport,max_execution_seconds=190)
+    bridge.execute(['python3','worker.py'],execution_id='x',timeout=190)
+    assert transport.calls[0]['timeout']==200
+    with pytest.raises(ExecutionUncertain):bridge.execute(['python3','worker.py'],execution_id='x',timeout=190)
+    assert len(transport.calls)==1
+    bridge.close()

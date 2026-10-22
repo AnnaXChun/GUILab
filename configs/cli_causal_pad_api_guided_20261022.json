@@ -82,7 +82,8 @@
     "max_native_dispatches": 9,
     "max_parameter_probes_per_artifact": 6,
     "request_timeout_seconds": 110,
-    "max_batch_wall_seconds": 1800,
+    "max_batch_wall_seconds": 2700,
+    "worker_timeout_seconds": 180,
     "stop_after_frozen_batch_even_if_all_tie": true
   },
   "record_policy": {

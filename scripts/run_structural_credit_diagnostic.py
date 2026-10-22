@@ -84,7 +84,7 @@ def run_native(plan, config, runtime, output, *, worker_path=WORKER, evaluator=e
         with (output/"trace.jsonl").open("a") as stream:
             stream.write(json.dumps({"event": "dispatch", "id": name, "command_sha256": digest(cmd)})+"\n")
         try:
-            response = bridge.execute(cmd, execution_id=name, timeout=120)
+            response = bridge.execute(cmd, execution_id=name, timeout=max(120,config['worker_timeout_seconds']+10))
             save(directory/"response.json", response)
             observation = parse_response(response)
             if "artifact_base64" in observation:
@@ -106,7 +106,8 @@ def run_native(plan, config, runtime, output, *, worker_path=WORKER, evaluator=e
     try:
         provider = NativeQemuProvider(**runtime)
         provider.start_emulator(runtime["base"])
-        bridge = TerminalBridge(provider.endpoint, provider.endpoint, output/"dispatch.sqlite", session=session)
+        bridge = TerminalBridge(provider.endpoint, provider.endpoint, output/"dispatch.sqlite", session=session,
+            max_execution_seconds=max(120,config['worker_timeout_seconds']+10))
         prepared = dispatch({"mode": "prepare", "root": guest+"/seeds", "pairs": plan["pairs"]}, "prepare")
         if on_prepared is not None:
             on_prepared(plan, prepared)

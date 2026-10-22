@@ -9,17 +9,20 @@ class ExecutionUncertain(RuntimeError):
     pass
 
 class TerminalBridge:
-    def __init__(self, endpoint, allowed_endpoint, ledger, session=None):
+    def __init__(self, endpoint, allowed_endpoint, ledger, session=None, *, max_execution_seconds=120):
         if endpoint != allowed_endpoint or urlparse(endpoint).scheme != "http" or urlparse(endpoint).path not in ("", "/"):
             raise ValueError("endpoint must be the registered VM controller, without a route")
         self.endpoint = endpoint.rstrip("/")
+        if type(max_execution_seconds) is not int or not 1 <= max_execution_seconds <= 300:
+            raise ValueError('invalid explicit trusted execution ceiling')
+        self.max_execution_seconds = max_execution_seconds
         self.session = session or requests.Session()
         # Durable at-most-once dispatch. Network failure cannot prove whether execution occurred.
         self.db = sqlite3.connect(ledger)
         self.db.execute("CREATE TABLE IF NOT EXISTS dispatch (key TEXT PRIMARY KEY, payload TEXT NOT NULL, state TEXT NOT NULL)")
         self.db.commit()
     def execute(self, command: list[str], *, execution_id: str, timeout=120):
-        if not 0 < timeout <= 120 or not isinstance(command, list) or not all(isinstance(x, str) for x in command):
+        if not 0 < timeout <= self.max_execution_seconds or not isinstance(command, list) or not all(isinstance(x, str) for x in command):
             raise ValueError("invalid trusted command/timeout")
         payload = json.dumps(command)
         try:

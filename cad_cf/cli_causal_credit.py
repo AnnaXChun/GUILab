@@ -74,6 +74,9 @@ def candidate_code(text, *, body_name='Body', sketch_name='Sketch'):
                     raise ValueError('property outside output contract')
             elif f=='pad.setExpression':
                 if len(node.args)!=2 or ast.literal_eval(node.args[0])!='Length':raise ValueError('expression outside Pad length')
+            elif f=='App.Units.Quantity':
+                if len(node.args)!=1 or node.keywords or not isinstance(node.args[0],ast.Constant) or type(node.args[0].value) not in (str,int,float):
+                    raise ValueError('only literal native Quantity construction permitted')
             elif f not in ('Part.Face','Part.makeCylinder','App.Vector','face.extrude','float','len'):
                 raise ValueError('call outside reviewed construction scope: '+f)
     return code
@@ -95,6 +98,7 @@ For a PartDesign::Pad, Profile is the supplied sketch relation. Assign the sketc
 to pad.Profile. BaseFeature is the previous solid relation, not a sketch/profile field.
 Base and Mode are not the Pad profile interface. Length is a native length property;
 plain numeric assignments are millimetres, and unit strings such as 'n mm' are supported.
+The native App.Units.Quantity constructor also accepts a literal unit string.
 Use the exact public names and requested length from the input. No replacement document,
 sketch or task solution is supplied by these notes. The original construction scope remains.
 """

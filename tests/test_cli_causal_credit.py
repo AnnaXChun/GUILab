@@ -135,3 +135,18 @@ def test_generic_pad_guidance_preserves_old_messages_and_excludes_answers():
     assert 'fixed continuation' not in guided[0]['content'].lower()
     from scripts.probe_pad_api import worker_source
     compile(worker_source(),'independent_pad_api_worker','exec')
+
+
+def test_verified_quantity_is_supported_without_changing_historical_rejections():
+    from pathlib import Path
+    quantity=PAD.replace('pad.Length=12',"pad.Length=App.Units.Quantity('12 mm')")
+    assert candidate_code(json.dumps({'code':quantity}))==quantity
+    root=Path(__file__).resolve().parents[1]/'reports/evidence/cli_causal_pilot_20261022'
+    for run,task in [('cli_causal_model_native_20261022_002','freecad-part-001'),
+                     ('cli_causal_remaining_sampling_20261022_001','freecad-part-014')]:
+        folder=root/run/(task+'-model')
+        statuses={r['branch']:r for r in json.loads((folder/'candidate_status.json').read_text())}
+        for branch in ('A','B'):
+            raw=json.loads((folder/('model_response_'+branch+'.json')).read_text())
+            with pytest.raises(ValueError) as caught:candidate_code(raw['choices'][0]['message']['content'])
+            assert str(caught.value)==statuses[branch]['message']
