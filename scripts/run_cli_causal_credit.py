@@ -126,7 +126,7 @@ def main(argv=None):
     try:os.kill(stopped['pid'],0)
     except ProcessLookupError:pass
     else:raise RuntimeError('source PID remains active')
-    disk_sha=file_sha(disk);runtime=json.loads(a.runtime_config.read_text());runtime.update(base=str(disk),base_sha=disk_sha)
+    disk_sha=file_sha(disk);runtime=json.loads(a.runtime_config.read_text());runtime.update(base=str(disk),base_sha=disk_sha,controller_only=True)
     save(output/'source_capture_reference.json',{'run':str(source.relative_to(ROOT)),'disk_sha256':disk_sha,
          'captured_states_sha256':file_sha(source/'captured_states.json'),'stopped':True})
     before=existing_ledgers();save(output/'previous_ledgers.json',before)

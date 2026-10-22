@@ -97,3 +97,15 @@ def test_model_input_excludes_trusted_results_and_worker_compiles():
     assert 'PRIVATE_VERIFIER_OUTPUT' not in json.dumps(msg)
     assert msg==messages(p,seed)
     compile(restored_worker({'seeds':{}}),'worker','exec')
+
+
+def test_controller_only_readiness_never_bypasses_gui_protocol(tmp_path):
+    from types import SimpleNamespace
+    from cad_cf.qemu_runtime import readiness_response,NativeQemuProvider
+    platform=SimpleNamespace(status_code=200,text='Linux',content=b'Linux')
+    png=SimpleNamespace(status_code=200,text='',content=b'\x89PNG\r\n\x1a\nrest')
+    assert readiness_response(platform,controller_only=True) and not readiness_response(platform)
+    assert readiness_response(png) and not readiness_response(png,controller_only=True)
+    with pytest.raises(ValueError,match='explicit headless'):
+        NativeQemuProvider('base','sha','firmware','sha',tmp_path/'vm',gui_ready=True,controller_only=True)
+    assert not (tmp_path/'vm').exists()

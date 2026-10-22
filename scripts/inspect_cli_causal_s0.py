@@ -37,7 +37,8 @@ def main():
     save(output/'deployed_worker_sha.json',{'sha256':hashlib.sha256(source.encode()).hexdigest(),'binary_payload_excluded_from_archive':True})
     native_config={'port':15066,'vnc_port':15966,'worker_timeout_seconds':110,'max_wall_seconds':900}
     plan={'pairs':[],'isolation':'independent supplied/S0/trusted/probe copies; shared VM','model_calls':0}
-    run_native(plan,native_config,json.loads(a.runtime_config.read_text()),output,worker_path=worker)
+    runtime=json.loads(a.runtime_config.read_text());runtime['controller_only']=True
+    run_native(plan,native_config,runtime,output,worker_path=worker)
     path=output/'prepare/observation.json'
     if path.exists():
         prepared=json.loads(path.read_text());save(output/'captured_states.json',prepared)

@@ -18,6 +18,11 @@ def sha256(path):
     return h.hexdigest()
 
 
+def readiness_response(response, *, controller_only=False):
+    if response.status_code!=200:return False
+    return response.text.strip()=='Linux' if controller_only else response.content.startswith(b'\x89PNG\r\n\x1a\n')
+
+
 def qmp(path, command, arguments=None):
     """One QMP command; async notifications do not count as command replies."""
     with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as conn:
@@ -46,10 +51,13 @@ class NativeQemuProvider:
     """One fresh overlay per boot. Reset discards a VM, never replays actions."""
     def __init__(self, base, base_sha, firmware, firmware_sha, output, *, port=15010,
                  vnc_port=15910, visible=False, boot_seconds=600, gui_ready=False, gui_seconds=300,gui_warmup=False,
-                 gui_alive_timeout_ms=None,gui_idle_seconds=None):
+                 gui_alive_timeout_ms=None,gui_idle_seconds=None,controller_only=False):
         from .gui_startup import validate_alive_timeout
         from .gui_idle import validate_idle_seconds
         self.gui_idle_seconds=validate_idle_seconds(gui_idle_seconds)
+        if not isinstance(controller_only,bool) or (controller_only and gui_ready):
+            raise ValueError('controller-only readiness is an explicit headless CLI protocol')
+        self.controller_only=controller_only
         if self.gui_idle_seconds is not None and not gui_ready:raise ValueError('GUI idle monitor requires GUI bootstrap')
         self.gui_idle=None
         self.gui_alive_timeout_ms=validate_alive_timeout(gui_alive_timeout_ms)
@@ -114,12 +122,13 @@ class NativeQemuProvider:
                 if self.process.poll() is not None: raise RuntimeError('QEMU exited before readiness; inspect qemu.log')
                 event = {'elapsed_seconds':round(time.monotonic()-started,3)}
                 try:
-                    response = requests.get(self.endpoint+'/screenshot',timeout=(2,8))
+                    response = requests.get(self.endpoint+('/platform' if self.controller_only else '/screenshot'),timeout=(2,8))
                 except requests.RequestException as exc: event['error_type']=type(exc).__name__
                 else:
                     event['status_code'] = response.status_code
-                    if response.status_code==200 and response.content.startswith(b'\x89PNG\r\n\x1a\n'):
-                        (self.current/'ready.png').write_bytes(response.content)
+                    if readiness_response(response,controller_only=self.controller_only):
+                        if self.controller_only:event['readiness_protocol']='controller_platform'
+                        else:(self.current/'ready.png').write_bytes(response.content)
                         self._save('ready.json',event)
                         if self.gui_ready:
                             from .gui_startup import prepare_gui
