@@ -1,5 +1,11 @@
 # 差异与适配
 
+2026-10-23 新增全量 CLI 离线分析：逐题原始官方分数、执行不确定、启动失败与原生文件审计分别记录。审计按原路径和 SHA 绑定，拒绝其他批次文件、变更后的文件及重复审计；原生重开、对象状态、通用编辑探针采用独立计数。该后处理不修改正在运行的模型 prompt、账本或官方评分规则。
+
+全量已保存的装配文件中有约 1.8 MB 文件，原审计的 base64 命令参数会超过 Linux 单参数长度限制。新审计复用 pinned `desktop_env/server/main.py` 的 `/setup/upload`，一次 multipart 上传后检查 SHA，再以独占标记执行原生 worker。上传及执行不确定均保留并停止审计，不重发。三项上传单测通过；真实传输与全量原生审计等待当前两路 CLI 批次停止后执行。
+
+完整回归中的旧公共输入 dry-run 测试原先读取项目里的全部模型账本，会与正在运行的全量批次冲突。该单测改用独立冻结账本，保留生产账本保护；修正后 292 项项目测试、7 项 upstream CLI 测试通过。MCP 索引正常，两个历史有限大数 JSON 的局部解析告警保留，索引可用不代替测试或真实原生验收。
+
 零 API 的 [Link schema 探针](evidence/cli_link_schema_20261022/INDEX.json) 使用自定义公开名称 `ReferenceSketch`，验证 pinned getter 将普通 Link 解析为字符串、无子元素的 LinkSub 解析为字典；与同一字符串条件比较的结果为 true/false。它只证明通用 schema 区别，没有读取任务规则、没有将某题失败归因于此，也没有规范化链接或改分。首次独立加载 metric 缺少相对包上下文的 ImportError 保留；在独立命名空间补齐包上下文后探针成功。
 
 上游 `getters/freecad.py::parse_part_fcstd` 从 XML 属性推算支持的 primitive/scale 形状，并不通过 FreeCAD 内核读取 BRep。Pad/Pocket 等不在 primitive 推算分支，文档摘要中的 `total_volume=0` 不能当作原生 `Shape.Volume=0`。原评分保持，真实重开和参数响应另做原生核验；该解析边界属于结果解释，不放宽评分或修改模型输入。

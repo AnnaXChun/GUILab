@@ -13,7 +13,7 @@ from cad_cf.terminal_bridge import TerminalBridge,ExecutionUncertain
 from scripts.audit_native_artifact import WORKER,review_audit,normalize_native_numbers
 
 
-def audit_command(data, guest):
+def audit_command(data, guest, *, uploaded=False):
     worker=WORKER.replace('__ARTIFACT_PATH__',repr(guest+'/artifact.FCStd'))
     source='''import base64,os,pathlib,subprocess
 root=pathlib.Path(__ROOT__)
@@ -30,8 +30,34 @@ proc=subprocess.run(['python3','-c',__WORKER__],env=env,capture_output=True,text
 print(proc.stdout);print(proc.stderr)
 raise SystemExit(proc.returncode)
 '''.replace('__ROOT__',repr(guest)).replace('__WORKER__',repr(worker))
-    deployed=source.replace('__PAYLOAD__',repr(base64.b64encode(data).decode()))
+    if uploaded:
+        source=source.replace("if root.exists():raise RuntimeError('audit replay refused')\nroot.mkdir();(root/'artifact.FCStd').write_bytes(base64.b64decode(__PAYLOAD__))",
+            "if not (root/'artifact.FCStd').is_file():raise RuntimeError('uploaded artifact missing')\n"
+            "with (root/'audit.started').open('x'):pass\n"
+            "import hashlib\n"
+            "if hashlib.sha256((root/'artifact.FCStd').read_bytes()).hexdigest()!=__DIGEST__:raise RuntimeError('uploaded artifact SHA mismatch')")
+        deployed=source.replace('__DIGEST__',repr(hashlib.sha256(data).hexdigest()))
+    else:
+        deployed=source.replace('__PAYLOAD__',repr(base64.b64encode(data).decode()))
     return ['/usr/bin/python3','-c',deployed],worker
+
+
+def upload_artifact(session, endpoint, guest, data, directory):
+    """One multipart upload; unknown writes stop this audit instead of being resent."""
+    path=directory/'upload.json'
+    record={'guest_path':guest+'/artifact.FCStd','bytes':len(data),
+        'sha256':hashlib.sha256(data).hexdigest(),'state':'dispatched','automatic_retry':False}
+    with path.open('x') as stream:stream.write(json.dumps(record,indent=2)+'\n')
+    try:
+        response=session.post(endpoint+'/setup/upload',data={'file_path':record['guest_path']},
+            files={'file_data':('artifact.FCStd',data,'application/octet-stream')},timeout=120,allow_redirects=False)
+        if response.status_code!=200:raise RuntimeError('upload HTTP status '+str(response.status_code))
+    except Exception as exc:
+        record.update(state='uncertain',error=type(exc).__name__)
+        path.write_text(json.dumps(record,indent=2)+'\n')
+        raise ExecutionUncertain('artifact upload outcome unknown; no replay') from exc
+    record.update(state='complete',http_status=response.status_code)
+    path.write_text(json.dumps(record,indent=2)+'\n')
 
 
 def main():
@@ -56,10 +82,12 @@ def main():
             data=path.read_bytes();digest=hashlib.sha256(data).hexdigest();directory=a.output/f'artifact_{index:03d}'
             directory.mkdir()
             session.directory=directory
-            cmd,worker=audit_command(data,f'/home/user/.cli_native_audit_{index:03d}')
+            guest=f'/home/user/.cli_native_audit_{hashlib.sha256(str(a.output.resolve()).encode()).hexdigest()[:12]}_{index:03d}'
+            cmd,worker=audit_command(data,guest,uploaded=True)
             (directory/'worker.py').write_text(worker)
             (directory/'provenance.json').write_text(json.dumps({'source_artifact':str(path),'artifact_sha256':digest,'artifact_bytes':len(data),'command_sha256':hashlib.sha256(json.dumps(cmd).encode()).hexdigest()},indent=2)+'\n')
             try:
+                upload_artifact(session,provider.endpoint,guest,data,directory)
                 result=bridge.execute(cmd,execution_id=f'cli-native-audit-{index:03d}',timeout=120)
                 (directory/'response.json').write_text(json.dumps(result,indent=2)+'\n')
                 raw=next(json.loads(line) for line in result['output'].splitlines() if line.startswith('{"classification":'))

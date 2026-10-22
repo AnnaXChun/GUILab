@@ -22,18 +22,31 @@ ENABLE_PAID_RUNS=1 .venv/bin/python scripts/run_cli_full_sweep.py \
   --output results/cli_full_sweep_native_20261022_001
 ```
 
-全量已经启动时，不再运行上面的启动命令。先检查 `results/cli_full_sweep_native_20261022_001/coordinator.json`、`jobs.json` 和 `summary.json`。结束后先离线刷新，再汇总和归档：
+全量已经启动时，不再运行上面的启动命令。先检查 `results/cli_full_sweep_native_20261022_001/coordinator.json`、`jobs.json` 和 `summary.json`。结束后先离线刷新，再原生审计、分析和归档：
 
 ```bash
 ENABLE_PAID_RUNS=0 .venv/bin/python scripts/summarize_cli_full_sweep.py \
   --run results/cli_full_sweep_native_20261022_001
+ENABLE_PAID_RUNS=0 .venv/bin/python scripts/audit_cli_full_sweep.py \
+  --run results/cli_full_sweep_native_20261022_001 \
+  --runtime-config results/cli_focus_runtime_20261021.json \
+  --output results/cli_full_native_audit_20261023_001
+ENABLE_PAID_RUNS=0 .venv/bin/python scripts/analyze_cli_full_sweep.py \
+  --run results/cli_full_sweep_native_20261022_001 \
+  --native-audit results/cli_full_native_audit_20261023_001
 ENABLE_PAID_RUNS=0 .venv/bin/python scripts/summarize_cli_experiments.py \
   --candidate-run results/cli_causal_pad_guided_native_20261022_002 \
   --full-run results/cli_full_sweep_native_20261022_001 \
+  --analysis results/cli_full_sweep_native_20261022_001/FINAL_ANALYSIS.json \
   --output reports/CLI_EXPERIMENTS_20261022.md
 ENABLE_PAID_RUNS=0 .venv/bin/python scripts/archive_cli_full_sweep.py \
   --run results/cli_full_sweep_native_20261022_001 \
+  --native-audit results/cli_full_native_audit_20261023_001 \
   --output reports/evidence/cli_full_sweep_native_20261022_001
 ```
 
 归档工具拒绝仍活着的调度进程或 RUNNING 任务；停止的部分批次保留 200 题分母、pending 和未知质量。原生文件只导出 SHA 与大小，保存、静态结构和真实重开分别记录。运行错误不自动重试。全量 runtime 模块与参考提交的完整性核对记录在 `source_manifest_posthoc.json`，它是在批次启动后生成的核对，不是运行前源码冻结证据。
+
+原生审计默认覆盖所有已保存文件，优先检查官方评分通过的文件。一台无模型 VM 中每个文件使用独立临时目录，先通过 pinned `/setup/upload` 一次上传，再核对 SHA、执行重算和关闭重开；独占标记防止重复执行。这样避免大文件经 base64 进入命令参数后超过 Linux 单参数长度限制。上传或执行不确定会停止审计，未审计的文件继续记为 unknown，不重开同一审计目录。原生重开、对象状态和通用编辑探针分别统计，探针失败不等于整个文件不可编辑。
+
+上述路径是本机实际批次的来源记录；远程没有原 `.FCStd` 与已核验 runtime 时只能读取公开证据，不凭 SHA 构造原生文件。完整分析保留每题原始官方分数、执行状态、失败类型和文件审计绑定，不生成训练标签。

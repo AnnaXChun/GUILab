@@ -1,4 +1,5 @@
 import json
+import hashlib
 from types import SimpleNamespace
 
 import pytest
@@ -80,7 +81,12 @@ def test_json_strict_and_native_source_compiles():
     compile(captured_worker(),'worker','exec')
 
 
-def test_public_input_no_evaluator_and_dry_run(tmp_path):
+def test_public_input_no_evaluator_and_dry_run(tmp_path, monkeypatch):
+    # This input-contract test uses a frozen fixture, independent of live experiment ledgers.
+    ledger=tmp_path/'historical-model-ledger.sqlite'
+    ledger.write_bytes(b'frozen-test-ledger')
+    monkeypatch.setattr('scripts.run_cli_model_pair.existing_ledgers',
+        lambda:{str(ledger):hashlib.sha256(ledger.read_bytes()).hexdigest()})
     p=template_pair('public task')
     messages=model_messages(p,seed())
     assert not any(k in json.dumps(messages) for k in ('reference_solution','offline_evaluation','probe_results','golden'))

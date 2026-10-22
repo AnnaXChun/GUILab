@@ -12,7 +12,7 @@ sys.path.insert(0, str(ROOT))
 from scripts.archive_baseline_evidence import digest, export
 
 
-def archive(root, run, output, private=()):
+def archive(root, run, output, private=(), native_audits=()):
     root, run = Path(root).resolve(), Path(run).resolve()
     run.relative_to(root / 'results')
     coordinator = run / 'coordinator.json'
@@ -33,6 +33,18 @@ def archive(root, run, output, private=()):
     for name in ('stopped.json', 'source_manifest_posthoc.json'):
         if (run / name).exists():
             sources.append(run / name)
+    for name in ('FINAL_ANALYSIS.json', 'FINAL_ANALYSIS.md', 'analyzed_episodes.jsonl', 'analyzed_episodes.csv'):
+        if (run / name).exists():
+            sources.append(run / name)
+    for directory in map(Path, native_audits):
+        directory.resolve().relative_to(root / 'results')
+        sources.append(directory / 'summary.json')
+        manifest=Path(str(directory)+'.manifest.json')
+        if manifest.exists():sources.append(manifest)
+        for name in ('provenance.json', 'upload.json', 'audit_raw.json', 'audit.json', 'error.json', 'worker.py'):
+            sources.extend(sorted(directory.glob('artifact_*/' + name)))
+        for name in ('controller_dispatch.sqlite', 'ready.json', 'stopped.json'):
+            sources.extend(sorted(directory.glob('runtime/vm_*/' + name)))
     artifacts = []
     missing = []
     for job in jobs:
@@ -59,6 +71,19 @@ def archive(root, run, output, private=()):
             artifacts.append({'task_id': job['task_id'], 'source': str(path.relative_to(root)),
                               'sha256': digest(path.read_bytes()), 'bytes': path.stat().st_size,
                               'native_reopen': 'NOT_AUDITED', 'binary_exported': False})
+    analysis_path = run / 'FINAL_ANALYSIS.json'
+    analysis = json.loads(analysis_path.read_text()) if analysis_path.exists() else None
+    if analysis:
+        if analysis['run'] != run.name or analysis['episodes_sha256'] != digest((run / 'episodes.jsonl').read_bytes()):
+            raise ValueError('native analysis run or snapshot mismatch')
+        analyzed = {item['source']: item for row in analysis['records'] for item in row['artifact_native_audits']}
+        for artifact in artifacts:
+            item = analyzed.get(artifact['source'])
+            if item is None or item['sha256'] != artifact['sha256']:
+                raise ValueError('archived native artifact analysis SHA mismatch')
+            reopened = item.get('native_reopened')
+            artifact.update(native_reopen='PASS' if reopened is True else ('FAIL' if reopened is False else item['status']),
+                native_state_valid=item.get('native_state_valid'), parameter_probe=item.get('parameter_probe'))
     record = export(root, sources, output, private)
     summary = json.loads((run / 'summary.json').read_text())
     record.update(classification='sanitized_cli_full_sweep_evidence', run=run.name,
@@ -66,6 +91,7 @@ def archive(root, run, output, private=()):
                   completed_task_jsonl_complete=not missing,
                   complete_agent_jsonl=not missing and all(j['status'] != 'PENDING' for j in jobs),
                   artifacts=artifacts,
+                  native_audit_summary=analysis['overall_native'] if analysis else None,
                   evaluation_rules_exported=False, model_requests_added=0)
     (Path(output) / 'INDEX.json').write_text(json.dumps(record, indent=2, allow_nan=False) + '\n')
     return record
@@ -75,13 +101,14 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--run', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--native-audit', type=Path, action='append', default=[])
     args = parser.parse_args()
     from dotenv import dotenv_values
     settings = {**dotenv_values(ROOT / '.env'), **os.environ}
     endpoint = settings.get('CADWORLD_API_BASE_URL') or ''
     private = [settings.get(name) or '' for name in ('CADWORLD_API_KEY', 'OPENAI_API_KEY', 'GEMINI_API_KEY')]
     private.extend((endpoint, urlsplit(endpoint).hostname or ''))
-    record = archive(ROOT, args.run, args.output, private)
+    record = archive(ROOT, args.run, args.output, private, args.native_audit)
     print(json.dumps({'files': len(record['files']), 'artifacts_hashed': len(record['artifacts']),
                       'complete_agent_jsonl': record['complete_agent_jsonl'], 'overall': record['overall'],
                       'model_requests_added': 0}))
