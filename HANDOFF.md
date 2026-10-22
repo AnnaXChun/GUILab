@@ -1,5 +1,7 @@
 # GUILab 交接
 
+**2026-10-22 模型候选已跑通，全量 CLI 正在执行**：入口为 `reports/CLI_MODEL_CANDIDATE_SUCCESS_20261022.md`、`reports/CLI_MODEL_CANDIDATE_STATUS_20261022.json` 与 `docs/MODEL_CANDIDATE_AND_FULL_CLI_20261022.md`。part-014 两原响应在同 S0 各执行一次，保存重开和每分支六探针 Q=1/1、credit=0，独立审计 PASS；part-001 A 静态拒绝、B READY 未执行，原文与失败保留。本批 4 请求、11976 输入/1975 输出 tokens，额度结束。用户已明确授权全部 200 题 CLI；全量 run 为 `cli_full_sweep_native_20261022_001`，20 轮/单次8192/单题16384、两路并行，当前结果与表格在本机 results。未完成不报告最终率；不要重复启动已运行的 job。下方旧原生零执行与四次拒绝记录保留为历史。
+
 **2026-10-22 最新结果**：先读 [多步 CLI pilot](reports/CLI_CAUSAL_PILOT_20261022.md)、`reports/CLI_CAUSAL_STATUS.json` 和 [协议](docs/CLI_CAUSAL_CREDIT_PILOT.md)。新 runner 已实现；part-001/014 原生 S0、固定后续代码、保存重开和每题六探针通过，两对不相关 AuditNote 控制 Q=1/1、credit=0。4 次独立模型请求已完成，11268 输入/2491 输出 tokens，四条原响应均静态接口拒绝，天然候选执行为 0、有效自然 pair 为 0、credit=null。接口拒绝的代码没有实际运行，原生质量 unknown。
 
 全部六台 VM 已停止，累计 /execute 10 次，9 complete/1 uncertain；272 项项目测试和 7 项上游 CLI 测试通过。完整模型/执行 JSONL、实际观察、拒绝、源码和预算审计见 `reports/evidence/cli_causal_pilot_20261022/INDEX.json`。旧八份账本不变；本批补采沿用原四次账本，剩余调用为 0。预检 004 通过一次独立有账本的手工 controller 准备完成，自动截图启动仍超时，不能报告为旧入口一键成功。

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "prepare",
+    "payload_sha256": "9f9b2eeb191abbcc665c3065184bcf4351d42e17024113b0176038bc8be5aa50",
+    "state": "complete"
+  },
+  {
+    "id": "freecad-part-001-note-control-A",
+    "payload_sha256": "63f500a7d337f991897d1d6edb955b984b081d4374077597f7353bb9de2d7372",
+    "state": "complete"
+  },
+  {
+    "id": "freecad-part-001-note-control-B",
+    "payload_sha256": "faa9cf69e53e6b63dd216472991dc110b1f613625bb3e0e07a8df94bd109854b",
+    "state": "complete"
+  },
+  {
+    "id": "freecad-part-014-note-control-A",
+    "payload_sha256": "e6738d92241d10e478b6f388db24d8c4bcd8a548d3a3f505a593b98b3fee6369",
+    "state": "complete"
+  },
+  {
+    "id": "freecad-part-014-note-control-B",
+    "payload_sha256": "2929543a518d8fe6be4c9e139c2faecb9e500ca5080cf2ff6dd8a66cc035bf39",
+    "state": "complete"
+  }
+]

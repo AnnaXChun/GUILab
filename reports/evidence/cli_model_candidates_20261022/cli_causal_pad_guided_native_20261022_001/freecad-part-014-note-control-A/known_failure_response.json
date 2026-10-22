@@ -1,0 +1,7 @@
+{
+  "source_sha256": "e6490e1e2e26c39cd8b48a7f6f31845c38d5fb4db11ad5ccdb2e9150c5b57ef6",
+  "returncode": 1,
+  "known_worker_failure": true,
+  "output_summary": "subprocess.TimeoutExpired: worker command timed out after 110 seconds; full original error retained locally",
+  "summary_created_postrun": true
+}

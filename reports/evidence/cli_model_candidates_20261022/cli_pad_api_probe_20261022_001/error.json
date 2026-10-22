@@ -1,0 +1,5 @@
+{
+  "status": "DIAGNOSTIC_ERROR",
+  "reason": "RuntimeError",
+  "message": "VM command failed: "
+}

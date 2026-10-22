@@ -1,0 +1,26 @@
+{
+  "freecad-part-001": {
+    "first_sample": "A",
+    "initial_checker_selection": null,
+    "response_checker_selection": null,
+    "equal_generation_budget_best_of_2": null,
+    "relative_credit_selection": null,
+    "shuffled_credit_selection": null,
+    "selected_q": null,
+    "method_advantage_over_same_terminal_checker": "NOT_ESTABLISHED",
+    "selection_scope": "offline reuse of identical two samples and executed observations; tie chooses A",
+    "training_effect": "NOT_MEASURED"
+  },
+  "freecad-part-014": {
+    "first_sample": "A",
+    "initial_checker_selection": "A",
+    "response_checker_selection": "A",
+    "equal_generation_budget_best_of_2": "A",
+    "relative_credit_selection": "A",
+    "shuffled_credit_selection": "B",
+    "selected_q": 1,
+    "method_advantage_over_same_terminal_checker": "NOT_ESTABLISHED",
+    "selection_scope": "offline reuse of identical two samples and executed observations; tie chooses A",
+    "training_effect": "NOT_MEASURED"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "status": "INCOMPLETE_OR_INVALID",
+  "model_calls": 4,
+  "known_input_tokens": 11976,
+  "known_output_tokens": 1975,
+  "total_input_tokens": 11976,
+  "total_output_tokens": 1975,
+  "total_cost_usd": null,
+  "controls": 2,
+  "valid_model_pairs": 1,
+  "credits": {
+    "freecad-part-001-note-control": 0,
+    "freecad-part-014-note-control": 0,
+    "freecad-part-001": null,
+    "freecad-part-014": 0
+  },
+  "old_ledgers_unchanged": true,
+  "official_episodes_added": 0,
+  "training_rows": 0,
+  "method_advantage": "NOT_ESTABLISHED"
+}

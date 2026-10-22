@@ -1,0 +1,7 @@
+{
+  "event": "error",
+  "id": "freecad-part-014-note-control-A",
+  "quality": null,
+  "reason": "RuntimeError",
+  "message": "VM command failed: Traceback (most recent call last):\n  File \"<string>\", line 10, in <module>\n  File \"/usr/lib/python3.12/subprocess.py\", line 550, in run\n    stdout, stderr = process.communicate(input, timeout=timeout)"
+}

@@ -55,13 +55,18 @@ def audit(run):
         assert all(x['candidate_reexecuted'] is False and x['suffix_reexecuted'] is False for x in obs['probes'])
         if pair.get('control'):assert obs['reopened']['audit_note_text']=='control-'+branch
         native.append({'pair':pair['id'],'branch':branch,'artifact_sha256':obs['artifact_sha256'],'types':types})
-    rows=[evaluate(pair,observations[(pair['id'],'A')],observations[(pair['id'],'B')]) for pair in pairs.values()
-          if (pair['id'],'A') in observations and (pair['id'],'B') in observations]
+    rows=[]
+    for pair in pairs.values():
+        if pair.get('candidate_interface_rejected'):
+            assert not any((pair['id'],branch) in observations for branch in ('A','B'))
+            rows.append(evaluate(pair,{},{}))
+        elif (pair['id'],'A') in observations and (pair['id'],'B') in observations:
+            rows.append(evaluate(pair,observations[(pair['id'],'A')],observations[(pair['id'],'B')]))
     assert rows==json.loads((run/'pairs.json').read_text())
     proof=json.loads((run/'pre_request_control_proof.json').read_text())
     assert proof['model_calls_so_far']==0
     assert set(proof['completed_controls'])=={r['id'] for r in rows if r['classification']=='synthetic_irrelevant_block_control' and r['pair_valid'] and r['credit']==0}
-    requests=0;token_in=0;token_out=0
+    requests=0;token_in=0;token_out=0;accepted=0;rejected=[]
     for name,pair in pairs.items():
         if pair.get('control'):continue
         folder=run/(name+'-model');seed=json.loads((folder/'captured_s0.json').read_text())
@@ -70,10 +75,18 @@ def audit(run):
         trace=list(map(json.loads,(folder/'model_trace.jsonl').read_text().splitlines()))
         calls=[r for r in trace if r['event']=='request'];assert len(calls)==2
         assert calls[0]['request']['messages']==calls[1]['request']['messages']==inputs['messages']
+        statuses={r['branch']:r for r in json.loads((folder/'candidate_status.json').read_text())}
         for b in ('A','B'):
             response=json.loads((folder/('model_response_'+b+'.json')).read_text())
             bound=seed['spec']['binding']
-            assert candidate_code(response['choices'][0]['message']['content'],body_name=bound['body'],sketch_name=bound['sketch'])==pair['candidates'][b]
+            try:code=candidate_code(response['choices'][0]['message']['content'],body_name=bound['body'],sketch_name=bound['sketch'])
+            except ValueError as exc:
+                assert statuses[b]['status']=='CANDIDATE_REJECTED' and str(exc)==statuses[b]['message']
+                assert pair.get('candidate_interface_rejected') and not pair['candidates'][b]
+                rejected.append({'pair':name,'branch':b,'reason':str(exc),'native_quality':None})
+            else:
+                assert code==pair['candidates'][b] and statuses[b]['status']=='READY'
+                accepted+=1
             requests+=1;token_in+=response['usage']['prompt_tokens'];token_out+=response['usage']['completion_tokens']
     with sqlite3.connect('file:'+str((run/'model_batch.sqlite').resolve())+'?mode=ro',uri=True) as db:
         assert list(db.execute('SELECT calls,tokens FROM limits'))==[(4,8192)]
@@ -84,6 +97,7 @@ def audit(run):
     assert json.loads((run/'previous_ledger_audit.json').read_text())['all_unchanged']
     assert json.loads((run/'execution_summary.json').read_text())['vm_stopped']
     return {'status':'PASS_NATIVE_MODEL_PROTOCOL_AUDIT','model_requests':requests,'input_tokens':token_in,'output_tokens':token_out,
+            'interface_accepted_candidates':accepted,'static_rejections':rejected,
             'native_dispatches':len(dispatch),'uncertain':0,'controls_passed_before_model_requests':True,
             'valid_model_pairs':sum(r['pair_valid'] for r in rows if r['classification']=='model_sourced_cli_causal_block_pair'),
             'credits':{r['id']:r['credit'] for r in rows},'native_artifacts':native,'model_code_original':True,

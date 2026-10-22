@@ -1,0 +1,160 @@
+{
+  "status": "PASS_NATIVE_MODEL_PROTOCOL_AUDIT",
+  "model_requests": 4,
+  "input_tokens": 11976,
+  "output_tokens": 1975,
+  "interface_accepted_candidates": 3,
+  "static_rejections": [
+    {
+      "pair": "freecad-part-001",
+      "branch": "A",
+      "reason": "mutation outside Pad scope",
+      "native_quality": null
+    }
+  ],
+  "native_dispatches": 7,
+  "uncertain": 0,
+  "controls_passed_before_model_requests": true,
+  "valid_model_pairs": 1,
+  "credits": {
+    "freecad-part-001-note-control": 0,
+    "freecad-part-014-note-control": 0,
+    "freecad-part-001": null,
+    "freecad-part-014": 0
+  },
+  "native_artifacts": [
+    {
+      "pair": "freecad-part-001-note-control",
+      "branch": "A",
+      "artifact_sha256": "3da7200db2ec7739ba50584e367a769bf6601472d9411d18fc928c76f61d551f",
+      "types": {
+        "Body": "PartDesign::Body",
+        "Origin": "App::Origin",
+        "X_Axis": "App::Line",
+        "Y_Axis": "App::Line",
+        "Z_Axis": "App::Line",
+        "XY_Plane": "App::Plane",
+        "XZ_Plane": "App::Plane",
+        "YZ_Plane": "App::Plane",
+        "Origin001": "App::Point",
+        "Sketch": "Sketcher::SketchObject",
+        "ProbeGuard": "Part::Box",
+        "AuditNote": "App::FeaturePython",
+        "Pad": "PartDesign::Pad"
+      }
+    },
+    {
+      "pair": "freecad-part-001-note-control",
+      "branch": "B",
+      "artifact_sha256": "3d8f9f9aaf4e5f3c07f3efe67ad510b772d502e01e6b71786cdfd0f768a944ac",
+      "types": {
+        "Body": "PartDesign::Body",
+        "Origin": "App::Origin",
+        "X_Axis": "App::Line",
+        "Y_Axis": "App::Line",
+        "Z_Axis": "App::Line",
+        "XY_Plane": "App::Plane",
+        "XZ_Plane": "App::Plane",
+        "YZ_Plane": "App::Plane",
+        "Origin001": "App::Point",
+        "Sketch": "Sketcher::SketchObject",
+        "ProbeGuard": "Part::Box",
+        "AuditNote": "App::FeaturePython",
+        "Pad": "PartDesign::Pad"
+      }
+    },
+    {
+      "pair": "freecad-part-014-note-control",
+      "branch": "A",
+      "artifact_sha256": "a61fe7058ed68ef0fac64a2f15c29ed60cd667c202e42bcc2ce8111abfe2a192",
+      "types": {
+        "Body": "PartDesign::Body",
+        "Origin": "App::Origin",
+        "X_Axis": "App::Line",
+        "Y_Axis": "App::Line",
+        "Z_Axis": "App::Line",
+        "XY_Plane": "App::Plane",
+        "XZ_Plane": "App::Plane",
+        "YZ_Plane": "App::Plane",
+        "Origin001": "App::Point",
+        "Sketch": "Sketcher::SketchObject",
+        "ProbeGuard": "Part::Box",
+        "AuditNote": "App::FeaturePython",
+        "Pad": "PartDesign::Pad",
+        "PocketSketch": "Sketcher::SketchObject",
+        "Pocket": "PartDesign::Pocket"
+      }
+    },
+    {
+      "pair": "freecad-part-014-note-control",
+      "branch": "B",
+      "artifact_sha256": "4e7ba5e1c9c5adf36070ff220a1c3a830ca58bbd9d9dc7bc7bf1e29415fe3013",
+      "types": {
+        "Body": "PartDesign::Body",
+        "Origin": "App::Origin",
+        "X_Axis": "App::Line",
+        "Y_Axis": "App::Line",
+        "Z_Axis": "App::Line",
+        "XY_Plane": "App::Plane",
+        "XZ_Plane": "App::Plane",
+        "YZ_Plane": "App::Plane",
+        "Origin001": "App::Point",
+        "Sketch": "Sketcher::SketchObject",
+        "ProbeGuard": "Part::Box",
+        "AuditNote": "App::FeaturePython",
+        "Pad": "PartDesign::Pad",
+        "PocketSketch": "Sketcher::SketchObject",
+        "Pocket": "PartDesign::Pocket"
+      }
+    },
+    {
+      "pair": "freecad-part-014",
+      "branch": "A",
+      "artifact_sha256": "58bf99ae818e721a3ff816b984c5d8a572f17a1e4e8e94793f3bff97d267038b",
+      "types": {
+        "Body": "PartDesign::Body",
+        "Origin": "App::Origin",
+        "X_Axis": "App::Line",
+        "Y_Axis": "App::Line",
+        "Z_Axis": "App::Line",
+        "XY_Plane": "App::Plane",
+        "XZ_Plane": "App::Plane",
+        "YZ_Plane": "App::Plane",
+        "Origin001": "App::Point",
+        "Sketch": "Sketcher::SketchObject",
+        "ProbeGuard": "Part::Box",
+        "AuditNote": "App::FeaturePython",
+        "Pad": "PartDesign::Pad",
+        "PocketSketch": "Sketcher::SketchObject",
+        "Pocket": "PartDesign::Pocket"
+      }
+    },
+    {
+      "pair": "freecad-part-014",
+      "branch": "B",
+      "artifact_sha256": "829c33958bc47bc1fa092f1ffc43d744b6ba66d063216782f77665fe511f439b",
+      "types": {
+        "Body": "PartDesign::Body",
+        "Origin": "App::Origin",
+        "X_Axis": "App::Line",
+        "Y_Axis": "App::Line",
+        "Z_Axis": "App::Line",
+        "XY_Plane": "App::Plane",
+        "XZ_Plane": "App::Plane",
+        "YZ_Plane": "App::Plane",
+        "Origin001": "App::Point",
+        "Sketch": "Sketcher::SketchObject",
+        "ProbeGuard": "Part::Box",
+        "AuditNote": "App::FeaturePython",
+        "Pad": "PartDesign::Pad",
+        "PocketSketch": "Sketcher::SketchObject",
+        "Pocket": "PartDesign::Pocket"
+      }
+    }
+  ],
+  "model_code_original": true,
+  "same_s0_and_fixed_suffix_verified": true,
+  "known_worker_failures": [],
+  "training_rows": 0,
+  "vm_stopped": true
+}

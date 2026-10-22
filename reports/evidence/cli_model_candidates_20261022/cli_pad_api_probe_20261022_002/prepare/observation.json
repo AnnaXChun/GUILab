@@ -1,0 +1,56 @@
+{
+  "classification": "generic_pad_api_probe",
+  "generic_pad_api_probe": {
+    "status": "PASS",
+    "checks": {
+      "body.newObject:native_validity": true,
+      "body.newObject:volume": true,
+      "body.newObject:body_membership": true,
+      "body.newObject:length_unit_string": true,
+      "body.newObject:length_quantity": true,
+      "body.newObject:reopened_profile": true,
+      "body.newObject:persisted_parameter_response": true,
+      "body.newObject:source_bytes_unchanged": true,
+      "doc.addObject_then_body.addObject:native_validity": true,
+      "doc.addObject_then_body.addObject:volume": true,
+      "doc.addObject_then_body.addObject:body_membership": true,
+      "doc.addObject_then_body.addObject:length_unit_string": true,
+      "doc.addObject_then_body.addObject:length_quantity": true,
+      "doc.addObject_then_body.addObject:reopened_profile": true,
+      "doc.addObject_then_body.addObject:persisted_parameter_response": true,
+      "doc.addObject_then_body.addObject:source_bytes_unchanged": true
+    },
+    "interfaces": [
+      {
+        "creation": "body.newObject",
+        "type": "PartDesign::Pad",
+        "Profile": "App::PropertyLinkSub",
+        "Length": "App::PropertyLength",
+        "BaseFeature": "App::PropertyLink",
+        "Base_present": false,
+        "Mode_present": false
+      },
+      {
+        "creation": "doc.addObject_then_body.addObject",
+        "type": "PartDesign::Pad",
+        "Profile": "App::PropertyLinkSub",
+        "Length": "App::PropertyLength",
+        "BaseFeature": "App::PropertyLink",
+        "Base_present": false,
+        "Mode_present": false
+      }
+    ],
+    "freecad_version": [
+      "1",
+      "1",
+      "0",
+      "44227 +568 (Git)",
+      "git://github.com/FreeCAD/FreeCAD.git",
+      "2026/03/25 02:17:53",
+      "tag: 1.1.0",
+      "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+    ],
+    "scope": "independent XY circle API probe; no supplied task or evaluator input"
+  },
+  "seeds": {}
+}

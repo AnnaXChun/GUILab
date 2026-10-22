@@ -1,0 +1,8 @@
+{
+  "dispatches": 1,
+  "uncertain": 0,
+  "elapsed_seconds": 260.644,
+  "vm_stopped": true,
+  "model_calls": 0,
+  "isolation": "independent task-free API document; no candidate execution"
+}

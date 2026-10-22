@@ -1,0 +1,6 @@
+{
+  "run": "results/cli_causal_inspect_native_20261022_004",
+  "disk_sha256": "69e092b71d47ae6752bd28c8eb3cc5a7e00c480ae3d99c9c21327e09ea5ad4ca",
+  "captured_states_sha256": "11eba530e0b5c3069dc60c86d83f93e17cad43ecc77ee1d5ac8831c219f0b4f3",
+  "stopped": true
+}

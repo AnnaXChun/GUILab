@@ -1,0 +1,8 @@
+{
+  "dispatches": 7,
+  "uncertain": 0,
+  "elapsed_seconds": 438.178,
+  "vm_stopped": true,
+  "model_calls": 0,
+  "isolation": "independent FreeCAD process/document/cwd and seed copies; shared VM; no strong OS sandbox claim"
+}

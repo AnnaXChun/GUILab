@@ -79,15 +79,20 @@ def write_tables(output, records, config):
         writer = csv.DictWriter(stream, fieldnames=list(records[0]) if records else [])
         writer.writeheader()
         writer.writerows(records)
+    (output / 'EXPERIMENT_TABLE.md').write_text(render_table(summary))
+    return summary
+
+
+def render_table(summary):
+    """Render one summary snapshot so active writes cannot mix table generations."""
     lines = ['# CLI 全量实验表', '',
         '预算、模型和协议固定；全量率仅在完整任务集都有可评估结果后给出。', '',
         '| 类别 | 总题数 | 已评估 | 通过 | 失败 | 运行错误 | 未知分数 | 待完成 | 可核验交付率 | 全量评分通过率 |',
         '| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |']
-    for category, row in [*groups.items(), ('总计', summary['overall'])]:
-        rate = '待完成' if row['strict_pass_rate_full'] is None else f"{row['strict_pass_rate_full']:.2%}"
+    for category, row in [*summary['categories'].items(), ('总计', summary['overall'])]:
+        rate = ('待完成' if row['pending'] else '含未知评分') if row['strict_pass_rate_full'] is None else f"{row['strict_pass_rate_full']:.2%}"
         delivery='待完成' if row['verified_delivery_rate_all_attempted'] is None else f"{row['verified_delivery_rate_all_attempted']:.2%}"
         lines.append(f"| {category} | {row['planned']} | {row['evaluated']} | {row['passed']} | {row['failed']} | {row['run_errors']} | {row['unknown']} | {row['pending']} | {delivery} | {rate} |")
     lines += ['', '可核验交付率使用完整任务分母，运行错误保留在分母；它统计成功交付，不给未知工程质量设 Q=0。',
         '官方分数、原生文件保存和原生可编辑性分别报告。运行错误的原始 score=0 保留，strict 为 unknown。', '']
-    (output / 'EXPERIMENT_TABLE.md').write_text('\n'.join(lines))
-    return summary
+    return '\n'.join(lines)

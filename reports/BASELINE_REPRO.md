@@ -1,5 +1,7 @@
 # 基线复现
 
+2026-10-22 全量 200 题 CLI 已启动，固定 Qwen3.5-122B、原 pinned terminal prompt/图像输入、20 轮及单题 16384 输出 tokens，当前统计在独立 sweep 表格；该预算与官方默认 51200 分开标注。[模型候选两路成功](CLI_MODEL_CANDIDATE_SUCCESS_20261022.md)属于固定后续代码的干预小批，不增加官方 episode。
+
 2026-10-22 [多步 CLI 构造小批](CLI_CAUSAL_PILOT_20261022.md)属于扩展局部干预协议。两题可信原生管线和控制通过，4 条模型响应均在执行前被接口拒绝，新增官方 baseline episode 为 0。官方 terminal CLI 与 GUI-only 的历史成绩保留；本批不更新其成功率，也不把控制成功计作模型任务成功。
 
 最新[CLI 接口修复验证](CLI_API_GUIDED_PAIR_20261021.md)取得两个原生测量候选成功、一个有效 tie 配对，Q=1/1。它使用通用 API 说明和显式 JSON 围栏适配，属于扩展测量协议。官方 terminal CLI 历史成绩、原 prompt baseline 与 GUI-only 结果分别保留；本轮新增官方 episode 为 0。

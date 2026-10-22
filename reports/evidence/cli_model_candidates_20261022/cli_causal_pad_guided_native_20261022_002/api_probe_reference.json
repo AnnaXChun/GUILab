@@ -1,0 +1,6 @@
+{
+  "run": "results/cli_pad_api_probe_20261022_002",
+  "probe_sha256": "ff6014a79cd836d99a4087d163f783f3edff0d6045cb41191a79243ca2dc8041",
+  "deployed_worker_sha256": "11ba4e5c87a58235b4d3e4d84db241ab2f53e89e6a1f61e36304758ec53f7e9e",
+  "verified_before_requests": true
+}

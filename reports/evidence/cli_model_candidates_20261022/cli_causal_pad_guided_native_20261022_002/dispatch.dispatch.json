@@ -1,0 +1,49 @@
+{
+  "classification": "at_most_once_dispatch_audit",
+  "payload_policy": "digest only; action text remains in original agent trajectory",
+  "source_sha256": "0fe0a7e4b9e2c7d6900976c2c0e53c60743ba65221b9707aa32b926e98c40e00",
+  "rows": [
+    {
+      "execution_id": "prepare",
+      "state": "complete",
+      "payload_sha256": "4b7713d44235d649b3048de253efb1c60bf0b1c286fcaddf641342ca8c705f27",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "freecad-part-001-note-control-A",
+      "state": "complete",
+      "payload_sha256": "1c46a3625d7c8c24ce46637f085eb59292530124c84555abfa2cd7f969f27778",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "freecad-part-001-note-control-B",
+      "state": "complete",
+      "payload_sha256": "01cbd47ad570ed7494d362aef8881086558c04604a171db3827f843ec3d185ef",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "freecad-part-014-note-control-A",
+      "state": "complete",
+      "payload_sha256": "f1e86400de54b67061856a1cae2910f5ca7b5ff7295b80ed1955c14de80aa433",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "freecad-part-014-note-control-B",
+      "state": "complete",
+      "payload_sha256": "f615b74e6303f9ed1f437001f36749956d129e82dbba17e0215d01aeaa3d6fed",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "freecad-part-014-A",
+      "state": "complete",
+      "payload_sha256": "e8597047f07ef72a4a3b9ab226c318d54fd251a3256b8864ff030be12e111d37",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "freecad-part-014-B",
+      "state": "complete",
+      "payload_sha256": "8bcf04bce5f0011649050059edaaa729aec685232bb15e13b9e74f2186cb3f46",
+      "payload_excluded": true
+    }
+  ]
+}

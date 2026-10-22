@@ -1,5 +1,9 @@
 # 差异与适配
 
+全量汇总的结果路径补齐 pinned runner 的 `CLI/results/actc/<run_id>/<task_id>` 层级。活动调度进程沿用旧读取代码，仅增加指向原结果的本地只读 symlink 兼容；没有修改轨迹、官方分数或已启动任务。离线表格改为从同一 JSON 快照渲染，区分仍待完成与全部尝试后含未知评分；运行错误保留完整分母。
+
+本轮通用 Pad API 先经原生验证；Quantity 字面量构造最小放行，四条历史拒绝理由保持。可信分支 worker 从 110→180 秒、HTTP 等待 200 秒，默认桥接上限仍 120 秒；旧失败不重发。模型原文不改，固定 C 与 S0 保持。[成功小批](CLI_MODEL_CANDIDATE_SUCCESS_20261022.md)与全量原 terminal CLI 分开；全量采用单题 16384 输出 tokens、20 轮，单次上限沿用 8192，不冒充官方默认 51200 预算复现。
+
 ## 多步原生执行的最小适配
 
 2026-10-22 专用 Sketch/Body/Pad/Pocket runner 已实现，结果见 [多步 pilot](CLI_CAUSAL_PILOT_20261022.md)。Compound 质心读取改为实际 solid，Body 显式 touch/recompute；Pocket 的中心按供应圆心补约束，保存前后 DoF 均为 0，重开检查保留。预检 004 暂停本项目截图等待父进程，在同 VM 通过独立一次 ledger 派发准备，恢复后由原父进程超时清理；此流程单列，未冒充自动入口成功。

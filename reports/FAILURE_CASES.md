@@ -1,5 +1,9 @@
 # 失败案例
 
+全量 CLI 的 `freecad-part-011` 有 4 次完整模型用量记录，controller 账本为 3 complete/1 uncertain；执行不确定触发该题后续请求停止，独立 VM 已关闭。原始 pipeline_error/score=0 保留，严格质量为 unknown，未重放该题；模型服务无错误记录，其他题继续。`part-001/002/015` 的离线诊断为几何正确、原生构造过程或关系失败，`part-014` 20 轮后没有文件，`part-013` 官方 score=1。全量尚在运行，这些是进度快照。
+
+本轮保留 tuple Profile 读取错误和 part-014 控制的 110 秒 worker 超时；两次均发生在模型前。修正类型处理、显式延长可信 worker 到 180 秒后，控制通过并完成模型原生执行。part-001 A 的 BaseFeature=body 仍静态拒绝，未运行；B READY 随整对跳过。详见 [模型候选结果](CLI_MODEL_CANDIDATE_SUCCESS_20261022.md)。
+
 2026-10-22 [多步构造失败](CLI_CAUSAL_PILOT_20261022.md)：Compound 无 CenterOfMass、固定续执行重开不一致、PocketSketch DoF 保存前后不同、截图就绪超时、准备 argv 超限均保留。经最小适配，最终可信原生管线和控制通过。4 条模型原文使用约定外的 Pad 创建/关系字段，被静态接口拒绝；没有执行这些代码，原生质量 unknown。第一题拒绝导致 runner 提前退出，后续仅补采同一已冻结批次的第二题，原四次额度没有重开。完整错误与原文在本批 evidence 中。
 
 最新模型候选的代码采用了通过实测的 PropertiesList 与 FreeCAD 表达式语法，但响应外层带 JSON 围栏，被原严格 JSON 解析器拒绝。原响应、JSONDecodeError 和账本保留；新增显式单围栏封装适配，只去围栏不改代码，恢复同 S0 执行后 A、B 均通过原生检查。额外文字、多个围栏或 Python 围栏仍拒绝。该失败归为响应封装不一致，详见[接口修复](CLI_API_GUIDED_PAIR_20261021.md)。

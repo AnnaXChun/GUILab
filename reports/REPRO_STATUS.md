@@ -1,5 +1,7 @@
 # 复现状态
 
+2026-10-22 [模型候选成功](CLI_MODEL_CANDIDATE_SUCCESS_20261022.md)：part-014 两原响应原生 Q=1/1、credit=0，保存重开与各六探针通过；part-001 A 拒绝保留。新 4 请求，原生独立审计 PASS、278 项测试通过。已按用户请求启动全量 200 题 CLI，候选干预与官方 terminal episode 分开统计；全量结果尚未完成。
+
 2026-10-22 [多步 CLI pilot](CLI_CAUSAL_PILOT_20261022.md)已完成。part-001/014 的原生 S0、固定 Pad/Pocket 续执行、保存重开和每题六探针通过，两对不相关块控制 credit=0。4 次模型请求/11268 输入/2491 输出 tokens，原响应全部静态接口拒绝；天然候选执行和有效自然 pair 为 0，质量 unknown。累计 10 次 native 派发为 9 complete/1 uncertain，六台 VM 停止，272 项项目测试/7 项上游 CLI 测试通过。原生管线 GO，天然结构信用、方法收益和训练 NO-GO，下一步见[API 说明对照](../docs/CLI_CAUSAL_API_COMPARISON.md)。本批不增加官方 baseline episode；此前 Torus 的一个 tie 单独保留。
 
 最新[CLI 接口修复](CLI_API_GUIDED_PAIR_20261021.md)已通过：两条新模型原文在同 S0 上各执行一次，保存重开和六个参数/控制探针 Q=1/1，credit=0。原 JSON 围栏拒绝保留，显式适配只去封装。当前有效模型 pair 为一个 tie；本轮新增 2 模型请求、4 native 派发，257 项项目测试/7 项上游 CLI 测试通过，VM 均停止。官方 baseline 历史结果保持，方法收益与训练仍 NO-GO。下方模型 pair=0 是该修复前的历史记录。

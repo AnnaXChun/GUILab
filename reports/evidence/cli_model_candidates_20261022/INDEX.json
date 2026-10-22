@@ -1,0 +1,1194 @@
+{
+  "classification": "sanitized_native_model_candidate_success_and_pre_request_failures",
+  "excluded": [
+    ".env",
+    "API keys",
+    "private endpoint/hostname",
+    "full model directory",
+    "SQLite",
+    "qcow2",
+    "firmware",
+    "FCStd",
+    "encoded artifacts",
+    "MCP indexes/diagnostics"
+  ],
+  "files": [
+    {
+      "path": "cli_pad_api_probe_20261022_001/error.json",
+      "source": "results/cli_pad_api_probe_20261022_001/error.json",
+      "source_sha256": "a2c2287e42ead59a28e75854da12e1f0f190484a3d764795fbf107d3827cc953",
+      "sha256": "a2c2287e42ead59a28e75854da12e1f0f190484a3d764795fbf107d3827cc953",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_001/execution_summary.json",
+      "source": "results/cli_pad_api_probe_20261022_001/execution_summary.json",
+      "source_sha256": "dd8c787106f634e207c549cb4393baf89e16504b4c6d8e7669c13082a950fb86",
+      "sha256": "dd8c787106f634e207c549cb4393baf89e16504b4c6d8e7669c13082a950fb86",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_001/source_manifest.json",
+      "source": "results/cli_pad_api_probe_20261022_001/source_manifest.json",
+      "source_sha256": "06a86bd0a6700a0228ab7d75f5ed4dac04bed877f6564194682ee1d1adda2b1a",
+      "sha256": "06a86bd0a6700a0228ab7d75f5ed4dac04bed877f6564194682ee1d1adda2b1a",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_001/dispatch_public.json",
+      "source": "results/cli_pad_api_probe_20261022_001/dispatch_public.json",
+      "source_sha256": "d4c60176906b4f8e1b4c77f9747987eb21d2238ff0640ce61fd4e307b94e7f54",
+      "sha256": "d4c60176906b4f8e1b4c77f9747987eb21d2238ff0640ce61fd4e307b94e7f54",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_001/dispatch.dispatch.json",
+      "source": "results/cli_pad_api_probe_20261022_001/dispatch.sqlite",
+      "source_sha256": "48e379ca108d5fceaabe21c72957a7cb034a69cf1251021f2dca807da4247047",
+      "sha256": "2607639733646ab6fa903ddb0fc6d00a7432e6ced20960b8965c2712635fe8e6",
+      "redacted": false,
+      "derived": true
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_001/trace.jsonl",
+      "source": "results/cli_pad_api_probe_20261022_001/trace.jsonl",
+      "source_sha256": "285a4c0f2cf35c11eb055187ba52df92207a2010e9ed785d8eb5ced71bef8b49",
+      "sha256": "285a4c0f2cf35c11eb055187ba52df92207a2010e9ed785d8eb5ced71bef8b49",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_001/pairs.json",
+      "source": "results/cli_pad_api_probe_20261022_001/pairs.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_001/deployed_worker.py",
+      "source": "results/cli_pad_api_probe_20261022_001/deployed_worker.py",
+      "source_sha256": "6d6a560b0d8879f8c5c85abe11d3f5494a6705e1c592c3a9a6321fa1f28219ce",
+      "sha256": "6d6a560b0d8879f8c5c85abe11d3f5494a6705e1c592c3a9a6321fa1f28219ce",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_001/prepare/request.json",
+      "source": "results/cli_pad_api_probe_20261022_001/prepare/request.json",
+      "source_sha256": "9f96168d3b02ef8a5101e6c53974a293d98a43cb6c11e2cb8e5b99db5ffa436f",
+      "sha256": "9f96168d3b02ef8a5101e6c53974a293d98a43cb6c11e2cb8e5b99db5ffa436f",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_001/prepare/provenance.json",
+      "source": "results/cli_pad_api_probe_20261022_001/prepare/provenance.json",
+      "source_sha256": "9f811f8a1c7d8a37c9530aee8a2855906d7c3977d42061b4de5bfe6939319f28",
+      "sha256": "9f811f8a1c7d8a37c9530aee8a2855906d7c3977d42061b4de5bfe6939319f28",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_001/prepare/error.json",
+      "source": "results/cli_pad_api_probe_20261022_001/prepare/error.json",
+      "source_sha256": "c2be4eb85f8e60e5fccaa0037f77b4211414dda1373ccc9a9fe86a057149ca39",
+      "sha256": "c2be4eb85f8e60e5fccaa0037f77b4211414dda1373ccc9a9fe86a057149ca39",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_001/runtime/vm_001/ready.json",
+      "source": "results/cli_pad_api_probe_20261022_001/runtime/vm_001/ready.json",
+      "source_sha256": "53ff4e9c503676bb23e22cc42b5574e2109142b72cdf092f475d8d19137e0efb",
+      "sha256": "53ff4e9c503676bb23e22cc42b5574e2109142b72cdf092f475d8d19137e0efb",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_001/runtime/vm_001/readiness.jsonl",
+      "source": "results/cli_pad_api_probe_20261022_001/runtime/vm_001/readiness.jsonl",
+      "source_sha256": "8a381e91c9958a94156b1660ea7e8f449aa647cc8f0f2a305ea02cbec8cfc8f6",
+      "sha256": "8a381e91c9958a94156b1660ea7e8f449aa647cc8f0f2a305ea02cbec8cfc8f6",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_001/runtime/vm_001/stopped.json",
+      "source": "results/cli_pad_api_probe_20261022_001/runtime/vm_001/stopped.json",
+      "source_sha256": "e9a9acf5208556292a11065a0170e437b61a291c13429a7764fb5c8b088c41b7",
+      "sha256": "e9a9acf5208556292a11065a0170e437b61a291c13429a7764fb5c8b088c41b7",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_002/execution_summary.json",
+      "source": "results/cli_pad_api_probe_20261022_002/execution_summary.json",
+      "source_sha256": "5d9cc6c21cfb1815096db72798e01fbe3f47cf5597d3aa1b993aee59e6f5f54c",
+      "sha256": "5d9cc6c21cfb1815096db72798e01fbe3f47cf5597d3aa1b993aee59e6f5f54c",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_002/source_manifest.json",
+      "source": "results/cli_pad_api_probe_20261022_002/source_manifest.json",
+      "source_sha256": "2977d087d7ccfe3619c9701386b536fecc6fe2570d0916b8e939907565b50d90",
+      "sha256": "2977d087d7ccfe3619c9701386b536fecc6fe2570d0916b8e939907565b50d90",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_002/dispatch_public.json",
+      "source": "results/cli_pad_api_probe_20261022_002/dispatch_public.json",
+      "source_sha256": "f277b01f61aedf452d717fb491f948940f3bc197dfe9e989be3ff6994b4ba2d6",
+      "sha256": "f277b01f61aedf452d717fb491f948940f3bc197dfe9e989be3ff6994b4ba2d6",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_002/dispatch.dispatch.json",
+      "source": "results/cli_pad_api_probe_20261022_002/dispatch.sqlite",
+      "source_sha256": "0a65a9e5bcc5314acb157dbceb00891b6dcca2e559318e501ae981d57be3c8f5",
+      "sha256": "a5022ca3be686427254ca6466c275b6135d5ce23fdb2c6573b150afd7ed968bd",
+      "redacted": false,
+      "derived": true
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_002/trace.jsonl",
+      "source": "results/cli_pad_api_probe_20261022_002/trace.jsonl",
+      "source_sha256": "87513fa74eaef80cf58b327813f9a441c3e82542dbc960678d0ca733db8633e0",
+      "sha256": "87513fa74eaef80cf58b327813f9a441c3e82542dbc960678d0ca733db8633e0",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_002/pairs.json",
+      "source": "results/cli_pad_api_probe_20261022_002/pairs.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_002/api_probe.json",
+      "source": "results/cli_pad_api_probe_20261022_002/api_probe.json",
+      "source_sha256": "ff6014a79cd836d99a4087d163f783f3edff0d6045cb41191a79243ca2dc8041",
+      "sha256": "ff6014a79cd836d99a4087d163f783f3edff0d6045cb41191a79243ca2dc8041",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_002/deployed_worker.py",
+      "source": "results/cli_pad_api_probe_20261022_002/deployed_worker.py",
+      "source_sha256": "11ba4e5c87a58235b4d3e4d84db241ab2f53e89e6a1f61e36304758ec53f7e9e",
+      "sha256": "11ba4e5c87a58235b4d3e4d84db241ab2f53e89e6a1f61e36304758ec53f7e9e",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_002/prepare/request.json",
+      "source": "results/cli_pad_api_probe_20261022_002/prepare/request.json",
+      "source_sha256": "05e0ed38ac5482bf835a30b0c90e060971656dc6f3de25a939d9dfccd00a40a3",
+      "sha256": "05e0ed38ac5482bf835a30b0c90e060971656dc6f3de25a939d9dfccd00a40a3",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_002/prepare/provenance.json",
+      "source": "results/cli_pad_api_probe_20261022_002/prepare/provenance.json",
+      "source_sha256": "c459c9a4c57058653cfc9ff49e4e7c11b6ceb957a06ee069a1dc6cde12422ae4",
+      "sha256": "c459c9a4c57058653cfc9ff49e4e7c11b6ceb957a06ee069a1dc6cde12422ae4",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_002/prepare/observation.json",
+      "source": "results/cli_pad_api_probe_20261022_002/prepare/observation.json",
+      "source_sha256": "88c1905aaf5fee9128bb44da6d2e8a4c4e3de8e6e01c763804a53d5032af9026",
+      "sha256": "88c1905aaf5fee9128bb44da6d2e8a4c4e3de8e6e01c763804a53d5032af9026",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_002/runtime/vm_001/ready.json",
+      "source": "results/cli_pad_api_probe_20261022_002/runtime/vm_001/ready.json",
+      "source_sha256": "c875a1e16ba8492cb09b595eac61cb5cbc77e7d964e348453b5961bef94ec166",
+      "sha256": "c875a1e16ba8492cb09b595eac61cb5cbc77e7d964e348453b5961bef94ec166",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_002/runtime/vm_001/readiness.jsonl",
+      "source": "results/cli_pad_api_probe_20261022_002/runtime/vm_001/readiness.jsonl",
+      "source_sha256": "bfe387e6fe028f08682dc641c4b21f46fc109abd817458a6637526031bfa147c",
+      "sha256": "bfe387e6fe028f08682dc641c4b21f46fc109abd817458a6637526031bfa147c",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_002/runtime/vm_001/stopped.json",
+      "source": "results/cli_pad_api_probe_20261022_002/runtime/vm_001/stopped.json",
+      "source_sha256": "2a1229c31c003fb87b7b4d220b0848f0f187f769d1acb332c48617311701ba49",
+      "sha256": "2a1229c31c003fb87b7b4d220b0848f0f187f769d1acb332c48617311701ba49",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_002/source_snapshot/scripts/probe_pad_api.py",
+      "source": "results/cli_pad_api_probe_20261022_002/source_snapshot/scripts/probe_pad_api.py",
+      "source_sha256": "63d6dc64a163aa76c02f7391fc225b321d8cc1e58dc9450a2f01b5d9605387ca",
+      "sha256": "63d6dc64a163aa76c02f7391fc225b321d8cc1e58dc9450a2f01b5d9605387ca",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_002/source_snapshot/scripts/cli_causal_worker.py",
+      "source": "results/cli_pad_api_probe_20261022_002/source_snapshot/scripts/cli_causal_worker.py",
+      "source_sha256": "131a100b76f598717513ecd5ff969a3dfcdc01ced5c7e92f1d7394140974f1f5",
+      "sha256": "131a100b76f598717513ecd5ff969a3dfcdc01ced5c7e92f1d7394140974f1f5",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_002/source_snapshot/scripts/freecad_pad_api_probe_worker.py",
+      "source": "results/cli_pad_api_probe_20261022_002/source_snapshot/scripts/freecad_pad_api_probe_worker.py",
+      "source_sha256": "fa738b973e9f863f772e6fa5750978ef728d6a047240d7f778ccee9ba784568c",
+      "sha256": "fa738b973e9f863f772e6fa5750978ef728d6a047240d7f778ccee9ba784568c",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/config.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/config.json",
+      "source_sha256": "4499cb303937ee1d455674ab71695c72543b8ad1e6388d328db47a099d165f5d",
+      "sha256": "4499cb303937ee1d455674ab71695c72543b8ad1e6388d328db47a099d165f5d",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/plan.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/plan.json",
+      "source_sha256": "e2eb483b8e4128a20a7cdc63149b453225a379e43616cde750e8b3f002e7e74b",
+      "sha256": "e2eb483b8e4128a20a7cdc63149b453225a379e43616cde750e8b3f002e7e74b",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/summary.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/summary.json",
+      "source_sha256": "410ec4c11b82fc997ae72e56d047e27428a5ef2f9ed056e03d0a80fbeed52427",
+      "sha256": "410ec4c11b82fc997ae72e56d047e27428a5ef2f9ed056e03d0a80fbeed52427",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/error.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/error.json",
+      "source_sha256": "52ea61eb1334093069be5c0a5cc6b8cc842ccaabdb798584042fe56ed21c7384",
+      "sha256": "52ea61eb1334093069be5c0a5cc6b8cc842ccaabdb798584042fe56ed21c7384",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/execution_summary.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/execution_summary.json",
+      "source_sha256": "4b0de1eedd4598ccaf515143d1b6972c75fb5acb6a4dbab53ffe02d8fcb0a2b7",
+      "sha256": "4b0de1eedd4598ccaf515143d1b6972c75fb5acb6a4dbab53ffe02d8fcb0a2b7",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/source_manifest.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/source_manifest.json",
+      "source_sha256": "b7e24d1403583390e0a7b53e5e676f09d63e1e428cb852167e296bcd6cbd90ec",
+      "sha256": "b7e24d1403583390e0a7b53e5e676f09d63e1e428cb852167e296bcd6cbd90ec",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/dispatch_public.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/dispatch_public.json",
+      "source_sha256": "19883ce04d97fc4397f02c45b0d9b169044da9d223efc49948f73755657e042c",
+      "sha256": "19883ce04d97fc4397f02c45b0d9b169044da9d223efc49948f73755657e042c",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/dispatch.dispatch.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/dispatch.sqlite",
+      "source_sha256": "798821ed5b3ac61bbb54a927ca0fab820907bc797056156cbcf77f7500426018",
+      "sha256": "aec90c3d5389866dd4fa8f6e65a7965efc02926ffbc3da80dd0d8b8e35561dc3",
+      "redacted": false,
+      "derived": true
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/trace.jsonl",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/trace.jsonl",
+      "source_sha256": "45030354303449ee04c4431c0ca341eeab52f8fdf20d02fd6cb93f7f617ec8f4",
+      "sha256": "45030354303449ee04c4431c0ca341eeab52f8fdf20d02fd6cb93f7f617ec8f4",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/pair_trace.jsonl",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/pair_trace.jsonl",
+      "source_sha256": "b23a0c0513211a5c86f8bae6311a22193029699f09710141782895b9a550cca4",
+      "sha256": "b23a0c0513211a5c86f8bae6311a22193029699f09710141782895b9a550cca4",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/pairs.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/pairs.json",
+      "source_sha256": "97420620c6791d1334816c14257cecea143b3987f8b83b0d4fb5b673464fadce",
+      "sha256": "97420620c6791d1334816c14257cecea143b3987f8b83b0d4fb5b673464fadce",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/api_probe.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/api_probe.json",
+      "source_sha256": "ff6014a79cd836d99a4087d163f783f3edff0d6045cb41191a79243ca2dc8041",
+      "sha256": "ff6014a79cd836d99a4087d163f783f3edff0d6045cb41191a79243ca2dc8041",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/api_probe_reference.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/api_probe_reference.json",
+      "source_sha256": "1de0377aee5aaeb4746016932e3448e22523acaf1995bbb10c1db606322cd625",
+      "sha256": "1de0377aee5aaeb4746016932e3448e22523acaf1995bbb10c1db606322cd625",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/source_capture_reference.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/source_capture_reference.json",
+      "source_sha256": "b5dde249330eef45ac55b3cc3b76cf58456da8d4e64b68375918914cbe70c0e5",
+      "sha256": "b5dde249330eef45ac55b3cc3b76cf58456da8d4e64b68375918914cbe70c0e5",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/source_disk_audit.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/source_disk_audit.json",
+      "source_sha256": "2f3693a79a151e9cd8fdb38d6141611510939554af72e91ab12390b2e3afe71f",
+      "sha256": "2f3693a79a151e9cd8fdb38d6141611510939554af72e91ab12390b2e3afe71f",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/previous_ledgers.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/previous_ledgers.json",
+      "source_sha256": "581c2deb8417c4b4c7cb42da3348081439448d2d83b2d621f058fe1b56edf844",
+      "sha256": "581c2deb8417c4b4c7cb42da3348081439448d2d83b2d621f058fe1b56edf844",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/previous_ledger_audit.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/previous_ledger_audit.json",
+      "source_sha256": "7a0101f97005ad8b98bb6e119559aa219164aac506a41abc307da38b609cbbae",
+      "sha256": "7a0101f97005ad8b98bb6e119559aa219164aac506a41abc307da38b609cbbae",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/prepare/request.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/prepare/request.json",
+      "source_sha256": "21007c0aec279a173f7e31bd40b7886b1734910bffcf4231130582143f07a3f6",
+      "sha256": "21007c0aec279a173f7e31bd40b7886b1734910bffcf4231130582143f07a3f6",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/prepare/provenance.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/prepare/provenance.json",
+      "source_sha256": "7a767e138e4b0b6493879679c24ca789ed9d74c0b83f03d46b458a96da9d2c11",
+      "sha256": "7a767e138e4b0b6493879679c24ca789ed9d74c0b83f03d46b458a96da9d2c11",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/prepare/observation.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/prepare/observation.json",
+      "source_sha256": "f0e6bd7d6ae639a177a4bc2838b87c49f86475a44f9987c37ae1e56151c8d9e0",
+      "sha256": "f0e6bd7d6ae639a177a4bc2838b87c49f86475a44f9987c37ae1e56151c8d9e0",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/freecad-part-001-note-control-A/request.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/freecad-part-001-note-control-A/request.json",
+      "source_sha256": "efccb1bb3064a5b65642296b6125a8b8109c407a5a3d837abd55c55b8375ec34",
+      "sha256": "efccb1bb3064a5b65642296b6125a8b8109c407a5a3d837abd55c55b8375ec34",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/freecad-part-001-note-control-A/provenance.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/freecad-part-001-note-control-A/provenance.json",
+      "source_sha256": "59a6f654e6fa2613aa767c22a5730a328f5bcc18b916beb3d1783357a1eaba7f",
+      "sha256": "59a6f654e6fa2613aa767c22a5730a328f5bcc18b916beb3d1783357a1eaba7f",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/freecad-part-001-note-control-A/observation.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/freecad-part-001-note-control-A/observation.json",
+      "source_sha256": "20b55a6d94269ace46b24b86fe19c8370bb705e6b4906ec6f1c54941df36ba1b",
+      "sha256": "20b55a6d94269ace46b24b86fe19c8370bb705e6b4906ec6f1c54941df36ba1b",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/freecad-part-001-note-control-B/request.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/freecad-part-001-note-control-B/request.json",
+      "source_sha256": "3c92c94de07e74228bc83760d64df6c52136b8d76319c74569301cb82baf0f6c",
+      "sha256": "3c92c94de07e74228bc83760d64df6c52136b8d76319c74569301cb82baf0f6c",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/freecad-part-001-note-control-B/provenance.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/freecad-part-001-note-control-B/provenance.json",
+      "source_sha256": "ac360f98afd7292ebd88df09e033c03b945cf84c48d43714e38085e8e0a5a290",
+      "sha256": "ac360f98afd7292ebd88df09e033c03b945cf84c48d43714e38085e8e0a5a290",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/freecad-part-001-note-control-B/observation.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/freecad-part-001-note-control-B/observation.json",
+      "source_sha256": "6af6e5271c1cd8520bd3be28209f28004f263aa5af494c0dcbb7660430e02693",
+      "sha256": "6af6e5271c1cd8520bd3be28209f28004f263aa5af494c0dcbb7660430e02693",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/freecad-part-014-note-control-A/request.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/freecad-part-014-note-control-A/request.json",
+      "source_sha256": "305b831df268ccf86b7f9953a35850579f3191b3ad13a5d5b2997f6697326778",
+      "sha256": "305b831df268ccf86b7f9953a35850579f3191b3ad13a5d5b2997f6697326778",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/freecad-part-014-note-control-A/provenance.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/freecad-part-014-note-control-A/provenance.json",
+      "source_sha256": "d0a9e80106e85c9aa37f40140b20c1e81994e3ba5a57a63b73f66026a05e16f2",
+      "sha256": "d0a9e80106e85c9aa37f40140b20c1e81994e3ba5a57a63b73f66026a05e16f2",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/freecad-part-014-note-control-A/error.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/freecad-part-014-note-control-A/error.json",
+      "source_sha256": "d35dc1725f3043c5a5d1ffbc871057a7983d83f08f997e05164cda33ae1b63f1",
+      "sha256": "d35dc1725f3043c5a5d1ffbc871057a7983d83f08f997e05164cda33ae1b63f1",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/freecad-part-014-note-control-B/request.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/freecad-part-014-note-control-B/request.json",
+      "source_sha256": "2b48d43972872865b94e377516b91c059b0ca7dfe5ccc08e855ba8b1dd836de2",
+      "sha256": "2b48d43972872865b94e377516b91c059b0ca7dfe5ccc08e855ba8b1dd836de2",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/freecad-part-014-note-control-B/provenance.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/freecad-part-014-note-control-B/provenance.json",
+      "source_sha256": "f9d160555774f784a7b8ac582a9e8df3dafd58f366c337ab496184cc7f24211e",
+      "sha256": "f9d160555774f784a7b8ac582a9e8df3dafd58f366c337ab496184cc7f24211e",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/freecad-part-014-note-control-B/observation.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/freecad-part-014-note-control-B/observation.json",
+      "source_sha256": "92b1bb72db3611ddbdbe814343ab3dd472820cc8f024c22d91443535301d6ce3",
+      "sha256": "92b1bb72db3611ddbdbe814343ab3dd472820cc8f024c22d91443535301d6ce3",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/runtime/vm_001/ready.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/runtime/vm_001/ready.json",
+      "source_sha256": "12d37864a15ed74cdec9860eac5b5094d1168eef6c9e59a98c37b69fb16295bc",
+      "sha256": "12d37864a15ed74cdec9860eac5b5094d1168eef6c9e59a98c37b69fb16295bc",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/runtime/vm_001/readiness.jsonl",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/runtime/vm_001/readiness.jsonl",
+      "source_sha256": "4b5bae1c5d69e23bde9c11169aaa8b06816af5f64c0698c153344f20d522fd80",
+      "sha256": "4b5bae1c5d69e23bde9c11169aaa8b06816af5f64c0698c153344f20d522fd80",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/runtime/vm_001/stopped.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/runtime/vm_001/stopped.json",
+      "source_sha256": "a9076ce7c303c396cc9db0860817b6771f8ff775286a55e35747fb36de4e29f8",
+      "sha256": "a9076ce7c303c396cc9db0860817b6771f8ff775286a55e35747fb36de4e29f8",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/source_snapshot/cad_cf/upstream_launch.py",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/source_snapshot/cad_cf/upstream_launch.py",
+      "source_sha256": "39353dd1bcb5bc906a17da49da9a42d2206f23e7c8d3e426fb6f84469f96ada0",
+      "sha256": "39353dd1bcb5bc906a17da49da9a42d2206f23e7c8d3e426fb6f84469f96ada0",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/source_snapshot/cad_cf/terminal_bridge.py",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/source_snapshot/cad_cf/terminal_bridge.py",
+      "source_sha256": "3f410b8d2eb071e3d230ca623501f785ee0bfbdf015540f4666b961eea5d3190",
+      "sha256": "3f410b8d2eb071e3d230ca623501f785ee0bfbdf015540f4666b961eea5d3190",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/source_snapshot/cad_cf/batch_budget.py",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/source_snapshot/cad_cf/batch_budget.py",
+      "source_sha256": "52953e7b0ab3deb3546927a02ae848fa3be323f773020092906b081ab70f8e02",
+      "sha256": "52953e7b0ab3deb3546927a02ae848fa3be323f773020092906b081ab70f8e02",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/source_snapshot/cad_cf/cli_causal_credit.py",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/source_snapshot/cad_cf/cli_causal_credit.py",
+      "source_sha256": "1002a8278c654120ea6525841ead066100a02137b0cbc6e89f29613bcde9c303",
+      "sha256": "1002a8278c654120ea6525841ead066100a02137b0cbc6e89f29613bcde9c303",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/source_snapshot/scripts/run_cli_model_pair.py",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/source_snapshot/scripts/run_cli_model_pair.py",
+      "source_sha256": "9656986ca12c75b7761ea14774a84079e4e0f605e330944bff846cbec654fcef",
+      "sha256": "9656986ca12c75b7761ea14774a84079e4e0f605e330944bff846cbec654fcef",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/source_snapshot/scripts/cli_causal_worker.py",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/source_snapshot/scripts/cli_causal_worker.py",
+      "source_sha256": "131a100b76f598717513ecd5ff969a3dfcdc01ced5c7e92f1d7394140974f1f5",
+      "sha256": "131a100b76f598717513ecd5ff969a3dfcdc01ced5c7e92f1d7394140974f1f5",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/source_snapshot/scripts/run_structural_credit_diagnostic.py",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/source_snapshot/scripts/run_structural_credit_diagnostic.py",
+      "source_sha256": "13962afcb2607679fc434e865044153623aafafa79194a1ae39093277c81e4c7",
+      "sha256": "13962afcb2607679fc434e865044153623aafafa79194a1ae39093277c81e4c7",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/source_snapshot/scripts/audit_cli_causal_credit.py",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/source_snapshot/scripts/audit_cli_causal_credit.py",
+      "source_sha256": "d58587d80de109f75d9d3728e0649cb36a4323c35634b0561932b6154649191c",
+      "sha256": "d58587d80de109f75d9d3728e0649cb36a4323c35634b0561932b6154649191c",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/source_snapshot/scripts/run_cli_causal_credit.py",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/source_snapshot/scripts/run_cli_causal_credit.py",
+      "source_sha256": "32f1842f22b4919e5565b9ec338c3bf4d975d364ff8344d082188d074c4c644c",
+      "sha256": "32f1842f22b4919e5565b9ec338c3bf4d975d364ff8344d082188d074c4c644c",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/config.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/config.json",
+      "source_sha256": "cfb22edc0484cf641c8723a76d6dc7b48c169205323fe46fd05072246ed62a37",
+      "sha256": "cfb22edc0484cf641c8723a76d6dc7b48c169205323fe46fd05072246ed62a37",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/plan.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/plan.json",
+      "source_sha256": "988b8911fa9f25243bfe857a3bd86d247691e36a2e19831a78c8924be94e2f93",
+      "sha256": "988b8911fa9f25243bfe857a3bd86d247691e36a2e19831a78c8924be94e2f93",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/summary.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/summary.json",
+      "source_sha256": "a5ff3bee299b1d6f724e41ac94337e44adaae504367a220fbe1d965e58328a40",
+      "sha256": "a5ff3bee299b1d6f724e41ac94337e44adaae504367a220fbe1d965e58328a40",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/execution_summary.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/execution_summary.json",
+      "source_sha256": "febdc62f11167d1024ffe69f860d8344969a01c5314d8755bd7c056e323b6d63",
+      "sha256": "febdc62f11167d1024ffe69f860d8344969a01c5314d8755bd7c056e323b6d63",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/source_manifest.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/source_manifest.json",
+      "source_sha256": "a9704d83e417caa1afd6906dae6e413aef688d1e46ba86f43a5bf4da8f3e4c7d",
+      "sha256": "a9704d83e417caa1afd6906dae6e413aef688d1e46ba86f43a5bf4da8f3e4c7d",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/dispatch_public.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/dispatch_public.json",
+      "source_sha256": "e32419e6fdf82dcf98252e8a2d853e30e91cc47316bc2254e5ebe59788d6d766",
+      "sha256": "e32419e6fdf82dcf98252e8a2d853e30e91cc47316bc2254e5ebe59788d6d766",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/dispatch.dispatch.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/dispatch.sqlite",
+      "source_sha256": "0fe0a7e4b9e2c7d6900976c2c0e53c60743ba65221b9707aa32b926e98c40e00",
+      "sha256": "e5f21e98ae95a564090e098b1609093c97a321148a5ffcf118ad412202d03cd3",
+      "redacted": false,
+      "derived": true
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/trace.jsonl",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/trace.jsonl",
+      "source_sha256": "441313d96221fd7eefd2403e07d2eb1bc169fcf665de0e8104d8fb209e573d18",
+      "sha256": "441313d96221fd7eefd2403e07d2eb1bc169fcf665de0e8104d8fb209e573d18",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/pair_trace.jsonl",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/pair_trace.jsonl",
+      "source_sha256": "ef726528d383cd4b815272ac665f6778a1e2c5eb54f62ea9e5fa2b2768c54182",
+      "sha256": "ef726528d383cd4b815272ac665f6778a1e2c5eb54f62ea9e5fa2b2768c54182",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/pairs.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/pairs.json",
+      "source_sha256": "366085fcec7d1b62d49554ba859d84fb2afe817d2f73412a45f940c30f5fc8ac",
+      "sha256": "366085fcec7d1b62d49554ba859d84fb2afe817d2f73412a45f940c30f5fc8ac",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/selection_controls.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/selection_controls.json",
+      "source_sha256": "9e00b182deecbae50df2bd08f03843995c44b86d8bb87a592f86624fa3c81395",
+      "sha256": "9e00b182deecbae50df2bd08f03843995c44b86d8bb87a592f86624fa3c81395",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/api_probe.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/api_probe.json",
+      "source_sha256": "ff6014a79cd836d99a4087d163f783f3edff0d6045cb41191a79243ca2dc8041",
+      "sha256": "ff6014a79cd836d99a4087d163f783f3edff0d6045cb41191a79243ca2dc8041",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/api_probe_reference.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/api_probe_reference.json",
+      "source_sha256": "1de0377aee5aaeb4746016932e3448e22523acaf1995bbb10c1db606322cd625",
+      "sha256": "1de0377aee5aaeb4746016932e3448e22523acaf1995bbb10c1db606322cd625",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/source_capture_reference.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/source_capture_reference.json",
+      "source_sha256": "b5dde249330eef45ac55b3cc3b76cf58456da8d4e64b68375918914cbe70c0e5",
+      "sha256": "b5dde249330eef45ac55b3cc3b76cf58456da8d4e64b68375918914cbe70c0e5",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/source_disk_audit.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/source_disk_audit.json",
+      "source_sha256": "2f3693a79a151e9cd8fdb38d6141611510939554af72e91ab12390b2e3afe71f",
+      "sha256": "2f3693a79a151e9cd8fdb38d6141611510939554af72e91ab12390b2e3afe71f",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/previous_ledgers.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/previous_ledgers.json",
+      "source_sha256": "581c2deb8417c4b4c7cb42da3348081439448d2d83b2d621f058fe1b56edf844",
+      "sha256": "581c2deb8417c4b4c7cb42da3348081439448d2d83b2d621f058fe1b56edf844",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/previous_ledger_audit.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/previous_ledger_audit.json",
+      "source_sha256": "7a0101f97005ad8b98bb6e119559aa219164aac506a41abc307da38b609cbbae",
+      "sha256": "7a0101f97005ad8b98bb6e119559aa219164aac506a41abc307da38b609cbbae",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/pre_request_control_proof.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/pre_request_control_proof.json",
+      "source_sha256": "7aa34373a9487ec12af13973b8fe4aca0a88e767b38541e0865c5a711c7be199",
+      "sha256": "7aa34373a9487ec12af13973b8fe4aca0a88e767b38541e0865c5a711c7be199",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/verification.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/verification.json",
+      "source_sha256": "9c311bda590392575fab9fe657ace6331d60a5dabd6bb78da1835604b07bb905",
+      "sha256": "9c311bda590392575fab9fe657ace6331d60a5dabd6bb78da1835604b07bb905",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/prepare/request.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/prepare/request.json",
+      "source_sha256": "5cfe6d636642964454c988def0155e976fd7961dc5fb2f340d11c83643a05c9c",
+      "sha256": "5cfe6d636642964454c988def0155e976fd7961dc5fb2f340d11c83643a05c9c",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/prepare/provenance.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/prepare/provenance.json",
+      "source_sha256": "24bb785064442bba8779e92d0fc5c0d5879180ece54941b0fff7fc7d4f7d822e",
+      "sha256": "24bb785064442bba8779e92d0fc5c0d5879180ece54941b0fff7fc7d4f7d822e",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/prepare/observation.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/prepare/observation.json",
+      "source_sha256": "f0e6bd7d6ae639a177a4bc2838b87c49f86475a44f9987c37ae1e56151c8d9e0",
+      "sha256": "f0e6bd7d6ae639a177a4bc2838b87c49f86475a44f9987c37ae1e56151c8d9e0",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-001-note-control-A/request.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-001-note-control-A/request.json",
+      "source_sha256": "ce524cdf9b62ac48d89e81f9808c49802d6a1274203c583149b76a594d121c26",
+      "sha256": "ce524cdf9b62ac48d89e81f9808c49802d6a1274203c583149b76a594d121c26",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-001-note-control-A/provenance.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-001-note-control-A/provenance.json",
+      "source_sha256": "ecc2d811bc44200fded13745937ed9674d6bc9366fb441c4d4d034abe54b4ddd",
+      "sha256": "ecc2d811bc44200fded13745937ed9674d6bc9366fb441c4d4d034abe54b4ddd",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-001-note-control-A/observation.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-001-note-control-A/observation.json",
+      "source_sha256": "013b6b19419c634607a90325e0c4140e5a2b88de0f3bb3de5d6e312dad67f29f",
+      "sha256": "013b6b19419c634607a90325e0c4140e5a2b88de0f3bb3de5d6e312dad67f29f",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-001-note-control-B/request.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-001-note-control-B/request.json",
+      "source_sha256": "4f02b61416691280bc6180847d9c8a0e1707a13c0eb2d8c3c89ec00194319cc2",
+      "sha256": "4f02b61416691280bc6180847d9c8a0e1707a13c0eb2d8c3c89ec00194319cc2",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-001-note-control-B/provenance.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-001-note-control-B/provenance.json",
+      "source_sha256": "0d4422802c9bdc16c50349b8c34b806dc13d447f98a0cc1248eda12c7ba4c20c",
+      "sha256": "0d4422802c9bdc16c50349b8c34b806dc13d447f98a0cc1248eda12c7ba4c20c",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-001-note-control-B/observation.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-001-note-control-B/observation.json",
+      "source_sha256": "4918ff48c7e20d6a034b794081876d7d1d07a0479e0e8b2978551ebfca756df8",
+      "sha256": "4918ff48c7e20d6a034b794081876d7d1d07a0479e0e8b2978551ebfca756df8",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-014-note-control-A/request.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-014-note-control-A/request.json",
+      "source_sha256": "0c1bcda55560ff73e1062cbd5d77358afcabbda6cc7af7ee56cb2881adfcc19f",
+      "sha256": "0c1bcda55560ff73e1062cbd5d77358afcabbda6cc7af7ee56cb2881adfcc19f",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-014-note-control-A/provenance.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-014-note-control-A/provenance.json",
+      "source_sha256": "ca8f5189a27a28e6ead282cdaff637212ded5b8f17f6ab8a8564725a5a7fdd10",
+      "sha256": "ca8f5189a27a28e6ead282cdaff637212ded5b8f17f6ab8a8564725a5a7fdd10",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-014-note-control-A/observation.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-014-note-control-A/observation.json",
+      "source_sha256": "4027bbffee5a1b3f5bcc1d26ed684c5c588949c5ee8162570e1a451019be4b7e",
+      "sha256": "4027bbffee5a1b3f5bcc1d26ed684c5c588949c5ee8162570e1a451019be4b7e",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-014-note-control-B/request.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-014-note-control-B/request.json",
+      "source_sha256": "e744c8f7e2003db1b115231c07bcb95287fed6e4b8876614b8976db221e24435",
+      "sha256": "e744c8f7e2003db1b115231c07bcb95287fed6e4b8876614b8976db221e24435",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-014-note-control-B/provenance.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-014-note-control-B/provenance.json",
+      "source_sha256": "0266fc8ecedbb7bb036da944f9f091fb45a8f554a3cd54320c116e86d67ae979",
+      "sha256": "0266fc8ecedbb7bb036da944f9f091fb45a8f554a3cd54320c116e86d67ae979",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-014-note-control-B/observation.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-014-note-control-B/observation.json",
+      "source_sha256": "3bd8fd9ef7e3a5c961c0741ea1d51a67f4692bad3f4733eef88cf24ef5508c7e",
+      "sha256": "3bd8fd9ef7e3a5c961c0741ea1d51a67f4692bad3f4733eef88cf24ef5508c7e",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-014-A/request.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-014-A/request.json",
+      "source_sha256": "084b5752c5201bfbd5be1c6daa72665deed5371ce29c3a544bdfff6328c2f1d5",
+      "sha256": "084b5752c5201bfbd5be1c6daa72665deed5371ce29c3a544bdfff6328c2f1d5",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-014-A/provenance.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-014-A/provenance.json",
+      "source_sha256": "f0618c227b4192b2ddf706c9737d9062ee9ec051bd23e19d2561cb692c107d4a",
+      "sha256": "f0618c227b4192b2ddf706c9737d9062ee9ec051bd23e19d2561cb692c107d4a",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-014-A/observation.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-014-A/observation.json",
+      "source_sha256": "d2bb8fa0cf11157c6548165718c01ac9db919af5b217863efe0da2993dc0418b",
+      "sha256": "d2bb8fa0cf11157c6548165718c01ac9db919af5b217863efe0da2993dc0418b",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-014-B/request.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-014-B/request.json",
+      "source_sha256": "921cb1e8eb9b27d7fa023b5d0a75338b16a37d91c53047d5a2ecb7b705fdb536",
+      "sha256": "921cb1e8eb9b27d7fa023b5d0a75338b16a37d91c53047d5a2ecb7b705fdb536",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-014-B/provenance.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-014-B/provenance.json",
+      "source_sha256": "ca20f6d0712b119ddac4d7459ba9e268b9e46a00984d332fef0ee45852e0c425",
+      "sha256": "ca20f6d0712b119ddac4d7459ba9e268b9e46a00984d332fef0ee45852e0c425",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-014-B/observation.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-014-B/observation.json",
+      "source_sha256": "872b01de57eb8e067c9e0891020ec8b337bfa87162e968c661439ca0b88bc064",
+      "sha256": "872b01de57eb8e067c9e0891020ec8b337bfa87162e968c661439ca0b88bc064",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-001-model/model_input.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-001-model/model_input.json",
+      "source_sha256": "8e0695ccdca54cfc2c29225abbf5926fe9bcd1959b7df0ab240be36b637a3201",
+      "sha256": "8e0695ccdca54cfc2c29225abbf5926fe9bcd1959b7df0ab240be36b637a3201",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-001-model/model_response_A.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-001-model/model_response_A.json",
+      "source_sha256": "d8b1c07f87dd47281011ab4290757e814afa00725e3241b706b20414b17c0a8b",
+      "sha256": "d8b1c07f87dd47281011ab4290757e814afa00725e3241b706b20414b17c0a8b",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-001-model/model_response_B.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-001-model/model_response_B.json",
+      "source_sha256": "8b6c3b6393095db3af6f8617c920492c2d704a5bd2e541ef409e30c86cfce344",
+      "sha256": "8b6c3b6393095db3af6f8617c920492c2d704a5bd2e541ef409e30c86cfce344",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-001-model/candidate_status.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-001-model/candidate_status.json",
+      "source_sha256": "cff7e435c8255b3c34971c126142e4c3c29b0cb871e2935e677c31aece2b98c4",
+      "sha256": "cff7e435c8255b3c34971c126142e4c3c29b0cb871e2935e677c31aece2b98c4",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-001-model/captured_s0.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-001-model/captured_s0.json",
+      "source_sha256": "30f5fc83887af72a3a5714cbacc31cc688a7cc84359183866cfba9a9712bf9de",
+      "sha256": "30f5fc83887af72a3a5714cbacc31cc688a7cc84359183866cfba9a9712bf9de",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-001-model/model_budget.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-001-model/model_budget.json",
+      "source_sha256": "945d4d1746fcbcd904dfd0077ec24b6ac6eb841001ac43d435151fbe21e20a9b",
+      "sha256": "945d4d1746fcbcd904dfd0077ec24b6ac6eb841001ac43d435151fbe21e20a9b",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-001-model/model_trace.jsonl",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-001-model/model_trace.jsonl",
+      "source_sha256": "3f89d13de4b0ab11c8ccfe69b33124e73bc0683de0113f35cb9a88177af4012a",
+      "sha256": "3f89d13de4b0ab11c8ccfe69b33124e73bc0683de0113f35cb9a88177af4012a",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-001-model/provider_usage.jsonl",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-001-model/provider_usage.jsonl",
+      "source_sha256": "bb4a855a373bc8e9127bf4100a8b75ca81552702eea4ecd9e2dbfe0084645456",
+      "sha256": "bb4a855a373bc8e9127bf4100a8b75ca81552702eea4ecd9e2dbfe0084645456",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-014-model/model_input.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-014-model/model_input.json",
+      "source_sha256": "8f621d959447397a659929f9797e5021c1eb842018ed33fc28f559b45cc8fc35",
+      "sha256": "8f621d959447397a659929f9797e5021c1eb842018ed33fc28f559b45cc8fc35",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-014-model/model_response_A.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-014-model/model_response_A.json",
+      "source_sha256": "353b67814261436adb6925f26bc4d2ce531d571041858af2753b1817e62f0cac",
+      "sha256": "353b67814261436adb6925f26bc4d2ce531d571041858af2753b1817e62f0cac",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-014-model/model_response_B.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-014-model/model_response_B.json",
+      "source_sha256": "7d9916567b69b5549e638b05e28bf8d65e12db04bd9fd4f551075251549476ef",
+      "sha256": "7d9916567b69b5549e638b05e28bf8d65e12db04bd9fd4f551075251549476ef",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-014-model/candidate_status.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-014-model/candidate_status.json",
+      "source_sha256": "269174bf9e4d4f0fc8a7965d8b0486b8c2e71d88bfd3dc0629d124fda13cb0da",
+      "sha256": "269174bf9e4d4f0fc8a7965d8b0486b8c2e71d88bfd3dc0629d124fda13cb0da",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-014-model/captured_s0.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-014-model/captured_s0.json",
+      "source_sha256": "be441bc2a87760348aa6946f3dde9fcfba5ec50307b2d9e6bbfb96fa5dbe44c1",
+      "sha256": "be441bc2a87760348aa6946f3dde9fcfba5ec50307b2d9e6bbfb96fa5dbe44c1",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-014-model/model_budget.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-014-model/model_budget.json",
+      "source_sha256": "1b85880f318aab3769101be44176cac9063f2b58bd457929bf4a0dae2c1c5765",
+      "sha256": "1b85880f318aab3769101be44176cac9063f2b58bd457929bf4a0dae2c1c5765",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-014-model/model_trace.jsonl",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-014-model/model_trace.jsonl",
+      "source_sha256": "964d16ae9c3a4626de59b4755765ce388b7557f436dbbd8cf7d0df98d89e6948",
+      "sha256": "964d16ae9c3a4626de59b4755765ce388b7557f436dbbd8cf7d0df98d89e6948",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-014-model/provider_usage.jsonl",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-014-model/provider_usage.jsonl",
+      "source_sha256": "f9eda3d214fe3396938ffd2f283a558c335b1bdc3e6de61f075e6359bbbfcceb",
+      "sha256": "f9eda3d214fe3396938ffd2f283a558c335b1bdc3e6de61f075e6359bbbfcceb",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/freecad-part-014-model/candidate_pair.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/freecad-part-014-model/candidate_pair.json",
+      "source_sha256": "b4281fa1ed34aa32daf120c3b90018398130f148f436e5b9f467b2d3945a1c83",
+      "sha256": "b4281fa1ed34aa32daf120c3b90018398130f148f436e5b9f467b2d3945a1c83",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/runtime/vm_001/ready.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/runtime/vm_001/ready.json",
+      "source_sha256": "eb6c81486e82ea86d9230758ef4f6230773c5a42413e838102e07511463e9734",
+      "sha256": "eb6c81486e82ea86d9230758ef4f6230773c5a42413e838102e07511463e9734",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/runtime/vm_001/readiness.jsonl",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/runtime/vm_001/readiness.jsonl",
+      "source_sha256": "9e03ff2f1609d4d964e35b51a3812d3d1ef956b26fded3f0a82c6068a6e1154c",
+      "sha256": "9e03ff2f1609d4d964e35b51a3812d3d1ef956b26fded3f0a82c6068a6e1154c",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/runtime/vm_001/stopped.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/runtime/vm_001/stopped.json",
+      "source_sha256": "3cc82cc16ff8f051e7ea6d83ae039a566e060f023fd5474f8865c2fa6124e108",
+      "sha256": "3cc82cc16ff8f051e7ea6d83ae039a566e060f023fd5474f8865c2fa6124e108",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/source_snapshot/cad_cf/upstream_launch.py",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/source_snapshot/cad_cf/upstream_launch.py",
+      "source_sha256": "39353dd1bcb5bc906a17da49da9a42d2206f23e7c8d3e426fb6f84469f96ada0",
+      "sha256": "39353dd1bcb5bc906a17da49da9a42d2206f23e7c8d3e426fb6f84469f96ada0",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/source_snapshot/cad_cf/terminal_bridge.py",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/source_snapshot/cad_cf/terminal_bridge.py",
+      "source_sha256": "4c3e9f8023a6b8b344c5c70c495312ab1624e97273509f46134ea9339c55a17d",
+      "sha256": "4c3e9f8023a6b8b344c5c70c495312ab1624e97273509f46134ea9339c55a17d",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/source_snapshot/cad_cf/batch_budget.py",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/source_snapshot/cad_cf/batch_budget.py",
+      "source_sha256": "52953e7b0ab3deb3546927a02ae848fa3be323f773020092906b081ab70f8e02",
+      "sha256": "52953e7b0ab3deb3546927a02ae848fa3be323f773020092906b081ab70f8e02",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/source_snapshot/cad_cf/cli_causal_credit.py",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/source_snapshot/cad_cf/cli_causal_credit.py",
+      "source_sha256": "f974b7d8519f3316a28258c11ed567dbf1d0f7fd917dbea75c41ce97a8c52f08",
+      "sha256": "f974b7d8519f3316a28258c11ed567dbf1d0f7fd917dbea75c41ce97a8c52f08",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/source_snapshot/scripts/run_cli_model_pair.py",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/source_snapshot/scripts/run_cli_model_pair.py",
+      "source_sha256": "9656986ca12c75b7761ea14774a84079e4e0f605e330944bff846cbec654fcef",
+      "sha256": "9656986ca12c75b7761ea14774a84079e4e0f605e330944bff846cbec654fcef",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/source_snapshot/scripts/cli_causal_worker.py",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/source_snapshot/scripts/cli_causal_worker.py",
+      "source_sha256": "131a100b76f598717513ecd5ff969a3dfcdc01ced5c7e92f1d7394140974f1f5",
+      "sha256": "131a100b76f598717513ecd5ff969a3dfcdc01ced5c7e92f1d7394140974f1f5",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/source_snapshot/scripts/run_structural_credit_diagnostic.py",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/source_snapshot/scripts/run_structural_credit_diagnostic.py",
+      "source_sha256": "4fe03faeb3ae0d9254c0ec5c5bbd5e10783ae62d15db79ab569e5e11c5f6dcda",
+      "sha256": "4fe03faeb3ae0d9254c0ec5c5bbd5e10783ae62d15db79ab569e5e11c5f6dcda",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/source_snapshot/scripts/audit_cli_causal_credit.py",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/source_snapshot/scripts/audit_cli_causal_credit.py",
+      "source_sha256": "d58587d80de109f75d9d3728e0649cb36a4323c35634b0561932b6154649191c",
+      "sha256": "d58587d80de109f75d9d3728e0649cb36a4323c35634b0561932b6154649191c",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_002/source_snapshot/scripts/run_cli_causal_credit.py",
+      "source": "results/cli_causal_pad_guided_native_20261022_002/source_snapshot/scripts/run_cli_causal_credit.py",
+      "source_sha256": "291334e0c04606ceb87a6d923beb2c23261c0dd60ff19391cda43b994d2b08db",
+      "sha256": "291334e0c04606ceb87a6d923beb2c23261c0dd60ff19391cda43b994d2b08db",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pad_api_probe_20261022_001/prepare/known_failure_response.json",
+      "source": "results/cli_pad_api_probe_20261022_001/prepare/known_failure_response.json",
+      "source_sha256": "d052e7a6c95a97e6955ff4fd4ca737f9bf3d37eeeccd8764ee7e96f472e39c98",
+      "sha256": "d052e7a6c95a97e6955ff4fd4ca737f9bf3d37eeeccd8764ee7e96f472e39c98",
+      "redacted": false,
+      "derived": true
+    },
+    {
+      "path": "cli_causal_pad_guided_native_20261022_001/freecad-part-014-note-control-A/known_failure_response.json",
+      "source": "results/cli_causal_pad_guided_native_20261022_001/freecad-part-014-note-control-A/known_failure_response.json",
+      "source_sha256": "9cc2e2e9d93ea96bac2e3ee5e28322a5111d95eb4fe4032089eae607e3bd717c",
+      "sha256": "9cc2e2e9d93ea96bac2e3ee5e28322a5111d95eb4fe4032089eae607e3bd717c",
+      "redacted": false,
+      "derived": true
+    }
+  ],
+  "omitted_screenshots": [],
+  "complete_agent_jsonl": true,
+  "runs": [
+    "cli_pad_api_probe_20261022_001",
+    "cli_pad_api_probe_20261022_002",
+    "cli_causal_pad_guided_native_20261022_001",
+    "cli_causal_pad_guided_native_20261022_002"
+  ],
+  "policy": "original model code unedited; native FCStd, encoded outputs, credentials and raw controller responses remain local"
+}

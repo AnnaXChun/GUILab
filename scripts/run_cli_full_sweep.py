@@ -118,7 +118,7 @@ def main():
         save(a.output / 'jobs.json', jobs)
     def report():
         records = [task_record(job['category'], job['task_id'],
-            ROOT/'vendor/CADWORLD/CLI/results'/job['run_id']/job['task_id']) for job in jobs]
+            ROOT/'vendor/CADWORLD/CLI/results/actc'/job['run_id']/job['task_id']) for job in jobs]
         seen={'freecad-sketch-061','freecad-sketch-063','freecad-measure-003','freecad-part-001','freecad-part-014','freecad-part-076'}
         for row in records:row['development_seen_before_sweep']=row['task_id'] in seen
         usage=[]

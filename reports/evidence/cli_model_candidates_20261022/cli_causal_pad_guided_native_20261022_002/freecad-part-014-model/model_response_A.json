@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-4e6ef7c3-02b7-9a7d-a979-f0ff5a305d9e",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "```json\n{\n  \"code\": \"body = doc.getObject(\\\"Body\\\")\\nsketch = doc.getObject(\\\"Sketch\\\")\\npad = body.newObject(\\\"PartDesign::Pad\\\", \\\"Pad\\\")\\npad.Profile = sketch\\npad.Length = 10\"\n}\n```",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning_content": "The user wants me to create a FreeCAD Python construction block that creates a Pad feature from an existing sketch. Let me analyze the requirements:\n\n1. Get body = doc.getObject(\"Body\")\n2. Get sketch = doc.getObject(\"Sketch\")\n3. Create a PartDesign::Pad named \"Pad\" in the body\n4. Set the Profile to the sketch\n5. Set Length to 10 mm (from length_mm parameter)\n\nBased on the verified notes:\n- Use body.newObject(type_name, object_name) for creation\n- For PartDesign::Pad, Profile is the sketch relation\n- BaseFeature is the previous solid relation\n- Length is a native length property (plain numeric assignments are millimetres)\n\nLet me write the code:\n\n```python\nbody = doc.getObject(\"Body\")\nsketch = doc.getObject(\"Sketch\")\npad = body.newObject(\"PartDesign::Pad\", \"Pad\")\npad.Profile = sketch\npad.Length = 10\n```\n\nThis should create the Pad feature with the correct profile and extrusion length of 10mm.\n\nWait, I need to make sure about the exact API. According to the notes:\n- body.newObject(type_name, object_name) - this creates the object\n- pad.Profile = sketch - this sets the profile\n- pad.Length = 10 or pad.Length = '10 mm' - this sets the length\n\nLet me also check if I need to set BaseFeature. The notes say \"BaseFeature is the previous solid relation, not a sketch/profile field.\" So I shouldn't set BaseFeature here - it's handled automatically by PartDesign::Body when adding features.\n\nLet me finalize the code:\n\n```python\nbody = doc.getObject(\"Body\")\nsketch = doc.getObject(\"Sketch\")\npad = body.newObject(\"PartDesign::Pad\", \"Pad\")\npad.Profile = sketch\n\n\npad.Length = 10\n```\n\nThis creates the Pad with the sketch as profile and 10mm extrusion length."
+      }
+    }
+  ],
+  "created": 1792658071,
+  "model": "qwen3.5-122b-a10b",
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 488,
+    "prompt_tokens": 3252,
+    "total_tokens": 3740,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 423,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 488
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": null,
+      "text_tokens": 3252
+    }
+  }
+}

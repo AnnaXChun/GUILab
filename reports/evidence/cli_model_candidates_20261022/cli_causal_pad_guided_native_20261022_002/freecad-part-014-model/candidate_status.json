@@ -1,0 +1,14 @@
+[
+  {
+    "branch": "A",
+    "status": "READY",
+    "candidate_sha256": "1f23ef63d44c598a2cd01026881188688379c219f5739adc8abb324de15115e1",
+    "origin": "model_generated"
+  },
+  {
+    "branch": "B",
+    "status": "READY",
+    "candidate_sha256": "1f23ef63d44c598a2cd01026881188688379c219f5739adc8abb324de15115e1",
+    "origin": "model_generated"
+  }
+]

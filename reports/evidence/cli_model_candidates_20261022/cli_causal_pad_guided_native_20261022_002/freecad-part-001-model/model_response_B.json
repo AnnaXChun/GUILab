@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-fefa7f53-000c-9034-bd81-ea1ded88eaa7",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "```json\n{\n  \"code\": \"body = doc.getObject(\\\"Body\\\")\\nsketch = doc.getObject(\\\"Sketch\\\")\\npad = body.newObject(\\\"PartDesign::Pad\\\", \\\"Pad\\\")\\npad.Profile = sketch\\npad.Length = 12\"\n}\n```",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning_content": "The user wants me to create a FreeCAD Python construction block that creates a PartDesign::Pad from an existing sketch. Let me analyze the requirements:\n\n1. Get body = doc.getObject(\"Body\")\n2. Get sketch = doc.getObject(\"Sketch\")\n3. Create a Pad object in the body\n4. Set the profile to be the sketch\n5. Set the extrusion length to 12 mm\n6. Return as JSON with a \"code\" field containing the Python code\n\nKey constraints from the instructions:\n- Use body.newObject(type_name, object_name) for creating features\n- For PartDesign::Pad, Profile is the supplied sketch relation\n- Assign the sketch object to pad.Profile\n- Length is a native length property (numeric = millimeters)\n- Do not create replacement sketch, change body placement, or edit existing objects\n- Use exact variable names body, sketch, pad for CAD objects\n- No imports, functions, classes, file operations, etc.\n- Headless FreeCAD App context - no ViewObject/Gui\n\nLet me write the Python code:\n\n```python\nbody = doc.getObject(\"Body\")\nsketch = doc.getObject(\"Sketch\")\npad = body.newObject(\"PartDesign::Pad\", \"Pad\")\npad.Profile = sketch\npad.Length = 12\n```\n\nThis should create a PartDesign::Pad feature named \"Pad\" in the Body, using the Sketch as its profile, with a length of 12mm.\n\nWait, I need to check if there are any additional requirements. Looking at the notes again:\n- BaseFeature is the previous solid relation, not a sketch/profile field\n- The instruction says to create a 12 mm Part Design pad from the main closed profile\n\nThe code looks correct. Let me format it as JSON with the code field."
+      }
+    }
+  ],
+  "created": 1792658065,
+  "model": "qwen3.5-122b-a10b",
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 446,
+    "prompt_tokens": 2736,
+    "total_tokens": 3182,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 381,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 446
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": null,
+      "text_tokens": 2736
+    }
+  }
+}

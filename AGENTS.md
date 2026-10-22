@@ -4,6 +4,8 @@
 
 ## 接手入口
 
+**2026-10-22 当前正在执行**：模型候选成功入口为 `reports/CLI_MODEL_CANDIDATE_SUCCESS_20261022.md`、`reports/CLI_MODEL_CANDIDATE_STATUS_20261022.json`。part-014 两个原始模型响应在同 S0 各执行一次，固定 C、保存重开和各六探针通过，Q=1/1、credit=0；part-001 A 静态拒绝，B READY 随整对跳过，质量 unknown。该新四次账本已结束，历史四次全拒绝保留。全量 `cli_full_sweep_native_20261022_001` 已启动，当前两路并行；禁止重复启动或重放已启动 job。读取本机 summary/jobs 后继续监测，最终完整分母表格由 `scripts/summarize_cli_experiments.py` 汇总。全量未完成不报最终率，单题执行不确定隔离为运行错误，模型服务错误停止新增任务。
+
 **2026-10-22 新用户请求**：跑通模型候选，评测全部 200 题 CLI 并汇总实验表。范围与执行入口见 `docs/MODEL_CANDIDATE_AND_FULL_CLI_20261022.md`；该明确请求覆盖下方“不启动 full-200”的历史限制。先原生核验通用 Pad API、执行四次新候选小批，再按冻结预算跑全量 CLI。付费只在已授权新批次设 1，旧账本不恢复；全量未完成不得报告总体通过率。GUI 停止，训练仍未授权。
 
 **2026-10-22 当前入口**：先读 `reports/CLI_CAUSAL_PILOT_20261022.md`、`reports/CLI_CAUSAL_STATUS.json` 与 `docs/CLI_CAUSAL_CREDIT_PILOT.md`。多步 runner 已实现；part-001/part-014 的原生 S0、Sketch→Pad/Pocket、固定 C、保存重开与每题六探针通过，两对 AuditNote synthetic 控制 credit=0。原四次模型额度已采完，11268 输入/2491 输出 tokens，四条原响应均静态接口拒绝，天然候选执行/有效 pair/训练样本均为 0，原生质量 unknown。六台 VM 停止，272 项项目 tests/7 项上游 CLI tests通过。下一步按 `docs/CLI_CAUSAL_API_COMPARISON.md` 冻结通用 API 说明的等预算对照；本轮不再采样，不改原响应或已耗尽账本。此前 Torus 的一个模型 tie 保留为独立历史。原生多步管线 GO，天然结构信用、方法收益与训练 NO-GO。

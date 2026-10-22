@@ -1,0 +1,7 @@
+{
+  "source_sha256": "b4f846de62d75ba94088e79bd98214c0d93c13fb3c140ff0d599ca0fd17aed44",
+  "returncode": 1,
+  "known_worker_failure": true,
+  "output_summary": "\nTraceback (most recent call last):\n  File \"<string>\", line 372, in <module>\n  File \"<string>\", line 369, in prepare\n  File \"<string>\", line 356, in generic_pad_api_probe\nAttributeError: 'tuple' object has no attribute 'Name'\n\n",
+  "summary_created_postrun": true
+}

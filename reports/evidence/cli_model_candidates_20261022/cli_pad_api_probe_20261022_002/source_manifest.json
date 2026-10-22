@@ -1,0 +1,5 @@
+{
+  "scripts/cli_causal_worker.py": "131a100b76f598717513ecd5ff969a3dfcdc01ced5c7e92f1d7394140974f1f5",
+  "scripts/freecad_pad_api_probe_worker.py": "fa738b973e9f863f772e6fa5750978ef728d6a047240d7f778ccee9ba784568c",
+  "scripts/probe_pad_api.py": "63d6dc64a163aa76c02f7391fc225b321d8cc1e58dc9450a2f01b5d9605387ca"
+}

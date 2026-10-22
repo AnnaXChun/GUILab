@@ -42,3 +42,14 @@ def test_late_uncertain_dispatch_excludes_score_and_does_not_affect_other_job():
     assert finalize_record(good,'FINISHED',[])==good
     missing=finalize_record({'status':'PENDING','strict':None},'ORPHANED_NO_REPLAY',[])
     assert missing['status']=='RUN_ERROR' and missing['strict'] is None
+
+
+def test_finished_full_sweep_reports_delivery_and_unknown_score_separately(tmp_path):
+    from cad_cf.cli_full_results import render_table
+    rows=[{'category':'part','status':'EVALUATED','strict':1,'upstream_raw_score':1,'artifact_count':1},
+          {'category':'part','status':'RUN_ERROR','strict':None,'upstream_raw_score':0,'artifact_count':0}]
+    summary=write_tables(tmp_path,rows,{'model':'mock','cli':{'turns':20}})
+    table=render_table(summary)
+    assert '| 总计 | 2 | 1 | 1 | 0 | 1 | 0 | 0 | 50.00% | 含未知评分 |' in table
+    assert summary['overall']['strict_pass_rate_full'] is None
+    assert summary['overall']['verified_delivery_rate_all_attempted']==.5

@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "selected_files": 165,
+  "json_files": 114,
+  "jsonl_rows": 186,
+  "private_value_violations": [],
+  "prose_scan": {
+    "reports/CLI_MODEL_CANDIDATE_SUCCESS_20261022.md": {
+      "numbered_heading": 0,
+      "contrast": 0,
+      "empty_claim": 0,
+      "ascii_punctuation": 0
+    },
+    "reports/CLI_EXPERIMENTS_20261022.md": {
+      "numbered_heading": 0,
+      "contrast": 0,
+      "empty_claim": 0,
+      "ascii_punctuation": 0
+    }
+  },
+  "project_tests": 279,
+  "model_requests_added_by_validation": 0,
+  "full_cli_status": "RUNNING",
+  "note": "Original evidence SHA validated separately; code/command/URL spans exempt from prose checks."
+}

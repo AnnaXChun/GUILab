@@ -1,0 +1,14 @@
+[
+  {
+    "branch": "A",
+    "status": "CANDIDATE_REJECTED",
+    "reason": "ValueError",
+    "message": "mutation outside Pad scope"
+  },
+  {
+    "branch": "B",
+    "status": "READY",
+    "candidate_sha256": "9350ec276436e0852402dfc6148e9e2f4b4f66fdd894bff2396ace486b9579a6",
+    "origin": "model_generated"
+  }
+]
