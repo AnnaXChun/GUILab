@@ -22,9 +22,11 @@ ENABLE_PAID_RUNS=1 .venv/bin/python scripts/run_cli_full_sweep.py \
   --output results/cli_full_sweep_native_20261022_001
 ```
 
-全量已经启动时，不再运行上面的启动命令。先检查 `results/cli_full_sweep_native_20261022_001/coordinator.json`、`jobs.json` 和 `summary.json`。结束后执行离线汇总和归档：
+全量已经启动时，不再运行上面的启动命令。先检查 `results/cli_full_sweep_native_20261022_001/coordinator.json`、`jobs.json` 和 `summary.json`。结束后先离线刷新，再汇总和归档：
 
 ```bash
+ENABLE_PAID_RUNS=0 .venv/bin/python scripts/summarize_cli_full_sweep.py \
+  --run results/cli_full_sweep_native_20261022_001
 ENABLE_PAID_RUNS=0 .venv/bin/python scripts/summarize_cli_experiments.py \
   --candidate-run results/cli_causal_pad_guided_native_20261022_002 \
   --full-run results/cli_full_sweep_native_20261022_001 \

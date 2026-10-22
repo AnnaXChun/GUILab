@@ -18,9 +18,10 @@
       "ascii_punctuation": 0
     }
   },
-  "project_tests": 281,
+  "project_tests": 283,
   "upstream_cli_tests": 7,
   "full_archive_tests": 2,
+  "full_reporting_regressions": 8,
   "model_requests_added_by_validation": 0,
   "full_cli_status": "RUNNING",
   "note": "Original evidence SHA validated separately; code/command/URL spans exempt from prose checks."

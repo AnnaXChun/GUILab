@@ -53,3 +53,20 @@ def test_finished_full_sweep_reports_delivery_and_unknown_score_separately(tmp_p
     assert '| 总计 | 2 | 1 | 1 | 0 | 1 | 0 | 0 | 50.00% | 含未知评分 |' in table
     assert summary['overall']['strict_pass_rate_full'] is None
     assert summary['overall']['verified_delivery_rate_all_attempted']==.5
+
+
+def test_empty_offline_geometry_rules_do_not_establish_geometry_correctness(tmp_path):
+    (tmp_path/'result.json').write_text(json.dumps({'task_id':'a','category':'part','score':0,'error':''}))
+    diagnostic={'task_id':'a','category':'part','failure_class':'construction_process_wrong',
+                'stages':{'geometry':{'n_checks':0,'ok':True}}}
+    (tmp_path/'evaluation.json').write_text(json.dumps(diagnostic))
+    row=task_record('part','a',tmp_path)
+    assert row['geometry_status']=='UNCHECKED' and row['strict']==0
+    assert summarize([row])['offline_geometry_checked']==0
+    diagnostic['stages']['geometry']={'n_checks':3,'ok':True}
+    (tmp_path/'evaluation.json').write_text(json.dumps(diagnostic))
+    row=task_record('part','a',tmp_path)
+    assert row['geometry_status']=='PASS' and summarize([row])['offline_geometry_checked']==1
+    diagnostic['stages']['geometry']['ok']=1
+    (tmp_path/'evaluation.json').write_text(json.dumps(diagnostic))
+    assert task_record('part','a',tmp_path)['geometry_status']=='UNKNOWN'

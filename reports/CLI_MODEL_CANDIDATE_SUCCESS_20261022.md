@@ -17,6 +17,6 @@ part-014 的两个独立模型响应已从同一原捕获 S0 各执行一次，�
 
 本轮前置与候选共四次 VM 生命周期、1410.861 秒，四台均停止。共 14 次 /execute：14 次有完成传输记录，包含两次已知 worker 失败，uncertain=0；其中模型候选执行 2 次。旧模型账本 SHA 未变，本批四次额度已经结束。全量 CLI 为另一个已授权实验，不能混入本批计数。
 
-实际命令为 `probe_pad_api.py` 的 001/002、`run_cli_causal_credit.py` 的 guided native 001/002、`audit_cli_causal_credit.py --run results/cli_causal_pad_guided_native_20261022_002`。后续交付验证为 281 项项目测试与 7 项上游 CLI 测试通过；独立原生协议审计为 `PASS_NATIVE_MODEL_PROTOCOL_AUDIT`。
+实际命令为 `probe_pad_api.py` 的 001/002、`run_cli_causal_credit.py` 的 guided native 001/002、`audit_cli_causal_credit.py --run results/cli_causal_pad_guided_native_20261022_002`。后续交付验证为 283 项项目测试与 7 项上游 CLI 测试通过；独立原生协议审计为 `PASS_NATIVE_MODEL_PROTOCOL_AUDIT`。
 
 当前 GO：模型代码块原生执行、固定后续代码和参数响应。方法增益与训练仍 NO-GO。全量 200 题 CLI 已按 `docs/MODEL_CANDIDATE_AND_FULL_CLI_20261022.md` 启动，结果由独立表格统计；本报告不增加官方 baseline episode。

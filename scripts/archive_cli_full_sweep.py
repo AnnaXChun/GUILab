@@ -38,6 +38,10 @@ def archive(root, run, output, private=()):
     for job in jobs:
         if job['status'] == 'PENDING':
             continue
+        for name in ('exit.json', 'runner.log'):
+            path = Path(job['directory']) / name
+            if path.exists() and (name == 'exit.json' or job['status'] == 'RUN_ERROR'):
+                sources.append(path)
         cache = root / 'results' / 'official_cli' / job['run_id'] / job['task_id']
         for name in ('result.json', 'public_task.json', 'traj.jsonl', 'trajectory.jsonl'):
             path = cache / name
