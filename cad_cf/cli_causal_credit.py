@@ -54,7 +54,7 @@ def candidate_code(text, *, body_name='Body', sketch_name='Sketch'):
                         elif ast.unparse(call.func) not in ('body.newObject','body.addObject'):
                             raise ValueError('Pad must be created inside supplied body')
                 elif isinstance(target,ast.Attribute) and isinstance(target.value,ast.Name):
-                    if not ((target.value.id=='pad' and target.attr in ('Length','Profile','Shape','Reversed','Midplane','Type','ReferenceAxis','AlongSketchNormal'))
+                    if not ((target.value.id=='pad' and target.attr in ('Length','Profile','Shape','Reversed','Midplane','Type','ReferenceAxis','AlongSketchNormal','Refine'))
                             or (target.value.id=='body' and target.attr=='Tip')):
                         raise ValueError('mutation outside Pad scope')
                 else:raise ValueError('nested mutation forbidden')
@@ -63,6 +63,8 @@ def candidate_code(text, *, body_name='Body', sketch_name='Sketch'):
             if f=='doc.getObject':
                 if len(node.args)!=1 or ast.literal_eval(node.args[0]) not in (body_name,sketch_name):
                     raise ValueError('lookup outside supplied bindings')
+            elif f=='doc.recompute':
+                if node.args or node.keywords:raise ValueError('only ordinary document recompute permitted')
             elif f in ('body.newObject','body.addObject'):
                 if len(node.args)!=2 or ast.literal_eval(node.args[0]) not in ('PartDesign::Pad','PartDesign::Feature') or ast.literal_eval(node.args[1])!='Pad':
                     raise ValueError('only prescribed output creation')

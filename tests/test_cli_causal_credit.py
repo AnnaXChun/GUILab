@@ -84,6 +84,8 @@ def test_missing_compound_mass_metrics_are_unknown():
 
 def test_model_block_keeps_original_text_and_bindings():
     assert candidate_code('```json\n'+json.dumps({'code':PAD})+'\n```')==PAD
+    ordinary=PAD+"pad.ReferenceAxis=(sketch,['N_Axis'])\npad.Refine=True\ndoc.recompute()\n"
+    assert candidate_code(json.dumps({'code':ordinary}))==ordinary
     for code in (PAD.replace("'Body'","'Guard'"),PAD+"sketch.Placement.Base.x=3",PAD+"doc.saveAs('file')",PAD+"body.Placement=pad.Placement",PAD+"pad=sketch",'import os'):
         with pytest.raises(ValueError):candidate_code(json.dumps({'code':code}))
 

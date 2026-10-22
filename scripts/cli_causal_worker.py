@@ -141,6 +141,12 @@ def continuation(doc, spec):
         center=b['center_local']
         pocket_sketch.addGeometry(Part.Circle(App.Vector(*center),App.Vector(0,0,1),4),False)
         pocket_sketch.addConstraint(Sketcher.Constraint('Radius',0,4))
+        if abs(center[0])<1e-9:
+            pocket_sketch.addConstraint(Sketcher.Constraint('PointOnObject',0,3,-2))
+        else:pocket_sketch.addConstraint(Sketcher.Constraint('DistanceX',0,3,center[0]))
+        if abs(center[1])<1e-9:
+            pocket_sketch.addConstraint(Sketcher.Constraint('PointOnObject',0,3,-1))
+        else:pocket_sketch.addConstraint(Sketcher.Constraint('DistanceY',0,3,center[1]))
         # Stable object/coordinate binding, independent of candidate face numbering.
         for axis,n in zip(('x','y','z'),b['normal_global']):
             pocket_sketch.setExpression('Placement.Base.'+axis,b['sketch']+'.Placement.Base.'+axis+' + ('+repr(n)+') * Pad.Length')
