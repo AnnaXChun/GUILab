@@ -10,6 +10,7 @@ def task_record(category, task_id, directory):
     path = directory / 'result.json'
     result = {'category': category, 'task_id': task_id, 'status': 'PENDING', 'strict': None,
         'upstream_raw_score': None, 'termination': None, 'output_tokens': None, 'turns': None,
+        'terminal_calls': None,
         'artifact_count': 0, 'native_reopen_status': 'NOT_AUDITED', 'reason': 'result not available'}
     if not path.exists():
         return result
@@ -23,6 +24,7 @@ def task_record(category, task_id, directory):
     result.update(status='RUN_ERROR' if unavailable else ('EVALUATED' if valid else 'UNKNOWN_SCORE'),
         strict=None if unavailable or not valid else float(score), upstream_raw_score=score,
         termination=raw.get('termination'), output_tokens=raw.get('output_tokens'), turns=raw.get('turns'),
+        terminal_calls=raw.get('terminal_calls'),
         artifact_count=len(list(directory.glob('*.FCStd'))), reason=raw.get('failure_reason') or str(error or ''))
     return result
 
@@ -38,6 +40,8 @@ def summarize(records):
         'pending': sum(r['status'] == 'PENDING' for r in records),
         'strict_pass_rate_full': passed / total if total and len(evaluated) == total else None,
         'strict_pass_rate_evaluated': passed / len(evaluated) if evaluated else None,
+        'mean_official_score_evaluated': sum(r['strict'] for r in evaluated)/len(evaluated) if evaluated else None,
+        'mean_official_score_full': sum(r['strict'] for r in evaluated)/total if total and len(evaluated)==total else None,
         'coverage': len(evaluated) / total if total else None,
         'saved_artifacts': sum(r['artifact_count'] > 0 for r in records)}
 

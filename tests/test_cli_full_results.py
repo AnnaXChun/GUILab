@@ -25,3 +25,4 @@ def test_all_evaluated_strict_rate_uses_every_task_and_preserves_partial_score(t
         rows.append(task_record('part',str(index),folder))
     result=summarize(rows)
     assert result['strict_pass_rate_full']==1/3 and result['failed']==2 and result['coverage']==1
+    assert result['mean_official_score_full']==.5

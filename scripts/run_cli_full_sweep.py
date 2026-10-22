@@ -66,6 +66,8 @@ def main():
         'authorization': '2026-10-22 user explicitly requested all CLI tasks and an experiment table',
         'cadworld_commit': 'e5d0ebab8bd28da6e98c68c61db05747d1647f7b',
         'tasks_sha256': hashlib.sha256(tasks_path.read_bytes()).hexdigest(),
+        'runtime_config_sha256': hashlib.sha256(a.runtime_config.read_bytes()).hexdigest(),
+        'environment_evidence_sha256': hashlib.sha256(a.environment_evidence.read_bytes()).hexdigest(),
         'max_total_calls': 200*a.turns, 'max_total_output_tokens': 200*a.output_tokens,
         'cli': {'turns': a.turns, 'per_call_tokens': 2048, 'output_tokens': a.output_tokens, 'wall_seconds': 1200}}
     if a.resume:
