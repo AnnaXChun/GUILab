@@ -2,6 +2,8 @@
 
 全量汇总的结果路径补齐 pinned runner 的 `CLI/results/actc/<run_id>/<task_id>` 层级。活动调度进程沿用旧读取代码，仅增加指向原结果的本地只读 symlink 兼容；没有修改轨迹、官方分数或已启动任务。离线表格改为从同一 JSON 快照渲染，区分仍待完成与全部尝试后含未知评分；运行错误保留完整分母。
 
+全量的 runtime/evidence SHA 在 config 中冻结，runtime Python 模块另与 `025cab6` 核对。源码核对是在批次启动后记录，标为 posthoc；这与候选批次的请求前源码记录分别报告。当前除离线汇总外的 runtime 模块均与参考提交一致，未改正在执行的模型 prompt 或 controller guard。
+
 本轮通用 Pad API 先经原生验证；Quantity 字面量构造最小放行，四条历史拒绝理由保持。可信分支 worker 从 110→180 秒、HTTP 等待 200 秒，默认桥接上限仍 120 秒；旧失败不重发。模型原文不改，固定 C 与 S0 保持。[成功小批](CLI_MODEL_CANDIDATE_SUCCESS_20261022.md)与全量原 terminal CLI 分开；全量采用单题 16384 输出 tokens、20 轮，单次上限沿用 8192，不冒充官方默认 51200 预算复现。
 
 ## 多步原生执行的最小适配
