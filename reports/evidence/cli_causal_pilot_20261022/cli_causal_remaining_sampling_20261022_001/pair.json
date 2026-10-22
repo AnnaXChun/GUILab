@@ -1,0 +1,146 @@
+{
+  "id": "freecad-part-014",
+  "classification": "model_sourced_cli_causal_block_pair",
+  "intent": {
+    "instruction": "The precondition file is saved at /home/user/Precondition_Unnamed.FCStd. Open that file and use the existing circular sketch, defined by points at (-10, 0), (0, 8), and (10, 0), as the base profile. Create a 10 mm Part Design pad from the circle, then add a concentric circular pocket with radius of 4mm, cut 6 mm deep from the front face to the center of the cylindershape. Save the completed solid model to /home/user/Unnamed.FCStd.",
+    "task_id": "freecad-part-014"
+  },
+  "spec": {
+    "task_id": "freecad-part-014",
+    "binding": {
+      "body": "Body",
+      "sketch": "Sketch",
+      "circle_index": 3,
+      "radius": 10.25,
+      "center_local": [
+        0.0,
+        -2.25,
+        0.0
+      ],
+      "normal_global": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "sketch_placement": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius_constraints": [],
+      "public_task": "freecad-part-014"
+    },
+    "pad_length": 10,
+    "probes": [
+      {
+        "id": "zero",
+        "object": "Pad",
+        "parameter": null,
+        "factor": 1.0
+      },
+      {
+        "id": "pad-length-0.8",
+        "object": "Pad",
+        "parameter": "Length",
+        "factor": 0.8
+      },
+      {
+        "id": "pad-length-1.2",
+        "object": "Pad",
+        "parameter": "Length",
+        "factor": 1.2
+      },
+      {
+        "id": "second-0.8",
+        "object": "Pocket",
+        "parameter": "Length",
+        "factor": 0.8
+      },
+      {
+        "id": "second-1.2",
+        "object": "Pocket",
+        "parameter": "Length",
+        "factor": 1.2
+      },
+      {
+        "id": "guard",
+        "object": "ProbeGuard",
+        "parameter": "Length",
+        "factor": 1.2
+      }
+    ]
+  },
+  "probes": [
+    {
+      "id": "zero",
+      "object": "Pad",
+      "parameter": null,
+      "factor": 1.0
+    },
+    {
+      "id": "pad-length-0.8",
+      "object": "Pad",
+      "parameter": "Length",
+      "factor": 0.8
+    },
+    {
+      "id": "pad-length-1.2",
+      "object": "Pad",
+      "parameter": "Length",
+      "factor": 1.2
+    },
+    {
+      "id": "second-0.8",
+      "object": "Pocket",
+      "parameter": "Length",
+      "factor": 0.8
+    },
+    {
+      "id": "second-1.2",
+      "object": "Pocket",
+      "parameter": "Length",
+      "factor": 1.2
+    },
+    {
+      "id": "guard",
+      "object": "ProbeGuard",
+      "parameter": "Length",
+      "factor": 1.2
+    }
+  ],
+  "continuation": "def continuation(doc, spec):\n    b=spec['binding'];body=doc.getObject(b['body']);sketch=doc.getObject(b['sketch'])\n    pad=doc.getObject('Pad')\n    if pad is None or 'Length' not in pad.PropertiesList:raise RuntimeError('suffix requires Pad.Length')\n    body.touch();doc.recompute()\n    if spec['task_id']=='freecad-part-001':\n        cs=b['radius_constraints']\n        if len(cs)!=1:raise RuntimeError('missing native dimensional constraint for measurement')\n        divisor=2 if cs[0]['type']=='Diameter' else 1\n        pad.addProperty('App::PropertyFloat','AuditVolume_mm3')\n        expression='pi * ('+b['sketch']+'.Constraints['+str(cs[0]['index'])+'] / ('+str(divisor)+' mm))^2 * Pad.Length / (1 mm)'\n        pad.setExpression('AuditVolume_mm3',expression)\n    else:\n        pocket_sketch=body.newObject('Sketcher::SketchObject','PocketSketch')\n        pocket_sketch.Placement=sketch.Placement\n        center=b['center_local']\n        pocket_sketch.addGeometry(Part.Circle(App.Vector(*center),App.Vector(0,0,1),4),False)\n        pocket_sketch.addConstraint(Sketcher.Constraint('Radius',0,4))\n        if abs(center[0])<1e-9:\n            pocket_sketch.addConstraint(Sketcher.Constraint('PointOnObject',0,3,-2))\n        else:pocket_sketch.addConstraint(Sketcher.Constraint('DistanceX',0,3,center[0]))\n        if abs(center[1])<1e-9:\n            pocket_sketch.addConstraint(Sketcher.Constraint('PointOnObject',0,3,-1))\n        else:pocket_sketch.addConstraint(Sketcher.Constraint('DistanceY',0,3,center[1]))\n        # Stable object/coordinate binding, independent of candidate face numbering.\n        for axis,n in zip(('x','y','z'),b['normal_global']):\n            pocket_sketch.setExpression('Placement.Base.'+axis,b['sketch']+'.Placement.Base.'+axis+' + ('+repr(n)+') * Pad.Length')\n        doc.recompute()\n        pocket=body.newObject('PartDesign::Pocket','Pocket')\n        pocket.Profile=pocket_sketch;pocket.Length=6;pocket.Reversed=False\n        body.Tip=pocket\n    doc.recompute()\n",
+  "seed_code": "",
+  "prefix": "",
+  "candidates": {
+    "A": "",
+    "B": ""
+  },
+  "candidate_origins": {
+    "A": "independent_model_sample",
+    "B": "independent_model_sample"
+  },
+  "hashes": {
+    "intent_sha256": "915ec346c9b8a2b7f5a1d158007bdf62e37820387dc3ffa97ce315d0c0aa29a4",
+    "spec_sha256": "6cbd6125dfaae1bb3ce3d2d5a26f5836bc3bbe57b92b1054d43c8a44d84b80b6",
+    "probes_sha256": "ffaecfd0919f99f75d859470c1dcbaa4286772dd02f810a4330b1a78852b93a5",
+    "continuation_sha256": "9294538f60cead0866707e6169a68b56d851a9983d0f4f6264e0b34724299825",
+    "candidate_sha256": {
+      "A": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "B": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "candidate_interface_rejected": true
+}

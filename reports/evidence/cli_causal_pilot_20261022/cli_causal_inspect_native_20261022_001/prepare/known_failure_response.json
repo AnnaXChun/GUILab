@@ -1,0 +1,5 @@
+{
+  "returncode": 1,
+  "error": "",
+  "output": "\nTraceback (most recent call last):\n  File \"<string>\", line 235, in <module>\n  File \"<string>\", line 210, in prepare\n  File \"<string>\", line 150, in observe\n  File \"<string>\", line 86, in native_state\nAttributeError: 'Part.Compound' object has no attribute 'CenterOfMass'\n\n"
+}

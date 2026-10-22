@@ -1,0 +1,12 @@
+[
+  {
+    "task_id": "freecad-part-001",
+    "source": "vendor/CADWORLD/evaluation_examples/fixtures/precondition/freecad-part-001-precondition.FCStd",
+    "source_sha256": "f521f30c6007a5df732cd5ac0983051360c1add0c1381a30252f0677e942a358"
+  },
+  {
+    "task_id": "freecad-part-014",
+    "source": "vendor/CADWORLD/evaluation_examples/fixtures/precondition/freecad-part-014-precondition.FCStd",
+    "source_sha256": "bcd41e7ffe671fd90d374d90584be0b495f6dd06556ae71e180b90c9a4f59f03"
+  }
+]

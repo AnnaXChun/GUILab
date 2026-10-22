@@ -1,0 +1,2 @@
+{"event": "dispatch", "id": "prepare", "command_sha256": "a27c7d4559fc3c14ff450675cff19f4ce6dbc4b327d24a35300cb133a91c781e"}
+{"event": "error", "id": "prepare", "quality": null, "reason": "RuntimeError", "message": "VM command failed: "}

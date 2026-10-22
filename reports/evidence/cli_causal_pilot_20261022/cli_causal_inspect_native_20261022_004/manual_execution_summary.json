@@ -1,0 +1,8 @@
+{
+  "status": "COMPLETE",
+  "dispatches": 1,
+  "uncertain": 0,
+  "elapsed_seconds": 70.807,
+  "model_calls": 0,
+  "readiness": "GET /platform=Linux"
+}

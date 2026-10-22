@@ -1,5 +1,7 @@
 # Pilot 结果
 
+2026-10-22 [多步 CLI pilot](CLI_CAUSAL_PILOT_20261022.md)完成两题可信原生续执行、保存重开和各六探针，两对 synthetic 文本控制 Q=1/1、credit=0。4 次模型请求使用完原账本，11268 输入/2491 输出 tokens，四条响应均静态接口拒绝，天然执行/有效自然 pair/新增训练样本均为 0，credit=null。272 项项目测试与 7 项上游 CLI 测试通过，独立采样审计 PASS。详见 `CLI_CAUSAL_STATUS.json` 与 `evidence/cli_causal_pilot_20261022/INDEX.json`；下方 Torus tie 为独立历史。
+
 最新[CLI 模型配对验证](CLI_API_GUIDED_PAIR_20261021.md)已完成：相同 S0、两条独立模型候选、原生保存重开、六个探针均通过，Q=1/1，credit=0。本轮 2 次模型请求、2430 输入/1147 输出 tokens、4 次 native 派发；原围栏拒绝和显式封装适配单列。当前一个有效 tie，训练 eligibility 为 false；方法比较与独立任务 pilot 待冻结。下方失败小批保留为历史。
 
 捕获S0后模型两次采样已返回，但原文执行A ParserError、B缺hasProperty API，pair invalid、credit=null；首超时与白名单拒绝记录保留。共3模型请求/5native派发，已知2144输入/1283输出tokens及2048未知预留单列；无有效模型pair和训练样本。[本批报告](CLI_MODEL_PAIR_20261021.md)记录完整同S0恢复与失败审计。

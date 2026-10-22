@@ -1,0 +1,7 @@
+{
+  "event": "error",
+  "id": "prepare",
+  "quality": null,
+  "reason": "ExecutionUncertain",
+  "message": "execution outcome unknown; quarantine clone"
+}

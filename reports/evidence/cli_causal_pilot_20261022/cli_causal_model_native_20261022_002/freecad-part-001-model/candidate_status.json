@@ -1,0 +1,14 @@
+[
+  {
+    "branch": "A",
+    "status": "CANDIDATE_REJECTED",
+    "reason": "ValueError",
+    "message": "Pad must be created inside supplied body"
+  },
+  {
+    "branch": "B",
+    "status": "CANDIDATE_REJECTED",
+    "reason": "ValueError",
+    "message": "mutation outside Pad scope"
+  }
+]

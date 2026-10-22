@@ -1,0 +1,2 @@
+{"event": "dispatch", "id": "prepare", "command_sha256": "46301c626b4abcddc08d52063e3bfb19c819f7184fda5d5dfa4e8152504f1b99"}
+{"event": "error", "id": "prepare", "quality": null, "reason": "ExecutionUncertain", "message": "execution outcome unknown; quarantine clone"}

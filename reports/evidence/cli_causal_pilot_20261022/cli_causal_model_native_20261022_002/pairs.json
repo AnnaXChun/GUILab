@@ -1,0 +1,48 @@
+[
+  {
+    "id": "freecad-part-001-note-control",
+    "classification": "synthetic_irrelevant_block_control",
+    "pair_valid": true,
+    "invalid_reasons": [],
+    "A": {
+      "q": 1,
+      "initial_proxy_q": 1,
+      "reason": null,
+      "failures": []
+    },
+    "B": {
+      "q": 1,
+      "initial_proxy_q": 1,
+      "reason": null,
+      "failures": []
+    },
+    "credit": 0,
+    "training_eligible": false,
+    "method_advantage": "NOT_ESTABLISHED",
+    "initial_geometry_equal_and_correct": true,
+    "response_discriminating": false
+  },
+  {
+    "id": "freecad-part-014-note-control",
+    "classification": "synthetic_irrelevant_block_control",
+    "pair_valid": true,
+    "invalid_reasons": [],
+    "A": {
+      "q": 1,
+      "initial_proxy_q": 1,
+      "reason": null,
+      "failures": []
+    },
+    "B": {
+      "q": 1,
+      "initial_proxy_q": 1,
+      "reason": null,
+      "failures": []
+    },
+    "credit": 0,
+    "training_eligible": false,
+    "method_advantage": "NOT_ESTABLISHED",
+    "initial_geometry_equal_and_correct": true,
+    "response_discriminating": false
+  }
+]

@@ -1,11 +1,34 @@
 {
   "schema_version": 1,
   "updated_at": "2026-10-22",
-  "latest_run": "cli_model_pair_api_guided_saved_20261021_001",
+  "latest_run": "cli_causal_remaining_sampling_20261022_001",
   "latest_gui_controls": "gui_controls_20261020",
   "latest_gui_grounding": "gui_grounding_20261020",
-  "latest_commands_report": "reports/CLI_API_GUIDED_PAIR_20261021.md",
+  "latest_commands_report": "reports/CLI_CAUSAL_PILOT_20261022.md",
   "latest_totals": {
+    "scope": "2026-10-22 multistep CLI pilot only; historical Torus/baseline totals separate",
+    "model_requests": 4,
+    "known_input_tokens": 11268,
+    "known_output_tokens": 2491,
+    "reasoning_tokens": 2169,
+    "total_cost_usd": null,
+    "native_dispatches": 10,
+    "native_complete": 9,
+    "native_uncertain": 1,
+    "natural_candidate_executions": 0,
+    "valid_model_pairs": 0,
+    "synthetic_control_pairs": 2,
+    "synthetic_control_credits": [0, 0],
+    "credit": null,
+    "remaining_model_calls": 0,
+    "official_episodes_added": 0,
+    "original_actc_pairs": 0,
+    "training_rows_added": 0,
+    "project_tests": 272,
+    "upstream_cli_tests": 7,
+    "all_project_vms_stopped": true
+  },
+  "historical_model_pair_series_20261021": {
     "scope": "captured CLI model-pair series only; earlier GUI/baseline totals separate",
     "model_requests": 5,
     "known_input_tokens": 4574,
@@ -143,7 +166,7 @@
     "report": "reports/GUI_COORDINATE_AUDIT.md",
     "evidence": "reports/evidence/gui_coordinate_audit_20261020/comparison.json"
   },
-  "historical_sections_scope": "baseline_smoke and mac_infrastructure_result below retain the 2026-10-19 historical totals; current totals are latest_totals",
+  "historical_sections_scope": "Historical model-pair, baseline and GUI totals retain their own scope; current pilot totals are latest_totals",
   "project": "GUILab / CADWorld ACTC",
   "repository": "https://github.com/AnnaXChun/GUILab",
   "branch": "main",
@@ -165,8 +188,8 @@
     "note": "Three real bounded episodes evaluated, all strict=0 and no output file; not paper/full benchmark reproduction.",
     "real_episodes": 3
   },
-  "next_phase": "P0",
-  "next_action": "读取 docs/CLI_CAUSAL_CREDIT_PILOT.md 与 configs/cli_causal_credit_pilot_20261022.json；先核对 part-001/part-014 供应文件，扩展 Sketch/Body/Pad/Pocket observer，冻结真实 S0、共同续执行 C 和探针，做无模型 clone/零信用控制。通过后按四次新生成上限采样；旧 Torus runner 不支持该配置。",
+  "next_phase": "CLI_CAUSAL_API_COMPARISON_DESIGN",
+  "next_action": "读取 reports/CLI_CAUSAL_PILOT_20261022.md、reports/CLI_CAUSAL_STATUS.json 与 docs/CLI_CAUSAL_API_COMPARISON.md；先原生核验通用 Profile/Body feature/长度单位说明，再冻结新的等预算对照。本轮已用完四次账本，不重开、不改原响应、不恢复 GUI。",
   "paid_run_authorization_added": true,
   "defaults": {
     "ENABLE_PAID_RUNS": 0,
@@ -469,6 +492,8 @@
     "cli_data_cleaning": "GO",
     "cli_sft_rl_training": "NO-GO",
     "same_s0_model_block_execution": "GO",
+    "native_multistep_pipeline": "GO",
+    "natural_multistep_credit_data": "NO-GO",
     "structural_credit_method_advantage": "NO-GO"
   },
   "baseline_continuation_authorized": true,
@@ -481,16 +506,21 @@
     "unknown_output_reservation": 128
   },
   "active_research_protocol": "CLI_ONLY",
-  "current_focus": "CLI 多步构造局部信用设计已定义；下一步原生 observer 与同 S0 无模型验收，GUI 停止",
+  "current_focus": "CLI 多步原生管线与控制通过；四条模型响应静态拒绝，下一步通用 API 说明等预算对照，GUI 停止",
   "latest_cli_status": "reports/CLI_STATUS.json",
-  "latest_cli_report": "reports/CLI_API_GUIDED_PAIR_20261021.md",
-  "current_next_step": "实现并核验 part-001/part-014 的原生 observer、共同续执行和 clone 控制；再执行有界模型采样。设计一致性检查已通过，新 runner 未实现，本轮新模型/VM 为 0，方法收益和训练尚未验证。",
+  "latest_cli_report": "reports/CLI_CAUSAL_PILOT_20261022.md",
+  "latest_cli_causal_status": "reports/CLI_CAUSAL_STATUS.json",
+  "current_next_step": "原生管线 GO，天然结构信用/方法收益/训练 NO-GO。按 docs/CLI_CAUSAL_API_COMPARISON.md 准备通用 API 说明对照；当前四次额度已结束，新对照只定义，不在交付中执行。",
   "next_cli_causal_pilot": {
-    "status": "DESIGN_FROZEN_RUNNER_PENDING",
+    "status": "NATIVE_CONTROLS_PASS_MODEL_CANDIDATES_REJECTED",
     "protocol": "docs/CLI_CAUSAL_CREDIT_PILOT.md",
     "config": "configs/cli_causal_credit_pilot_20261022.json",
     "static_validation": "reports/CLI_CAUSAL_DESIGN_VALIDATION_20261022.json",
-    "actual_model_calls": 0,
-    "actual_native_dispatches": 0
+    "actual_model_calls": 4,
+    "actual_native_dispatches": 10,
+    "remaining_model_calls": 0,
+    "report": "reports/CLI_CAUSAL_PILOT_20261022.md",
+    "evidence": "reports/evidence/cli_causal_pilot_20261022/INDEX.json",
+    "next_protocol": "docs/CLI_CAUSAL_API_COMPARISON.md"
   }
 }

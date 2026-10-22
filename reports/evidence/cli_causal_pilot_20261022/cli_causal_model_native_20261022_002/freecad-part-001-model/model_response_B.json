@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-403a2fdc-94d6-9bdf-be8e-a24dab3e4264",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "```json\n{\n  \"code\": \"body = doc.getObject(\\\"Body\\\")\\nsketch = doc.getObject(\\\"Sketch\\\")\\npad = body.newObject(\\\"PartDesign::Pad\\\", \\\"Pad\\\")\\npad.Base = sketch\\npad.Length = App.Units.Quantity(\\\"12 mm\\\")\\npad.Mode = \\\"Topological\\\"\"\n}\n```",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning_content": "The user wants me to create a FreeCAD Python construction block that will:\n1. Get the body object named \"Body\"\n2. Get the sketch object named \"Sketch\"\n3. Create a PartDesign::Pad feature named \"Pad\" from the sketch\n4. Set the extrusion length to 12 mm\n\nLet me write the code block following the constraints:\n- Use exact variable names body, sketch, pad for CAD objects\n- Don't change any existing objects' geometry\n- No imports, functions, classes, file operations, shell, network, saving or document creation\n- Can create PartDesign::Pad or PartDesign::Feature named Pad\n- Set Pad Length/Profile properties\n\nHere's what I need to do:\n1. Get the body and sketch objects\n2. Create a new PartDesign::Pad feature\n3. Set its profile (the sketch)\n4. Set its length to 12mm\n5. Add it to the body\n\n```python\nbody = doc.getObject(\"Body\")\nsketch = doc.getObject(\"Sketch\")\npad = body.newObject(\"PartDesign::Pad\", \"Pad\")\npad.Profile = [sketch]\npad.Length = App.Units.Quantity(\"12 mm\")\n```\n\nWait, I need to check the proper way to set up a Pad in PartDesign. The Pad needs to be added to the body and reference the sketch as its profile.\n\nLet me refine this:\n\n```python\nbody = doc.getObject(\"Body\")\nsketch = doc.getObject(\"Sketch\")\npad = body.newObject(\"PartDesign::Pad\", \"Pad\")\npad.Base = sketch\npad.Length = App.Units.Quantity(\"12 mm\")\n```\n\nActually, looking at FreeCAD PartDesign API, the Pad feature typically uses `Base` property for the sketch/reference, and `Length` for the extrusion distance. Let me make sure this is correct.\n\nIn PartDesign::Pad:\n- Base: The profile/sketch to extrude\n\n\n- Length: The extrusion distance\n\nI should also consider setting Mode if needed, but for a basic pad, just Base and Length should work. Let me finalize the code with the proper structure."
+      }
+    }
+  ],
+  "created": 1792654627,
+  "model": "qwen3.5-122b-a10b",
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 540,
+    "prompt_tokens": 2559,
+    "total_tokens": 3099,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 461,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 540
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": null,
+      "text_tokens": 2559
+    }
+  }
+}

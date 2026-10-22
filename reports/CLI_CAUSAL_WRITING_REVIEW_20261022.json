@@ -1,0 +1,31 @@
+{
+  "scope": "本轮新增和改写的中文段落，历史正文与原模型响应保留",
+  "files": [
+    "AGENTS.md",
+    "HANDOFF.md",
+    "docs/CLI_CAUSAL_CREDIT_PILOT.md",
+    "reports/REPRO_STATUS.md",
+    "reports/BASELINE_REPRO.md",
+    "reports/PILOT.md",
+    "reports/FAILURE_CASES.md",
+    "reports/DEVIATIONS.md",
+    "docs/CLI_CAUSAL_API_COMPARISON.md",
+    "reports/CLI_CAUSAL_PILOT_20261022.md"
+  ],
+  "hits": {
+    "numbered_headings": [],
+    "contrast_phrases": [],
+    "empty_commentary": [],
+    "halfwidth_chinese_punctuation": []
+  },
+  "counts": {
+    "numbered_headings": 0,
+    "contrast_phrases": 0,
+    "empty_commentary": 0,
+    "halfwidth_chinese_punctuation": 0
+  },
+  "protected": "数字、任务名、代码、命令、哈希、术语和历史结果保持；代码块与行内代码不改写",
+  "facts_review": "两题/四请求/零天然执行和pair/两控制均零信用；unknown没有改为Q=0",
+  "structure_review": "交接入口更新为实际状态；历史计数分开保留，下一批只定义",
+  "rhythm_review": "已分开回读事实、措辞与句子停顿；未增加未执行结果"
+}

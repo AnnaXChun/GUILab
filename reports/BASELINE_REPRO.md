@@ -1,5 +1,7 @@
 # 基线复现
 
+2026-10-22 [多步 CLI 构造小批](CLI_CAUSAL_PILOT_20261022.md)属于扩展局部干预协议。两题可信原生管线和控制通过，4 条模型响应均在执行前被接口拒绝，新增官方 baseline episode 为 0。官方 terminal CLI 与 GUI-only 的历史成绩保留；本批不更新其成功率，也不把控制成功计作模型任务成功。
+
 最新[CLI 接口修复验证](CLI_API_GUIDED_PAIR_20261021.md)取得两个原生测量候选成功、一个有效 tie 配对，Q=1/1。它使用通用 API 说明和显式 JSON 围栏适配，属于扩展测量协议。官方 terminal CLI 历史成绩、原 prompt baseline 与 GUI-only 结果分别保留；本轮新增官方 episode 为 0。
 
 最新[模型代码块小批](CLI_MODEL_PAIR_20261021.md)使用扩展接口和capture-before-request，不是官方terminal baseline完整episode。真实两候选在FreeCAD中失败，原始错误保留；旧官方CLI得分未修改。

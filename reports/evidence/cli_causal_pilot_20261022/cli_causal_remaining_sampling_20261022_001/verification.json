@@ -1,0 +1,92 @@
+{
+  "status": "PASS_FROZEN_SAMPLING_AND_REJECTION_AUDIT",
+  "model_requests": 4,
+  "input_tokens": 11268,
+  "output_tokens": 2491,
+  "reasoning_tokens": 2169,
+  "budget_limit": 4,
+  "remaining_calls": 0,
+  "original_code_not_edited": true,
+  "rejections": [
+    {
+      "task": "freecad-part-001",
+      "branch": "A",
+      "reason": "Pad must be created inside supplied body",
+      "response_sha256": "57429f1e3b55b71a865876123302b220bdc6fcec61c734155c769d9aa840ac96"
+    },
+    {
+      "task": "freecad-part-001",
+      "branch": "B",
+      "reason": "mutation outside Pad scope",
+      "response_sha256": "505d388715158f8dfa4df0d3cb770b26916fd520c0673f03f12d1ec25a806e2b"
+    },
+    {
+      "task": "freecad-part-014",
+      "branch": "A",
+      "reason": "Pad must be created inside supplied body",
+      "response_sha256": "d2ef85ef0b08ae1de90ef5cf24bcd2d23e79008ce06520f0a4b419b9c38149a2"
+    },
+    {
+      "task": "freecad-part-014",
+      "branch": "B",
+      "reason": "Pad must be created inside supplied body",
+      "response_sha256": "7ac760793a24c3bc482ac3b034ee50ebb743baac6a414da3ae31398a861edcd5"
+    }
+  ],
+  "controls": [
+    {
+      "id": "freecad-part-001-note-control",
+      "classification": "synthetic_irrelevant_block_control",
+      "pair_valid": true,
+      "invalid_reasons": [],
+      "A": {
+        "q": 1,
+        "initial_proxy_q": 1,
+        "reason": null,
+        "failures": []
+      },
+      "B": {
+        "q": 1,
+        "initial_proxy_q": 1,
+        "reason": null,
+        "failures": []
+      },
+      "credit": 0,
+      "training_eligible": false,
+      "method_advantage": "NOT_ESTABLISHED",
+      "initial_geometry_equal_and_correct": true,
+      "response_discriminating": false
+    },
+    {
+      "id": "freecad-part-014-note-control",
+      "classification": "synthetic_irrelevant_block_control",
+      "pair_valid": true,
+      "invalid_reasons": [],
+      "A": {
+        "q": 1,
+        "initial_proxy_q": 1,
+        "reason": null,
+        "failures": []
+      },
+      "B": {
+        "q": 1,
+        "initial_proxy_q": 1,
+        "reason": null,
+        "failures": []
+      },
+      "credit": 0,
+      "training_eligible": false,
+      "method_advantage": "NOT_ESTABLISHED",
+      "initial_geometry_equal_and_correct": true,
+      "response_discriminating": false
+    }
+  ],
+  "native_dispatches_in_model_run": 5,
+  "natural_candidate_executions": 0,
+  "valid_model_pairs": 0,
+  "credit": null,
+  "training_rows": 0,
+  "historical_ledgers_unchanged": true,
+  "active_ledger_appended_in_place": true,
+  "native_worker_failures_not_inferred_from_static_rejection": true
+}

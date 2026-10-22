@@ -1,0 +1,7 @@
+{
+  "original_worker_sha256": "2b0a144071396eb865213df128cec209f4bd450a80b491092ffa0fb2716cbd8f",
+  "recovered_from_actual_deployed_source": true,
+  "sha_matches_original_pre_dispatch_manifest": true,
+  "supplied_binary_literal_removed": true,
+  "recovery_is_posthoc": true
+}

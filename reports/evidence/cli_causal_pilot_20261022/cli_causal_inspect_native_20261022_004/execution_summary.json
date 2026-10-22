@@ -1,0 +1,8 @@
+{
+  "dispatches": 0,
+  "uncertain": 0,
+  "elapsed_seconds": 636.306,
+  "vm_stopped": true,
+  "model_calls": 0,
+  "isolation": "independent supplied/S0/trusted/probe copies; shared VM"
+}

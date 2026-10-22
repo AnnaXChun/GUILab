@@ -1,0 +1,234 @@
+"""Native observer and fixed continuations for supplied Sketch -> Pad -> Pocket.
+
+Only public supplied preconditions are loaded. No evaluator or reference input.
+"""
+import ast
+import base64
+import hashlib
+import json
+import math
+import os
+from pathlib import Path
+import shutil
+
+import FreeCAD as App
+import Part
+import Sketcher
+
+
+def digest(value):
+    data = value if isinstance(value, str) else json.dumps(value, sort_keys=True, allow_nan=False)
+    return hashlib.sha256(data.encode()).hexdigest()
+
+
+def sha(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def canonical(value):
+    if isinstance(value, float):
+        if not math.isfinite(value):
+            raise ValueError('nonfinite native observation')
+        return round(value, 8)
+    if isinstance(value, dict):
+        return {k:canonical(v) for k,v in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [canonical(v) for v in value]
+    return value
+
+
+def link(value):
+    if hasattr(value, 'Name'):
+        return value.Name
+    if isinstance(value, (list, tuple)):
+        return [link(v) for v in value]
+    if value is None or isinstance(value, (str, int, bool)):
+        return value
+    raise TypeError('unsupported native link '+type(value).__name__)
+
+
+def native_state(doc):
+    rows=[]
+    for obj in sorted(doc.Objects, key=lambda x:x.Name):
+        row={'name':obj.Name,'type_id':obj.TypeId,'label':obj.Label,
+             'errors':sorted(set(obj.State)&{'Invalid','Error'}),
+             'dependencies':sorted(x.Name for x in obj.OutList),
+             'placement':list(obj.Placement.toMatrix().A) if 'Placement' in obj.PropertiesList else None,
+             'links':{},'parameters':{},'expressions':[]}
+        for name in ('Tip','Profile','BaseFeature','Group','AttachmentSupport','Support'):
+            if name in obj.PropertiesList:
+                row['links'][name]=link(getattr(obj,name))
+        for name in ('Length','Width','Height','Reversed','Midplane','Type','AuditVolume_mm3'):
+            if name in obj.PropertiesList:
+                v=getattr(obj,name)
+                row['parameters'][name]=v if isinstance(v,(bool,str,int)) else float(getattr(v,'Value',v))
+        if 'MapMode' in obj.PropertiesList:row['map_mode']=str(obj.MapMode)
+        if 'ExpressionEngine' in obj.PropertiesList:
+            row['expressions']=[[str(p),str(e)] for p,e in obj.ExpressionEngine]
+        if obj.TypeId=='Sketcher::SketchObject':
+            row['geometry']=[]
+            for i,g in enumerate(obj.Geometry):
+                geo={'index':i,'type_id':g.TypeId,'construction':obj.getConstruction(i)}
+                for name in ('Radius','FirstParameter','LastParameter'):
+                    if hasattr(g,name):geo[name]=float(getattr(g,name))
+                for name in ('Center','Location','StartPoint','EndPoint'):
+                    if hasattr(g,name):geo[name]=list(getattr(g,name))
+                row['geometry'].append(geo)
+            row['constraints']=[{'index':i,'type':c.Type,'name':c.Name,'value':c.Value,
+                'first':c.First,'first_pos':c.FirstPos,'second':c.Second,'second_pos':c.SecondPos,
+                'third':c.Third,'third_pos':c.ThirdPos} for i,c in enumerate(obj.Constraints)]
+            row['fully_constrained']=bool(obj.FullyConstrained)
+            row['dof']=int(obj.DoF) if hasattr(obj,'DoF') else None
+        if obj.TypeId in ('PartDesign::Body','PartDesign::Pad','PartDesign::Pocket','PartDesign::Feature','Part::Feature','Part::Box'):
+            s=obj.Shape
+            row['shape']={'null':s.isNull(),'valid':not s.isNull() and s.isValid(),'solids':len(s.Solids)}
+            if not s.isNull():
+                b=s.optimalBoundingBox(False,False);c=s.CenterOfMass
+                row['shape'].update(area=s.Area,volume=s.Volume,
+                    bbox=[b.XMin,b.YMin,b.ZMin,b.XMax,b.YMax,b.ZMax],com=list(c))
+        rows.append(row)
+    return canonical({'objects':rows})
+
+
+def state_sha(doc):
+    return digest(native_state(doc))
+
+
+def binding(doc, task):
+    bodies=[x for x in doc.Objects if x.TypeId=='PartDesign::Body']
+    sketches=[x for x in doc.Objects if x.TypeId=='Sketcher::SketchObject']
+    if len(bodies)!=1 or len(sketches)!=1:raise RuntimeError('ambiguous supplied body/sketch')
+    body,sketch=bodies[0],sketches[0]
+    circles=[(i,g) for i,g in enumerate(sketch.Geometry) if g.TypeId=='Part::GeomCircle' and not sketch.getConstruction(i)]
+    if len(circles)!=1:raise RuntimeError('supplied profile is not a single native circle')
+    i,g=circles[0]
+    n=sketch.Placement.Rotation.multVec(App.Vector(0,0,1))
+    constraints=[{'index':j,'type':c.Type,'value':c.Value} for j,c in enumerate(sketch.Constraints)
+                 if c.First==i and c.Type in ('Diameter','Radius')]
+    return canonical({'body':body.Name,'sketch':sketch.Name,'circle_index':i,'radius':g.Radius,
+        'center_local':list(g.Center),'normal_global':list(n),'sketch_placement':list(sketch.Placement.toMatrix().A),
+        'radius_constraints':constraints,'public_task':task['task_id']})
+
+
+def trusted_pad(doc, spec):
+    b=spec['binding'];body=doc.getObject(b['body']);sketch=doc.getObject(b['sketch'])
+    pad=body.newObject('PartDesign::Pad','Pad')
+    pad.Profile=sketch;pad.Length=spec['pad_length'];pad.Reversed=False
+    body.Tip=pad;doc.recompute()
+    return pad
+
+
+def continuation(doc, spec):
+    b=spec['binding'];body=doc.getObject(b['body']);sketch=doc.getObject(b['sketch'])
+    pad=doc.getObject('Pad')
+    if pad is None or 'Length' not in pad.PropertiesList:raise RuntimeError('suffix requires Pad.Length')
+    doc.recompute()
+    if spec['task_id']=='freecad-part-001':
+        cs=b['radius_constraints']
+        if len(cs)!=1:raise RuntimeError('missing native dimensional constraint for measurement')
+        divisor=2 if cs[0]['type']=='Diameter' else 1
+        pad.addProperty('App::PropertyFloat','AuditVolume_mm3')
+        expression='pi * ('+b['sketch']+'.Constraints['+str(cs[0]['index'])+'] / ('+str(divisor)+' mm))^2 * Pad.Length / (1 mm)'
+        pad.setExpression('AuditVolume_mm3',expression)
+    else:
+        pocket_sketch=body.newObject('Sketcher::SketchObject','PocketSketch')
+        pocket_sketch.Placement=sketch.Placement
+        center=b['center_local']
+        pocket_sketch.addGeometry(Part.Circle(App.Vector(*center),App.Vector(0,0,1),4),False)
+        pocket_sketch.addConstraint(Sketcher.Constraint('Radius',0,4))
+        # Stable object/coordinate binding, independent of candidate face numbering.
+        for axis,n in zip(('x','y','z'),b['normal_global']):
+            pocket_sketch.setExpression('Placement.Base.'+axis,b['sketch']+'.Placement.Base.'+axis+' + ('+repr(n)+') * Pad.Length')
+        doc.recompute()
+        pocket=body.newObject('PartDesign::Pocket','Pocket')
+        pocket.Profile=pocket_sketch;pocket.Length=6;pocket.Reversed=False
+        body.Tip=pocket
+    doc.recompute()
+
+
+def observe(doc, spec):
+    native=native_state(doc);by={o['name']:o for o in native['objects']}
+    b=spec['binding'];sketch=doc.getObject(b['sketch']);circle=sketch.Geometry[b['circle_index']]
+    pad=doc.getObject('Pad');pocket=doc.getObject('Pocket')
+    final=pocket if pocket is not None else pad
+    return {'native':native,'radius':circle.Radius,'pad_length':float(pad.Length.Value),
+            'pocket_depth':float(pocket.Length.Value) if pocket is not None else 0.,
+            'pad':by['Pad'],'final':by[final.Name],'body':by[b['body']],
+            'guard':by['ProbeGuard'],'sketch':by[b['sketch']],
+            'audit_volume':float(pad.AuditVolume_mm3) if 'AuditVolume_mm3' in pad.PropertiesList else None}
+
+
+def probes(spec):
+    if spec['task_id']=='freecad-part-001':
+        second={'object':spec['binding']['sketch'],'constraint_index':spec['binding']['radius_constraints'][0]['index']}
+    else:second={'object':'Pocket','parameter':'Length'}
+    return [{'id':'zero','object':'Pad','parameter':None,'factor':1.}]+[
+        {'id':name+'-'+str(factor),**target,'factor':factor}
+        for name,target in (('pad-length',{'object':'Pad','parameter':'Length'}),('second',second))
+        for factor in (.8,1.2)]+[{'id':'guard','object':'ProbeGuard','parameter':'Length','factor':1.2}]
+
+
+def apply_probe(doc, probe):
+    obj=doc.getObject(probe['object'])
+    if 'constraint_index' in probe:
+        i=probe['constraint_index'];obj.setDatum(i,App.Units.Quantity(str(obj.Constraints[i].Value*probe['factor'])+' mm'))
+    elif probe['parameter']:
+        name=probe['parameter'];v=getattr(obj,name)
+        setattr(obj,name,float(getattr(v,'Value',v))*probe['factor'])
+    doc.recompute()
+
+
+def prepare(request):
+    root=Path(request['root']);root.mkdir(parents=True,exist_ok=False);os.chdir(root)
+    prepared={}
+    for task in request['tasks']:
+        folder=root/task['task_id'];folder.mkdir()
+        source=folder/'supplied.FCStd';source.write_bytes(base64.b64decode(task['source_base64'],validate=True))
+        if sha(source)!=task['precondition_source_sha256']:raise RuntimeError('supplied source SHA mismatch')
+        doc=App.openDocument(str(source))
+        try:
+            doc.recompute();bound=binding(doc,task)
+            guard=doc.addObject('Part::Box','ProbeGuard');guard.Length=3;guard.Width=4;guard.Height=5
+            guard.Placement.Base=App.Vector(100,0,0)
+            note=doc.addObject('App::FeaturePython','AuditNote');note.addProperty('App::PropertyString','Text');note.Text='seed'
+            doc.recompute();path=folder/'seed.FCStd';doc.saveAs(str(path));saved=native_state(doc)
+        finally:App.closeDocument(doc.Name)
+        doc=App.openDocument(str(path))
+        try:
+            doc.recompute();reopened=native_state(doc)
+            if reopened!=saved:raise RuntimeError('source S0 reopen mismatch')
+            spec={'task_id':task['task_id'],'binding':bound,
+                  'pad_length':task.get('public_length_mm',task.get('public_pad_length_mm'))}
+            spec['probes']=probes(spec)
+            record={'path':str(path),'seed_sha256':sha(path),'seed_state_sha256':digest(reopened),'native_state':reopened,
+                    'spec':spec,'captured_before_model_requests':True,'source_sha256':sha(source)}
+        finally:App.closeDocument(doc.Name)
+        # No-model contract test uses a separate copy of the captured S0.
+        test=folder/'trusted.FCStd';shutil.copyfile(path,test);doc=App.openDocument(str(test))
+        try:
+            trusted_pad(doc,spec);pad_observation=observe(doc,spec)
+            continuation(doc,spec);built=observe(doc,spec);doc.saveAs(str(test))
+        finally:App.closeDocument(doc.Name)
+        doc=App.openDocument(str(test))
+        try:
+            doc.recompute();reopened_result=observe(doc,spec)
+            if native_state(doc)!=built['native']:raise RuntimeError('trusted suffix reopen mismatch')
+        finally:App.closeDocument(doc.Name)
+        probe_results=[]
+        for i,probe in enumerate(spec['probes']):
+            probe_path=folder/('trusted_probe_'+str(i)+'.FCStd');shutil.copyfile(test,probe_path)
+            doc=App.openDocument(str(probe_path))
+            try:
+                doc.recompute();apply_probe(doc,probe)
+                probe_results.append({'id':probe['id'],'observation':observe(doc,spec),'candidate_reexecuted':False,'suffix_reexecuted':False})
+            finally:App.closeDocument(doc.Name)
+        record['trusted_test']={'initial_pad':pad_observation,'reopened':reopened_result,'probes':probe_results,
+            'suffix_reopen_equal':True,'source_seed_unchanged':sha(path)==record['seed_sha256']}
+        prepared[task['task_id']]=record
+    return {'classification':'native_cli_causal_s0_and_suffix_prepare','seeds':prepared,
+            'freecad_version':list(App.Version()),'pid':os.getpid()}
+
+
+if __name__=='__main__':
+    request=json.loads(os.environ['STRUCTURAL_DIAGNOSTIC_REQUEST'])
+    print(json.dumps(prepare(request),allow_nan=False))

@@ -1,5 +1,7 @@
 # 失败案例
 
+2026-10-22 [多步构造失败](CLI_CAUSAL_PILOT_20261022.md)：Compound 无 CenterOfMass、固定续执行重开不一致、PocketSketch DoF 保存前后不同、截图就绪超时、准备 argv 超限均保留。经最小适配，最终可信原生管线和控制通过。4 条模型原文使用约定外的 Pad 创建/关系字段，被静态接口拒绝；没有执行这些代码，原生质量 unknown。第一题拒绝导致 runner 提前退出，后续仅补采同一已冻结批次的第二题，原四次额度没有重开。完整错误与原文在本批 evidence 中。
+
 最新模型候选的代码采用了通过实测的 PropertiesList 与 FreeCAD 表达式语法，但响应外层带 JSON 围栏，被原严格 JSON 解析器拒绝。原响应、JSONDecodeError 和账本保留；新增显式单围栏封装适配，只去围栏不改代码，恢复同 S0 执行后 A、B 均通过原生检查。额外文字、多个围栏或 Python 围栏仍拒绝。该失败归为响应封装不一致，详见[接口修复](CLI_API_GUIDED_PAIR_20261021.md)。
 
 捕获S0模型小批新增：60秒API超时无usage，circuit阻断；110秒新批B的只读hasProperty被白名单遗漏拒绝，保留后最小放行；恢复原S0执行A表达式Base.ParserError，B当前PrimitivePy无hasProperty，未进入表达式调用。两原代码不修改、不假设B表达式也已解析失败，pair invalid而非Q=0/0。[详情](CLI_MODEL_PAIR_20261021.md)。

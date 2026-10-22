@@ -1,0 +1,7 @@
+{
+  "event": "error",
+  "id": "prepare",
+  "quality": null,
+  "reason": "RuntimeError",
+  "message": "VM command failed: "
+}

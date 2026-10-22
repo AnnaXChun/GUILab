@@ -1,8 +1,14 @@
 # 差异与适配
 
+## 多步原生执行的最小适配
+
+2026-10-22 专用 Sketch/Body/Pad/Pocket runner 已实现，结果见 [多步 pilot](CLI_CAUSAL_PILOT_20261022.md)。Compound 质心读取改为实际 solid，Body 显式 touch/recompute；Pocket 的中心按供应圆心补约束，保存前后 DoF 均为 0，重开检查保留。预检 004 暂停本项目截图等待父进程，在同 VM 通过独立一次 ledger 派发准备，恢复后由原父进程超时清理；此流程单列，未冒充自动入口成功。
+
+后续 CLI 明确使用 controller-only 就绪，GET /platform 须返回 Linux；GUI 默认仍要求 PNG。准备 worker 去掉重复 verifier 历史并在发送前限制单参数长度，原 Errno 7 uncertain 派发隔离保留，没有重发。runner 将候选接口拒绝限制在单题，补采器沿用原提示/S0/控制证明和同四次账本完成剩余请求；服务错误/unknown usage 仍停止采样。4 条原模型代码未编辑或放行，静态拒绝不设几何 Q=0。恢复的预检 worker 源码为 posthoc recovery，并按实际派发的 manifest 校验 SHA；注入的原生文件编码不上传。
+
 ## 多步 CLI 局部信用设计
 
-2026-10-22 将后续实验从 Torus 测量转为供应 Sketch 上的 Pad 与 Pad→Pocket。固定后续执行首轮由可信代码实现，其来源和 SHA 在候选生成前冻结；它解释固定上下文的相对作用，真实 agent 续执行需另行验证。part-001 的下游测量审计是工程扩展，part-014 的 Pocket 来自公开任务。图暂不参与分数；局部 credit 与同响应终局 Best-of-2 等价作为检查项，后续价值由同奖励归因/训练对照检验。设计入口见 [多步小批](../docs/CLI_CAUSAL_CREDIT_PILOT.md)，新 runner 未实现，本轮无新增模型或 VM。
+2026-10-22 将实验从 Torus 测量转为供应 Sketch 上的 Pad 与 Pad→Pocket。固定后续执行首轮由可信代码实现，其来源和 SHA 在候选生成前冻结；它解释固定上下文的相对作用，真实 agent 续执行需另行验证。part-001 的下游测量审计是工程扩展，part-014 的 Pocket 来自公开任务。图暂不参与分数；局部 credit 与同响应终局 Best-of-2 等价作为检查项，后续价值由同奖励归因/训练对照检验。设计入口见 [多步小批](../docs/CLI_CAUSAL_CREDIT_PILOT.md)，实际完成状态与成本见本批报告，原设计配置不回写。
 
 ## CLI 通用接口说明与响应封装
 

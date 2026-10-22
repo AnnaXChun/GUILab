@@ -1,0 +1,5 @@
+{
+  "status": "DIAGNOSTIC_ERROR",
+  "reason": "RuntimeError",
+  "message": "CANDIDATE_REJECTED: both blocks required; no automatic repair or replay"
+}

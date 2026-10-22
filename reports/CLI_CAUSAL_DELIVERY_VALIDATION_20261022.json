@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "evidence_files": 167,
+  "json_files": 130,
+  "json_scope": "128 archived JSON files plus handoff.json and CLI_CAUSAL_STATUS.json",
+  "jsonl_rows": 292,
+  "errors": [],
+  "source_identifier_exemptions": [
+    "cli_causal_inspect_native_20261022_002/source_snapshot/scripts/cli_causal_worker.py",
+    "cli_causal_inspect_native_20261022_003/source_snapshot/scripts/cli_causal_worker.py",
+    "cli_causal_inspect_native_20261022_004/source_snapshot/scripts/cli_causal_worker.py",
+    "cli_causal_model_native_20261022_001/source_snapshot/scripts/cli_causal_worker.py",
+    "cli_causal_model_native_20261022_001/source_snapshot/scripts/run_structural_credit_diagnostic.py",
+    "cli_causal_model_native_20261022_002/source_snapshot/scripts/cli_causal_worker.py",
+    "cli_causal_model_native_20261022_002/source_snapshot/scripts/run_structural_credit_diagnostic.py"
+  ],
+  "exemption_reason": "artifact_base64 is an interface identifier in source, not a payload; encoded ZIP pattern independently checked in every file",
+  "vm_pids": [
+    {
+      "pid": 29382,
+      "absent": true
+    },
+    {
+      "pid": 41306,
+      "absent": true
+    },
+    {
+      "pid": 56713,
+      "absent": true
+    },
+    {
+      "pid": 68299,
+      "absent": true
+    },
+    {
+      "pid": 92278,
+      "absent": true
+    },
+    {
+      "pid": 4562,
+      "absent": true
+    }
+  ],
+  "model_api_calls": 0,
+  "private_values_printed": false
+}

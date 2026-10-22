@@ -1,0 +1,2676 @@
+{
+  "classification": "restore_exact_native_causal_states",
+  "seeds": {
+    "freecad-part-001": {
+      "path": "/home/user/.cli_causal_controller_prepare_004/freecad-part-001/seed.FCStd",
+      "seed_sha256": "9e717c30d15b677625f868b399365f31bda3bc1e5f2b4dacb97e726c7756b800",
+      "seed_state_sha256": "8fafef729ad8802a01f646681a40e2dcc384bac3e6328048019d5c74c35db6ef",
+      "native_state": {
+        "objects": [
+          {
+            "name": "AuditNote",
+            "type_id": "App::FeaturePython",
+            "label": "AuditNote",
+            "errors": [],
+            "dependencies": [],
+            "placement": null,
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "Body",
+            "type_id": "PartDesign::Body",
+            "label": "Body",
+            "errors": [],
+            "dependencies": [
+              "Origin",
+              "Sketch"
+            ],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {
+              "Tip": null,
+              "BaseFeature": null,
+              "Group": [
+                "Sketch"
+              ]
+            },
+            "parameters": {},
+            "expressions": [],
+            "shape": {
+              "null": true,
+              "valid": false,
+              "solids": 0
+            }
+          },
+          {
+            "name": "Origin",
+            "type_id": "App::Origin",
+            "label": "Origin",
+            "errors": [],
+            "dependencies": [
+              "Origin001",
+              "XY_Plane",
+              "XZ_Plane",
+              "X_Axis",
+              "YZ_Plane",
+              "Y_Axis",
+              "Z_Axis"
+            ],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {
+              "Group": []
+            },
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "Origin001",
+            "type_id": "App::Point",
+            "label": "Origin001",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "ProbeGuard",
+            "type_id": "Part::Box",
+            "label": "ProbeGuard",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              100.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {
+              "AttachmentSupport": []
+            },
+            "parameters": {
+              "Length": 3.0,
+              "Width": 4.0,
+              "Height": 5.0
+            },
+            "expressions": [],
+            "map_mode": "Deactivated",
+            "shape": {
+              "null": false,
+              "valid": true,
+              "solids": 1,
+              "area": 94.0,
+              "volume": 60.0,
+              "bbox": [
+                100.0,
+                0.0,
+                0.0,
+                103.0,
+                4.0,
+                5.0
+              ],
+              "com": [
+                101.5,
+                2.0,
+                2.5
+              ],
+              "unavailable_com_reason": null
+            }
+          },
+          {
+            "name": "Sketch",
+            "type_id": "Sketcher::SketchObject",
+            "label": "Sketch",
+            "errors": [],
+            "dependencies": [
+              "Origin"
+            ],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -1.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {
+              "AttachmentSupport": [
+                [
+                  "Origin",
+                  [
+                    "XZ_Plane"
+                  ]
+                ]
+              ]
+            },
+            "parameters": {},
+            "expressions": [],
+            "map_mode": "FlatFace",
+            "geometry": [
+              {
+                "index": 0,
+                "type_id": "Part::GeomCircle",
+                "construction": false,
+                "Radius": 5.0,
+                "FirstParameter": 0.0,
+                "LastParameter": 6.28318531,
+                "Center": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "index": 1,
+                "type_id": "Part::GeomPoint",
+                "construction": false
+              }
+            ],
+            "constraints": [
+              {
+                "index": 0,
+                "type": "Diameter",
+                "name": "",
+                "value": 10.0,
+                "first": 0,
+                "first_pos": 0,
+                "second": -2000,
+                "second_pos": 0,
+                "third": -2000,
+                "third_pos": 0
+              },
+              {
+                "index": 1,
+                "type": "Coincident",
+                "name": "",
+                "value": 0.0,
+                "first": 0,
+                "first_pos": 3,
+                "second": -1,
+                "second_pos": 1,
+                "third": -2000,
+                "third_pos": 0
+              },
+              {
+                "index": 2,
+                "type": "Coincident",
+                "name": "",
+                "value": 0.0,
+                "first": 1,
+                "first_pos": 1,
+                "second": 0,
+                "second_pos": 3,
+                "third": -2000,
+                "third_pos": 0
+              }
+            ],
+            "fully_constrained": true,
+            "dof": 0
+          },
+          {
+            "name": "XY_Plane",
+            "type_id": "App::Plane",
+            "label": "XY-plane",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "XZ_Plane",
+            "type_id": "App::Plane",
+            "label": "XZ-plane",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -0.0,
+              -1.0,
+              0.0,
+              0.0,
+              1.0,
+              -0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "X_Axis",
+            "type_id": "App::Line",
+            "label": "X-axis",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "YZ_Plane",
+            "type_id": "App::Plane",
+            "label": "YZ-plane",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              0.0,
+              -0.0,
+              1.0,
+              0.0,
+              1.0,
+              0.0,
+              -0.0,
+              0.0,
+              -0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "Y_Axis",
+            "type_id": "App::Line",
+            "label": "Y-axis",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              0.0,
+              -0.0,
+              1.0,
+              0.0,
+              1.0,
+              0.0,
+              -0.0,
+              0.0,
+              -0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "Z_Axis",
+            "type_id": "App::Line",
+            "label": "Z-axis",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              0.0,
+              -1.0,
+              -0.0,
+              0.0,
+              0.0,
+              0.0,
+              -1.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          }
+        ]
+      },
+      "spec": {
+        "task_id": "freecad-part-001",
+        "binding": {
+          "body": "Body",
+          "sketch": "Sketch",
+          "circle_index": 0,
+          "radius": 5.0,
+          "center_local": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "normal_global": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "sketch_placement": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "radius_constraints": [
+            {
+              "index": 0,
+              "type": "Diameter",
+              "value": 10.0
+            }
+          ],
+          "public_task": "freecad-part-001"
+        },
+        "pad_length": 12,
+        "probes": [
+          {
+            "id": "zero",
+            "object": "Pad",
+            "parameter": null,
+            "factor": 1.0
+          },
+          {
+            "id": "pad-length-0.8",
+            "object": "Pad",
+            "parameter": "Length",
+            "factor": 0.8
+          },
+          {
+            "id": "pad-length-1.2",
+            "object": "Pad",
+            "parameter": "Length",
+            "factor": 1.2
+          },
+          {
+            "id": "second-0.8",
+            "object": "Sketch",
+            "constraint_index": 0,
+            "factor": 0.8
+          },
+          {
+            "id": "second-1.2",
+            "object": "Sketch",
+            "constraint_index": 0,
+            "factor": 1.2
+          },
+          {
+            "id": "guard",
+            "object": "ProbeGuard",
+            "parameter": "Length",
+            "factor": 1.2
+          }
+        ]
+      },
+      "captured_before_model_requests": true,
+      "control_path": "/home/user/.cli_causal_controller_prepare_004/freecad-part-001/trusted.FCStd",
+      "control_state_sha256": "b655f87b5f494d96f93d9da8bf3d434a797be70b0c093d85fa53fc23d0cd8a5b"
+    },
+    "freecad-part-001-note-control": {
+      "path": "/home/user/.cli_causal_controller_prepare_004/freecad-part-001/trusted.FCStd",
+      "seed_sha256": "48ea7a2e27199631ea41c790207271f90a8e87b7a6328f3405c9fd9b78253ea6",
+      "seed_state_sha256": "b655f87b5f494d96f93d9da8bf3d434a797be70b0c093d85fa53fc23d0cd8a5b",
+      "native_state": {
+        "objects": [
+          {
+            "name": "AuditNote",
+            "type_id": "App::FeaturePython",
+            "label": "AuditNote",
+            "errors": [],
+            "dependencies": [],
+            "placement": null,
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "Body",
+            "type_id": "PartDesign::Body",
+            "label": "Body",
+            "errors": [],
+            "dependencies": [
+              "Origin",
+              "Pad",
+              "Pad",
+              "Sketch"
+            ],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {
+              "Tip": "Pad",
+              "BaseFeature": null,
+              "Group": [
+                "Sketch",
+                "Pad"
+              ]
+            },
+            "parameters": {},
+            "expressions": [],
+            "shape": {
+              "null": false,
+              "valid": true,
+              "solids": 1,
+              "area": 534.07075111,
+              "volume": 942.47779608,
+              "bbox": [
+                -5.0,
+                -12.0,
+                -5.0,
+                5.0,
+                0.0,
+                5.0
+              ],
+              "com": [
+                0.0,
+                -6.0,
+                0.0
+              ],
+              "unavailable_com_reason": null
+            }
+          },
+          {
+            "name": "Origin",
+            "type_id": "App::Origin",
+            "label": "Origin",
+            "errors": [],
+            "dependencies": [
+              "Origin001",
+              "XY_Plane",
+              "XZ_Plane",
+              "X_Axis",
+              "YZ_Plane",
+              "Y_Axis",
+              "Z_Axis"
+            ],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {
+              "Group": []
+            },
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "Origin001",
+            "type_id": "App::Point",
+            "label": "Origin001",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "Pad",
+            "type_id": "PartDesign::Pad",
+            "label": "Pad",
+            "errors": [],
+            "dependencies": [
+              "Sketch",
+              "Sketch",
+              "Sketch"
+            ],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {
+              "Profile": [
+                "Sketch",
+                []
+              ],
+              "BaseFeature": null
+            },
+            "parameters": {
+              "Length": 12.0,
+              "Reversed": false,
+              "Midplane": false,
+              "Type": "Length",
+              "AuditVolume_mm3": 942.47779608
+            },
+            "expressions": [
+              [
+                "AuditVolume_mm3",
+                "pi * (Sketch.Constraints[0] / 2 mm) ^ 2 * Length / 1 mm"
+              ]
+            ],
+            "shape": {
+              "null": false,
+              "valid": true,
+              "solids": 1,
+              "area": 534.07075111,
+              "volume": 942.47779608,
+              "bbox": [
+                -5.0,
+                -12.0,
+                -5.0,
+                5.0,
+                0.0,
+                5.0
+              ],
+              "com": [
+                0.0,
+                -6.0,
+                0.0
+              ],
+              "unavailable_com_reason": null
+            }
+          },
+          {
+            "name": "ProbeGuard",
+            "type_id": "Part::Box",
+            "label": "ProbeGuard",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              100.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {
+              "AttachmentSupport": []
+            },
+            "parameters": {
+              "Length": 3.0,
+              "Width": 4.0,
+              "Height": 5.0
+            },
+            "expressions": [],
+            "map_mode": "Deactivated",
+            "shape": {
+              "null": false,
+              "valid": true,
+              "solids": 1,
+              "area": 94.0,
+              "volume": 60.0,
+              "bbox": [
+                100.0,
+                0.0,
+                0.0,
+                103.0,
+                4.0,
+                5.0
+              ],
+              "com": [
+                101.5,
+                2.0,
+                2.5
+              ],
+              "unavailable_com_reason": null
+            }
+          },
+          {
+            "name": "Sketch",
+            "type_id": "Sketcher::SketchObject",
+            "label": "Sketch",
+            "errors": [],
+            "dependencies": [
+              "Origin"
+            ],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -1.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {
+              "AttachmentSupport": [
+                [
+                  "Origin",
+                  [
+                    "XZ_Plane"
+                  ]
+                ]
+              ]
+            },
+            "parameters": {},
+            "expressions": [],
+            "map_mode": "FlatFace",
+            "geometry": [
+              {
+                "index": 0,
+                "type_id": "Part::GeomCircle",
+                "construction": false,
+                "Radius": 5.0,
+                "FirstParameter": 0.0,
+                "LastParameter": 6.28318531,
+                "Center": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "Location": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "index": 1,
+                "type_id": "Part::GeomPoint",
+                "construction": false
+              }
+            ],
+            "constraints": [
+              {
+                "index": 0,
+                "type": "Diameter",
+                "name": "",
+                "value": 10.0,
+                "first": 0,
+                "first_pos": 0,
+                "second": -2000,
+                "second_pos": 0,
+                "third": -2000,
+                "third_pos": 0
+              },
+              {
+                "index": 1,
+                "type": "Coincident",
+                "name": "",
+                "value": 0.0,
+                "first": 0,
+                "first_pos": 3,
+                "second": -1,
+                "second_pos": 1,
+                "third": -2000,
+                "third_pos": 0
+              },
+              {
+                "index": 2,
+                "type": "Coincident",
+                "name": "",
+                "value": 0.0,
+                "first": 1,
+                "first_pos": 1,
+                "second": 0,
+                "second_pos": 3,
+                "third": -2000,
+                "third_pos": 0
+              }
+            ],
+            "fully_constrained": true,
+            "dof": 0
+          },
+          {
+            "name": "XY_Plane",
+            "type_id": "App::Plane",
+            "label": "XY-plane",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "XZ_Plane",
+            "type_id": "App::Plane",
+            "label": "XZ-plane",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -0.0,
+              -1.0,
+              0.0,
+              0.0,
+              1.0,
+              -0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "X_Axis",
+            "type_id": "App::Line",
+            "label": "X-axis",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "YZ_Plane",
+            "type_id": "App::Plane",
+            "label": "YZ-plane",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              0.0,
+              -0.0,
+              1.0,
+              0.0,
+              1.0,
+              0.0,
+              -0.0,
+              0.0,
+              -0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "Y_Axis",
+            "type_id": "App::Line",
+            "label": "Y-axis",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              0.0,
+              -0.0,
+              1.0,
+              0.0,
+              1.0,
+              0.0,
+              -0.0,
+              0.0,
+              -0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "Z_Axis",
+            "type_id": "App::Line",
+            "label": "Z-axis",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              0.0,
+              -1.0,
+              -0.0,
+              0.0,
+              0.0,
+              0.0,
+              -1.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          }
+        ]
+      },
+      "spec": {
+        "task_id": "freecad-part-001",
+        "binding": {
+          "body": "Body",
+          "sketch": "Sketch",
+          "circle_index": 0,
+          "radius": 5.0,
+          "center_local": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "normal_global": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "sketch_placement": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "radius_constraints": [
+            {
+              "index": 0,
+              "type": "Diameter",
+              "value": 10.0
+            }
+          ],
+          "public_task": "freecad-part-001"
+        },
+        "pad_length": 12,
+        "probes": [
+          {
+            "id": "zero",
+            "object": "Pad",
+            "parameter": null,
+            "factor": 1.0
+          },
+          {
+            "id": "pad-length-0.8",
+            "object": "Pad",
+            "parameter": "Length",
+            "factor": 0.8
+          },
+          {
+            "id": "pad-length-1.2",
+            "object": "Pad",
+            "parameter": "Length",
+            "factor": 1.2
+          },
+          {
+            "id": "second-0.8",
+            "object": "Sketch",
+            "constraint_index": 0,
+            "factor": 0.8
+          },
+          {
+            "id": "second-1.2",
+            "object": "Sketch",
+            "constraint_index": 0,
+            "factor": 1.2
+          },
+          {
+            "id": "guard",
+            "object": "ProbeGuard",
+            "parameter": "Length",
+            "factor": 1.2
+          }
+        ]
+      },
+      "captured_before_model_requests": true
+    },
+    "freecad-part-014": {
+      "path": "/home/user/.cli_causal_controller_prepare_004/freecad-part-014/seed.FCStd",
+      "seed_sha256": "aa85af46c3f2d9cb06406235754f3496e27e50b72a9f9703be494c579f06dfd1",
+      "seed_state_sha256": "e394a986f86642b9359ccd6536a81ff8c179bb3a9d7b1c95d47eab90ac6a9560",
+      "native_state": {
+        "objects": [
+          {
+            "name": "AuditNote",
+            "type_id": "App::FeaturePython",
+            "label": "AuditNote",
+            "errors": [],
+            "dependencies": [],
+            "placement": null,
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "Body",
+            "type_id": "PartDesign::Body",
+            "label": "Body",
+            "errors": [],
+            "dependencies": [
+              "Origin",
+              "Sketch"
+            ],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {
+              "Tip": null,
+              "BaseFeature": null,
+              "Group": [
+                "Sketch"
+              ]
+            },
+            "parameters": {},
+            "expressions": [],
+            "shape": {
+              "null": true,
+              "valid": false,
+              "solids": 0
+            }
+          },
+          {
+            "name": "Origin",
+            "type_id": "App::Origin",
+            "label": "Origin",
+            "errors": [],
+            "dependencies": [
+              "Origin001",
+              "XY_Plane",
+              "XZ_Plane",
+              "X_Axis",
+              "YZ_Plane",
+              "Y_Axis",
+              "Z_Axis"
+            ],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {
+              "Group": []
+            },
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "Origin001",
+            "type_id": "App::Point",
+            "label": "Origin001",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "ProbeGuard",
+            "type_id": "Part::Box",
+            "label": "ProbeGuard",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              100.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {
+              "AttachmentSupport": []
+            },
+            "parameters": {
+              "Length": 3.0,
+              "Width": 4.0,
+              "Height": 5.0
+            },
+            "expressions": [],
+            "map_mode": "Deactivated",
+            "shape": {
+              "null": false,
+              "valid": true,
+              "solids": 1,
+              "area": 94.0,
+              "volume": 60.0,
+              "bbox": [
+                100.0,
+                0.0,
+                0.0,
+                103.0,
+                4.0,
+                5.0
+              ],
+              "com": [
+                101.5,
+                2.0,
+                2.5
+              ],
+              "unavailable_com_reason": null
+            }
+          },
+          {
+            "name": "Sketch",
+            "type_id": "Sketcher::SketchObject",
+            "label": "Sketch",
+            "errors": [],
+            "dependencies": [
+              "Origin"
+            ],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -1.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {
+              "AttachmentSupport": [
+                [
+                  "Origin",
+                  [
+                    "XZ_Plane"
+                  ]
+                ]
+              ]
+            },
+            "parameters": {},
+            "expressions": [],
+            "map_mode": "FlatFace",
+            "geometry": [
+              {
+                "index": 0,
+                "type_id": "Part::GeomPoint",
+                "construction": false
+              },
+              {
+                "index": 1,
+                "type_id": "Part::GeomPoint",
+                "construction": false
+              },
+              {
+                "index": 2,
+                "type_id": "Part::GeomPoint",
+                "construction": false
+              },
+              {
+                "index": 3,
+                "type_id": "Part::GeomCircle",
+                "construction": false,
+                "Radius": 10.25,
+                "FirstParameter": 0.0,
+                "LastParameter": 6.28318531,
+                "Center": [
+                  0.0,
+                  -2.25,
+                  0.0
+                ],
+                "Location": [
+                  0.0,
+                  -2.25,
+                  0.0
+                ]
+              }
+            ],
+            "constraints": [
+              {
+                "index": 0,
+                "type": "PointOnObject",
+                "name": "",
+                "value": 0.0,
+                "first": 0,
+                "first_pos": 1,
+                "second": -1,
+                "second_pos": 0,
+                "third": -2000,
+                "third_pos": 0
+              },
+              {
+                "index": 1,
+                "type": "PointOnObject",
+                "name": "",
+                "value": 0.0,
+                "first": 1,
+                "first_pos": 1,
+                "second": -2,
+                "second_pos": 0,
+                "third": -2000,
+                "third_pos": 0
+              },
+              {
+                "index": 2,
+                "type": "PointOnObject",
+                "name": "",
+                "value": 0.0,
+                "first": 2,
+                "first_pos": 1,
+                "second": -1,
+                "second_pos": 0,
+                "third": -2000,
+                "third_pos": 0
+              },
+              {
+                "index": 3,
+                "type": "DistanceX",
+                "name": "",
+                "value": 10.0,
+                "first": 0,
+                "first_pos": 1,
+                "second": -1,
+                "second_pos": 1,
+                "third": -2000,
+                "third_pos": 0
+              },
+              {
+                "index": 4,
+                "type": "DistanceX",
+                "name": "",
+                "value": 10.0,
+                "first": -1,
+                "first_pos": 1,
+                "second": 2,
+                "second_pos": 1,
+                "third": -2000,
+                "third_pos": 0
+              },
+              {
+                "index": 5,
+                "type": "DistanceY",
+                "name": "",
+                "value": 8.0,
+                "first": -1,
+                "first_pos": 1,
+                "second": 1,
+                "second_pos": 1,
+                "third": -2000,
+                "third_pos": 0
+              },
+              {
+                "index": 6,
+                "type": "PointOnObject",
+                "name": "",
+                "value": 0.0,
+                "first": 1,
+                "first_pos": 1,
+                "second": 3,
+                "second_pos": 0,
+                "third": -2000,
+                "third_pos": 0
+              },
+              {
+                "index": 7,
+                "type": "PointOnObject",
+                "name": "",
+                "value": 0.0,
+                "first": 0,
+                "first_pos": 1,
+                "second": 3,
+                "second_pos": 0,
+                "third": -2000,
+                "third_pos": 0
+              },
+              {
+                "index": 8,
+                "type": "PointOnObject",
+                "name": "",
+                "value": 0.0,
+                "first": 2,
+                "first_pos": 1,
+                "second": 3,
+                "second_pos": 0,
+                "third": -2000,
+                "third_pos": 0
+              }
+            ],
+            "fully_constrained": true,
+            "dof": 0
+          },
+          {
+            "name": "XY_Plane",
+            "type_id": "App::Plane",
+            "label": "XY-plane",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "XZ_Plane",
+            "type_id": "App::Plane",
+            "label": "XZ-plane",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -0.0,
+              -1.0,
+              0.0,
+              0.0,
+              1.0,
+              -0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "X_Axis",
+            "type_id": "App::Line",
+            "label": "X-axis",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "YZ_Plane",
+            "type_id": "App::Plane",
+            "label": "YZ-plane",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              0.0,
+              -0.0,
+              1.0,
+              0.0,
+              1.0,
+              0.0,
+              -0.0,
+              0.0,
+              -0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "Y_Axis",
+            "type_id": "App::Line",
+            "label": "Y-axis",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              0.0,
+              -0.0,
+              1.0,
+              0.0,
+              1.0,
+              0.0,
+              -0.0,
+              0.0,
+              -0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "Z_Axis",
+            "type_id": "App::Line",
+            "label": "Z-axis",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              0.0,
+              -1.0,
+              -0.0,
+              0.0,
+              0.0,
+              0.0,
+              -1.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          }
+        ]
+      },
+      "spec": {
+        "task_id": "freecad-part-014",
+        "binding": {
+          "body": "Body",
+          "sketch": "Sketch",
+          "circle_index": 3,
+          "radius": 10.25,
+          "center_local": [
+            0.0,
+            -2.25,
+            0.0
+          ],
+          "normal_global": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "sketch_placement": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "radius_constraints": [],
+          "public_task": "freecad-part-014"
+        },
+        "pad_length": 10,
+        "probes": [
+          {
+            "id": "zero",
+            "object": "Pad",
+            "parameter": null,
+            "factor": 1.0
+          },
+          {
+            "id": "pad-length-0.8",
+            "object": "Pad",
+            "parameter": "Length",
+            "factor": 0.8
+          },
+          {
+            "id": "pad-length-1.2",
+            "object": "Pad",
+            "parameter": "Length",
+            "factor": 1.2
+          },
+          {
+            "id": "second-0.8",
+            "object": "Pocket",
+            "parameter": "Length",
+            "factor": 0.8
+          },
+          {
+            "id": "second-1.2",
+            "object": "Pocket",
+            "parameter": "Length",
+            "factor": 1.2
+          },
+          {
+            "id": "guard",
+            "object": "ProbeGuard",
+            "parameter": "Length",
+            "factor": 1.2
+          }
+        ]
+      },
+      "captured_before_model_requests": true,
+      "control_path": "/home/user/.cli_causal_controller_prepare_004/freecad-part-014/trusted.FCStd",
+      "control_state_sha256": "719a602b51d165d744db9093309e36b38747b498556c6f5290f7aca964e19df3"
+    },
+    "freecad-part-014-note-control": {
+      "path": "/home/user/.cli_causal_controller_prepare_004/freecad-part-014/trusted.FCStd",
+      "seed_sha256": "9f15c27139f2d64d5ae9577075ebc25078588a5c41c6195295821031a922f3bd",
+      "seed_state_sha256": "719a602b51d165d744db9093309e36b38747b498556c6f5290f7aca964e19df3",
+      "native_state": {
+        "objects": [
+          {
+            "name": "AuditNote",
+            "type_id": "App::FeaturePython",
+            "label": "AuditNote",
+            "errors": [],
+            "dependencies": [],
+            "placement": null,
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "Body",
+            "type_id": "PartDesign::Body",
+            "label": "Body",
+            "errors": [],
+            "dependencies": [
+              "Origin",
+              "Pad",
+              "Pocket",
+              "Pocket",
+              "PocketSketch",
+              "Sketch"
+            ],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {
+              "Tip": "Pocket",
+              "BaseFeature": null,
+              "Group": [
+                "Sketch",
+                "Pad",
+                "PocketSketch",
+                "Pocket"
+              ]
+            },
+            "parameters": {},
+            "expressions": [],
+            "shape": {
+              "null": false,
+              "valid": true,
+              "solids": 1,
+              "area": 1454.95009769,
+              "volume": 2999.04288693,
+              "bbox": [
+                -10.25,
+                -10.0,
+                -12.5,
+                10.25,
+                0.0,
+                8.0
+              ],
+              "com": [
+                -0.0,
+                -4.7988739,
+                -2.25
+              ],
+              "unavailable_com_reason": null
+            }
+          },
+          {
+            "name": "Origin",
+            "type_id": "App::Origin",
+            "label": "Origin",
+            "errors": [],
+            "dependencies": [
+              "Origin001",
+              "XY_Plane",
+              "XZ_Plane",
+              "X_Axis",
+              "YZ_Plane",
+              "Y_Axis",
+              "Z_Axis"
+            ],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {
+              "Group": []
+            },
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "Origin001",
+            "type_id": "App::Point",
+            "label": "Origin001",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "Pad",
+            "type_id": "PartDesign::Pad",
+            "label": "Pad",
+            "errors": [],
+            "dependencies": [
+              "Sketch"
+            ],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {
+              "Profile": [
+                "Sketch",
+                []
+              ],
+              "BaseFeature": null
+            },
+            "parameters": {
+              "Length": 10.0,
+              "Reversed": false,
+              "Midplane": false,
+              "Type": "Length"
+            },
+            "expressions": [],
+            "shape": {
+              "null": false,
+              "valid": true,
+              "solids": 1,
+              "area": 1304.15365032,
+              "volume": 3300.63578168,
+              "bbox": [
+                -10.25,
+                -10.0,
+                -12.5,
+                10.25,
+                0.0,
+                8.0
+              ],
+              "com": [
+                -0.0,
+                -5.0,
+                -2.25
+              ],
+              "unavailable_com_reason": null
+            }
+          },
+          {
+            "name": "Pocket",
+            "type_id": "PartDesign::Pocket",
+            "label": "Pocket",
+            "errors": [],
+            "dependencies": [
+              "Pad",
+              "PocketSketch"
+            ],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {
+              "Profile": [
+                "PocketSketch",
+                []
+              ],
+              "BaseFeature": "Pad"
+            },
+            "parameters": {
+              "Length": 6.0,
+              "Reversed": false,
+              "Midplane": false,
+              "Type": "Length"
+            },
+            "expressions": [],
+            "shape": {
+              "null": false,
+              "valid": true,
+              "solids": 1,
+              "area": 1454.95009769,
+              "volume": 2999.04288693,
+              "bbox": [
+                -10.25,
+                -10.0,
+                -12.5,
+                10.25,
+                0.0,
+                8.0
+              ],
+              "com": [
+                -0.0,
+                -4.7988739,
+                -2.25
+              ],
+              "unavailable_com_reason": null
+            }
+          },
+          {
+            "name": "PocketSketch",
+            "type_id": "Sketcher::SketchObject",
+            "label": "PocketSketch",
+            "errors": [],
+            "dependencies": [
+              "Pad",
+              "Pad",
+              "Sketch",
+              "Sketch"
+            ],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -1.0,
+              -10.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {
+              "AttachmentSupport": []
+            },
+            "parameters": {},
+            "expressions": [
+              [
+                ".Placement.Base.x",
+                "Sketch.Placement.Base.x + 0 * Pad.Length"
+              ],
+              [
+                ".Placement.Base.y",
+                "Sketch.Placement.Base.y + -1 * Pad.Length"
+              ],
+              [
+                ".Placement.Base.z",
+                "Sketch.Placement.Base.z + 0 * Pad.Length"
+              ]
+            ],
+            "map_mode": "Deactivated",
+            "geometry": [
+              {
+                "index": 0,
+                "type_id": "Part::GeomCircle",
+                "construction": false,
+                "Radius": 4.0,
+                "FirstParameter": 0.0,
+                "LastParameter": 6.28318531,
+                "Center": [
+                  0.0,
+                  -2.25,
+                  0.0
+                ],
+                "Location": [
+                  0.0,
+                  -2.25,
+                  0.0
+                ]
+              }
+            ],
+            "constraints": [
+              {
+                "index": 0,
+                "type": "Radius",
+                "name": "",
+                "value": 4.0,
+                "first": 0,
+                "first_pos": 0,
+                "second": -2000,
+                "second_pos": 0,
+                "third": -2000,
+                "third_pos": 0
+              },
+              {
+                "index": 1,
+                "type": "PointOnObject",
+                "name": "",
+                "value": 0.0,
+                "first": 0,
+                "first_pos": 3,
+                "second": -2,
+                "second_pos": 0,
+                "third": -2000,
+                "third_pos": 0
+              },
+              {
+                "index": 2,
+                "type": "DistanceY",
+                "name": "",
+                "value": -2.25,
+                "first": 0,
+                "first_pos": 3,
+                "second": -2000,
+                "second_pos": 0,
+                "third": -2000,
+                "third_pos": 0
+              }
+            ],
+            "fully_constrained": true,
+            "dof": 0
+          },
+          {
+            "name": "ProbeGuard",
+            "type_id": "Part::Box",
+            "label": "ProbeGuard",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              100.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {
+              "AttachmentSupport": []
+            },
+            "parameters": {
+              "Length": 3.0,
+              "Width": 4.0,
+              "Height": 5.0
+            },
+            "expressions": [],
+            "map_mode": "Deactivated",
+            "shape": {
+              "null": false,
+              "valid": true,
+              "solids": 1,
+              "area": 94.0,
+              "volume": 60.0,
+              "bbox": [
+                100.0,
+                0.0,
+                0.0,
+                103.0,
+                4.0,
+                5.0
+              ],
+              "com": [
+                101.5,
+                2.0,
+                2.5
+              ],
+              "unavailable_com_reason": null
+            }
+          },
+          {
+            "name": "Sketch",
+            "type_id": "Sketcher::SketchObject",
+            "label": "Sketch",
+            "errors": [],
+            "dependencies": [
+              "Origin"
+            ],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -1.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {
+              "AttachmentSupport": [
+                [
+                  "Origin",
+                  [
+                    "XZ_Plane"
+                  ]
+                ]
+              ]
+            },
+            "parameters": {},
+            "expressions": [],
+            "map_mode": "FlatFace",
+            "geometry": [
+              {
+                "index": 0,
+                "type_id": "Part::GeomPoint",
+                "construction": false
+              },
+              {
+                "index": 1,
+                "type_id": "Part::GeomPoint",
+                "construction": false
+              },
+              {
+                "index": 2,
+                "type_id": "Part::GeomPoint",
+                "construction": false
+              },
+              {
+                "index": 3,
+                "type_id": "Part::GeomCircle",
+                "construction": false,
+                "Radius": 10.25,
+                "FirstParameter": 0.0,
+                "LastParameter": 6.28318531,
+                "Center": [
+                  0.0,
+                  -2.25,
+                  0.0
+                ],
+                "Location": [
+                  0.0,
+                  -2.25,
+                  0.0
+                ]
+              }
+            ],
+            "constraints": [
+              {
+                "index": 0,
+                "type": "PointOnObject",
+                "name": "",
+                "value": 0.0,
+                "first": 0,
+                "first_pos": 1,
+                "second": -1,
+                "second_pos": 0,
+                "third": -2000,
+                "third_pos": 0
+              },
+              {
+                "index": 1,
+                "type": "PointOnObject",
+                "name": "",
+                "value": 0.0,
+                "first": 1,
+                "first_pos": 1,
+                "second": -2,
+                "second_pos": 0,
+                "third": -2000,
+                "third_pos": 0
+              },
+              {
+                "index": 2,
+                "type": "PointOnObject",
+                "name": "",
+                "value": 0.0,
+                "first": 2,
+                "first_pos": 1,
+                "second": -1,
+                "second_pos": 0,
+                "third": -2000,
+                "third_pos": 0
+              },
+              {
+                "index": 3,
+                "type": "DistanceX",
+                "name": "",
+                "value": 10.0,
+                "first": 0,
+                "first_pos": 1,
+                "second": -1,
+                "second_pos": 1,
+                "third": -2000,
+                "third_pos": 0
+              },
+              {
+                "index": 4,
+                "type": "DistanceX",
+                "name": "",
+                "value": 10.0,
+                "first": -1,
+                "first_pos": 1,
+                "second": 2,
+                "second_pos": 1,
+                "third": -2000,
+                "third_pos": 0
+              },
+              {
+                "index": 5,
+                "type": "DistanceY",
+                "name": "",
+                "value": 8.0,
+                "first": -1,
+                "first_pos": 1,
+                "second": 1,
+                "second_pos": 1,
+                "third": -2000,
+                "third_pos": 0
+              },
+              {
+                "index": 6,
+                "type": "PointOnObject",
+                "name": "",
+                "value": 0.0,
+                "first": 1,
+                "first_pos": 1,
+                "second": 3,
+                "second_pos": 0,
+                "third": -2000,
+                "third_pos": 0
+              },
+              {
+                "index": 7,
+                "type": "PointOnObject",
+                "name": "",
+                "value": 0.0,
+                "first": 0,
+                "first_pos": 1,
+                "second": 3,
+                "second_pos": 0,
+                "third": -2000,
+                "third_pos": 0
+              },
+              {
+                "index": 8,
+                "type": "PointOnObject",
+                "name": "",
+                "value": 0.0,
+                "first": 2,
+                "first_pos": 1,
+                "second": 3,
+                "second_pos": 0,
+                "third": -2000,
+                "third_pos": 0
+              }
+            ],
+            "fully_constrained": true,
+            "dof": 0
+          },
+          {
+            "name": "XY_Plane",
+            "type_id": "App::Plane",
+            "label": "XY-plane",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "XZ_Plane",
+            "type_id": "App::Plane",
+            "label": "XZ-plane",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -0.0,
+              -1.0,
+              0.0,
+              0.0,
+              1.0,
+              -0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "X_Axis",
+            "type_id": "App::Line",
+            "label": "X-axis",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "YZ_Plane",
+            "type_id": "App::Plane",
+            "label": "YZ-plane",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              0.0,
+              -0.0,
+              1.0,
+              0.0,
+              1.0,
+              0.0,
+              -0.0,
+              0.0,
+              -0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "Y_Axis",
+            "type_id": "App::Line",
+            "label": "Y-axis",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              0.0,
+              -0.0,
+              1.0,
+              0.0,
+              1.0,
+              0.0,
+              -0.0,
+              0.0,
+              -0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          },
+          {
+            "name": "Z_Axis",
+            "type_id": "App::Line",
+            "label": "Z-axis",
+            "errors": [],
+            "dependencies": [],
+            "placement": [
+              0.0,
+              -1.0,
+              -0.0,
+              0.0,
+              0.0,
+              0.0,
+              -1.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "links": {},
+            "parameters": {},
+            "expressions": []
+          }
+        ]
+      },
+      "spec": {
+        "task_id": "freecad-part-014",
+        "binding": {
+          "body": "Body",
+          "sketch": "Sketch",
+          "circle_index": 3,
+          "radius": 10.25,
+          "center_local": [
+            0.0,
+            -2.25,
+            0.0
+          ],
+          "normal_global": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "sketch_placement": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "radius_constraints": [],
+          "public_task": "freecad-part-014"
+        },
+        "pad_length": 10,
+        "probes": [
+          {
+            "id": "zero",
+            "object": "Pad",
+            "parameter": null,
+            "factor": 1.0
+          },
+          {
+            "id": "pad-length-0.8",
+            "object": "Pad",
+            "parameter": "Length",
+            "factor": 0.8
+          },
+          {
+            "id": "pad-length-1.2",
+            "object": "Pad",
+            "parameter": "Length",
+            "factor": 1.2
+          },
+          {
+            "id": "second-0.8",
+            "object": "Pocket",
+            "parameter": "Length",
+            "factor": 0.8
+          },
+          {
+            "id": "second-1.2",
+            "object": "Pocket",
+            "parameter": "Length",
+            "factor": 1.2
+          },
+          {
+            "id": "guard",
+            "object": "ProbeGuard",
+            "parameter": "Length",
+            "factor": 1.2
+          }
+        ]
+      },
+      "captured_before_model_requests": true
+    }
+  },
+  "new_model_calls": 0
+}

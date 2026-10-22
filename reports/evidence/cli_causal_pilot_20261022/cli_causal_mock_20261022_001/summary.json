@@ -1,0 +1,11 @@
+{
+  "status": "DRY_RUN_ONLY",
+  "tasks": [
+    "freecad-part-001",
+    "freecad-part-014"
+  ],
+  "model_calls": 0,
+  "native_dispatches": 0,
+  "actual_quality": null,
+  "native_capture_required": true
+}

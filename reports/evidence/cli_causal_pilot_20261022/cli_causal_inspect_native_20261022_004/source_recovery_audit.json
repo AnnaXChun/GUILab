@@ -1,0 +1,6 @@
+{
+  "sha_matches_original_pre_dispatch_manifest": true,
+  "original_worker_sha256": "131a100b76f598717513ecd5ff969a3dfcdc01ced5c7e92f1d7394140974f1f5",
+  "recovery_is_posthoc": true,
+  "supplied_binary_literal_removed": true
+}

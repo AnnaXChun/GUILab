@@ -1,0 +1,16 @@
+{
+  "source_run": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_causal_model_native_20261022_002",
+  "shared_ledger": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_causal_model_native_20261022_002/model_batch.sqlite",
+  "prior_requests": 2,
+  "remaining_requests": 2,
+  "same_prompt_protocol": true,
+  "no_new_s0": true,
+  "control_proof": {
+    "completed_controls": [
+      "freecad-part-001-note-control",
+      "freecad-part-014-note-control"
+    ],
+    "status": "PASS",
+    "model_calls_so_far": 0
+  }
+}

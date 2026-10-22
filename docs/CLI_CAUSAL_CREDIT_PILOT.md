@@ -1,5 +1,7 @@
 # CLI 代码块的反事实信用
 
+**2026-10-22 已执行**：多步 observer/runner、S0 和固定 C 已实现并原生核验；两题各六探针与两对不相关文本控制通过。原预算四次模型请求已用完，四条原文均静态接口拒绝，没有天然候选执行或有效自然 pair。结果、失败、实际成本及完整证据入口见 [本批报告](../reports/CLI_CAUSAL_PILOT_20261022.md)与 `reports/CLI_CAUSAL_STATUS.json`。下一步见 [通用 API 说明对照](CLI_CAUSAL_API_COMPARISON.md)。
+
 本轮设计检验一个具体假设：在多步参数化建模中，从同一工程状态替换一个 CLI 代码块，固定后续执行，再施加公开参数干预，能否识别影响下游结果的构造选择，并形成有用的局部偏好。后续 SFT/RL 使用这种监督，收益需要独立实验。
 
 当前已有事实是一个圆环测量模型配对 Q=1/1、credit=0，以及可信 fixture 和人工重放中的结构故障。测量成功证明执行管线可用。现有 credit 与同一终局检查器的差值一致，尚未产生额外区分能力。研究的下一步是多步构造的局部归因；代码名称、表达式写法或检查器数量都不足以证明方法贡献。
@@ -17,7 +19,7 @@
 
 ## 固定的小批任务
 
-配置为 `configs/cli_causal_credit_pilot_20261022.json`，设计状态为 `DESIGN_FROZEN_RUNNER_PENDING`。任务来自已有公开 manifest，选择依据是明确尺寸、供应工程及原生依赖链；未读取官方 evaluator 或 reference。两题都转为本研究的 development，原 manifest 的 train 分组保留。它们及相同前置文件来源组不再进入后续 held-out 测试。
+配置为 `configs/cli_causal_credit_pilot_20261022.json`，其中 `DESIGN_FROZEN_RUNNER_PENDING` 与 null 绑定保留为采样前设计；实际绑定与 S0/C/探针哈希在 run-specific manifest 中冻结，执行状态另存 `reports/CLI_CAUSAL_STATUS.json`。任务来自已有公开 manifest，选择依据是明确尺寸、供应工程及原生依赖链；未读取官方 evaluator 或 reference。两题都转为本研究的 development，原 manifest 的 train 分组保留。它们及相同前置文件来源组不再进入后续 held-out 测试。
 
 | 任务 | 被替换的块 | 固定后续执行 | 验证重点 |
 | --- | --- | --- | --- |
@@ -73,13 +75,13 @@ delta_block = Rresp(S_A) - Rresp(S_B)
 
 后续训练不使用这个开发小批和 synthetic 控制作为 held-out 成绩。优先比较错误接受率、局部标签覆盖、同预算任务成功率、原生参数响应通过率和总成本；局部标签单独训练还是 RL 中应用，再根据数据量决定。无需先接 veRL 或下载 122B 权重。
 
-## 紧接着要实现的代码
+## 本轮实现步骤
 
-现有 `scripts/structural_credit_worker.py` 主要观察 primitive，`cli_model_pair.py` 只允许写 Torus 测量属性。它们不足以执行 Sketch/Body/Pad/Pocket。下一次执行从这里开始：
+设计时的 `scripts/structural_credit_worker.py` 主要观察 primitive，`cli_model_pair.py` 只允许写 Torus 测量属性。本轮新增 `scripts/cli_causal_worker.py`、`scripts/run_cli_causal_credit.py`、`cad_cf/cli_causal_credit.py`，按以下步骤完成适配，历史设计保留：
 
 1. 从 pinned 供应文件核对上述来源 SHA，扩展原生 observer 以覆盖 Sketch 几何/约束、Body.Tip、Pad.Profile、Pocket.Profile/BaseFeature 和表达式。先通过真实文件的保存重开一致性检查。
 2. 冻结模型构造块的接口契约。两候选共享输出对象及关系要求，保留构造实现自由；模型原文经范围检查，避免把接口强制成唯一已知答案。
 3. 用实际 S0 验证固定 C 和六探针库，写 run-specific immutable manifest。所有 null 的对象绑定、S0、C、探针哈希必须补齐并核验；否则拒绝模型请求。
 4. 先跑无模型 clone/负控制 smoke，再发最多四次新采样。复用模型预算、一次派发、响应封装和证据归档模块；旧账本、旧源码快照及官方 baseline 保留。
 
-尚未实现新任务 runner，不能把这份配置传给只支持 Torus 的旧 runner。缺供应工程或原生接口时写 `BLOCKED_BY_ENV`；缺模型配置时写 `BLOCKED_BY_CREDENTIALS`。当前设计和预算均为计划，实际模型请求与 VM 派发为 0。
+新任务通过专用 runner 执行，不能把这份配置传给只支持 Torus 的旧 runner。缺供应工程或原生接口时写 `BLOCKED_BY_ENV`；缺模型配置时写 `BLOCKED_BY_CREDENTIALS`。本轮实际模型请求为 4，native 派发累计为 10，其中前置调试与 uncertain 失败单列；详细成本以本批报告为准。四次账本已结束，不直接重跑已消费配置。本方案原生部分通过，天然结构信用和训练仍 NO-GO。

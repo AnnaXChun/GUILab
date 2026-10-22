@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-cc466ad5-1224-9bd3-bc0d-2339c7fb0fcc",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "```json\n{\n  \"code\": \"body = doc.getObject(\\\"Body\\\")\\nsketch = doc.getObject(\\\"Sketch\\\")\\npad = doc.addObject(\\\"PartDesign::Pad\\\", \\\"Pad\\\")\\npad.BaseFeature = [sketch, [\\\"Sketch\\\"]]\\npad.Length = App.Units.Quantity(12, \\\"mm\\\")\\nbody.Tip = pad\"\n}\n```",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning_content": "The user wants me to create a FreeCAD Python construction block that:\n1. Gets the Body object named \"Body\"\n2. Gets the Sketch object named \"Sketch\"\n3. Creates a PartDesign::Pad named \"Pad\" in the body\n4. Sets it up with the sketch as its profile and an extrusion length of 12 mm\n5. Returns this as a JSON object with a \"code\" field containing the Python code\n\nKey requirements:\n- Use exact variable names: body, sketch, pad\n- No imports, functions, classes, file operations, etc.\n- Headless FreeCAD App context (no ViewObject/Gui)\n- Keep existing objects unchanged\n- Create only one output object named Pad\n\nLet me write the Python code for this:\n\n```python\nbody = doc.getObject(\"Body\")\nsketch = doc.getObject(\"Sketch\")\npad = doc.addObject(\"PartDesign::Pad\", \"Pad\")\npad.Base = sketch\npad.Length = App.Units.Quantity(12, \"mm\")\nbody.Tip = pad\n```\n\nWait, I need to check the proper way to set up a PartDesign::Pad. In PartDesign workbench:\n- The Pad needs to be added to the Body\n- It references the Base feature (the sketch)\n- Length property controls the extrusion distance\n\nLet me refine this to match FreeCAD's PartDesign API more accurately:\n\n```python\nbody = doc.getObject(\"Body\")\nsketch = doc.getObject(\"Sketch\")\npad = doc.addObject(\"PartDesign::Pad\", \"Pad\")\npad.BaseFeature = [sketch]\npad.Length = App.Units.Quantity(12, \"mm\")\n```\n\nActually, looking at common PartDesign Pad setup patterns:\n- `pad.Base` or `pad.BaseFeature` sets the sketch reference\n- `pad.Length` sets the extrusion depth\n\nLet me make sure the code is correct for FreeCAD's PartDesign Pad:\n\n\n```python\nbody = doc.getObject(\"Body\")\nsketch = doc.getObject(\"Sketch\")\npad = doc.addObject(\"PartDesign::Pad\", \"Pad\")\npad.BaseFeature = [sketch, [\"Sketch\"]]\npad.Length = App.Units.Quantity(12, \"mm\")\n```\n\nFor PartDesign features, the BaseFeature typically uses a tuple format like `[object, [\"Profile\"]]`. Let me finalize the code structure to ensure it properly references the sketch profile within the body context."
+      }
+    }
+  ],
+  "created": 1792654620,
+  "model": "qwen3.5-122b-a10b",
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 605,
+    "prompt_tokens": 2559,
+    "total_tokens": 3164,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 517,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 605
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": null,
+      "text_tokens": 2559
+    }
+  }
+}

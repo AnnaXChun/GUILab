@@ -1,0 +1,12 @@
+{
+  "scripts/cli_causal_worker.py": "131a100b76f598717513ecd5ff969a3dfcdc01ced5c7e92f1d7394140974f1f5",
+  "scripts/run_cli_causal_credit.py": "5a1de91ee1077da0b0e531e6defca6a77e2e5ff7753c1fd18b016ab8c45b17b8",
+  "cad_cf/cli_causal_credit.py": "9ac01de3088692d7672fa25d121434973803ad9789e23642942bb7ad1b0fa34b",
+  "scripts/run_cli_model_pair.py": "9656986ca12c75b7761ea14774a84079e4e0f605e330944bff846cbec654fcef",
+  "scripts/run_structural_credit_diagnostic.py": "f6b848be74b51378681414ad2849835935ece3349340e96ed026ab211c94c938",
+  "cad_cf/batch_budget.py": "52953e7b0ab3deb3546927a02ae848fa3be323f773020092906b081ab70f8e02",
+  "cad_cf/upstream_launch.py": "39353dd1bcb5bc906a17da49da9a42d2206f23e7c8d3e426fb6f84469f96ada0",
+  "cad_cf/terminal_bridge.py": "3f410b8d2eb071e3d230ca623501f785ee0bfbdf015540f4666b961eea5d3190",
+  "scripts/audit_cli_causal_credit.py": "227a775e3ce59cc24a47f713ab1361a588ec3c249b66d025027a287df9f60e84",
+  "deployed_worker.py": "b9b2d3539289f2494508e3009901419712f0afb1e8d57b97fdc7c384a0821eac"
+}

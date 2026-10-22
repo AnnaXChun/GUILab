@@ -1,0 +1,5 @@
+{
+  "status": "EXECUTION_UNCERTAIN",
+  "reason": "ExecutionUncertain",
+  "message": "execution outcome unknown; quarantine clone"
+}

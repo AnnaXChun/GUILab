@@ -1,8 +1,12 @@
 # GUILab 交接
 
-**2026-10-22 接下来实施的实验**：读取 [CLI 代码块反事实小批](docs/CLI_CAUSAL_CREDIT_PILOT.md)和 `configs/cli_causal_credit_pilot_20261022.json`。设计已定义，runner 待扩展；本轮新模型请求/VM 派发为 0。使用 part-001、part-014 供应文件，在 Pad 创建前捕获 S0，固定保存审计或下游 Pocket，生成两个独立候选，最多四次模型请求。先扩展原生 Sketch/Body/Pad/Pocket observer、冻结实际对象绑定/C/探针哈希，再跑无模型 clone 与不相关块控制，最后小批采样。配置中的 null 执行绑定必须核验后补齐，不能直接传给旧 Torus runner。
+**2026-10-22 最新结果**：先读 [多步 CLI pilot](reports/CLI_CAUSAL_PILOT_20261022.md)、`reports/CLI_CAUSAL_STATUS.json` 和 [协议](docs/CLI_CAUSAL_CREDIT_PILOT.md)。新 runner 已实现；part-001/014 原生 S0、固定后续代码、保存重开和每题六探针通过，两对不相关 AuditNote 控制 Q=1/1、credit=0。4 次独立模型请求已完成，11268 输入/2491 输出 tokens，四条原响应均静态接口拒绝，天然候选执行为 0、有效自然 pair 为 0、credit=null。接口拒绝的代码没有实际运行，原生质量 unknown。
 
-单个边界的局部差值与相同 Rresp 的终局 Best-of-2 应等价。下一轮检验多步下游影响与不相关块零信用；之后才比较同奖励的全轨迹 RL 和局部 credit 监督。所有自然 pair、tie、invalid 和 synthetic 控制分开记录。两任务转为 development，供应文件组不再作 held-out；不恢复 GUI，不为了 non-tie 重复开账本。下方 2026-10-21 同 S0 成功是已完成的基础。
+全部六台 VM 已停止，累计 /execute 10 次，9 complete/1 uncertain；272 项项目测试和 7 项上游 CLI 测试通过。完整模型/执行 JSONL、实际观察、拒绝、源码和预算审计见 `reports/evidence/cli_causal_pilot_20261022/INDEX.json`。旧八份账本不变；本批补采沿用原四次账本，剩余调用为 0。预检 004 通过一次独立有账本的手工 controller 准备完成，自动截图启动仍超时，不能报告为旧入口一键成功。
+
+**接下来**：按 [通用 API 说明对照](docs/CLI_CAUSAL_API_COMPARISON.md)准备相同模型/任务/S0 的两组对照。先验证公开 Profile、Body 内 feature 创建、长度单位的说明，再冻结新实验预算与来源，不提供任务完整代码。当前多步原生管线 GO，天然结构信用、方法优势与训练 NO-GO；本轮交付不执行新采样。下方 2026-10-21 的 Torus 模型 tie 是独立历史，计数保留。
+
+单个边界的局部差值与相同 Rresp 的终局 Best-of-2 应等价。多步可信续执行和不相关块零信用已通过，天然模型下游影响仍未观测；同奖励全轨迹 RL 与局部 credit 监督留待有足够局部标签后比较。所有自然 pair、tie、invalid 和 synthetic 控制分开记录。两任务及供应文件来源组归 development，不作 held-out；不恢复 GUI，不为 non-tie 重开账本。
 
 **最新 CLI 模型候选已通过**：先读[接口修复结果](reports/CLI_API_GUIDED_PAIR_20261021.md)、[协议](docs/CLI_API_GUIDED_PAIR.md)和[当前状态](reports/CLI_MODEL_PAIR_STATUS.json)。通用 FreeCAD API 探针通过后，两次模型独立生成半径绑定；原响应的 JSON 围栏先被严格接口拒绝，随后显式封装适配提取原代码，恢复相同 S0 执行。A、B 均保存关闭重开并通过六个探针，Q=1/1、credit=0。原生 XML 验证为 Part::Torus 加 ExpressionEngine，模型代码字符串未编辑。
 
