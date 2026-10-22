@@ -37,6 +37,12 @@ def refresh(root, run):
         events = [json.loads(line) for line in path.read_text().splitlines() if line.strip()] if path.exists() else []
         usage.extend(events)
         row = finalize_record(row, job['status'], events)
+        measured_task = [event for event in events if event.get('event') == 'model_usage']
+        calls_task = sum(event.get('event') == 'model_dispatch' for event in events)
+        row.update(actual_model_calls=calls_task,
+            known_input_tokens=sum(event.get('input_tokens') or 0 for event in measured_task),
+            known_output_tokens=sum((event.get('output_tokens') or 0) + (event.get('thinking_tokens') or 0) for event in measured_task),
+            model_usage_complete=len(measured_task) == calls_task and all(event.get('usage_available') for event in measured_task))
         row['development_seen_before_sweep'] = job['task_id'] in seen
         records.append(row)
     summary = write_tables(run, records, json.loads((run / 'config.json').read_text()))

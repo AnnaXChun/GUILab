@@ -74,6 +74,9 @@ def test_offline_refresh_keeps_execution_error_and_provider_usage_separate(tmp_p
     assert overall['strict_pass_rate_full'] is None
     assert summary['usage']['model_calls'] == 1 and summary['usage']['usage_complete']
     assert summary['usage']['known_output_tokens'] == 9 and summary['model_circuit_open'] is False
+    rows = [json.loads(line) for line in (run / 'episodes.jsonl').read_text().splitlines()]
+    assert rows[0]['actual_model_calls'] == 1 and rows[0]['known_output_tokens'] == 9
+    assert rows[1]['actual_model_calls'] == 0 and rows[1]['status'] == 'RUN_ERROR'
     failed_job = run / 'job1'
     failed_job.mkdir()
     (failed_job / 'runner.log').write_text('advertised models: sensitive-model-directory\nerror: secret-test-key\n')
