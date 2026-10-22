@@ -183,3 +183,18 @@ def test_explicit_json_fence_adapter_preserves_model_code():
     assert candidate_code(wrapped,allow_json_fence=True)==FORMULA
     for invalid in ('prose\n'+wrapped,wrapped+'\nprose',wrapped+'\n'+wrapped,wrapped.replace('```json','```python')):
         with pytest.raises(ValueError):candidate_code(invalid,allow_json_fence=True)
+
+
+def test_two_task_collectors_share_one_four_request_ledger(tmp_path):
+    config=json.loads(CONFIG.read_text());config.update(max_model_calls=4,max_model_output_tokens=8192)
+    ledger=tmp_path/'shared.sqlite'
+    for i in range(2):
+        folder=tmp_path/str(i);folder.mkdir()
+        pair=template_pair(config['public_instruction']);client=Client([json.dumps({'code':DIRECT})]*2)
+        collect_candidates(pair,seed(),folder,config,client=client,budget_path=ledger)
+        assert len(client.requests)==2
+    from cad_cf.batch_budget import BatchBudget
+    batch=BatchBudget(ledger,4,8192)
+    assert batch.status()['requests']==4 and batch.status()['remaining_calls']==0
+    with pytest.raises(RuntimeError,match='exhausted'):batch.reserve(2048)
+    batch.close()

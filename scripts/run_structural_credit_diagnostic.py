@@ -47,7 +47,8 @@ def parse_response(response):
     return next(json.loads(line) for line in response["output"].splitlines() if line.startswith('{"classification":'))
 
 
-def run_native(plan, config, runtime, output, *, worker_path=WORKER, evaluator=evaluate_pair, on_prepared=None):
+def run_native(plan, config, runtime, output, *, worker_path=WORKER, evaluator=evaluate_pair, on_prepared=None,
+               on_pair_completed=None):
     worker = worker_path.read_text()
     runtime.update(output=str((output/"runtime").resolve()), port=config["port"], vnc_port=config["vnc_port"],
                    gui_ready=False, gui_warmup=False, visible=False)
@@ -120,6 +121,9 @@ def run_native(plan, config, runtime, output, *, worker_path=WORKER, evaluator=e
             row = evaluator(pair, observations[pair["id"]+"-A"], observations[pair["id"]+"-B"])
             rows.append(row)
             print(json.dumps({"id": row["id"], "pair_valid": row["pair_valid"], "credit": row["credit"], "A": row["A"]["q"], "B": row["B"]["q"]}), flush=True)
+            if on_pair_completed is not None:
+                on_pair_completed(plan, prepared, row)
+                save(output/"plan.json", plan)
     except Exception as exc:
         status = "EXECUTION_UNCERTAIN" if isinstance(exc, ExecutionUncertain) else ("BLOCKED_BY_ENV" if not (output/"dispatch.sqlite").exists() else "DIAGNOSTIC_ERROR")
         save(output/"error.json", {"status": status,

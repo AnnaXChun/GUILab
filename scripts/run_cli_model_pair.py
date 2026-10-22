@@ -57,12 +57,14 @@ def existing_ledgers():
             for p in (ROOT/"results").rglob("model_batch.sqlite") if p.is_file()}
 
 
-def collect_candidates(pair, seed, output, config, *, client=None):
+def collect_candidates(pair, seed, output, config, *, client=None, code_parser=candidate_code,
+                       message_builder=model_messages, budget_path=None):
     if seed.get('captured_before_model_requests') is not True:
         raise ValueError('native S0 must be captured before model request')
     if client is None and os.environ.get('ENABLE_PAID_RUNS', '0') != '1':
         raise RuntimeError('NOT_RUN_BUDGET: ENABLE_PAID_RUNS=0')
-    messages = model_messages(pair, seed, api_guidance=config.get('api_guidance', False))
+    messages = (model_messages(pair, seed, api_guidance=config.get('api_guidance', False))
+                if message_builder is model_messages else message_builder(pair, seed))
     save(output/"model_input.json", {'messages': messages, 'prompt_sha256': digest(messages), 'seed_sha256': seed['seed_sha256'],
                                   'seed_state_sha256': seed['seed_state_sha256'], 'official_evaluation_available': False})
     from openai import OpenAI
@@ -75,7 +77,7 @@ def collect_candidates(pair, seed, output, config, *, client=None):
         url = safe_endpoint(os.environ.get('CADWORLD_API_BASE_URL') or settings.get('CADWORLD_API_BASE_URL'))
         if not key or not url: raise RuntimeError('BLOCKED_BY_CREDENTIALS: configured endpoint/key missing')
         client = OpenAI(api_key=key, base_url=url, max_retries=0, timeout=config['model_timeout_seconds'])
-    batch = BatchBudget(output/'model_batch.sqlite', config['max_model_calls'], config['max_model_output_tokens'])
+    batch = BatchBudget(budget_path or output/'model_batch.sqlite', config['max_model_calls'], config['max_model_output_tokens'])
     usage_trace = Trace(output/'provider_usage.jsonl')
     gate = APIGate(config['max_model_calls'], config['max_model_output_tokens'], config['model_wall_seconds'],
                    usage_trace, batch, config['per_call_tokens'])
@@ -98,7 +100,7 @@ def collect_candidates(pair, seed, output, config, *, client=None):
             try:
                 text = response.choices[0].message.content
                 if response.choices[0].finish_reason != 'stop': raise ValueError('incomplete model block')
-                code = candidate_code(text)
+                code = code_parser(text)
             except Exception as exc:
                 samples.append({'branch': branch, 'status': 'CANDIDATE_REJECTED', 'reason': type(exc).__name__, 'message': str(exc)})
                 trace.emit('candidate_rejected', **samples[-1])
