@@ -88,6 +88,24 @@ def messages(pair, seed):
     return [{'role':'system','content':SYSTEM},{'role':'user','content':json.dumps(public,sort_keys=True,allow_nan=False)}]
 
 
+PAD_API_GUIDANCE = """Verified generic FreeCAD API notes for this scoped interface:
+Create a feature with body.newObject(type_name, object_name). body.addObject accepts an
+already created object; it is not the two-string creation API. This interface uses newObject.
+For a PartDesign::Pad, Profile is the supplied sketch relation. Assign the sketch object
+to pad.Profile. BaseFeature is the previous solid relation, not a sketch/profile field.
+Base and Mode are not the Pad profile interface. Length is a native length property;
+plain numeric assignments are millimetres, and unit strings such as 'n mm' are supported.
+Use the exact public names and requested length from the input. No replacement document,
+sketch or task solution is supplied by these notes. The original construction scope remains.
+"""
+
+
+def guided_messages(pair, seed):
+    result = messages(pair, seed)
+    result[0]['content'] += '\n' + PAD_API_GUIDANCE
+    return result
+
+
 def freeze(pair):
     pair['hashes']={k+'_sha256':digest(pair[k]) for k in ('intent','spec','probes','continuation')}
     pair['hashes']['candidate_sha256']={b:digest(c) for b,c in pair['candidates'].items()}

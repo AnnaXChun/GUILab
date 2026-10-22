@@ -10,13 +10,21 @@ import xml.etree.ElementTree as ET
 import zipfile
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
-from cad_cf.cli_causal_credit import candidate_code,evaluate,messages
+from cad_cf.cli_causal_credit import candidate_code,evaluate,messages,guided_messages
 from cad_cf.structural_credit import digest
 from scripts.audit_structural_credit_evidence import deployed_inputs
 
 
 def audit(run):
     plan=json.loads((run/'plan.json').read_text());manifest=json.loads((run/'source_manifest.json').read_text())
+    config=json.loads((run/'config.json').read_text())
+    guided=config['candidate_generation'].get('guidance_protocol')=='native_verified_pad_api_v1'
+    if guided:
+        from scripts.probe_pad_api import verify_probe
+        reference=json.loads((run/'api_probe_reference.json').read_text())
+        verified=verify_probe(Path(reference['run']))
+        assert verified==json.loads((run/'api_probe.json').read_text())
+        assert hashlib.sha256((Path(reference['run'])/'api_probe.json').read_bytes()).hexdigest()==reference['probe_sha256']
     pairs={p['id']:p for p in plan['pairs']}
     with sqlite3.connect('file:'+str((run/'dispatch.sqlite').resolve())+'?mode=ro',uri=True) as db:
         dispatch=list(db.execute('SELECT key,payload,state FROM dispatch ORDER BY rowid'))
@@ -58,7 +66,7 @@ def audit(run):
         if pair.get('control'):continue
         folder=run/(name+'-model');seed=json.loads((folder/'captured_s0.json').read_text())
         inputs=json.loads((folder/'model_input.json').read_text())
-        assert inputs['messages']==messages(pair,seed) and inputs['official_evaluation_available'] is False
+        assert inputs['messages']==(guided_messages if guided else messages)(pair,seed) and inputs['official_evaluation_available'] is False
         trace=list(map(json.loads,(folder/'model_trace.jsonl').read_text().splitlines()))
         calls=[r for r in trace if r['event']=='request'];assert len(calls)==2
         assert calls[0]['request']['messages']==calls[1]['request']['messages']==inputs['messages']

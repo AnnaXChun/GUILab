@@ -11,7 +11,7 @@ import shutil
 import sys
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
-from cad_cf.cli_causal_credit import candidate_code,evaluate,freeze,messages,observation_checks
+from cad_cf.cli_causal_credit import candidate_code,evaluate,freeze,messages,guided_messages,observation_checks
 from cad_cf.cli_model_pair import selection_controls
 from scripts.run_cli_model_pair import collect_candidates,existing_ledgers
 from scripts.run_structural_credit_diagnostic import run_native,save
@@ -109,11 +109,22 @@ def main(argv=None):
     p.add_argument('--source',type=Path);p.add_argument('--runtime-config',type=Path)
     p.add_argument('--output',type=Path,required=True);p.add_argument('--dry-run',action='store_true')
     p.add_argument('--controls-only',action='store_true')
-    a=p.parse_args(argv);config=json.loads(CONFIG.read_text())
+    p.add_argument('--config',type=Path,default=CONFIG)
+    p.add_argument('--api-probe',type=Path)
+    a=p.parse_args(argv);config=json.loads(a.config.read_text())
+    guided=config['candidate_generation'].get('guidance_protocol')=='native_verified_pad_api_v1'
+    if guided and not a.dry_run:
+        if not a.api_probe:p.error('verified generic native API probe required before guided requests')
+        from scripts.probe_pad_api import verify_probe
+        probe=verify_probe(a.api_probe)
     if not a.dry_run and (not a.source or not a.runtime_config):p.error('captured native source and runtime required')
     if not a.dry_run and not a.controls_only and os.environ.get('ENABLE_PAID_RUNS','0')!='1':p.error('NOT_RUN_BUDGET: ENABLE_PAID_RUNS=0')
     output=a.output.resolve();output.mkdir(parents=True,exist_ok=False)
     save(output/'config.json',config)
+    if guided and not a.dry_run:
+        save(output/'api_probe_reference.json',{'run':str(a.api_probe),'probe_sha256':file_sha(a.api_probe/'api_probe.json'),
+            'deployed_worker_sha256':file_sha(a.api_probe/'deployed_worker.py'),'verified_before_requests':True})
+        save(output/'api_probe.json',probe)
     if a.dry_run:
         compile(WORKER.read_text(),'worker','exec')
         save(output/'summary.json',{'status':'DRY_RUN_ONLY','tasks':[t['task_id'] for t in config['tasks']],
@@ -159,12 +170,14 @@ def main(argv=None):
                 save(directory/'captured_s0.json',seed)
                 b=seed['spec']['binding']
                 model_config={'model':config['candidate_generation']['model'],'temperature':.7,
-                    'max_model_calls':4,'max_model_output_tokens':8192,'per_call_tokens':2048,
+                  'max_model_calls':config['budget']['max_model_calls'],
+                  'max_model_output_tokens':config['budget']['max_model_output_tokens'],
+                  'per_call_tokens':config['budget']['max_output_tokens_per_call'],
                     'model_timeout_seconds':110,'model_wall_seconds':600}
                 try:
                     collect_candidates(pair,seed,directory,model_config,
                         code_parser=lambda text:candidate_code(text,body_name=b['body'],sketch_name=b['sketch']),
-                        message_builder=messages,budget_path=output/'model_batch.sqlite')
+                          message_builder=guided_messages if guided else messages,budget_path=output/'model_batch.sqlite')
                 except RuntimeError as exc:
                     if str(exc).startswith('CANDIDATE_REJECTED:'):pair['candidate_interface_rejected']=True
                     else:raise

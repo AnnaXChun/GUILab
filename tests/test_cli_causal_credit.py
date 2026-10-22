@@ -120,3 +120,18 @@ def test_restore_worker_drops_large_verifier_history_before_transport():
     from scripts.run_structural_credit_diagnostic import command
     assert max(len(x.encode()) for x in command({'mode':'prepare'},source))<120000
     with pytest.raises(ValueError,match='no dispatch'):command({'mode':'prepare'},'z'*200000)
+
+
+def test_generic_pad_guidance_preserves_old_messages_and_excludes_answers():
+    from cad_cf.cli_causal_credit import guided_messages
+    p=fixture_pair()
+    seed={'spec':p['spec'],'native_state':{'objects':[]},'seed_sha256':'seed','seed_state_sha256':'state',
+          'trusted_test':{'private':'DO_NOT_SEND'}}
+    original=messages(p,seed)
+    guided=guided_messages(p,seed)
+    assert messages(p,seed)==original
+    assert guided[1]==original[1] and guided[0]['content'].startswith(original[0]['content'])
+    assert 'pad.Profile' in guided[0]['content'] and 'DO_NOT_SEND' not in json.dumps(guided)
+    assert 'fixed continuation' not in guided[0]['content'].lower()
+    from scripts.probe_pad_api import worker_source
+    compile(worker_source(),'independent_pad_api_worker','exec')
