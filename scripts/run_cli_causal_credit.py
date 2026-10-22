@@ -116,6 +116,8 @@ def main(argv=None):
         print('DRY_RUN_ONLY: native S0 and controls required before any model request')
         return 0
     source=a.source.resolve();capture=json.loads((source/'captured_states.json').read_text())
+    if suffix_source((source/'deployed_worker.py').read_text())!=suffix_source(WORKER.read_text()):
+        raise ValueError('continuation differs from actual native-tested source; repeat no-model validation')
     public={r['task_id']:r for r in json.loads((ROOT/config['public_task_manifest']).read_text())}
     plan=plan_from_capture(config,capture,public)
     if a.controls_only:plan['pairs']=[x for x in plan['pairs'] if x.get('control')]

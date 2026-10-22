@@ -119,7 +119,7 @@ def trusted_pad(doc, spec):
     b=spec['binding'];body=doc.getObject(b['body']);sketch=doc.getObject(b['sketch'])
     pad=body.newObject('PartDesign::Pad','Pad')
     pad.Profile=sketch;pad.Length=spec['pad_length'];pad.Reversed=False
-    body.Tip=pad;doc.recompute()
+    body.Tip=pad;body.touch();doc.recompute()
     return pad
 
 
@@ -127,7 +127,7 @@ def continuation(doc, spec):
     b=spec['binding'];body=doc.getObject(b['body']);sketch=doc.getObject(b['sketch'])
     pad=doc.getObject('Pad')
     if pad is None or 'Length' not in pad.PropertiesList:raise RuntimeError('suffix requires Pad.Length')
-    doc.recompute()
+    body.touch();doc.recompute()
     if spec['task_id']=='freecad-part-001':
         cs=b['radius_constraints']
         if len(cs)!=1:raise RuntimeError('missing native dimensional constraint for measurement')
@@ -218,7 +218,11 @@ def prepare(request):
         doc=App.openDocument(str(test))
         try:
             doc.recompute();reopened_result=observe(doc,spec)
-            if native_state(doc)!=built['native']:raise RuntimeError('trusted suffix reopen mismatch')
+            reopen_equal=native_state(doc)==built['native']
+            before_by={x['name']:x for x in built['native']['objects']}
+            after_by={x['name']:x for x in reopened_result['native']['objects']}
+            differences=[{'object':name,'before':before_by.get(name),'after':after_by.get(name)}
+                         for name in sorted(set(before_by)|set(after_by)) if before_by.get(name)!=after_by.get(name)]
         finally:App.closeDocument(doc.Name)
         probe_results=[]
         for i,probe in enumerate(spec['probes']):
@@ -229,7 +233,8 @@ def prepare(request):
                 probe_results.append({'id':probe['id'],'observation':observe(doc,spec),'candidate_reexecuted':False,'suffix_reexecuted':False})
             finally:App.closeDocument(doc.Name)
         record['trusted_test']={'initial_pad':pad_observation,'reopened':reopened_result,'probes':probe_results,
-            'suffix_reopen_equal':True,'source_seed_unchanged':sha(path)==record['seed_sha256']}
+            'suffix_reopen_equal':reopen_equal,'reopen_differences':differences,
+            'source_seed_unchanged':sha(path)==record['seed_sha256']}
         record['control_seed']={'path':str(test),'seed_sha256':sha(test),
             'seed_state_sha256':digest(reopened_result['native']),'native_state':reopened_result['native'],
             'spec':spec,'captured_before_model_requests':True}

@@ -19,8 +19,11 @@ def spec(task='freecad-part-001'):
 def observed(s,probe=None):
     x=expected(s,probe)
     shape={k:x[k] for k in ('area','volume','bbox','com')};shape.update(valid=True,solids=1)
-    return {**{k:x[k] for k in ('radius','pad_length','pocket_depth')},'final':{'type_id':'PartDesign::Pocket' if s['task_id'].endswith('014') else 'PartDesign::Pad','shape':shape,'errors':[]},
-        'pad':{'type_id':'PartDesign::Pad'},'guard':{'shape':{'volume':72 if probe and probe['id']=='guard' else 60}},
+    target='Pocket' if s['task_id'].endswith('014') else 'Pad'
+    return {**{k:x[k] for k in ('radius','pad_length','pocket_depth')},'final':{'name':target,'type_id':'PartDesign::Pocket' if s['task_id'].endswith('014') else 'PartDesign::Pad','shape':shape,'errors':[]},
+        'pad':{'type_id':'PartDesign::Pad','links':{'Profile':['Sketch',['']]}},
+        'body':{'type_id':'PartDesign::Body','links':{'Tip':target},'errors':[]},
+        'guard':{'shape':{'volume':72 if probe and probe['id']=='guard' else 60}},
         'audit_volume':x['volume'] if s['task_id'].endswith('001') else None}
 
 

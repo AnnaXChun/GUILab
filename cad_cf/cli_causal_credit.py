@@ -133,6 +133,12 @@ def observation_checks(obs,spec,probe=None):
         if not close(obs.get(k),want[k]):failures.append('parameter_'+k)
     if shape['valid'] is not True or shape['solids']!=1:failures.append('native_shape_validity')
     if obs.get('final',{}).get('errors'):failures.append('native_errors')
+    body=obs.get('body',{});pad=obs.get('pad',{})
+    if body.get('type_id')!='PartDesign::Body' or body.get('errors') or body.get('links',{}).get('Tip')!=obs['final'].get('name'):
+        failures.append('body_tip_or_validity')
+    profile=pad.get('links',{}).get('Profile')
+    profile_name=profile if isinstance(profile,str) else (profile[0] if isinstance(profile,list) and profile else None)
+    if profile_name!=spec['binding']['sketch']:failures.append('pad_source_profile')
     if obs['pad']['type_id']!='PartDesign::Pad':failures.append('public_pad_operation')
     if spec['task_id']=='freecad-part-014' and obs['final']['type_id']!='PartDesign::Pocket':failures.append('public_pocket_operation')
     if spec['task_id']=='freecad-part-001' and not close(obs.get('audit_volume'),want['volume']):
