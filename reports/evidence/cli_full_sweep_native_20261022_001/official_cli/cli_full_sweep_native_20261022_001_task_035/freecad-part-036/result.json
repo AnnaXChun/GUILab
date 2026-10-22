@@ -1,0 +1,15 @@
+{
+  "task_id": "freecad-part-036",
+  "category": "part",
+  "score": 0.0,
+  "termination": "turn_limit",
+  "turns": 20,
+  "terminal_calls": 20,
+  "output_tokens": 10723,
+  "agent_seconds": 325.967,
+  "task_seconds": 375.554,
+  "artifact_paths": "",
+  "error": "",
+  "gui_score": null,
+  "failure_reason": "turn_limit 后没有输出文件"
+}

@@ -1,0 +1,12 @@
+{
+  "classification": "posthoc_native_audit_error_review",
+  "task_id": "freecad-sketch-034",
+  "artifact_sha256": "0267bfe601ff4c1726ec3a90355fbfa39aae2b74494225fcaf71da21fa45faa5",
+  "controller_response_sha256": "40aa31aaf7d6543bf10ded89a39b9dfcb2fdfe9383d7812403e75302d127313d",
+  "worker_returncode": 1,
+  "document_xml_object_count": 0,
+  "reason": "NATIVE_ARCHIVE_HAS_NO_OBJECT_METADATA",
+  "native_document_opened": false,
+  "quality": null,
+  "automatic_replay": false
+}

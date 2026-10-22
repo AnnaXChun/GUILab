@@ -1,0 +1,6 @@
+{
+  "instruction": "The precondition file is saved at /home/user/Precondition_Unnamed.FCStd. Open the supplied sketch file, create a 360 degree Part Design revolve around the vertical sketch axis, and save the completed solid model to /home/user/Unnamed.FCStd.",
+  "precondition_path": "/home/user/Precondition_Unnamed.FCStd",
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 0
+}

@@ -1,0 +1,6 @@
+{
+  "instruction": "The precondition file is saved at /home/user/Precondition_Unnamed.FCStd. Open the supplied sketch file, create a Part Design Additive Helix from it along the X-axis with 4 turns, 30 mm pitch, and cone angle 0 degrees. Save the completed solid model to /home/user/Unnamed.FCStd.",
+  "precondition_path": "/home/user/Precondition_Unnamed.FCStd",
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 0
+}

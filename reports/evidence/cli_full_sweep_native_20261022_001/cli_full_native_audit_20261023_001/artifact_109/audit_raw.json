@@ -1,0 +1,131 @@
+{
+  "classification": "trusted_posthoc_native_audit",
+  "benchmark_episode": false,
+  "model_calls": 0,
+  "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "artifact_sha256": "43a75e387e1dacf35efd84d88d4be1d1c0be069691f2e8e6c59a2f5e4d53dc13",
+  "saved_file_unchanged": true,
+  "native_open_recompute_reopen": true,
+  "native_tree_restored": true,
+  "initial_objects": [
+    {
+      "name": "CircleSketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 1,
+      "constraint_count": 0,
+      "fully_constrained": false,
+      "solver_return": 0,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 10.0,
+          "world_center": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "BSplineCircle",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 314.1592653708064,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    }
+  ],
+  "reopened_objects": [
+    {
+      "name": "CircleSketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 1,
+      "constraint_count": 0,
+      "fully_constrained": false,
+      "solver_return": 0,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 10.0,
+          "world_center": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "BSplineCircle",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 314.1592653708064,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    }
+  ],
+  "parameter_edit_probe": {
+    "applicable": true,
+    "performed_only_in_disposable_memory": true,
+    "method": "native_radius_constraint",
+    "initial_radius": 10.0,
+    "changed_radius": 11.0,
+    "changed": true,
+    "solver_return": 0
+  }
+}

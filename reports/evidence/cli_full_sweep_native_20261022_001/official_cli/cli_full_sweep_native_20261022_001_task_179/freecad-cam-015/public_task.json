@@ -1,0 +1,6 @@
+{
+  "instruction": "The precondition FreeCAD file is saved at /home/user/Precondition_Unnamed.FCStd. Open that file in FreeCAD and finish the CAM setup for the target part.\n\nCut the target part using the given CAM job stock. Do not change the supplied stock dimensions, position, or material.\n\nThe precondition file includes the stock/material block. Do not modify the target shape or any supplied Stock object, including its dimensions, position, and material. Multiple CAM jobs/setups are allowed when needed to machine both sides or reach leftover material.\n\nGenerate the CAM operation toolpaths and save the completed FreeCAD document to /home/user/Unnamed.FCStd. The saved .FCStd file must include generated CAM path data.",
+  "precondition_path": "/home/user/Precondition_Unnamed.FCStd",
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 1
+}

@@ -1,0 +1,6 @@
+{
+  "instruction": "The precondition file is saved at /home/user/Precondition_Unnamed.FCStd. Open that file; it contains the base part shown in the before image and sketch(es) you will need. Build the target shape shown in the after image by adding the remaining pad and pocket features from the supplied sketches. Use Sketch002 to create the added pad with a 5 mm height, centered on the sketch plane. Then use Sketch003 to create the final pocket cut with a 5 mm depth as shown. Save the completed model to /home/user/Unnamed.FCStd.",
+  "precondition_path": "/home/user/Precondition_Unnamed.FCStd",
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 2
+}

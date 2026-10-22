@@ -1,0 +1,83 @@
+[2026-10-22 19:42:11,848 INFO cadworld.cli] CLI-only tasks: ['freecad-part-038']
+[2026-10-22 19:42:12,383 INFO cadworld.cli] Model endpoint healthy; advertised models: [PRIVATE DIRECTORY EXCLUDED]
+[2026-10-22 19:42:12,389 INFO desktopenv.env] Initializing...
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/cad_cf/upstream_launch.py", line 171, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ^^^^^^
+  File "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/cad_cf/upstream_launch.py", line 157, in main
+    runpy.run_path(runner,run_name='__main__')
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "CLI/run_cli.py", line 519, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "CLI/run_cli.py", line 397, in main
+    env = TerminalDesktopEnv(
+          ^^^^^^^^^^^^^^^^^^^
+  File "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/desktop_env/desktop_env.py", line 184, in __init__
+    self._start_emulator()
+  File "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/desktop_env/desktop_env.py", line 202, in _start_emulator
+    self.provider.start_emulator(self.path_to_vm, self.headless, self.os_type)
+  File "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/cad_cf/qemu_runtime.py", line 147, in start_emulator
+    raise TimeoutError('native controller boot deadline exceeded')
+TimeoutError: native controller boot deadline exceeded
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/cad_cf/baseline.py", line 221, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ^^^^^^
+  File "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/cad_cf/baseline.py", line 217, in main
+    if code:raise subprocess.CalledProcessError(code,guarded)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+subprocess.CalledProcessError: Command '['/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/.venv/bin/python', '-m', 'cad_cf.upstream_launch', '--kind', 'cli', '--max-calls', '20', '--max-output-tokens', '16384', '--per-call-tokens', '8192', '--max-wall', '1200', '--batch-ledger', '/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_sweep_native_20261022_001/job_037/model_batch.sqlite', '--log', '/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_sweep_native_20261022_001_task_037/provider_usage.jsonl', '--campaign-config', '/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_sweep_native_20261022_001_task_037/campaign.json', '--runtime-config', '/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_sweep_native_20261022_001_task_037/runtime_config.json', '--', '--tasks-file', '/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_sweep_native_20261022_001/job_037/tasks.json', '--run-id', 'cli_full_sweep_native_20261022_001_task_037', '--model', 'qwen3.5-122b-a10b', '--base-url', '[REDACTED]', '--vm', '/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/vm_data/FreeCAD-Ubuntu.qcow2', '--results-dir', '/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc', '--max-turns', '20', '--max-terminal-calls', '20', '--max-wall-seconds', '1200', '--total-output-tokens', '16384', '--send-chat-template-kwargs', '--per-turn-tokens', '8192']' returned non-zero exit status 1.
+{
+  "kind": "cli",
+  "command": [
+    "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/.venv/bin/python",
+    "CLI/run_cli.py",
+    "--tasks-file",
+    "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_sweep_native_20261022_001/job_037/tasks.json",
+    "--run-id",
+    "cli_full_sweep_native_20261022_001_task_037",
+    "--model",
+    "qwen3.5-122b-a10b",
+    "--base-url",
+    "[REDACTED]",
+    "--vm",
+    "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/vm_data/FreeCAD-Ubuntu.qcow2",
+    "--results-dir",
+    "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc",
+    "--max-turns",
+    "20",
+    "--max-terminal-calls",
+    "20",
+    "--max-wall-seconds",
+    "1200",
+    "--total-output-tokens",
+    "16384",
+    "--send-chat-template-kwargs",
+    "--per-turn-tokens",
+    "8192"
+  ],
+  "cwd": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD",
+  "protocol": "exploratory_tcg",
+  "task_id": null,
+  "tasks": [
+    "freecad-part-038"
+  ],
+  "model": "qwen3.5-122b-a10b",
+  "base_url": "[REDACTED]",
+  "key_env": "CADWORLD_API_KEY",
+  "key_present": true,
+  "qwen_no_thinking": true,
+  "qwen_coordinates": "pixels",
+  "campaign": "cli_full_sweep_native_20261022_001_task_037",
+  "batch_ledger": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_sweep_native_20261022_001/job_037/model_batch.sqlite",
+  "batch_max_calls": 20,
+  "batch_max_output_tokens": 16384
+}

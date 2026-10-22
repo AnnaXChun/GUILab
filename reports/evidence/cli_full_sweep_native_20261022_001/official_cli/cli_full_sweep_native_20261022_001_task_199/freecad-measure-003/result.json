@@ -1,0 +1,15 @@
+{
+  "task_id": "freecad-measure-003",
+  "category": "measure",
+  "score": 0.0,
+  "termination": "finish",
+  "turns": 8,
+  "terminal_calls": 7,
+  "output_tokens": 2396,
+  "agent_seconds": 69.161,
+  "task_seconds": 89.695,
+  "artifact_paths": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_full_sweep_native_20261022_001_task_199/freecad-measure-003/freecad-measure-003.FCStd",
+  "error": "",
+  "gui_score": null,
+  "failure_reason": "FCStd 有效，但 measurement native object 类型/结构错误"
+}

@@ -1,0 +1,2526 @@
+{
+  "classification": "trusted_posthoc_native_audit",
+  "benchmark_episode": false,
+  "model_calls": 0,
+  "status": "FAIL",
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "artifact_sha256": "09eb57fb80652633495407f8bc7dccadfdc5cd7a60a8f1a671fbcc8ceec43ed0",
+  "saved_file_unchanged": true,
+  "native_open_recompute_reopen": true,
+  "native_tree_restored": true,
+  "initial_objects": [
+    {
+      "name": "Body",
+      "type_id": "PartDesign::Body",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 27,
+      "solids": 1,
+      "surface_area": 2194.5320638070116,
+      "volume": 1358.8091750636022,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin",
+      "type_id": "App::Origin",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "X_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Y_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Z_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XY_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "YZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Sketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 9,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 9,
+      "constraint_count": 20,
+      "fully_constrained": true,
+      "solver_return": 0,
+      "plane_normal": [
+        0.0006981316440878182,
+        -0.9999997563060609,
+        -1.6292064022257344e-07
+      ],
+      "geometries": [
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            -50.00000000000001,
+            3.75,
+            0.0
+          ],
+          "end": [
+            -50.00000000000001,
+            -3.75,
+            0.0
+          ],
+          "length": 7.5,
+          "world_start": [
+            -49.99998781530371,
+            60.46509283664452,
+            5.250010089432644
+          ],
+          "world_end": [
+            -49.99998781530371,
+            60.465094058549624,
+            -2.249989910567257
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            49.999999999999986,
+            -3.75,
+            0.0
+          ],
+          "end": [
+            49.99999999999999,
+            3.75,
+            0.0
+          ],
+          "length": 7.5,
+          "world_start": [
+            49.99998781530369,
+            60.5349072229584,
+            -2.249989899193252
+          ],
+          "world_end": [
+            49.9999878153037,
+            60.5349060010533,
+            5.250010100806648
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -50.00000000000001,
+            3.75,
+            0.0
+          ],
+          "end": [
+            49.99999999999999,
+            3.7500000000000573,
+            0.0
+          ],
+          "length": 100.0,
+          "world_start": [
+            -49.99998781530371,
+            60.46509283664452,
+            5.250010089432644
+          ],
+          "world_end": [
+            49.9999878153037,
+            60.5349060010533,
+            5.250010100806706
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -50.0,
+            -3.75,
+            0.0
+          ],
+          "end": [
+            50.0,
+            -3.7500000000000573,
+            0.0
+          ],
+          "length": 100.0,
+          "world_start": [
+            -49.999987815303705,
+            60.465094058549624,
+            -2.249989910567257
+          ],
+          "world_end": [
+            49.999987815303705,
+            60.5349072229584,
+            -2.2499898991933094
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            -50.00000000000003,
+            1.7499999999999998,
+            0.0
+          ],
+          "end": [
+            -50.0,
+            -1.7499999999999998,
+            0.0
+          ],
+          "length": 3.4999999999999996,
+          "world_start": [
+            -49.99998781530373,
+            60.465093162485886,
+            3.2500100894326702
+          ],
+          "world_end": [
+            -49.999987815303705,
+            60.46509373270826,
+            -0.24998991056728315
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            42.00000000000017,
+            -1.7499999999988296,
+            0.0
+          ],
+          "end": [
+            41.99999999999999,
+            1.75000000000117,
+            0.0
+          ],
+          "length": 3.4999999999999996,
+          "world_start": [
+            41.99998976485528,
+            60.52932184396434,
+            -0.24998990010202893
+          ],
+          "world_end": [
+            41.9999897648551,
+            60.529321273741964,
+            3.250010099897924
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -50.00000000000002,
+            1.75,
+            0.0
+          ],
+          "end": [
+            41.99999999999999,
+            1.7500000000012972,
+            0.0
+          ],
+          "length": 92.00000000000001,
+          "world_start": [
+            -49.999987815303726,
+            60.465093162485886,
+            3.2500100894326707
+          ],
+          "world_end": [
+            41.9999897648551,
+            60.529321273741964,
+            3.2500100998980517
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -50.0,
+            -1.7499999999999998,
+            0.0
+          ],
+          "end": [
+            42.00000000000017,
+            -1.7499999999999998,
+            0.0
+          ],
+          "length": 92.00000000000017,
+          "world_start": [
+            -49.999987815303705,
+            60.46509373270826,
+            -0.24998991056728315
+          ],
+          "world_end": [
+            41.99998976485528,
+            60.52932184396434,
+            -0.2499899001031991
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 1.75,
+          "world_center": [
+            49.999987815303705,
+            60.534906612005855,
+            1.500010100806698
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pad",
+      "type_id": "PartDesign::Pad",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 27,
+      "solids": 1,
+      "surface_area": 2194.5320638070107,
+      "volume": 1358.809175063601,
+      "parameters": {
+        "Length": 3.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Body001",
+      "type_id": "PartDesign::Body",
+      "state": [
+        "Touched"
+      ],
+      "shape_valid": true,
+      "edges": 18,
+      "solids": 1,
+      "surface_area": 2286.532063806896,
+      "volume": 2324.8091750636113,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin001",
+      "type_id": "App::Origin",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "X_Axis001",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Y_Axis001",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Z_Axis001",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XY_Plane001",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XZ_Plane001",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "YZ_Plane001",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Binder",
+      "type_id": "PartDesign::SubShapeBinder",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 27,
+      "solids": 1,
+      "surface_area": 2194.5320638070134,
+      "volume": 1358.8091750636045,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Sketch001",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Touched",
+        "Invalid"
+      ],
+      "shape_valid": true,
+      "edges": 6,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 6,
+      "constraint_count": 13,
+      "fully_constrained": true,
+      "solver_return": -5,
+      "plane_normal": [
+        -4.666406150377611e-16,
+        0.999999999999987,
+        1.6292067983592062e-07
+      ],
+      "geometries": [
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            -50.0,
+            3.75,
+            0.0
+          ],
+          "end": [
+            -50.00000000000001,
+            -3.75,
+            0.0
+          ],
+          "length": 7.5,
+          "world_start": [
+            56.28251116049628,
+            36.49999534308176,
+            30.266888624605233
+          ],
+          "world_end": [
+            56.380942908426064,
+            36.49999656488162,
+            22.767534573021987
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            50.0,
+            -3.75,
+            0.0
+          ],
+          "end": [
+            50.0,
+            3.75,
+            0.0
+          ],
+          "length": 7.5,
+          "world_start": [
+            -43.61044444601854,
+            36.499996778702474,
+            21.455111267291688
+          ],
+          "world_end": [
+            -43.70887619394832,
+            36.49999555690261,
+            28.954465318874934
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -50.0,
+            3.75,
+            0.0
+          ],
+          "end": [
+            50.0,
+            3.75,
+            0.0
+          ],
+          "length": 100.0,
+          "world_start": [
+            56.28251116049628,
+            36.49999534308176,
+            30.266888624605233
+          ],
+          "world_end": [
+            -43.70887619394832,
+            36.49999555690261,
+            28.954465318874934
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -50.00000000000001,
+            -3.75,
+            0.0
+          ],
+          "end": [
+            49.99999999999999,
+            -3.75,
+            0.0
+          ],
+          "length": 100.0,
+          "world_start": [
+            56.380942908426064,
+            36.49999656488162,
+            22.767534573021987
+          ],
+          "world_end": [
+            -43.61044444601853,
+            36.499996778702474,
+            21.455111267291688
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 1.75,
+          "world_center": [
+            56.33172703446117,
+            36.49999595398169,
+            26.51721159881361
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 1.75,
+          "world_center": [
+            6.336033357238871,
+            36.499996060892116,
+            25.86099994594846
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pad001",
+      "type_id": "PartDesign::Pad",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 18,
+      "solids": 1,
+      "surface_area": 2286.5320638068943,
+      "volume": 2324.809175063607,
+      "parameters": {
+        "Length": 3.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Body002",
+      "type_id": "PartDesign::Body",
+      "state": [
+        "Touched"
+      ],
+      "shape_valid": true,
+      "edges": 18,
+      "solids": 1,
+      "surface_area": 2286.5320638068947,
+      "volume": 2324.8091750636104,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin002",
+      "type_id": "App::Origin",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "X_Axis002",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Y_Axis002",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Z_Axis002",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XY_Plane002",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XZ_Plane002",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "YZ_Plane002",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Clone",
+      "type_id": "PartDesign::FeatureBase",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 18,
+      "solids": 1,
+      "surface_area": 2286.5320638068943,
+      "volume": 2324.809175063607,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Body003",
+      "type_id": "PartDesign::Body",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 98.96016858807855,
+      "volume": 63.61725123519336,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin003",
+      "type_id": "App::Origin",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "X_Axis003",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Y_Axis003",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Z_Axis003",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XY_Plane003",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XZ_Plane003",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "YZ_Plane003",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Sketch002",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 1,
+      "constraint_count": 2,
+      "fully_constrained": true,
+      "solver_return": 0,
+      "plane_normal": [
+        -7.025630077706069e-17,
+        -0.999999999999987,
+        -1.629206793365388e-07
+      ],
+      "geometries": [
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 1.5,
+          "world_center": [
+            16.11663471895476,
+            7.499998662501276,
+            9.892434503780235
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pad002",
+      "type_id": "PartDesign::Pad",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 98.96016858807849,
+      "volume": 63.61725123519331,
+      "parameters": {
+        "Length": 9.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Body004",
+      "type_id": "PartDesign::Body",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 98.96016858807849,
+      "volume": 63.61725123519334,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin004",
+      "type_id": "App::Origin",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "X_Axis004",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Y_Axis004",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Z_Axis004",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XY_Plane004",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XZ_Plane004",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "YZ_Plane004",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Clone001",
+      "type_id": "PartDesign::FeatureBase",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 98.96016858807849,
+      "volume": 63.6172512351933,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Body005",
+      "type_id": "PartDesign::Body",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 98.96016858807849,
+      "volume": 63.6172512351933,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin005",
+      "type_id": "App::Origin",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "X_Axis005",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Y_Axis005",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Z_Axis005",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XY_Plane005",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XZ_Plane005",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "YZ_Plane005",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Clone002",
+      "type_id": "PartDesign::FeatureBase",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 98.96016858807849,
+      "volume": 63.6172512351933,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin007",
+      "type_id": "App::Point",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin008",
+      "type_id": "App::Point",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin009",
+      "type_id": "App::Point",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin010",
+      "type_id": "App::Point",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin011",
+      "type_id": "App::Point",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin012",
+      "type_id": "App::Point",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    }
+  ],
+  "reopened_objects": [
+    {
+      "name": "Body",
+      "type_id": "PartDesign::Body",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 27,
+      "solids": 1,
+      "surface_area": 2194.5320638070116,
+      "volume": 1358.8091750636022,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin",
+      "type_id": "App::Origin",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "X_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Y_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Z_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XY_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "YZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Sketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 9,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 9,
+      "constraint_count": 20,
+      "fully_constrained": true,
+      "solver_return": 0,
+      "plane_normal": [
+        0.0006981316440878182,
+        -0.9999997563060609,
+        -1.6292064022257344e-07
+      ],
+      "geometries": [
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            -50.00000000000001,
+            3.75,
+            0.0
+          ],
+          "end": [
+            -50.00000000000001,
+            -3.75,
+            0.0
+          ],
+          "length": 7.5,
+          "world_start": [
+            -49.99998781530371,
+            60.46509283664452,
+            5.250010089432644
+          ],
+          "world_end": [
+            -49.99998781530371,
+            60.465094058549624,
+            -2.249989910567257
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            49.999999999999986,
+            -3.75,
+            0.0
+          ],
+          "end": [
+            49.99999999999999,
+            3.75,
+            0.0
+          ],
+          "length": 7.5,
+          "world_start": [
+            49.99998781530369,
+            60.5349072229584,
+            -2.249989899193252
+          ],
+          "world_end": [
+            49.9999878153037,
+            60.5349060010533,
+            5.250010100806648
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -50.00000000000001,
+            3.75,
+            0.0
+          ],
+          "end": [
+            49.99999999999999,
+            3.7500000000000573,
+            0.0
+          ],
+          "length": 100.0,
+          "world_start": [
+            -49.99998781530371,
+            60.46509283664452,
+            5.250010089432644
+          ],
+          "world_end": [
+            49.9999878153037,
+            60.5349060010533,
+            5.250010100806706
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -50.0,
+            -3.75,
+            0.0
+          ],
+          "end": [
+            50.0,
+            -3.7500000000000573,
+            0.0
+          ],
+          "length": 100.0,
+          "world_start": [
+            -49.999987815303705,
+            60.465094058549624,
+            -2.249989910567257
+          ],
+          "world_end": [
+            49.999987815303705,
+            60.5349072229584,
+            -2.2499898991933094
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            -50.00000000000003,
+            1.7499999999999998,
+            0.0
+          ],
+          "end": [
+            -50.0,
+            -1.7499999999999998,
+            0.0
+          ],
+          "length": 3.4999999999999996,
+          "world_start": [
+            -49.99998781530373,
+            60.465093162485886,
+            3.2500100894326702
+          ],
+          "world_end": [
+            -49.999987815303705,
+            60.46509373270826,
+            -0.24998991056728315
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            42.00000000000017,
+            -1.7499999999988296,
+            0.0
+          ],
+          "end": [
+            41.99999999999999,
+            1.75000000000117,
+            0.0
+          ],
+          "length": 3.4999999999999996,
+          "world_start": [
+            41.99998976485528,
+            60.52932184396434,
+            -0.24998990010202893
+          ],
+          "world_end": [
+            41.9999897648551,
+            60.529321273741964,
+            3.250010099897924
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -50.00000000000002,
+            1.75,
+            0.0
+          ],
+          "end": [
+            41.99999999999999,
+            1.7500000000012972,
+            0.0
+          ],
+          "length": 92.00000000000001,
+          "world_start": [
+            -49.999987815303726,
+            60.465093162485886,
+            3.2500100894326707
+          ],
+          "world_end": [
+            41.9999897648551,
+            60.529321273741964,
+            3.2500100998980517
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -50.0,
+            -1.7499999999999998,
+            0.0
+          ],
+          "end": [
+            42.00000000000017,
+            -1.7499999999999998,
+            0.0
+          ],
+          "length": 92.00000000000017,
+          "world_start": [
+            -49.999987815303705,
+            60.46509373270826,
+            -0.24998991056728315
+          ],
+          "world_end": [
+            41.99998976485528,
+            60.52932184396434,
+            -0.2499899001031991
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 1.75,
+          "world_center": [
+            49.999987815303705,
+            60.534906612005855,
+            1.500010100806698
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pad",
+      "type_id": "PartDesign::Pad",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 27,
+      "solids": 1,
+      "surface_area": 2194.5320638070107,
+      "volume": 1358.809175063601,
+      "parameters": {
+        "Length": 3.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Body001",
+      "type_id": "PartDesign::Body",
+      "state": [
+        "Touched"
+      ],
+      "shape_valid": true,
+      "edges": 18,
+      "solids": 1,
+      "surface_area": 2286.532063806896,
+      "volume": 2324.8091750636113,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin001",
+      "type_id": "App::Origin",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "X_Axis001",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Y_Axis001",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Z_Axis001",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XY_Plane001",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XZ_Plane001",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "YZ_Plane001",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Binder",
+      "type_id": "PartDesign::SubShapeBinder",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 27,
+      "solids": 1,
+      "surface_area": 2194.5320638070134,
+      "volume": 1358.8091750636045,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Sketch001",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Touched",
+        "Invalid"
+      ],
+      "shape_valid": true,
+      "edges": 6,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 6,
+      "constraint_count": 13,
+      "fully_constrained": true,
+      "solver_return": -5,
+      "plane_normal": [
+        -4.666406150377611e-16,
+        0.999999999999987,
+        1.6292067983592062e-07
+      ],
+      "geometries": [
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            -50.0,
+            3.75,
+            0.0
+          ],
+          "end": [
+            -50.00000000000001,
+            -3.75,
+            0.0
+          ],
+          "length": 7.5,
+          "world_start": [
+            56.28251116049628,
+            36.49999534308176,
+            30.266888624605233
+          ],
+          "world_end": [
+            56.380942908426064,
+            36.49999656488162,
+            22.767534573021987
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            50.0,
+            -3.75,
+            0.0
+          ],
+          "end": [
+            50.0,
+            3.75,
+            0.0
+          ],
+          "length": 7.5,
+          "world_start": [
+            -43.61044444601854,
+            36.499996778702474,
+            21.455111267291688
+          ],
+          "world_end": [
+            -43.70887619394832,
+            36.49999555690261,
+            28.954465318874934
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -50.0,
+            3.75,
+            0.0
+          ],
+          "end": [
+            50.0,
+            3.75,
+            0.0
+          ],
+          "length": 100.0,
+          "world_start": [
+            56.28251116049628,
+            36.49999534308176,
+            30.266888624605233
+          ],
+          "world_end": [
+            -43.70887619394832,
+            36.49999555690261,
+            28.954465318874934
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -50.00000000000001,
+            -3.75,
+            0.0
+          ],
+          "end": [
+            49.99999999999999,
+            -3.75,
+            0.0
+          ],
+          "length": 100.0,
+          "world_start": [
+            56.380942908426064,
+            36.49999656488162,
+            22.767534573021987
+          ],
+          "world_end": [
+            -43.61044444601853,
+            36.499996778702474,
+            21.455111267291688
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 1.75,
+          "world_center": [
+            56.33172703446117,
+            36.49999595398169,
+            26.51721159881361
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 1.75,
+          "world_center": [
+            6.336033357238871,
+            36.499996060892116,
+            25.86099994594846
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pad001",
+      "type_id": "PartDesign::Pad",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 18,
+      "solids": 1,
+      "surface_area": 2286.5320638068943,
+      "volume": 2324.809175063607,
+      "parameters": {
+        "Length": 3.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Body002",
+      "type_id": "PartDesign::Body",
+      "state": [
+        "Touched"
+      ],
+      "shape_valid": true,
+      "edges": 18,
+      "solids": 1,
+      "surface_area": 2286.5320638068947,
+      "volume": 2324.8091750636104,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin002",
+      "type_id": "App::Origin",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "X_Axis002",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Y_Axis002",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Z_Axis002",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XY_Plane002",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XZ_Plane002",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "YZ_Plane002",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Clone",
+      "type_id": "PartDesign::FeatureBase",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 18,
+      "solids": 1,
+      "surface_area": 2286.5320638068943,
+      "volume": 2324.809175063607,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Body003",
+      "type_id": "PartDesign::Body",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 98.96016858807855,
+      "volume": 63.61725123519336,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin003",
+      "type_id": "App::Origin",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "X_Axis003",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Y_Axis003",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Z_Axis003",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XY_Plane003",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XZ_Plane003",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "YZ_Plane003",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Sketch002",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 1,
+      "constraint_count": 2,
+      "fully_constrained": true,
+      "solver_return": 0,
+      "plane_normal": [
+        -7.025630077706069e-17,
+        -0.999999999999987,
+        -1.629206793365388e-07
+      ],
+      "geometries": [
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 1.5,
+          "world_center": [
+            16.11663471895476,
+            7.499998662501276,
+            9.892434503780235
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pad002",
+      "type_id": "PartDesign::Pad",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 98.96016858807849,
+      "volume": 63.61725123519331,
+      "parameters": {
+        "Length": 9.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Body004",
+      "type_id": "PartDesign::Body",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 98.96016858807849,
+      "volume": 63.61725123519334,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin004",
+      "type_id": "App::Origin",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "X_Axis004",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Y_Axis004",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Z_Axis004",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XY_Plane004",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XZ_Plane004",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "YZ_Plane004",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Clone001",
+      "type_id": "PartDesign::FeatureBase",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 98.96016858807849,
+      "volume": 63.6172512351933,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Body005",
+      "type_id": "PartDesign::Body",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 98.96016858807849,
+      "volume": 63.6172512351933,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin005",
+      "type_id": "App::Origin",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "X_Axis005",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Y_Axis005",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Z_Axis005",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XY_Plane005",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XZ_Plane005",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "YZ_Plane005",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Clone002",
+      "type_id": "PartDesign::FeatureBase",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 98.96016858807849,
+      "volume": 63.6172512351933,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin007",
+      "type_id": "App::Point",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin008",
+      "type_id": "App::Point",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin009",
+      "type_id": "App::Point",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin010",
+      "type_id": "App::Point",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin011",
+      "type_id": "App::Point",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin012",
+      "type_id": "App::Point",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    }
+  ],
+  "parameter_edit_probe": {
+    "applicable": true,
+    "performed_only_in_disposable_memory": true,
+    "method": "add_native_distance_constraint",
+    "constraint_index": 20,
+    "initial_length": 100.0,
+    "changed_length": 100.0,
+    "changed": false,
+    "solver_return": -4
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "guest_path": "/home/user/.cli_native_audit_4b744a1a8a3e_017/artifact.FCStd",
+  "bytes": 87552,
+  "sha256": "bdde00d8059c7a0235160ce6c8be3b3f4b34399ed04afd1bdf6ed742ae9d5b4f",
+  "state": "complete",
+  "automatic_retry": false,
+  "http_status": 200
+}

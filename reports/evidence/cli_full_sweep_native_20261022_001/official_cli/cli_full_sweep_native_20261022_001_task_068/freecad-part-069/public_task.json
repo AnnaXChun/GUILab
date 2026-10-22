@@ -1,0 +1,6 @@
+{
+  "instruction": "The precondition file is saved at /home/user/Precondition_Unnamed.FCStd. Open that file; it contains the base part shown in the before image and sketch(es) you will need. Build the target shape shown in the after image by mirroring the existing Pad feature across the supplied Sketch mirror plane so the matching geometry appears on the opposite side as shown. Save the completed model to /home/user/Unnamed.FCStd.",
+  "precondition_path": "/home/user/Precondition_Unnamed.FCStd",
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 2
+}

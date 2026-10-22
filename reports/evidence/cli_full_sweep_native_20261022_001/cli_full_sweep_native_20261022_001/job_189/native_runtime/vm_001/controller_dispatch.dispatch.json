@@ -1,0 +1,13 @@
+{
+  "classification": "at_most_once_dispatch_audit",
+  "payload_policy": "digest only; action text remains in original agent trajectory",
+  "source_sha256": "58cfd69ac7f9dc52c56dc81c437e2f54ccc25c4f2fa2193abebd0e04d7c92cbc",
+  "rows": [
+    {
+      "execution_id": "ea49bc54-71b8-47d0-9c99-841804698a0b",
+      "state": "uncertain",
+      "payload_sha256": "99883741b1a010d668c96af551f7aa2f5402a2107685b6e89154fe54dfb204be",
+      "payload_excluded": true
+    }
+  ]
+}

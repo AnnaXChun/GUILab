@@ -1,0 +1,6 @@
+{
+  "instruction": "The precondition file is saved at /home/user/Precondition_Unnamed.FCStd. Open that file; it contains the base part shown in the before image and sketch(es) you will need. Build the target shape shown in the after image by adding the raised circular pad on the large top surface. The pad height is 20 mm. Add six equally spaced circular cuts through this raised pad using a Polar Pattern as shown in the image. Each cut is made by a subtractive cylinder with radius 11 mm. Apply a 2 mm fillet to the raised pad edges and patterned cut edges as shown. Save the completed model to /home/user/Unnamed.FCStd.",
+  "precondition_path": "/home/user/Precondition_Unnamed.FCStd",
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 2
+}

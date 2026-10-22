@@ -1,0 +1,527 @@
+{
+  "classification": "trusted_posthoc_native_audit",
+  "benchmark_episode": false,
+  "model_calls": 0,
+  "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "artifact_sha256": "de082cfc201ab014fc19428199261c6b8f2a27dd244e4e540dad9a206d7825c3",
+  "saved_file_unchanged": true,
+  "native_open_recompute_reopen": true,
+  "native_tree_restored": true,
+  "initial_objects": [
+    {
+      "name": "Body",
+      "type_id": "PartDesign::Body",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin",
+      "type_id": "App::Origin",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "X_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Y_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Z_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XY_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "YZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin001",
+      "type_id": "App::Point",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Sketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 8,
+      "constraint_count": 14,
+      "fully_constrained": true,
+      "solver_return": 0,
+      "plane_normal": [
+        0.0,
+        -1.0,
+        2.220446049250313e-16
+      ],
+      "geometries": [
+        {
+          "type": "Point",
+          "construction": false
+        },
+        {
+          "type": "Point",
+          "construction": false
+        },
+        {
+          "type": "Point",
+          "construction": false
+        },
+        {
+          "type": "Ellipse",
+          "construction": false
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            18.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            -18.0,
+            0.0,
+            0.0
+          ],
+          "length": 36.0,
+          "world_start": [
+            18.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            -18.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            0.0,
+            10.0,
+            0.0
+          ],
+          "end": [
+            0.0,
+            -10.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            0.0,
+            2.220446049250313e-15,
+            10.0
+          ],
+          "world_end": [
+            0.0,
+            -2.220446049250313e-15,
+            -10.0
+          ]
+        },
+        {
+          "type": "Point",
+          "construction": true
+        },
+        {
+          "type": "Point",
+          "construction": true
+        }
+      ]
+    },
+    {
+      "name": "Pad",
+      "type_id": "PartDesign::Pad",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 2208.21779699841,
+      "volume": 6785.840131753954,
+      "parameters": {
+        "Length": 12.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Thickness",
+      "type_id": "PartDesign::Thickness",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 2208.21779699841,
+      "volume": 6785.840131753954,
+      "parameters": {},
+      "area_properties": {}
+    }
+  ],
+  "reopened_objects": [
+    {
+      "name": "Body",
+      "type_id": "PartDesign::Body",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin",
+      "type_id": "App::Origin",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "X_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Y_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Z_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XY_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "YZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin001",
+      "type_id": "App::Point",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Sketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 8,
+      "constraint_count": 14,
+      "fully_constrained": true,
+      "solver_return": 0,
+      "plane_normal": [
+        0.0,
+        -1.0,
+        2.220446049250313e-16
+      ],
+      "geometries": [
+        {
+          "type": "Point",
+          "construction": false
+        },
+        {
+          "type": "Point",
+          "construction": false
+        },
+        {
+          "type": "Point",
+          "construction": false
+        },
+        {
+          "type": "Ellipse",
+          "construction": false
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            18.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            -18.0,
+            0.0,
+            0.0
+          ],
+          "length": 36.0,
+          "world_start": [
+            18.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            -18.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            0.0,
+            10.0,
+            0.0
+          ],
+          "end": [
+            0.0,
+            -10.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            0.0,
+            2.220446049250313e-15,
+            10.0
+          ],
+          "world_end": [
+            0.0,
+            -2.220446049250313e-15,
+            -10.0
+          ]
+        },
+        {
+          "type": "Point",
+          "construction": true
+        },
+        {
+          "type": "Point",
+          "construction": true
+        }
+      ]
+    },
+    {
+      "name": "Pad",
+      "type_id": "PartDesign::Pad",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 2208.21779699841,
+      "volume": 6785.840131753954,
+      "parameters": {
+        "Length": 12.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Thickness",
+      "type_id": "PartDesign::Thickness",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 2208.21779699841,
+      "volume": 6785.840131753954,
+      "parameters": {},
+      "area_properties": {}
+    }
+  ],
+  "parameter_edit_probe": {
+    "applicable": true,
+    "performed_only_in_disposable_memory": true,
+    "method": "add_native_distance_constraint",
+    "constraint_index": 14,
+    "initial_length": 36.0,
+    "changed_length": 36.0,
+    "changed": false,
+    "solver_return": -4
+  },
+  "native_errors": [],
+  "native_state_valid": true,
+  "parameter_editability": "FAIL"
+}

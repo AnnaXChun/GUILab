@@ -1,0 +1,369 @@
+{
+  "classification": "trusted_posthoc_native_audit",
+  "benchmark_episode": false,
+  "model_calls": 0,
+  "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "artifact_sha256": "d916f92f957f391cec9257fedf3478dd1378ab20b1ebd148ce975d36ccea7cd3",
+  "saved_file_unchanged": true,
+  "native_open_recompute_reopen": true,
+  "native_tree_restored": true,
+  "initial_objects": [
+    {
+      "name": "Sketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Touched",
+        "Invalid"
+      ],
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 11,
+      "constraint_count": 22,
+      "fully_constrained": false,
+      "solver_return": -5,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 26.0,
+          "world_center": [
+            -200.0,
+            85.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 13.0,
+          "world_center": [
+            -200.0,
+            85.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 18.0,
+          "world_center": [
+            -200.0,
+            -85.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 8.0,
+          "world_center": [
+            -200.0,
+            -85.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 100.0,
+          "world_center": [
+            -200.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 125.0,
+          "world_center": [
+            -200.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 52.2,
+          "world_center": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 15.0,
+          "world_center": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 10.95,
+          "world_center": [
+            33.5,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -154.5,
+            116.42486847748637,
+            0.0
+          ],
+          "end": [
+            19.000799999999998,
+            48.61902507619831,
+            0.0
+          ],
+          "length": 186.2797895639782,
+          "world_start": [
+            -154.5,
+            116.42486847748637,
+            0.0
+          ],
+          "world_end": [
+            19.000799999999998,
+            48.61902507619831,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -154.5,
+            -116.42486847748637,
+            0.0
+          ],
+          "end": [
+            19.000799999999998,
+            -48.61902507619831,
+            0.0
+          ],
+          "length": 186.2797895639782,
+          "world_start": [
+            -154.5,
+            -116.42486847748637,
+            0.0
+          ],
+          "world_end": [
+            19.000799999999998,
+            -48.61902507619831,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "reopened_objects": [
+    {
+      "name": "Sketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Touched",
+        "Invalid"
+      ],
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 11,
+      "constraint_count": 22,
+      "fully_constrained": false,
+      "solver_return": -5,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 26.0,
+          "world_center": [
+            -200.0,
+            85.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 13.0,
+          "world_center": [
+            -200.0,
+            85.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 18.0,
+          "world_center": [
+            -200.0,
+            -85.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 8.0,
+          "world_center": [
+            -200.0,
+            -85.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 100.0,
+          "world_center": [
+            -200.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 125.0,
+          "world_center": [
+            -200.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 52.2,
+          "world_center": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 15.0,
+          "world_center": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 10.95,
+          "world_center": [
+            33.5,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -154.5,
+            116.42486847748637,
+            0.0
+          ],
+          "end": [
+            19.000799999999998,
+            48.61902507619831,
+            0.0
+          ],
+          "length": 186.2797895639782,
+          "world_start": [
+            -154.5,
+            116.42486847748637,
+            0.0
+          ],
+          "world_end": [
+            19.000799999999998,
+            48.61902507619831,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -154.5,
+            -116.42486847748637,
+            0.0
+          ],
+          "end": [
+            19.000799999999998,
+            -48.61902507619831,
+            0.0
+          ],
+          "length": 186.2797895639782,
+          "world_start": [
+            -154.5,
+            -116.42486847748637,
+            0.0
+          ],
+          "world_end": [
+            19.000799999999998,
+            -48.61902507619831,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "parameter_edit_probe": {
+    "applicable": true,
+    "performed_only_in_disposable_memory": true,
+    "status": "UNAVAILABLE_OR_FAILED",
+    "error": "ValueError",
+    "message": "Zero is not a valid datum for the constraint with index 8"
+  },
+  "native_errors": [
+    {
+      "name": "Sketch",
+      "reason": "native_object_state",
+      "state": [
+        "Touched",
+        "Invalid"
+      ]
+    },
+    {
+      "name": "Sketch",
+      "reason": "solver_failure"
+    }
+  ],
+  "native_state_valid": false,
+  "parameter_editability": "FAIL"
+}

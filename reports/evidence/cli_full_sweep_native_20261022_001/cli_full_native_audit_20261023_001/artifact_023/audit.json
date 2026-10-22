@@ -1,0 +1,437 @@
+{
+  "classification": "trusted_posthoc_native_audit",
+  "benchmark_episode": false,
+  "model_calls": 0,
+  "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "artifact_sha256": "72062b43006f1f226abc66cfb7bcc471f835a940976bef5232b841cad3220fec",
+  "saved_file_unchanged": true,
+  "native_open_recompute_reopen": true,
+  "native_tree_restored": true,
+  "initial_objects": [
+    {
+      "name": "TargetPart",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 15,
+      "solids": 1,
+      "surface_area": 5818.009763684364,
+      "volume": 23795.058809339454,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Body",
+      "type_id": "PartDesign::Body",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 16,
+      "solids": 1,
+      "surface_area": 5380.182956260405,
+      "volume": 24848.141660098187,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin",
+      "type_id": "App::Origin",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "X_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Y_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Z_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XY_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "YZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin001",
+      "type_id": "App::Point",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Box",
+      "type_id": "PartDesign::AdditiveBox",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 12,
+      "solids": 1,
+      "surface_area": 5440.0,
+      "volume": 25200.0,
+      "parameters": {
+        "Height": 20.0,
+        "Length": 45.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Ellipsoid",
+      "type_id": "PartDesign::SubtractiveEllipsoid",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 16,
+      "solids": 1,
+      "surface_area": 5380.182956260405,
+      "volume": 24848.141660098187,
+      "parameters": {
+        "Radius1": 14.0,
+        "Radius2": 8.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "StockBlock",
+      "type_id": "Part::Box",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 12,
+      "solids": 1,
+      "surface_area": 7000.0,
+      "volume": 37500.0,
+      "parameters": {
+        "Height": 25.0,
+        "Length": 50.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Stock",
+      "type_id": "Part::Box",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 12,
+      "solids": 1,
+      "surface_area": 13020.0,
+      "volume": 98648.0,
+      "parameters": {
+        "Height": 44.0,
+        "Length": 59.0
+      },
+      "area_properties": {}
+    }
+  ],
+  "reopened_objects": [
+    {
+      "name": "TargetPart",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 15,
+      "solids": 1,
+      "surface_area": 5818.009763684364,
+      "volume": 23795.058809339454,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Body",
+      "type_id": "PartDesign::Body",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 16,
+      "solids": 1,
+      "surface_area": 5380.182956260405,
+      "volume": 24848.141660098187,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin",
+      "type_id": "App::Origin",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "X_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Y_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Z_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XY_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "YZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin001",
+      "type_id": "App::Point",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Box",
+      "type_id": "PartDesign::AdditiveBox",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 12,
+      "solids": 1,
+      "surface_area": 5440.0,
+      "volume": 25200.0,
+      "parameters": {
+        "Height": 20.0,
+        "Length": 45.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Ellipsoid",
+      "type_id": "PartDesign::SubtractiveEllipsoid",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 16,
+      "solids": 1,
+      "surface_area": 5380.182956260405,
+      "volume": 24848.141660098187,
+      "parameters": {
+        "Radius1": 14.0,
+        "Radius2": 8.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "StockBlock",
+      "type_id": "Part::Box",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 12,
+      "solids": 1,
+      "surface_area": 7000.0,
+      "volume": 37500.0,
+      "parameters": {
+        "Height": 25.0,
+        "Length": 50.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Stock",
+      "type_id": "Part::Box",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 12,
+      "solids": 1,
+      "surface_area": 13020.0,
+      "volume": 98648.0,
+      "parameters": {
+        "Height": 44.0,
+        "Length": 59.0
+      },
+      "area_properties": {}
+    }
+  ],
+  "parameter_edit_probe": {
+    "applicable": false,
+    "performed_only_in_disposable_memory": true
+  },
+  "native_errors": [],
+  "native_state_valid": true,
+  "parameter_editability": "UNAVAILABLE"
+}

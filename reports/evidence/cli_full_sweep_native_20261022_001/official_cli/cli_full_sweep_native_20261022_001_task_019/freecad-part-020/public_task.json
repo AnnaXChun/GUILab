@@ -1,0 +1,6 @@
+{
+  "instruction": "Create a Part Design body with an additive box of size 44 mm × 32 mm × 20 mm. Remove the top-front-right corner (the vertex at maximum X, maximum Y, and maximum Z) using a subtractive box of size 14 mm × 12 mm × 20 mm. The subtractive box should be aligned with the outer faces of the original box so that the cut is flush with the top, front, and right faces. Save the completed model to /home/user/Unnamed.FCStd.",
+  "precondition_path": null,
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 0
+}

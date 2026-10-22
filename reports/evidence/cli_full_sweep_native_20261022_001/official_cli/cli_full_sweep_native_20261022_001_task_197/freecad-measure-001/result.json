@@ -1,0 +1,15 @@
+{
+  "task_id": "freecad-measure-001",
+  "category": "measure",
+  "score": 0.0,
+  "termination": "finish",
+  "turns": 9,
+  "terminal_calls": 8,
+  "output_tokens": 6171,
+  "agent_seconds": 125.92,
+  "task_seconds": 157.907,
+  "artifact_paths": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_full_sweep_native_20261022_001_task_197/freecad-measure-001/freecad-measure-001.FCStd",
+  "error": "",
+  "gui_score": null,
+  "failure_reason": "几何正确，但 native construction process/关系错误"
+}

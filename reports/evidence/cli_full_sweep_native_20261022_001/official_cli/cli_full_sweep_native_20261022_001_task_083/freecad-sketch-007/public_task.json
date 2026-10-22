@@ -1,0 +1,6 @@
+{
+  "instruction": "Draw a regular pentagon with side length 5 centered at the origin with rotation angle 0. Use the zero-rotation orientation where one vertex lies on the positive X axis at (4.253254, 0), so the five vertices are at approximately (4.253254, 0), (1.314328, 4.045085), (-3.440955, 2.5), (-3.440955, -2.5), and (1.314328, -4.045085). Connect those vertices with exactly five straight outer edges to form one closed pentagon. Do not rotate the pentagon to make a flat top, flat bottom, or vertical side. Save the completed model to /home/user/Unnamed.FCStd.",
+  "precondition_path": null,
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 0
+}

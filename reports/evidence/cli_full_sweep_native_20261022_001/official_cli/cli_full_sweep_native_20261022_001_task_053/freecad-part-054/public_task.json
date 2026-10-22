@@ -1,0 +1,6 @@
+{
+  "instruction": "The precondition file is saved at /home/user/Precondition_Unnamed.FCStd. Open that file and use the existing closed periodic B-spline sketch as the pad profile. Create a 12 mm Part Design pad from it, then apply a 1.5 mm Part Design fillet to the top outside edges. Save the completed model to /home/user/Unnamed.FCStd.",
+  "precondition_path": "/home/user/Precondition_Unnamed.FCStd",
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 0
+}

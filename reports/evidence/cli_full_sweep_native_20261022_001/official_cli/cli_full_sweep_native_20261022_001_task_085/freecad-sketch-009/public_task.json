@@ -1,0 +1,6 @@
+{
+  "instruction": "Draw a regular heptagon with side length 6 centered at (20, 0), then rotate the shape so the rightmost side is vertical. Save the completed model to /home/user/Unnamed.FCStd.",
+  "precondition_path": null,
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 0
+}

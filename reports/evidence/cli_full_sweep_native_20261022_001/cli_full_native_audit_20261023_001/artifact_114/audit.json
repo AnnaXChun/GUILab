@@ -1,0 +1,762 @@
+{
+  "classification": "trusted_posthoc_native_audit",
+  "benchmark_episode": false,
+  "model_calls": 0,
+  "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "artifact_sha256": "d16357b956821bc3b5330fa23725f595cf488bdfcaf2e3ee9117e783647e16f3",
+  "saved_file_unchanged": true,
+  "native_open_recompute_reopen": true,
+  "native_tree_restored": true,
+  "initial_objects": [
+    {
+      "name": "Sketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 6,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 7,
+      "constraint_count": 20,
+      "fully_constrained": true,
+      "solver_return": 0,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            12.0,
+            3.552713678800501e-15,
+            0.0
+          ],
+          "end": [
+            6.0,
+            10.392304845413266,
+            0.0
+          ],
+          "length": 11.999999999999998,
+          "world_start": [
+            12.0,
+            3.552713678800501e-15,
+            0.0
+          ],
+          "world_end": [
+            6.0,
+            10.392304845413266,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            6.0,
+            10.392304845413266,
+            0.0
+          ],
+          "end": [
+            -6.0,
+            10.392304845413264,
+            0.0
+          ],
+          "length": 12.0,
+          "world_start": [
+            6.0,
+            10.392304845413266,
+            0.0
+          ],
+          "world_end": [
+            -6.0,
+            10.392304845413264,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -6.0,
+            10.392304845413264,
+            0.0
+          ],
+          "end": [
+            -12.0,
+            0.0,
+            0.0
+          ],
+          "length": 12.0,
+          "world_start": [
+            -6.0,
+            10.392304845413264,
+            0.0
+          ],
+          "world_end": [
+            -12.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -12.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            -6.0,
+            -10.392304845413264,
+            0.0
+          ],
+          "length": 12.0,
+          "world_start": [
+            -12.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            -6.0,
+            -10.392304845413264,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -6.0,
+            -10.392304845413264,
+            0.0
+          ],
+          "end": [
+            6.0,
+            -10.392304845413262,
+            0.0
+          ],
+          "length": 12.0,
+          "world_start": [
+            -6.0,
+            -10.392304845413264,
+            0.0
+          ],
+          "world_end": [
+            6.0,
+            -10.392304845413262,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            6.0,
+            -10.392304845413262,
+            0.0
+          ],
+          "end": [
+            12.0,
+            3.552713678800501e-15,
+            0.0
+          ],
+          "length": 12.000000000000002,
+          "world_start": [
+            6.0,
+            -10.392304845413262,
+            0.0
+          ],
+          "world_end": [
+            12.0,
+            3.552713678800501e-15,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 12.0,
+          "world_center": [
+            0.0,
+            2.5e-15,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SketchB",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Touched",
+        "Invalid"
+      ],
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 6,
+      "constraint_count": 13,
+      "fully_constrained": false,
+      "solver_return": -5,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            42.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            36.0,
+            10.392304845413264,
+            0.0
+          ],
+          "length": 12.0,
+          "world_start": [
+            42.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            36.0,
+            10.392304845413264,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            36.0,
+            10.392304845413264,
+            0.0
+          ],
+          "end": [
+            24.000000000000004,
+            10.392304845413264,
+            0.0
+          ],
+          "length": 11.999999999999996,
+          "world_start": [
+            36.0,
+            10.392304845413264,
+            0.0
+          ],
+          "world_end": [
+            24.000000000000004,
+            10.392304845413264,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            24.000000000000004,
+            10.392304845413264,
+            0.0
+          ],
+          "end": [
+            18.0,
+            1.7763568394002505e-15,
+            0.0
+          ],
+          "length": 12.0,
+          "world_start": [
+            24.000000000000004,
+            10.392304845413264,
+            0.0
+          ],
+          "world_end": [
+            18.0,
+            1.7763568394002505e-15,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            18.0,
+            1.5e-15,
+            0.0
+          ],
+          "end": [
+            23.999999999999993,
+            -10.39230484541326,
+            0.0
+          ],
+          "length": 11.999999999999995,
+          "world_start": [
+            18.0,
+            1.5e-15,
+            0.0
+          ],
+          "world_end": [
+            23.999999999999993,
+            -10.39230484541326,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            23.999999999999993,
+            -10.39230484541326,
+            0.0
+          ],
+          "end": [
+            36.0,
+            -10.392304845413264,
+            0.0
+          ],
+          "length": 12.000000000000007,
+          "world_start": [
+            23.999999999999993,
+            -10.39230484541326,
+            0.0
+          ],
+          "world_end": [
+            36.0,
+            -10.392304845413264,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            36.0,
+            -10.392304845413264,
+            0.0
+          ],
+          "end": [
+            42.0,
+            0.0,
+            0.0
+          ],
+          "length": 12.0,
+          "world_start": [
+            36.0,
+            -10.392304845413264,
+            0.0
+          ],
+          "world_end": [
+            42.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "reopened_objects": [
+    {
+      "name": "Sketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 6,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 7,
+      "constraint_count": 20,
+      "fully_constrained": true,
+      "solver_return": 0,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            12.0,
+            3.6e-15,
+            0.0
+          ],
+          "end": [
+            6.0,
+            10.392304845413266,
+            0.0
+          ],
+          "length": 11.999999999999998,
+          "world_start": [
+            12.0,
+            3.6e-15,
+            0.0
+          ],
+          "world_end": [
+            6.0,
+            10.392304845413266,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            6.0,
+            10.392304845413266,
+            0.0
+          ],
+          "end": [
+            -6.0,
+            10.392304845413264,
+            0.0
+          ],
+          "length": 12.0,
+          "world_start": [
+            6.0,
+            10.392304845413266,
+            0.0
+          ],
+          "world_end": [
+            -6.0,
+            10.392304845413264,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -6.0,
+            10.392304845413264,
+            0.0
+          ],
+          "end": [
+            -12.0,
+            0.0,
+            0.0
+          ],
+          "length": 12.0,
+          "world_start": [
+            -6.0,
+            10.392304845413264,
+            0.0
+          ],
+          "world_end": [
+            -12.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -12.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            -6.0,
+            -10.392304845413264,
+            0.0
+          ],
+          "length": 12.0,
+          "world_start": [
+            -12.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            -6.0,
+            -10.392304845413264,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -6.0,
+            -10.392304845413264,
+            0.0
+          ],
+          "end": [
+            6.0,
+            -10.392304845413262,
+            0.0
+          ],
+          "length": 12.0,
+          "world_start": [
+            -6.0,
+            -10.392304845413264,
+            0.0
+          ],
+          "world_end": [
+            6.0,
+            -10.392304845413262,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            6.0,
+            -10.392304845413262,
+            0.0
+          ],
+          "end": [
+            12.0,
+            3.552713678800501e-15,
+            0.0
+          ],
+          "length": 12.000000000000002,
+          "world_start": [
+            6.0,
+            -10.392304845413262,
+            0.0
+          ],
+          "world_end": [
+            12.0,
+            3.552713678800501e-15,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 12.0,
+          "world_center": [
+            0.0,
+            2.5e-15,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SketchB",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Touched",
+        "Invalid"
+      ],
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 6,
+      "constraint_count": 13,
+      "fully_constrained": false,
+      "solver_return": -5,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            42.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            36.0,
+            10.392304845413264,
+            0.0
+          ],
+          "length": 12.0,
+          "world_start": [
+            42.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            36.0,
+            10.392304845413264,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            36.0,
+            10.392304845413264,
+            0.0
+          ],
+          "end": [
+            24.000000000000004,
+            10.392304845413264,
+            0.0
+          ],
+          "length": 11.999999999999996,
+          "world_start": [
+            36.0,
+            10.392304845413264,
+            0.0
+          ],
+          "world_end": [
+            24.000000000000004,
+            10.392304845413264,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            24.000000000000004,
+            10.392304845413264,
+            0.0
+          ],
+          "end": [
+            18.0,
+            1.7763568394002505e-15,
+            0.0
+          ],
+          "length": 12.0,
+          "world_start": [
+            24.000000000000004,
+            10.392304845413264,
+            0.0
+          ],
+          "world_end": [
+            18.0,
+            1.7763568394002505e-15,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            18.0,
+            1.5e-15,
+            0.0
+          ],
+          "end": [
+            23.999999999999993,
+            -10.39230484541326,
+            0.0
+          ],
+          "length": 11.999999999999995,
+          "world_start": [
+            18.0,
+            1.5e-15,
+            0.0
+          ],
+          "world_end": [
+            23.999999999999993,
+            -10.39230484541326,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            23.999999999999993,
+            -10.39230484541326,
+            0.0
+          ],
+          "end": [
+            36.0,
+            -10.392304845413264,
+            0.0
+          ],
+          "length": 12.000000000000007,
+          "world_start": [
+            23.999999999999993,
+            -10.39230484541326,
+            0.0
+          ],
+          "world_end": [
+            36.0,
+            -10.392304845413264,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            36.0,
+            -10.392304845413264,
+            0.0
+          ],
+          "end": [
+            42.0,
+            0.0,
+            0.0
+          ],
+          "length": 12.0,
+          "world_start": [
+            36.0,
+            -10.392304845413264,
+            0.0
+          ],
+          "world_end": [
+            42.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "parameter_edit_probe": {
+    "applicable": true,
+    "performed_only_in_disposable_memory": true,
+    "method": "add_native_distance_constraint",
+    "constraint_index": 20,
+    "initial_length": 11.999999999999998,
+    "changed_length": 11.999999999999998,
+    "changed": false,
+    "solver_return": -4
+  },
+  "native_errors": [
+    {
+      "name": "SketchB",
+      "reason": "native_object_state",
+      "state": [
+        "Touched",
+        "Invalid"
+      ]
+    },
+    {
+      "name": "SketchB",
+      "reason": "solver_failure"
+    }
+  ],
+  "native_state_valid": false,
+  "parameter_editability": "FAIL"
+}

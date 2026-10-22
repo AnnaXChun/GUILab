@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-23",
+  "classification": "real_cli_candidate_full_sweep_and_native_audit_validation",
+  "cadworld_commit": "e5d0ebab8bd28da6e98c68c61db05747d1647f7b",
+  "native_audit_source_commit": "3024d0dd3a132705976cce6cdaa1857d0e4e1182",
+  "candidate_report": "reports/CLI_MODEL_CANDIDATE_SUCCESS_20261022.md",
+  "experiment_report": "reports/CLI_EXPERIMENTS_20261022.md",
+  "commands": [
+    {
+      "command": "ENABLE_PAID_RUNS=1 .venv/bin/python scripts/run_cli_full_sweep.py --runtime-config results/cli_focus_runtime_20261021.json --environment-evidence results/baseline_debug_20261019/desktop_env_acceptance_003/acceptance.json --model qwen3.5-122b-a10b --workers 2 --turns 20 --output-tokens 16384 --per-call-tokens 8192 --output results/cli_full_sweep_native_20261022_001",
+      "exit_code": 1,
+      "reason": "All 200 tasks attempted; 15 execution/startup errors retain unknown quality and prevent a fully evaluated score denominator.",
+      "attempted": 200,
+      "evaluated": 185,
+      "official_passed": 14,
+      "evaluated_failed": 171,
+      "run_errors": 15,
+      "pending": 0,
+      "model_calls": 3163,
+      "input_tokens": 32025357,
+      "output_tokens": 1582168,
+      "usage_complete": true,
+      "wall_seconds": 42029.2821059227,
+      "cost_usd": null
+    },
+    {
+      "command": "ENABLE_PAID_RUNS=0 .venv/bin/python scripts/summarize_cli_full_sweep.py --run results/cli_full_sweep_native_20261022_001",
+      "exit_code": 0,
+      "model_calls_added": 0
+    },
+    {
+      "command": "ENABLE_PAID_RUNS=0 .venv/bin/python scripts/audit_cli_full_sweep.py --run results/cli_full_sweep_native_20261022_001 --runtime-config results/cli_focus_runtime_20261021.json --output results/cli_full_native_audit_20261023_001",
+      "exit_code": 1,
+      "reason": "sketch-034 has no Document.xml object metadata; the original worker guard returned a known input error before native open.",
+      "artifacts_attempted": 129,
+      "native_reopened": 128,
+      "native_state_valid": 93,
+      "parameter_probe_pass": 40,
+      "parameter_probe_fail": 37,
+      "parameter_probe_unavailable": 51,
+      "audit_errors": 1,
+      "dispatch_complete": 129,
+      "dispatch_uncertain": 0,
+      "model_calls_added": 0
+    },
+    {
+      "command": "ENABLE_PAID_RUNS=0 .venv/bin/python scripts/analyze_cli_full_sweep.py --run results/cli_full_sweep_native_20261022_001 --native-audit results/cli_full_native_audit_20261023_001",
+      "exit_code": 0,
+      "model_calls_added": 0
+    },
+    {
+      "command": "ENABLE_PAID_RUNS=0 .venv/bin/python scripts/summarize_cli_experiments.py --candidate-run results/cli_causal_pad_guided_native_20261022_002 --full-run results/cli_full_sweep_native_20261022_001 --analysis results/cli_full_sweep_native_20261022_001/FINAL_ANALYSIS.json --output reports/CLI_EXPERIMENTS_20261022.md",
+      "exit_code": 0,
+      "model_calls_added": 0
+    },
+    {
+      "command": "ENABLE_PAID_RUNS=0 .venv/bin/python scripts/archive_cli_full_sweep.py --run results/cli_full_sweep_native_20261022_001 --native-audit results/cli_full_native_audit_20261023_001 --output reports/evidence/cli_full_sweep_native_20261022_001",
+      "exit_code": 0,
+      "model_calls_added": 0
+    },
+    {
+      "command": "ENABLE_PAID_RUNS=0 bash scripts/test.sh",
+      "exit_code": 0,
+      "project_tests_passed": 292,
+      "upstream_cli_tests_passed": 7
+    },
+    {
+      "command": ".venv/bin/python -m pytest -q tests/test_cli_full_analysis.py tests/test_cli_full_archive.py tests/test_cli_full_results.py tests/test_cli_audit_upload.py",
+      "exit_code": 0,
+      "related_tests_passed": 17
+    }
+  ],
+  "evidence_validation": {
+    "files": 2449,
+    "source_and_export_sha_checks": 4898,
+    "json_files_parsed": 1718,
+    "jsonl_lines_parsed": 16409,
+    "archive_bytes": 18310842,
+    "private_values_found": 0,
+    "encoded_zip_artifacts_found": 0,
+    "evaluation_rules_exported": false,
+    "evaluated_tasks_with_complete_task_files": 185,
+    "all_task_agent_jsonl_complete": false,
+    "missing_task_files": 21,
+    "original_native_artifact_sha_unchanged": 129,
+    "pre_audit_source_hashes_unchanged": 5
+  },
+  "language_validation": {
+    "new_chinese_prose_files_scanned": 8,
+    "halfwidth_chinese_punctuation": 0,
+    "empty_meta": 0,
+    "contrast_pattern": 0
+  },
+  "cleanup": {
+    "task_vms_stopped": 200,
+    "audit_vms_stopped": 1,
+    "coordinator_alive": false
+  },
+  "codebase_memory": {
+    "project": "Users-bytedance-Desktop-Own-CUA-cad-cf-hybrid",
+    "index_state": "ready",
+    "parse_partial_json_files": 114,
+    "parse_unusable_files": 0,
+    "skipped_files": 0,
+    "native_large_finite_json_values_preserved": true,
+    "index_diagnostics_committed": false
+  },
+  "go_no_go": {
+    "cli_full_collection": "GO",
+    "same_s0_native_model_candidate_execution": "GO",
+    "independent_native_audit_protocol": "GO",
+    "paper_same_model_same_budget_reproduction": "NO-GO",
+    "structural_credit_method_advantage": "NO-GO",
+    "sft_rl_training": "NO-GO"
+  }
+}

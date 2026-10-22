@@ -1,0 +1,6 @@
+{
+  "instruction": "Create a Part Design body with a 48 mm by 32 mm by 14 mm additive box, cut a centered hexagonal prism opening with 9 mm circumradius using a subtractive prism, and save the completed model to /home/user/Unnamed.FCStd.",
+  "precondition_path": null,
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 0
+}

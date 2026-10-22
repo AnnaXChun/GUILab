@@ -1,0 +1,199 @@
+{
+  "classification": "trusted_posthoc_native_audit",
+  "benchmark_episode": false,
+  "model_calls": 0,
+  "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "artifact_sha256": "46018d473a2fd303f2915c9ae8ddfda60dc6c8c714ccf22ac85283c757e5c7bf",
+  "saved_file_unchanged": true,
+  "native_open_recompute_reopen": true,
+  "native_tree_restored": true,
+  "initial_objects": [
+    {
+      "name": "AnnularPad",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 6,
+      "solids": 1,
+      "surface_area": 10704.976967107217,
+      "volume": 23915.3740754523,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Cut1",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 854.5132017764237,
+      "volume": 1507.964473723101,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Cut2",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 854.5132017764237,
+      "volume": 1507.964473723101,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Cut3",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 854.5132017764236,
+      "volume": 1507.9644737231004,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Cut4",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 854.5132017764237,
+      "volume": 1507.9644737231008,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "FinalShape",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 88,
+      "solids": 1,
+      "surface_area": 22083.57829357291,
+      "volume": 55625.59603784553,
+      "parameters": {},
+      "area_properties": {}
+    }
+  ],
+  "reopened_objects": [
+    {
+      "name": "AnnularPad",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 6,
+      "solids": 1,
+      "surface_area": 10704.976967107217,
+      "volume": 23915.3740754523,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Cut1",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 854.5132017764237,
+      "volume": 1507.964473723101,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Cut2",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 854.5132017764237,
+      "volume": 1507.964473723101,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Cut3",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 854.5132017764236,
+      "volume": 1507.9644737231004,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Cut4",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 854.5132017764237,
+      "volume": 1507.9644737231008,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "FinalShape",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 88,
+      "solids": 1,
+      "surface_area": 22083.57829357291,
+      "volume": 55625.59603784553,
+      "parameters": {},
+      "area_properties": {}
+    }
+  ],
+  "parameter_edit_probe": {
+    "applicable": false,
+    "performed_only_in_disposable_memory": true
+  },
+  "native_errors": [],
+  "native_state_valid": true,
+  "parameter_editability": "UNAVAILABLE"
+}

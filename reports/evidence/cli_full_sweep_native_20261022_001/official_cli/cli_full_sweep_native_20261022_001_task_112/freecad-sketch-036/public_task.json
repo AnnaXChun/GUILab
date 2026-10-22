@@ -1,0 +1,6 @@
+{
+  "instruction": "Draw a small rectangle with width 10 and height 6, lower-left corner at (40, 0). Apply a block constraint to this rectangle, then continue from its upper-right corner with a horizontal line of length 12. Save the completed model to /home/user/Unnamed.FCStd.",
+  "precondition_path": null,
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 0
+}

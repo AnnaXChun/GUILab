@@ -1,0 +1,96 @@
+[2026-10-23 03:04:14,529 INFO cadworld.cli] CLI-only tasks: ['freecad-cam-010']
+[2026-10-23 03:04:15,088 INFO cadworld.cli] Model endpoint healthy; advertised models: [PRIVATE DIRECTORY EXCLUDED]
+[2026-10-23 03:04:15,092 INFO desktopenv.env] Initializing...
+[2026-10-23 03:05:44,212 INFO cadworld.cli] Resetting task freecad-cam-010
+[2026-10-23 03:05:44,213 INFO desktopenv.env] Resetting environment...
+[2026-10-23 03:05:44,213 INFO desktopenv.env] Switching task...
+[2026-10-23 03:05:44,213 INFO desktopenv.env] Setting counters...
+[2026-10-23 03:05:44,213 INFO desktopenv.env] Environment is clean, skipping snapshot revert (provider: docker).
+[2026-10-23 03:05:45,747 INFO desktopenv.env] Setting up environment...
+[2026-10-23 03:05:45,747 INFO desktopenv.setup] try to connect http://127.0.0.1:15274
+[2026-10-23 03:06:20,296 INFO desktopenv.setup] Executing setup step 1/2: _upload_file_setup
+[2026-10-23 03:06:20,299 INFO desktopenv.setup] Uploading freecad-cam-010-precondition.FCStd (14515 bytes) to VM at /home/user/Precondition_Unnamed.FCStd (attempt 1/3)
+[2026-10-23 03:06:20,357 INFO desktopenv.setup] File uploaded successfully: /home/user/Precondition_Unnamed.FCStd
+[2026-10-23 03:06:20,357 INFO desktopenv.setup] SETUP COMPLETED: _upload_file_setup({'files': [{'local_path': 'evaluation_examples/fixtures/precondition/freecad-cam-010-precondition.FCStd', 'path': '/home/user/Precondition_Unnamed.FCStd'}]})
+[2026-10-23 03:06:20,357 INFO desktopenv.setup] Executing setup step 2/2: _execute_setup
+[2026-10-23 03:06:20,391 INFO desktopenv.setup] Command executed successfully: rm -f /home/user/Unnamed.FCStd -> {
+  "error": "",
+  "output": "",
+  "returncode": 0,
+  "status": "success"
+}
+
+[2026-10-23 03:06:20,391 INFO desktopenv.setup] SETUP COMPLETED: _execute_setup({'command': ['rm', '-f', '/home/user/Unnamed.FCStd'], 'shell': False})
+[2026-10-23 03:06:20,391 INFO desktopenv.env] Environment setup complete.
+[2026-10-23 03:09:27,389 ERROR cadworld.cli] Task freecad-cam-010 failed
+Traceback (most recent call last):
+  File "CLI/run_cli.py", line 456, in main
+    outcome = agent.run(
+              ^^^^^^^^^^
+  File "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/terminal_agent.py", line 338, in run
+    response = self.client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/cad_cf/upstream_launch.py", line 101, in <lambda>
+    obj.create=lambda *,_method=original,**kw:gate.invoke(_method,kw,provider='openai')
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/cad_cf/upstream_launch.py", line 32, in invoke
+    raise BudgetExhausted("model circuit open; no further provider requests")
+BudgetExhausted: model circuit open; no further provider requests
+[2026-10-23 03:09:27,428 INFO cadworld.cli] Task freecad-cam-010 score=0.000 termination=pipeline_error
+[2026-10-23 03:09:27,430 INFO cadworld.cli] Finished 1 task(s); mean score 0.000; results: /Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_full_sweep_native_20261022_001_task_174
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/cad_cf/baseline.py", line 221, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ^^^^^^
+  File "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/cad_cf/baseline.py", line 217, in main
+    if code:raise subprocess.CalledProcessError(code,guarded)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+subprocess.CalledProcessError: Command '['/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/.venv/bin/python', '-m', 'cad_cf.upstream_launch', '--kind', 'cli', '--max-calls', '20', '--max-output-tokens', '16384', '--per-call-tokens', '8192', '--max-wall', '1200', '--batch-ledger', '/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_sweep_native_20261022_001/job_174/model_batch.sqlite', '--log', '/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_sweep_native_20261022_001_task_174/provider_usage.jsonl', '--campaign-config', '/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_sweep_native_20261022_001_task_174/campaign.json', '--runtime-config', '/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_sweep_native_20261022_001_task_174/runtime_config.json', '--', '--tasks-file', '/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_sweep_native_20261022_001/job_174/tasks.json', '--run-id', 'cli_full_sweep_native_20261022_001_task_174', '--model', 'qwen3.5-122b-a10b', '--base-url', '[REDACTED]', '--vm', '/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/vm_data/FreeCAD-Ubuntu.qcow2', '--results-dir', '/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc', '--max-turns', '20', '--max-terminal-calls', '20', '--max-wall-seconds', '1200', '--total-output-tokens', '16384', '--send-chat-template-kwargs', '--per-turn-tokens', '8192']' returned non-zero exit status 2.
+{
+  "kind": "cli",
+  "command": [
+    "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/.venv/bin/python",
+    "CLI/run_cli.py",
+    "--tasks-file",
+    "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_sweep_native_20261022_001/job_174/tasks.json",
+    "--run-id",
+    "cli_full_sweep_native_20261022_001_task_174",
+    "--model",
+    "qwen3.5-122b-a10b",
+    "--base-url",
+    "[REDACTED]",
+    "--vm",
+    "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/vm_data/FreeCAD-Ubuntu.qcow2",
+    "--results-dir",
+    "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc",
+    "--max-turns",
+    "20",
+    "--max-terminal-calls",
+    "20",
+    "--max-wall-seconds",
+    "1200",
+    "--total-output-tokens",
+    "16384",
+    "--send-chat-template-kwargs",
+    "--per-turn-tokens",
+    "8192"
+  ],
+  "cwd": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD",
+  "protocol": "exploratory_tcg",
+  "task_id": null,
+  "tasks": [
+    "freecad-cam-010"
+  ],
+  "model": "qwen3.5-122b-a10b",
+  "base_url": "[REDACTED]",
+  "key_env": "CADWORLD_API_KEY",
+  "key_present": true,
+  "qwen_no_thinking": true,
+  "qwen_coordinates": "pixels",
+  "campaign": "cli_full_sweep_native_20261022_001_task_174",
+  "batch_ledger": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_sweep_native_20261022_001/job_174/model_batch.sqlite",
+  "batch_max_calls": 20,
+  "batch_max_output_tokens": 16384
+}

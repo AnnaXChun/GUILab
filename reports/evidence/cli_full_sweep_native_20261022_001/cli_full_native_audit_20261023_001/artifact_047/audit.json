@@ -1,0 +1,127 @@
+{
+  "classification": "trusted_posthoc_native_audit",
+  "benchmark_episode": false,
+  "model_calls": 0,
+  "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "artifact_sha256": "039687da2e4b3583faf91a05fb80f5b0d900d3fb760989d8e177182008d90b4d",
+  "saved_file_unchanged": true,
+  "native_open_recompute_reopen": true,
+  "native_tree_restored": true,
+  "initial_objects": [
+    {
+      "name": "Box",
+      "type_id": "Part::Box",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 12,
+      "solids": 1,
+      "surface_area": 4920.0,
+      "volume": 18000.0,
+      "parameters": {
+        "Height": 12.0,
+        "Length": 50.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Cylinder",
+      "type_id": "Part::Cylinder",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 678.5840131753954,
+      "volume": 1357.1680263507906,
+      "parameters": {
+        "Height": 12.0,
+        "Radius": 6.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Cut",
+      "type_id": "Part::Cut",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 15,
+      "solids": 1,
+      "surface_area": 5146.194671058465,
+      "volume": 16642.83197364921,
+      "parameters": {},
+      "area_properties": {}
+    }
+  ],
+  "reopened_objects": [
+    {
+      "name": "Box",
+      "type_id": "Part::Box",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 12,
+      "solids": 1,
+      "surface_area": 4920.0,
+      "volume": 18000.0,
+      "parameters": {
+        "Height": 12.0,
+        "Length": 50.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Cylinder",
+      "type_id": "Part::Cylinder",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 678.5840131753954,
+      "volume": 1357.1680263507906,
+      "parameters": {
+        "Height": 12.0,
+        "Radius": 6.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Cut",
+      "type_id": "Part::Cut",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 15,
+      "solids": 1,
+      "surface_area": 5146.194671058465,
+      "volume": 16642.83197364921,
+      "parameters": {},
+      "area_properties": {}
+    }
+  ],
+  "parameter_edit_probe": {
+    "applicable": false,
+    "performed_only_in_disposable_memory": true
+  },
+  "native_errors": [],
+  "native_state_valid": true,
+  "parameter_editability": "UNAVAILABLE"
+}

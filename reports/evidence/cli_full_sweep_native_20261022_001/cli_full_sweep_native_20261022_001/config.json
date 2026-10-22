@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "model": "qwen3.5-122b-a10b",
+  "workers": 2,
+  "authorization": "2026-10-22 user explicitly requested all CLI tasks and an experiment table",
+  "cadworld_commit": "e5d0ebab8bd28da6e98c68c61db05747d1647f7b",
+  "tasks_sha256": "78d6f4f04770a3b77776f7bef08a7ab6281474738c079999b561c19cfe45a600",
+  "runtime_config_sha256": "168d0694012f4a165b6489b6397575bdbcb320fb335fb43bed25cbbbc092d0a5",
+  "environment_evidence_sha256": "4a4a90446b79e485dcfffafd849867514cdd93ef5289cd6d71df776abd7c7345",
+  "max_total_calls": 4000,
+  "max_total_output_tokens": 3276800,
+  "cli": {
+    "turns": 20,
+    "per_call_tokens": 8192,
+    "output_tokens": 16384,
+    "wall_seconds": 1200
+  }
+}

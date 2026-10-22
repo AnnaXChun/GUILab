@@ -1,0 +1,6 @@
+{
+  "instruction": "Use the normal B-spline tool to draw an open curve with 5 control points (-20, 0), (-10, 8), (0, 4), (10, 12), and (20, 0). Set every control point weight to 1. Save the completed model to /home/user/Unnamed.FCStd.",
+  "precondition_path": null,
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 0
+}

@@ -1,0 +1,6 @@
+{
+  "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_110/freecad-sketch-034/freecad-sketch-034.FCStd",
+  "status": "AUDIT_ERROR",
+  "error": "RuntimeError",
+  "message": "VM command failed: "
+}

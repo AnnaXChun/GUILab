@@ -1,0 +1,336 @@
+{
+  "classification": "trusted_posthoc_native_audit",
+  "benchmark_episode": false,
+  "model_calls": 0,
+  "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "artifact_sha256": "6501bdc81270d0d71cd92ea2ebf20f697631989ed5c81d1c4feb24d5a51a6edc",
+  "saved_file_unchanged": true,
+  "native_open_recompute_reopen": true,
+  "native_tree_restored": true,
+  "initial_objects": [
+    {
+      "name": "b_FreeCAD_Beginner_157_3_BRACKET_001_",
+      "type_id": "Part::FeaturePython",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 262,
+      "solids": 1,
+      "surface_area": 19557.917557756777,
+      "volume": 79029.28777669498,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "b_FreeCAD_Beginner_001_",
+      "type_id": "Part::FeaturePython",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 169,
+      "solids": 1,
+      "surface_area": 54093.87789251464,
+      "volume": 205514.56220125157,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "b_FreeCAD_Beginner_157_2_PULLEY_001_",
+      "type_id": "Part::FeaturePython",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 28,
+      "solids": 1,
+      "surface_area": 47327.896766204096,
+      "volume": 199443.7810789663,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "b_FreeCAD_Beginner_157_4_WASHER_001_",
+      "type_id": "Part::FeaturePython",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 6,
+      "solids": 1,
+      "surface_area": 3683.5173863340315,
+      "volume": 4578.085894443725,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "b_FreeCAD_Beginner_157_4_WASHER_001_001",
+      "type_id": "Part::FeaturePython",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 6,
+      "solids": 1,
+      "surface_area": 3683.5173863340315,
+      "volume": 4578.085894443728,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "b_FreeCAD_Beginner_157_5_SHAFT_001_",
+      "type_id": "Part::FeaturePython",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 122,
+      "solids": 1,
+      "surface_area": 10434.577763849595,
+      "volume": 33301.208555002704,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "b_FreeCAD_Beginner_157_6_PIN_001_",
+      "type_id": "Part::FeaturePython",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 83,
+      "solids": 1,
+      "surface_area": 2816.940496760259,
+      "volume": 6984.824108973424,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "b_FreeCAD_Beginner_157_6_PIN_001_001",
+      "type_id": "Part::FeaturePython",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 83,
+      "solids": 1,
+      "surface_area": 2816.940496760259,
+      "volume": 6984.824108973425,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "b_FreeCAD_Beginner_157_7_BUSHING_001_",
+      "type_id": "Part::FeaturePython",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 28,
+      "solids": 1,
+      "surface_area": 9873.3484773774,
+      "volume": 17414.59396287991,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "b_FreeCAD_Beginner_157_8_406_WOODRUFF_KEY_001_",
+      "type_id": "Part::FeaturePython",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 6,
+      "solids": 1,
+      "surface_area": 440.5143593208379,
+      "volume": 452.47394421986405,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "b_FreeCAD_Beginner_157_9_HEX_NUT_001_",
+      "type_id": "Part::FeaturePython",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 78,
+      "solids": 1,
+      "surface_area": 2081.2601973564592,
+      "volume": 2935.126796175244,
+      "parameters": {},
+      "area_properties": {}
+    }
+  ],
+  "reopened_objects": [
+    {
+      "name": "b_FreeCAD_Beginner_157_3_BRACKET_001_",
+      "type_id": "Part::FeaturePython",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 262,
+      "solids": 1,
+      "surface_area": 19557.917557756777,
+      "volume": 79029.28777669498,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "b_FreeCAD_Beginner_001_",
+      "type_id": "Part::FeaturePython",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 169,
+      "solids": 1,
+      "surface_area": 54093.87789251464,
+      "volume": 205514.56220125157,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "b_FreeCAD_Beginner_157_2_PULLEY_001_",
+      "type_id": "Part::FeaturePython",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 28,
+      "solids": 1,
+      "surface_area": 47327.896766204096,
+      "volume": 199443.7810789663,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "b_FreeCAD_Beginner_157_4_WASHER_001_",
+      "type_id": "Part::FeaturePython",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 6,
+      "solids": 1,
+      "surface_area": 3683.5173863340315,
+      "volume": 4578.085894443725,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "b_FreeCAD_Beginner_157_4_WASHER_001_001",
+      "type_id": "Part::FeaturePython",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 6,
+      "solids": 1,
+      "surface_area": 3683.5173863340315,
+      "volume": 4578.085894443728,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "b_FreeCAD_Beginner_157_5_SHAFT_001_",
+      "type_id": "Part::FeaturePython",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 122,
+      "solids": 1,
+      "surface_area": 10434.577763849595,
+      "volume": 33301.208555002704,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "b_FreeCAD_Beginner_157_6_PIN_001_",
+      "type_id": "Part::FeaturePython",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 83,
+      "solids": 1,
+      "surface_area": 2816.940496760259,
+      "volume": 6984.824108973424,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "b_FreeCAD_Beginner_157_6_PIN_001_001",
+      "type_id": "Part::FeaturePython",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 83,
+      "solids": 1,
+      "surface_area": 2816.940496760259,
+      "volume": 6984.824108973425,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "b_FreeCAD_Beginner_157_7_BUSHING_001_",
+      "type_id": "Part::FeaturePython",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 28,
+      "solids": 1,
+      "surface_area": 9873.3484773774,
+      "volume": 17414.59396287991,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "b_FreeCAD_Beginner_157_8_406_WOODRUFF_KEY_001_",
+      "type_id": "Part::FeaturePython",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 6,
+      "solids": 1,
+      "surface_area": 440.5143593208379,
+      "volume": 452.47394421986405,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "b_FreeCAD_Beginner_157_9_HEX_NUT_001_",
+      "type_id": "Part::FeaturePython",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 78,
+      "solids": 1,
+      "surface_area": 2081.2601973564592,
+      "volume": 2935.126796175244,
+      "parameters": {},
+      "area_properties": {}
+    }
+  ],
+  "parameter_edit_probe": {
+    "applicable": false,
+    "performed_only_in_disposable_memory": true
+  }
+}

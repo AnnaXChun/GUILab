@@ -1,0 +1,25 @@
+{"call": 1, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 0}
+{"call": 1, "event": "model_usage", "input_tokens": 860, "output_tokens": 507, "sequence": 1, "thinking_tokens": 0, "total_tokens": 1367, "usage_available": true}
+{"call": 2, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 2}
+{"call": 2, "event": "model_usage", "input_tokens": 1491, "output_tokens": 334, "sequence": 3, "thinking_tokens": 0, "total_tokens": 1825, "usage_available": true}
+{"call": 3, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 4}
+{"call": 3, "event": "model_usage", "input_tokens": 1949, "output_tokens": 363, "sequence": 5, "thinking_tokens": 0, "total_tokens": 2312, "usage_available": true}
+{"call": 4, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 6}
+{"call": 4, "event": "model_usage", "input_tokens": 2412, "output_tokens": 377, "sequence": 7, "thinking_tokens": 0, "total_tokens": 2789, "usage_available": true}
+{"call": 5, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 8}
+{"call": 5, "event": "model_usage", "input_tokens": 2922, "output_tokens": 435, "sequence": 9, "thinking_tokens": 0, "total_tokens": 3357, "usage_available": true}
+{"call": 6, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 10}
+{"call": 6, "event": "model_usage", "input_tokens": 3507, "output_tokens": 403, "sequence": 11, "thinking_tokens": 0, "total_tokens": 3910, "usage_available": true}
+{"call": 7, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 12}
+{"call": 7, "event": "model_usage", "input_tokens": 4018, "output_tokens": 443, "sequence": 13, "thinking_tokens": 0, "total_tokens": 4461, "usage_available": true}
+{"call": 8, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 14}
+{"call": 8, "event": "model_usage", "input_tokens": 4591, "output_tokens": 380, "sequence": 15, "thinking_tokens": 0, "total_tokens": 4971, "usage_available": true}
+{"call": 9, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 16}
+{"call": 9, "event": "model_usage", "input_tokens": 5108, "output_tokens": 351, "sequence": 17, "thinking_tokens": 0, "total_tokens": 5459, "usage_available": true}
+{"call": 10, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 18}
+{"call": 10, "event": "model_usage", "input_tokens": 5549, "output_tokens": 594, "sequence": 19, "thinking_tokens": 0, "total_tokens": 6143, "usage_available": true}
+{"call": 11, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 20}
+{"call": 11, "event": "model_usage", "input_tokens": 6293, "output_tokens": 688, "sequence": 21, "thinking_tokens": 0, "total_tokens": 6981, "usage_available": true}
+{"call": 12, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 22}
+{"call": 12, "event": "model_usage", "input_tokens": 7230, "output_tokens": 129, "sequence": 23, "thinking_tokens": 0, "total_tokens": 7359, "usage_available": true}
+{"circuit_open": false, "event": "budget_summary", "known_output_tokens": 5004, "model_calls": 12, "output_tokens": 5004, "sequence": 24}

@@ -1,0 +1,15 @@
+{
+  "task_id": "freecad-sketch-016",
+  "category": "sketch",
+  "score": 1.0,
+  "termination": "finish",
+  "turns": 9,
+  "terminal_calls": 8,
+  "output_tokens": 3650,
+  "agent_seconds": 88.195,
+  "task_seconds": 106.96,
+  "artifact_paths": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_full_sweep_native_20261022_001_task_092/freecad-sketch-016/freecad-sketch-016.FCStd",
+  "error": "",
+  "gui_score": null,
+  "failure_reason": "通过"
+}

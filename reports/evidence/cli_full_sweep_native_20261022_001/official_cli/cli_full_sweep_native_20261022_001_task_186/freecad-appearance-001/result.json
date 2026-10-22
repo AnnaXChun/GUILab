@@ -1,0 +1,15 @@
+{
+  "task_id": "freecad-appearance-001",
+  "category": "appearance",
+  "score": 0.0,
+  "termination": "finish",
+  "turns": 13,
+  "terminal_calls": 12,
+  "output_tokens": 4559,
+  "agent_seconds": 156.165,
+  "task_seconds": 190.37,
+  "artifact_paths": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_full_sweep_native_20261022_001_task_186/freecad-appearance-001/freecad-appearance-001.FCStd",
+  "error": "",
+  "gui_score": null,
+  "failure_reason": "几何正确，但 appearance/material property 或 process 错误"
+}

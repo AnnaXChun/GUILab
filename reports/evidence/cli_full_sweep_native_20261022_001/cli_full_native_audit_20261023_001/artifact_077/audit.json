@@ -1,0 +1,171 @@
+{
+  "classification": "trusted_posthoc_native_audit",
+  "benchmark_episode": false,
+  "model_calls": 0,
+  "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "artifact_sha256": "bddb0d63396c5a680cd332c24fc11993a1513a78e4e5014d615b942e4d26bc25",
+  "saved_file_unchanged": true,
+  "native_open_recompute_reopen": true,
+  "native_tree_restored": true,
+  "initial_objects": [
+    {
+      "name": "Box",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 12,
+      "solids": 1,
+      "surface_area": 4600.0,
+      "volume": 15000.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Cylinder1",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 1256.6370614359173,
+      "volume": 3141.592653589793,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "FusedSolid",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 25,
+      "solids": 1,
+      "surface_area": 5028.318530717959,
+      "volume": 16570.796326794894,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "CutCylinder",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 980.1769079200155,
+      "volume": 2261.9467105846516,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "FinalShape",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 34,
+      "solids": 1,
+      "surface_area": 5179.114978090267,
+      "volume": 15439.822971502572,
+      "parameters": {},
+      "area_properties": {}
+    }
+  ],
+  "reopened_objects": [
+    {
+      "name": "Box",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 12,
+      "solids": 1,
+      "surface_area": 4600.0,
+      "volume": 15000.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Cylinder1",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 1256.6370614359173,
+      "volume": 3141.592653589793,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "FusedSolid",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 25,
+      "solids": 1,
+      "surface_area": 5028.318530717959,
+      "volume": 16570.796326794894,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "CutCylinder",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 980.1769079200155,
+      "volume": 2261.9467105846516,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "FinalShape",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 34,
+      "solids": 1,
+      "surface_area": 5179.114978090267,
+      "volume": 15439.822971502572,
+      "parameters": {},
+      "area_properties": {}
+    }
+  ],
+  "parameter_edit_probe": {
+    "applicable": false,
+    "performed_only_in_disposable_memory": true
+  },
+  "native_errors": [],
+  "native_state_valid": true,
+  "parameter_editability": "UNAVAILABLE"
+}

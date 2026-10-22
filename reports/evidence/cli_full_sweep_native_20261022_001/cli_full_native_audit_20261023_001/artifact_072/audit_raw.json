@@ -1,0 +1,671 @@
+{
+  "classification": "trusted_posthoc_native_audit",
+  "benchmark_episode": false,
+  "model_calls": 0,
+  "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "artifact_sha256": "55f5cd55c156f2a5f9f41e0680de35ca7bc4510cde229e7f033e56385380fc9e",
+  "saved_file_unchanged": true,
+  "native_open_recompute_reopen": true,
+  "native_tree_restored": true,
+  "initial_objects": [
+    {
+      "name": "Body",
+      "type_id": "PartDesign::Body",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin",
+      "type_id": "App::Origin",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "X_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Y_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Z_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XY_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "YZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin001",
+      "type_id": "App::Point",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Sketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 15,
+      "constraint_count": 34,
+      "fully_constrained": false,
+      "solver_return": 0,
+      "plane_normal": [
+        0.0,
+        -1.0,
+        2.220446049250313e-16
+      ],
+      "geometries": [
+        {
+          "type": "Point",
+          "construction": true
+        },
+        {
+          "type": "Point",
+          "construction": true
+        },
+        {
+          "type": "Point",
+          "construction": true
+        },
+        {
+          "type": "Point",
+          "construction": true
+        },
+        {
+          "type": "Point",
+          "construction": true
+        },
+        {
+          "type": "Point",
+          "construction": true
+        },
+        {
+          "type": "BSplineCurve",
+          "construction": false,
+          "start": [
+            -18.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            20.0,
+            0.0,
+            0.0
+          ],
+          "length": 38.0,
+          "world_start": [
+            -18.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            20.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 1.0,
+          "world_center": [
+            -18.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 1.0,
+          "world_center": [
+            -14.506217319323722,
+            2.3183936191299548e-18,
+            0.0104411166392118
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 1.0,
+          "world_center": [
+            -10.731992981605563,
+            1.576349325015139e-15,
+            7.099246232743913
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 1.0,
+          "world_center": [
+            -0.4735452828595492,
+            2.427801594547027e-15,
+            10.933846356531486
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 1.0,
+          "world_center": [
+            3.9934359566153717,
+            2.227915945543809e-15,
+            10.033641422163884
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 1.0,
+          "world_center": [
+            14.470640133917643,
+            2.7311706650934993e-16,
+            1.2300099189600313
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 1.0,
+          "world_center": [
+            17.474852505436594,
+            5.6080338552107586e-18,
+            0.0252563391806083
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 1.0,
+          "world_center": [
+            20.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Profile_Sketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 1,
+      "constraint_count": 0,
+      "fully_constrained": false,
+      "solver_return": 0,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 1.5,
+          "world_center": [
+            -18.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pipe",
+      "type_id": "PartDesign::Pipe",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 282.4807985184452,
+      "volume": -0.9402056912484198,
+      "parameters": {},
+      "area_properties": {}
+    }
+  ],
+  "reopened_objects": [
+    {
+      "name": "Body",
+      "type_id": "PartDesign::Body",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin",
+      "type_id": "App::Origin",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "X_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Y_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Z_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XY_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "YZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin001",
+      "type_id": "App::Point",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Sketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 15,
+      "constraint_count": 34,
+      "fully_constrained": false,
+      "solver_return": 0,
+      "plane_normal": [
+        0.0,
+        -1.0,
+        2.220446049250313e-16
+      ],
+      "geometries": [
+        {
+          "type": "Point",
+          "construction": true
+        },
+        {
+          "type": "Point",
+          "construction": true
+        },
+        {
+          "type": "Point",
+          "construction": true
+        },
+        {
+          "type": "Point",
+          "construction": true
+        },
+        {
+          "type": "Point",
+          "construction": true
+        },
+        {
+          "type": "Point",
+          "construction": true
+        },
+        {
+          "type": "BSplineCurve",
+          "construction": false,
+          "start": [
+            -18.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            20.0,
+            0.0,
+            0.0
+          ],
+          "length": 38.0,
+          "world_start": [
+            -18.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            20.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 1.0,
+          "world_center": [
+            -18.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 1.0,
+          "world_center": [
+            -14.506217319323722,
+            2.3183936191299548e-18,
+            0.0104411166392118
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 1.0,
+          "world_center": [
+            -10.731992981605563,
+            1.576349325015139e-15,
+            7.099246232743913
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 1.0,
+          "world_center": [
+            -0.4735452828595492,
+            2.427801594547027e-15,
+            10.933846356531486
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 1.0,
+          "world_center": [
+            3.9934359566153717,
+            2.227915945543809e-15,
+            10.033641422163884
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 1.0,
+          "world_center": [
+            14.470640133917643,
+            2.7311706650934993e-16,
+            1.2300099189600313
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 1.0,
+          "world_center": [
+            17.474852505436594,
+            5.6080338552107586e-18,
+            0.0252563391806083
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 1.0,
+          "world_center": [
+            20.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Profile_Sketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 1,
+      "constraint_count": 0,
+      "fully_constrained": false,
+      "solver_return": 0,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 1.5,
+          "world_center": [
+            -18.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pipe",
+      "type_id": "PartDesign::Pipe",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 282.4807985184452,
+      "volume": -0.9402056912484198,
+      "parameters": {},
+      "area_properties": {}
+    }
+  ],
+  "parameter_edit_probe": {
+    "applicable": true,
+    "performed_only_in_disposable_memory": true,
+    "method": "native_radius_constraint",
+    "initial_radius": 1.0,
+    "changed_radius": 1.0,
+    "changed": false,
+    "solver_return": -3
+  }
+}

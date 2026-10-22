@@ -1,0 +1,11 @@
+{"step_num": 1, "action": "WAIT", "response": {"interaction": "terminal_only"}, "info": {}}
+{"step_num": 2, "action": "WAIT", "response": {"interaction": "terminal_only"}, "info": {}}
+{"step_num": 3, "action": "WAIT", "response": {"interaction": "terminal_only"}, "info": {}}
+{"step_num": 4, "action": "WAIT", "response": {"interaction": "terminal_only"}, "info": {}}
+{"step_num": 5, "action": "WAIT", "response": {"interaction": "terminal_only"}, "info": {}}
+{"step_num": 6, "action": "WAIT", "response": {"interaction": "terminal_only"}, "info": {}}
+{"step_num": 7, "action": "WAIT", "response": {"interaction": "terminal_only"}, "info": {}}
+{"step_num": 8, "action": "WAIT", "response": {"interaction": "terminal_only"}, "info": {}}
+{"step_num": 9, "action": "WAIT", "response": {"interaction": "terminal_only"}, "info": {}}
+{"step_num": 10, "action": "WAIT", "response": {"interaction": "terminal_only"}, "info": {}}
+{"step_num": 11, "action": "DONE", "response": {"interaction": "terminal_only", "submitted": true}, "info": {"done": true}}

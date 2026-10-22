@@ -1,0 +1,1982 @@
+{
+  "classification": "trusted_posthoc_native_audit",
+  "benchmark_episode": false,
+  "model_calls": 0,
+  "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "artifact_sha256": "7f6bec8e75b71bbfc89d442239f567f1a97e2209a15cf41ea23e0691fd14b983",
+  "saved_file_unchanged": true,
+  "native_open_recompute_reopen": true,
+  "native_tree_restored": true,
+  "initial_objects": [
+    {
+      "name": "Body",
+      "type_id": "PartDesign::Body",
+      "state": [
+        "Touched"
+      ],
+      "shape_valid": true,
+      "edges": 36,
+      "solids": 1,
+      "surface_area": 10740.0,
+      "volume": 50200.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin",
+      "type_id": "App::Origin",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "X_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Y_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Z_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XY_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "YZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8.000000000000003e+100,
+      "volume": -1.225996432692711e+155,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Sketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 12,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 15,
+      "constraint_count": 41,
+      "fully_constrained": true,
+      "solver_return": 0,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -51.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            49.0,
+            0.0,
+            0.0
+          ],
+          "length": 100.0,
+          "world_start": [
+            -51.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            49.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            49.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            49.0,
+            -14.0,
+            0.0
+          ],
+          "length": 14.0,
+          "world_start": [
+            49.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            49.0,
+            -14.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            49.0,
+            -14.0,
+            0.0
+          ],
+          "end": [
+            20.0,
+            -14.0,
+            0.0
+          ],
+          "length": 29.0,
+          "world_start": [
+            49.0,
+            -14.0,
+            0.0
+          ],
+          "world_end": [
+            20.0,
+            -14.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            20.0,
+            -14.0,
+            0.0
+          ],
+          "end": [
+            20.0,
+            -33.0,
+            0.0
+          ],
+          "length": 19.0,
+          "world_start": [
+            20.0,
+            -14.0,
+            0.0
+          ],
+          "world_end": [
+            20.0,
+            -33.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            20.0,
+            -33.0,
+            0.0
+          ],
+          "end": [
+            17.5,
+            -33.0,
+            0.0
+          ],
+          "length": 2.5,
+          "world_start": [
+            20.0,
+            -33.0,
+            0.0
+          ],
+          "world_end": [
+            17.5,
+            -33.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            17.5,
+            -33.0,
+            0.0
+          ],
+          "end": [
+            17.5,
+            -43.0,
+            0.0
+          ],
+          "length": 10.0,
+          "world_start": [
+            17.5,
+            -33.0,
+            0.0
+          ],
+          "world_end": [
+            17.5,
+            -43.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            17.5,
+            -43.0,
+            0.0
+          ],
+          "end": [
+            -17.5,
+            -43.0,
+            0.0
+          ],
+          "length": 35.0,
+          "world_start": [
+            17.5,
+            -43.0,
+            0.0
+          ],
+          "world_end": [
+            -17.5,
+            -43.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -17.5,
+            -43.0,
+            0.0
+          ],
+          "end": [
+            -17.5,
+            -33.0,
+            0.0
+          ],
+          "length": 10.0,
+          "world_start": [
+            -17.5,
+            -43.0,
+            0.0
+          ],
+          "world_end": [
+            -17.5,
+            -33.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -17.5,
+            -33.0,
+            0.0
+          ],
+          "end": [
+            -20.0,
+            -33.0,
+            0.0
+          ],
+          "length": 2.5,
+          "world_start": [
+            -17.5,
+            -33.0,
+            0.0
+          ],
+          "world_end": [
+            -20.0,
+            -33.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -20.0,
+            -33.0,
+            0.0
+          ],
+          "end": [
+            -20.0,
+            -14.0,
+            0.0
+          ],
+          "length": 19.0,
+          "world_start": [
+            -20.0,
+            -33.0,
+            0.0
+          ],
+          "world_end": [
+            -20.0,
+            -14.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -20.0,
+            -14.0,
+            0.0
+          ],
+          "end": [
+            -51.0,
+            -14.0,
+            0.0
+          ],
+          "length": 31.0,
+          "world_start": [
+            -20.0,
+            -14.0,
+            0.0
+          ],
+          "world_end": [
+            -51.0,
+            -14.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -51.0,
+            -14.0,
+            0.0
+          ],
+          "end": [
+            -51.0,
+            0.0,
+            0.0
+          ],
+          "length": 14.0,
+          "world_start": [
+            -51.0,
+            -14.0,
+            0.0
+          ],
+          "world_end": [
+            -51.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -20.0,
+            -14.0,
+            0.0
+          ],
+          "end": [
+            20.0,
+            -14.0,
+            0.0
+          ],
+          "length": 40.0,
+          "world_start": [
+            -20.0,
+            -14.0,
+            0.0
+          ],
+          "world_end": [
+            20.0,
+            -14.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            0.0,
+            -43.0,
+            0.0
+          ],
+          "length": 43.0,
+          "world_start": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            0.0,
+            -43.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -17.5,
+            -33.0,
+            0.0
+          ],
+          "end": [
+            17.5,
+            -33.0,
+            0.0
+          ],
+          "length": 35.0,
+          "world_start": [
+            -17.5,
+            -33.0,
+            0.0
+          ],
+          "world_end": [
+            17.5,
+            -33.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pad",
+      "type_id": "PartDesign::Pad",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 36,
+      "solids": 1,
+      "surface_area": 10740.0,
+      "volume": 50200.0,
+      "parameters": {
+        "Length": 20.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Sketch001",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 8,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 8,
+      "constraint_count": 23,
+      "fully_constrained": true,
+      "solver_return": 0,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            6.5,
+            0.0,
+            0.0
+          ],
+          "length": 6.5,
+          "world_start": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            6.5,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            6.5,
+            0.0,
+            0.0
+          ],
+          "end": [
+            6.5,
+            -14.0,
+            0.0
+          ],
+          "length": 14.0,
+          "world_start": [
+            6.5,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            6.5,
+            -14.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            6.5,
+            -14.0,
+            0.0
+          ],
+          "end": [
+            12.5,
+            -14.0,
+            0.0
+          ],
+          "length": 6.0,
+          "world_start": [
+            6.5,
+            -14.0,
+            0.0
+          ],
+          "world_end": [
+            12.5,
+            -14.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            12.5,
+            -14.0,
+            0.0
+          ],
+          "end": [
+            12.5,
+            -37.0,
+            0.0
+          ],
+          "length": 23.0,
+          "world_start": [
+            12.5,
+            -14.0,
+            0.0
+          ],
+          "world_end": [
+            12.5,
+            -37.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            12.5,
+            -37.0,
+            0.0
+          ],
+          "end": [
+            14.0,
+            -37.0,
+            0.0
+          ],
+          "length": 1.5,
+          "world_start": [
+            12.5,
+            -37.0,
+            0.0
+          ],
+          "world_end": [
+            14.0,
+            -37.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            14.0,
+            -37.0,
+            0.0
+          ],
+          "end": [
+            14.0,
+            -45.0,
+            0.0
+          ],
+          "length": 8.0,
+          "world_start": [
+            14.0,
+            -37.0,
+            0.0
+          ],
+          "world_end": [
+            14.0,
+            -45.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            14.0,
+            -45.0,
+            0.0
+          ],
+          "end": [
+            0.0,
+            -45.0,
+            0.0
+          ],
+          "length": 14.0,
+          "world_start": [
+            14.0,
+            -45.0,
+            0.0
+          ],
+          "world_end": [
+            0.0,
+            -45.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            0.0,
+            -45.0,
+            0.0
+          ],
+          "end": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "length": 45.0,
+          "world_start": [
+            0.0,
+            -45.0,
+            0.0
+          ],
+          "world_end": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sketch002",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 1,
+      "constraint_count": 3,
+      "fully_constrained": true,
+      "solver_return": 0,
+      "plane_normal": [
+        1.0,
+        -1.127986593019159e-13,
+        1.1302070390684094e-13
+      ],
+      "geometries": [
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 2.0,
+          "world_center": [
+            -7.895906151134113e-13,
+            -7.0,
+            7.911449273478866e-13
+          ]
+        }
+      ]
+    },
+    {
+      "name": "DatumLine",
+      "type_id": "PartDesign::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {
+        "Length": 20.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Sketch003",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 4,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 4,
+      "constraint_count": 11,
+      "fully_constrained": true,
+      "solver_return": 0,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            2.0,
+            0.0,
+            0.0
+          ],
+          "length": 2.0,
+          "world_start": [
+            -17.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            -15.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            2.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            2.0,
+            -6.0,
+            0.0
+          ],
+          "length": 6.0,
+          "world_start": [
+            -15.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            -15.0,
+            -6.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            2.0,
+            -6.0,
+            0.0
+          ],
+          "end": [
+            0.0,
+            -7.201721238055,
+            0.0
+          ],
+          "length": 2.3332667944305987,
+          "world_start": [
+            -15.0,
+            -6.0,
+            0.0
+          ],
+          "world_end": [
+            -17.0,
+            -7.201721238055,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            0.0,
+            -7.201721238055,
+            0.0
+          ],
+          "end": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "length": 7.201721238055,
+          "world_start": [
+            -17.0,
+            -7.201721238055,
+            0.0
+          ],
+          "world_end": [
+            -17.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Origin001",
+      "type_id": "App::Point",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "PartDesign__Groove",
+      "type_id": "PartDesign::Groove",
+      "state": [
+        "Touched",
+        "Invalid"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "PartDesign__Pocket",
+      "type_id": "PartDesign::Pocket",
+      "state": [
+        "Touched"
+      ],
+      "parameters": {
+        "Length": 50.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "PartDesign__Groove001",
+      "type_id": "PartDesign::Groove",
+      "state": [
+        "Touched"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    }
+  ],
+  "reopened_objects": [
+    {
+      "name": "Body",
+      "type_id": "PartDesign::Body",
+      "state": [
+        "Touched"
+      ],
+      "shape_valid": true,
+      "edges": 36,
+      "solids": 1,
+      "surface_area": 10740.0,
+      "volume": 50200.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin",
+      "type_id": "App::Origin",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "X_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Y_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Z_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XY_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "YZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8.000000000000003e+100,
+      "volume": -1.225996432692711e+155,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Sketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 12,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 15,
+      "constraint_count": 41,
+      "fully_constrained": true,
+      "solver_return": 0,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -51.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            49.0,
+            0.0,
+            0.0
+          ],
+          "length": 100.0,
+          "world_start": [
+            -51.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            49.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            49.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            49.0,
+            -14.0,
+            0.0
+          ],
+          "length": 14.0,
+          "world_start": [
+            49.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            49.0,
+            -14.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            49.0,
+            -14.0,
+            0.0
+          ],
+          "end": [
+            20.0,
+            -14.0,
+            0.0
+          ],
+          "length": 29.0,
+          "world_start": [
+            49.0,
+            -14.0,
+            0.0
+          ],
+          "world_end": [
+            20.0,
+            -14.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            20.0,
+            -14.0,
+            0.0
+          ],
+          "end": [
+            20.0,
+            -33.0,
+            0.0
+          ],
+          "length": 19.0,
+          "world_start": [
+            20.0,
+            -14.0,
+            0.0
+          ],
+          "world_end": [
+            20.0,
+            -33.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            20.0,
+            -33.0,
+            0.0
+          ],
+          "end": [
+            17.5,
+            -33.0,
+            0.0
+          ],
+          "length": 2.5,
+          "world_start": [
+            20.0,
+            -33.0,
+            0.0
+          ],
+          "world_end": [
+            17.5,
+            -33.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            17.5,
+            -33.0,
+            0.0
+          ],
+          "end": [
+            17.5,
+            -43.0,
+            0.0
+          ],
+          "length": 10.0,
+          "world_start": [
+            17.5,
+            -33.0,
+            0.0
+          ],
+          "world_end": [
+            17.5,
+            -43.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            17.5,
+            -43.0,
+            0.0
+          ],
+          "end": [
+            -17.5,
+            -43.0,
+            0.0
+          ],
+          "length": 35.0,
+          "world_start": [
+            17.5,
+            -43.0,
+            0.0
+          ],
+          "world_end": [
+            -17.5,
+            -43.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -17.5,
+            -43.0,
+            0.0
+          ],
+          "end": [
+            -17.5,
+            -33.0,
+            0.0
+          ],
+          "length": 10.0,
+          "world_start": [
+            -17.5,
+            -43.0,
+            0.0
+          ],
+          "world_end": [
+            -17.5,
+            -33.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -17.5,
+            -33.0,
+            0.0
+          ],
+          "end": [
+            -20.0,
+            -33.0,
+            0.0
+          ],
+          "length": 2.5,
+          "world_start": [
+            -17.5,
+            -33.0,
+            0.0
+          ],
+          "world_end": [
+            -20.0,
+            -33.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -20.0,
+            -33.0,
+            0.0
+          ],
+          "end": [
+            -20.0,
+            -14.0,
+            0.0
+          ],
+          "length": 19.0,
+          "world_start": [
+            -20.0,
+            -33.0,
+            0.0
+          ],
+          "world_end": [
+            -20.0,
+            -14.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -20.0,
+            -14.0,
+            0.0
+          ],
+          "end": [
+            -51.0,
+            -14.0,
+            0.0
+          ],
+          "length": 31.0,
+          "world_start": [
+            -20.0,
+            -14.0,
+            0.0
+          ],
+          "world_end": [
+            -51.0,
+            -14.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -51.0,
+            -14.0,
+            0.0
+          ],
+          "end": [
+            -51.0,
+            0.0,
+            0.0
+          ],
+          "length": 14.0,
+          "world_start": [
+            -51.0,
+            -14.0,
+            0.0
+          ],
+          "world_end": [
+            -51.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -20.0,
+            -14.0,
+            0.0
+          ],
+          "end": [
+            20.0,
+            -14.0,
+            0.0
+          ],
+          "length": 40.0,
+          "world_start": [
+            -20.0,
+            -14.0,
+            0.0
+          ],
+          "world_end": [
+            20.0,
+            -14.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            0.0,
+            -43.0,
+            0.0
+          ],
+          "length": 43.0,
+          "world_start": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            0.0,
+            -43.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -17.5,
+            -33.0,
+            0.0
+          ],
+          "end": [
+            17.5,
+            -33.0,
+            0.0
+          ],
+          "length": 35.0,
+          "world_start": [
+            -17.5,
+            -33.0,
+            0.0
+          ],
+          "world_end": [
+            17.5,
+            -33.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pad",
+      "type_id": "PartDesign::Pad",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 36,
+      "solids": 1,
+      "surface_area": 10740.0,
+      "volume": 50200.0,
+      "parameters": {
+        "Length": 20.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Sketch001",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 8,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 8,
+      "constraint_count": 23,
+      "fully_constrained": true,
+      "solver_return": 0,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            6.5,
+            0.0,
+            0.0
+          ],
+          "length": 6.5,
+          "world_start": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            6.5,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            6.5,
+            0.0,
+            0.0
+          ],
+          "end": [
+            6.5,
+            -14.0,
+            0.0
+          ],
+          "length": 14.0,
+          "world_start": [
+            6.5,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            6.5,
+            -14.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            6.5,
+            -14.0,
+            0.0
+          ],
+          "end": [
+            12.5,
+            -14.0,
+            0.0
+          ],
+          "length": 6.0,
+          "world_start": [
+            6.5,
+            -14.0,
+            0.0
+          ],
+          "world_end": [
+            12.5,
+            -14.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            12.5,
+            -14.0,
+            0.0
+          ],
+          "end": [
+            12.5,
+            -37.0,
+            0.0
+          ],
+          "length": 23.0,
+          "world_start": [
+            12.5,
+            -14.0,
+            0.0
+          ],
+          "world_end": [
+            12.5,
+            -37.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            12.5,
+            -37.0,
+            0.0
+          ],
+          "end": [
+            14.0,
+            -37.0,
+            0.0
+          ],
+          "length": 1.5,
+          "world_start": [
+            12.5,
+            -37.0,
+            0.0
+          ],
+          "world_end": [
+            14.0,
+            -37.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            14.0,
+            -37.0,
+            0.0
+          ],
+          "end": [
+            14.0,
+            -45.0,
+            0.0
+          ],
+          "length": 8.0,
+          "world_start": [
+            14.0,
+            -37.0,
+            0.0
+          ],
+          "world_end": [
+            14.0,
+            -45.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            14.0,
+            -45.0,
+            0.0
+          ],
+          "end": [
+            0.0,
+            -45.0,
+            0.0
+          ],
+          "length": 14.0,
+          "world_start": [
+            14.0,
+            -45.0,
+            0.0
+          ],
+          "world_end": [
+            0.0,
+            -45.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            0.0,
+            -45.0,
+            0.0
+          ],
+          "end": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "length": 45.0,
+          "world_start": [
+            0.0,
+            -45.0,
+            0.0
+          ],
+          "world_end": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sketch002",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 1,
+      "constraint_count": 3,
+      "fully_constrained": true,
+      "solver_return": 0,
+      "plane_normal": [
+        1.0,
+        -1.127986593019159e-13,
+        1.1302070390684094e-13
+      ],
+      "geometries": [
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 2.0,
+          "world_center": [
+            -7.895906151134113e-13,
+            -7.0,
+            7.911449273478866e-13
+          ]
+        }
+      ]
+    },
+    {
+      "name": "DatumLine",
+      "type_id": "PartDesign::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {
+        "Length": 20.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Sketch003",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 4,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 4,
+      "constraint_count": 11,
+      "fully_constrained": true,
+      "solver_return": 0,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            2.0,
+            0.0,
+            0.0
+          ],
+          "length": 2.0,
+          "world_start": [
+            -17.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            -15.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            2.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            2.0,
+            -6.0,
+            0.0
+          ],
+          "length": 6.0,
+          "world_start": [
+            -15.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            -15.0,
+            -6.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            2.0,
+            -6.0,
+            0.0
+          ],
+          "end": [
+            0.0,
+            -7.201721238055,
+            0.0
+          ],
+          "length": 2.3332667944305987,
+          "world_start": [
+            -15.0,
+            -6.0,
+            0.0
+          ],
+          "world_end": [
+            -17.0,
+            -7.201721238055,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            0.0,
+            -7.201721238055,
+            0.0
+          ],
+          "end": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "length": 7.201721238055,
+          "world_start": [
+            -17.0,
+            -7.201721238055,
+            0.0
+          ],
+          "world_end": [
+            -17.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Origin001",
+      "type_id": "App::Point",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "PartDesign__Groove",
+      "type_id": "PartDesign::Groove",
+      "state": [
+        "Touched",
+        "Invalid"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "PartDesign__Pocket",
+      "type_id": "PartDesign::Pocket",
+      "state": [
+        "Touched"
+      ],
+      "parameters": {
+        "Length": 50.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "PartDesign__Groove001",
+      "type_id": "PartDesign::Groove",
+      "state": [
+        "Touched"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    }
+  ],
+  "parameter_edit_probe": {
+    "applicable": true,
+    "performed_only_in_disposable_memory": true,
+    "method": "set_existing_native_dimension",
+    "constraint_index": 24,
+    "initial_length": 100.0,
+    "changed_length": 101.0,
+    "changed": true,
+    "solver_return": 0
+  },
+  "native_errors": [
+    {
+      "name": "PartDesign__Groove",
+      "reason": "native_object_state",
+      "state": [
+        "Touched",
+        "Invalid"
+      ]
+    }
+  ],
+  "native_state_valid": false,
+  "parameter_editability": "PASS"
+}

@@ -1,0 +1,6 @@
+{
+  "instruction": "Recreate the sketch shown in the reference image as a fully constrained sketch in the XY plane. Save the completed model to /home/user/Unnamed.FCStd.",
+  "precondition_path": null,
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 1
+}

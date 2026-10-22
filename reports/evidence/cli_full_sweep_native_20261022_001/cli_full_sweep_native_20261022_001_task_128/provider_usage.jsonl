@@ -1,0 +1,31 @@
+{"call": 1, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 0}
+{"call": 1, "event": "model_usage", "input_tokens": 3356, "output_tokens": 32, "sequence": 1, "thinking_tokens": 0, "total_tokens": 3388, "usage_available": true}
+{"call": 2, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 2}
+{"call": 2, "event": "model_usage", "input_tokens": 4662, "output_tokens": 1765, "sequence": 3, "thinking_tokens": 0, "total_tokens": 6427, "usage_available": true}
+{"call": 3, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 4}
+{"call": 3, "event": "model_usage", "input_tokens": 6789, "output_tokens": 4591, "sequence": 5, "thinking_tokens": 0, "total_tokens": 11380, "usage_available": true}
+{"call": 4, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 6}
+{"call": 4, "event": "model_usage", "input_tokens": 11488, "output_tokens": 1740, "sequence": 7, "thinking_tokens": 0, "total_tokens": 13228, "usage_available": true}
+{"call": 5, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 8}
+{"call": 5, "event": "model_usage", "input_tokens": 13653, "output_tokens": 1878, "sequence": 9, "thinking_tokens": 0, "total_tokens": 15531, "usage_available": true}
+{"call": 6, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 10}
+{"call": 6, "event": "model_usage", "input_tokens": 15918, "output_tokens": 256, "sequence": 11, "thinking_tokens": 0, "total_tokens": 16174, "usage_available": true}
+{"call": 7, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 12}
+{"call": 7, "event": "model_usage", "input_tokens": 16426, "output_tokens": 458, "sequence": 13, "thinking_tokens": 0, "total_tokens": 16884, "usage_available": true}
+{"call": 8, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 14}
+{"call": 8, "event": "model_usage", "input_tokens": 17098, "output_tokens": 668, "sequence": 15, "thinking_tokens": 0, "total_tokens": 17766, "usage_available": true}
+{"call": 9, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 16}
+{"call": 9, "event": "model_usage", "input_tokens": 17899, "output_tokens": 412, "sequence": 17, "thinking_tokens": 0, "total_tokens": 18311, "usage_available": true}
+{"call": 10, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 18}
+{"call": 10, "event": "model_usage", "input_tokens": 18439, "output_tokens": 549, "sequence": 19, "thinking_tokens": 0, "total_tokens": 18988, "usage_available": true}
+{"call": 11, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 20}
+{"call": 11, "event": "model_usage", "input_tokens": 19191, "output_tokens": 2374, "sequence": 21, "thinking_tokens": 0, "total_tokens": 21565, "usage_available": true}
+{"call": 12, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 22}
+{"call": 12, "event": "model_usage", "input_tokens": 22467, "output_tokens": 82, "sequence": 23, "thinking_tokens": 0, "total_tokens": 22549, "usage_available": true}
+{"call": 13, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 24}
+{"call": 13, "event": "model_usage", "input_tokens": 22647, "output_tokens": 343, "sequence": 25, "thinking_tokens": 0, "total_tokens": 22990, "usage_available": true}
+{"call": 14, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 26}
+{"call": 14, "event": "model_usage", "input_tokens": 23594, "output_tokens": 747, "sequence": 27, "thinking_tokens": 0, "total_tokens": 24341, "usage_available": true}
+{"call": 15, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 28}
+{"call": 15, "event": "model_usage", "input_tokens": 25379, "output_tokens": 489, "sequence": 29, "thinking_tokens": 0, "total_tokens": 25868, "usage_available": true}
+{"circuit_open": false, "event": "budget_summary", "known_output_tokens": 16384, "model_calls": 15, "output_tokens": 16384, "sequence": 30}

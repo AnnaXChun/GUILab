@@ -1,0 +1,6 @@
+{
+  "instruction": "Draw a regular octagon with side length 6 centered at (20, 0), then create a mirrored copy across the Y axis so the second octagon is centered at (-20, 0). Keep both final octagons as closed eight-sided profiles with the same orientation and size. Save the completed model to /home/user/Unnamed.FCStd.",
+  "precondition_path": null,
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 0
+}

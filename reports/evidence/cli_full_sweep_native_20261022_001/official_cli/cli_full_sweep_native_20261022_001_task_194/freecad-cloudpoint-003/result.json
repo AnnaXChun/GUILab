@@ -1,0 +1,15 @@
+{
+  "task_id": "freecad-cloudpoint-003",
+  "category": "cloudpoint",
+  "score": 0.0,
+  "termination": "finish",
+  "turns": 12,
+  "terminal_calls": 11,
+  "output_tokens": 5004,
+  "agent_seconds": 136.716,
+  "task_seconds": 157.142,
+  "artifact_paths": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_full_sweep_native_20261022_001_task_194/freecad-cloudpoint-003/freecad-cloudpoint-003.FCStd",
+  "error": "",
+  "gui_score": null,
+  "failure_reason": "FCStd 有效，但 native object/document 结构错误"
+}

@@ -1,0 +1,25 @@
+{
+  "classification": "at_most_once_dispatch_audit",
+  "payload_policy": "digest only; action text remains in original agent trajectory",
+  "source_sha256": "0af1a99f93e59a3cac3ddf61783295dc7f593b67364fe69d8125cee0f29f4852",
+  "rows": [
+    {
+      "execution_id": "4b02756a-f7c1-4713-90a8-0d11f9ed7925",
+      "state": "complete",
+      "payload_sha256": "52e8a4a6ea046b84af57e4e2daee9acb9515395c6862ab0c762b7f404fe189e6",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "2d80fe42-fbf4-4ead-8f10-1ebd8c9b20e4",
+      "state": "complete",
+      "payload_sha256": "13f3806572fa58fe805397389b94b88af28c4e2bae9ffdd1c2f8e7446bfd49d7",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "037a06fa-20de-4676-bb9d-bd83c22fbd38",
+      "state": "complete",
+      "payload_sha256": "239b023b70cfe3eebc5d6f29d18dd872fc99e54c04537985987ac2d410f8beee",
+      "payload_excluded": true
+    }
+  ]
+}

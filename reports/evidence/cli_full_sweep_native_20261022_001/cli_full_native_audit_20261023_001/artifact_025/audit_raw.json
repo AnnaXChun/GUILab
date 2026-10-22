@@ -1,0 +1,652 @@
+{
+  "classification": "trusted_posthoc_native_audit",
+  "benchmark_episode": false,
+  "model_calls": 0,
+  "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "artifact_sha256": "57c0d62c0a82663d7c8e7282ea1d3978d5848cd46f1937f7b07e0857430b9923",
+  "saved_file_unchanged": true,
+  "native_open_recompute_reopen": true,
+  "native_tree_restored": true,
+  "initial_objects": [
+    {
+      "name": "Body",
+      "type_id": "PartDesign::Body",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 36,
+      "solids": 1,
+      "surface_area": 5830.247779607694,
+      "volume": 13501.805328941533,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin",
+      "type_id": "App::Origin",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "X_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Y_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Z_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XY_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "YZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin001",
+      "type_id": "App::Point",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Box",
+      "type_id": "PartDesign::AdditiveBox",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 12,
+      "solids": 1,
+      "surface_area": 6400.0,
+      "volume": 19200.0,
+      "parameters": {
+        "Height": 8.0,
+        "Length": 60.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Sketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 4,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 4,
+      "constraint_count": 12,
+      "fully_constrained": true,
+      "solver_return": 0,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            12.0,
+            30.0,
+            0.0
+          ],
+          "end": [
+            12.0,
+            10.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            12.0,
+            30.0,
+            8.0
+          ],
+          "world_end": [
+            12.0,
+            10.0,
+            8.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            12.0,
+            10.0,
+            0.0
+          ],
+          "end": [
+            48.0,
+            10.0,
+            0.0
+          ],
+          "length": 36.0,
+          "world_start": [
+            12.0,
+            10.0,
+            8.0
+          ],
+          "world_end": [
+            48.0,
+            10.0,
+            8.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            48.0,
+            10.0,
+            0.0
+          ],
+          "end": [
+            48.0,
+            30.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            48.0,
+            10.0,
+            8.0
+          ],
+          "world_end": [
+            48.0,
+            30.0,
+            8.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            48.0,
+            30.0,
+            0.0
+          ],
+          "end": [
+            12.0,
+            30.0,
+            0.0
+          ],
+          "length": 36.0,
+          "world_start": [
+            48.0,
+            30.0,
+            8.0
+          ],
+          "world_end": [
+            12.0,
+            30.0,
+            8.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pocket",
+      "type_id": "PartDesign::Pocket",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 24,
+      "solids": 1,
+      "surface_area": 5856.0,
+      "volume": 13440.0,
+      "parameters": {
+        "Length": 8.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Fillet",
+      "type_id": "PartDesign::Fillet",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 36,
+      "solids": 1,
+      "surface_area": 5830.247779607694,
+      "volume": 13501.805328941533,
+      "parameters": {
+        "Radius": 3.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Stock",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 12,
+      "solids": 1,
+      "surface_area": 10600.0,
+      "volume": 52500.0,
+      "parameters": {},
+      "area_properties": {}
+    }
+  ],
+  "reopened_objects": [
+    {
+      "name": "Body",
+      "type_id": "PartDesign::Body",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 36,
+      "solids": 1,
+      "surface_area": 5830.247779607694,
+      "volume": 13501.805328941533,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin",
+      "type_id": "App::Origin",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "X_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Y_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Z_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XY_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "YZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin001",
+      "type_id": "App::Point",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Box",
+      "type_id": "PartDesign::AdditiveBox",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 12,
+      "solids": 1,
+      "surface_area": 6400.0,
+      "volume": 19200.0,
+      "parameters": {
+        "Height": 8.0,
+        "Length": 60.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Sketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 4,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 4,
+      "constraint_count": 12,
+      "fully_constrained": true,
+      "solver_return": 0,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            12.0,
+            30.0,
+            0.0
+          ],
+          "end": [
+            12.0,
+            10.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            12.0,
+            30.0,
+            8.0
+          ],
+          "world_end": [
+            12.0,
+            10.0,
+            8.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            12.0,
+            10.0,
+            0.0
+          ],
+          "end": [
+            48.0,
+            10.0,
+            0.0
+          ],
+          "length": 36.0,
+          "world_start": [
+            12.0,
+            10.0,
+            8.0
+          ],
+          "world_end": [
+            48.0,
+            10.0,
+            8.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            48.0,
+            10.0,
+            0.0
+          ],
+          "end": [
+            48.0,
+            30.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            48.0,
+            10.0,
+            8.0
+          ],
+          "world_end": [
+            48.0,
+            30.0,
+            8.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            48.0,
+            30.0,
+            0.0
+          ],
+          "end": [
+            12.0,
+            30.0,
+            0.0
+          ],
+          "length": 36.0,
+          "world_start": [
+            48.0,
+            30.0,
+            8.0
+          ],
+          "world_end": [
+            12.0,
+            30.0,
+            8.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pocket",
+      "type_id": "PartDesign::Pocket",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 24,
+      "solids": 1,
+      "surface_area": 5856.0,
+      "volume": 13440.0,
+      "parameters": {
+        "Length": 8.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Fillet",
+      "type_id": "PartDesign::Fillet",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 36,
+      "solids": 1,
+      "surface_area": 5830.247779607694,
+      "volume": 13501.805328941533,
+      "parameters": {
+        "Radius": 3.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Stock",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 12,
+      "solids": 1,
+      "surface_area": 10600.0,
+      "volume": 52500.0,
+      "parameters": {},
+      "area_properties": {}
+    }
+  ],
+  "parameter_edit_probe": {
+    "applicable": true,
+    "performed_only_in_disposable_memory": true,
+    "method": "set_existing_native_dimension",
+    "constraint_index": 8,
+    "initial_length": 20.0,
+    "changed_length": 20.0,
+    "changed": false,
+    "solver_return": 0
+  }
+}

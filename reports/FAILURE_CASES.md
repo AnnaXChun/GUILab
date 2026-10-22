@@ -1,5 +1,17 @@
 # 失败案例
 
+独立原生审计保留两项官方成功但工程状态失败：sketch-039 官方 1.0，原文件重开后 Sketch.State 含 Invalid，solver 非零；macro-003 官方 1.0，原文件重开后 Body 与 Fillet002 的 BRep 无效，通用编辑探针 solver=-4。两个原文件 SHA 均不变，没有修复产物或改分。其余 12 个官方成功文件对象状态有效，编辑探针的 PASS/FAIL/UNAVAILABLE 独立记录。
+
+sketch-034 的 `.FCStd` 内 Document.xml 对象数为 0。可信 worker 在打开文档前按原守卫返回 `native archive has no object metadata`，controller 返回码 1、transport complete。保留 AUDIT_ERROR、原始 controller 响应 SHA 与 reviewed_error.json，原生质量 unknown，没有重放。整体 129 次审计派发均 complete、uncertain=0；128 个返回完整审计，35 个原生对象状态无效，1 个未得到原生重开结果。另有原生状态有效但通用编辑探针失败的 case，探针覆盖不足与真实形状无效分开解释。
+
+全量 185 个可评估任务的四种任务证据文件完整。两个启动错误缺少全部四种任务文件，13 个执行不确定任务各缺少最终 `traj.jsonl`，合计 21 个缺失文件；实际已有的部分 trajectory 与完整模型用量均保留。归档不能宣称全部任务 agent JSONL 完整，缺失清单见 [INDEX.json](evidence/cli_full_sweep_native_20261022_001/INDEX.json)。
+
+2026-10-23 全量 200 题的离线失败标签保留为：`wrong_document_structure` 89、`no_output_file` 56、`construction_process_wrong` 11、`diagnostics_unavailable` 8、`shape_correct_process_wrong` 5、`precondition_not_used` 2。185 题可评估中 14 题通过、171 题未通过。标签只用于离线分析；含“shape_correct”的名称不替代 FreeCAD 内核验证，93 题可评估结果的 geometry 阶段检查数为 0，记为 UNCHECKED。
+
+15 个运行错误中，part-018/038 在模型前启动超时，请求均为 0；另 13 个执行不确定为 part-011/041/065/070/075、sketch-045/046、assemble-002/012/025、cam-009/010、fem-001。cam-009/010 分别调用模型 12/16 次，终端账本分别为 11/15 complete 加各 1 uncertain；fem-001 为 1 次模型请求和 1 uncertain。全部用量已知，无模型服务错误；对应 VM 已关闭，原写入没有重放，工程质量保留为 unknown。
+
+开发回归先暴露了新增上传代码的缩进错误，修复后又发现旧公共输入 dry-run 测试会读取活动批次账本。该测试改为独立冻结账本，生产保护保持；最终 292 项项目测试、7 项上游 CLI 测试通过。这些是开发验证记录，不计为 CADWorld episode 或模型任务失败。
+
 sketch 类的 `045/046` 各发生 1 次模型请求和 1 次 uncertain controller 派发，随后停止该题并关闭 VM；两题均未重试，质量 unknown。全量 140 题阶段的 9 个运行错误为 2 个启动超时与 7 个执行不确定，没有据此声称模型服务故障。原始 score、缺失结果和实际请求次数分别保留。
 
 part 类 77 题全部尝试后，共 7 个运行错误：`018/038` 为启动超时；`011/041/065/070/075` 为非幂等执行不确定，分别有 4/8/4/1/4 次模型请求，uncertain 均为 1。对应 VM 全部关闭，原写入不重放，原生质量为 unknown。70 题有可评估官方结果，`013/039` 通过，68 题 strict<1；55 题保存了原生文件，真实重开状态仍待独立审计。

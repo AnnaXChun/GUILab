@@ -1,0 +1,6 @@
+{
+  "instruction": "Draw a polyline from (0, 0) through (20, 0) to (20, 15). Then fillet the inside corner with radius 4. Save the completed model to /home/user/Unnamed.FCStd.",
+  "precondition_path": null,
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 0
+}

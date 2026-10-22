@@ -1,0 +1,6 @@
+{
+  "instruction": "The precondition file is saved at /home/user/Precondition_Unnamed.FCStd. Open that file and use the existing rectangular sketch as the lower loft profile. Create a second sketch on a parallel plane 18 mm above the original sketch, draw a centered rectangle that is half the length and half the width of the original rectangle, then create a Part Design Additive Loft between the two rectangular profiles. Save the completed solid model to /home/user/Unnamed.FCStd.",
+  "precondition_path": "/home/user/Precondition_Unnamed.FCStd",
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 0
+}

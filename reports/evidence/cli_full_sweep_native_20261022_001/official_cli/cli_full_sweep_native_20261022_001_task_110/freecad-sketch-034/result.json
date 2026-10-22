@@ -1,0 +1,15 @@
+{
+  "task_id": "freecad-sketch-034",
+  "category": "sketch",
+  "score": 0.0,
+  "termination": "turn_limit",
+  "turns": 20,
+  "terminal_calls": 20,
+  "output_tokens": 7911,
+  "agent_seconds": 223.012,
+  "task_seconds": 255.591,
+  "artifact_paths": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_full_sweep_native_20261022_001_task_110/freecad-sketch-034/freecad-sketch-034.FCStd",
+  "error": "",
+  "gui_score": null,
+  "failure_reason": "FCStd 有效，但未正确保留 precondition 内容"
+}

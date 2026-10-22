@@ -1,0 +1,390 @@
+{
+  "classification": "trusted_posthoc_native_audit",
+  "benchmark_episode": false,
+  "model_calls": 0,
+  "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "artifact_sha256": "e7b0f2423509e87f335b918b10f44bf6a1e56eae127f9a5a30bfdaaa8147fbf8",
+  "saved_file_unchanged": true,
+  "native_open_recompute_reopen": true,
+  "native_tree_restored": true,
+  "initial_objects": [
+    {
+      "name": "Sketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Touched",
+        "Invalid"
+      ],
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 8,
+      "constraint_count": 6,
+      "fully_constrained": false,
+      "solver_return": -5,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -30.0,
+            -12.0,
+            0.0
+          ],
+          "end": [
+            30.0,
+            -12.0,
+            0.0
+          ],
+          "length": 60.0,
+          "world_start": [
+            -30.0,
+            -12.0,
+            0.0
+          ],
+          "world_end": [
+            30.0,
+            -12.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            30.0,
+            -12.0,
+            0.0
+          ],
+          "end": [
+            30.0,
+            12.0,
+            0.0
+          ],
+          "length": 24.0,
+          "world_start": [
+            30.0,
+            -12.0,
+            0.0
+          ],
+          "world_end": [
+            30.0,
+            12.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            30.0,
+            12.0,
+            0.0
+          ],
+          "end": [
+            -30.0,
+            12.0,
+            0.0
+          ],
+          "length": 60.0,
+          "world_start": [
+            30.0,
+            12.0,
+            0.0
+          ],
+          "world_end": [
+            -30.0,
+            12.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -30.0,
+            12.0,
+            0.0
+          ],
+          "end": [
+            -30.0,
+            -12.0,
+            0.0
+          ],
+          "length": 24.0,
+          "world_start": [
+            -30.0,
+            12.0,
+            0.0
+          ],
+          "world_end": [
+            -30.0,
+            -12.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -50.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            50.0,
+            0.0,
+            0.0
+          ],
+          "length": 100.0,
+          "world_start": [
+            -50.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            50.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Point",
+          "construction": true
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 5.0,
+          "world_center": [
+            -18.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 5.0,
+          "world_center": [
+            18.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "reopened_objects": [
+    {
+      "name": "Sketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Touched",
+        "Invalid"
+      ],
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 8,
+      "constraint_count": 6,
+      "fully_constrained": false,
+      "solver_return": -5,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -30.0,
+            -12.0,
+            0.0
+          ],
+          "end": [
+            30.0,
+            -12.0,
+            0.0
+          ],
+          "length": 60.0,
+          "world_start": [
+            -30.0,
+            -12.0,
+            0.0
+          ],
+          "world_end": [
+            30.0,
+            -12.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            30.0,
+            -12.0,
+            0.0
+          ],
+          "end": [
+            30.0,
+            12.0,
+            0.0
+          ],
+          "length": 24.0,
+          "world_start": [
+            30.0,
+            -12.0,
+            0.0
+          ],
+          "world_end": [
+            30.0,
+            12.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            30.0,
+            12.0,
+            0.0
+          ],
+          "end": [
+            -30.0,
+            12.0,
+            0.0
+          ],
+          "length": 60.0,
+          "world_start": [
+            30.0,
+            12.0,
+            0.0
+          ],
+          "world_end": [
+            -30.0,
+            12.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -30.0,
+            12.0,
+            0.0
+          ],
+          "end": [
+            -30.0,
+            -12.0,
+            0.0
+          ],
+          "length": 24.0,
+          "world_start": [
+            -30.0,
+            12.0,
+            0.0
+          ],
+          "world_end": [
+            -30.0,
+            -12.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -50.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            50.0,
+            0.0,
+            0.0
+          ],
+          "length": 100.0,
+          "world_start": [
+            -50.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            50.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Point",
+          "construction": true
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 5.0,
+          "world_center": [
+            -18.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 5.0,
+          "world_center": [
+            18.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "parameter_edit_probe": {
+    "applicable": true,
+    "performed_only_in_disposable_memory": true,
+    "method": "add_native_distance_constraint",
+    "constraint_index": 6,
+    "initial_length": 60.0,
+    "changed_length": 60.0,
+    "changed": false,
+    "solver_return": -5
+  },
+  "native_errors": [
+    {
+      "name": "Sketch",
+      "reason": "native_object_state",
+      "state": [
+        "Touched",
+        "Invalid"
+      ]
+    },
+    {
+      "name": "Sketch",
+      "reason": "solver_failure"
+    }
+  ],
+  "native_state_valid": false,
+  "parameter_editability": "FAIL"
+}

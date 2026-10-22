@@ -1,0 +1,79 @@
+{
+  "classification": "at_most_once_dispatch_audit",
+  "payload_policy": "digest only; action text remains in original agent trajectory",
+  "source_sha256": "1ad0c65a99d3732aa8a3a34628fd3a13313dee7f3523a7a0560c5235cae3fbc5",
+  "rows": [
+    {
+      "execution_id": "14ade6db-af08-4888-82d5-898ae24ef536",
+      "state": "complete",
+      "payload_sha256": "2ca069497cc5e90dd22560350489e52ca08b9be6e49d4f718f359b4b30df27bc",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "ca7c44f5-c46d-46ce-b021-4e0857c78775",
+      "state": "complete",
+      "payload_sha256": "b4b5b9f3df1365558c3ea85ed2a7a5f6e7cf9f7fefdb0bf2778b0d39a1f12ba3",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "7930cfd6-cd22-4fb6-a86f-6f5df92eb8f1",
+      "state": "complete",
+      "payload_sha256": "94c9f99d191533b7cb93e0238e24d037394a14d430a8dd6141f18639ae18bd72",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "76ca6e41-e001-4490-86af-44c76b655588",
+      "state": "complete",
+      "payload_sha256": "0fe9341e59ae4a9ecf6013108d47349b152c165c5bba8a74e3c1b49447e05721",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "3da97b90-f101-479c-a622-5f6f15fa088d",
+      "state": "complete",
+      "payload_sha256": "a32b62d9053a51725de7f01d9892cfdc1a877da5fe3069eeb3fa7f4175ae6d7e",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "3c11c9c5-7d81-4d7f-b136-6085c560a1bf",
+      "state": "complete",
+      "payload_sha256": "394f3847d73d20b37397ce283f07cc18840de2213780c9cc8db48b793a81a88a",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "85a9924b-97ab-4727-96b0-9f212ce2e823",
+      "state": "complete",
+      "payload_sha256": "92423af55f519083ed8dc43fa7f9317d7257933c90f6d95977fe758e0865bdd3",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "77da12df-fced-41d5-9a00-dd4d11f1d889",
+      "state": "complete",
+      "payload_sha256": "6c8145c25abb956a20869851e9967ccdf9c8b97407104903a9abcaff19cf781b",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "fd66c825-153c-4a9c-af1b-4a1924ac6e8d",
+      "state": "complete",
+      "payload_sha256": "c7d53e603812641e87beb4243a9387d222c76d6afba7e1af85bf09443b8b5d41",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "78a5fb84-1475-47dd-83cc-1ffba7a66405",
+      "state": "complete",
+      "payload_sha256": "7a2cc18ee7afe454fb910e412284ea96bff20a46499fe3b33fce4251372204a4",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "a2a6dd44-317d-49d9-a2aa-8ae530d8ad04",
+      "state": "complete",
+      "payload_sha256": "bb5bcd96f2f5dae51d530c0d7e832a5c26fae221216fe78341a4cda6c4d52b35",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "709ec8cf-071c-4b16-bec0-11242f8238e4",
+      "state": "complete",
+      "payload_sha256": "d8d69160e2f6369f5751697fdc250f6c7535219b0c19aad4fe344e1fe7e785a3",
+      "payload_excluded": true
+    }
+  ]
+}

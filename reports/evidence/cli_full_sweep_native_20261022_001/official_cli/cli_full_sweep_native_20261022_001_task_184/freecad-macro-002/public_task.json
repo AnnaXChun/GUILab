@@ -1,0 +1,6 @@
+{
+  "instruction": "The precondition FreeCAD file is saved at /home/user/Precondition_Unnamed.FCStd. Open that project in FreeCAD, run the macro, choose the material \"Metal Silver (Ag),10.5,10.0,adapt Price\", save the density, weight, volume, and related material information to a spreadsheet inside the project using tabulation as the separator, name the spreadsheet Body_Spreadsheet, and save the project to /home/user/Unnamed.FCStd.",
+  "precondition_path": "/home/user/Precondition_Unnamed.FCStd",
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 0
+}

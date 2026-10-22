@@ -1,0 +1,6 @@
+{
+  "instruction": "Create a Part workbench box 44 mm by 28 mm by 12 mm and apply a 3 mm Part fillet to all vertical outside edges. Save the completed model to /home/user/Unnamed.FCStd.",
+  "precondition_path": null,
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 0
+}

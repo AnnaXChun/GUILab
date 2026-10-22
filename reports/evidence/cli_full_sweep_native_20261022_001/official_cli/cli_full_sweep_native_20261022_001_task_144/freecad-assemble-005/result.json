@@ -1,0 +1,15 @@
+{
+  "task_id": "freecad-assemble-005",
+  "category": "assemble",
+  "score": 0.0,
+  "termination": "turn_limit",
+  "turns": 20,
+  "terminal_calls": 20,
+  "output_tokens": 3192,
+  "agent_seconds": 195.075,
+  "task_seconds": 259.644,
+  "artifact_paths": "",
+  "error": "",
+  "gui_score": null,
+  "failure_reason": "turn_limit 后没有输出文件"
+}

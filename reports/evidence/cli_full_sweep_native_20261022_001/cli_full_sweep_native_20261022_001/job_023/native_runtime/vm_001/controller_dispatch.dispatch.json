@@ -1,0 +1,115 @@
+{
+  "classification": "at_most_once_dispatch_audit",
+  "payload_policy": "digest only; action text remains in original agent trajectory",
+  "source_sha256": "8a92a2884ace624dda18d6304829a1f831261ece81901dd6f8a5fc4306a153ec",
+  "rows": [
+    {
+      "execution_id": "9ba7ff8b-0882-494f-8be4-4aec10267b14",
+      "state": "complete",
+      "payload_sha256": "0b16aa9e72a13e0a1c0f64d7acb8ee61b0973bc09d96faa7faa273f05d5c529a",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "0dc13db1-7635-481c-86a3-3bc187523b3c",
+      "state": "complete",
+      "payload_sha256": "e2610769eb7ad7be590359e295c6adca4836dd05128c97b68419639be6ee6869",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "4759e9c0-594b-44de-967c-4562e0b579dc",
+      "state": "complete",
+      "payload_sha256": "6175e4693a4682183ddadb0db98a81327de190245d1ee7bcbcf68fb140c1e3e1",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "058af665-4b18-485c-8dd8-8c2b9b2d785d",
+      "state": "complete",
+      "payload_sha256": "ae4ef9de027761768038d05fa0b4048afaaf078fb296ecb830efe92583315cce",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "73dcc2ee-0c20-432a-a912-0e0bef5302c7",
+      "state": "complete",
+      "payload_sha256": "711e3816bf7acade5e93505678cbcb0daebbc9e36b3c92b232d84df64c166fa0",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "2cd3290b-16c5-46c6-a59d-a8fb68c7dab9",
+      "state": "complete",
+      "payload_sha256": "0053a91cb21dfafd45b9aa98ffd4714711ba7ccaf290f5ea49ded8c0b23a9e9f",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "e9065a0e-23aa-4190-9d7c-25efb5834331",
+      "state": "complete",
+      "payload_sha256": "f21b17f58272ae15fa7d5cdc72556957b6ea24fcc3b4e2feeb4ce1a5bae9acd5",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "f94800db-708a-4cdf-a88b-9ac17c6deab7",
+      "state": "complete",
+      "payload_sha256": "fe1c93dbe79d3179db8050ecf51701cf5de26c649a5753fca8abff57ec862ba7",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "482aca9e-220f-468b-86e2-0bf0ad3bcf3b",
+      "state": "complete",
+      "payload_sha256": "834bbf23c9ac07ca44450d02aa5cae10b15ea9118f725b3206c38f063e6bbfd4",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "2a855293-0f67-4d33-8ef6-a9583b230e2c",
+      "state": "complete",
+      "payload_sha256": "e68534c34796eaabf8b02162ed2bb8647655b203a3bb595537278ccae06b3a0b",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "a1348a46-da07-4100-85bc-6c094864cfcf",
+      "state": "complete",
+      "payload_sha256": "e1f7f9f30baefeba47112297ef20fffc28ac7f6b9479258cc5eaca1689e8a362",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "eda25179-00c6-4e96-bc16-8d538bc00067",
+      "state": "complete",
+      "payload_sha256": "0dcd1cd987af5b2dd25337c189497728f5632ff63ca848adfb1aa94982664132",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "7240bac8-c1a5-4971-8d07-529ca192188c",
+      "state": "complete",
+      "payload_sha256": "53bee0d952da9fb4d152c324cfffbca176ad4d86f953dedada89fb8630e8f679",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "a7e7cc72-3ba8-4123-9fce-8b151e058080",
+      "state": "complete",
+      "payload_sha256": "26b03df7ea4e09bd84c0f621745e43acba0094b8fe791c2e8017d56d8d5d23e9",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "410a69de-5c0b-4276-b81d-497d2c91f52e",
+      "state": "complete",
+      "payload_sha256": "1b559cd5e65631b5d9116db1cc221f23ef36a68dfbd1ba607278c7d29de8fdc4",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "c0e87db2-445f-4ea9-bcad-bfaadb19729e",
+      "state": "complete",
+      "payload_sha256": "f1d2c5bdf1ab9c8b5268b44c45e5c530122a4f921ff5b598c2e79656c4a1383f",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "46b3f9c3-23e3-4e14-a3ae-23b137c6050f",
+      "state": "complete",
+      "payload_sha256": "0d22c9e5ff8ae4c9c0a693dc098e9de44df4bbb90b1ae4ee94a060fd711e3b78",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "fe94a6bb-1bd3-4e33-b919-ce6befe470ea",
+      "state": "complete",
+      "payload_sha256": "1e5031ce611fdd3d09796ce8e048eaf0c3f213284ad8f8b18e05446870ea617b",
+      "payload_excluded": true
+    }
+  ]
+}

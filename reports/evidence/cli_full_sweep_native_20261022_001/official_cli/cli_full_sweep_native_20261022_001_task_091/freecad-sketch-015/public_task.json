@@ -1,0 +1,6 @@
+{
+  "instruction": "Draw a single horizontal ellipse centered at the origin with major radius 15 mm and minor radius 8 mm. Remove any automatically generated helper axis lines; the only remaining geometry should be the ellipse itself plus its two construction focus points on the X axis. Save the completed model to /home/user/Unnamed.FCStd.",
+  "precondition_path": null,
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 0
+}

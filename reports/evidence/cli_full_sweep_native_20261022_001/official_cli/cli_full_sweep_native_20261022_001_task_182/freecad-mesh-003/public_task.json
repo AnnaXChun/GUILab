@@ -1,0 +1,6 @@
+{
+  "instruction": "The precondition FreeCAD file is saved at /home/user/Precondition_Unnamed.FCStd. Open that file in FreeCAD. Make the existing mesh 10 times larger, create a 10 mm x 10 mm x 3 mm rectangular base with a 3 mm high stand, place the base at the global origin, and place the statue at X = 5 mm, Y = 5 mm, and Z = 7.9 mm. Merge the base and statue into one mesh named MergedMesh, delete all other document objects, and save the completed document to /home/user/Unnamed.FCStd.",
+  "precondition_path": "/home/user/Precondition_Unnamed.FCStd",
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 1
+}

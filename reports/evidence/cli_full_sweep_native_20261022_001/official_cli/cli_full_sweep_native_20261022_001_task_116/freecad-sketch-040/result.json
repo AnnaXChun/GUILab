@@ -1,0 +1,15 @@
+{
+  "task_id": "freecad-sketch-040",
+  "category": "sketch",
+  "score": 0.0,
+  "termination": "output_token_limit",
+  "turns": 5,
+  "terminal_calls": 4,
+  "output_tokens": 16384,
+  "agent_seconds": 183.147,
+  "task_seconds": 247.96,
+  "artifact_paths": "",
+  "error": "",
+  "gui_score": null,
+  "failure_reason": "output_token_limit 后没有输出文件"
+}

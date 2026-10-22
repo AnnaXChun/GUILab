@@ -1,0 +1,15 @@
+{
+  "task_id": "freecad-sketch-045",
+  "category": "sketch",
+  "score": 0.0,
+  "termination": "pipeline_error",
+  "turns": 0,
+  "terminal_calls": 0,
+  "output_tokens": 0,
+  "agent_seconds": 0.0,
+  "task_seconds": 20.537,
+  "artifact_paths": "",
+  "error": "model circuit open; no further provider requests",
+  "gui_score": null,
+  "failure_reason": "pipeline error: model circuit open; no further provider requests"
+}

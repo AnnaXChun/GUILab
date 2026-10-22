@@ -1,0 +1,6 @@
+{
+  "instruction": "Draw two open B-splines using three control points each: the first with control points (-20, 0), (-10, 8), and (0, 0), and the second with control points (0, 0), (10, 8), and (20, 0). For both splines, set every control point weight to 1. Ensure they meet at (0, 0), then join them into one joint curve. Save the completed model to /home/user/Unnamed.FCStd.",
+  "precondition_path": null,
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 0
+}

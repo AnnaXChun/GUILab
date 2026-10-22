@@ -1,0 +1,6 @@
+{
+  "instruction": "Create a torus with major radius 5 mm and minor radius 2 mm, set its appearance to Wood, and save the completed document to /home/user/Unnamed.FCStd.",
+  "precondition_path": null,
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 0
+}

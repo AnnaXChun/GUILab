@@ -1,0 +1,4065 @@
+{
+  "classification": "trusted_posthoc_native_audit",
+  "benchmark_episode": false,
+  "model_calls": 0,
+  "status": "FAIL",
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "artifact_sha256": "01fdf62ee36f7a9a2d82afcf600d8c8427b36a1dae13b6aa28c805989da44c8e",
+  "saved_file_unchanged": true,
+  "native_open_recompute_reopen": true,
+  "native_tree_restored": true,
+  "initial_objects": [
+    {
+      "name": "Body",
+      "type_id": "PartDesign::Body",
+      "state": [
+        "Touched"
+      ],
+      "shape_valid": true,
+      "edges": 100,
+      "solids": 1,
+      "surface_area": 34072.051137412476,
+      "volume": 86036.47682668453,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin",
+      "type_id": "App::Origin",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "X_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Y_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Z_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XY_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "YZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8.000000000000003e+100,
+      "volume": -1.225996432692711e+155,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Sketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Touched",
+        "Invalid"
+      ],
+      "shape_valid": true,
+      "edges": 12,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 17,
+      "constraint_count": 41,
+      "fully_constrained": false,
+      "solver_return": -2,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 15.0,
+          "world_center": [
+            -110.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 15.0,
+          "world_center": [
+            110.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 20.0,
+          "world_center": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -110.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            110.0,
+            0.0,
+            0.0
+          ],
+          "length": 220.0,
+          "world_start": [
+            -110.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            110.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            -90.15686516701541,
+            2.4999999999987024,
+            0.0
+          ],
+          "end": [
+            -111.81818181817562,
+            19.917183909279334,
+            0.0
+          ],
+          "length": 27.795160269218353,
+          "world_start": [
+            -90.15686516701541,
+            2.4999999999987024,
+            0.0
+          ],
+          "world_end": [
+            -111.81818181817562,
+            19.917183909279334,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            -2.727272727263416,
+            29.875775863919003,
+            0.0
+          ],
+          "end": [
+            -29.89565185775305,
+            2.5000000000053277,
+            0.0
+          ],
+          "length": 38.568820681079465,
+          "world_start": [
+            -2.727272727263416,
+            29.875775863919003,
+            0.0
+          ],
+          "world_end": [
+            -29.89565185775305,
+            2.5000000000053277,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            111.8181818181914,
+            19.91718390927789,
+            0.0
+          ],
+          "end": [
+            90.15686516701489,
+            2.4999999999946017,
+            0.0
+          ],
+          "length": 27.79516026923273,
+          "world_start": [
+            111.8181818181914,
+            19.91718390927789,
+            0.0
+          ],
+          "world_end": [
+            90.15686516701489,
+            2.4999999999946017,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -90.156865167016,
+            2.5,
+            0.0
+          ],
+          "end": [
+            -29.895651857752995,
+            2.5,
+            0.0
+          ],
+          "length": 60.261213309263,
+          "world_start": [
+            -90.156865167016,
+            2.5,
+            0.0
+          ],
+          "world_end": [
+            -29.895651857752995,
+            2.5,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            29.895651857754,
+            2.5,
+            0.0
+          ],
+          "end": [
+            90.156865167016,
+            2.5,
+            0.0
+          ],
+          "length": 60.26121330926199,
+          "world_start": [
+            29.895651857754,
+            2.5,
+            0.0
+          ],
+          "world_end": [
+            90.156865167016,
+            2.5,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -111.818181818182,
+            19.917183909279,
+            0.0
+          ],
+          "end": [
+            -2.7272727272730037,
+            29.875775863918,
+            0.0
+          ],
+          "length": 109.54451150103309,
+          "world_start": [
+            -111.818181818182,
+            19.917183909279,
+            0.0
+          ],
+          "world_end": [
+            -2.7272727272730037,
+            29.875775863918,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            2.727272727273,
+            29.875775863918,
+            0.0
+          ],
+          "end": [
+            111.818181818182,
+            19.917183909279,
+            0.0
+          ],
+          "length": 109.54451150103309,
+          "world_start": [
+            2.727272727273,
+            29.875775863918,
+            0.0
+          ],
+          "world_end": [
+            111.818181818182,
+            19.917183909279,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -130.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            -110.0,
+            0.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            -130.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            -110.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            110.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            130.0,
+            0.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            110.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            130.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            -111.81818181817562,
+            19.917183909279334,
+            0.0
+          ],
+          "end": [
+            -130.0,
+            -4.136462142204289e-12,
+            0.0
+          ],
+          "length": 26.96799449853734,
+          "world_start": [
+            -111.81818181817562,
+            19.917183909279334,
+            0.0
+          ],
+          "world_end": [
+            -130.0,
+            -4.136462142204289e-12,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            130.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            111.8181818181914,
+            19.91718390927789,
+            0.0
+          ],
+          "length": 26.96799449852257,
+          "world_start": [
+            130.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            111.8181818181914,
+            19.91718390927789,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            2.727272727287115,
+            29.875775863916836,
+            0.0
+          ],
+          "end": [
+            -2.727272727263416,
+            29.875775863919003,
+            0.0
+          ],
+          "length": 5.454545454550531,
+          "world_start": [
+            2.727272727287115,
+            29.875775863916836,
+            0.0
+          ],
+          "world_end": [
+            -2.727272727263416,
+            29.875775863919003,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            29.89565185775253,
+            2.50000000001151,
+            0.0
+          ],
+          "end": [
+            2.727272727287115,
+            29.875775863916836,
+            0.0
+          ],
+          "length": 38.56882068105648,
+          "world_start": [
+            29.89565185775253,
+            2.50000000001151,
+            0.0
+          ],
+          "world_end": [
+            2.727272727287115,
+            29.875775863916836,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pad",
+      "type_id": "PartDesign::Pad",
+      "state": [
+        "Touched"
+      ],
+      "shape_valid": true,
+      "edges": 36,
+      "solids": 1,
+      "surface_area": 41366.47679240239,
+      "volume": 178247.31470446198,
+      "parameters": {
+        "Length": 60.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Sketch001",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Touched"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 17,
+      "constraint_count": 41,
+      "fully_constrained": false,
+      "solver_return": -2,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 15.0,
+          "world_center": [
+            -110.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 15.0,
+          "world_center": [
+            110.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 20.0,
+          "world_center": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -110.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            110.0,
+            0.0,
+            0.0
+          ],
+          "length": 220.0,
+          "world_start": [
+            -110.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            110.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": true,
+          "start": [
+            -90.15686516701541,
+            2.4999999999987024,
+            0.0
+          ],
+          "end": [
+            -111.81818181817562,
+            19.917183909279334,
+            0.0
+          ],
+          "length": 27.795160269218353,
+          "world_start": [
+            -90.15686516701541,
+            2.4999999999987024,
+            0.0
+          ],
+          "world_end": [
+            -111.81818181817562,
+            19.917183909279334,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": true,
+          "start": [
+            -2.727272727263416,
+            29.875775863919003,
+            0.0
+          ],
+          "end": [
+            -29.89565185775305,
+            2.5000000000053277,
+            0.0
+          ],
+          "length": 38.568820681079465,
+          "world_start": [
+            -2.727272727263416,
+            29.875775863919003,
+            0.0
+          ],
+          "world_end": [
+            -29.89565185775305,
+            2.5000000000053277,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": true,
+          "start": [
+            111.8181818181914,
+            19.91718390927789,
+            0.0
+          ],
+          "end": [
+            90.15686516701489,
+            2.4999999999946017,
+            0.0
+          ],
+          "length": 27.79516026923273,
+          "world_start": [
+            111.8181818181914,
+            19.91718390927789,
+            0.0
+          ],
+          "world_end": [
+            90.15686516701489,
+            2.4999999999946017,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -90.156865167016,
+            2.5,
+            0.0
+          ],
+          "end": [
+            -29.895651857752995,
+            2.5,
+            0.0
+          ],
+          "length": 60.261213309263,
+          "world_start": [
+            -90.156865167016,
+            2.5,
+            0.0
+          ],
+          "world_end": [
+            -29.895651857752995,
+            2.5,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            29.895651857754,
+            2.5,
+            0.0
+          ],
+          "end": [
+            90.156865167016,
+            2.5,
+            0.0
+          ],
+          "length": 60.26121330926199,
+          "world_start": [
+            29.895651857754,
+            2.5,
+            0.0
+          ],
+          "world_end": [
+            90.156865167016,
+            2.5,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -111.818181818182,
+            19.917183909279,
+            0.0
+          ],
+          "end": [
+            -2.7272727272730037,
+            29.875775863918,
+            0.0
+          ],
+          "length": 109.54451150103309,
+          "world_start": [
+            -111.818181818182,
+            19.917183909279,
+            0.0
+          ],
+          "world_end": [
+            -2.7272727272730037,
+            29.875775863918,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            2.727272727273,
+            29.875775863918,
+            0.0
+          ],
+          "end": [
+            111.818181818182,
+            19.917183909279,
+            0.0
+          ],
+          "length": 109.54451150103309,
+          "world_start": [
+            2.727272727273,
+            29.875775863918,
+            0.0
+          ],
+          "world_end": [
+            111.818181818182,
+            19.917183909279,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -130.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            -110.0,
+            0.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            -130.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            -110.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            110.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            130.0,
+            0.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            110.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            130.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": true,
+          "start": [
+            -111.81818181817562,
+            19.917183909279334,
+            0.0
+          ],
+          "end": [
+            -130.0,
+            -4.136462142204289e-12,
+            0.0
+          ],
+          "length": 26.96799449853734,
+          "world_start": [
+            -111.81818181817562,
+            19.917183909279334,
+            0.0
+          ],
+          "world_end": [
+            -130.0,
+            -4.136462142204289e-12,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": true,
+          "start": [
+            130.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            111.8181818181914,
+            19.91718390927789,
+            0.0
+          ],
+          "length": 26.96799449852257,
+          "world_start": [
+            130.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            111.8181818181914,
+            19.91718390927789,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": true,
+          "start": [
+            2.727272727287115,
+            29.875775863916836,
+            0.0
+          ],
+          "end": [
+            -2.727272727263416,
+            29.875775863919003,
+            0.0
+          ],
+          "length": 5.454545454550531,
+          "world_start": [
+            2.727272727287115,
+            29.875775863916836,
+            0.0
+          ],
+          "world_end": [
+            -2.727272727263416,
+            29.875775863919003,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": true,
+          "start": [
+            29.89565185775253,
+            2.50000000001151,
+            0.0
+          ],
+          "end": [
+            2.727272727287115,
+            29.875775863916836,
+            0.0
+          ],
+          "length": 38.56882068105648,
+          "world_start": [
+            29.89565185775253,
+            2.50000000001151,
+            0.0
+          ],
+          "world_end": [
+            2.727272727287115,
+            29.875775863916836,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pocket",
+      "type_id": "PartDesign::Pocket",
+      "state": [
+        "Touched"
+      ],
+      "shape_valid": true,
+      "edges": 48,
+      "solids": 1,
+      "surface_area": 42120.90099762046,
+      "volume": 98136.70203792224,
+      "parameters": {
+        "Length": 5.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Sketch002",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Touched"
+      ],
+      "shape_valid": true,
+      "edges": 8,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 17,
+      "constraint_count": 41,
+      "fully_constrained": false,
+      "solver_return": -2,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 15.0,
+          "world_center": [
+            -110.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 15.0,
+          "world_center": [
+            110.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 20.0,
+          "world_center": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -110.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            110.0,
+            0.0,
+            0.0
+          ],
+          "length": 220.0,
+          "world_start": [
+            -110.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            110.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            -90.15686516701541,
+            2.4999999999987024,
+            0.0
+          ],
+          "end": [
+            -111.81818181817562,
+            19.917183909279334,
+            0.0
+          ],
+          "length": 27.795160269218353,
+          "world_start": [
+            -90.15686516701541,
+            2.4999999999987024,
+            0.0
+          ],
+          "world_end": [
+            -111.81818181817562,
+            19.917183909279334,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            -2.727272727263416,
+            29.875775863919003,
+            0.0
+          ],
+          "end": [
+            -29.89565185775305,
+            2.5000000000053277,
+            0.0
+          ],
+          "length": 38.568820681079465,
+          "world_start": [
+            -2.727272727263416,
+            29.875775863919003,
+            0.0
+          ],
+          "world_end": [
+            -29.89565185775305,
+            2.5000000000053277,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            111.8181818181914,
+            19.91718390927789,
+            0.0
+          ],
+          "end": [
+            90.15686516701489,
+            2.4999999999946017,
+            0.0
+          ],
+          "length": 27.79516026923273,
+          "world_start": [
+            111.8181818181914,
+            19.91718390927789,
+            0.0
+          ],
+          "world_end": [
+            90.15686516701489,
+            2.4999999999946017,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -90.156865167016,
+            2.5,
+            0.0
+          ],
+          "end": [
+            -29.895651857752995,
+            2.5,
+            0.0
+          ],
+          "length": 60.261213309263,
+          "world_start": [
+            -90.156865167016,
+            2.5,
+            0.0
+          ],
+          "world_end": [
+            -29.895651857752995,
+            2.5,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            29.895651857754,
+            2.5,
+            0.0
+          ],
+          "end": [
+            90.156865167016,
+            2.5,
+            0.0
+          ],
+          "length": 60.26121330926199,
+          "world_start": [
+            29.895651857754,
+            2.5,
+            0.0
+          ],
+          "world_end": [
+            90.156865167016,
+            2.5,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -111.818181818182,
+            19.917183909279,
+            0.0
+          ],
+          "end": [
+            -2.7272727272730037,
+            29.875775863918,
+            0.0
+          ],
+          "length": 109.54451150103309,
+          "world_start": [
+            -111.818181818182,
+            19.917183909279,
+            0.0
+          ],
+          "world_end": [
+            -2.7272727272730037,
+            29.875775863918,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            2.727272727273,
+            29.875775863918,
+            0.0
+          ],
+          "end": [
+            111.818181818182,
+            19.917183909279,
+            0.0
+          ],
+          "length": 109.54451150103309,
+          "world_start": [
+            2.727272727273,
+            29.875775863918,
+            0.0
+          ],
+          "world_end": [
+            111.818181818182,
+            19.917183909279,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -130.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            -110.0,
+            0.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            -130.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            -110.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            110.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            130.0,
+            0.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            110.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            130.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": true,
+          "start": [
+            -111.81818181817562,
+            19.917183909279334,
+            0.0
+          ],
+          "end": [
+            -130.0,
+            -4.136462142204289e-12,
+            0.0
+          ],
+          "length": 26.96799449853734,
+          "world_start": [
+            -111.81818181817562,
+            19.917183909279334,
+            0.0
+          ],
+          "world_end": [
+            -130.0,
+            -4.136462142204289e-12,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": true,
+          "start": [
+            130.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            111.8181818181914,
+            19.91718390927789,
+            0.0
+          ],
+          "length": 26.96799449852257,
+          "world_start": [
+            130.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            111.8181818181914,
+            19.91718390927789,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": true,
+          "start": [
+            2.727272727287115,
+            29.875775863916836,
+            0.0
+          ],
+          "end": [
+            -2.727272727263416,
+            29.875775863919003,
+            0.0
+          ],
+          "length": 5.454545454550531,
+          "world_start": [
+            2.727272727287115,
+            29.875775863916836,
+            0.0
+          ],
+          "world_end": [
+            -2.727272727263416,
+            29.875775863919003,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            29.89565185775253,
+            2.50000000001151,
+            0.0
+          ],
+          "end": [
+            2.727272727287115,
+            29.875775863916836,
+            0.0
+          ],
+          "length": 38.56882068105648,
+          "world_start": [
+            29.89565185775253,
+            2.50000000001151,
+            0.0
+          ],
+          "world_end": [
+            2.727272727287115,
+            29.875775863916836,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sketch003",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Touched"
+      ],
+      "shape_valid": true,
+      "edges": 16,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 24,
+      "constraint_count": 60,
+      "fully_constrained": false,
+      "solver_return": 0,
+      "plane_normal": [
+        0.0,
+        -1.0,
+        -1.0347278589506459e-13
+      ],
+      "geometries": [
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -130.0,
+            10.0,
+            0.0
+          ],
+          "end": [
+            130.0,
+            10.0,
+            0.0
+          ],
+          "length": 260.0,
+          "world_start": [
+            -130.0,
+            -1.0347278589506459e-12,
+            10.0
+          ],
+          "world_end": [
+            130.0,
+            -1.0347278589506459e-12,
+            10.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            130.0,
+            10.0,
+            0.0
+          ],
+          "end": [
+            130.0,
+            -10.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            130.0,
+            -1.0347278589506459e-12,
+            10.0
+          ],
+          "world_end": [
+            130.0,
+            1.0347278589506459e-12,
+            -10.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            130.0,
+            -10.0,
+            0.0
+          ],
+          "end": [
+            -130.0,
+            -10.0,
+            0.0
+          ],
+          "length": 260.0,
+          "world_start": [
+            130.0,
+            1.0347278589506459e-12,
+            -10.0
+          ],
+          "world_end": [
+            -130.0,
+            1.0347278589506459e-12,
+            -10.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -130.0,
+            -10.0,
+            0.0
+          ],
+          "end": [
+            -130.0,
+            10.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            -130.0,
+            1.0347278589506459e-12,
+            -10.0
+          ],
+          "world_end": [
+            -130.0,
+            -1.0347278589506459e-12,
+            10.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -30.0,
+            30.0,
+            0.0
+          ],
+          "end": [
+            30.0,
+            30.0,
+            0.0
+          ],
+          "length": 60.0,
+          "world_start": [
+            -30.0,
+            -3.1041835768519377e-12,
+            30.0
+          ],
+          "world_end": [
+            30.0,
+            -3.1041835768519377e-12,
+            30.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            30.0,
+            30.0,
+            0.0
+          ],
+          "end": [
+            30.0,
+            -30.0,
+            0.0
+          ],
+          "length": 60.0,
+          "world_start": [
+            30.0,
+            -3.1041835768519377e-12,
+            30.0
+          ],
+          "world_end": [
+            30.0,
+            3.1041835768519377e-12,
+            -30.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            30.0,
+            -30.0,
+            0.0
+          ],
+          "end": [
+            -30.0,
+            -30.0,
+            0.0
+          ],
+          "length": 60.0,
+          "world_start": [
+            30.0,
+            3.1041835768519377e-12,
+            -30.0
+          ],
+          "world_end": [
+            -30.0,
+            3.1041835768519377e-12,
+            -30.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -30.0,
+            -30.0,
+            0.0
+          ],
+          "end": [
+            -30.0,
+            30.0,
+            0.0
+          ],
+          "length": 60.0,
+          "world_start": [
+            -30.0,
+            3.1041835768519377e-12,
+            -30.0
+          ],
+          "world_end": [
+            -30.0,
+            -3.1041835768519377e-12,
+            30.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -90.0,
+            10.0,
+            0.0
+          ],
+          "end": [
+            90.0,
+            10.0,
+            0.0
+          ],
+          "length": 180.0,
+          "world_start": [
+            -90.0,
+            -1.0347278589506459e-12,
+            10.0
+          ],
+          "world_end": [
+            90.0,
+            -1.0347278589506459e-12,
+            10.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            90.0,
+            10.0,
+            0.0
+          ],
+          "end": [
+            90.0,
+            -10.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            90.0,
+            -1.0347278589506459e-12,
+            10.0
+          ],
+          "world_end": [
+            90.0,
+            1.0347278589506459e-12,
+            -10.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            90.0,
+            -10.0,
+            0.0
+          ],
+          "end": [
+            -90.0,
+            -10.0,
+            0.0
+          ],
+          "length": 180.0,
+          "world_start": [
+            90.0,
+            1.0347278589506459e-12,
+            -10.0
+          ],
+          "world_end": [
+            -90.0,
+            1.0347278589506459e-12,
+            -10.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -90.0,
+            -10.0,
+            0.0
+          ],
+          "end": [
+            -90.0,
+            10.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            -90.0,
+            1.0347278589506459e-12,
+            -10.0
+          ],
+          "world_end": [
+            -90.0,
+            -1.0347278589506459e-12,
+            10.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -90.0,
+            10.0,
+            0.0
+          ],
+          "end": [
+            -30.0,
+            30.0,
+            0.0
+          ],
+          "length": 63.245553203367585,
+          "world_start": [
+            -90.0,
+            -1.0347278589506459e-12,
+            10.0
+          ],
+          "world_end": [
+            -30.0,
+            -3.1041835768519377e-12,
+            30.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            30.0,
+            30.0,
+            0.0
+          ],
+          "end": [
+            90.0,
+            10.0,
+            0.0
+          ],
+          "length": 63.245553203367585,
+          "world_start": [
+            30.0,
+            -3.1041835768519377e-12,
+            30.0
+          ],
+          "world_end": [
+            90.0,
+            -1.0347278589506459e-12,
+            10.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            90.0,
+            -10.0,
+            0.0
+          ],
+          "end": [
+            30.0,
+            -30.0,
+            0.0
+          ],
+          "length": 63.245553203367585,
+          "world_start": [
+            90.0,
+            1.0347278589506459e-12,
+            -10.0
+          ],
+          "world_end": [
+            30.0,
+            3.1041835768519377e-12,
+            -30.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -30.0,
+            -30.0,
+            0.0
+          ],
+          "end": [
+            -90.0,
+            -10.0,
+            0.0
+          ],
+          "length": 63.245553203367585,
+          "world_start": [
+            -30.0,
+            3.1041835768519377e-12,
+            -30.0
+          ],
+          "world_end": [
+            -90.0,
+            1.0347278589506459e-12,
+            -10.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -195.0,
+            60.0,
+            0.0
+          ],
+          "end": [
+            195.0,
+            60.0,
+            0.0
+          ],
+          "length": 390.0,
+          "world_start": [
+            -195.0,
+            -6.208367153703875e-12,
+            60.0
+          ],
+          "world_end": [
+            195.0,
+            -6.208367153703875e-12,
+            60.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            195.0,
+            60.0,
+            0.0
+          ],
+          "end": [
+            195.0,
+            -60.0,
+            0.0
+          ],
+          "length": 120.0,
+          "world_start": [
+            195.0,
+            -6.208367153703875e-12,
+            60.0
+          ],
+          "world_end": [
+            195.0,
+            6.208367153703875e-12,
+            -60.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            195.0,
+            -60.0,
+            0.0
+          ],
+          "end": [
+            -195.0,
+            -60.0,
+            0.0
+          ],
+          "length": 390.0,
+          "world_start": [
+            195.0,
+            6.208367153703875e-12,
+            -60.0
+          ],
+          "world_end": [
+            -195.0,
+            6.208367153703875e-12,
+            -60.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -195.0,
+            -60.0,
+            0.0
+          ],
+          "end": [
+            -195.0,
+            60.0,
+            0.0
+          ],
+          "length": 120.0,
+          "world_start": [
+            -195.0,
+            6.208367153703875e-12,
+            -60.0
+          ],
+          "world_end": [
+            -195.0,
+            -6.208367153703875e-12,
+            60.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -130.0,
+            10.0,
+            0.0
+          ],
+          "end": [
+            -90.0,
+            10.0,
+            0.0
+          ],
+          "length": 40.0,
+          "world_start": [
+            -130.0,
+            -1.0347278589506459e-12,
+            10.0
+          ],
+          "world_end": [
+            -90.0,
+            -1.0347278589506459e-12,
+            10.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -130.0,
+            -10.0,
+            0.0
+          ],
+          "end": [
+            -90.0,
+            -10.0,
+            0.0
+          ],
+          "length": 40.0,
+          "world_start": [
+            -130.0,
+            1.0347278589506459e-12,
+            -10.0
+          ],
+          "world_end": [
+            -90.0,
+            1.0347278589506459e-12,
+            -10.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            90.0,
+            -10.0,
+            0.0
+          ],
+          "end": [
+            130.0,
+            -10.0,
+            0.0
+          ],
+          "length": 40.0,
+          "world_start": [
+            90.0,
+            1.0347278589506459e-12,
+            -10.0
+          ],
+          "world_end": [
+            130.0,
+            1.0347278589506459e-12,
+            -10.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            130.0,
+            10.0,
+            0.0
+          ],
+          "end": [
+            90.0,
+            10.0,
+            0.0
+          ],
+          "length": 40.0,
+          "world_start": [
+            130.0,
+            -1.0347278589506459e-12,
+            10.0
+          ],
+          "world_end": [
+            90.0,
+            -1.0347278589506459e-12,
+            10.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Origin001",
+      "type_id": "App::Point",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Pad001",
+      "type_id": "PartDesign::Pad",
+      "state": [
+        "Touched"
+      ],
+      "parameters": {
+        "Length": 5.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Pocket001",
+      "type_id": "PartDesign::Pocket",
+      "state": [
+        "Touched"
+      ],
+      "parameters": {
+        "Length": 5.0
+      },
+      "area_properties": {}
+    }
+  ],
+  "reopened_objects": [
+    {
+      "name": "Body",
+      "type_id": "PartDesign::Body",
+      "state": [
+        "Touched"
+      ],
+      "shape_valid": true,
+      "edges": 100,
+      "solids": 1,
+      "surface_area": 34072.051137412476,
+      "volume": 86036.47682668453,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Origin",
+      "type_id": "App::Origin",
+      "state": [
+        "Up-to-date"
+      ],
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "X_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Y_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Z_Axis",
+      "type_id": "App::Line",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 1,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XY_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "XZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8e+100,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "YZ_Plane",
+      "type_id": "App::Plane",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 8.000000000000003e+100,
+      "volume": -1.225996432692711e+155,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Sketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Touched",
+        "Invalid"
+      ],
+      "shape_valid": true,
+      "edges": 12,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 17,
+      "constraint_count": 41,
+      "fully_constrained": false,
+      "solver_return": -2,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 15.0,
+          "world_center": [
+            -110.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 15.0,
+          "world_center": [
+            110.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 20.0,
+          "world_center": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -110.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            110.0,
+            0.0,
+            0.0
+          ],
+          "length": 220.0,
+          "world_start": [
+            -110.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            110.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            -90.15686516701541,
+            2.4999999999987024,
+            0.0
+          ],
+          "end": [
+            -111.81818181817562,
+            19.917183909279334,
+            0.0
+          ],
+          "length": 27.795160269218353,
+          "world_start": [
+            -90.15686516701541,
+            2.4999999999987024,
+            0.0
+          ],
+          "world_end": [
+            -111.81818181817562,
+            19.917183909279334,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            -2.727272727263416,
+            29.875775863919003,
+            0.0
+          ],
+          "end": [
+            -29.89565185775305,
+            2.5000000000053277,
+            0.0
+          ],
+          "length": 38.568820681079465,
+          "world_start": [
+            -2.727272727263416,
+            29.875775863919003,
+            0.0
+          ],
+          "world_end": [
+            -29.89565185775305,
+            2.5000000000053277,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            111.8181818181914,
+            19.91718390927789,
+            0.0
+          ],
+          "end": [
+            90.15686516701489,
+            2.4999999999946017,
+            0.0
+          ],
+          "length": 27.79516026923273,
+          "world_start": [
+            111.8181818181914,
+            19.91718390927789,
+            0.0
+          ],
+          "world_end": [
+            90.15686516701489,
+            2.4999999999946017,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -90.156865167016,
+            2.5,
+            0.0
+          ],
+          "end": [
+            -29.895651857752995,
+            2.5,
+            0.0
+          ],
+          "length": 60.261213309263,
+          "world_start": [
+            -90.156865167016,
+            2.5,
+            0.0
+          ],
+          "world_end": [
+            -29.895651857752995,
+            2.5,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            29.895651857754,
+            2.5,
+            0.0
+          ],
+          "end": [
+            90.156865167016,
+            2.5,
+            0.0
+          ],
+          "length": 60.26121330926199,
+          "world_start": [
+            29.895651857754,
+            2.5,
+            0.0
+          ],
+          "world_end": [
+            90.156865167016,
+            2.5,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -111.818181818182,
+            19.917183909279,
+            0.0
+          ],
+          "end": [
+            -2.7272727272730037,
+            29.875775863918,
+            0.0
+          ],
+          "length": 109.54451150103309,
+          "world_start": [
+            -111.818181818182,
+            19.917183909279,
+            0.0
+          ],
+          "world_end": [
+            -2.7272727272730037,
+            29.875775863918,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            2.727272727273,
+            29.875775863918,
+            0.0
+          ],
+          "end": [
+            111.818181818182,
+            19.917183909279,
+            0.0
+          ],
+          "length": 109.54451150103309,
+          "world_start": [
+            2.727272727273,
+            29.875775863918,
+            0.0
+          ],
+          "world_end": [
+            111.818181818182,
+            19.917183909279,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -130.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            -110.0,
+            0.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            -130.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            -110.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            110.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            130.0,
+            0.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            110.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            130.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            -111.81818181817562,
+            19.917183909279334,
+            0.0
+          ],
+          "end": [
+            -130.0,
+            -4.136462142204289e-12,
+            0.0
+          ],
+          "length": 26.96799449853734,
+          "world_start": [
+            -111.81818181817562,
+            19.917183909279334,
+            0.0
+          ],
+          "world_end": [
+            -130.0,
+            -4.136462142204289e-12,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            130.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            111.8181818181914,
+            19.91718390927789,
+            0.0
+          ],
+          "length": 26.96799449852257,
+          "world_start": [
+            130.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            111.8181818181914,
+            19.91718390927789,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            2.727272727287115,
+            29.875775863916836,
+            0.0
+          ],
+          "end": [
+            -2.727272727263416,
+            29.875775863919003,
+            0.0
+          ],
+          "length": 5.454545454550531,
+          "world_start": [
+            2.727272727287115,
+            29.875775863916836,
+            0.0
+          ],
+          "world_end": [
+            -2.727272727263416,
+            29.875775863919003,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            29.89565185775253,
+            2.50000000001151,
+            0.0
+          ],
+          "end": [
+            2.727272727287115,
+            29.875775863916836,
+            0.0
+          ],
+          "length": 38.56882068105648,
+          "world_start": [
+            29.89565185775253,
+            2.50000000001151,
+            0.0
+          ],
+          "world_end": [
+            2.727272727287115,
+            29.875775863916836,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pad",
+      "type_id": "PartDesign::Pad",
+      "state": [
+        "Touched"
+      ],
+      "shape_valid": true,
+      "edges": 36,
+      "solids": 1,
+      "surface_area": 41366.47679240239,
+      "volume": 178247.31470446198,
+      "parameters": {
+        "Length": 60.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Sketch001",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Touched"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 17,
+      "constraint_count": 41,
+      "fully_constrained": false,
+      "solver_return": -2,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 15.0,
+          "world_center": [
+            -110.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 15.0,
+          "world_center": [
+            110.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 20.0,
+          "world_center": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -110.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            110.0,
+            0.0,
+            0.0
+          ],
+          "length": 220.0,
+          "world_start": [
+            -110.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            110.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": true,
+          "start": [
+            -90.15686516701541,
+            2.4999999999987024,
+            0.0
+          ],
+          "end": [
+            -111.81818181817562,
+            19.917183909279334,
+            0.0
+          ],
+          "length": 27.795160269218353,
+          "world_start": [
+            -90.15686516701541,
+            2.4999999999987024,
+            0.0
+          ],
+          "world_end": [
+            -111.81818181817562,
+            19.917183909279334,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": true,
+          "start": [
+            -2.727272727263416,
+            29.875775863919003,
+            0.0
+          ],
+          "end": [
+            -29.89565185775305,
+            2.5000000000053277,
+            0.0
+          ],
+          "length": 38.568820681079465,
+          "world_start": [
+            -2.727272727263416,
+            29.875775863919003,
+            0.0
+          ],
+          "world_end": [
+            -29.89565185775305,
+            2.5000000000053277,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": true,
+          "start": [
+            111.8181818181914,
+            19.91718390927789,
+            0.0
+          ],
+          "end": [
+            90.15686516701489,
+            2.4999999999946017,
+            0.0
+          ],
+          "length": 27.79516026923273,
+          "world_start": [
+            111.8181818181914,
+            19.91718390927789,
+            0.0
+          ],
+          "world_end": [
+            90.15686516701489,
+            2.4999999999946017,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -90.156865167016,
+            2.5,
+            0.0
+          ],
+          "end": [
+            -29.895651857752995,
+            2.5,
+            0.0
+          ],
+          "length": 60.261213309263,
+          "world_start": [
+            -90.156865167016,
+            2.5,
+            0.0
+          ],
+          "world_end": [
+            -29.895651857752995,
+            2.5,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            29.895651857754,
+            2.5,
+            0.0
+          ],
+          "end": [
+            90.156865167016,
+            2.5,
+            0.0
+          ],
+          "length": 60.26121330926199,
+          "world_start": [
+            29.895651857754,
+            2.5,
+            0.0
+          ],
+          "world_end": [
+            90.156865167016,
+            2.5,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -111.818181818182,
+            19.917183909279,
+            0.0
+          ],
+          "end": [
+            -2.7272727272730037,
+            29.875775863918,
+            0.0
+          ],
+          "length": 109.54451150103309,
+          "world_start": [
+            -111.818181818182,
+            19.917183909279,
+            0.0
+          ],
+          "world_end": [
+            -2.7272727272730037,
+            29.875775863918,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            2.727272727273,
+            29.875775863918,
+            0.0
+          ],
+          "end": [
+            111.818181818182,
+            19.917183909279,
+            0.0
+          ],
+          "length": 109.54451150103309,
+          "world_start": [
+            2.727272727273,
+            29.875775863918,
+            0.0
+          ],
+          "world_end": [
+            111.818181818182,
+            19.917183909279,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -130.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            -110.0,
+            0.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            -130.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            -110.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            110.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            130.0,
+            0.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            110.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            130.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": true,
+          "start": [
+            -111.81818181817562,
+            19.917183909279334,
+            0.0
+          ],
+          "end": [
+            -130.0,
+            -4.136462142204289e-12,
+            0.0
+          ],
+          "length": 26.96799449853734,
+          "world_start": [
+            -111.81818181817562,
+            19.917183909279334,
+            0.0
+          ],
+          "world_end": [
+            -130.0,
+            -4.136462142204289e-12,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": true,
+          "start": [
+            130.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            111.8181818181914,
+            19.91718390927789,
+            0.0
+          ],
+          "length": 26.96799449852257,
+          "world_start": [
+            130.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            111.8181818181914,
+            19.91718390927789,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": true,
+          "start": [
+            2.727272727287115,
+            29.875775863916836,
+            0.0
+          ],
+          "end": [
+            -2.727272727263416,
+            29.875775863919003,
+            0.0
+          ],
+          "length": 5.454545454550531,
+          "world_start": [
+            2.727272727287115,
+            29.875775863916836,
+            0.0
+          ],
+          "world_end": [
+            -2.727272727263416,
+            29.875775863919003,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": true,
+          "start": [
+            29.89565185775253,
+            2.50000000001151,
+            0.0
+          ],
+          "end": [
+            2.727272727287115,
+            29.875775863916836,
+            0.0
+          ],
+          "length": 38.56882068105648,
+          "world_start": [
+            29.89565185775253,
+            2.50000000001151,
+            0.0
+          ],
+          "world_end": [
+            2.727272727287115,
+            29.875775863916836,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pocket",
+      "type_id": "PartDesign::Pocket",
+      "state": [
+        "Touched"
+      ],
+      "shape_valid": true,
+      "edges": 48,
+      "solids": 1,
+      "surface_area": 42120.90099762046,
+      "volume": 98136.70203792224,
+      "parameters": {
+        "Length": 5.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Sketch002",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Touched"
+      ],
+      "shape_valid": true,
+      "edges": 8,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 17,
+      "constraint_count": 41,
+      "fully_constrained": false,
+      "solver_return": -2,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 15.0,
+          "world_center": [
+            -110.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 15.0,
+          "world_center": [
+            110.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": true,
+          "radius": 20.0,
+          "world_center": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -110.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            110.0,
+            0.0,
+            0.0
+          ],
+          "length": 220.0,
+          "world_start": [
+            -110.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            110.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            -90.15686516701541,
+            2.4999999999987024,
+            0.0
+          ],
+          "end": [
+            -111.81818181817562,
+            19.917183909279334,
+            0.0
+          ],
+          "length": 27.795160269218353,
+          "world_start": [
+            -90.15686516701541,
+            2.4999999999987024,
+            0.0
+          ],
+          "world_end": [
+            -111.81818181817562,
+            19.917183909279334,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            -2.727272727263416,
+            29.875775863919003,
+            0.0
+          ],
+          "end": [
+            -29.89565185775305,
+            2.5000000000053277,
+            0.0
+          ],
+          "length": 38.568820681079465,
+          "world_start": [
+            -2.727272727263416,
+            29.875775863919003,
+            0.0
+          ],
+          "world_end": [
+            -29.89565185775305,
+            2.5000000000053277,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            111.8181818181914,
+            19.91718390927789,
+            0.0
+          ],
+          "end": [
+            90.15686516701489,
+            2.4999999999946017,
+            0.0
+          ],
+          "length": 27.79516026923273,
+          "world_start": [
+            111.8181818181914,
+            19.91718390927789,
+            0.0
+          ],
+          "world_end": [
+            90.15686516701489,
+            2.4999999999946017,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -90.156865167016,
+            2.5,
+            0.0
+          ],
+          "end": [
+            -29.895651857752995,
+            2.5,
+            0.0
+          ],
+          "length": 60.261213309263,
+          "world_start": [
+            -90.156865167016,
+            2.5,
+            0.0
+          ],
+          "world_end": [
+            -29.895651857752995,
+            2.5,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            29.895651857754,
+            2.5,
+            0.0
+          ],
+          "end": [
+            90.156865167016,
+            2.5,
+            0.0
+          ],
+          "length": 60.26121330926199,
+          "world_start": [
+            29.895651857754,
+            2.5,
+            0.0
+          ],
+          "world_end": [
+            90.156865167016,
+            2.5,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -111.818181818182,
+            19.917183909279,
+            0.0
+          ],
+          "end": [
+            -2.7272727272730037,
+            29.875775863918,
+            0.0
+          ],
+          "length": 109.54451150103309,
+          "world_start": [
+            -111.818181818182,
+            19.917183909279,
+            0.0
+          ],
+          "world_end": [
+            -2.7272727272730037,
+            29.875775863918,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            2.727272727273,
+            29.875775863918,
+            0.0
+          ],
+          "end": [
+            111.818181818182,
+            19.917183909279,
+            0.0
+          ],
+          "length": 109.54451150103309,
+          "world_start": [
+            2.727272727273,
+            29.875775863918,
+            0.0
+          ],
+          "world_end": [
+            111.818181818182,
+            19.917183909279,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -130.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            -110.0,
+            0.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            -130.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            -110.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            110.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            130.0,
+            0.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            110.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            130.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": true,
+          "start": [
+            -111.81818181817562,
+            19.917183909279334,
+            0.0
+          ],
+          "end": [
+            -130.0,
+            -4.136462142204289e-12,
+            0.0
+          ],
+          "length": 26.96799449853734,
+          "world_start": [
+            -111.81818181817562,
+            19.917183909279334,
+            0.0
+          ],
+          "world_end": [
+            -130.0,
+            -4.136462142204289e-12,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": true,
+          "start": [
+            130.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            111.8181818181914,
+            19.91718390927789,
+            0.0
+          ],
+          "length": 26.96799449852257,
+          "world_start": [
+            130.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            111.8181818181914,
+            19.91718390927789,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": true,
+          "start": [
+            2.727272727287115,
+            29.875775863916836,
+            0.0
+          ],
+          "end": [
+            -2.727272727263416,
+            29.875775863919003,
+            0.0
+          ],
+          "length": 5.454545454550531,
+          "world_start": [
+            2.727272727287115,
+            29.875775863916836,
+            0.0
+          ],
+          "world_end": [
+            -2.727272727263416,
+            29.875775863919003,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            29.89565185775253,
+            2.50000000001151,
+            0.0
+          ],
+          "end": [
+            2.727272727287115,
+            29.875775863916836,
+            0.0
+          ],
+          "length": 38.56882068105648,
+          "world_start": [
+            29.89565185775253,
+            2.50000000001151,
+            0.0
+          ],
+          "world_end": [
+            2.727272727287115,
+            29.875775863916836,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sketch003",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Touched"
+      ],
+      "shape_valid": true,
+      "edges": 16,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 24,
+      "constraint_count": 60,
+      "fully_constrained": false,
+      "solver_return": 0,
+      "plane_normal": [
+        0.0,
+        -1.0,
+        -1.0347278589506459e-13
+      ],
+      "geometries": [
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -130.0,
+            10.0,
+            0.0
+          ],
+          "end": [
+            130.0,
+            10.0,
+            0.0
+          ],
+          "length": 260.0,
+          "world_start": [
+            -130.0,
+            -1.0347278589506459e-12,
+            10.0
+          ],
+          "world_end": [
+            130.0,
+            -1.0347278589506459e-12,
+            10.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            130.0,
+            10.0,
+            0.0
+          ],
+          "end": [
+            130.0,
+            -10.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            130.0,
+            -1.0347278589506459e-12,
+            10.0
+          ],
+          "world_end": [
+            130.0,
+            1.0347278589506459e-12,
+            -10.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            130.0,
+            -10.0,
+            0.0
+          ],
+          "end": [
+            -130.0,
+            -10.0,
+            0.0
+          ],
+          "length": 260.0,
+          "world_start": [
+            130.0,
+            1.0347278589506459e-12,
+            -10.0
+          ],
+          "world_end": [
+            -130.0,
+            1.0347278589506459e-12,
+            -10.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -130.0,
+            -10.0,
+            0.0
+          ],
+          "end": [
+            -130.0,
+            10.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            -130.0,
+            1.0347278589506459e-12,
+            -10.0
+          ],
+          "world_end": [
+            -130.0,
+            -1.0347278589506459e-12,
+            10.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -30.0,
+            30.0,
+            0.0
+          ],
+          "end": [
+            30.0,
+            30.0,
+            0.0
+          ],
+          "length": 60.0,
+          "world_start": [
+            -30.0,
+            -3.1041835768519377e-12,
+            30.0
+          ],
+          "world_end": [
+            30.0,
+            -3.1041835768519377e-12,
+            30.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            30.0,
+            30.0,
+            0.0
+          ],
+          "end": [
+            30.0,
+            -30.0,
+            0.0
+          ],
+          "length": 60.0,
+          "world_start": [
+            30.0,
+            -3.1041835768519377e-12,
+            30.0
+          ],
+          "world_end": [
+            30.0,
+            3.1041835768519377e-12,
+            -30.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            30.0,
+            -30.0,
+            0.0
+          ],
+          "end": [
+            -30.0,
+            -30.0,
+            0.0
+          ],
+          "length": 60.0,
+          "world_start": [
+            30.0,
+            3.1041835768519377e-12,
+            -30.0
+          ],
+          "world_end": [
+            -30.0,
+            3.1041835768519377e-12,
+            -30.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -30.0,
+            -30.0,
+            0.0
+          ],
+          "end": [
+            -30.0,
+            30.0,
+            0.0
+          ],
+          "length": 60.0,
+          "world_start": [
+            -30.0,
+            3.1041835768519377e-12,
+            -30.0
+          ],
+          "world_end": [
+            -30.0,
+            -3.1041835768519377e-12,
+            30.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -90.0,
+            10.0,
+            0.0
+          ],
+          "end": [
+            90.0,
+            10.0,
+            0.0
+          ],
+          "length": 180.0,
+          "world_start": [
+            -90.0,
+            -1.0347278589506459e-12,
+            10.0
+          ],
+          "world_end": [
+            90.0,
+            -1.0347278589506459e-12,
+            10.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            90.0,
+            10.0,
+            0.0
+          ],
+          "end": [
+            90.0,
+            -10.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            90.0,
+            -1.0347278589506459e-12,
+            10.0
+          ],
+          "world_end": [
+            90.0,
+            1.0347278589506459e-12,
+            -10.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            90.0,
+            -10.0,
+            0.0
+          ],
+          "end": [
+            -90.0,
+            -10.0,
+            0.0
+          ],
+          "length": 180.0,
+          "world_start": [
+            90.0,
+            1.0347278589506459e-12,
+            -10.0
+          ],
+          "world_end": [
+            -90.0,
+            1.0347278589506459e-12,
+            -10.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            -90.0,
+            -10.0,
+            0.0
+          ],
+          "end": [
+            -90.0,
+            10.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            -90.0,
+            1.0347278589506459e-12,
+            -10.0
+          ],
+          "world_end": [
+            -90.0,
+            -1.0347278589506459e-12,
+            10.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -90.0,
+            10.0,
+            0.0
+          ],
+          "end": [
+            -30.0,
+            30.0,
+            0.0
+          ],
+          "length": 63.245553203367585,
+          "world_start": [
+            -90.0,
+            -1.0347278589506459e-12,
+            10.0
+          ],
+          "world_end": [
+            -30.0,
+            -3.1041835768519377e-12,
+            30.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            30.0,
+            30.0,
+            0.0
+          ],
+          "end": [
+            90.0,
+            10.0,
+            0.0
+          ],
+          "length": 63.245553203367585,
+          "world_start": [
+            30.0,
+            -3.1041835768519377e-12,
+            30.0
+          ],
+          "world_end": [
+            90.0,
+            -1.0347278589506459e-12,
+            10.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            90.0,
+            -10.0,
+            0.0
+          ],
+          "end": [
+            30.0,
+            -30.0,
+            0.0
+          ],
+          "length": 63.245553203367585,
+          "world_start": [
+            90.0,
+            1.0347278589506459e-12,
+            -10.0
+          ],
+          "world_end": [
+            30.0,
+            3.1041835768519377e-12,
+            -30.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -30.0,
+            -30.0,
+            0.0
+          ],
+          "end": [
+            -90.0,
+            -10.0,
+            0.0
+          ],
+          "length": 63.245553203367585,
+          "world_start": [
+            -30.0,
+            3.1041835768519377e-12,
+            -30.0
+          ],
+          "world_end": [
+            -90.0,
+            1.0347278589506459e-12,
+            -10.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -195.0,
+            60.0,
+            0.0
+          ],
+          "end": [
+            195.0,
+            60.0,
+            0.0
+          ],
+          "length": 390.0,
+          "world_start": [
+            -195.0,
+            -6.208367153703875e-12,
+            60.0
+          ],
+          "world_end": [
+            195.0,
+            -6.208367153703875e-12,
+            60.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            195.0,
+            60.0,
+            0.0
+          ],
+          "end": [
+            195.0,
+            -60.0,
+            0.0
+          ],
+          "length": 120.0,
+          "world_start": [
+            195.0,
+            -6.208367153703875e-12,
+            60.0
+          ],
+          "world_end": [
+            195.0,
+            6.208367153703875e-12,
+            -60.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            195.0,
+            -60.0,
+            0.0
+          ],
+          "end": [
+            -195.0,
+            -60.0,
+            0.0
+          ],
+          "length": 390.0,
+          "world_start": [
+            195.0,
+            6.208367153703875e-12,
+            -60.0
+          ],
+          "world_end": [
+            -195.0,
+            6.208367153703875e-12,
+            -60.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -195.0,
+            -60.0,
+            0.0
+          ],
+          "end": [
+            -195.0,
+            60.0,
+            0.0
+          ],
+          "length": 120.0,
+          "world_start": [
+            -195.0,
+            6.208367153703875e-12,
+            -60.0
+          ],
+          "world_end": [
+            -195.0,
+            -6.208367153703875e-12,
+            60.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -130.0,
+            10.0,
+            0.0
+          ],
+          "end": [
+            -90.0,
+            10.0,
+            0.0
+          ],
+          "length": 40.0,
+          "world_start": [
+            -130.0,
+            -1.0347278589506459e-12,
+            10.0
+          ],
+          "world_end": [
+            -90.0,
+            -1.0347278589506459e-12,
+            10.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -130.0,
+            -10.0,
+            0.0
+          ],
+          "end": [
+            -90.0,
+            -10.0,
+            0.0
+          ],
+          "length": 40.0,
+          "world_start": [
+            -130.0,
+            1.0347278589506459e-12,
+            -10.0
+          ],
+          "world_end": [
+            -90.0,
+            1.0347278589506459e-12,
+            -10.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            90.0,
+            -10.0,
+            0.0
+          ],
+          "end": [
+            130.0,
+            -10.0,
+            0.0
+          ],
+          "length": 40.0,
+          "world_start": [
+            90.0,
+            1.0347278589506459e-12,
+            -10.0
+          ],
+          "world_end": [
+            130.0,
+            1.0347278589506459e-12,
+            -10.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            130.0,
+            10.0,
+            0.0
+          ],
+          "end": [
+            90.0,
+            10.0,
+            0.0
+          ],
+          "length": 40.0,
+          "world_start": [
+            130.0,
+            -1.0347278589506459e-12,
+            10.0
+          ],
+          "world_end": [
+            90.0,
+            -1.0347278589506459e-12,
+            10.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Origin001",
+      "type_id": "App::Point",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 0,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {}
+    },
+    {
+      "name": "Pad001",
+      "type_id": "PartDesign::Pad",
+      "state": [
+        "Touched"
+      ],
+      "parameters": {
+        "Length": 5.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Pocket001",
+      "type_id": "PartDesign::Pocket",
+      "state": [
+        "Touched"
+      ],
+      "parameters": {
+        "Length": 5.0
+      },
+      "area_properties": {}
+    }
+  ],
+  "parameter_edit_probe": {
+    "applicable": true,
+    "performed_only_in_disposable_memory": true,
+    "method": "native_radius_constraint",
+    "initial_radius": 15.0,
+    "changed_radius": 15.0,
+    "changed": false,
+    "solver_return": -4
+  }
+}

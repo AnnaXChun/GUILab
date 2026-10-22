@@ -1,0 +1,6 @@
+{
+  "instruction": "The precondition FreeCAD file is saved at /home/user/Precondition_Unnamed.FCStd. Open the stress test sample in FreeCAD and run an FEM analysis with 20 MN force. Use material AlZn4-5Mg1F35, apply a 3D Gmsh analysis with maximum size 5 mm and minimum size 0.5 mm, use the CalculiX solver, generate CCX_Results, Pipeline_CCX_Results, and ccx_dat_file, add a warp vector filter to display displacement magnitude under load, save the min/max condition CCX result to /home/user/result.csv, and save the completed FreeCAD document to /home/user/Unnamed.FCStd.",
+  "precondition_path": "/home/user/Precondition_Unnamed.FCStd",
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 0
+}

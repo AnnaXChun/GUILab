@@ -1,5 +1,13 @@
 # GUILab 交接
 
+**2026-10-23 全量 CLI、原生审计与实验表格已完成**：200 题已全部尝试，185 题可评估，14 题通过、171 题未通过、15 题运行错误，完整分母成功交付率 7.00%，已评估子集通过率 7.57%。实际 3163 次模型请求、32025357 输入/1582168 输出 tokens，用量完整。129 个原生文件审计尝试结束，128 个重开、93 个对象状态有效、40 个通用编辑探针通过；1 个空对象元数据错误保留。官方通过且原生状态有效为 12/200=6.00%；sketch-039 与 macro-003 的原分数 1.0 和原生失败分别保留。200 台任务 VM 与 1 台审计 VM 均停止，原 job、账本与审计目录不重开。
+
+先读 [实验表格](reports/CLI_EXPERIMENTS_20261022.md)、[失败案例](reports/FAILURE_CASES.md)及 [证据索引](reports/evidence/cli_full_sweep_native_20261022_001/INDEX.json)。可评估的 185 题任务文件完整，15 个运行错误合计缺少 21 个任务文件，部分失败轨迹与完整模型用量保留；全体 agent JSONL 完整性为 false。公开原生证据只含审计、SHA 与源码，远程没有原 `.FCStd` 和已核验 runtime 时不能凭 SHA 重建文件，也不重复跑已完成的 200 题。完整回归 292 项项目测试、7 项上游 CLI 测试及最终 17 项相关回归通过，实际命令见 [验证记录](reports/CLI_EXPERIMENT_VALIDATION_20261023.json)。
+
+模型候选 part-014 两路仍为同 S0 原文单次执行、保存重开和各六探针 Q=1/1，credit=0，一个有效自然 tie；part-001 静态拒绝保留。候选协议与官方 terminal episode 分开，新增训练样本 0。GUI 停止，方法增益与训练仍 NO-GO。下方按日期保留历史记录，旧“正在运行”“下一步启动全量”不作为当前行动。
+
+接下来围绕 89 题结构错误和 56 题无文件，冻结小批公开语义子目标、请求前 S0 与等预算对照；比较局部信用、同奖励终局选择与打乱信用。先取得有效非 tie 自然候选与独立任务结果，再决定 SFT/RL。托管 API 可用于采集，训练权重/GPU 尚未验收；原 GUI/ACTC gate 保留历史，不恢复 GUI，不把 verifier 或通用 API 说明当方法创新。
+
 **2026-10-22 模型候选已跑通，全量 CLI 正在执行**：入口为 `reports/CLI_MODEL_CANDIDATE_SUCCESS_20261022.md`、`reports/CLI_MODEL_CANDIDATE_STATUS_20261022.json` 与 `docs/MODEL_CANDIDATE_AND_FULL_CLI_20261022.md`。part-014 两原响应在同 S0 各执行一次，保存重开和每分支六探针 Q=1/1、credit=0，独立审计 PASS；part-001 A 静态拒绝、B READY 未执行，原文与失败保留。本批 4 请求、11976 输入/1975 输出 tokens，额度结束。用户已明确授权全部 200 题 CLI；全量 run 为 `cli_full_sweep_native_20261022_001`，20 轮/单次8192/单题16384、两路并行，当前结果与表格在本机 results。未完成不报告最终率；不要重复启动已运行的 job。下方旧原生零执行与四次拒绝记录保留为历史。
 
 **2026-10-22 最新结果**：先读 [多步 CLI pilot](reports/CLI_CAUSAL_PILOT_20261022.md)、`reports/CLI_CAUSAL_STATUS.json` 和 [协议](docs/CLI_CAUSAL_CREDIT_PILOT.md)。新 runner 已实现；part-001/014 原生 S0、固定后续代码、保存重开和每题六探针通过，两对不相关 AuditNote 控制 Q=1/1、credit=0。4 次独立模型请求已完成，11268 输入/2491 输出 tokens，四条原响应均静态接口拒绝，天然候选执行为 0、有效自然 pair 为 0、credit=null。接口拒绝的代码没有实际运行，原生质量 unknown。

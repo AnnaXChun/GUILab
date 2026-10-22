@@ -1,0 +1,6 @@
+{
+  "instruction": "Create a Part workbench cone with bottom radius 12 mm, top radius 4 mm, and height 28 mm. Save the completed model to /home/user/Unnamed.FCStd.",
+  "precondition_path": null,
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 0
+}

@@ -39,9 +39,12 @@ def archive(root, run, output, private=(), native_audits=()):
     for directory in map(Path, native_audits):
         directory.resolve().relative_to(root / 'results')
         sources.append(directory / 'summary.json')
+        if (directory/'dispatch.sqlite').exists():sources.append(directory/'dispatch.sqlite')
         manifest=Path(str(directory)+'.manifest.json')
         if manifest.exists():sources.append(manifest)
-        for name in ('provenance.json', 'upload.json', 'audit_raw.json', 'audit.json', 'error.json', 'worker.py'):
+        source_manifest=Path(str(directory)+'.source_manifest.json')
+        if source_manifest.exists():sources.append(source_manifest)
+        for name in ('provenance.json', 'upload.json', 'audit_raw.json', 'audit.json', 'error.json', 'reviewed_error.json', 'worker.py'):
             sources.extend(sorted(directory.glob('artifact_*/' + name)))
         for name in ('controller_dispatch.sqlite', 'ready.json', 'stopped.json'):
             sources.extend(sorted(directory.glob('runtime/vm_*/' + name)))
@@ -86,10 +89,15 @@ def archive(root, run, output, private=(), native_audits=()):
                 native_state_valid=item.get('native_state_valid'), parameter_probe=item.get('parameter_probe'))
     record = export(root, sources, output, private)
     summary = json.loads((run / 'summary.json').read_text())
+    evaluated={row['task_id'] for row in (analysis['records'] if analysis else
+        [json.loads(line) for line in (run/'episodes.jsonl').read_text().splitlines()]) if row['status']=='EVALUATED'}
+    missing_evaluated=[row for row in missing if row['task_id'] in evaluated]
     record.update(classification='sanitized_cli_full_sweep_evidence', run=run.name,
                   overall=summary['overall'], missing_task_files=missing,
                   completed_task_jsonl_complete=not missing,
                   complete_agent_jsonl=not missing and all(j['status'] != 'PENDING' for j in jobs),
+                  evaluated_task_jsonl_complete=not missing_evaluated,
+                  evaluated_task_count=len(evaluated),
                   artifacts=artifacts,
                   native_audit_summary=analysis['overall_native'] if analysis else None,
                   evaluation_rules_exported=False, model_requests_added=0)

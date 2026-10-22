@@ -1,0 +1,6 @@
+{
+  "instruction": "The precondition FreeCAD file is saved at /home/user/Precondition_Unnamed.FCStd. Open that file in FreeCAD, create a mesh from the given body with surface deviation set to 0.1 mm and angular deviation set to 10 degrees, and save the completed document to /home/user/Unnamed.FCStd.",
+  "precondition_path": "/home/user/Precondition_Unnamed.FCStd",
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 2
+}

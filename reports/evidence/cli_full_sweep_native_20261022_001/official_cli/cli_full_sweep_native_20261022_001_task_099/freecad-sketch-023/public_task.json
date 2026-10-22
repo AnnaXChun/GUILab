@@ -1,0 +1,6 @@
+{
+  "instruction": "Draw a horizontal line segment from (-20, 0) to (20, 0), and split it at x = 5 into two separate segments. Save the completed model to /home/user/Unnamed.FCStd.",
+  "precondition_path": null,
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 0
+}

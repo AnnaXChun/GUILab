@@ -1,0 +1,31 @@
+{"call": 1, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 0}
+{"call": 1, "event": "model_usage", "input_tokens": 5931, "output_tokens": 553, "sequence": 1, "thinking_tokens": 0, "total_tokens": 6484, "usage_available": true}
+{"call": 2, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 2}
+{"call": 2, "event": "model_usage", "input_tokens": 6848, "output_tokens": 803, "sequence": 3, "thinking_tokens": 0, "total_tokens": 7651, "usage_available": true}
+{"call": 3, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 4}
+{"call": 3, "event": "model_usage", "input_tokens": 7825, "output_tokens": 753, "sequence": 5, "thinking_tokens": 0, "total_tokens": 8578, "usage_available": true}
+{"call": 4, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 6}
+{"call": 4, "event": "model_usage", "input_tokens": 8902, "output_tokens": 633, "sequence": 7, "thinking_tokens": 0, "total_tokens": 9535, "usage_available": true}
+{"call": 5, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 8}
+{"call": 5, "event": "model_usage", "input_tokens": 9716, "output_tokens": 643, "sequence": 9, "thinking_tokens": 0, "total_tokens": 10359, "usage_available": true}
+{"call": 6, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 10}
+{"call": 6, "event": "model_usage", "input_tokens": 10536, "output_tokens": 596, "sequence": 11, "thinking_tokens": 0, "total_tokens": 11132, "usage_available": true}
+{"call": 7, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 12}
+{"call": 7, "event": "model_usage", "input_tokens": 11318, "output_tokens": 583, "sequence": 13, "thinking_tokens": 0, "total_tokens": 11901, "usage_available": true}
+{"call": 8, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 14}
+{"call": 8, "event": "model_usage", "input_tokens": 12018, "output_tokens": 181, "sequence": 15, "thinking_tokens": 0, "total_tokens": 12199, "usage_available": true}
+{"call": 9, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 16}
+{"call": 9, "event": "model_usage", "input_tokens": 12570, "output_tokens": 199, "sequence": 17, "thinking_tokens": 0, "total_tokens": 12769, "usage_available": true}
+{"call": 10, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 18}
+{"call": 10, "event": "model_usage", "input_tokens": 13125, "output_tokens": 174, "sequence": 19, "thinking_tokens": 0, "total_tokens": 13299, "usage_available": true}
+{"call": 11, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 20}
+{"call": 11, "event": "model_usage", "input_tokens": 13621, "output_tokens": 495, "sequence": 21, "thinking_tokens": 0, "total_tokens": 14116, "usage_available": true}
+{"call": 12, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 22}
+{"call": 12, "event": "model_usage", "input_tokens": 14182, "output_tokens": 368, "sequence": 23, "thinking_tokens": 0, "total_tokens": 14550, "usage_available": true}
+{"call": 13, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 24}
+{"call": 13, "event": "model_usage", "input_tokens": 14668, "output_tokens": 272, "sequence": 25, "thinking_tokens": 0, "total_tokens": 14940, "usage_available": true}
+{"call": 14, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 26}
+{"call": 14, "event": "model_usage", "input_tokens": 15313, "output_tokens": 117, "sequence": 27, "thinking_tokens": 0, "total_tokens": 15430, "usage_available": true}
+{"call": 15, "event": "model_dispatch", "max_retries": 0, "provider": "openai", "sequence": 28}
+{"call": 15, "event": "model_usage", "input_tokens": 15530, "output_tokens": 171, "sequence": 29, "thinking_tokens": 0, "total_tokens": 15701, "usage_available": true}
+{"circuit_open": false, "event": "budget_summary", "known_output_tokens": 6541, "model_calls": 15, "output_tokens": 6541, "sequence": 30}

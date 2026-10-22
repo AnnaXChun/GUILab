@@ -1,0 +1,6 @@
+{
+  "instruction": "Create a cube with 20 mm side length in FreeCAD, convert it to a point cloud with maximum distance 0.2, keep the source cube and the point cloud in the document, and save the completed document to /home/user/Unnamed.FCStd.",
+  "precondition_path": null,
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 0
+}

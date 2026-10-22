@@ -1,0 +1,446 @@
+{
+  "classification": "trusted_posthoc_native_audit",
+  "benchmark_episode": false,
+  "model_calls": 0,
+  "status": "FAIL",
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "artifact_sha256": "183ac2bf40c1dc6f02a1bcdb8d76d070a78e4dd9818f62ec9caa5536085f4fa9",
+  "saved_file_unchanged": true,
+  "native_open_recompute_reopen": true,
+  "native_tree_restored": true,
+  "initial_objects": [
+    {
+      "name": "Sketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Touched",
+        "Invalid"
+      ],
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 8,
+      "constraint_count": 18,
+      "fully_constrained": false,
+      "solver_return": -5,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -15.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            -15.0,
+            51.0,
+            0.0
+          ],
+          "length": 51.0,
+          "world_start": [
+            -15.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            -15.0,
+            51.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -15.0,
+            51.0,
+            0.0
+          ],
+          "end": [
+            -9.0,
+            60.0,
+            0.0
+          ],
+          "length": 10.816653826391969,
+          "world_start": [
+            -15.0,
+            51.0,
+            0.0
+          ],
+          "world_end": [
+            -9.0,
+            60.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -9.0,
+            60.0,
+            0.0
+          ],
+          "end": [
+            9.0,
+            60.0,
+            0.0
+          ],
+          "length": 18.0,
+          "world_start": [
+            -9.0,
+            60.0,
+            0.0
+          ],
+          "world_end": [
+            9.0,
+            60.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            9.0,
+            60.0,
+            0.0
+          ],
+          "end": [
+            15.0,
+            51.0,
+            0.0
+          ],
+          "length": 10.816653826391969,
+          "world_start": [
+            9.0,
+            60.0,
+            0.0
+          ],
+          "world_end": [
+            15.0,
+            51.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            15.0,
+            51.0,
+            0.0
+          ],
+          "end": [
+            15.0,
+            0.0,
+            0.0
+          ],
+          "length": 51.0,
+          "world_start": [
+            15.0,
+            51.0,
+            0.0
+          ],
+          "world_end": [
+            15.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            15.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            -15.0,
+            0.0,
+            0.0
+          ],
+          "length": 30.0,
+          "world_start": [
+            15.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            -15.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 7.5,
+          "world_center": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            0.0,
+            -10.0,
+            0.0
+          ],
+          "end": [
+            0.0,
+            70.0,
+            0.0
+          ],
+          "length": 80.0,
+          "world_start": [
+            0.0,
+            -10.0,
+            0.0
+          ],
+          "world_end": [
+            0.0,
+            70.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "reopened_objects": [
+    {
+      "name": "Sketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Touched",
+        "Invalid"
+      ],
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 8,
+      "constraint_count": 18,
+      "fully_constrained": false,
+      "solver_return": -5,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -15.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            -15.0,
+            51.0,
+            0.0
+          ],
+          "length": 51.0,
+          "world_start": [
+            -15.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            -15.0,
+            51.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -15.0,
+            51.0,
+            0.0
+          ],
+          "end": [
+            -9.0,
+            60.0,
+            0.0
+          ],
+          "length": 10.816653826391969,
+          "world_start": [
+            -15.0,
+            51.0,
+            0.0
+          ],
+          "world_end": [
+            -9.0,
+            60.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -9.0,
+            60.0,
+            0.0
+          ],
+          "end": [
+            9.0,
+            60.0,
+            0.0
+          ],
+          "length": 18.0,
+          "world_start": [
+            -9.0,
+            60.0,
+            0.0
+          ],
+          "world_end": [
+            9.0,
+            60.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            9.0,
+            60.0,
+            0.0
+          ],
+          "end": [
+            15.0,
+            51.0,
+            0.0
+          ],
+          "length": 10.816653826391969,
+          "world_start": [
+            9.0,
+            60.0,
+            0.0
+          ],
+          "world_end": [
+            15.0,
+            51.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            15.0,
+            51.0,
+            0.0
+          ],
+          "end": [
+            15.0,
+            0.0,
+            0.0
+          ],
+          "length": 51.0,
+          "world_start": [
+            15.0,
+            51.0,
+            0.0
+          ],
+          "world_end": [
+            15.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            15.0,
+            0.0,
+            0.0
+          ],
+          "end": [
+            -15.0,
+            0.0,
+            0.0
+          ],
+          "length": 30.0,
+          "world_start": [
+            15.0,
+            0.0,
+            0.0
+          ],
+          "world_end": [
+            -15.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "Circle",
+          "construction": false,
+          "radius": 7.5,
+          "world_center": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": true,
+          "start": [
+            0.0,
+            -10.0,
+            0.0
+          ],
+          "end": [
+            0.0,
+            70.0,
+            0.0
+          ],
+          "length": 80.0,
+          "world_start": [
+            0.0,
+            -10.0,
+            0.0
+          ],
+          "world_end": [
+            0.0,
+            70.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "parameter_edit_probe": {
+    "applicable": true,
+    "performed_only_in_disposable_memory": true,
+    "method": "add_native_distance_constraint",
+    "constraint_index": 18,
+    "initial_length": 51.0,
+    "changed_length": 51.0,
+    "changed": false,
+    "solver_return": -5
+  }
+}

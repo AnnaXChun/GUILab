@@ -1,0 +1,6 @@
+{
+  "instruction": "Create a Part Design body with a 36 mm cube, cut a hemispherical bowl from the top using a subtractive sphere with radius 12 mm at the center of the cube top face, and save the completed model to /home/user/Unnamed.FCStd.",
+  "precondition_path": null,
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 0
+}

@@ -1,0 +1,6 @@
+{
+  "instruction": "The precondition file is saved at /home/user/Precondition_Unnamed.FCStd. Open that file and use the existing ellipse sketch with 15 mm major radius and 8 mm minor radius as the base profile. Create an 8 mm Part Design pad from the ellipse, then add a centered through hole with 8 mm diameter through the pad. Save the completed solid model to /home/user/Unnamed.FCStd.",
+  "precondition_path": "/home/user/Precondition_Unnamed.FCStd",
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 0
+}

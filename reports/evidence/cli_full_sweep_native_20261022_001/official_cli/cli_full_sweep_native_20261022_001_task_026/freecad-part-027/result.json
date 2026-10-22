@@ -1,0 +1,15 @@
+{
+  "task_id": "freecad-part-027",
+  "category": "part",
+  "score": 0.0,
+  "termination": "output_token_limit",
+  "turns": 10,
+  "terminal_calls": 9,
+  "output_tokens": 16384,
+  "agent_seconds": 306.524,
+  "task_seconds": 357.519,
+  "artifact_paths": "",
+  "error": "",
+  "gui_score": null,
+  "failure_reason": "output_token_limit 后没有输出文件"
+}

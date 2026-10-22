@@ -1,0 +1,15 @@
+{
+  "task_id": "freecad-sketch-008",
+  "category": "sketch",
+  "score": 0.0,
+  "termination": "finish",
+  "turns": 8,
+  "terminal_calls": 7,
+  "output_tokens": 4010,
+  "agent_seconds": 84.333,
+  "task_seconds": 105.618,
+  "artifact_paths": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_full_sweep_native_20261022_001_task_084/freecad-sketch-008/freecad-sketch-008.FCStd",
+  "error": "",
+  "gui_score": null,
+  "failure_reason": "几何正确，但 native construction process/关系错误"
+}

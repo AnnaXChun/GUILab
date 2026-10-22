@@ -1,0 +1,281 @@
+{
+  "classification": "trusted_posthoc_native_audit",
+  "benchmark_episode": false,
+  "model_calls": 0,
+  "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "artifact_sha256": "06e2ed5dbc4d260fb2dd813b5cd48aa4af6e5c78a1578bf755a8e735bba7d202",
+  "saved_file_unchanged": true,
+  "native_open_recompute_reopen": true,
+  "native_tree_restored": true,
+  "initial_objects": [
+    {
+      "name": "ArcSlot",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 4,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 4,
+      "constraint_count": 0,
+      "fully_constrained": false,
+      "solver_return": 0,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            23.0,
+            -9e-16,
+            0.0
+          ],
+          "end": [
+            5.083438190194561e-16,
+            23.0,
+            0.0
+          ],
+          "length": 32.526911934581186,
+          "world_start": [
+            23.0,
+            -9e-16,
+            0.0
+          ],
+          "world_end": [
+            5.083438190194561e-16,
+            23.0,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            3.3306690738754696e-16,
+            23.0,
+            0.0
+          ],
+          "end": [
+            -7.004609471317529e-16,
+            17.0,
+            0.0
+          ],
+          "length": 6.0,
+          "world_start": [
+            3.3306690738754696e-16,
+            23.0,
+            0.0
+          ],
+          "world_end": [
+            -7.004609471317529e-16,
+            17.0,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            3.824274851176602e-15,
+            17.0,
+            0.0
+          ],
+          "end": [
+            17.0,
+            -3.1842919369992165e-15,
+            0.0
+          ],
+          "length": 24.041630560342615,
+          "world_start": [
+            3.824274851176602e-15,
+            17.0,
+            0.0
+          ],
+          "world_end": [
+            17.0,
+            -3.1842919369992165e-15,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            17.0,
+            2.9999999999999985e-16,
+            0.0
+          ],
+          "end": [
+            23.0,
+            7.996616692943937e-16,
+            0.0
+          ],
+          "length": 6.0,
+          "world_start": [
+            17.0,
+            2.9999999999999985e-16,
+            0.0
+          ],
+          "world_end": [
+            23.0,
+            7.996616692943937e-16,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "reopened_objects": [
+    {
+      "name": "ArcSlot",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 4,
+      "solids": 0,
+      "surface_area": 0.0,
+      "volume": 0.0,
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 4,
+      "constraint_count": 0,
+      "fully_constrained": false,
+      "solver_return": 0,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            23.0,
+            -9e-16,
+            0.0
+          ],
+          "end": [
+            5.083438190194561e-16,
+            23.0,
+            0.0
+          ],
+          "length": 32.526911934581186,
+          "world_start": [
+            23.0,
+            -9e-16,
+            0.0
+          ],
+          "world_end": [
+            5.083438190194561e-16,
+            23.0,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            3.3306690738754696e-16,
+            23.0,
+            0.0
+          ],
+          "end": [
+            -7.004609471317529e-16,
+            17.0,
+            0.0
+          ],
+          "length": 6.0,
+          "world_start": [
+            3.3306690738754696e-16,
+            23.0,
+            0.0
+          ],
+          "world_end": [
+            -7.004609471317529e-16,
+            17.0,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            3.824274851176602e-15,
+            17.0,
+            0.0
+          ],
+          "end": [
+            17.0,
+            -3.1842919369992165e-15,
+            0.0
+          ],
+          "length": 24.041630560342615,
+          "world_start": [
+            3.824274851176602e-15,
+            17.0,
+            0.0
+          ],
+          "world_end": [
+            17.0,
+            -3.1842919369992165e-15,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            17.0,
+            2.9999999999999985e-16,
+            0.0
+          ],
+          "end": [
+            23.0,
+            7.996616692943937e-16,
+            0.0
+          ],
+          "length": 6.0,
+          "world_start": [
+            17.0,
+            2.9999999999999985e-16,
+            0.0
+          ],
+          "world_end": [
+            23.0,
+            7.996616692943937e-16,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "parameter_edit_probe": {
+    "applicable": false,
+    "performed_only_in_disposable_memory": true
+  },
+  "native_errors": [],
+  "native_state_valid": true,
+  "parameter_editability": "UNAVAILABLE"
+}

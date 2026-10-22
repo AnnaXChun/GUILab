@@ -1,0 +1,15 @@
+{
+  "task_id": "freecad-mesh-001",
+  "category": "mesh",
+  "score": 0.0,
+  "termination": "finish",
+  "turns": 15,
+  "terminal_calls": 14,
+  "output_tokens": 6541,
+  "agent_seconds": 294.227,
+  "task_seconds": 316.045,
+  "artifact_paths": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_full_sweep_native_20261022_001_task_180/freecad-mesh-001/freecad-mesh-001.FCStd",
+  "error": "",
+  "gui_score": null,
+  "failure_reason": "FCStd 有效，但 native object/document 结构错误"
+}

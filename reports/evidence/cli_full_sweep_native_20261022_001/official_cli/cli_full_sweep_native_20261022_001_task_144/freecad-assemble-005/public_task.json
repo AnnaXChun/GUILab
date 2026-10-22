@@ -1,0 +1,6 @@
+{
+  "instruction": "The precondition assembly file is saved at /home/user/Precondition_Unnamed.FCStd. Open that file; it contains the starting assembly shown in the before image. Complete the assembly so it matches the target shape shown in the after image while using the correct physical joint behavior. Toggle Grounded for the pink part. Apply Fixed Joints to the attached parts, then apply Cylindrical Joints for the screws. Copy or clone screws as needed to complete the assembly. Save the completed assembly to /home/user/Unnamed.FCStd.",
+  "precondition_path": "/home/user/Precondition_Unnamed.FCStd",
+  "output_path": "/home/user/Unnamed.FCStd",
+  "instruction_image_count": 2
+}

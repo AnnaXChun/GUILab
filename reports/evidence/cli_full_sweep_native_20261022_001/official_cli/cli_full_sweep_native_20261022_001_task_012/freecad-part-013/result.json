@@ -1,0 +1,15 @@
+{
+  "task_id": "freecad-part-013",
+  "category": "part",
+  "score": 1.0,
+  "termination": "finish",
+  "turns": 9,
+  "terminal_calls": 8,
+  "output_tokens": 5194,
+  "agent_seconds": 170.326,
+  "task_seconds": 192.897,
+  "artifact_paths": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_full_sweep_native_20261022_001_task_012/freecad-part-013/freecad-part-013.FCStd",
+  "error": "",
+  "gui_score": null,
+  "failure_reason": "通过"
+}

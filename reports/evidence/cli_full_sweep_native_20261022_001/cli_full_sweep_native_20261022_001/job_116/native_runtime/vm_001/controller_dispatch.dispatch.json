@@ -1,0 +1,31 @@
+{
+  "classification": "at_most_once_dispatch_audit",
+  "payload_policy": "digest only; action text remains in original agent trajectory",
+  "source_sha256": "2c28ec931bbf6f2a6b9baab5a278b5a72ccb157e1b0c76838adaf08f00e49ac7",
+  "rows": [
+    {
+      "execution_id": "9821cde2-2d4b-4a26-9b26-b2ba109a6eaa",
+      "state": "complete",
+      "payload_sha256": "2ca069497cc5e90dd22560350489e52ca08b9be6e49d4f718f359b4b30df27bc",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "4e29e010-b5de-45ec-ab44-98b302d3455e",
+      "state": "complete",
+      "payload_sha256": "74e4b366d87c9e0a1287b5c740ba6179d8f44a8193d47445b856748fc329c58d",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "1989fa39-dbcc-445d-b261-f287b1d898b6",
+      "state": "complete",
+      "payload_sha256": "9ed97176af855aee5bc8a188534aadd70b9303e3b17525d626fc0f2124913fe0",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "23f0d301-dd0a-483b-b88f-df716889fb5c",
+      "state": "complete",
+      "payload_sha256": "af65a428599de76b3193dd76bdc205ab198ad1f6dc6c770d07530572433c5712",
+      "payload_excluded": true
+    }
+  ]
+}

@@ -1,0 +1,904 @@
+[
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_185/freecad-macro-003/freecad-macro-003.FCStd",
+    "artifact_sha256": "63b4054a51643d232c6eacc505c1dab394dbe31da326187638c15399ecacff15",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_000/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_182/freecad-mesh-003/freecad-mesh-003.FCStd",
+    "artifact_sha256": "d71d88d3f4c04d7cfcb378081b51bec222be7effda6aab4090293f7f9a6dcd0e",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_001/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_012/freecad-part-013/freecad-part-013.FCStd",
+    "artifact_sha256": "af150363de5e8cf0aea38249e8b475b2f320f3c071396d02b24c044a07ac0a44",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_002/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_038/freecad-part-039/freecad-part-039.FCStd",
+    "artifact_sha256": "301562dd18f041f0d9c4fc8d14eda45124485d471bbd9ed56d8e00f6597b9aa8",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_003/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_078/freecad-sketch-002/freecad-sketch-002.FCStd",
+    "artifact_sha256": "d8c471c66f0c0b77d3a988dd9692ea0c8bb1759ca5b4ca40e547475cf10214dc",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_004/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_079/freecad-sketch-003/freecad-sketch-003.FCStd",
+    "artifact_sha256": "f4618460e867e39223946a46c9371795e87718a493c4ac5da23230fbb153f526",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_005/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_081/freecad-sketch-005/freecad-sketch-005.FCStd",
+    "artifact_sha256": "54aebb9405f328dda58451f4221da851e51ce07f803e113fe2140e5ffe552a04",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_006/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_087/freecad-sketch-011/freecad-sketch-011.FCStd",
+    "artifact_sha256": "d1339fcd6a9a2137b42f8af2cb23a22e2eab78f52396cdd13b6bb0119db92296",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_007/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_092/freecad-sketch-016/freecad-sketch-016.FCStd",
+    "artifact_sha256": "5c324cfdba8f4640822a47ddc8c76bb30316ba1c7d9a9a8cb973a479f282f074",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_008/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_113/freecad-sketch-037/freecad-sketch-037.FCStd",
+    "artifact_sha256": "e82347b205339fb188d33689e689b4539b8ee69867de7c4faf48d0bdfbbdde42",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_009/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_115/freecad-sketch-039/freecad-sketch-039.FCStd",
+    "artifact_sha256": "e7b0f2423509e87f335b918b10f44bf6a1e56eae127f9a5a30bfdaaa8147fbf8",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_010/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_137/freecad-sketch-061/freecad-sketch-061.FCStd",
+    "artifact_sha256": "4e45e5f8db1d27536ad1db1f5a48d494edc549d17cb006ce1bdcd5d3cca58a1c",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_011/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_138/freecad-sketch-062/freecad-sketch-062.FCStd",
+    "artifact_sha256": "c097eab333780841a2be97029a1c726b9b6fb0864012efafae10ab1a32f3e6c1",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_012/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_139/freecad-sketch-063/freecad-sketch-063.FCStd",
+    "artifact_sha256": "174556400c9e1ed8ae77a38a6fd3de512d0a131f0aec68dc20e5956a77dfcdba",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_013/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_186/freecad-appearance-001/freecad-appearance-001.FCStd",
+    "artifact_sha256": "469740ce327252be46668e97aec2d6e17340fbc57dd8d4d80b63c169a9d47329",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_014/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_187/freecad-appearance-002/freecad-appearance-002.FCStd",
+    "artifact_sha256": "d469686b2c7137a9c1bb43fb6bbf96debedf74908e91ebff24a7e89f36850bcd",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_015/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_188/freecad-appearance-003/freecad-appearance-003.FCStd",
+    "artifact_sha256": "dce8c65f9d13b0e78eb81b6b2c7dc09d3bd3fcf28c05a6a281aaed886f81f98f",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_016/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_152/freecad-assemble-013/freecad-assemble-013.FCStd",
+    "artifact_sha256": "bdde00d8059c7a0235160ce6c8be3b3f4b34399ed04afd1bdf6ed742ae9d5b4f",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_017/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_160/freecad-assemble-021/freecad-assemble-021.FCStd",
+    "artifact_sha256": "09eb57fb80652633495407f8bc7dccadfdc5cd7a60a8f1a671fbcc8ceec43ed0",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_018/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_163/freecad-assemble-024/freecad-assemble-024.FCStd",
+    "artifact_sha256": "6501bdc81270d0d71cd92ea2ebf20f697631989ed5c81d1c4feb24d5a51a6edc",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_019/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_166/freecad-cam-002/freecad-cam-002.FCStd",
+    "artifact_sha256": "5f8c34260473a0f4a9ce4e33ca54560681b8a918507df4f5aca6e8ed638758aa",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_020/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_167/freecad-cam-003/freecad-cam-003.FCStd",
+    "artifact_sha256": "2d9873f4ae227baf171a568ddd118d6e3bfc84f0ed1468476f028575254fe05b",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_021/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_169/freecad-cam-005/freecad-cam-005.FCStd",
+    "artifact_sha256": "88c3b890c1d0a2f44fd93bb129dd8add31ca2c159ce5fee3c290f08d2a486430",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_022/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_170/freecad-cam-006/freecad-cam-006.FCStd",
+    "artifact_sha256": "72062b43006f1f226abc66cfb7bcc471f835a940976bef5232b841cad3220fec",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_023/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_172/freecad-cam-008/freecad-cam-008.FCStd",
+    "artifact_sha256": "c6f4880b35db7bf42c585f58ae953fceca4eabd4bd8220c6cd4458787fec7f86",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_024/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_175/freecad-cam-011/freecad-cam-011.FCStd",
+    "artifact_sha256": "57c0d62c0a82663d7c8e7282ea1d3978d5848cd46f1937f7b07e0857430b9923",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_025/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_193/freecad-cloudpoint-002/freecad-cloudpoint-002.FCStd",
+    "artifact_sha256": "020fecdb8c270efcbb4f45371b35992218484ab4d0e44e47aace8ecbccd97d9d",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_026/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_194/freecad-cloudpoint-003/freecad-cloudpoint-003.FCStd",
+    "artifact_sha256": "b5d4eb0f823054af95a0c98c15ce1bed1e840cb5e84fce4510880298f93ce62f",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_027/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_190/freecad-fem-002/freecad-fem-002.FCStd",
+    "artifact_sha256": "03b4db3ba517e152fc9c88a07995ab7f815329703fe9d5bebf6b0a53ccd79be7",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_028/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_191/freecad-fem-003/freecad-fem-003.FCStd",
+    "artifact_sha256": "3c7b2e4c6426299a5842171ca27938f840bfa22c6396d8ee23076a391207dba8",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_029/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_197/freecad-measure-001/freecad-measure-001.FCStd",
+    "artifact_sha256": "428fe80de8978441db86e4237c24d253d42f15ad5010fe4a95f3db155bd22321",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_030/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_198/freecad-measure-002/freecad-measure-002.FCStd",
+    "artifact_sha256": "3c6912a92353e5901fdeb798eee54edcb9a50051c5b4a7221c7d8db8f8d2fd71",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_031/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_199/freecad-measure-003/freecad-measure-003.FCStd",
+    "artifact_sha256": "66fd8b4ba770686c6c5e0ad8d57fb310d16bd76f5149d3cbb8a7add71246c2df",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_032/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_180/freecad-mesh-001/freecad-mesh-001.FCStd",
+    "artifact_sha256": "499a52f073b8216d03f360cb8dc6e2ed9ae5d17ad116982b0317eaec3012030d",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_033/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_000/freecad-part-001/freecad-part-001.FCStd",
+    "artifact_sha256": "4e30c137193a387dd4cc9d6cc3b603cc10f55e9d400d93eac66144024509efa5",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_034/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_001/freecad-part-002/freecad-part-002.FCStd",
+    "artifact_sha256": "196fec8c352e4b055847f423ce238d665408994ef5ec34e8cdf425855357a7c8",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_035/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_002/freecad-part-003/freecad-part-003.FCStd",
+    "artifact_sha256": "b3792f4b54d3d5c41984822a3285de880a775ddd015f101927ceefebf90c1b8f",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_036/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_004/freecad-part-005/freecad-part-005.FCStd",
+    "artifact_sha256": "dce524f02cc0f1efff52d198f6f8264f682666b13a34b7640e9ac4b64df93746",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_037/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_005/freecad-part-006/freecad-part-006.FCStd",
+    "artifact_sha256": "8722eae38950c76c684a033de7412ffb7f12b2b25ba7211b4d922309e3d4bbc8",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_038/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_006/freecad-part-007/freecad-part-007.FCStd",
+    "artifact_sha256": "b650fc3b3d03a5b566b942f4316b43b90bd2013b11cd18750bd3f5b196d0a80c",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_039/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_007/freecad-part-008/freecad-part-008.FCStd",
+    "artifact_sha256": "b50b8a9bac763a1aff11c901226fbff19309714d443853473b5aa9306b21e8aa",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_040/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_008/freecad-part-009/freecad-part-009.FCStd",
+    "artifact_sha256": "b51f3c7b756483cddc47b0bcb2830960e71177f384df3830e892d5978b58c343",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_041/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_009/freecad-part-010/freecad-part-010.FCStd",
+    "artifact_sha256": "b721e6f1d5bf6cc9e51cf55c6772272eb654c7acfb2703914c34ef64bed5770f",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_042/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_011/freecad-part-012/freecad-part-012.FCStd",
+    "artifact_sha256": "c42a45d456a2c3e857aed594e10855d448cb74b0e6336e6c7128b289b6968118",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_043/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_014/freecad-part-015/freecad-part-015.FCStd",
+    "artifact_sha256": "50c8a191b7fc720cac1194e48d9890120f1968e49bd06886f0795921e09a3599",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_044/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_015/freecad-part-016/freecad-part-016.FCStd",
+    "artifact_sha256": "de082cfc201ab014fc19428199261c6b8f2a27dd244e4e540dad9a206d7825c3",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_045/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_019/freecad-part-020/freecad-part-020.FCStd",
+    "artifact_sha256": "b15d7e12ba56177f69456b76509f961c89b04756b654fd348a4ee92d351e1fa0",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_046/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_020/freecad-part-021/freecad-part-021.FCStd",
+    "artifact_sha256": "039687da2e4b3583faf91a05fb80f5b0d900d3fb760989d8e177182008d90b4d",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_047/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_021/freecad-part-022/freecad-part-022.FCStd",
+    "artifact_sha256": "408d1c9909f8a4e666f97641e6e3f9a1a3b780e1bdf45988357557105005423d",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_048/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_022/freecad-part-023/freecad-part-023.FCStd",
+    "artifact_sha256": "8f82ae73849b96630caea93a801162d4a9f4dd3736b130e06730d7cc570b20cb",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_049/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_023/freecad-part-024/freecad-part-024.FCStd",
+    "artifact_sha256": "d616fd0bb14b18d253f7a437e2fcef2a11a3abbb7d9cbcab6c7ae5f1e312135c",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_050/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_025/freecad-part-026/freecad-part-026.FCStd",
+    "artifact_sha256": "3168cb1aa4f21041edf66b66d0521f907bfe5c24fa058b166674f5ae1bbcea98",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_051/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_027/freecad-part-028/freecad-part-028.FCStd",
+    "artifact_sha256": "87183cfdd1b6cb3b589fd75538fe105b88c61ecb838de37374d1ffd55a79ae9a",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_052/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_028/freecad-part-029/freecad-part-029.FCStd",
+    "artifact_sha256": "ad7795bb942334828ec2afca5701f37fc0a4bcaa300eee36df02ff9845f59b00",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_053/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_029/freecad-part-030/freecad-part-030.FCStd",
+    "artifact_sha256": "dd1a4de423cd7318aadcfd7c9b7f35f9d5ed7c290888168abdbae33fc655f6c6",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_054/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_031/freecad-part-032/freecad-part-032.FCStd",
+    "artifact_sha256": "3c25a2671c2f72fd8c200b52bdb3f28836ec3bdc68a9666fc828ec06d0d10364",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_055/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_032/freecad-part-033/freecad-part-033.FCStd",
+    "artifact_sha256": "c62da29226f8fa731098402055ffd6a2d6c7d5eaf1d8c5698cee4927016674bd",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_056/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_034/freecad-part-035/freecad-part-035.FCStd",
+    "artifact_sha256": "d4992fe9556f511ada34d7d52451fccd0c065974e61d39042a1db120cadc7a5c",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_057/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_036/freecad-part-037/freecad-part-037.FCStd",
+    "artifact_sha256": "42ef0c620464cd5411ac5fc05ba4144c685407ce7430c8a8fb32d4268562c592",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_058/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_039/freecad-part-040/freecad-part-040.FCStd",
+    "artifact_sha256": "78eca9b540bb60c30da8d833e0826fb4dc5f5d5af79f9284b0ea2457ea6090b6",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_059/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_041/freecad-part-042/freecad-part-042.FCStd",
+    "artifact_sha256": "1583ea826e8c88d5132931ad52117aa8b51f09192ddbe68040dc4e3313ceb315",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_060/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_042/freecad-part-043/freecad-part-043.FCStd",
+    "artifact_sha256": "9110107991faf761e19bdbfeaeb28a02ca4e92e033a4d40214e5a26492518fc8",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_061/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_043/freecad-part-044/freecad-part-044.FCStd",
+    "artifact_sha256": "33b0fdcf6926ba6efc2f01e0967b1daa663f057bafbfd38ba5b03ece498a6585",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_062/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_044/freecad-part-045/freecad-part-045.FCStd",
+    "artifact_sha256": "b9594125f1d48f05af2306790c23c6807e452e94679da5172f7ef1f716c9fe02",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_063/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_045/freecad-part-046/freecad-part-046.FCStd",
+    "artifact_sha256": "78d27eff7a2f078f996dc9e749d879291e85dc06714da99cffd2d4952cba3189",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_064/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_046/freecad-part-047/freecad-part-047.FCStd",
+    "artifact_sha256": "0761bf19e92a323924c51661487bfe461094960d265f17928cbe8116cee86e2d",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_065/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_047/freecad-part-048/freecad-part-048.FCStd",
+    "artifact_sha256": "7e23eeae79ef4de7d3e380a79a4344150df5d0c18c2302fe68d00bb54f7a885f",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_066/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_048/freecad-part-049/freecad-part-049.FCStd",
+    "artifact_sha256": "1f0efb9992977122d03af0d3da9a1335f899b7f36a42cd9653487a2450e014bd",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_067/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_049/freecad-part-050/freecad-part-050.FCStd",
+    "artifact_sha256": "03ab1f2331a30f3d2984645ad3750e9bb16c426d41353bf721acfb34e8de9067",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_068/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_050/freecad-part-051/freecad-part-051.FCStd",
+    "artifact_sha256": "aac032a499eab294dc2f20aecbf8d73ee1bb7381464472b87d6d4092ba6ab848",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_069/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_052/freecad-part-053/freecad-part-053.FCStd",
+    "artifact_sha256": "9f64e647fe2f2c913f76276dba59af9a5e3e31e4dc74e5efac839145b2308efb",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_070/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_053/freecad-part-054/freecad-part-054.FCStd",
+    "artifact_sha256": "c22c45b5159506a0ad3b88284aadfecbd9326984e3fbb50a496aac59ae2d6ea5",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_071/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_054/freecad-part-055/freecad-part-055.FCStd",
+    "artifact_sha256": "55f5cd55c156f2a5f9f41e0680de35ca7bc4510cde229e7f033e56385380fc9e",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_072/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_055/freecad-part-056/freecad-part-056.FCStd",
+    "artifact_sha256": "346437f040cd1ec2e7735730a8edc412339c59de174bb0deda46d068f2e44313",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_073/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_056/freecad-part-057/freecad-part-057.FCStd",
+    "artifact_sha256": "dcfb9cd8de1542a01bcbf661ebac9d73cdc4df3bf52043c6da182ad8beb088cf",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_074/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_057/freecad-part-058/freecad-part-058.FCStd",
+    "artifact_sha256": "5697e416a0a19a99c809639ac6be1c410ffab860bfce4269efab0a59e6ee7fdd",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_075/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_058/freecad-part-059/freecad-part-059.FCStd",
+    "artifact_sha256": "0f6b39c3c1a642610e55368a121417afaa873650b6676b6f7783310cc6df0857",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_076/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_059/freecad-part-060/freecad-part-060.FCStd",
+    "artifact_sha256": "bddb0d63396c5a680cd332c24fc11993a1513a78e4e5014d615b942e4d26bc25",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_077/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_060/freecad-part-061/freecad-part-061.FCStd",
+    "artifact_sha256": "46018d473a2fd303f2915c9ae8ddfda60dc6c8c714ccf22ac85283c757e5c7bf",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_078/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_061/freecad-part-062/freecad-part-062.FCStd",
+    "artifact_sha256": "8318a266135430e6598d16c600d77562acdb74b4501fcaec93675e98e4b3d87d",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_079/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_063/freecad-part-064/freecad-part-064.FCStd",
+    "artifact_sha256": "4f6e20d2df92f22b020ae3196e8bd6fd407a338538491ea8c55ed422e21ddd6c",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_080/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_067/freecad-part-068/freecad-part-068.FCStd",
+    "artifact_sha256": "70027da0705d88a51f66985d950814cb9ce3ba8292264c4d28c833f6e62874b3",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_081/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_070/freecad-part-071/freecad-part-071.FCStd",
+    "artifact_sha256": "01fdf62ee36f7a9a2d82afcf600d8c8427b36a1dae13b6aa28c805989da44c8e",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_082/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_071/freecad-part-072/freecad-part-072.FCStd",
+    "artifact_sha256": "7f6bec8e75b71bbfc89d442239f567f1a97e2209a15cf41ea23e0691fd14b983",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_083/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_073/freecad-part-074/freecad-part-074.FCStd",
+    "artifact_sha256": "57b44a64d4f2313350b776988a03a6c68c3b31867fc942039099914dc454965a",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_084/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_075/freecad-part-076/freecad-part-076.FCStd",
+    "artifact_sha256": "491a98e0dbd3e8ed5b8097e6b31ee68e8855a07204aedc1ae21c5d8d3881e4a2",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_085/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_076/freecad-part-077/freecad-part-077.FCStd",
+    "artifact_sha256": "7d1db6dedc15c248dfc808f64151c322e0e4754bab82e1a139ea781c0d600ad9",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_086/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_077/freecad-sketch-001/freecad-sketch-001.FCStd",
+    "artifact_sha256": "61fc46d403a909ff15319f528646583f038e9b13300c40af3f49eb3048e2981d",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_087/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_080/freecad-sketch-004/freecad-sketch-004.FCStd",
+    "artifact_sha256": "c1b85887637fa3f5d26d964305b8743d1c03b453ab55bb64eaaa2513fed8ded4",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_088/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_082/freecad-sketch-006/freecad-sketch-006.FCStd",
+    "artifact_sha256": "c199fe5a5a641751b7b842dfddc086b1480ad31c060940abd8ed01fefd987cb6",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_089/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_083/freecad-sketch-007/freecad-sketch-007.FCStd",
+    "artifact_sha256": "f9db21e60215322494202ca5aee0865fdbcccf707bcb62a4d97b4ffae7ee3477",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_090/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_084/freecad-sketch-008/freecad-sketch-008.FCStd",
+    "artifact_sha256": "f278a4589aaf138231b26e11669dd125c6f20979e061aa580e11d9fd933b4bb6",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_091/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_085/freecad-sketch-009/freecad-sketch-009.FCStd",
+    "artifact_sha256": "50a25a1a2c24e288b6fe44c1fc44ecc1e2ab592a493771fdf9ce63cc4cea0814",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_092/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_086/freecad-sketch-010/freecad-sketch-010.FCStd",
+    "artifact_sha256": "18ce6769133e17569793d206a9e9ed5fb6af307a996f4ebd28f35a316ea6fea4",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_093/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_088/freecad-sketch-012/freecad-sketch-012.FCStd",
+    "artifact_sha256": "a430df1b51cbd398786170e043c402b768cca166243e0220d9e354e381b676cb",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_094/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_089/freecad-sketch-013/freecad-sketch-013.FCStd",
+    "artifact_sha256": "06e2ed5dbc4d260fb2dd813b5cd48aa4af6e5c78a1578bf755a8e735bba7d202",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_095/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_090/freecad-sketch-014/freecad-sketch-014.FCStd",
+    "artifact_sha256": "bd3fb3c299821f5008118ad7df95022363ce1819f6039a2f0359b71b2cc01611",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_096/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_091/freecad-sketch-015/freecad-sketch-015.FCStd",
+    "artifact_sha256": "9ecd8ddb8a932374ed3332e5f429ccce7e1449dc30eecbc76a18d0c25fa8c46b",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_097/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_093/freecad-sketch-017/freecad-sketch-017.FCStd",
+    "artifact_sha256": "28ba996ed436f48716cc98d0a5e430bb5a7e65a2df1f26ab4d5f8191e082314a",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_098/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_094/freecad-sketch-018/freecad-sketch-018.FCStd",
+    "artifact_sha256": "0540ba3317bdd248a40eba01d60c84262342e938480aacaa7b0b19efe2c931b9",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_099/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_096/freecad-sketch-020/freecad-sketch-020.FCStd",
+    "artifact_sha256": "f9a696b4670e3808fca8a13e4f65d3fae593924418e38988ea0439979a5c0d85",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_100/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_097/freecad-sketch-021/freecad-sketch-021.FCStd",
+    "artifact_sha256": "984bd08809cfdcbdba96849fe7b66afc824209ae047c652efd021b75fffaa108",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_101/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_098/freecad-sketch-022/freecad-sketch-022.FCStd",
+    "artifact_sha256": "1eabff352f14a0235b6c7b00db56faa8db4beed863a88fb42f24746155f37ac7",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_102/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_099/freecad-sketch-023/freecad-sketch-023.FCStd",
+    "artifact_sha256": "8582f49399cb42d5c3555adfd6aa286472a2e45d864c87aa083e7291dd8ff39a",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_103/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_100/freecad-sketch-024/freecad-sketch-024.FCStd",
+    "artifact_sha256": "1901a67eca4e4e06613ad5a668990901ac18abfc61002d11f9c389bf02aec886",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_104/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_101/freecad-sketch-025/freecad-sketch-025.FCStd",
+    "artifact_sha256": "96444fa02d46e0477b0f617208ace946f3edd9ff9faca81758d65f29da078ba9",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_105/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_102/freecad-sketch-026/freecad-sketch-026.FCStd",
+    "artifact_sha256": "631ab9187fcc9debe3308be56153ecf3a1df7ef51952ad729934986f3a8f2f2d",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_106/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_103/freecad-sketch-027/freecad-sketch-027.FCStd",
+    "artifact_sha256": "50ef93600191a1154d1253ee510931f17430894e569b500423643e004b49affb",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_107/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_104/freecad-sketch-028/freecad-sketch-028.FCStd",
+    "artifact_sha256": "7f6aabf6819976783965767b22f66ca32bbf2c038bbdc723a238725519f47749",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_108/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_105/freecad-sketch-029/freecad-sketch-029.FCStd",
+    "artifact_sha256": "43a75e387e1dacf35efd84d88d4be1d1c0be069691f2e8e6c59a2f5e4d53dc13",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_109/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_107/freecad-sketch-031/freecad-sketch-031.FCStd",
+    "artifact_sha256": "bbfc7ae943eccb085730122b7027bac4a44bf18bdf8f993d5e2098f4b967cf04",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_110/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_108/freecad-sketch-032/freecad-sketch-032.FCStd",
+    "artifact_sha256": "0b203a8b4d112a8eb59becbed76b21c43da5e20f4c24bcbcfa783348c2fa3dc3",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_111/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_109/freecad-sketch-033/freecad-sketch-033.FCStd",
+    "artifact_sha256": "9c8ea990636239c0cd4e62e6f95b4b77ebfe93adc82e1e732153caef4f33cd13",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_112/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_110/freecad-sketch-034/freecad-sketch-034.FCStd",
+    "status": "AUDIT_ERROR",
+    "error": "RuntimeError",
+    "message": "VM command failed: "
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_111/freecad-sketch-035/freecad-sketch-035.FCStd",
+    "artifact_sha256": "d16357b956821bc3b5330fa23725f595cf488bdfcaf2e3ee9117e783647e16f3",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_114/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_112/freecad-sketch-036/freecad-sketch-036.FCStd",
+    "artifact_sha256": "5224cb42c9f83dc108bbc9c82670f16792b5ef835cc34af3b618fbb559aa39af",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_115/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_114/freecad-sketch-038/freecad-sketch-038.FCStd",
+    "artifact_sha256": "d4d13fdaec3d1f79d817f738082c452773212038f499324a3b15d9fddb5905a3",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_116/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_117/freecad-sketch-041/freecad-sketch-041.FCStd",
+    "artifact_sha256": "be3cd46b5b829a1db3241ba02eada48793187fc573eeca3b8bb3bdcb285a42d2",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_117/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_119/freecad-sketch-043/freecad-sketch-043.FCStd",
+    "artifact_sha256": "c830ee0d2700d864c614bb8a8c9c3070af72574abeaa8e8c39ab3b11e3a1f80d",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_118/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_120/freecad-sketch-044/freecad-sketch-044.FCStd",
+    "artifact_sha256": "0f197a25f4032c96903af5d4702e85cc6be3d4a3c49d3ee316694e6b62af6a54",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_119/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_123/freecad-sketch-047/freecad-sketch-047.FCStd",
+    "artifact_sha256": "23bab82f5720463d8dd76df309889a3bb5d4978811d3eb979d2c8512715e9073",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_120/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_124/freecad-sketch-048/freecad-sketch-048.FCStd",
+    "artifact_sha256": "c3c568bb6b4a49025650a85b208f6d65561c6de219e322b39bb97b0506153ceb",
+    "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "PASS",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_121/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_125/freecad-sketch-049/freecad-sketch-049.FCStd",
+    "artifact_sha256": "1e220c3c4cd9689862e52a7297b08c800075545464838505c8a4da29668d7c10",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_122/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_126/freecad-sketch-050/freecad-sketch-050.FCStd",
+    "artifact_sha256": "d916f92f957f391cec9257fedf3478dd1378ab20b1ebd148ce975d36ccea7cd3",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_123/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_127/freecad-sketch-051/freecad-sketch-051.FCStd",
+    "artifact_sha256": "219a1b3fdc7578cc8c22e8ef859ddab91f18e9d92fb6a505f675c3755a473c8a",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_124/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_128/freecad-sketch-052/freecad-sketch-052.FCStd",
+    "artifact_sha256": "8624032bae007faf990913d0ba71a81cf2de10df2fd0ca0ff02dc4099e919dc6",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_125/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_130/freecad-sketch-054/freecad-sketch-054.FCStd",
+    "artifact_sha256": "f8dc2f4ee27f7f8b92d0b3e028b2b967cc13b46e8f6e4cc798edd722c1e926ea",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_126/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_132/freecad-sketch-056/freecad-sketch-056.FCStd",
+    "artifact_sha256": "6b21d8450a7065766184042bb21b566268bfb678e65c9e0fe575bea471a1c4d0",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "UNAVAILABLE",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_127/audit.json"
+  },
+  {
+    "source_artifact": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/official_cli/cli_full_sweep_native_20261022_001_task_133/freecad-sketch-057/freecad-sketch-057.FCStd",
+    "artifact_sha256": "183ac2bf40c1dc6f02a1bcdb8d76d070a78e4dd9818f62ec9caa5536085f4fa9",
+    "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+    "parameter_editability": "FAIL",
+    "audit": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_full_native_audit_20261023_001/artifact_128/audit.json"
+  }
+]

@@ -137,7 +137,12 @@ def analyze(root, run, audit_directories=()):
 
 
 def render_analysis(analysis):
+    native=analysis['overall_native']
+    joint_probe=sum(row['failure_kind']=='OFFICIAL_PASS' and any(
+        item.get('native_state_valid') is True and item.get('parameter_probe')=='PASS'
+        for item in row['artifact_native_audits']) for row in analysis['records'])
     lines = ['# 原生文件与失败分析', '',
+        f"官方通过的 {native['official_pass_tasks']} 题中，{native['official_pass_and_native_valid_tasks']} 题原生对象状态有效，{joint_probe} 题进一步通过本次通用编辑探针。原生状态有效的交付率为 {native['official_pass_and_native_valid_tasks']}/{len(analysis['records'])}；该条件与官方评分分别报告。", '',
         '| 类别 | 保存任务 | 保存文件 | 已审计 | 原生重开 | 状态有效 | 编辑探针通过 | 探针失败 | 探针不适用 |',
         '| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |']
     for category, row in [*analysis['categories_native'].items(), ('总计', analysis['overall_native'])]:

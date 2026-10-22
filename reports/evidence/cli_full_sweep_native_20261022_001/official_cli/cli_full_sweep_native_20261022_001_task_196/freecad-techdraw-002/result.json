@@ -1,0 +1,15 @@
+{
+  "task_id": "freecad-techdraw-002",
+  "category": "techdraw",
+  "score": 0.0,
+  "termination": "turn_limit",
+  "turns": 20,
+  "terminal_calls": 19,
+  "output_tokens": 6547,
+  "agent_seconds": 187.729,
+  "task_seconds": 238.479,
+  "artifact_paths": "",
+  "error": "",
+  "gui_score": null,
+  "failure_reason": "turn_limit 后没有输出文件"
+}

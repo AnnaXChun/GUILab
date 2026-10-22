@@ -1,0 +1,276 @@
+{
+  "classification": "posthoc_source_integrity_record",
+  "recorded_at": "2026-10-22T10:09:30.930605+00:00",
+  "sweep_started_at": 1792658224.448334,
+  "recorded_after_sweep_started": true,
+  "reference_commit": "025cab620b22e257d8ae7a75d1dbd6954dfa247b",
+  "scope": "tracked cad_cf Python runtime modules, excluding offline cli_full_results reporting",
+  "files": [
+    {
+      "path": "cad_cf/__init__.py",
+      "reference_sha256": "e4543047e38d02220643e77b882f3b44602fc8883ace518fef7ae812c87a61e8",
+      "recorded_sha256": "e4543047e38d02220643e77b882f3b44602fc8883ace518fef7ae812c87a61e8",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/artifact_state.py",
+      "reference_sha256": "01f7fa94c495991dee700152e7b17104d8566ef74e7b5e0bcdf82bd49263a025",
+      "recorded_sha256": "01f7fa94c495991dee700152e7b17104d8566ef74e7b5e0bcdf82bd49263a025",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/baseline.py",
+      "reference_sha256": "ce0c45b1369dc24ea8560219eca932edc504ac3a76b448fd7dadea9c7f49dacf",
+      "recorded_sha256": "ce0c45b1369dc24ea8560219eca932edc504ac3a76b448fd7dadea9c7f49dacf",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/baseline_results.py",
+      "reference_sha256": "5988d3db9a4379ee957a21dddaa2aa477efe8451fd150acf1bd6b8c583390813",
+      "recorded_sha256": "5988d3db9a4379ee957a21dddaa2aa477efe8451fd150acf1bd6b8c583390813",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/batch_budget.py",
+      "reference_sha256": "52953e7b0ab3deb3546927a02ae848fa3be323f773020092906b081ab70f8e02",
+      "recorded_sha256": "52953e7b0ab3deb3546927a02ae848fa3be323f773020092906b081ab70f8e02",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/budget.py",
+      "reference_sha256": "779cd9d19ebafd3ec0642e3f8b56a8d9abb4757ee763a5305f6ef5c7d0f30257",
+      "recorded_sha256": "779cd9d19ebafd3ec0642e3f8b56a8d9abb4757ee763a5305f6ef5c7d0f30257",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/cadworld_adapter.py",
+      "reference_sha256": "cd53b375eeb725367d514be1e7101093ded05307b576f1397aa14b422e2325ce",
+      "recorded_sha256": "cd53b375eeb725367d514be1e7101093ded05307b576f1397aa14b422e2325ce",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/campaign.py",
+      "reference_sha256": "ff4b7a067cf593eddf52c75926dfd2a4369c5e538387745d129ad913e61e3ad2",
+      "recorded_sha256": "ff4b7a067cf593eddf52c75926dfd2a4369c5e538387745d129ad913e61e3ad2",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/candidate_generator.py",
+      "reference_sha256": "29921a5955cb3ac3b05b24162492e2ffac45c0821f4c41ebcbe3f303a9226b17",
+      "recorded_sha256": "29921a5955cb3ac3b05b24162492e2ffac45c0821f4c41ebcbe3f303a9226b17",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/cli_causal_credit.py",
+      "reference_sha256": "f974b7d8519f3316a28258c11ed567dbf1d0f7fd917dbea75c41ce97a8c52f08",
+      "recorded_sha256": "f974b7d8519f3316a28258c11ed567dbf1d0f7fd917dbea75c41ce97a8c52f08",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/cli_data.py",
+      "reference_sha256": "00ec34a7efdf8e8e1e4da13edc3321947a0cec12245d2439acb593bcb8628d4f",
+      "recorded_sha256": "00ec34a7efdf8e8e1e4da13edc3321947a0cec12245d2439acb593bcb8628d4f",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/cli_model_pair.py",
+      "reference_sha256": "604d89755347863f65c873c1ed33fd77a45c41eb744d31d4c545db2ac1c49237",
+      "recorded_sha256": "604d89755347863f65c873c1ed33fd77a45c41eb744d31d4c545db2ac1c49237",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/cli_replay.py",
+      "reference_sha256": "de83b9f89a5aae486d20f8c91605144809223039f4ff341d37b2f536db6bb702",
+      "recorded_sha256": "de83b9f89a5aae486d20f8c91605144809223039f4ff341d37b2f536db6bb702",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/controller_guard.py",
+      "reference_sha256": "8015190fe290039b470e7a66a6d63bbda46c2a1ee8787383ef0365457e767da2",
+      "recorded_sha256": "8015190fe290039b470e7a66a6d63bbda46c2a1ee8787383ef0365457e767da2",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/counterfactual.py",
+      "reference_sha256": "8c0ebfada50d58c579fe56dcc09ed51a105ff8685439540d767803e1e5449767",
+      "recorded_sha256": "8c0ebfada50d58c579fe56dcc09ed51a105ff8685439540d767803e1e5449767",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/dataset.py",
+      "reference_sha256": "b1c7c7f78c906a79a099a674d38a45646de7bdda237799186fafe82c74130ad1",
+      "recorded_sha256": "b1c7c7f78c906a79a099a674d38a45646de7bdda237799186fafe82c74130ad1",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/desktop_viewer.py",
+      "reference_sha256": "1c42e7581e357fa2216992bafd32227498ce913cb2e1da355e72a20101d035a2",
+      "recorded_sha256": "1c42e7581e357fa2216992bafd32227498ce913cb2e1da355e72a20101d035a2",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/freecad_worker.py",
+      "reference_sha256": "c85c212b66e0bfb55237dc71017062888c8e7ea82a9cf7892c5c62e1addb5aaa",
+      "recorded_sha256": "c85c212b66e0bfb55237dc71017062888c8e7ea82a9cf7892c5c62e1addb5aaa",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/guest_gui_bridge.py",
+      "reference_sha256": "8696ae0cbe9bce4fd3630012ac81a34ac10ffea53ecf2bc8fb334c76c93e67b0",
+      "recorded_sha256": "8696ae0cbe9bce4fd3630012ac81a34ac10ffea53ecf2bc8fb334c76c93e67b0",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/gui_control_probe.py",
+      "reference_sha256": "66f430ce79bcb7b7b3cedff9af18e5fab0b2af266204bdd8fd68f8a79adf851e",
+      "recorded_sha256": "66f430ce79bcb7b7b3cedff9af18e5fab0b2af266204bdd8fd68f8a79adf851e",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/gui_grounding.py",
+      "reference_sha256": "7240e94339b4c9c3a12073a0deef06a97796141808744232122e279456e77e1a",
+      "recorded_sha256": "7240e94339b4c9c3a12073a0deef06a97796141808744232122e279456e77e1a",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/gui_idle.py",
+      "reference_sha256": "7fd0a0485aa9665bdccb0ee9ebea6d82b9d87181a2ee932d6d2b371037c6658b",
+      "recorded_sha256": "7fd0a0485aa9665bdccb0ee9ebea6d82b9d87181a2ee932d6d2b371037c6658b",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/gui_startup.py",
+      "reference_sha256": "f46e0133a8f0c82d228324e8d763b35f346ff1cb744112f6bc76cd5f8a65f495",
+      "recorded_sha256": "f46e0133a8f0c82d228324e8d763b35f346ff1cb744112f6bc76cd5f8a65f495",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/instruction.py",
+      "reference_sha256": "422fa6b6658b5a30e927977149022baec8b81112dabaee8c6612e86d0a76addf",
+      "recorded_sha256": "422fa6b6658b5a30e927977149022baec8b81112dabaee8c6612e86d0a76addf",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/live.py",
+      "reference_sha256": "364f9aa1fdf099683fcf69ae8b48db70b4df09a66782192b9f1c5a43c578eee2",
+      "recorded_sha256": "364f9aa1fdf099683fcf69ae8b48db70b4df09a66782192b9f1c5a43c578eee2",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/metrics.py",
+      "reference_sha256": "9299ed7153673d8882374fbf3ced95b77dbed2905f5e92acb554667639f150fb",
+      "recorded_sha256": "9299ed7153673d8882374fbf3ced95b77dbed2905f5e92acb554667639f150fb",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/mock_backend.py",
+      "reference_sha256": "c14acefb8955d77d05b027b78a7031f1272bd51c6d3c1bcf3428c2fc40bed3b5",
+      "recorded_sha256": "c14acefb8955d77d05b027b78a7031f1272bd51c6d3c1bcf3428c2fc40bed3b5",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/model_probe.py",
+      "reference_sha256": "1f1b6a073ca1aafea6bc27be459c058c4becd44d6455a1afa8a8b8606e6b2710",
+      "recorded_sha256": "1f1b6a073ca1aafea6bc27be459c058c4becd44d6455a1afa8a8b8606e6b2710",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/native_backend.py",
+      "reference_sha256": "8b765bed5cbde6d4b87019c24fed57be7ed5fbcde95241782afaf7a1335ec272",
+      "recorded_sha256": "8b765bed5cbde6d4b87019c24fed57be7ed5fbcde95241782afaf7a1335ec272",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/posthoc.py",
+      "reference_sha256": "7b47c02672356a21d94eda8d7cb5974157dfc6e9b45d45d65a23a9ae9fb604ad",
+      "recorded_sha256": "7b47c02672356a21d94eda8d7cb5974157dfc6e9b45d45d65a23a9ae9fb604ad",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/preflight.py",
+      "reference_sha256": "e83f68ddc4a0d1bcacc8f42f6615835d3955823d80e41a6203af2ae2bb4bc993",
+      "recorded_sha256": "e83f68ddc4a0d1bcacc8f42f6615835d3955823d80e41a6203af2ae2bb4bc993",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/qemu_runtime.py",
+      "reference_sha256": "e854e8536b1c971a97d4cdb4f8a0452944844c26c5c625ab6aba5ed2a8320bb6",
+      "recorded_sha256": "e854e8536b1c971a97d4cdb4f8a0452944844c26c5c625ab6aba5ed2a8320bb6",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/qwen_coordinates.py",
+      "reference_sha256": "91a7b973f734e33c5b8381daa80ace060397f0663cadc6377bbb09ebc5a36fde",
+      "recorded_sha256": "91a7b973f734e33c5b8381daa80ace060397f0663cadc6377bbb09ebc5a36fde",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/router.py",
+      "reference_sha256": "b1ed294cd09c49c1d5b6f0dddd106a7ef41fbf94ffcde036a55f476a4cf39b5c",
+      "recorded_sha256": "b1ed294cd09c49c1d5b6f0dddd106a7ef41fbf94ffcde036a55f476a4cf39b5c",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/selection.py",
+      "reference_sha256": "f6671e0fa7360da3b0710d97fd8f2afe481b125db58d2460a8ba9d372732db45",
+      "recorded_sha256": "f6671e0fa7360da3b0710d97fd8f2afe481b125db58d2460a8ba9d372732db45",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/self_verifier.py",
+      "reference_sha256": "0345e3e6e325466b0d976da56d96bfb900c0d02558737c9f418e3ec04b22e08f",
+      "recorded_sha256": "0345e3e6e325466b0d976da56d96bfb900c0d02558737c9f418e3ec04b22e08f",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/snapshot.py",
+      "reference_sha256": "b202ba6229fb7addba696091f56483fb4de3560383485dac64310a0af2bab6e9",
+      "recorded_sha256": "b202ba6229fb7addba696091f56483fb4de3560383485dac64310a0af2bab6e9",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/structural_credit.py",
+      "reference_sha256": "ebc2b8485d4aaec3ff3054238979c3202ecf7e8a7545f0fe84fec4c1d7e5cf6a",
+      "recorded_sha256": "ebc2b8485d4aaec3ff3054238979c3202ecf7e8a7545f0fe84fec4c1d7e5cf6a",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/terminal_bridge.py",
+      "reference_sha256": "4c3e9f8023a6b8b344c5c70c495312ab1624e97273509f46134ea9339c55a17d",
+      "recorded_sha256": "4c3e9f8023a6b8b344c5c70c495312ab1624e97273509f46134ea9339c55a17d",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/tool_protocol.py",
+      "reference_sha256": "eb7603d882290e7f84ef27dc350eb0148826372a5a25b120c6311af61958b15e",
+      "recorded_sha256": "eb7603d882290e7f84ef27dc350eb0148826372a5a25b120c6311af61958b15e",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/trace.py",
+      "reference_sha256": "62210e8dc57c55c3a72f70771ceec60b8d4414e7e981eaa4fe9a908f3dd9a177",
+      "recorded_sha256": "62210e8dc57c55c3a72f70771ceec60b8d4414e7e981eaa4fe9a908f3dd9a177",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/typed_freecad.py",
+      "reference_sha256": "f21f85c59bbd16cdae1ea2cb3e658b64a55bc092aa016d2509e1b9725f0088dd",
+      "recorded_sha256": "f21f85c59bbd16cdae1ea2cb3e658b64a55bc092aa016d2509e1b9725f0088dd",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/upstream_launch.py",
+      "reference_sha256": "39353dd1bcb5bc906a17da49da9a42d2206f23e7c8d3e426fb6f84469f96ada0",
+      "recorded_sha256": "39353dd1bcb5bc906a17da49da9a42d2206f23e7c8d3e426fb6f84469f96ada0",
+      "matches_reference_commit": true
+    },
+    {
+      "path": "cad_cf/upstream_runtime.py",
+      "reference_sha256": "6659b5b92d74a8b892865092efe041baab27fe0b59d4a3aeab01c1b6f608aaa3",
+      "recorded_sha256": "6659b5b92d74a8b892865092efe041baab27fe0b59d4a3aeab01c1b6f608aaa3",
+      "matches_reference_commit": true
+    }
+  ],
+  "all_match": true,
+  "claim": "Integrity comparison made after start; this is not a pre-run source hash record."
+}

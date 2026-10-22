@@ -1,0 +1,220 @@
+{
+  "classification": "trusted_posthoc_native_audit",
+  "benchmark_episode": false,
+  "model_calls": 0,
+  "status": "FAIL",
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "artifact_sha256": "6b21d8450a7065766184042bb21b566268bfb678e65c9e0fe575bea471a1c4d0",
+  "saved_file_unchanged": true,
+  "native_open_recompute_reopen": true,
+  "native_tree_restored": true,
+  "initial_objects": [
+    {
+      "name": "Sketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Touched",
+        "Invalid"
+      ],
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 3,
+      "constraint_count": 7,
+      "fully_constrained": false,
+      "solver_return": -5,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            0.0,
+            -8.0,
+            0.0
+          ],
+          "end": [
+            -18.0,
+            -7.999999999999999,
+            0.0
+          ],
+          "length": 18.0,
+          "world_start": [
+            0.0,
+            -8.0,
+            0.0
+          ],
+          "world_end": [
+            -18.0,
+            -7.999999999999999,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            -2.0,
+            -8.0,
+            0.0
+          ],
+          "end": [
+            -16.0,
+            -7.999999999999999,
+            0.0
+          ],
+          "length": 14.0,
+          "world_start": [
+            -2.0,
+            -8.0,
+            0.0
+          ],
+          "world_end": [
+            -16.0,
+            -7.999999999999999,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            -21.0,
+            -8.0,
+            0.0
+          ],
+          "end": [
+            -11.0,
+            -7.999999999999999,
+            0.0
+          ],
+          "length": 10.0,
+          "world_start": [
+            -21.0,
+            -8.0,
+            0.0
+          ],
+          "world_end": [
+            -11.0,
+            -7.999999999999999,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "reopened_objects": [
+    {
+      "name": "Sketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Touched",
+        "Invalid"
+      ],
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 3,
+      "constraint_count": 7,
+      "fully_constrained": false,
+      "solver_return": -5,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            0.0,
+            -8.0,
+            0.0
+          ],
+          "end": [
+            -18.0,
+            -7.999999999999999,
+            0.0
+          ],
+          "length": 18.0,
+          "world_start": [
+            0.0,
+            -8.0,
+            0.0
+          ],
+          "world_end": [
+            -18.0,
+            -7.999999999999999,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            -2.0,
+            -8.0,
+            0.0
+          ],
+          "end": [
+            -16.0,
+            -7.999999999999999,
+            0.0
+          ],
+          "length": 14.0,
+          "world_start": [
+            -2.0,
+            -8.0,
+            0.0
+          ],
+          "world_end": [
+            -16.0,
+            -7.999999999999999,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            -21.0,
+            -8.0,
+            0.0
+          ],
+          "end": [
+            -11.0,
+            -7.999999999999999,
+            0.0
+          ],
+          "length": 10.0,
+          "world_start": [
+            -21.0,
+            -8.0,
+            0.0
+          ],
+          "world_end": [
+            -11.0,
+            -7.999999999999999,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "parameter_edit_probe": {
+    "applicable": false,
+    "performed_only_in_disposable_memory": true
+  }
+}

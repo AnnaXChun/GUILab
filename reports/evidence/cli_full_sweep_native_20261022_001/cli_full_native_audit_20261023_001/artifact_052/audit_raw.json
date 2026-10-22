@@ -1,0 +1,124 @@
+{
+  "classification": "trusted_posthoc_native_audit",
+  "benchmark_episode": false,
+  "model_calls": 0,
+  "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "artifact_sha256": "87183cfdd1b6cb3b589fd75538fe105b88c61ecb838de37374d1ffd55a79ae9a",
+  "saved_file_unchanged": true,
+  "native_open_recompute_reopen": true,
+  "native_tree_restored": true,
+  "initial_objects": [
+    {
+      "name": "Cube",
+      "type_id": "Part::Box",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 12,
+      "solids": 1,
+      "surface_area": 3456.0,
+      "volume": 13824.0,
+      "parameters": {
+        "Height": 24.0,
+        "Length": 24.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Cylinder",
+      "type_id": "Part::Cylinder",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 2010.6192982974676,
+      "volume": 6433.981754551895,
+      "parameters": {
+        "Height": 32.0,
+        "Radius": 8.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "FusedSolid",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 15,
+      "solids": 1,
+      "surface_area": 4461.309649148734,
+      "volume": 17845.238596594936,
+      "parameters": {},
+      "area_properties": {}
+    }
+  ],
+  "reopened_objects": [
+    {
+      "name": "Cube",
+      "type_id": "Part::Box",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 12,
+      "solids": 1,
+      "surface_area": 3456.0,
+      "volume": 13824.0,
+      "parameters": {
+        "Height": 24.0,
+        "Length": 24.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Cylinder",
+      "type_id": "Part::Cylinder",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 3,
+      "solids": 1,
+      "surface_area": 2010.6192982974676,
+      "volume": 6433.981754551895,
+      "parameters": {
+        "Height": 32.0,
+        "Radius": 8.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "FusedSolid",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 15,
+      "solids": 1,
+      "surface_area": 4461.309649148734,
+      "volume": 17845.238596594936,
+      "parameters": {},
+      "area_properties": {}
+    }
+  ],
+  "parameter_edit_probe": {
+    "applicable": false,
+    "performed_only_in_disposable_memory": true
+  }
+}

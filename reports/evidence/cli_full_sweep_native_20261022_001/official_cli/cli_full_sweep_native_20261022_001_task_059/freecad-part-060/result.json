@@ -1,0 +1,15 @@
+{
+  "task_id": "freecad-part-060",
+  "category": "part",
+  "score": 0.0,
+  "termination": "finish",
+  "turns": 8,
+  "terminal_calls": 7,
+  "output_tokens": 4259,
+  "agent_seconds": 144.755,
+  "task_seconds": 164.515,
+  "artifact_paths": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_full_sweep_native_20261022_001_task_059/freecad-part-060/freecad-part-060.FCStd",
+  "error": "",
+  "gui_score": null,
+  "failure_reason": "FCStd 有效，但 Part Design native object/关系结构错误"
+}

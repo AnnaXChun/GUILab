@@ -1,0 +1,289 @@
+{
+  "classification": "trusted_posthoc_native_audit",
+  "benchmark_episode": false,
+  "model_calls": 0,
+  "status": "FAIL_NATIVE_ARTIFACT_AUDIT",
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "artifact_sha256": "a430df1b51cbd398786170e043c402b768cca166243e0220d9e354e381b676cb",
+  "saved_file_unchanged": true,
+  "native_open_recompute_reopen": true,
+  "native_tree_restored": true,
+  "initial_objects": [
+    {
+      "name": "SlotSketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Touched",
+        "Invalid"
+      ],
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 4,
+      "constraint_count": 9,
+      "fully_constrained": false,
+      "solver_return": -3,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -10.0,
+            5.0,
+            0.0
+          ],
+          "end": [
+            10.0,
+            5.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            -10.0,
+            5.0,
+            0.0
+          ],
+          "world_end": [
+            10.0,
+            5.0,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            10.0,
+            5.0,
+            0.0
+          ],
+          "end": [
+            10.000000000000002,
+            -5.0,
+            0.0
+          ],
+          "length": 10.0,
+          "world_start": [
+            10.0,
+            5.0,
+            0.0
+          ],
+          "world_end": [
+            10.000000000000002,
+            -5.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            10.0,
+            -5.0,
+            0.0
+          ],
+          "end": [
+            -10.0,
+            -5.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            10.0,
+            -5.0,
+            0.0
+          ],
+          "world_end": [
+            -10.0,
+            -5.0,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            -10.0,
+            -5.0,
+            0.0
+          ],
+          "end": [
+            -10.0,
+            5.0,
+            0.0
+          ],
+          "length": 10.0,
+          "world_start": [
+            -10.0,
+            -5.0,
+            0.0
+          ],
+          "world_end": [
+            -10.0,
+            5.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "reopened_objects": [
+    {
+      "name": "SlotSketch",
+      "type_id": "Sketcher::SketchObject",
+      "state": [
+        "Touched",
+        "Invalid"
+      ],
+      "parameters": {},
+      "area_properties": {},
+      "geometry_count": 4,
+      "constraint_count": 9,
+      "fully_constrained": false,
+      "solver_return": -3,
+      "plane_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "geometries": [
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            -10.0,
+            5.0,
+            0.0
+          ],
+          "end": [
+            10.0,
+            5.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            -10.0,
+            5.0,
+            0.0
+          ],
+          "world_end": [
+            10.0,
+            5.0,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            10.0,
+            5.0,
+            0.0
+          ],
+          "end": [
+            10.000000000000002,
+            -5.0,
+            0.0
+          ],
+          "length": 10.0,
+          "world_start": [
+            10.0,
+            5.0,
+            0.0
+          ],
+          "world_end": [
+            10.000000000000002,
+            -5.0,
+            0.0
+          ]
+        },
+        {
+          "type": "LineSegment",
+          "construction": false,
+          "start": [
+            10.0,
+            -5.0,
+            0.0
+          ],
+          "end": [
+            -10.0,
+            -5.0,
+            0.0
+          ],
+          "length": 20.0,
+          "world_start": [
+            10.0,
+            -5.0,
+            0.0
+          ],
+          "world_end": [
+            -10.0,
+            -5.0,
+            0.0
+          ]
+        },
+        {
+          "type": "ArcOfCircle",
+          "construction": false,
+          "start": [
+            -10.0,
+            -5.0,
+            0.0
+          ],
+          "end": [
+            -10.0,
+            5.0,
+            0.0
+          ],
+          "length": 10.0,
+          "world_start": [
+            -10.0,
+            -5.0,
+            0.0
+          ],
+          "world_end": [
+            -10.0,
+            5.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "parameter_edit_probe": {
+    "applicable": true,
+    "performed_only_in_disposable_memory": true,
+    "status": "UNAVAILABLE_OR_FAILED",
+    "error": "ValueError",
+    "message": "Cannot set the datum because the sketch contains conflicting constraints"
+  },
+  "native_errors": [
+    {
+      "name": "SlotSketch",
+      "reason": "native_object_state",
+      "state": [
+        "Touched",
+        "Invalid"
+      ]
+    },
+    {
+      "name": "SlotSketch",
+      "reason": "solver_failure"
+    }
+  ],
+  "native_state_valid": false,
+  "parameter_editability": "FAIL"
+}

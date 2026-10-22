@@ -1,0 +1,12 @@
+{
+  "classification": "pre_audit_source_manifest",
+  "git_commit": "3024d0dd3a132705976cce6cdaa1857d0e4e1182",
+  "model_calls": 0,
+  "sources": {
+    "scripts/audit_cli_full_sweep.py": "5e403b670d14307f53fc5a3399a2e63c45f912d84388ed34677998d8eb6581ce",
+    "scripts/audit_cli_artifacts.py": "c510afec81b40c29fec0c7d55eaa43a98c8ea1c5823fef12ca81b29dcfac1242",
+    "scripts/audit_native_artifact.py": "168ac21e147fc2e61f07742825e419264468e0dd45a08523fc286ed0d078c2dd",
+    "cad_cf/terminal_bridge.py": "4c3e9f8023a6b8b344c5c70c495312ab1624e97273509f46134ea9339c55a17d",
+    "cad_cf/qemu_runtime.py": "e854e8536b1c971a97d4cdb4f8a0452944844c26c5c625ab6aba5ed2a8320bb6"
+  }
+}

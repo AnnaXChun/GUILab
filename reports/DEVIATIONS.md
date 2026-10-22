@@ -2,9 +2,13 @@
 
 2026-10-23 新增全量 CLI 离线分析：逐题原始官方分数、执行不确定、启动失败与原生文件审计分别记录。审计按原路径和 SHA 绑定，拒绝其他批次文件、变更后的文件及重复审计；原生重开、对象状态、通用编辑探针采用独立计数。该后处理不修改正在运行的模型 prompt、账本或官方评分规则。
 
-全量已保存的装配文件中有约 1.8 MB 文件，原审计的 base64 命令参数会超过 Linux 单参数长度限制。新审计复用 pinned `desktop_env/server/main.py` 的 `/setup/upload`，一次 multipart 上传后检查 SHA，再以独占标记执行原生 worker。上传及执行不确定均保留并停止审计，不重发。三项上传单测通过；真实传输与全量原生审计等待当前两路 CLI 批次停止后执行。
+全量已保存的装配文件中有约 1.8 MB 文件，原审计的 base64 命令参数会超过 Linux 单参数长度限制。新审计复用 pinned `desktop_env/server/main.py` 的 `/setup/upload`，一次 multipart 上传后检查 SHA，再以独占标记执行原生 worker。上传及执行不确定均保留并停止审计，不重发。三项上传单测及真实传输通过；11.6 MB Mesh 与 1.8 MB 装配文件都一次上传成功。129 次审计派发 complete、uncertain=0，全部原文件 SHA 不变，1 个空对象元数据文件的已知 worker 错误保留。
+
+归档补齐独立审计根目录 `dispatch.sqlite` 的摘要、请求前源码 manifest 与空对象错误复核，原 SQLite、原 controller 响应和原生二进制仍仅本地保留。第一次归档草稿转存本地 results，最终索引含完整评估子集与缺失失败轨迹的独立标记；没有将缺失 `traj.jsonl` 补为虚构终止记录。原生对象状态有效与编辑探针分别统计，通用探针不是整个参数化历史的完整证明。
 
 完整回归中的旧公共输入 dry-run 测试原先读取项目里的全部模型账本，会与正在运行的全量批次冲突。该单测改用独立冻结账本，保留生产账本保护；修正后 292 项项目测试、7 项 upstream CLI 测试通过。MCP 索引正常，两个历史有限大数 JSON 的局部解析告警保留，索引可用不代替测试或真实原生验收。
+
+完整证据归档后，MCP 刷新为 ready，共 114 个 JSON 局部解析告警（包括此前 2 个历史文件），无 parse_unusable 或 skipped 文件。原生属性中的有限大数在此解析器里触发局部告警；1718 个归档 JSON 已由 Python 逐个解析通过，原始数值与 SHA 保留。涉及这些属性时读取原 JSON，不用索引摘要替代实际数据。
 
 零 API 的 [Link schema 探针](evidence/cli_link_schema_20261022/INDEX.json) 使用自定义公开名称 `ReferenceSketch`，验证 pinned getter 将普通 Link 解析为字符串、无子元素的 LinkSub 解析为字典；与同一字符串条件比较的结果为 true/false。它只证明通用 schema 区别，没有读取任务规则、没有将某题失败归因于此，也没有规范化链接或改分。首次独立加载 metric 缺少相对包上下文的 ImportError 保留；在独立命名空间补齐包上下文后探针成功。
 

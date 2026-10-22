@@ -1,0 +1,124 @@
+{
+  "classification": "trusted_posthoc_native_audit",
+  "benchmark_episode": false,
+  "model_calls": 0,
+  "status": "PASS_NATIVE_ARTIFACT_AUDIT",
+  "freecad_version": [
+    "1",
+    "1",
+    "0",
+    "44227 +568 (Git)",
+    "git://github.com/FreeCAD/FreeCAD.git",
+    "2026/03/25 02:17:53",
+    "tag: 1.1.0",
+    "34a9716668b1ddeb55b914f1c5be644826bdbbbf"
+  ],
+  "artifact_sha256": "dcfb9cd8de1542a01bcbf661ebac9d73cdc4df3bf52043c6da182ad8beb088cf",
+  "saved_file_unchanged": true,
+  "native_open_recompute_reopen": true,
+  "native_tree_restored": true,
+  "initial_objects": [
+    {
+      "name": "OuterBox",
+      "type_id": "Part::Box",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 12,
+      "solids": 1,
+      "surface_area": 4280.0,
+      "volume": 17784.0,
+      "parameters": {
+        "Height": 18.0,
+        "Length": 38.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "InnerBox",
+      "type_id": "Part::Box",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 12,
+      "solids": 1,
+      "surface_area": 3288.0,
+      "volume": 11968.0,
+      "parameters": {
+        "Height": 16.0,
+        "Length": 34.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Shell",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 24,
+      "solids": 1,
+      "surface_area": 6072.0,
+      "volume": 5816.000000000003,
+      "parameters": {},
+      "area_properties": {}
+    }
+  ],
+  "reopened_objects": [
+    {
+      "name": "OuterBox",
+      "type_id": "Part::Box",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 12,
+      "solids": 1,
+      "surface_area": 4280.0,
+      "volume": 17784.0,
+      "parameters": {
+        "Height": 18.0,
+        "Length": 38.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "InnerBox",
+      "type_id": "Part::Box",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 12,
+      "solids": 1,
+      "surface_area": 3288.0,
+      "volume": 11968.0,
+      "parameters": {
+        "Height": 16.0,
+        "Length": 34.0
+      },
+      "area_properties": {}
+    },
+    {
+      "name": "Shell",
+      "type_id": "Part::Feature",
+      "state": [
+        "Up-to-date"
+      ],
+      "shape_valid": true,
+      "edges": 24,
+      "solids": 1,
+      "surface_area": 6072.0,
+      "volume": 5816.000000000003,
+      "parameters": {},
+      "area_properties": {}
+    }
+  ],
+  "parameter_edit_probe": {
+    "applicable": false,
+    "performed_only_in_disposable_memory": true
+  }
+}

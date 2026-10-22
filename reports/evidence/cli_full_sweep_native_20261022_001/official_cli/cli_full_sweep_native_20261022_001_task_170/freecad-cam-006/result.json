@@ -1,0 +1,15 @@
+{
+  "task_id": "freecad-cam-006",
+  "category": "cam",
+  "score": 0.0,
+  "termination": "turn_limit",
+  "turns": 20,
+  "terminal_calls": 20,
+  "output_tokens": 6656,
+  "agent_seconds": 227.112,
+  "task_seconds": 261.807,
+  "artifact_paths": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/vendor/CADWORLD/CLI/results/actc/cli_full_sweep_native_20261022_001_task_170/freecad-cam-006/freecad-cam-006.FCStd",
+  "error": "",
+  "gui_score": null,
+  "failure_reason": "失败：diagnostics_unavailable"
+}

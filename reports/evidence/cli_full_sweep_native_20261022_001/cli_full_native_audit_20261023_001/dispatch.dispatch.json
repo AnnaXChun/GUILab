@@ -1,0 +1,781 @@
+{
+  "classification": "at_most_once_dispatch_audit",
+  "payload_policy": "digest only; action text remains in original agent trajectory",
+  "source_sha256": "4ecde60ed96d1893b1ff7dbf88f775c8a208a69fb8f9ae10028e6a6e40a8f76b",
+  "rows": [
+    {
+      "execution_id": "cli-native-audit-000",
+      "state": "complete",
+      "payload_sha256": "74feaf814e968cdc6551a90e9a2f88814e1b508a1d5c552464695be118cda7c7",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-001",
+      "state": "complete",
+      "payload_sha256": "ac2da86b8e3f677d6816367420d747d185455551475e2e18497a6595f419fc84",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-002",
+      "state": "complete",
+      "payload_sha256": "dd07c758d0bd5382836fdb87134e88c177554e58b7b0e6182348248c1b64a417",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-003",
+      "state": "complete",
+      "payload_sha256": "deeee7159ca165b7a85866c40566145957c30377624ed91b8cab8047404b4da3",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-004",
+      "state": "complete",
+      "payload_sha256": "ee2f213e060ec8967c52889cc27d5dd04405bb448ac85c8a888d055c73b58f72",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-005",
+      "state": "complete",
+      "payload_sha256": "70e253622992a7432c89a5d5c3c52b48e526bebec068e066ac6c2f126c06bb10",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-006",
+      "state": "complete",
+      "payload_sha256": "5f851e1b92d4bab1a27d0bf7e836d4f9125d454afe4adbd9f44ad988a3866876",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-007",
+      "state": "complete",
+      "payload_sha256": "c867fe93b41543bed587ee895924bec70927693c95715890581001f73df30b09",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-008",
+      "state": "complete",
+      "payload_sha256": "385fb503a8806c694c4989983ae4358900545f43e0061d68f6df322aab15a672",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-009",
+      "state": "complete",
+      "payload_sha256": "99a14632b08cd200850947e9016bc1a5de1ee3d10ccc15911b1c9695b78a1ff9",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-010",
+      "state": "complete",
+      "payload_sha256": "d78a67b4aa7d6378c6a989861df35d462f9e4eca507c3a1d81115dbaeb737693",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-011",
+      "state": "complete",
+      "payload_sha256": "3a3937098f879578bc7b72ed6b3d62722bdab0dd205e915167902c7a92b0d9a8",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-012",
+      "state": "complete",
+      "payload_sha256": "bde070425ea97d4bc467e9c1a847925054c6c82911f4ba93ccb34605dc3a6f1c",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-013",
+      "state": "complete",
+      "payload_sha256": "420d3061bfd917bb82ffd6e5de1a378386fe0097cd913fb8b670ee43400736af",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-014",
+      "state": "complete",
+      "payload_sha256": "e5f167d7ecc5b06a48ffe7e0096c114db72adae145d1f1783d39a8d32b944a60",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-015",
+      "state": "complete",
+      "payload_sha256": "45cf3e5f94f2b5a98e05a52cc40499ed251128e2c1d9bbc2886012f1a7270cdd",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-016",
+      "state": "complete",
+      "payload_sha256": "cd3ad027fde5b5379f17aaa3060c6e80f0c06b6aa106e9ad954b81521ba817d9",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-017",
+      "state": "complete",
+      "payload_sha256": "86694c88f79e07798453553718ef0d0c621d20270c132ac85fc80b127809d5f9",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-018",
+      "state": "complete",
+      "payload_sha256": "c2755f0da363f168c2c8c712b85d80718ce54a516c9960fd0fa0892457bf818b",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-019",
+      "state": "complete",
+      "payload_sha256": "2a0ff304b2431e7765f50b7d461cd90200c12cec421e202b043cd84dce17cbd9",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-020",
+      "state": "complete",
+      "payload_sha256": "ce77215df3807b8d9db414df06dad55696058a586a57a55e3c4f881e12c4cc45",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-021",
+      "state": "complete",
+      "payload_sha256": "82f3de7f0bc6b848aad919feb000b21626f14787e6716209987a7ff2d73c68fc",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-022",
+      "state": "complete",
+      "payload_sha256": "9e0e4c3379578e9a92ff248977a733d9f71a183718b08c6bf7d74839d4947c3b",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-023",
+      "state": "complete",
+      "payload_sha256": "05b47e48667cc7f254c780e62a9be1b5b9d5f36ece792c22090e2cd211fa1f6d",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-024",
+      "state": "complete",
+      "payload_sha256": "865aa798eb2937625bf3b8218a76a08ab199a2edde60d7cb0b73507e7b9450a8",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-025",
+      "state": "complete",
+      "payload_sha256": "1c9fb2c630ab4172da33b37a6c1b92ee3dd2331610b4d862adcb8c9e89c30db2",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-026",
+      "state": "complete",
+      "payload_sha256": "c26cd593993eb7574788ec79a1082147caf2262f996d67adfba9f5ca59b1ab0b",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-027",
+      "state": "complete",
+      "payload_sha256": "aa8dfba9a16b30b834feb74eabdff580b8eccb51a5a09dd0d36fbeb79e9f1e7f",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-028",
+      "state": "complete",
+      "payload_sha256": "4de4d05b31dcdce21f80b12abc4ed4b840879e5991fec390b45c07935605358a",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-029",
+      "state": "complete",
+      "payload_sha256": "96c6105068d7a8b8c9497462cd63d9c10abaf8ff581805d004efe75aa30b0939",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-030",
+      "state": "complete",
+      "payload_sha256": "cc9da92bd3ba8440c6179b601a5b2e24520628e2cfa83e1f05c8629dbde61317",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-031",
+      "state": "complete",
+      "payload_sha256": "dc8cc00c15136082d704e9b4f128bcc37c13e7ae94bf68225bf1a1fab65b11b6",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-032",
+      "state": "complete",
+      "payload_sha256": "ad2dbf5741e68a3a60bee86e8e19d376879cfb1ffd34cca98954b02f231f451a",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-033",
+      "state": "complete",
+      "payload_sha256": "6a280db0f212f747ddd5238c72c3f2bd6cbc745644c5ecc5924630c63a40a4ee",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-034",
+      "state": "complete",
+      "payload_sha256": "c751818210d364a59f2f018706f15ce21c3e0003ae0af4241799c5c52c123f30",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-035",
+      "state": "complete",
+      "payload_sha256": "e0ccd869c7adfe1d8cc20c316a3ff1f6d35298bed6be32dff6ece319cb112002",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-036",
+      "state": "complete",
+      "payload_sha256": "1c4b25d4ec37c54c5733cd6c75537fe89c44c80b854a9a1500cef967a5ea05c5",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-037",
+      "state": "complete",
+      "payload_sha256": "62cb2a1c75f54cbee520ecf4c7c02663d5ce7e5f631500f74facac52f8daa987",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-038",
+      "state": "complete",
+      "payload_sha256": "23773cde2a3f7c8c0b1ea9d1a8f2c117643aea77e9a0e6c48e17307341e110b1",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-039",
+      "state": "complete",
+      "payload_sha256": "362ebf3ef7723306a942a4ca4255ce2dded780abd54a831239a52d6b2791edc5",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-040",
+      "state": "complete",
+      "payload_sha256": "6f975a56d9b43dac7a8a6a3d8cf453416c278e9f09f7fe001ebb153a5fbe15d4",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-041",
+      "state": "complete",
+      "payload_sha256": "8891bdfd580969e98b7a55a76f2af469905f3c00a27c14ab1ef07d722d66d602",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-042",
+      "state": "complete",
+      "payload_sha256": "d69e5f4f0fcaa60191b22d334b6606e7ce1a0a22ea00958879f93ec791ad0d77",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-043",
+      "state": "complete",
+      "payload_sha256": "ac2f02822a5b55620fe4bf3070fd8e88029de6218f4101123acc839bcabc4e31",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-044",
+      "state": "complete",
+      "payload_sha256": "0f775610339068f47300bce39d67ba44ffb4cd844935e7e9dd1d91445189ed24",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-045",
+      "state": "complete",
+      "payload_sha256": "9140aea6e66eb7251f19350957a71b74adb446a93c9f451fbf467f8759248cf9",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-046",
+      "state": "complete",
+      "payload_sha256": "4c47a90467b89d8df5b52c37410b71f139422b462e8564e02dcd1a1efd362084",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-047",
+      "state": "complete",
+      "payload_sha256": "1a0d3a48c3b7112a37c8ea87e505c195ffb238da7eb6b9b7a91817541e70bfec",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-048",
+      "state": "complete",
+      "payload_sha256": "b205afc15eec0b8fcc811fe09af937921819c32eb24e1bb230b3cd8eb65bd2a9",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-049",
+      "state": "complete",
+      "payload_sha256": "3cebd63f966b0c84d5c29e1a5549a8344dab883c3ff0e17654ad9a76bcb4ce84",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-050",
+      "state": "complete",
+      "payload_sha256": "50c28d86b8ccf5574e899d482e9971c9ffa2a401a5da6ee7f7e820f02648bb6b",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-051",
+      "state": "complete",
+      "payload_sha256": "ee9b84a7855e863316ba9054f6de2dbb6f8083f96a5e04a0d1a2bbe88c5898d0",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-052",
+      "state": "complete",
+      "payload_sha256": "e95c05c4bdc3864309dcea5af9c49098594a07ef1cf0e64f91c9b2f9b8577d0c",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-053",
+      "state": "complete",
+      "payload_sha256": "6e65ceb61eb8994384329759929247a9bded193a4c7d4a6c9a0b0155b3d1cbd5",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-054",
+      "state": "complete",
+      "payload_sha256": "feea2122b191834941d47e938e8b5f16ad5692076f731cd62de353481662b731",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-055",
+      "state": "complete",
+      "payload_sha256": "d3448202cf55c8b0ad8acba1181326ad1004f35078d14ed0c179b3608b20efac",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-056",
+      "state": "complete",
+      "payload_sha256": "1e1ea8d65fdfdea369cea373709228fe366622753c7846ac08e1bc5198b929d8",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-057",
+      "state": "complete",
+      "payload_sha256": "748e65f1a9fb7588a4d58a44847fbad93ccedd09b5297c2a686caa2c96af2d84",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-058",
+      "state": "complete",
+      "payload_sha256": "85d633294d62f8f23c1e95ef254afecbb916f4277fa5fad3cd68f470cbf5a482",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-059",
+      "state": "complete",
+      "payload_sha256": "198004ba649c051ca8b2f985dde7bd002e36d33cf995b23844ae1486bee1f9c9",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-060",
+      "state": "complete",
+      "payload_sha256": "513cc0b1e2f88602c01fb0c28455c59453653ca32837f58952e0d53a76739cad",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-061",
+      "state": "complete",
+      "payload_sha256": "4340ac12592a2f97a5f656d11b682ceb7b6ea1dbe276ae7a4ea2c26f46719e3e",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-062",
+      "state": "complete",
+      "payload_sha256": "0729e518886e8c4103349b9dcaffa24447e3a9f3845af898ef2da86f38b95a9c",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-063",
+      "state": "complete",
+      "payload_sha256": "69765be189c46329dee2b818b29ed3492f5dba1b9d8a1d9d26f5b63bf3d5b743",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-064",
+      "state": "complete",
+      "payload_sha256": "1617141e035b50ab3a36f005df591bc971da307ca2ca8a976f7e27af02ec029d",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-065",
+      "state": "complete",
+      "payload_sha256": "b1ff23802cc41c2e9f1bdc12f2776b28eb7a76b0d93ad8a95d85fb1f533f8765",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-066",
+      "state": "complete",
+      "payload_sha256": "6d710432985cb7265a9ea127621c1af849fdf7b2c6d9161c2c4deb6a8b5b7a88",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-067",
+      "state": "complete",
+      "payload_sha256": "5f857d753bb5e0c5385586bcb9babfed091e862e94329e3d1b61caca6b963299",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-068",
+      "state": "complete",
+      "payload_sha256": "12c66836ca21fa9a2c527b0ce8cdbd332bf1598bebd190abf3c64548b20821c7",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-069",
+      "state": "complete",
+      "payload_sha256": "e3277a3b2a51f21c9be0787b6150a887d53078a9c4fbf7fa1f6d644e4923bd36",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-070",
+      "state": "complete",
+      "payload_sha256": "1560d311661556ff7805ac26b4a98fc5bb24da8f475c6d207b48b6e7acdf0724",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-071",
+      "state": "complete",
+      "payload_sha256": "4bc8d9db4931ed53e20c1255eeb74de8b9f7d8bae318e1befa629e28c14024dd",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-072",
+      "state": "complete",
+      "payload_sha256": "b1ec737db10c5c96aac0f144986d02933b441feca34ef1935617194655bf5cdd",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-073",
+      "state": "complete",
+      "payload_sha256": "b2cf68f7b02176f775effd2dc6da2ebec55e09e61770690424141464f0365b02",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-074",
+      "state": "complete",
+      "payload_sha256": "e03a1bb6b9fea713ff0b39cc06e0948346da51a9d22debcdb43ee75b97d0b59f",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-075",
+      "state": "complete",
+      "payload_sha256": "514a3693b34504398d634b07c8814937392cc00ffa62923d92b00b4adad50026",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-076",
+      "state": "complete",
+      "payload_sha256": "6ba12c22fe6e38cfd9f88091256338c598221fa495ef83b3041ad28e888ef8b9",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-077",
+      "state": "complete",
+      "payload_sha256": "eff42de1516f516af41a3bc6e328469a5523eae8749c0c1e2533423ecf3c16c8",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-078",
+      "state": "complete",
+      "payload_sha256": "ee5c92611557416761d08711bc08b7bd6a96cdf258ea55d80c9c837fd98fae94",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-079",
+      "state": "complete",
+      "payload_sha256": "8403669db51c329e54b83046b3e9fbc350c443b1d18a103087a7207390533c09",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-080",
+      "state": "complete",
+      "payload_sha256": "8a7ade5e6f8a232d0ad034febb0d53c8ebb8c0f743efc3cbe8d262f60cf6874e",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-081",
+      "state": "complete",
+      "payload_sha256": "b8a1c42c773b56c36a9a931dc200ac1ad7b7e2cfd3c9d041ad6a1da30aae2652",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-082",
+      "state": "complete",
+      "payload_sha256": "a25b5f4b2e206d95b6af42bc19b45843dda4f4fcd144ed1e38ab4c2e46b037ef",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-083",
+      "state": "complete",
+      "payload_sha256": "ac16af646619f1133c5962e8ff998d22172ebb9ce28a463aed45fff1432c5dea",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-084",
+      "state": "complete",
+      "payload_sha256": "06b74e8b94eb2f6cd53a2c94dcae46d282440ebdb897d2be2199b6a3e627950e",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-085",
+      "state": "complete",
+      "payload_sha256": "0622d628ca245ff49f47d209fe50e91eee0c4cadad7acd46bad2d90310c6a5cf",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-086",
+      "state": "complete",
+      "payload_sha256": "9021e492f44d09bad54a985e41902acbf5bd625e0cdf1c8be5a49a29bad13d94",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-087",
+      "state": "complete",
+      "payload_sha256": "8ca41fe447a483fb2ca9b2738e467f4b93c37e5f88187dc94b59e457541bbc92",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-088",
+      "state": "complete",
+      "payload_sha256": "a2794aeb5b4fad030dd773ccd4a1f38b184d3a6bff245e953425d74ea1a2ab9f",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-089",
+      "state": "complete",
+      "payload_sha256": "efe1ed8ddb975eb9b9ad50948dda7074dc9f0ffabb59aebbf74b3e8e7afd2b31",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-090",
+      "state": "complete",
+      "payload_sha256": "15fc9c7047c4428b4062077f130d5ba158be16767b7a63a7e0e258f0c537a9e1",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-091",
+      "state": "complete",
+      "payload_sha256": "91f1c3269bd8cc0f466b8620b613107c4573c13120482687b29e7341a91524cf",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-092",
+      "state": "complete",
+      "payload_sha256": "89a1d5a513d08512bed7331e6a76952fa5a4269788445390072354cbdeb2c062",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-093",
+      "state": "complete",
+      "payload_sha256": "f4abbe5298be6c7efd12874ca5c4289ac082b5f95a018a4f21043e68ca812825",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-094",
+      "state": "complete",
+      "payload_sha256": "c491bfb3aa15440eb0cffeee3f10076e63e8db9aba630a60b23ded2194433d37",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-095",
+      "state": "complete",
+      "payload_sha256": "47dbcb1f8a1b8f23ef80cf7a66bd965f43fd2e3b5691400f3372a0e7bd292daf",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-096",
+      "state": "complete",
+      "payload_sha256": "c79d19558729851232f26837fac3bba3a911d61c20b2fd28e0d24a7558f361b6",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-097",
+      "state": "complete",
+      "payload_sha256": "7b54a7c13358f914e27346d6d7b060c49099b8b84646174f73ab5342399bd9e5",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-098",
+      "state": "complete",
+      "payload_sha256": "1c2175f32abfa15989fb476c71319d914cf77240ecb587d063f8e22a0d9e7558",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-099",
+      "state": "complete",
+      "payload_sha256": "d36f17c1917f1fd6145a9c46dde4cb7ba026d1cc508b1df54d5700370f94bb0e",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-100",
+      "state": "complete",
+      "payload_sha256": "0b2d5c51527fb5c45e07d54f8c91141ffe6059648fe0819ab8512f8d883d4787",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-101",
+      "state": "complete",
+      "payload_sha256": "ea586d114ab771b98619ea631b3b91d079bd091103963c153e15764a0b8ac626",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-102",
+      "state": "complete",
+      "payload_sha256": "d8cae0b6100a0734e5688268f702bcc59d7cbcb8f9a1cc8be8eedfc2bc194079",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-103",
+      "state": "complete",
+      "payload_sha256": "6846e6b560548230dfd1082a657779b39820588e805f2792383c94e807537485",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-104",
+      "state": "complete",
+      "payload_sha256": "889b1dad2d3459cc68c2d11daa1eb399ebc25e8a2809eac724a9f17768b166ae",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-105",
+      "state": "complete",
+      "payload_sha256": "fed1e32b6b6efbacfa77b5cb9ffc4e3559da0bd567ded87119e3e20c86a59d4d",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-106",
+      "state": "complete",
+      "payload_sha256": "336a97c1885bafce129c87fe6b6df871a702e0ec065ca7a9be8a7b7c26f98b4b",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-107",
+      "state": "complete",
+      "payload_sha256": "afa4c389c2567856a04feb1efe6aa3dd9e17c8527f21337a2fbf7dbab86fab69",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-108",
+      "state": "complete",
+      "payload_sha256": "9e66af97bad85ca0aa04cac399784f0f6c1e5f83ca6f1c4443764434741095b6",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-109",
+      "state": "complete",
+      "payload_sha256": "54e4878a5fc76ddbbf8b0b5e107e84d2a5c26b6e53c690b6f43c7e9b9d5540b2",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-110",
+      "state": "complete",
+      "payload_sha256": "cb5976cf59615a5d4edbec7005985921f0648201773df97680e670c3af79391f",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-111",
+      "state": "complete",
+      "payload_sha256": "ba05c2699bbd8738df22f865cc58a24c09a95fd4e7977b105254cffc69846ed7",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-112",
+      "state": "complete",
+      "payload_sha256": "d47e3e8929e9d77eb2860149689486fd85a2b98718ca970a9272d4f0bf16e456",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-113",
+      "state": "complete",
+      "payload_sha256": "bb3430e926bee9492d58b3278ffe96613a355642386f3b70fbaec67df967994e",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-114",
+      "state": "complete",
+      "payload_sha256": "f42d51597247a6a9ad17fca2e91e5bb9d86aeebffcfc9d57d12ce1063aa838a6",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-115",
+      "state": "complete",
+      "payload_sha256": "23f9f33accd12542b04c16a3d062c6aa25d7f8cb5c6845156f00309c84f70772",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-116",
+      "state": "complete",
+      "payload_sha256": "9fe5217a45faac5bd7eb5a3afe1c2d47d07f18f3d90cb346c2922b117457c24f",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-117",
+      "state": "complete",
+      "payload_sha256": "0a428a7df2c042d116522d04116977240231ff8bdafb6e1a3dab2229e58c6d41",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-118",
+      "state": "complete",
+      "payload_sha256": "37b212e4b363cc52a07d4b9fd96b376bc1e9a1535f40f633e562d76373f4087d",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-119",
+      "state": "complete",
+      "payload_sha256": "8c487d0211ac7dc178d6fc1814a9022aa89e9d4e10a93e630da5ea46db79462d",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-120",
+      "state": "complete",
+      "payload_sha256": "69bb2ea83ce32360f9805019ef40686d2a9a7a03f823a2ad98cd34ee5e77fee9",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-121",
+      "state": "complete",
+      "payload_sha256": "aeb746362d731a93716f2afc5954a630cbe90c067a85ec7d5842ae7e1989b1d2",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-122",
+      "state": "complete",
+      "payload_sha256": "5c82ed78e9274ab29d8d070219465546a9c22db45f1a8fb6b75c2308a56fd98e",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-123",
+      "state": "complete",
+      "payload_sha256": "7a0d24850041363fcd72beba80a1312b08d0d861b118aaa5a79f33dfc2cc649c",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-124",
+      "state": "complete",
+      "payload_sha256": "39647d442e8c7e75598ad812fc7cba830d695eb781c553d1091eb43f582857f9",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-125",
+      "state": "complete",
+      "payload_sha256": "abd1b9d2515c6b236f4119153e23dc66031e1687f07fae1c221f011a66f984ce",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-126",
+      "state": "complete",
+      "payload_sha256": "94ef89a0f8e0b8644c88f694d4d7a59e2af618f64cf0f6a66a9b0f6cef759bfa",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-127",
+      "state": "complete",
+      "payload_sha256": "ac73e25e5a089eab4f0dcb7e03271223850aea87e2aac8660c07cd6a84d9d0bf",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "cli-native-audit-128",
+      "state": "complete",
+      "payload_sha256": "7f1715f93392042db5986f8228f809fdc0990ad456267073def458f89d6ad2df",
+      "payload_excluded": true
+    }
+  ]
+}
