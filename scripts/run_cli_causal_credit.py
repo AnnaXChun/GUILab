@@ -60,6 +60,12 @@ def plan_from_capture(config,capture,public):
 
 
 def restored_worker(capture):
+    minimal={'seeds':{}}
+    from cad_cf.structural_credit import digest
+    for name,record in capture['seeds'].items():
+        minimal['seeds'][name]={k:record[k] for k in ('path','seed_sha256','seed_state_sha256','native_state','spec','captured_before_model_requests')}
+        minimal['seeds'][name].update(control_path=str(Path(record['path']).parent/'trusted.FCStd'),
+            control_state_sha256=digest(record['trusted_test']['reopened']['native']))
     source=WORKER.read_text().rsplit("if __name__=='__main__':",1)[0]
     source+='\nCONTINUATION_SOURCE='+repr(suffix_source(source))+'\n'
     source+='\n'+inspect.getsource(candidate_code).replace('def candidate_code(', 'def scoped_candidate_code(')+'\n'
@@ -76,12 +82,11 @@ def prepare(request):
             if state_sha(doc)!=record['seed_state_sha256']:raise RuntimeError('restored source S0 native mismatch')
         finally:App.closeDocument(doc.Name)
         seeds[name]=record
-        path=str(Path(record['path']).parent/'trusted.FCStd')
+        path=record['control_path']
         doc=App.openDocument(path)
         try:
             doc.recompute();native=native_state(doc)
-            expected=record['trusted_test']['reopened']['native']
-            if native!=expected:raise RuntimeError('restored control S0 mismatch')
+            if digest(native)!=record['control_state_sha256']:raise RuntimeError('restored control S0 mismatch')
             seeds[name+'-note-control']={'path':path,'seed_sha256':sha(path),
                 'seed_state_sha256':digest(native),'native_state':native,
                 'spec':record['spec'],'captured_before_model_requests':True}
@@ -91,7 +96,7 @@ if __name__=='__main__':
     request=json.loads(os.environ['STRUCTURAL_DIAGNOSTIC_REQUEST'])
     result=prepare(request) if request['mode']=='prepare' else execute(request)
     print(json.dumps(result,allow_nan=False))
-'''.replace('__CAPTURED__',repr(capture))
+'''.replace('__CAPTURED__',repr(minimal))
     # Scoped parser receives JSON during host collection and original code during guest validation.
     source=source.replace("scoped_candidate_code(pair['candidates'][branch],", "scoped_candidate_code(json.dumps({'code':pair['candidates'][branch]}),")
     source='import re\n'+source

@@ -40,7 +40,10 @@ print(proc.stdout);print(proc.stderr)
 raise SystemExit(proc.returncode)
 """
     source = source.replace("__REQUEST__", repr(json.dumps(request, allow_nan=False))).replace("__WORKER__", repr(worker)).replace("__TIMEOUT__", str(timeout))
-    return ["/usr/bin/python3", "-c", source]
+    command=["/usr/bin/python3", "-c", source]
+    if max(len(arg.encode()) for arg in command)>=120000:
+        raise ValueError('trusted inline command exceeds Linux single-argument limit; no dispatch')
+    return command
 
 
 def parse_response(response):

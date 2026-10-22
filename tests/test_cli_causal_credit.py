@@ -109,3 +109,14 @@ def test_controller_only_readiness_never_bypasses_gui_protocol(tmp_path):
     with pytest.raises(ValueError,match='explicit headless'):
         NativeQemuProvider('base','sha','firmware','sha',tmp_path/'vm',gui_ready=True,controller_only=True)
     assert not (tmp_path/'vm').exists()
+
+
+def test_restore_worker_drops_large_verifier_history_before_transport():
+    capture={'seeds':{'task':{'path':'/seed.FCStd','seed_sha256':'bytes','seed_state_sha256':'state','native_state':{'objects':[]},
+        'spec':spec(),'captured_before_model_requests':True,
+        'trusted_test':{'reopened':{'native':{'objects':[]}},'probes':[{'large_verifier_field':'z'*300000}]}}}}
+    source=restored_worker(capture)
+    assert 'large_verifier_field' not in source and len(source)<50000
+    from scripts.run_structural_credit_diagnostic import command
+    assert max(len(x.encode()) for x in command({'mode':'prepare'},source))<120000
+    with pytest.raises(ValueError,match='no dispatch'):command({'mode':'prepare'},'z'*200000)
