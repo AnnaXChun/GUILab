@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "classification": "planned_cli_block_counterfactual_diagnostic",
+  "status": "DESIGN_FROZEN_RUNNER_PENDING",
+  "protocol": "docs/CLI_CAUSAL_CREDIT_PILOT.md",
+  "cadworld_commit": "e5d0ebab8bd28da6e98c68c61db05747d1647f7b",
+  "public_task_manifest": "manifests/public_tasks.json",
+  "experiment_split": "development",
+  "candidate_generation": {
+    "model": "qwen3.5-122b-a10b",
+    "temperature": 0.7,
+    "thinking_requested": false,
+    "independent_samples_per_boundary": 2,
+    "shared_generic_api_guidance": true,
+    "share_candidate_or_verifier_feedback": false,
+    "response_envelope_adapter": "single_json_fence",
+    "edit_model_code": false
+  },
+  "tasks": [
+    {
+      "task_id": "freecad-part-001",
+      "source_split": "train",
+      "group_sha256": "060bae078b795d514ab7d9b14d9d5dd6cfd15fc1bfc8fcd6d126cd5af93050da",
+      "precondition_source_sha256": "f521f30c6007a5df732cd5ac0983051360c1add0c1381a30252f0677e942a358",
+      "boundary": "create_pad_from_supplied_closed_profile",
+      "public_length_mm": 12,
+      "required_downstream_operations": ["recompute", "save_close_reopen"],
+      "experimental_downstream_operations": ["persisted_measurement_audit"],
+      "seed_sha256": null,
+      "seed_state_sha256": null,
+      "native_target_binding": null,
+      "continuation_sha256": null,
+      "native_probe_bank_sha256": null
+    },
+    {
+      "task_id": "freecad-part-014",
+      "source_split": "train",
+      "group_sha256": "69447b06ccfb60654ead89b98b2404f76314a0705f16a5928d9521304ed052b7",
+      "precondition_source_sha256": "bcd41e7ffe671fd90d374d90584be0b495f6dd06556ae71e180b90c9a4f59f03",
+      "boundary": "create_pad_before_concentric_pocket",
+      "public_pad_length_mm": 10,
+      "public_pocket_radius_mm": 4,
+      "public_pocket_depth_mm": 6,
+      "required_downstream_operations": ["concentric_pocket", "recompute", "save_close_reopen"],
+      "experimental_downstream_operations": [],
+      "seed_sha256": null,
+      "seed_state_sha256": null,
+      "native_target_binding": null,
+      "continuation_sha256": null,
+      "native_probe_bank_sha256": null
+    }
+  ],
+  "controls": [
+    "first_independent_candidate",
+    "initial_geometry_best_of_2",
+    "terminal_parameter_response_best_of_2",
+    "same_response_evaluator_local_counterfactual_credit",
+    "shuffled_credit_assignment",
+    "irrelevant_block_negative_control"
+  ],
+  "budget": {
+    "paid_runs_default": 0,
+    "max_tasks": 2,
+    "max_live_model_pairs": 2,
+    "max_model_calls": 4,
+    "max_output_tokens_per_call": 2048,
+    "max_model_output_tokens": 8192,
+    "max_sdk_retries": 0,
+    "max_natural_candidate_dispatches": 4,
+    "max_negative_control_dispatches": 4,
+    "max_prepare_dispatches": 1,
+    "max_native_dispatches": 9,
+    "max_parameter_probes_per_artifact": 6,
+    "request_timeout_seconds": 110,
+    "max_batch_wall_seconds": 1800,
+    "stop_after_frozen_batch_even_if_all_tie": true
+  },
+  "record_policy": {
+    "capture_s0_before_requests": true,
+    "freeze_continuation_and_probes_before_requests": true,
+    "candidate_executions_per_branch": 1,
+    "replay_candidate_in_parameter_probes": false,
+    "repair_suffix_for_candidate": false,
+    "official_evaluation_online": false,
+    "training_eligible": false,
+    "synthetic_controls_are_model_pairs": false,
+    "missing_quality": null
+  },
+  "pending_before_execution": [
+    "verify supplied precondition source bytes and capture native object/constraint state",
+    "implement Sketch/Body/Pad/Pocket native observer; current primitive worker is insufficient",
+    "freeze candidate interface, shared continuation and six-probe bank using actual S0",
+    "verify deterministic clone execution and negative controls without model calls",
+    "create run-specific immutable manifest; reject any null required execution binding"
+  ],
+  "actual_model_calls": 0,
+  "actual_native_dispatches": 0,
+  "actual_valid_model_pairs": 0,
+  "method_effect": null
+}

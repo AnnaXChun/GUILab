@@ -1,5 +1,7 @@
 # 复现状态
 
+2026-10-22 下一步定义为[多步构造局部归因](CLI_IDEA_NEXT_STEP_20261022.md)，任务 part-001/part-014，配置与预算静态检查通过。新的 Sketch/Body/Pad/Pocket runner 和实际 S0 绑定待实现，新模型请求/VM 派发为 0。该设计沿用 CLI 方向，原 baseline 与上一轮测量成功记录保持。
+
 最新[CLI 接口修复](CLI_API_GUIDED_PAIR_20261021.md)已通过：两条新模型原文在同 S0 上各执行一次，保存重开和六个参数/控制探针 Q=1/1，credit=0。原 JSON 围栏拒绝保留，显式适配只去封装。当前有效模型 pair 为一个 tie；本轮新增 2 模型请求、4 native 派发，257 项项目测试/7 项上游 CLI 测试通过，VM 均停止。官方 baseline 历史结果保持，方法收益与训练仍 NO-GO。下方模型 pair=0 是该修复前的历史记录。
 
 最新[捕获S0模型小批](CLI_MODEL_PAIR_20261021.md)已实测：模型前保存S0，首超时保留，服务适配返回两代码；恢复原S0执行后分别ParserError/AttributeError，无artifact，credit=null。累计3模型请求/5native派发、251项目tests/7上游CLI tests，全部VM停止。pipeline失败审计通过，模型pair与方法优势NO-GO；不新增官方episode或训练样本。

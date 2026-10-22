@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-21",
+  "updated_at": "2026-10-22",
   "latest_run": "cli_model_pair_api_guided_saved_20261021_001",
   "latest_gui_controls": "gui_controls_20261020",
   "latest_gui_grounding": "gui_grounding_20261020",
@@ -149,7 +149,7 @@
   "branch": "main",
   "read_first": [
     "AGENTS.md",
-    "reports/CLI_API_GUIDED_PAIR_20261021.md",
+    "docs/CLI_CAUSAL_CREDIT_PILOT.md",
     "HANDOFF.md"
   ],
   "cadworld_commit": "e5d0ebab8bd28da6e98c68c61db05747d1647f7b",
@@ -166,7 +166,7 @@
     "real_episodes": 3
   },
   "next_phase": "P0",
-  "next_action": "读取 reports/CLI_API_GUIDED_PAIR_20261021.md 与 HANDOFF.md；新模型同 S0 执行已通过，Q=1/1、credit=0。冻结两个新 CLI 构造任务、任务划分和相同预算，每次模型前捕获 S0，比较终局检查、参数干预与 Best-of-2；不重开已结束账本、不恢复 GUI、不启动训练。",
+  "next_action": "读取 docs/CLI_CAUSAL_CREDIT_PILOT.md 与 configs/cli_causal_credit_pilot_20261022.json；先核对 part-001/part-014 供应文件，扩展 Sketch/Body/Pad/Pocket observer，冻结真实 S0、共同续执行 C 和探针，做无模型 clone/零信用控制。通过后按四次新生成上限采样；旧 Torus runner 不支持该配置。",
   "paid_run_authorization_added": true,
   "defaults": {
     "ENABLE_PAID_RUNS": 0,
@@ -481,8 +481,16 @@
     "unknown_output_reservation": 128
   },
   "active_research_protocol": "CLI_ONLY",
-  "current_focus": "CLI 同 S0 模型代码块与持久参数响应已通过；下一步独立构造任务对照，GUI 停止",
+  "current_focus": "CLI 多步构造局部信用设计已定义；下一步原生 observer 与同 S0 无模型验收，GUI 停止",
   "latest_cli_status": "reports/CLI_STATUS.json",
   "latest_cli_report": "reports/CLI_API_GUIDED_PAIR_20261021.md",
-  "current_next_step": "冻结两个新 CLI 构造任务、任务划分与相同预算，模型请求前捕获 S0，比较终局检查、参数干预检查和 Best-of-2；方法收益与训练仍 NO-GO。"
+  "current_next_step": "实现并核验 part-001/part-014 的原生 observer、共同续执行和 clone 控制；再执行有界模型采样。设计一致性检查已通过，新 runner 未实现，本轮新模型/VM 为 0，方法收益和训练尚未验证。",
+  "next_cli_causal_pilot": {
+    "status": "DESIGN_FROZEN_RUNNER_PENDING",
+    "protocol": "docs/CLI_CAUSAL_CREDIT_PILOT.md",
+    "config": "configs/cli_causal_credit_pilot_20261022.json",
+    "static_validation": "reports/CLI_CAUSAL_DESIGN_VALIDATION_20261022.json",
+    "actual_model_calls": 0,
+    "actual_native_dispatches": 0
+  }
 }

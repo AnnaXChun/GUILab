@@ -1,5 +1,9 @@
 # 差异与适配
 
+## 多步 CLI 局部信用设计
+
+2026-10-22 将后续实验从 Torus 测量转为供应 Sketch 上的 Pad 与 Pad→Pocket。固定后续执行首轮由可信代码实现，其来源和 SHA 在候选生成前冻结；它解释固定上下文的相对作用，真实 agent 续执行需另行验证。part-001 的下游测量审计是工程扩展，part-014 的 Pocket 来自公开任务。图暂不参与分数；局部 credit 与同响应终局 Best-of-2 等价作为检查项，后续价值由同奖励归因/训练对照检验。设计入口见 [多步小批](../docs/CLI_CAUSAL_CREDIT_PILOT.md)，新 runner 未实现，本轮无新增模型或 VM。
+
 ## CLI 通用接口说明与响应封装
 
 新增通用 FreeCAD API 说明，先在独立 Box 文档实测 PropertiesList、pi、^、单位、保存重开与参数响应，通过后才发新模型请求。说明不含圆环公式。两响应有 JSON 围栏，保留原严格 JSON 拒绝后启用显式 single_json_fence，只去单个完整围栏，代码字符串不改；以新 overlay 恢复原 seed 执行既有响应，无新增模型请求。两候选 Q=1/1、credit=0，原生 XML 与六探针审计通过。该设置是扩展测量协议，原 baseline prompt 和历史成绩保留；历史失败与新成功不能当作等预算因果对照。服务请求 thinking=false 仍返回 reasoning_content/962 reasoning tokens，按完整 completion 用量保留。详情见 [CLI 接口修复](CLI_API_GUIDED_PAIR_20261021.md)。

@@ -4,6 +4,8 @@
 
 ## 接手入口
 
+**2026-10-22 下一步实施入口**：`docs/CLI_CAUSAL_CREDIT_PILOT.md` 与 `configs/cli_causal_credit_pilot_20261022.json` 已定义 part-001/part-014 的多步构造局部干预。新 runner/原生绑定尚未实现，本轮新模型与 VM 为 0。先扩展 Sketch/Body/Pad/Pocket observer、核对供应文件与 S0、冻结共同 C/探针并无模型验证，再最多四次独立候选采样；旧 Torus worker 不能运行这份配置。自然 pair 和不相关块 synthetic 控制分开。与相同响应终局 Best-of-2 的选择等价，方法收益由后续局部归因及同奖励训练对照验证，图只记录。
+
 **最新 CLI 接口问题已解决**：读取 `reports/CLI_API_GUIDED_PAIR_20261021.md`、`docs/CLI_API_GUIDED_PAIR.md` 和 `reports/CLI_MODEL_PAIR_STATUS.json`。通用 API 说明在独立原生 Box 先验证；新模型两响应使用 JSON 围栏，原拒绝保留，显式 single_json_fence 只去封装不改代码。恢复原捕获 S0 执行后两候选 Q=1/1、credit=0，保存重开和六个探针均通过，原生 XML 类型与表达式核验 PASS。本轮新 2 请求/4 派发、257 tests/7 upstream tests、两 VM 停止，旧账本不变。当前模型 pair 为一个有效 tie，训练和方法增益仍 NO-GO；下一步冻结新 CLI 构造任务和等预算对照，不重开结束批次或恢复 GUI。下方“下一步 API 说明”与“有效 pair=0”为历史状态。
 
 **最新模型候选实测**：入口`reports/CLI_MODEL_PAIR_20261021.md`、`docs/CLI_MODEL_PAIR.md`、`reports/CLI_MODEL_PAIR_STATUS.json`。capture-before-request已通过；60秒请求超时保留，110秒新批两response返回。hasProperty查询原白名单拒绝保留并最小放行后，停止磁盘clone恢复原S0执行已有原文，A表达式ParserError/B API不存在，pair invalid、credit=null。总模型3请求/native5派发、251项目tests与7上游CLI tests，全部VM停止；不追加API调用或重开额度。下一步公开API/表达式说明等预算对照先冻结，不把失败Q设0或造preference。

@@ -1,0 +1,15 @@
+{
+  "status": "PASS_DESIGN_CONSISTENCY_ONLY",
+  "config_sha256": "be3b5b202bf4c5f88ac135d32fa8d41044c04110c5732fd26fd91f6620ab55b5",
+  "public_task_source_fields_match": true,
+  "task_ids": [
+    "freecad-part-001",
+    "freecad-part-014"
+  ],
+  "budget_arithmetic_verified": true,
+  "required_execution_bindings": "PENDING_NATIVE_VERIFICATION",
+  "new_runner": "NOT_IMPLEMENTED",
+  "actual_model_calls": 0,
+  "actual_native_dispatches": 0,
+  "new_experiment_results": false
+}

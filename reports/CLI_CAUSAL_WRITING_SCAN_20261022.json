@@ -1,0 +1,87 @@
+{
+  "skills": [
+    "haohao-shuohua",
+    "anti-defensive-writing"
+  ],
+  "scan": "documented four regex categories executed once; manual factual and prose review completed",
+  "files": [
+    {
+      "path": "docs/CLI_CAUSAL_CREDIT_PILOT.md",
+      "sha256": "db606d248f91c441aaefd3fd92da3610e73da5222167f685578cd2d38cdaab51",
+      "hits": {
+        "numbered_headings": [],
+        "b2": [],
+        "meta": [],
+        "chinese_ascii_punctuation": []
+      }
+    },
+    {
+      "path": "docs/CLI_RESEARCH_PLAN.md",
+      "sha256": "a18d979e6da9ed9ad8889e6ad36e61dff2ed2655a68ee2bf788e130575d2bf72",
+      "hits": {
+        "numbered_headings": [],
+        "b2": [],
+        "meta": [],
+        "chinese_ascii_punctuation": []
+      }
+    },
+    {
+      "path": "HANDOFF.md",
+      "sha256": "53265412e2cacb442ecd2302ee6d163d14d53a4eee5719f8a2e9609723bb09d1",
+      "hits": {
+        "numbered_headings": [],
+        "b2": [],
+        "meta": [],
+        "chinese_ascii_punctuation": []
+      }
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "edcc910fa557acf1063d700c563ab32fd2767966a5d4cb3c59da083ff39bd0e3",
+      "hits": {
+        "numbered_headings": [],
+        "b2": [],
+        "meta": [],
+        "chinese_ascii_punctuation": []
+      }
+    },
+    {
+      "path": "reports/CLI_IDEA_NEXT_STEP_20261022.md",
+      "sha256": "a0f6d2f7ba8182988afbc11b7daa5ef5a8c5a53c75ecbb2f088d2bd500029e26",
+      "hits": {
+        "numbered_headings": [],
+        "b2": [],
+        "meta": [],
+        "chinese_ascii_punctuation": []
+      }
+    },
+    {
+      "path": "reports/REPRO_STATUS.md",
+      "sha256": "8d35f6efd8c1b4f4a6b53ac7fe1fcac33eb284aa63d2e19bc23d6f57d76003ef",
+      "hits": {
+        "numbered_headings": [],
+        "b2": [],
+        "meta": [],
+        "chinese_ascii_punctuation": []
+      }
+    },
+    {
+      "path": "reports/DEVIATIONS.md",
+      "sha256": "5f7ed3a70ac9ab4846c1eaad8c77ab758834b3941f880810bb3046951eb18576",
+      "hits": {
+        "numbered_headings": [],
+        "b2": [],
+        "meta": [],
+        "chinese_ascii_punctuation": []
+      }
+    }
+  ],
+  "exemptions": [],
+  "fact_checks": [
+    "plans separated from zero actual model/VM runs",
+    "2 natural pairs / 4 model calls / 8192 tokens",
+    "same response evaluator remains identical to local selection",
+    "runner and native S0 binding pending",
+    "old baseline and previous results preserved"
+  ]
+}
