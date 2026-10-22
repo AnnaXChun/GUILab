@@ -4,7 +4,7 @@
 
 先在独立文档中原生核验 Pad 创建、Profile 和单位说明，再用 `configs/cli_causal_pad_api_guided_20261022.json` 采样两题各两个独立候选，共最多四次新请求。候选仍只用公开任务和 S0，代码不修改、各执行一次；固定后续代码与每题六个参数探针沿用已核验版本。这个小批检验执行可行性，历史拒绝不能充当等预算原说明对照。原计划的八次 API 说明对照另保留，当前不借此声称提示的因果收益。
 
-全量使用 pinned `evaluation_examples/test_all.json` 的 200 题、11 类任务及原 `CLI/run_cli.py`/`TerminalModelAgent`，保留原 prompt、图像输入和离线官方 evaluator。模型固定为 Qwen3.5-122B。推荐预算为每题最多 20 轮、每次 2048 输出 tokens、单题 16384 输出 tokens、1200 秒；全量上限 4000 请求和 3276800 输出 tokens。该设置与官方 CLI 的默认 51200 输出 tokens 分开标注。价格未配置时费用为 null，实际用量由账本和完整 JSONL 报告。
+全量使用 pinned `evaluation_examples/test_all.json` 的 200 题、11 类任务及原 `CLI/run_cli.py`/`TerminalModelAgent`，保留原 prompt、图像输入和离线官方 evaluator。模型固定为 Qwen3.5-122B。推荐预算为每题最多 20 轮、每次沿用官方上限 8192 输出 tokens、单题 16384 输出 tokens、1200 秒；全量上限 4000 请求和 3276800 输出 tokens。该设置与官方 CLI 的默认单题 51200 输出 tokens 分开标注。价格未配置时费用为 null，实际用量由账本和完整 JSONL 报告。
 
 `scripts/run_cli_full_sweep.py` 默认两路并行，每题一个独立 overlay、工作目录、端口、账本与 run ID，仍保留官方 reset。每题失败与未完成任务保留。resume 仅启动原本 PENDING 的题，已启动但失联的题标为 ORPHANED_NO_REPLAY；有旧任务进程仍存活时拒绝重复启动。模型错误或 unknown usage 打开 circuit 后停止新增题，原生非幂等派发不自动重试。
 

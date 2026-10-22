@@ -33,17 +33,34 @@ def summarize(records):
     total = len(records)
     evaluated = [r for r in records if r['status'] == 'EVALUATED']
     passed = sum(r['strict'] >= 1 for r in evaluated)
+    raw=[r['upstream_raw_score'] for r in records if type(r.get('upstream_raw_score')) in (int,float)
+        and math.isfinite(r['upstream_raw_score']) and 0<=r['upstream_raw_score']<=1]
     return {'planned': total, 'results_present': sum(r['status'] != 'PENDING' for r in records),
         'evaluated': len(evaluated), 'passed': passed, 'failed': len(evaluated) - passed,
         'run_errors': sum(r['status'] == 'RUN_ERROR' for r in records),
         'unknown': sum(r['status'] == 'UNKNOWN_SCORE' for r in records),
         'pending': sum(r['status'] == 'PENDING' for r in records),
         'strict_pass_rate_full': passed / total if total and len(evaluated) == total else None,
+        'verified_delivery_rate_all_attempted': passed/total if total and all(r['status']!='PENDING' for r in records) else None,
+        'upstream_raw_mean_all_results': sum(raw)/total if total and len(raw)==total else None,
         'strict_pass_rate_evaluated': passed / len(evaluated) if evaluated else None,
         'mean_official_score_evaluated': sum(r['strict'] for r in evaluated)/len(evaluated) if evaluated else None,
         'mean_official_score_full': sum(r['strict'] for r in evaluated)/total if total and len(evaluated)==total else None,
         'coverage': len(evaluated) / total if total else None,
         'saved_artifacts': sum(r['artifact_count'] > 0 for r in records)}
+
+
+def finalize_record(record, job_status, events):
+    """Exclude provisional and uncertain outcomes without blaming other jobs."""
+    result=dict(record)
+    if job_status=='RUNNING' and result['status']!='PENDING':
+        result.update(status='PENDING',strict=None,reason='provisional result; waiting for provider finalization')
+    elif any(event.get('event')=='model_error' or
+        (event.get('event')=='budget_summary' and event.get('circuit_open')) for event in events):
+        result.update(status='RUN_ERROR',strict=None,reason='model or execution circuit open; raw score preserved')
+    elif job_status in ('RUN_ERROR','ORPHANED_NO_REPLAY') and result['status']=='PENDING':
+        result.update(status='RUN_ERROR',strict=None,reason='started job ended without an evaluable task result')
+    return result
 
 
 def write_tables(output, records, config):
@@ -64,11 +81,13 @@ def write_tables(output, records, config):
         writer.writerows(records)
     lines = ['# CLI 全量实验表', '',
         '预算、模型和协议固定；全量率仅在完整任务集都有可评估结果后给出。', '',
-        '| 类别 | 总题数 | 已评估 | 通过 | 失败 | 运行错误 | 待完成 | 全量通过率 |',
-        '| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |']
+        '| 类别 | 总题数 | 已评估 | 通过 | 失败 | 运行错误 | 未知分数 | 待完成 | 可核验交付率 | 全量评分通过率 |',
+        '| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |']
     for category, row in [*groups.items(), ('总计', summary['overall'])]:
         rate = '待完成' if row['strict_pass_rate_full'] is None else f"{row['strict_pass_rate_full']:.2%}"
-        lines.append(f"| {category} | {row['planned']} | {row['evaluated']} | {row['passed']} | {row['failed']} | {row['run_errors']} | {row['pending']} | {rate} |")
-    lines += ['', '官方分数、原生文件保存和原生可编辑性分别报告。运行错误的原始 score=0 保留，strict 为 unknown。', '']
+        delivery='待完成' if row['verified_delivery_rate_all_attempted'] is None else f"{row['verified_delivery_rate_all_attempted']:.2%}"
+        lines.append(f"| {category} | {row['planned']} | {row['evaluated']} | {row['passed']} | {row['failed']} | {row['run_errors']} | {row['unknown']} | {row['pending']} | {delivery} | {rate} |")
+    lines += ['', '可核验交付率使用完整任务分母，运行错误保留在分母；它统计成功交付，不给未知工程质量设 Q=0。',
+        '官方分数、原生文件保存和原生可编辑性分别报告。运行错误的原始 score=0 保留，strict 为 unknown。', '']
     (output / 'EXPERIMENT_TABLE.md').write_text('\n'.join(lines))
     return summary

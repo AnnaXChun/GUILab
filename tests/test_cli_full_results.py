@@ -13,6 +13,10 @@ def test_pipeline_score_zero_remains_unknown_and_partial_success_has_full_denomi
     assert rows[1]['upstream_raw_score']==0 and rows[1]['strict'] is None
     assert result['passed']==1 and result['run_errors']==1 and result['pending']==1
     assert result['strict_pass_rate_full'] is None and result['coverage']==1/3
+    assert result['verified_delivery_rate_all_attempted'] is None
+    complete=summarize(rows[:2])
+    assert complete['verified_delivery_rate_all_attempted']==.5 and complete['strict_pass_rate_full'] is None
+    assert complete['upstream_raw_mean_all_results']==.5
     out=write_tables(tmp_path/'report',rows,{'model':'mock','cli':{'turns':20}})
     assert out['overall']==result and '待完成' in (tmp_path/'report/EXPERIMENT_TABLE.md').read_text()
 
@@ -26,3 +30,15 @@ def test_all_evaluated_strict_rate_uses_every_task_and_preserves_partial_score(t
     result=summarize(rows)
     assert result['strict_pass_rate_full']==1/3 and result['failed']==2 and result['coverage']==1
     assert result['mean_official_score_full']==.5
+
+
+def test_late_uncertain_dispatch_excludes_score_and_does_not_affect_other_job():
+    from cad_cf.cli_full_results import finalize_record
+    good={'status':'EVALUATED','strict':1,'upstream_raw_score':1,'reason':''}
+    provisional=finalize_record(good,'RUNNING',[])
+    assert provisional['status']=='PENDING' and provisional['strict'] is None
+    uncertain=finalize_record(good,'FINISHED',[{'event':'budget_summary','circuit_open':True}])
+    assert uncertain['status']=='RUN_ERROR' and uncertain['strict'] is None and uncertain['upstream_raw_score']==1
+    assert finalize_record(good,'FINISHED',[])==good
+    missing=finalize_record({'status':'PENDING','strict':None},'ORPHANED_NO_REPLAY',[])
+    assert missing['status']=='RUN_ERROR' and missing['strict'] is None

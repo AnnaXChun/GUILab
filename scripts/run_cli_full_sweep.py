@@ -11,7 +11,7 @@ import sys
 import time
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from cad_cf.cli_full_results import task_record, write_tables
+from cad_cf.cli_full_results import task_record, write_tables, finalize_record
 from cad_cf.cadworld_adapter import verify_pin
 from cad_cf.baseline import validate_environment_evidence
 
@@ -45,14 +45,20 @@ def main():
     p.add_argument('--model', default='qwen3.5-122b-a10b')
     p.add_argument('--turns', type=int, default=20)
     p.add_argument('--output-tokens', type=int, default=16384)
+    p.add_argument('--per-call-tokens',type=int,default=8192)
     a = p.parse_args()
-    if not 1 <= a.turns <= 120 or not 1 <= a.output_tokens <= 51200:
+    if not 1 <= a.turns <= 120 or not 1 <= a.output_tokens <= 51200 or not 1<=a.per_call_tokens<=8192:
         p.error('invalid per-task budget')
     if not a.dry_run and os.environ.get('ENABLE_PAID_RUNS', '0') != '1':
         p.error('NOT_RUN_BUDGET: ENABLE_PAID_RUNS=0')
     verify_pin(ROOT/'vendor/CADWORLD')
     if not a.dry_run:
         validate_environment_evidence(json.loads(a.runtime_config.read_text()),a.environment_evidence)
+        from dotenv import dotenv_values
+        from cad_cf.baseline import safe_endpoint
+        settings={**dotenv_values(ROOT/'.env'),**os.environ}
+        if not settings.get('CADWORLD_API_KEY') or not safe_endpoint(settings.get('CADWORLD_API_BASE_URL')):
+            raise RuntimeError('BLOCKED_BY_CREDENTIALS: configured endpoint/key required before launching full sweep')
     tasks_path = ROOT / 'vendor/CADWORLD/evaluation_examples/test_all.json'
     categories = json.loads(tasks_path.read_text())
     tasks = [(category, task) for category, values in categories.items() for task in values]
@@ -69,7 +75,7 @@ def main():
         'runtime_config_sha256': hashlib.sha256(a.runtime_config.read_bytes()).hexdigest(),
         'environment_evidence_sha256': hashlib.sha256(a.environment_evidence.read_bytes()).hexdigest(),
         'max_total_calls': 200*a.turns, 'max_total_output_tokens': 200*a.output_tokens,
-        'cli': {'turns': a.turns, 'per_call_tokens': 2048, 'output_tokens': a.output_tokens, 'wall_seconds': 1200}}
+        'cli': {'turns': a.turns, 'per_call_tokens': a.per_call_tokens, 'output_tokens': a.output_tokens, 'wall_seconds': 1200}}
     if a.resume:
         old = json.loads((a.output / 'config.json').read_text())
         if old != config:
@@ -115,11 +121,16 @@ def main():
             ROOT/'vendor/CADWORLD/CLI/results'/job['run_id']/job['task_id']) for job in jobs]
         seen={'freecad-sketch-061','freecad-sketch-063','freecad-measure-003','freecad-part-001','freecad-part-014','freecad-part-076'}
         for row in records:row['development_seen_before_sweep']=row['task_id'] in seen
-        summary=write_tables(a.output, records, config)
         usage=[]
-        for job in jobs:
+        for index,(job,row) in enumerate(zip(jobs,records)):
             path=ROOT/'results'/job['run_id']/'provider_usage.jsonl'
-            if path.exists():usage.extend(json.loads(line) for line in path.read_text().splitlines() if line.strip())
+            events=[]
+            if path.exists():
+                # An active append can leave an incomplete final line; complete malformed lines still fail.
+                events=[json.loads(line) for line in path.read_text().split('\n')[:-1] if line.strip()]
+                usage.extend(events)
+            records[index]=finalize_record(row,job['status'],events)
+        summary=write_tables(a.output, records, config)
         measured=[row for row in usage if row.get('event')=='model_usage']
         dispatches=sum(row.get('event')=='model_dispatch' for row in usage)
         summary['usage']={'model_calls':dispatches,'known_input_tokens':sum(row.get('input_tokens') or 0 for row in measured),
@@ -127,7 +138,7 @@ def main():
             'usage_complete':len(measured)==dispatches and all(row.get('usage_available') for row in measured),
             'cost_usd':None,'cost_reason':'provider pricing unavailable'}
         summary['model_circuit_open']=any(row.get('event')=='model_error' or
-            (row.get('event')=='budget_summary' and row.get('circuit_open')) for row in usage)
+            (row.get('event')=='model_usage' and row.get('usage_available') is False) for row in usage)
         save(a.output/'summary.json',summary)
         return summary
     report()
