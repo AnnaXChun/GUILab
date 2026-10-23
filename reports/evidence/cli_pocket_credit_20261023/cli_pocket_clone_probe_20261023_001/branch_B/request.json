@@ -1,0 +1,1026 @@
+{
+  "mode": "execute",
+  "pair": {
+    "id": "clone-control",
+    "classification": "synthetic_isolated_clone_contract_probe",
+    "intent": {
+      "task_id": "freecad-part-014",
+      "instruction": "The precondition file is saved at /home/user/Precondition_Unnamed.FCStd. Open that file and use the existing circular sketch, defined by points at (-10, 0), (0, 8), and (10, 0), as the base profile. Create a 10 mm Part Design pad from the circle, then add a concentric circular pocket with radius of 4mm, cut 6 mm deep from the front face to the center of the cylindershape. Save the completed solid model to /home/user/Unnamed.FCStd.",
+      "subgoal": "Create the concentric 4 mm radius, 6 mm deep Pocket on Pad; preserve its placement under later Pad.Length edits."
+    },
+    "spec": {
+      "task_id": "freecad-part-014",
+      "binding": {
+        "body": "Body",
+        "sketch": "Sketch",
+        "circle_index": 3,
+        "radius": 10.25,
+        "center_local": [
+          0.0,
+          -2.25,
+          0.0
+        ],
+        "normal_global": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "sketch_placement": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "radius_constraints": [],
+        "public_task": "freecad-part-014"
+      },
+      "pad_length": 10,
+      "probes": [
+        {
+          "id": "zero",
+          "object": "Pad",
+          "parameter": null,
+          "factor": 1.0
+        },
+        {
+          "id": "pad-length-0.8",
+          "object": "Pad",
+          "parameter": "Length",
+          "factor": 0.8
+        },
+        {
+          "id": "pad-length-1.2",
+          "object": "Pad",
+          "parameter": "Length",
+          "factor": 1.2
+        },
+        {
+          "id": "second-0.8",
+          "object": "Pocket",
+          "parameter": "Length",
+          "factor": 0.8
+        },
+        {
+          "id": "second-1.2",
+          "object": "Pocket",
+          "parameter": "Length",
+          "factor": 1.2
+        },
+        {
+          "id": "guard",
+          "object": "ProbeGuard",
+          "parameter": "Length",
+          "factor": 1.2
+        }
+      ]
+    },
+    "probes": [
+      {
+        "id": "zero",
+        "object": "Pad",
+        "parameter": null,
+        "factor": 1.0
+      },
+      {
+        "id": "pad-length-0.8",
+        "object": "Pad",
+        "parameter": "Length",
+        "factor": 0.8
+      },
+      {
+        "id": "pad-length-1.2",
+        "object": "Pad",
+        "parameter": "Length",
+        "factor": 1.2
+      },
+      {
+        "id": "second-0.8",
+        "object": "Pocket",
+        "parameter": "Length",
+        "factor": 0.8
+      },
+      {
+        "id": "second-1.2",
+        "object": "Pocket",
+        "parameter": "Length",
+        "factor": 1.2
+      },
+      {
+        "id": "guard",
+        "object": "ProbeGuard",
+        "parameter": "Length",
+        "factor": 1.2
+      }
+    ],
+    "continuation": "doc.recompute()",
+    "candidates": {
+      "A": "doc.getObject('AuditNote').Text='control-A'",
+      "B": "doc.getObject('AuditNote').Text='control-B'"
+    },
+    "candidate_origins": {
+      "A": "trusted_synthetic_control",
+      "B": "trusted_synthetic_control"
+    },
+    "training_eligible": false,
+    "hashes": {
+      "intent_sha256": "e90e8ff62892df1d5c03a148b1b6d6de525b81d6d41360719bbb56ec3be1fab6",
+      "spec_sha256": "6cbd6125dfaae1bb3ce3d2d5a26f5836bc3bbe57b92b1054d43c8a44d84b80b6",
+      "probes_sha256": "ffaecfd0919f99f75d859470c1dcbaa4286772dd02f810a4330b1a78852b93a5",
+      "continuation_sha256": "7d1a8de08d04ad25981adbf08d4eb9c90d6e3771d61b40451076ef1888cbc536",
+      "candidate_sha256": {
+        "A": "da2bdb8ad7defffab544fa674746ef5e1bd3a09f6fdc6bfc08f1ff997d9b4476",
+        "B": "92c6c2e46413d6ac32be5c4319e5c95bb95d5687c5f9a226b6863acc974752b6"
+      }
+    },
+    "control": true
+  },
+  "seed": {
+    "path": "/home/user/.structural_credit_47eb2a1261a9/seeds/trusted_pocket.FCStd",
+    "seed_sha256": "0915b25825cfb561b18d38de05649772a3c690441c80f8b027408da862650753",
+    "seed_state_sha256": "719a602b51d165d744db9093309e36b38747b498556c6f5290f7aca964e19df3",
+    "native_state": {
+      "objects": [
+        {
+          "name": "AuditNote",
+          "type_id": "App::FeaturePython",
+          "label": "AuditNote",
+          "errors": [],
+          "dependencies": [],
+          "placement": null,
+          "links": {},
+          "parameters": {},
+          "expressions": []
+        },
+        {
+          "name": "Body",
+          "type_id": "PartDesign::Body",
+          "label": "Body",
+          "errors": [],
+          "dependencies": [
+            "Origin",
+            "Pad",
+            "Pocket",
+            "Pocket",
+            "PocketSketch",
+            "Sketch"
+          ],
+          "placement": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "links": {
+            "Tip": "Pocket",
+            "BaseFeature": null,
+            "Group": [
+              "Sketch",
+              "Pad",
+              "PocketSketch",
+              "Pocket"
+            ]
+          },
+          "parameters": {},
+          "expressions": [],
+          "shape": {
+            "null": false,
+            "valid": true,
+            "solids": 1,
+            "area": 1454.95009769,
+            "volume": 2999.04288693,
+            "bbox": [
+              -10.25,
+              -10.0,
+              -12.5,
+              10.25,
+              0.0,
+              8.0
+            ],
+            "com": [
+              -0.0,
+              -4.7988739,
+              -2.25
+            ],
+            "unavailable_com_reason": null
+          }
+        },
+        {
+          "name": "Origin",
+          "type_id": "App::Origin",
+          "label": "Origin",
+          "errors": [],
+          "dependencies": [
+            "Origin001",
+            "XY_Plane",
+            "XZ_Plane",
+            "X_Axis",
+            "YZ_Plane",
+            "Y_Axis",
+            "Z_Axis"
+          ],
+          "placement": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "links": {
+            "Group": []
+          },
+          "parameters": {},
+          "expressions": []
+        },
+        {
+          "name": "Origin001",
+          "type_id": "App::Point",
+          "label": "Origin001",
+          "errors": [],
+          "dependencies": [],
+          "placement": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "links": {},
+          "parameters": {},
+          "expressions": []
+        },
+        {
+          "name": "Pad",
+          "type_id": "PartDesign::Pad",
+          "label": "Pad",
+          "errors": [],
+          "dependencies": [
+            "Sketch"
+          ],
+          "placement": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "links": {
+            "Profile": [
+              "Sketch",
+              []
+            ],
+            "BaseFeature": null
+          },
+          "parameters": {
+            "Length": 10.0,
+            "Reversed": false,
+            "Midplane": false,
+            "Type": "Length"
+          },
+          "expressions": [],
+          "shape": {
+            "null": false,
+            "valid": true,
+            "solids": 1,
+            "area": 1304.15365032,
+            "volume": 3300.63578168,
+            "bbox": [
+              -10.25,
+              -10.0,
+              -12.5,
+              10.25,
+              0.0,
+              8.0
+            ],
+            "com": [
+              -0.0,
+              -5.0,
+              -2.25
+            ],
+            "unavailable_com_reason": null
+          }
+        },
+        {
+          "name": "Pocket",
+          "type_id": "PartDesign::Pocket",
+          "label": "Pocket",
+          "errors": [],
+          "dependencies": [
+            "Pad",
+            "PocketSketch"
+          ],
+          "placement": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "links": {
+            "Profile": [
+              "PocketSketch",
+              []
+            ],
+            "BaseFeature": "Pad"
+          },
+          "parameters": {
+            "Length": 6.0,
+            "Reversed": false,
+            "Midplane": false,
+            "Type": "Length"
+          },
+          "expressions": [],
+          "shape": {
+            "null": false,
+            "valid": true,
+            "solids": 1,
+            "area": 1454.95009769,
+            "volume": 2999.04288693,
+            "bbox": [
+              -10.25,
+              -10.0,
+              -12.5,
+              10.25,
+              0.0,
+              8.0
+            ],
+            "com": [
+              -0.0,
+              -4.7988739,
+              -2.25
+            ],
+            "unavailable_com_reason": null
+          }
+        },
+        {
+          "name": "PocketSketch",
+          "type_id": "Sketcher::SketchObject",
+          "label": "PocketSketch",
+          "errors": [],
+          "dependencies": [
+            "Pad",
+            "Pad",
+            "Sketch",
+            "Sketch"
+          ],
+          "placement": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            -10.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "links": {
+            "AttachmentSupport": []
+          },
+          "parameters": {},
+          "expressions": [
+            [
+              ".Placement.Base.x",
+              "Sketch.Placement.Base.x + 0 * Pad.Length"
+            ],
+            [
+              ".Placement.Base.y",
+              "Sketch.Placement.Base.y + -1 * Pad.Length"
+            ],
+            [
+              ".Placement.Base.z",
+              "Sketch.Placement.Base.z + 0 * Pad.Length"
+            ]
+          ],
+          "map_mode": "Deactivated",
+          "geometry": [
+            {
+              "index": 0,
+              "type_id": "Part::GeomCircle",
+              "construction": false,
+              "Radius": 4.0,
+              "FirstParameter": 0.0,
+              "LastParameter": 6.28318531,
+              "Center": [
+                0.0,
+                -2.25,
+                0.0
+              ],
+              "Location": [
+                0.0,
+                -2.25,
+                0.0
+              ]
+            }
+          ],
+          "constraints": [
+            {
+              "index": 0,
+              "type": "Radius",
+              "name": "",
+              "value": 4.0,
+              "first": 0,
+              "first_pos": 0,
+              "second": -2000,
+              "second_pos": 0,
+              "third": -2000,
+              "third_pos": 0
+            },
+            {
+              "index": 1,
+              "type": "PointOnObject",
+              "name": "",
+              "value": 0.0,
+              "first": 0,
+              "first_pos": 3,
+              "second": -2,
+              "second_pos": 0,
+              "third": -2000,
+              "third_pos": 0
+            },
+            {
+              "index": 2,
+              "type": "DistanceY",
+              "name": "",
+              "value": -2.25,
+              "first": 0,
+              "first_pos": 3,
+              "second": -2000,
+              "second_pos": 0,
+              "third": -2000,
+              "third_pos": 0
+            }
+          ],
+          "fully_constrained": true,
+          "dof": 0
+        },
+        {
+          "name": "ProbeGuard",
+          "type_id": "Part::Box",
+          "label": "ProbeGuard",
+          "errors": [],
+          "dependencies": [],
+          "placement": [
+            1.0,
+            0.0,
+            0.0,
+            100.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "links": {
+            "AttachmentSupport": []
+          },
+          "parameters": {
+            "Length": 3.0,
+            "Width": 4.0,
+            "Height": 5.0
+          },
+          "expressions": [],
+          "map_mode": "Deactivated",
+          "shape": {
+            "null": false,
+            "valid": true,
+            "solids": 1,
+            "area": 94.0,
+            "volume": 60.0,
+            "bbox": [
+              100.0,
+              0.0,
+              0.0,
+              103.0,
+              4.0,
+              5.0
+            ],
+            "com": [
+              101.5,
+              2.0,
+              2.5
+            ],
+            "unavailable_com_reason": null
+          }
+        },
+        {
+          "name": "Sketch",
+          "type_id": "Sketcher::SketchObject",
+          "label": "Sketch",
+          "errors": [],
+          "dependencies": [
+            "Origin"
+          ],
+          "placement": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "links": {
+            "AttachmentSupport": [
+              [
+                "Origin",
+                [
+                  "XZ_Plane"
+                ]
+              ]
+            ]
+          },
+          "parameters": {},
+          "expressions": [],
+          "map_mode": "FlatFace",
+          "geometry": [
+            {
+              "index": 0,
+              "type_id": "Part::GeomPoint",
+              "construction": false
+            },
+            {
+              "index": 1,
+              "type_id": "Part::GeomPoint",
+              "construction": false
+            },
+            {
+              "index": 2,
+              "type_id": "Part::GeomPoint",
+              "construction": false
+            },
+            {
+              "index": 3,
+              "type_id": "Part::GeomCircle",
+              "construction": false,
+              "Radius": 10.25,
+              "FirstParameter": 0.0,
+              "LastParameter": 6.28318531,
+              "Center": [
+                0.0,
+                -2.25,
+                0.0
+              ],
+              "Location": [
+                0.0,
+                -2.25,
+                0.0
+              ]
+            }
+          ],
+          "constraints": [
+            {
+              "index": 0,
+              "type": "PointOnObject",
+              "name": "",
+              "value": 0.0,
+              "first": 0,
+              "first_pos": 1,
+              "second": -1,
+              "second_pos": 0,
+              "third": -2000,
+              "third_pos": 0
+            },
+            {
+              "index": 1,
+              "type": "PointOnObject",
+              "name": "",
+              "value": 0.0,
+              "first": 1,
+              "first_pos": 1,
+              "second": -2,
+              "second_pos": 0,
+              "third": -2000,
+              "third_pos": 0
+            },
+            {
+              "index": 2,
+              "type": "PointOnObject",
+              "name": "",
+              "value": 0.0,
+              "first": 2,
+              "first_pos": 1,
+              "second": -1,
+              "second_pos": 0,
+              "third": -2000,
+              "third_pos": 0
+            },
+            {
+              "index": 3,
+              "type": "DistanceX",
+              "name": "",
+              "value": 10.0,
+              "first": 0,
+              "first_pos": 1,
+              "second": -1,
+              "second_pos": 1,
+              "third": -2000,
+              "third_pos": 0
+            },
+            {
+              "index": 4,
+              "type": "DistanceX",
+              "name": "",
+              "value": 10.0,
+              "first": -1,
+              "first_pos": 1,
+              "second": 2,
+              "second_pos": 1,
+              "third": -2000,
+              "third_pos": 0
+            },
+            {
+              "index": 5,
+              "type": "DistanceY",
+              "name": "",
+              "value": 8.0,
+              "first": -1,
+              "first_pos": 1,
+              "second": 1,
+              "second_pos": 1,
+              "third": -2000,
+              "third_pos": 0
+            },
+            {
+              "index": 6,
+              "type": "PointOnObject",
+              "name": "",
+              "value": 0.0,
+              "first": 1,
+              "first_pos": 1,
+              "second": 3,
+              "second_pos": 0,
+              "third": -2000,
+              "third_pos": 0
+            },
+            {
+              "index": 7,
+              "type": "PointOnObject",
+              "name": "",
+              "value": 0.0,
+              "first": 0,
+              "first_pos": 1,
+              "second": 3,
+              "second_pos": 0,
+              "third": -2000,
+              "third_pos": 0
+            },
+            {
+              "index": 8,
+              "type": "PointOnObject",
+              "name": "",
+              "value": 0.0,
+              "first": 2,
+              "first_pos": 1,
+              "second": 3,
+              "second_pos": 0,
+              "third": -2000,
+              "third_pos": 0
+            }
+          ],
+          "fully_constrained": true,
+          "dof": 0
+        },
+        {
+          "name": "XY_Plane",
+          "type_id": "App::Plane",
+          "label": "XY-plane",
+          "errors": [],
+          "dependencies": [],
+          "placement": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "links": {},
+          "parameters": {},
+          "expressions": []
+        },
+        {
+          "name": "XZ_Plane",
+          "type_id": "App::Plane",
+          "label": "XZ-plane",
+          "errors": [],
+          "dependencies": [],
+          "placement": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0,
+            -1.0,
+            0.0,
+            0.0,
+            1.0,
+            -0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "links": {},
+          "parameters": {},
+          "expressions": []
+        },
+        {
+          "name": "X_Axis",
+          "type_id": "App::Line",
+          "label": "X-axis",
+          "errors": [],
+          "dependencies": [],
+          "placement": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "links": {},
+          "parameters": {},
+          "expressions": []
+        },
+        {
+          "name": "YZ_Plane",
+          "type_id": "App::Plane",
+          "label": "YZ-plane",
+          "errors": [],
+          "dependencies": [],
+          "placement": [
+            0.0,
+            -0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            -0.0,
+            0.0,
+            -0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "links": {},
+          "parameters": {},
+          "expressions": []
+        },
+        {
+          "name": "Y_Axis",
+          "type_id": "App::Line",
+          "label": "Y-axis",
+          "errors": [],
+          "dependencies": [],
+          "placement": [
+            0.0,
+            -0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            -0.0,
+            0.0,
+            -0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "links": {},
+          "parameters": {},
+          "expressions": []
+        },
+        {
+          "name": "Z_Axis",
+          "type_id": "App::Line",
+          "label": "Z-axis",
+          "errors": [],
+          "dependencies": [],
+          "placement": [
+            0.0,
+            -1.0,
+            -0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "links": {},
+          "parameters": {},
+          "expressions": []
+        }
+      ]
+    },
+    "spec": {
+      "task_id": "freecad-part-014",
+      "binding": {
+        "body": "Body",
+        "sketch": "Sketch",
+        "circle_index": 3,
+        "radius": 10.25,
+        "center_local": [
+          0.0,
+          -2.25,
+          0.0
+        ],
+        "normal_global": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "sketch_placement": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "radius_constraints": [],
+        "public_task": "freecad-part-014"
+      },
+      "pad_length": 10,
+      "probes": [
+        {
+          "id": "zero",
+          "object": "Pad",
+          "parameter": null,
+          "factor": 1.0
+        },
+        {
+          "id": "pad-length-0.8",
+          "object": "Pad",
+          "parameter": "Length",
+          "factor": 0.8
+        },
+        {
+          "id": "pad-length-1.2",
+          "object": "Pad",
+          "parameter": "Length",
+          "factor": 1.2
+        },
+        {
+          "id": "second-0.8",
+          "object": "Pocket",
+          "parameter": "Length",
+          "factor": 0.8
+        },
+        {
+          "id": "second-1.2",
+          "object": "Pocket",
+          "parameter": "Length",
+          "factor": 1.2
+        },
+        {
+          "id": "guard",
+          "object": "ProbeGuard",
+          "parameter": "Length",
+          "factor": 1.2
+        }
+      ]
+    },
+    "captured_before_model_requests": true
+  },
+  "branch": "B",
+  "root": "/home/user/.pocket_branch_2dcf474093a3"
+}

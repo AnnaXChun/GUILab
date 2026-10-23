@@ -1,5 +1,15 @@
 # 差异与适配
 
+Pocket下游协议在公开任务上增加参数响应子目标、使用可信Pad前缀，单列为development工程干预；不更新官方200题基线。天然候选计划使用两个独立停止磁盘clone，实际两原文均静态拒绝，未启动天然候选VM；独立VM执行能力通过另行无模型synthetic控制核验。控制不计自然pair或模型完成任务。
+
+两请求后核对公开原生属性，当前API说明v2明确 Pocket.Length、有限Type=Length、Quantity单字符串与JSON字段非Python变量，仅放行已验证的局部Circle Radius/Location构造。原prompt/scoper及拒绝从原run源码快照复核，原响应未改、原生质量仍null。v2尚未采样，不能把新说明写成原两请求的条件或提示收益。
+
+本轮旧prepare的单次sample claim在完成后补建，标为posthoc_completed_batch_binding；后续代码在请求前独占冻结claim，结束或unknown也不释放。审计允许从历史源码快照核验，运行新sample仍检查当前源码一致。信用对照新增真正A/B标签交换，tie依旧选A；历史helper的强制反选在tie时选B，原结果保留。本轮未形成可评估选择，不给数值提升。
+
+clone探针的host脚本在启动后补了失败退出码，原源码经精确恢复并核对启动前SHA一致，恢复快照标为posthoc。实际guest worker在启动前写入并冻结，五次派发payload均与对应worker核对，原生执行和模型原文未变。
+
+旧准备控制的candidate_origins字段继承了natural模板的independent_model_sample标签；control=true、synthetic分类、固定可信文本代码和实际派发均证明它是synthetic。旧字段保留，新代码修正为trusted_synthetic_control。训练eligibility始终false，汇总只按可信控制计数。
+
 2026-10-23 新增全量 CLI 离线分析：逐题原始官方分数、执行不确定、启动失败与原生文件审计分别记录。审计按原路径和 SHA 绑定，拒绝其他批次文件、变更后的文件及重复审计；原生重开、对象状态、通用编辑探针采用独立计数。该后处理不修改正在运行的模型 prompt、账本或官方评分规则。
 
 全量已保存的装配文件中有约 1.8 MB 文件，原审计的 base64 命令参数会超过 Linux 单参数长度限制。新审计复用 pinned `desktop_env/server/main.py` 的 `/setup/upload`，一次 multipart 上传后检查 SHA，再以独占标记执行原生 worker。上传及执行不确定均保留并停止审计，不重发。三项上传单测及真实传输通过；11.6 MB Mesh 与 1.8 MB 装配文件都一次上传成功。129 次审计派发 complete、uncertain=0，全部原文件 SHA 不变，1 个空对象元数据文件的已知 worker 错误保留。

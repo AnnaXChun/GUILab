@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-102c22bd-4744-9865-80b2-3f1702b1d356",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "```json\n{\n  \"code\": \"# Get existing objects\\nbody = doc.getObject(\\\"Body\\\")\\nsketch = doc.getObject(\\\"Sketch\\\")\\npad = doc.getObject(\\\"Pad\\\")\\n\\n# Create new sketch for pocket on Pad's top face\\npocket_sketch = body.newObject(\\\"Sketcher::SketchObject\\\", \\\"PocketSketch\\\")\\n\\n# Set placement to attach to Pad's top face (outer end of pad)\\n# Pad extends in Z direction from sketch plane; top face is at Z=pad.Length\\npocket_sketch.AttachmentSupport = [(pad, [\\\"Face3\\\"])]\\npocket_sketch.MapMode = \\\"FlatFace\\\"\\n\\n# Get the center of the original circle from sketch geometry\\norig_circle = sketch.Geometry[3]\\ncenter_x = orig_circle.Center.x\\ncenter_y = orig_circle.Center.y\\n\\n# Add a concentric circle with 4mm radius\\ngeo_circle = Part.Circle()\\ngeo_circle.Radius = pocket_radius_mm\\ngeo_circle.Location = App.Vector(center_x, center_y, 0.0)\\npocket_sketch.addGeometry(geo_circle, False)\\n\\n# Add constraints to make circle fully defined relative to sketch origin\\n# PointOnOrigin constraint for center\\npocket_sketch.addConstraint(Sketcher.Constraint(\\\"Coincident\\\", 0, -1, 0, 0))\\n\\n# Create the Pocket feature\\npocket = body.newObject(\\\"PartDesign::Pocket\\\", \\\"Pocket\\\")\\npocket.Profile = [pocket_sketch, []]\\npocket.BaseFeature = pad\\npocket.Type = \\\"Dimension\\\"\\npocket.Depth = App.Units.Quantity(str(pocket_depth_mm), \\\"mm\\\")\\npocket.Reversed = False\\npocket.Midplane = False\\n\\n# Compute to update shapes\\ndoc.recompute()\"\n}\n```",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning_content": "The user wants me to create a FreeCAD Python block that:\n1. Creates a new sketch called \"PocketSketch\" inside the Body\n2. Creates a concentric circle on the outer end of the existing Pad (radius 4mm)\n3. Creates a PartDesign::Pocket called \"pocket\" with depth 6mm\n4. Preserves existing objects and allows future Pad.Length edits without breaking the pocket\n\nKey requirements from the instructions:\n- Use body, sketch, pad as exact aliases from doc.getObject with provided names\n- Create pocket_sketch and pocket using body.newObject(type_name, name)\n- Build concentric circle on outer end of Pad\n- Pocket should cut 6mm deep from front face to center\n- Don't rebuild during Pad.Length edits - need to use placement/expressions to maintain position\n\nFrom the native_state, I can see:\n- Sketch is already created with a circle (Radius: 10.25) centered at [0.0, -2.25, 0.0]\n- Pad has Length: 10.0\n- The sketch is attached to XZ_Plane of Origin\n\nFor the pocket:\n1. Create a new sketch (PocketSketch) on the top face of the Pad\n2. Add a circle with radius 4mm, concentric with the original circle\n3. Create a Pocket feature that references this sketch\n4. Set the pocket depth to 6mm\n\nThe key challenge is making sure the pocket stays on the correct face when Pad.Length changes. This means:\n- The pocket sketch needs to be placed on the Pad's top face\n- We may need to use expressions or attachment support to keep it positioned correctly\n\nLet me write the code:\n\n```python\n# Get existing objects\nbody = doc.getObject(\"Body\")\nsketch = doc.getObject(\"Sketch\")\npad = doc.getObject(\"Pad\")\n\n# Create new sketch for pocket\npocket_sketch = body.newObject(\"Sketcher::SketchObject\", \"PocketSketch\")\n\n\n```\n\nI'll set up the pocket sketch by positioning it on the Pad's top face, creating a 4mm radius circle centered appropriately. The sketch will reference the Pad's geometry to ensure it moves with length changes. I'll carefully configure the placement to maintain the concentric relationship while allowing dynamic adjustment when the Pad's length modifies.\n\nThe key is creating an attachment that links the pocket sketch directly to the Pad's top surface, ensuring automatic repositioning when the Pad's dimensions change. This approach preserves the geometric relationship without requiring manual recalibration.\n\n```"
+      }
+    }
+  ],
+  "created": 1792726398,
+  "model": "qwen3.5-122b-a10b",
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 935,
+    "prompt_tokens": 3549,
+    "total_tokens": 4484,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 541,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 935
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": null,
+      "text_tokens": 3549
+    }
+  }
+}

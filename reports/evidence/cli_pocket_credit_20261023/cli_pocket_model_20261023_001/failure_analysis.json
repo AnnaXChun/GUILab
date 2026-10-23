@@ -1,0 +1,46 @@
+{
+  "classification": "offline_original_candidate_ast_diagnosis",
+  "rows": [
+    {
+      "branch": "A",
+      "response_sha256": "9f1defd9f8101a023f0440aae795bf55c825ac81ab995ddf08545212f419743c",
+      "code_sha256": "88785a39e2125f1f3339d12c48e3f7c0753088e4e111eb200e9b1851cbc96740",
+      "status": "STATIC_REJECTED_NO_NATIVE_EXECUTION",
+      "native_quality": null,
+      "undefined_in_frozen_context": [
+        "pocket_depth_mm",
+        "pocket_radius_mm",
+        "str"
+      ],
+      "depth_attribute_assignments": [
+        "pocket.Depth = App.Units.Quantity(str(pocket_depth_mm), 'mm')"
+      ],
+      "unverified_named_faces": [
+        "Face3"
+      ],
+      "unreviewed_exception_handlers": 0,
+      "runtime_failure_claim": "NOT_EXECUTED; static findings are not measured FreeCAD errors"
+    },
+    {
+      "branch": "B",
+      "response_sha256": "f6cccf66ee622a75630480f27e1f3927ce4d6064eca8b3a89ce5a594f3526212",
+      "code_sha256": "13d80b124490f4720f1618d3d3e98c26affac6149f1e7f0acb9b04dfd5c1f373",
+      "status": "STATIC_REJECTED_NO_NATIVE_EXECUTION",
+      "native_quality": null,
+      "undefined_in_frozen_context": [
+        "hasattr",
+        "pocket_depth_mm",
+        "str"
+      ],
+      "depth_attribute_assignments": [
+        "pocket.Depth = App.Units.Quantity(str(pocket_depth_mm) + ' mm')"
+      ],
+      "unverified_named_faces": [
+        "Face7"
+      ],
+      "unreviewed_exception_handlers": 1,
+      "runtime_failure_claim": "NOT_EXECUTED; static findings are not measured FreeCAD errors"
+    }
+  ],
+  "new_model_calls": 0
+}

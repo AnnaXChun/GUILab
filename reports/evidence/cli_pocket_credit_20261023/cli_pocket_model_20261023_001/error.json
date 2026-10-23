@@ -1,0 +1,6 @@
+{
+  "status": "CANDIDATE_OR_SERVICE_ERROR",
+  "reason": "RuntimeError",
+  "message": "CANDIDATE_REJECTED: both blocks required; no automatic repair or replay",
+  "quality": null
+}

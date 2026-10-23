@@ -29,3 +29,11 @@ ENABLE_PAID_RUNS=1 .venv/bin/python scripts/run_cli_pocket_credit.py \
 ```
 
 历史本机路径用于 provenance。远程缺原生资产时先做 dry-run；不能凭 SHA 或公开摘要重建 S1。没有 VM/文件记录 `BLOCKED_BY_ENV`，没有模型配置记录 `BLOCKED_BY_CREDENTIALS`。首次运行结束后更新结果与交接，不重复启动以上实际消费过的目录。
+
+## 2026-10-23 本轮已结束，修正说明待采样
+
+`cli_pocket_prepare_20261023_001` 的原生 S1、六探针和 synthetic 零信用控制通过。`cli_pocket_model_20261023_001` 两请求共7098输入/1772输出tokens，两原文均静态拒绝、天然执行0、credit=null；原始 prompt/scoper 已按源码快照保存。不要重开这个模型目录，也不要删除准备目录的 `sample_claim.json`。该 claim 在本轮结束后补建为 `posthoc_completed_batch_binding`，后续代码在请求前用独占创建冻结 claim；它不是本轮请求前已有的证据。
+
+无模型克隆核验针对同一 final 工程做独立 VM 的 synthetic 重复性检查，并只读核对公开 API：Pocket.Length 是 App::PropertyLength，Depth 不存在，有限 Type 值为 Length，双字符串 Quantity 报 TypeError，局部 Part.Circle 的 Radius/Location 可修改。这些结果只用于下一版通用说明，不改动或执行原模型代码。当前仓库的 `pocket_api_contract_v2_not_sampled` 增加 Length/Type/Quantity 与“JSON字段不是Python变量”的说明，仅放行已核验的局部 Circle 构造；下次采样需重新准备当前源码快照。旧两请求仍使用旧说明，不能被当作 v2 的结果。
+
+审计从原 run 的源码快照加载当时 parser/prompt。源码演进后仍可复核原始拒绝；运行新 sample 时继续要求当前源码与准备快照一致。下一步先在新准备目录检查 v2 契约，再冻结独立两候选小批。当前不再采样、不训练、不重跑200题。

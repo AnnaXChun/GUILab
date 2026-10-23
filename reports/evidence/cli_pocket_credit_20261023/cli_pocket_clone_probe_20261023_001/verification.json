@@ -1,0 +1,26 @@
+{
+  "status": "PASS_NATIVE_CLONE_AUDIT",
+  "dispatches": 2,
+  "uncertain": 0,
+  "model_calls": 0,
+  "independent_vm_overlays": true,
+  "same_seed_and_snapshot": true,
+  "control_credit": 0,
+  "generic_native_contract": {
+    "length_property_type": "App::PropertyLength",
+    "depth_property_present": false,
+    "type_enumerations": [
+      "Length",
+      "ThroughAll",
+      "UpToFirst",
+      "UpToFace",
+      "?TwoLengths",
+      "UpToShape"
+    ],
+    "base_feature_name": "Pad",
+    "local_circle_mutation_supported": true,
+    "two_string_quantity_status": "TypeError"
+  },
+  "natural_pairs_added": 0,
+  "training_rows": 0
+}

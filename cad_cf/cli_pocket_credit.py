@@ -18,7 +18,11 @@ def pocket_code(text, *, body_name='Body', sketch_name='Sketch'):
     bindings = {'body': body_name, 'sketch': sketch_name, 'pad': 'Pad'}
     outputs = {'pocket_sketch': ('Sketcher::SketchObject', 'PocketSketch'),
                'pocket': ('PartDesign::Pocket', 'Pocket')}
-    for node in ast.walk(ast.parse(code)):
+    tree = ast.parse(code)
+    local_circles = {t.id for n in ast.walk(tree) if isinstance(n, ast.Assign)
+                     and isinstance(n.value, ast.Call) and ast.unparse(n.value.func) == 'Part.Circle'
+                     for t in n.targets if isinstance(t, ast.Name)}
+    for node in ast.walk(tree):
         if isinstance(node, (ast.Import, ast.ImportFrom, ast.FunctionDef, ast.ClassDef,
                              ast.Try, ast.With, ast.For, ast.While, ast.Delete, ast.AugAssign,
                              ast.AnnAssign, ast.NamedExpr, ast.ListComp, ast.DictComp,
@@ -33,6 +37,9 @@ def pocket_code(text, *, body_name='Body', sketch_name='Sketch'):
                 if isinstance(target, ast.Name):
                     if target.id in ('doc', 'App', 'Part', 'Sketcher', 'math'):
                         raise ValueError('context overwrite')
+                    if target.id in local_circles and (not isinstance(node.value, ast.Call)
+                                                       or ast.unparse(node.value.func) != 'Part.Circle'):
+                        raise ValueError('local Circle cannot alias an existing object')
                     if target.id in bindings or target.id in outputs:
                         call = node.value
                         if not isinstance(call, ast.Call):
@@ -52,6 +59,7 @@ def pocket_code(text, *, body_name='Body', sketch_name='Sketch'):
                                'pocket_sketch.Placement', 'pocket_sketch.MapMode',
                                'pocket_sketch.AttachmentSupport', 'pocket_sketch.Support'}
                     allowed.update('pocket_sketch.Placement.Base.' + a for a in ('x', 'y', 'z'))
+                    allowed.update(name + '.' + prop for name in local_circles for prop in ('Radius', 'Location'))
                     if path not in allowed:
                         raise ValueError('mutation outside new Pocket scope')
         if isinstance(node, ast.Call):
@@ -84,6 +92,8 @@ def pocket_code(text, *, body_name='Body', sketch_name='Sketch'):
 SYSTEM = """Write one FreeCAD Python block for the supplied document, without imports.
 Return exactly a JSON object with a string field code; one json fence is accepted.
 doc, App, Part, Sketcher, math exist in this headless App context.
+Input JSON fields are data, not predefined Python variables. Use literal dimensions
+or declare local numeric variables. Only the context variables listed above preexist.
 Use body, sketch, pad as exact aliases from doc.getObject with the provided names.
 Create new PocketSketch and Pocket inside the supplied Body, using exact aliases
 pocket_sketch and pocket. Build the requested concentric circle on the outer end
@@ -94,11 +104,15 @@ The caller only recomputes, saves, closes and reopens after your block.
 No functions, classes, loops, shell, files, network, document creation, saving, Gui,
 ViewObject or visibility edits. Local numeric/vector variables are allowed.
 Generic API notes: body.newObject(type_name, name) creates a feature. Pocket.Profile
-is its sketch relation; BaseFeature is its previous solid relation. Plain length numbers
-are millimetres; App.Units.Quantity accepts unit strings. addGeometry uses Part.Circle,
+is its sketch relation; BaseFeature is its previous solid relation. Pocket.Length is
+the finite cut depth property, and the finite Type enumeration is 'Length'. There is
+no Pocket.Depth property or 'Dimension' Type. Plain length numbers are millimetres;
+App.Units.Quantity accepts one unit string, not two strings. addGeometry uses Part.Circle,
 addConstraint uses Sketcher.Constraint. A sketch Placement uses document coordinates;
 setExpression can bind Placement.Base.x/y/z to native length properties. Expressions
-use pi and ^. Use the supplied native geometry and placement, not assumed XY/origin.
+use pi and ^. Local Part.Circle objects may set Radius/Location before addGeometry;
+they may not alias or modify the existing sketch geometry. Use the supplied native
+geometry and placement, not assumed XY/origin or unobserved face indices.
 """
 
 

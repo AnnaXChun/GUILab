@@ -1,0 +1,18 @@
+{
+  "cad_cf/cli_pocket_credit.py": "82c0105e0f45b4c1aeaf0aac2c305d05e9f410b22303a19904970c49eadbd43a",
+  "cad_cf/cli_causal_credit.py": "f974b7d8519f3316a28258c11ed567dbf1d0f7fd917dbea75c41ce97a8c52f08",
+  "cad_cf/cli_model_pair.py": "604d89755347863f65c873c1ed33fd77a45c41eb744d31d4c545db2ac1c49237",
+  "cad_cf/structural_credit.py": "ebc2b8485d4aaec3ff3054238979c3202ecf7e8a7545f0fe84fec4c1d7e5cf6a",
+  "cad_cf/qemu_runtime.py": "e854e8536b1c971a97d4cdb4f8a0452944844c26c5c625ab6aba5ed2a8320bb6",
+  "cad_cf/terminal_bridge.py": "4c3e9f8023a6b8b344c5c70c495312ab1624e97273509f46134ea9339c55a17d",
+  "cad_cf/batch_budget.py": "52953e7b0ab3deb3546927a02ae848fa3be323f773020092906b081ab70f8e02",
+  "cad_cf/upstream_launch.py": "39353dd1bcb5bc906a17da49da9a42d2206f23e7c8d3e426fb6f84469f96ada0",
+  "scripts/run_cli_model_pair.py": "9656986ca12c75b7761ea14774a84079e4e0f605e330944bff846cbec654fcef",
+  "scripts/run_structural_credit_diagnostic.py": "4fe03faeb3ae0d9254c0ec5c5bbd5e10783ae62d15db79ab569e5e11c5f6dcda",
+  "scripts/run_cli_causal_credit.py": "291334e0c04606ceb87a6d923beb2c23261c0dd60ff19391cda43b994d2b08db",
+  "scripts/cli_causal_worker.py": "131a100b76f598717513ecd5ff969a3dfcdc01ced5c7e92f1d7394140974f1f5",
+  "scripts/cli_pocket_worker.py": "8f1216d7d207938833c21cdefe746c5c54fa9505f0210bb40bf0d3a9e841b833",
+  "scripts/run_cli_pocket_credit.py": "374235f10f1af3bcfe5dcb7fa2b06448a8aea564475396a26da55493fd0c076a",
+  "configs/cli_pocket_credit_20261023.json": "6b235a29afe872288fb60f91c81762b5e9015514fc9c8e95c5a95fdce509ce95",
+  "deployed_worker.py": "cbb7993919f6d9ddec31079df5909ed9f14eff2d3915d3d968a838e57d0f95aa"
+}

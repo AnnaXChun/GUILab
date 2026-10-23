@@ -1,0 +1,27 @@
+{
+  "status": "PASS_PROTOCOL_AUDIT",
+  "model_requests": 2,
+  "native_prepare_dispatches": 3,
+  "native_candidate_dispatches": 0,
+  "same_s1_fixed_suffix": false,
+  "credit": null,
+  "control_credit": 0,
+  "artifacts": [],
+  "failures": [
+    {
+      "branch": "A",
+      "status": "static_rejection",
+      "reason": "mutation outside new Pocket scope",
+      "quality": null
+    },
+    {
+      "branch": "B",
+      "status": "static_rejection",
+      "reason": "mutation outside new Pocket scope",
+      "quality": null
+    }
+  ],
+  "model_code_original": true,
+  "training_rows": 0,
+  "method_effect": null
+}

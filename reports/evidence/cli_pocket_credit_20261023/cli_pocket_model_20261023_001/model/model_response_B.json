@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-766d34a4-2969-9d43-b887-62e86d00ebbb",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "```json\n{\n  \"code\": \"body = doc.getObject('Body')\\nsketch = doc.getObject('Sketch')\\npad = doc.getObject('Pad')\\n\\npocket_sketch = body.newObject('Sketcher::SketchObject', 'PocketSketch')\\npocket_sketch.MapMode = 'FlatFace'\\npocket_sketch.AttachmentSupport = [(pad, ['Face7'])]\\npocket_sketch.Placement.Base.z = pad.Length.Value + sketch.Placement.Base.z\\n\\ngeo = []\\ngeo.append(Part.Circle(App.Vector(0, 0, 0), App.Vector(0, 0, 1), 4.0))\\npocket_sketch.addGeometry(geo, False)\\n\\npocket_sketch.addConstraint(Sketcher.Constraint('Coincident', 0, -1, -1, 0))\\n\\npocket = body.newObject('PartDesign::Pocket', 'Pocket')\\npocket.BaseFeature = [pocket_sketch, ['Sketch']]\\npocket.Profile = [pocket_sketch, ['Sketch']]\\npocket.Type = 'Dimension'\\npocket.Depth = App.Units.Quantity(str(pocket_depth_mm) + ' mm')\\npocket.Reversed = False\\npocket.Midplane = False\\n\\nif hasattr(pad, 'Length'):\\n    if hasattr(pocket_sketch, 'Placement'):\\n        expr = 'Pad.Length' + '+0'\\n        try:\\n            pocket_sketch.setExpression('Placement.Base.z', expr)\\n        except:\\n            pass\"\n}\n```",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null,
+        "reasoning_content": "The user wants me to create a FreeCAD Python block that:\n1. Works with existing objects in the document (Body, Pad, Sketch)\n2. Creates a new sketch called \"PocketSketch\" on the outer end of the Pad\n3. Creates a concentric circle with radius 4mm in that sketch\n4. Creates a PartDesign::Pocket called \"pocket\" that cuts 6mm deep from the front face\n\nKey constraints:\n- No imports (FreeCAD modules already available as doc, App, Part, Sketcher, math)\n- Use exact aliases: body, sketch, pad from doc.getObject with provided names\n- Create pocket_sketch and pocket as new objects inside body\n- Preserve existing Pad and sketch - don't rebuild them\n- The pocket must stay on the outer end of the Pad even when Pad.Length changes later\n- No functions, classes, loops, file operations, etc.\n- Return JSON with code field\n\nFrom the native_state:\n- Body exists with name \"Body\"\n- Sketch exists with name \"Sketch\" \n- Pad exists with name \"Pad\" with Length 10.0\n- The sketch has a circle with radius 10.25 at center [0.0, -2.25, 0.0]\n\nFor the Pocket:\n- Need to create a new sketch on the top face of the Pad (outer end)\n- Add a circle with radius 4mm centered appropriately\n- Create a Pocket feature with depth 6mm\n\nTo keep the pocket on the outer end when Pad.Length changes, I need to:\n1. Attach the PocketSketch to the top face of the Pad\n2. Use an attachment constraint or set the sketch placement relative to the Pad\n\nIn PartDesign, pockets typically attach to a face. I'll need to:\n1. Create PocketSketch as a new Sketcher::SketchObject\n2. Set its AttachmentSupport to reference the Pad's top face\n\n\n3. Add the circle geometry with proper constraints\n4. Create the Pocket feature referencing this sketch\n\nI should check how to properly attach a sketch to a face in FreeCAD. The map_mode should be set appropriately (like \"TopoName\") and the AttachmentSupport needs to reference the specific face of the Pad.\n\nLet me write the code to create the sketch, add the circle, and create the pocket feature."
+      }
+    }
+  ],
+  "created": 1792726405,
+  "model": "qwen3.5-122b-a10b",
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 837,
+    "prompt_tokens": 3549,
+    "total_tokens": 4386,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 496,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 837
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": null,
+      "text_tokens": 3549
+    }
+  }
+}

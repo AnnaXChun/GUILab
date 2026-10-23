@@ -1,5 +1,7 @@
 # 失败案例
 
+Pocket下游新两条模型原文均静态拒绝，原生未执行，Q/credit为null。A包含局部Circle字段赋值、未定义尺寸变量、`pocket.Depth`、`Type='Dimension'` 和双字符串Quantity；B另外含未审阅的try/except、hasattr、list.append及未核验Face7。无模型原生核对确认Length/Type/Quantity接口差异，并验证局部Circle赋值合法；随后仅修正通用说明和该局部构造范围。原响应、原scoper第一拒绝与完整JSONL保留，没有执行人工修正代码或改成Q=0。详见 [本轮结果](CLI_POCKET_CREDIT_20261023.md)及原响应SHA绑定的 `failure_analysis.json`。
+
 独立原生审计保留两项官方成功但工程状态失败：sketch-039 官方 1.0，原文件重开后 Sketch.State 含 Invalid，solver 非零；macro-003 官方 1.0，原文件重开后 Body 与 Fillet002 的 BRep 无效，通用编辑探针 solver=-4。两个原文件 SHA 均不变，没有修复产物或改分。其余 12 个官方成功文件对象状态有效，编辑探针的 PASS/FAIL/UNAVAILABLE 独立记录。
 
 sketch-034 的 `.FCStd` 内 Document.xml 对象数为 0。可信 worker 在打开文档前按原守卫返回 `native archive has no object metadata`，controller 返回码 1、transport complete。保留 AUDIT_ERROR、原始 controller 响应 SHA 与 reviewed_error.json，原生质量 unknown，没有重放。整体 129 次审计派发均 complete、uncertain=0；128 个返回完整审计，35 个原生对象状态无效，1 个未得到原生重开结果。另有原生状态有效但通用编辑探针失败的 case，探针覆盖不足与真实形状无效分开解释。

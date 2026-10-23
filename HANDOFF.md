@@ -1,5 +1,9 @@
 # GUILab 交接
 
+**2026-10-23 后续 Pocket 下游小批已采样结束**：入口 [本轮结果](reports/CLI_POCKET_CREDIT_20261023.md)、`reports/CLI_POCKET_STATUS_20261023.json` 与 [协议](docs/CLI_POCKET_CREDIT_PILOT.md)。原生prospective S1、可信Pocket、六探针和文本控制通过；新两请求7098输入/1772输出tokens，两原文静态拒绝、天然执行0、credit=null、训练新增0。原200题不重跑，历史Pad一个tie保持。当前代码的API契约v2尚未采样，原prompt/scoper按源码快照保留；消费过的准备目录已有posthoc claim，不能删除或恢复额度。下一轮须按当前源码新建准备目录，再冻结小批；不训练或恢复GUI。独立VM synthetic克隆检查与模型失败分别统计，最终状态见本轮机器记录。
+
+本轮三个VM均已停止，5次native派发全部complete、uncertain0；两独立clone控制Q=1/1、credit0，独立审计PASS。318项目tests/7upstream CLI tests通过，134文件脱敏证据及SHA核验已交付。当前阻塞是模型Pocket接口契约使用，环境和凭证本轮均可用；不要标成KVM或凭证阻塞。
+
 **2026-10-23 全量 CLI、原生审计与实验表格已完成**：200 题已全部尝试，185 题可评估，14 题通过、171 题未通过、15 题运行错误，完整分母成功交付率 7.00%，已评估子集通过率 7.57%。实际 3163 次模型请求、32025357 输入/1582168 输出 tokens，用量完整。129 个原生文件审计尝试结束，128 个重开、93 个对象状态有效、40 个通用编辑探针通过；1 个空对象元数据错误保留。官方通过且原生状态有效为 12/200=6.00%；sketch-039 与 macro-003 的原分数 1.0 和原生失败分别保留。200 台任务 VM 与 1 台审计 VM 均停止，原 job、账本与审计目录不重开。
 
 先读 [实验表格](reports/CLI_EXPERIMENTS_20261022.md)、[失败案例](reports/FAILURE_CASES.md)及 [证据索引](reports/evidence/cli_full_sweep_native_20261022_001/INDEX.json)。可评估的 185 题任务文件完整，15 个运行错误合计缺少 21 个任务文件，部分失败轨迹与完整模型用量保留；全体 agent JSONL 完整性为 false。公开原生证据只含审计、SHA 与源码，远程没有原 `.FCStd` 和已核验 runtime 时不能凭 SHA 重建文件，也不重复跑已完成的 200 题。完整回归 292 项项目测试、7 项上游 CLI 测试及最终 17 项相关回归通过，实际命令见 [验证记录](reports/CLI_EXPERIMENT_VALIDATION_20261023.json)。

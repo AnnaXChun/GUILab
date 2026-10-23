@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "model_calls": 0,
+  "control_credit": 0,
+  "trusted_probes": 6,
+  "generic_api_probe": "PASS",
+  "stopped_snapshot_sha256": "e1cf29b48d14c73618ead99915e09669754e095a81da10d12777d6aaad96f56a",
+  "captured_s1_before_requests": true
+}

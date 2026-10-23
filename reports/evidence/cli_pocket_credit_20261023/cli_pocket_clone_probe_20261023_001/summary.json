@@ -1,0 +1,41 @@
+{
+  "status": "PASS_ISOLATED_CLONE_PROBE",
+  "model_calls": 0,
+  "synthetic_pair": true,
+  "natural_pairs_added": 0,
+  "credit": 0,
+  "prepared_snapshot_unchanged": true,
+  "contract": {
+    "A": {
+      "length_property_type": "App::PropertyLength",
+      "depth_property_present": false,
+      "type_enumerations": [
+        "Length",
+        "ThroughAll",
+        "UpToFirst",
+        "UpToFace",
+        "?TwoLengths",
+        "UpToShape"
+      ],
+      "base_feature_name": "Pad",
+      "local_circle_mutation_supported": true,
+      "two_string_quantity_status": "TypeError"
+    },
+    "B": {
+      "length_property_type": "App::PropertyLength",
+      "depth_property_present": false,
+      "type_enumerations": [
+        "Length",
+        "ThroughAll",
+        "UpToFirst",
+        "UpToFace",
+        "?TwoLengths",
+        "UpToShape"
+      ],
+      "base_feature_name": "Pad",
+      "local_circle_mutation_supported": true,
+      "two_string_quantity_status": "TypeError"
+    }
+  },
+  "training_rows": 0
+}

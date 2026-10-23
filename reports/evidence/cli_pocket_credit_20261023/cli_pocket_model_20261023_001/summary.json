@@ -1,0 +1,15 @@
+{
+  "status": "CANDIDATE_OR_SERVICE_ERROR",
+  "model_calls": 2,
+  "input_tokens": 7098,
+  "output_tokens": 1772,
+  "cost_usd": null,
+  "interface_accepted": 0,
+  "native_candidates_completed": 0,
+  "valid_natural_pairs": 0,
+  "credit": null,
+  "response_discriminating": false,
+  "official_episodes_added": 0,
+  "training_rows": 0,
+  "method_effect": null
+}

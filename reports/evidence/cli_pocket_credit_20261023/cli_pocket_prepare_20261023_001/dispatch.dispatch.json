@@ -1,0 +1,25 @@
+{
+  "classification": "at_most_once_dispatch_audit",
+  "payload_policy": "digest only; action text remains in original agent trajectory",
+  "source_sha256": "b29c65306ee1d5ccc031f99515903d34d7713ac71350f0059f0a301feb472209",
+  "rows": [
+    {
+      "execution_id": "prepare",
+      "state": "complete",
+      "payload_sha256": "051f969a52d3171319f27a1e930ebe253f077c5045bc809849985468c1dd9571",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "pocket-control-A",
+      "state": "complete",
+      "payload_sha256": "87604d5b602b5e14666f8073a76dd9edf161df4cd971f8cc3998891660b1e3c2",
+      "payload_excluded": true
+    },
+    {
+      "execution_id": "pocket-control-B",
+      "state": "complete",
+      "payload_sha256": "2f1b8a250c64d7ab825c6b84a0906a0fe9ab67a13825b48d0fbcf82561a7a2df",
+      "payload_excluded": true
+    }
+  ]
+}

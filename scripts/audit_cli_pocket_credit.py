@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Independently bind Pocket requests, original responses, clone records and artifacts."""
 import argparse
+import ast
 import json
+import re
 from pathlib import Path
 import sqlite3
 import sys
@@ -10,7 +12,7 @@ import zipfile
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from cad_cf.cli_causal_credit import evaluate
-from cad_cf.cli_pocket_credit import evaluate_isolated, pocket_code, pocket_messages, selection_table
+from cad_cf.cli_pocket_credit import evaluate_isolated, selection_table
 from cad_cf.structural_credit import digest
 from scripts.audit_structural_credit_evidence import deployed_inputs
 from scripts.run_cli_pocket_credit import file_sha, verify_prepared
@@ -18,6 +20,24 @@ from scripts.run_cli_pocket_credit import file_sha, verify_prepared
 
 def read(path):
     return json.loads(path.read_text())
+
+
+def frozen_interface(run):
+    """Audit the actual request-time parser/prompt after repository code evolves."""
+    path = run / 'source_snapshot/cad_cf/cli_pocket_credit.py'
+    manifest = read(run / 'source_manifest.json')
+    if file_sha(path) != manifest['cad_cf/cli_pocket_credit.py']:
+        raise ValueError('frozen interface source changed')
+    source = path.read_text()
+    tree = ast.parse(source)
+    namespace = {'ast': ast, 'json': json, 're': re}
+    system = next(n for n in tree.body if isinstance(n, ast.Assign) and any(isinstance(t, ast.Name) and t.id == 'SYSTEM' for t in n.targets))
+    namespace['SYSTEM'] = ast.literal_eval(system.value)
+    for name in ('pocket_code', 'pocket_messages'):
+        node = next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == name)
+        # Trusted frozen repository definitions only; never execute model candidates here.
+        exec(compile(ast.get_source_segment(source, node), 'frozen_interface', 'exec'), namespace)
+    return namespace['pocket_code'], namespace['pocket_messages']
 
 
 def dispatch_records(folder, worker_sha):
@@ -38,7 +58,7 @@ def audit(run):
     run = run.resolve()
     ref = read(run / 'source_capture_reference.json')
     prepared = Path(ref['run'])
-    captured, disk, sha = verify_prepared(prepared)
+    captured, disk, sha = verify_prepared(prepared, current_sources=False)
     if sha != ref['disk_sha256'] or file_sha(prepared / 'captured_states.json') != ref['captured_states_sha256']:
         raise ValueError('prepared native reference differs')
     worker_sha = digest((run / 'deployed_worker.py').read_text())
@@ -65,6 +85,7 @@ def audit(run):
     if any(pair[k] != frozen[k] for k in ('intent', 'spec', 'probes', 'continuation')):
         raise ValueError('context or probe changed after model requests')
     model = run / 'model'
+    pocket_code, pocket_messages = frozen_interface(run)
     inputs = read(model / 'model_input.json')
     if inputs['messages'] != pocket_messages(pair, seed) or inputs['official_evaluation_available'] is not False:
         raise ValueError('model context differs from public projection')
@@ -105,6 +126,8 @@ def audit(run):
             failures.append({'branch': branch, 'status': records[0][2], 'quality': None})
             continue
         obs = read(folder / 'observation.json')
+        if obs['seed_sha256'] != seed['seed_sha256'] or obs['seed_state_sha256'] != seed['seed_state_sha256']:
+            raise ValueError('observed seed differs from pre-request S1')
         if obs['vm_pid'] != stopped['pid'] or Path(obs['vm_overlay']) != (folder / 'runtime/vm_001/overlay.qcow2'):
             raise ValueError('clone identity differs from native launch/stop')
         artifact = folder / 'artifact.FCStd'
@@ -135,11 +158,52 @@ def audit(run):
             'model_code_original': True, 'training_rows': 0, 'method_effect': None}
 
 
+def audit_clone_probe(run):
+    run = run.resolve()
+    pair = read(run / 'pair.json')
+    manifest = read(run / 'source_manifest.json')
+    if file_sha(run / 'deployed_worker.py') != manifest['deployed_worker.py']:
+        raise ValueError('clone probe worker changed')
+    worker_sha = digest((run / 'deployed_worker.py').read_text())
+    observations, seeds = {}, []
+    for branch in ('A', 'B'):
+        folder = run / ('branch_' + branch)
+        records = dispatch_records(folder, worker_sha)
+        if len(records) != 1 or records[0][2] != 'complete':
+            raise ValueError('clone probe is not one completed dispatch')
+        request = records[0][1]
+        if request != read(folder / 'request.json') or request['pair'] != pair or request['branch'] != branch:
+            raise ValueError('clone probe request differs')
+        seeds.append(request['seed'])
+        obs = read(folder / 'observation.json')
+        stopped = read(folder / 'runtime/vm_001/stopped.json')
+        launch = read(folder / 'runtime/vm_001/launch.json')
+        if not stopped['stopped'] or stopped['pid'] != obs['vm_pid'] or launch['base_sha256'] != manifest['snapshot_sha256']:
+            raise ValueError('clone launch/stop identity differs')
+        if file_sha(folder / 'artifact.FCStd') != obs['artifact_sha256']:
+            raise ValueError('synthetic native artifact differs')
+        if obs['seed_sha256'] != request['seed']['seed_sha256'] or obs['seed_state_sha256'] != request['seed']['seed_state_sha256']:
+            raise ValueError('synthetic observed seed differs')
+        observations[branch] = obs
+    if seeds[0] != seeds[1]:
+        raise ValueError('clone control does not start from the same final state')
+    row = evaluate_isolated(pair, observations['A'], observations['B'])
+    if read(run / 'pairs.json') != [row] or not row['pair_valid'] or row['credit'] != 0 or row['A']['q'] != 1 or row['B']['q'] != 1:
+        raise ValueError('isolated clone quality/control failed')
+    contracts = [observations[b]['generic_native_contract'] for b in ('A', 'B')]
+    if contracts[0] != contracts[1] or contracts[0]['depth_property_present'] or contracts[0]['length_property_type'] != 'App::PropertyLength':
+        raise ValueError('native API observations differ between clones')
+    return {'status': 'PASS_NATIVE_CLONE_AUDIT', 'dispatches': 2, 'uncertain': 0, 'model_calls': 0,
+            'independent_vm_overlays': True, 'same_seed_and_snapshot': True, 'control_credit': 0,
+            'generic_native_contract': contracts[0], 'natural_pairs_added': 0, 'training_rows': 0}
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--run', type=Path, required=True)
+    p.add_argument('--clone-probe', action='store_true')
     a = p.parse_args()
-    result = audit(a.run)
+    result = audit_clone_probe(a.run) if a.clone_probe else audit(a.run)
     (a.run / 'verification.json').write_text(json.dumps(result, indent=2, allow_nan=False) + '\n')
     print(json.dumps({k: v for k, v in result.items() if k != 'artifacts'}))
 

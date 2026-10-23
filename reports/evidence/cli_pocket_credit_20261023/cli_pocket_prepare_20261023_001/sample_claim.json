@@ -1,0 +1,5 @@
+{
+  "sample_run": "/Users/bytedance/Desktop/Own/CUA/cad-cf-hybrid/results/cli_pocket_model_20261023_001",
+  "claim_origin": "posthoc_completed_batch_binding",
+  "policy": "one sampling batch; never remove claim to recover budget"
+}

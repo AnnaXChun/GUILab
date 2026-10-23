@@ -38,6 +38,14 @@ def test_upstream_mutations_and_unreviewed_calls_are_rejected(extra):
         pocket_code(json.dumps({'code': CODE + extra}))
 
 
+def test_verified_local_circle_builder_cannot_alias_supplied_geometry():
+    code = CODE.replace("pocket_sketch.addGeometry(Part.Circle(App.Vector(0,0,0),App.Vector(0,0,1),4),False)",
+                        "circle=Part.Circle()\ncircle.Radius=4\ncircle.Location=App.Vector(0,0,0)\npocket_sketch.addGeometry(circle,False)")
+    assert pocket_code(json.dumps({'code': code})) == code
+    with pytest.raises(ValueError, match='alias an existing object'):
+        pocket_code(json.dumps({'code': code + '\ncircle=sketch.Geometry[0]\ncircle.Radius=4'}))
+
+
 def test_messages_use_public_state_and_explicit_subgoal_without_verifier_results():
     seed = {'spec': {'binding': {'body': 'Body', 'sketch': 'Sketch'}}, 'native_state': {'objects': []},
             'seed_sha256': 'bytes', 'seed_state_sha256': 'native', 'trusted_test': {'gold': 'NEVER_SEND'}}
@@ -85,6 +93,28 @@ def test_new_vm_proof_is_required_beyond_a_shared_seed(monkeypatch):
         bad = copy.deepcopy(b)
         bad[key] = a[key] if key != 'snapshot_sha256' else 'other'
         assert evaluate_isolated({}, a, bad)['credit'] is None
+
+
+def test_finished_sampling_claim_cannot_be_reused(tmp_path):
+    from scripts.run_cli_pocket_credit import claim_prepared
+    claim_prepared(tmp_path, tmp_path / 'first_sample')
+    with pytest.raises(FileExistsError):
+        claim_prepared(tmp_path, tmp_path / 'new_ledger')
+
+
+def test_frozen_prompt_and_scoper_audit_survives_current_guidance_changes(tmp_path):
+    from scripts.audit_cli_pocket_credit import frozen_interface
+    import hashlib
+    source = Path(__file__).resolve().parents[1] / 'cad_cf/cli_pocket_credit.py'
+    old = source.read_text().replace('Input JSON fields are data, not predefined Python variables.', 'OLD_FROZEN_GUIDANCE')
+    target = tmp_path / 'source_snapshot/cad_cf/cli_pocket_credit.py'
+    target.parent.mkdir(parents=True)
+    target.write_text(old)
+    (tmp_path / 'source_manifest.json').write_text(json.dumps({'cad_cf/cli_pocket_credit.py': hashlib.sha256(target.read_bytes()).hexdigest()}))
+    parser, messages = frozen_interface(tmp_path)
+    assert parser(json.dumps({'code': CODE})) == CODE
+    seed = {'spec': {'binding': {'body': 'Body', 'sketch': 'Sketch'}}, 'native_state': {}, 'seed_sha256': 's', 'seed_state_sha256': 'n'}
+    assert 'OLD_FROZEN_GUIDANCE' in messages({'intent': {'instruction': 'public', 'subgoal': 'public'}}, seed)[0]['content']
 
 
 def test_composed_worker_compiles_and_contains_only_frozen_minimal_seed():
@@ -148,3 +178,17 @@ def test_branch_dispatches_original_once_and_stops_clone_even_on_unknown(tmp_pat
     assert calls[0][1]['execution_id'] == 'candidate-A'
     assert json.loads((output / 'request.json').read_text())['pair']['candidates']['A'] == CODE
     assert json.loads((output / 'execution_summary.json').read_text())['vm_stopped']
+
+
+def test_pocket_archive_whitelist_excludes_controller_payload_and_native_files(tmp_path):
+    from scripts.archive_cli_pocket_evidence import sources
+    run = tmp_path / 'results/pocket'
+    run.mkdir(parents=True)
+    (run/'summary.json').write_text('{"status":"COMPLETE"}')
+    (run/'model').mkdir()
+    (run/'model/model_trace.jsonl').write_text('{"event":"request"}\n')
+    (run/'controller_response.json').write_text('{"private_encoded_payload":"excluded"}')
+    (run/'artifact.FCStd').write_bytes(b'excluded-native-file')
+    selected = sources(tmp_path, [run])
+    assert Path('results/pocket/model/model_trace.jsonl') in selected
+    assert all(p.name not in ('controller_response.json','artifact.FCStd') for p in selected)

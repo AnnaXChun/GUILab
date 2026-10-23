@@ -1,0 +1,6 @@
+{
+  "scripts/probe_cli_pocket_clones.py": "76d9952a46f3c401fc29f826156739ebdb41aa995c75fa13a2b18b43cf186dbe",
+  "prepared_worker_sha256": "36c14f41fa648a32461518c2a8e0c31bcff3fc30ad6578a1a0ed7e7f00081b86",
+  "deployed_worker.py": "fd48e105c46f5d1ce9d3225b8fbd2ba72b2cb917a4fc301002ba0d4ca6340ee5",
+  "snapshot_sha256": "e1cf29b48d14c73618ead99915e09669754e095a81da10d12777d6aaad96f56a"
+}

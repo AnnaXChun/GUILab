@@ -1,0 +1,14 @@
+[
+  {
+    "branch": "A",
+    "status": "CANDIDATE_REJECTED",
+    "reason": "ValueError",
+    "message": "mutation outside new Pocket scope"
+  },
+  {
+    "branch": "B",
+    "status": "CANDIDATE_REJECTED",
+    "reason": "ValueError",
+    "message": "mutation outside new Pocket scope"
+  }
+]

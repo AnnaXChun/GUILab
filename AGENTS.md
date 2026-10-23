@@ -4,6 +4,8 @@
 
 ## 接手入口
 
+**2026-10-23 最新后续边界**：读取 `reports/CLI_POCKET_CREDIT_20261023.md`、`reports/CLI_POCKET_STATUS_20261023.json` 和 `docs/CLI_POCKET_CREDIT_PILOT.md`。新prospective Pad S1/六探针/文本控制通过，Pocket两原文均静态拒绝，2请求7098输入/1772输出tokens，天然执行0、credit=null。原生独立克隆控制为synthetic，不能增加自然pair或训练样本。源码中的 `pocket_api_contract_v2_not_sampled` 尚未模型采样；旧scoper/prompt由快照审计，不能回写旧拒绝。单次sample claim结束后也不删除，本次旧prepare的claim为posthoc补建。新实验需新准备快照和冻结预算；本批不追加采样、不重跑200题、不恢复GUI、不训练。最终结果和VM停止证据由本轮机器状态维护。
+
 **2026-10-23 全量 CLI 与审计已完成**：`cli_full_sweep_native_20261022_001` 已尝试 200 题，185 可评估、14 通过、171 未通过、15 运行错误，完整分母交付率 7.00%，子集通过率 7.57%。3163 次模型请求，用量完整，pending=0。129 个 `.FCStd` 已做独立审计，128 个重开、93 个对象状态有效、40 个编辑探针通过，1 个空对象元数据错误保留；官方通过且原生状态有效为 12/200=6.00%。200 台任务 VM 与 1 台审计 VM 均停止，不启动原 job、原账本或原审计目录。入口为 `reports/CLI_EXPERIMENTS_20261022.md`、`reports/FAILURE_CASES.md`、`reports/evidence/cli_full_sweep_native_20261022_001/INDEX.json` 和 `HANDOFF.md`。候选 part-014 的一个 tie、credit=0、训练新增 0 单列；方法增益和训练仍 NO-GO。下一步冻结小批等预算局部归因与同奖励终局对照，不自动采样或训练。下方 RUNNING 与旧下一步按日期作为历史。
 
 **2026-10-22 当前正在执行**：模型候选成功入口为 `reports/CLI_MODEL_CANDIDATE_SUCCESS_20261022.md`、`reports/CLI_MODEL_CANDIDATE_STATUS_20261022.json`。part-014 两个原始模型响应在同 S0 各执行一次，固定 C、保存重开和各六探针通过，Q=1/1、credit=0；part-001 A 静态拒绝，B READY 随整对跳过，质量 unknown。该新四次账本已结束，历史四次全拒绝保留。全量 `cli_full_sweep_native_20261022_001` 已启动，当前两路并行；禁止重复启动或重放已启动 job。读取本机 summary/jobs 后继续监测，最终完整分母表格由 `scripts/summarize_cli_experiments.py` 汇总。全量未完成不报最终率，单题执行不确定隔离为运行错误，模型服务错误停止新增任务。

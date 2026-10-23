@@ -1,0 +1,6 @@
+{
+  "classification": "POSTHOC_EXACT_RECONSTRUCTION",
+  "pre_launch_source_sha256": "76d9952a46f3c401fc29f826156739ebdb41aa995c75fa13a2b18b43cf186dbe",
+  "reconstruction": "remove the later exit-status return and restore original main entry; SHA exactly matches pre-launch manifest",
+  "deployed_worker_already_frozen_before_dispatch": true
+}

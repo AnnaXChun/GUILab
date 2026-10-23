@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-23T03:40:59.627986+00:00",
+  "status": "COMPLETED_BOUNDED_PILOT_WITH_STATIC_REJECTIONS",
+  "task": "freecad-part-014",
+  "split": "development",
+  "model": "qwen3.5-122b-a10b",
+  "model_requests": 2,
+  "input_tokens": 7098,
+  "output_tokens": 1772,
+  "cost_usd": null,
+  "max_model_output_tokens": 4096,
+  "model_usage_complete": true,
+  "sdk_retries": 0,
+  "candidate_interface_accepted": 0,
+  "candidate_interface_rejected": 2,
+  "natural_candidate_executions": 0,
+  "valid_natural_pairs": 0,
+  "natural_quality": {
+    "A": null,
+    "B": null
+  },
+  "natural_credit": null,
+  "native_prepare_dispatches": 3,
+  "native_clone_control_dispatches": 2,
+  "native_total_dispatches": 5,
+  "native_uncertain": 0,
+  "trusted_final_parameter_probes": 30,
+  "synthetic_pairs": 2,
+  "synthetic_credits": [
+    0,
+    0
+  ],
+  "actual_vm_starts": 3,
+  "all_vm_stopped": true,
+  "same_s1_natural_pair_verified": null,
+  "independent_vm_clone_control_verified": true,
+  "old_model_ledgers_unchanged": true,
+  "model_protocol_audit": "PASS_PROTOCOL_AUDIT",
+  "clone_protocol_audit": "PASS_NATIVE_CLONE_AUDIT",
+  "new_official_episodes": 0,
+  "training_rows_added": 0,
+  "method_effect": null,
+  "go_no_go": {
+    "native_s1_and_clone_infrastructure": "GO_CONTROLLED_NATIVE",
+    "natural_pocket_candidates": "NO_GO_STATIC_REJECTION",
+    "method_advantage": "NO_GO_NOT_MEASURED",
+    "training": "NO_GO"
+  },
+  "current_guidance": "pocket_api_contract_v2_not_sampled",
+  "guidance_v2_model_requests": 0,
+  "sample_claim_origin": "posthoc_completed_batch_binding",
+  "next_action": "Prepare current v2 source in a new directory, verify generic API and zero-credit control, then freeze an independent bounded candidate batch; no old ledger/claim reuse.",
+  "read_first": [
+    "reports/CLI_POCKET_CREDIT_20261023.md",
+    "docs/CLI_POCKET_CREDIT_PILOT.md",
+    "HANDOFF.md"
+  ]
+}

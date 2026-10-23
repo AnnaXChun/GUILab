@@ -1,0 +1,1100 @@
+{
+  "classification": "sanitized_prospective_cli_pocket_intervention",
+  "excluded": [
+    ".env",
+    "API keys",
+    "private endpoint/hostname",
+    "full model directory",
+    "SQLite",
+    "qcow2",
+    "firmware",
+    "FCStd",
+    "encoded artifacts",
+    "MCP indexes/diagnostics"
+  ],
+  "files": [
+    {
+      "path": "cli_pocket_dry_20261023_001/config.json",
+      "source": "results/cli_pocket_dry_20261023_001/config.json",
+      "source_sha256": "6b235a29afe872288fb60f91c81762b5e9015514fc9c8e95c5a95fdce509ce95",
+      "sha256": "6b235a29afe872288fb60f91c81762b5e9015514fc9c8e95c5a95fdce509ce95",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_dry_20261023_001/summary.json",
+      "source": "results/cli_pocket_dry_20261023_001/summary.json",
+      "source_sha256": "8fa334a1a3f8ca501ccef64929b64499986c877724712394da4d1ff0d2a3844f",
+      "sha256": "8fa334a1a3f8ca501ccef64929b64499986c877724712394da4d1ff0d2a3844f",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_dry_20261023_001/source_manifest.json",
+      "source": "results/cli_pocket_dry_20261023_001/source_manifest.json",
+      "source_sha256": "7a48f74cab5a3b748e455b11e6d2a14e2231e31a37699dddc5294dbd363ffb36",
+      "sha256": "7a48f74cab5a3b748e455b11e6d2a14e2231e31a37699dddc5294dbd363ffb36",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_dry_20261023_001/previous_ledgers.json",
+      "source": "results/cli_pocket_dry_20261023_001/previous_ledgers.json",
+      "source_sha256": "afc88aef4e35615391f24f6ad160994ffca65e7883ece04d3bcc4cc0bfb537aa",
+      "sha256": "afc88aef4e35615391f24f6ad160994ffca65e7883ece04d3bcc4cc0bfb537aa",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_dry_20261023_001/deployed_worker.py",
+      "source": "results/cli_pocket_dry_20261023_001/deployed_worker.py",
+      "source_sha256": "cbb7993919f6d9ddec31079df5909ed9f14eff2d3915d3d968a838e57d0f95aa",
+      "sha256": "cbb7993919f6d9ddec31079df5909ed9f14eff2d3915d3d968a838e57d0f95aa",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_dry_20261023_001/source_snapshot/cad_cf/batch_budget.py",
+      "source": "results/cli_pocket_dry_20261023_001/source_snapshot/cad_cf/batch_budget.py",
+      "source_sha256": "52953e7b0ab3deb3546927a02ae848fa3be323f773020092906b081ab70f8e02",
+      "sha256": "52953e7b0ab3deb3546927a02ae848fa3be323f773020092906b081ab70f8e02",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_dry_20261023_001/source_snapshot/cad_cf/cli_causal_credit.py",
+      "source": "results/cli_pocket_dry_20261023_001/source_snapshot/cad_cf/cli_causal_credit.py",
+      "source_sha256": "f974b7d8519f3316a28258c11ed567dbf1d0f7fd917dbea75c41ce97a8c52f08",
+      "sha256": "f974b7d8519f3316a28258c11ed567dbf1d0f7fd917dbea75c41ce97a8c52f08",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_dry_20261023_001/source_snapshot/cad_cf/cli_model_pair.py",
+      "source": "results/cli_pocket_dry_20261023_001/source_snapshot/cad_cf/cli_model_pair.py",
+      "source_sha256": "604d89755347863f65c873c1ed33fd77a45c41eb744d31d4c545db2ac1c49237",
+      "sha256": "604d89755347863f65c873c1ed33fd77a45c41eb744d31d4c545db2ac1c49237",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_dry_20261023_001/source_snapshot/cad_cf/cli_pocket_credit.py",
+      "source": "results/cli_pocket_dry_20261023_001/source_snapshot/cad_cf/cli_pocket_credit.py",
+      "source_sha256": "82c0105e0f45b4c1aeaf0aac2c305d05e9f410b22303a19904970c49eadbd43a",
+      "sha256": "82c0105e0f45b4c1aeaf0aac2c305d05e9f410b22303a19904970c49eadbd43a",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_dry_20261023_001/source_snapshot/cad_cf/qemu_runtime.py",
+      "source": "results/cli_pocket_dry_20261023_001/source_snapshot/cad_cf/qemu_runtime.py",
+      "source_sha256": "e854e8536b1c971a97d4cdb4f8a0452944844c26c5c625ab6aba5ed2a8320bb6",
+      "sha256": "e854e8536b1c971a97d4cdb4f8a0452944844c26c5c625ab6aba5ed2a8320bb6",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_dry_20261023_001/source_snapshot/cad_cf/structural_credit.py",
+      "source": "results/cli_pocket_dry_20261023_001/source_snapshot/cad_cf/structural_credit.py",
+      "source_sha256": "ebc2b8485d4aaec3ff3054238979c3202ecf7e8a7545f0fe84fec4c1d7e5cf6a",
+      "sha256": "ebc2b8485d4aaec3ff3054238979c3202ecf7e8a7545f0fe84fec4c1d7e5cf6a",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_dry_20261023_001/source_snapshot/cad_cf/terminal_bridge.py",
+      "source": "results/cli_pocket_dry_20261023_001/source_snapshot/cad_cf/terminal_bridge.py",
+      "source_sha256": "4c3e9f8023a6b8b344c5c70c495312ab1624e97273509f46134ea9339c55a17d",
+      "sha256": "4c3e9f8023a6b8b344c5c70c495312ab1624e97273509f46134ea9339c55a17d",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_dry_20261023_001/source_snapshot/cad_cf/upstream_launch.py",
+      "source": "results/cli_pocket_dry_20261023_001/source_snapshot/cad_cf/upstream_launch.py",
+      "source_sha256": "39353dd1bcb5bc906a17da49da9a42d2206f23e7c8d3e426fb6f84469f96ada0",
+      "sha256": "39353dd1bcb5bc906a17da49da9a42d2206f23e7c8d3e426fb6f84469f96ada0",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_dry_20261023_001/source_snapshot/configs/cli_pocket_credit_20261023.json",
+      "source": "results/cli_pocket_dry_20261023_001/source_snapshot/configs/cli_pocket_credit_20261023.json",
+      "source_sha256": "6b235a29afe872288fb60f91c81762b5e9015514fc9c8e95c5a95fdce509ce95",
+      "sha256": "6b235a29afe872288fb60f91c81762b5e9015514fc9c8e95c5a95fdce509ce95",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_dry_20261023_001/source_snapshot/scripts/cli_causal_worker.py",
+      "source": "results/cli_pocket_dry_20261023_001/source_snapshot/scripts/cli_causal_worker.py",
+      "source_sha256": "131a100b76f598717513ecd5ff969a3dfcdc01ced5c7e92f1d7394140974f1f5",
+      "sha256": "131a100b76f598717513ecd5ff969a3dfcdc01ced5c7e92f1d7394140974f1f5",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_dry_20261023_001/source_snapshot/scripts/cli_pocket_worker.py",
+      "source": "results/cli_pocket_dry_20261023_001/source_snapshot/scripts/cli_pocket_worker.py",
+      "source_sha256": "8f1216d7d207938833c21cdefe746c5c54fa9505f0210bb40bf0d3a9e841b833",
+      "sha256": "8f1216d7d207938833c21cdefe746c5c54fa9505f0210bb40bf0d3a9e841b833",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_dry_20261023_001/source_snapshot/scripts/run_cli_causal_credit.py",
+      "source": "results/cli_pocket_dry_20261023_001/source_snapshot/scripts/run_cli_causal_credit.py",
+      "source_sha256": "291334e0c04606ceb87a6d923beb2c23261c0dd60ff19391cda43b994d2b08db",
+      "sha256": "291334e0c04606ceb87a6d923beb2c23261c0dd60ff19391cda43b994d2b08db",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_dry_20261023_001/source_snapshot/scripts/run_cli_model_pair.py",
+      "source": "results/cli_pocket_dry_20261023_001/source_snapshot/scripts/run_cli_model_pair.py",
+      "source_sha256": "9656986ca12c75b7761ea14774a84079e4e0f605e330944bff846cbec654fcef",
+      "sha256": "9656986ca12c75b7761ea14774a84079e4e0f605e330944bff846cbec654fcef",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_dry_20261023_001/source_snapshot/scripts/run_cli_pocket_credit.py",
+      "source": "results/cli_pocket_dry_20261023_001/source_snapshot/scripts/run_cli_pocket_credit.py",
+      "source_sha256": "374235f10f1af3bcfe5dcb7fa2b06448a8aea564475396a26da55493fd0c076a",
+      "sha256": "374235f10f1af3bcfe5dcb7fa2b06448a8aea564475396a26da55493fd0c076a",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_dry_20261023_001/source_snapshot/scripts/run_structural_credit_diagnostic.py",
+      "source": "results/cli_pocket_dry_20261023_001/source_snapshot/scripts/run_structural_credit_diagnostic.py",
+      "source_sha256": "4fe03faeb3ae0d9254c0ec5c5bbd5e10783ae62d15db79ab569e5e11c5f6dcda",
+      "sha256": "4fe03faeb3ae0d9254c0ec5c5bbd5e10783ae62d15db79ab569e5e11c5f6dcda",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/config.json",
+      "source": "results/cli_pocket_prepare_20261023_001/config.json",
+      "source_sha256": "6b235a29afe872288fb60f91c81762b5e9015514fc9c8e95c5a95fdce509ce95",
+      "sha256": "6b235a29afe872288fb60f91c81762b5e9015514fc9c8e95c5a95fdce509ce95",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/summary.json",
+      "source": "results/cli_pocket_prepare_20261023_001/summary.json",
+      "source_sha256": "52f1337116521730a99b99fec406694deaeb5e133eeaef3dd20163e01a7b8b51",
+      "sha256": "52f1337116521730a99b99fec406694deaeb5e133eeaef3dd20163e01a7b8b51",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/source_manifest.json",
+      "source": "results/cli_pocket_prepare_20261023_001/source_manifest.json",
+      "source_sha256": "56d84c82c2a3691e2907a016a22c54e8ab65e27d242f942bbe07032788d1e5ee",
+      "sha256": "56d84c82c2a3691e2907a016a22c54e8ab65e27d242f942bbe07032788d1e5ee",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/source_capture_reference.json",
+      "source": "results/cli_pocket_prepare_20261023_001/source_capture_reference.json",
+      "source_sha256": "2b4d3feedcfd16c72c03e46bb0bc2ad6ce1e7ff40f9611fbb6cafe6f1ee9bfd8",
+      "sha256": "2b4d3feedcfd16c72c03e46bb0bc2ad6ce1e7ff40f9611fbb6cafe6f1ee9bfd8",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/previous_ledgers.json",
+      "source": "results/cli_pocket_prepare_20261023_001/previous_ledgers.json",
+      "source_sha256": "afc88aef4e35615391f24f6ad160994ffca65e7883ece04d3bcc4cc0bfb537aa",
+      "sha256": "afc88aef4e35615391f24f6ad160994ffca65e7883ece04d3bcc4cc0bfb537aa",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/previous_ledger_audit.json",
+      "source": "results/cli_pocket_prepare_20261023_001/previous_ledger_audit.json",
+      "source_sha256": "69728fe02872dd264e55ba6d0cd49f7bd0883b8e1b7d0ae9901d4e968a47322d",
+      "sha256": "69728fe02872dd264e55ba6d0cd49f7bd0883b8e1b7d0ae9901d4e968a47322d",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/captured_states.json",
+      "source": "results/cli_pocket_prepare_20261023_001/captured_states.json",
+      "source_sha256": "bdb9aaf82b288ad8641839eed1cdd8e4020f77ec2f002ce3f9634c7f2c2e5ef3",
+      "sha256": "bdb9aaf82b288ad8641839eed1cdd8e4020f77ec2f002ce3f9634c7f2c2e5ef3",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/frozen_pair_before_requests.json",
+      "source": "results/cli_pocket_prepare_20261023_001/frozen_pair_before_requests.json",
+      "source_sha256": "b1060befac01c7b0d83e261a4a996a0c684c399b42a06695f08c406be0e4d4d9",
+      "sha256": "b1060befac01c7b0d83e261a4a996a0c684c399b42a06695f08c406be0e4d4d9",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/pairs.json",
+      "source": "results/cli_pocket_prepare_20261023_001/pairs.json",
+      "source_sha256": "c99798071645fc287826ab0fc4a740b201e86685b73f9351611a62945ba38274",
+      "sha256": "c99798071645fc287826ab0fc4a740b201e86685b73f9351611a62945ba38274",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/plan.json",
+      "source": "results/cli_pocket_prepare_20261023_001/plan.json",
+      "source_sha256": "3d59487cedffe4d5d65303b2f2df2f59da215d6ef89e9d72b59fe1c4adcd6df9",
+      "sha256": "3d59487cedffe4d5d65303b2f2df2f59da215d6ef89e9d72b59fe1c4adcd6df9",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/pre_request_proof.json",
+      "source": "results/cli_pocket_prepare_20261023_001/pre_request_proof.json",
+      "source_sha256": "ae765c5441ce7ee93401f800c7ad26eb8cd8fdde77d749d52f053361dd526100",
+      "sha256": "ae765c5441ce7ee93401f800c7ad26eb8cd8fdde77d749d52f053361dd526100",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/dispatch_public.json",
+      "source": "results/cli_pocket_prepare_20261023_001/dispatch_public.json",
+      "source_sha256": "9ed07d9d076d7e078b4928746ef2c98b379248403f2c73d346e2d588d561e99d",
+      "sha256": "9ed07d9d076d7e078b4928746ef2c98b379248403f2c73d346e2d588d561e99d",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/dispatch.dispatch.json",
+      "source": "results/cli_pocket_prepare_20261023_001/dispatch.sqlite",
+      "source_sha256": "b29c65306ee1d5ccc031f99515903d34d7713ac71350f0059f0a301feb472209",
+      "sha256": "5777a842bdaa6e9712ae7352e0f28a8005fc2120f87bdbec4efc167b9d74ca6c",
+      "redacted": false,
+      "derived": true
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/execution_summary.json",
+      "source": "results/cli_pocket_prepare_20261023_001/execution_summary.json",
+      "source_sha256": "6cafc27cf84421f4b30f65ce19f59e32e2ffabf8e117f57d0e2509da343ba5d9",
+      "sha256": "6cafc27cf84421f4b30f65ce19f59e32e2ffabf8e117f57d0e2509da343ba5d9",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/trace.jsonl",
+      "source": "results/cli_pocket_prepare_20261023_001/trace.jsonl",
+      "source_sha256": "160d7a80de3999ac5ce6bdd284f42a73938738ab18d7f01bd7717c8852e2756b",
+      "sha256": "160d7a80de3999ac5ce6bdd284f42a73938738ab18d7f01bd7717c8852e2756b",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/deployed_worker.py",
+      "source": "results/cli_pocket_prepare_20261023_001/deployed_worker.py",
+      "source_sha256": "36c14f41fa648a32461518c2a8e0c31bcff3fc30ad6578a1a0ed7e7f00081b86",
+      "sha256": "36c14f41fa648a32461518c2a8e0c31bcff3fc30ad6578a1a0ed7e7f00081b86",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/sample_claim.json",
+      "source": "results/cli_pocket_prepare_20261023_001/sample_claim.json",
+      "source_sha256": "8f252cbcbfbeb484fae6c684fd9a603c9d031ec99ae02347aadd37d056a34f43",
+      "sha256": "8f252cbcbfbeb484fae6c684fd9a603c9d031ec99ae02347aadd37d056a34f43",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/prepare/request.json",
+      "source": "results/cli_pocket_prepare_20261023_001/prepare/request.json",
+      "source_sha256": "bfe2682c53311fe789bb66978d6643486a71215e4c54fa0c8b67de80b6ccfd09",
+      "sha256": "bfe2682c53311fe789bb66978d6643486a71215e4c54fa0c8b67de80b6ccfd09",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/prepare/observation.json",
+      "source": "results/cli_pocket_prepare_20261023_001/prepare/observation.json",
+      "source_sha256": "bdb9aaf82b288ad8641839eed1cdd8e4020f77ec2f002ce3f9634c7f2c2e5ef3",
+      "sha256": "bdb9aaf82b288ad8641839eed1cdd8e4020f77ec2f002ce3f9634c7f2c2e5ef3",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/prepare/provenance.json",
+      "source": "results/cli_pocket_prepare_20261023_001/prepare/provenance.json",
+      "source_sha256": "fe663a631fba95c57fe445bd23a79e62c53b082e58ada3c8d43adee15c7dd243",
+      "sha256": "fe663a631fba95c57fe445bd23a79e62c53b082e58ada3c8d43adee15c7dd243",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/pocket-control-A/request.json",
+      "source": "results/cli_pocket_prepare_20261023_001/pocket-control-A/request.json",
+      "source_sha256": "ee836c41ccb5e7737fbb0a4b7d9d45e5baec752c4cb036e2fd487807c0765084",
+      "sha256": "ee836c41ccb5e7737fbb0a4b7d9d45e5baec752c4cb036e2fd487807c0765084",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/pocket-control-A/observation.json",
+      "source": "results/cli_pocket_prepare_20261023_001/pocket-control-A/observation.json",
+      "source_sha256": "36a6c9bd732002e91c2879102ac33ab47570d76db5940b4233c28efb61e23ca7",
+      "sha256": "36a6c9bd732002e91c2879102ac33ab47570d76db5940b4233c28efb61e23ca7",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/pocket-control-A/provenance.json",
+      "source": "results/cli_pocket_prepare_20261023_001/pocket-control-A/provenance.json",
+      "source_sha256": "3e2d7e3bbf64b0edc43e759a78714ed0e096e363f2644a11297f9000fa920ef0",
+      "sha256": "3e2d7e3bbf64b0edc43e759a78714ed0e096e363f2644a11297f9000fa920ef0",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/pocket-control-B/request.json",
+      "source": "results/cli_pocket_prepare_20261023_001/pocket-control-B/request.json",
+      "source_sha256": "6e6a9692e79ffad0657754b2f52ae235930917e8f610bf2324d39bcab62ebc4c",
+      "sha256": "6e6a9692e79ffad0657754b2f52ae235930917e8f610bf2324d39bcab62ebc4c",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/pocket-control-B/observation.json",
+      "source": "results/cli_pocket_prepare_20261023_001/pocket-control-B/observation.json",
+      "source_sha256": "0f2cd4724e499f3e078a92e15095d848338e7e3ee43f96b029f309ec28064944",
+      "sha256": "0f2cd4724e499f3e078a92e15095d848338e7e3ee43f96b029f309ec28064944",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/pocket-control-B/provenance.json",
+      "source": "results/cli_pocket_prepare_20261023_001/pocket-control-B/provenance.json",
+      "source_sha256": "213048be425cc6134fdbf8019afaeb41acb3d799e33fc0650fa8a5b7cc10ee57",
+      "sha256": "213048be425cc6134fdbf8019afaeb41acb3d799e33fc0650fa8a5b7cc10ee57",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/runtime/vm_001/launch.json",
+      "source": "results/cli_pocket_prepare_20261023_001/runtime/vm_001/launch.json",
+      "source_sha256": "cec275766766f3afedae38b67315200ba8d3aa6dfff1021e0b5a11ed95a39be1",
+      "sha256": "cec275766766f3afedae38b67315200ba8d3aa6dfff1021e0b5a11ed95a39be1",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/runtime/vm_001/ready.json",
+      "source": "results/cli_pocket_prepare_20261023_001/runtime/vm_001/ready.json",
+      "source_sha256": "b5d9eed2eedefa5124fef3aa001881e7c5daa9f03237754537ba0da96851ee91",
+      "sha256": "b5d9eed2eedefa5124fef3aa001881e7c5daa9f03237754537ba0da96851ee91",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/runtime/vm_001/stopped.json",
+      "source": "results/cli_pocket_prepare_20261023_001/runtime/vm_001/stopped.json",
+      "source_sha256": "4d94f31015075afa981bde3a0402a082e0f37705e4aa95e3a27a8b6cc64696ef",
+      "sha256": "4d94f31015075afa981bde3a0402a082e0f37705e4aa95e3a27a8b6cc64696ef",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/runtime/vm_001/readiness.jsonl",
+      "source": "results/cli_pocket_prepare_20261023_001/runtime/vm_001/readiness.jsonl",
+      "source_sha256": "624ad3878ed827c9c5f9d9aaa91897d8cdba4abc9798673759ba8f88850095bb",
+      "sha256": "624ad3878ed827c9c5f9d9aaa91897d8cdba4abc9798673759ba8f88850095bb",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/source_snapshot/cad_cf/batch_budget.py",
+      "source": "results/cli_pocket_prepare_20261023_001/source_snapshot/cad_cf/batch_budget.py",
+      "source_sha256": "52953e7b0ab3deb3546927a02ae848fa3be323f773020092906b081ab70f8e02",
+      "sha256": "52953e7b0ab3deb3546927a02ae848fa3be323f773020092906b081ab70f8e02",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/source_snapshot/cad_cf/cli_causal_credit.py",
+      "source": "results/cli_pocket_prepare_20261023_001/source_snapshot/cad_cf/cli_causal_credit.py",
+      "source_sha256": "f974b7d8519f3316a28258c11ed567dbf1d0f7fd917dbea75c41ce97a8c52f08",
+      "sha256": "f974b7d8519f3316a28258c11ed567dbf1d0f7fd917dbea75c41ce97a8c52f08",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/source_snapshot/cad_cf/cli_model_pair.py",
+      "source": "results/cli_pocket_prepare_20261023_001/source_snapshot/cad_cf/cli_model_pair.py",
+      "source_sha256": "604d89755347863f65c873c1ed33fd77a45c41eb744d31d4c545db2ac1c49237",
+      "sha256": "604d89755347863f65c873c1ed33fd77a45c41eb744d31d4c545db2ac1c49237",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/source_snapshot/cad_cf/cli_pocket_credit.py",
+      "source": "results/cli_pocket_prepare_20261023_001/source_snapshot/cad_cf/cli_pocket_credit.py",
+      "source_sha256": "82c0105e0f45b4c1aeaf0aac2c305d05e9f410b22303a19904970c49eadbd43a",
+      "sha256": "82c0105e0f45b4c1aeaf0aac2c305d05e9f410b22303a19904970c49eadbd43a",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/source_snapshot/cad_cf/qemu_runtime.py",
+      "source": "results/cli_pocket_prepare_20261023_001/source_snapshot/cad_cf/qemu_runtime.py",
+      "source_sha256": "e854e8536b1c971a97d4cdb4f8a0452944844c26c5c625ab6aba5ed2a8320bb6",
+      "sha256": "e854e8536b1c971a97d4cdb4f8a0452944844c26c5c625ab6aba5ed2a8320bb6",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/source_snapshot/cad_cf/structural_credit.py",
+      "source": "results/cli_pocket_prepare_20261023_001/source_snapshot/cad_cf/structural_credit.py",
+      "source_sha256": "ebc2b8485d4aaec3ff3054238979c3202ecf7e8a7545f0fe84fec4c1d7e5cf6a",
+      "sha256": "ebc2b8485d4aaec3ff3054238979c3202ecf7e8a7545f0fe84fec4c1d7e5cf6a",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/source_snapshot/cad_cf/terminal_bridge.py",
+      "source": "results/cli_pocket_prepare_20261023_001/source_snapshot/cad_cf/terminal_bridge.py",
+      "source_sha256": "4c3e9f8023a6b8b344c5c70c495312ab1624e97273509f46134ea9339c55a17d",
+      "sha256": "4c3e9f8023a6b8b344c5c70c495312ab1624e97273509f46134ea9339c55a17d",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/source_snapshot/cad_cf/upstream_launch.py",
+      "source": "results/cli_pocket_prepare_20261023_001/source_snapshot/cad_cf/upstream_launch.py",
+      "source_sha256": "39353dd1bcb5bc906a17da49da9a42d2206f23e7c8d3e426fb6f84469f96ada0",
+      "sha256": "39353dd1bcb5bc906a17da49da9a42d2206f23e7c8d3e426fb6f84469f96ada0",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/source_snapshot/configs/cli_pocket_credit_20261023.json",
+      "source": "results/cli_pocket_prepare_20261023_001/source_snapshot/configs/cli_pocket_credit_20261023.json",
+      "source_sha256": "6b235a29afe872288fb60f91c81762b5e9015514fc9c8e95c5a95fdce509ce95",
+      "sha256": "6b235a29afe872288fb60f91c81762b5e9015514fc9c8e95c5a95fdce509ce95",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/source_snapshot/scripts/cli_causal_worker.py",
+      "source": "results/cli_pocket_prepare_20261023_001/source_snapshot/scripts/cli_causal_worker.py",
+      "source_sha256": "131a100b76f598717513ecd5ff969a3dfcdc01ced5c7e92f1d7394140974f1f5",
+      "sha256": "131a100b76f598717513ecd5ff969a3dfcdc01ced5c7e92f1d7394140974f1f5",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/source_snapshot/scripts/cli_pocket_worker.py",
+      "source": "results/cli_pocket_prepare_20261023_001/source_snapshot/scripts/cli_pocket_worker.py",
+      "source_sha256": "8f1216d7d207938833c21cdefe746c5c54fa9505f0210bb40bf0d3a9e841b833",
+      "sha256": "8f1216d7d207938833c21cdefe746c5c54fa9505f0210bb40bf0d3a9e841b833",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/source_snapshot/scripts/run_cli_causal_credit.py",
+      "source": "results/cli_pocket_prepare_20261023_001/source_snapshot/scripts/run_cli_causal_credit.py",
+      "source_sha256": "291334e0c04606ceb87a6d923beb2c23261c0dd60ff19391cda43b994d2b08db",
+      "sha256": "291334e0c04606ceb87a6d923beb2c23261c0dd60ff19391cda43b994d2b08db",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/source_snapshot/scripts/run_cli_model_pair.py",
+      "source": "results/cli_pocket_prepare_20261023_001/source_snapshot/scripts/run_cli_model_pair.py",
+      "source_sha256": "9656986ca12c75b7761ea14774a84079e4e0f605e330944bff846cbec654fcef",
+      "sha256": "9656986ca12c75b7761ea14774a84079e4e0f605e330944bff846cbec654fcef",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/source_snapshot/scripts/run_cli_pocket_credit.py",
+      "source": "results/cli_pocket_prepare_20261023_001/source_snapshot/scripts/run_cli_pocket_credit.py",
+      "source_sha256": "374235f10f1af3bcfe5dcb7fa2b06448a8aea564475396a26da55493fd0c076a",
+      "sha256": "374235f10f1af3bcfe5dcb7fa2b06448a8aea564475396a26da55493fd0c076a",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_prepare_20261023_001/source_snapshot/scripts/run_structural_credit_diagnostic.py",
+      "source": "results/cli_pocket_prepare_20261023_001/source_snapshot/scripts/run_structural_credit_diagnostic.py",
+      "source_sha256": "4fe03faeb3ae0d9254c0ec5c5bbd5e10783ae62d15db79ab569e5e11c5f6dcda",
+      "sha256": "4fe03faeb3ae0d9254c0ec5c5bbd5e10783ae62d15db79ab569e5e11c5f6dcda",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/config.json",
+      "source": "results/cli_pocket_model_20261023_001/config.json",
+      "source_sha256": "6b235a29afe872288fb60f91c81762b5e9015514fc9c8e95c5a95fdce509ce95",
+      "sha256": "6b235a29afe872288fb60f91c81762b5e9015514fc9c8e95c5a95fdce509ce95",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/summary.json",
+      "source": "results/cli_pocket_model_20261023_001/summary.json",
+      "source_sha256": "01cbbd0b38821ff4d7ed672933d7bd3d2f528b8faa755c31aaff12ff3a076f89",
+      "sha256": "01cbbd0b38821ff4d7ed672933d7bd3d2f528b8faa755c31aaff12ff3a076f89",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/source_manifest.json",
+      "source": "results/cli_pocket_model_20261023_001/source_manifest.json",
+      "source_sha256": "56d84c82c2a3691e2907a016a22c54e8ab65e27d242f942bbe07032788d1e5ee",
+      "sha256": "56d84c82c2a3691e2907a016a22c54e8ab65e27d242f942bbe07032788d1e5ee",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/source_capture_reference.json",
+      "source": "results/cli_pocket_model_20261023_001/source_capture_reference.json",
+      "source_sha256": "7c8e3d8966ac57cf10b9c56f5810b91d9f2375d4a669b1b582f909d0c6032c73",
+      "sha256": "7c8e3d8966ac57cf10b9c56f5810b91d9f2375d4a669b1b582f909d0c6032c73",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/previous_ledgers.json",
+      "source": "results/cli_pocket_model_20261023_001/previous_ledgers.json",
+      "source_sha256": "afc88aef4e35615391f24f6ad160994ffca65e7883ece04d3bcc4cc0bfb537aa",
+      "sha256": "afc88aef4e35615391f24f6ad160994ffca65e7883ece04d3bcc4cc0bfb537aa",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/previous_ledger_audit.json",
+      "source": "results/cli_pocket_model_20261023_001/previous_ledger_audit.json",
+      "source_sha256": "69728fe02872dd264e55ba6d0cd49f7bd0883b8e1b7d0ae9901d4e968a47322d",
+      "sha256": "69728fe02872dd264e55ba6d0cd49f7bd0883b8e1b7d0ae9901d4e968a47322d",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/captured_s1.json",
+      "source": "results/cli_pocket_model_20261023_001/captured_s1.json",
+      "source_sha256": "ca5d0fcc0d3bb10f786cc00cbd1962b9c46404e4aeee67defecfa92a7723852a",
+      "sha256": "ca5d0fcc0d3bb10f786cc00cbd1962b9c46404e4aeee67defecfa92a7723852a",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/frozen_pair_before_requests.json",
+      "source": "results/cli_pocket_model_20261023_001/frozen_pair_before_requests.json",
+      "source_sha256": "b1060befac01c7b0d83e261a4a996a0c684c399b42a06695f08c406be0e4d4d9",
+      "sha256": "b1060befac01c7b0d83e261a4a996a0c684c399b42a06695f08c406be0e4d4d9",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/pair.json",
+      "source": "results/cli_pocket_model_20261023_001/pair.json",
+      "source_sha256": "b1060befac01c7b0d83e261a4a996a0c684c399b42a06695f08c406be0e4d4d9",
+      "sha256": "b1060befac01c7b0d83e261a4a996a0c684c399b42a06695f08c406be0e4d4d9",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/pairs.json",
+      "source": "results/cli_pocket_model_20261023_001/pairs.json",
+      "source_sha256": "9e6950d37ca26bc54fc8d5690c38cd5ad9e2737c062cee71568fa1ffce13b947",
+      "sha256": "9e6950d37ca26bc54fc8d5690c38cd5ad9e2737c062cee71568fa1ffce13b947",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/selection_controls.json",
+      "source": "results/cli_pocket_model_20261023_001/selection_controls.json",
+      "source_sha256": "90bad777303b908c8696175cc3b0482ee8e92ce11f8b738ebceab1f5b5106a4d",
+      "sha256": "90bad777303b908c8696175cc3b0482ee8e92ce11f8b738ebceab1f5b5106a4d",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/verification.json",
+      "source": "results/cli_pocket_model_20261023_001/verification.json",
+      "source_sha256": "f1ec9ca30a433a1b3e1ef6300d1f232d479d0ef3f4b98e93205a0f9796919ec3",
+      "sha256": "f1ec9ca30a433a1b3e1ef6300d1f232d479d0ef3f4b98e93205a0f9796919ec3",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/pair_trace.jsonl",
+      "source": "results/cli_pocket_model_20261023_001/pair_trace.jsonl",
+      "source_sha256": "a23586fdbc9a19960f8ffebf272936e2b35dc1f8220b5a7cf9d72b0819d5e21d",
+      "sha256": "a23586fdbc9a19960f8ffebf272936e2b35dc1f8220b5a7cf9d72b0819d5e21d",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/error.json",
+      "source": "results/cli_pocket_model_20261023_001/error.json",
+      "source_sha256": "df6cc07f1a7a983a09467ea8aa3040f46ba603fb6539c371221181ea4ccf8451",
+      "sha256": "df6cc07f1a7a983a09467ea8aa3040f46ba603fb6539c371221181ea4ccf8451",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/deployed_worker.py",
+      "source": "results/cli_pocket_model_20261023_001/deployed_worker.py",
+      "source_sha256": "36c14f41fa648a32461518c2a8e0c31bcff3fc30ad6578a1a0ed7e7f00081b86",
+      "sha256": "36c14f41fa648a32461518c2a8e0c31bcff3fc30ad6578a1a0ed7e7f00081b86",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/failure_analysis.json",
+      "source": "results/cli_pocket_model_20261023_001/failure_analysis.json",
+      "source_sha256": "763ed20101f73e04bf2659173518fd77112adc4303fb746a97a8f9b6f054ca43",
+      "sha256": "763ed20101f73e04bf2659173518fd77112adc4303fb746a97a8f9b6f054ca43",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/model/model_input.json",
+      "source": "results/cli_pocket_model_20261023_001/model/model_input.json",
+      "source_sha256": "20cc999e495cb865617c24516a7941700014cc00d05899902a22fb7a3685946e",
+      "sha256": "20cc999e495cb865617c24516a7941700014cc00d05899902a22fb7a3685946e",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/model/model_response_A.json",
+      "source": "results/cli_pocket_model_20261023_001/model/model_response_A.json",
+      "source_sha256": "9f1defd9f8101a023f0440aae795bf55c825ac81ab995ddf08545212f419743c",
+      "sha256": "9f1defd9f8101a023f0440aae795bf55c825ac81ab995ddf08545212f419743c",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/model/model_response_B.json",
+      "source": "results/cli_pocket_model_20261023_001/model/model_response_B.json",
+      "source_sha256": "f6cccf66ee622a75630480f27e1f3927ce4d6064eca8b3a89ce5a594f3526212",
+      "sha256": "f6cccf66ee622a75630480f27e1f3927ce4d6064eca8b3a89ce5a594f3526212",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/model/candidate_status.json",
+      "source": "results/cli_pocket_model_20261023_001/model/candidate_status.json",
+      "source_sha256": "c084ca06d9f57f8c2bb21034de77625d03d5176600dc203cf8035b7514b81df2",
+      "sha256": "c084ca06d9f57f8c2bb21034de77625d03d5176600dc203cf8035b7514b81df2",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/model/model_trace.jsonl",
+      "source": "results/cli_pocket_model_20261023_001/model/model_trace.jsonl",
+      "source_sha256": "f8b7c81f2742643331509bf2c0492393cfbca6c8a05b7951cb00ac0f812a74ab",
+      "sha256": "f8b7c81f2742643331509bf2c0492393cfbca6c8a05b7951cb00ac0f812a74ab",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/model/provider_usage.jsonl",
+      "source": "results/cli_pocket_model_20261023_001/model/provider_usage.jsonl",
+      "source_sha256": "b5f81556486716580559f2c4010bed16eb464b16927d28b83aa906809b6dd744",
+      "sha256": "b5f81556486716580559f2c4010bed16eb464b16927d28b83aa906809b6dd744",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/model/model_budget.json",
+      "source": "results/cli_pocket_model_20261023_001/model/model_budget.json",
+      "source_sha256": "a0b25caa36774fb2e3bda1e25cf60366fd6680be92860923e73a2a39a33b420b",
+      "sha256": "a0b25caa36774fb2e3bda1e25cf60366fd6680be92860923e73a2a39a33b420b",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/source_snapshot/cad_cf/batch_budget.py",
+      "source": "results/cli_pocket_model_20261023_001/source_snapshot/cad_cf/batch_budget.py",
+      "source_sha256": "52953e7b0ab3deb3546927a02ae848fa3be323f773020092906b081ab70f8e02",
+      "sha256": "52953e7b0ab3deb3546927a02ae848fa3be323f773020092906b081ab70f8e02",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/source_snapshot/cad_cf/cli_causal_credit.py",
+      "source": "results/cli_pocket_model_20261023_001/source_snapshot/cad_cf/cli_causal_credit.py",
+      "source_sha256": "f974b7d8519f3316a28258c11ed567dbf1d0f7fd917dbea75c41ce97a8c52f08",
+      "sha256": "f974b7d8519f3316a28258c11ed567dbf1d0f7fd917dbea75c41ce97a8c52f08",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/source_snapshot/cad_cf/cli_model_pair.py",
+      "source": "results/cli_pocket_model_20261023_001/source_snapshot/cad_cf/cli_model_pair.py",
+      "source_sha256": "604d89755347863f65c873c1ed33fd77a45c41eb744d31d4c545db2ac1c49237",
+      "sha256": "604d89755347863f65c873c1ed33fd77a45c41eb744d31d4c545db2ac1c49237",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/source_snapshot/cad_cf/cli_pocket_credit.py",
+      "source": "results/cli_pocket_model_20261023_001/source_snapshot/cad_cf/cli_pocket_credit.py",
+      "source_sha256": "82c0105e0f45b4c1aeaf0aac2c305d05e9f410b22303a19904970c49eadbd43a",
+      "sha256": "82c0105e0f45b4c1aeaf0aac2c305d05e9f410b22303a19904970c49eadbd43a",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/source_snapshot/cad_cf/qemu_runtime.py",
+      "source": "results/cli_pocket_model_20261023_001/source_snapshot/cad_cf/qemu_runtime.py",
+      "source_sha256": "e854e8536b1c971a97d4cdb4f8a0452944844c26c5c625ab6aba5ed2a8320bb6",
+      "sha256": "e854e8536b1c971a97d4cdb4f8a0452944844c26c5c625ab6aba5ed2a8320bb6",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/source_snapshot/cad_cf/structural_credit.py",
+      "source": "results/cli_pocket_model_20261023_001/source_snapshot/cad_cf/structural_credit.py",
+      "source_sha256": "ebc2b8485d4aaec3ff3054238979c3202ecf7e8a7545f0fe84fec4c1d7e5cf6a",
+      "sha256": "ebc2b8485d4aaec3ff3054238979c3202ecf7e8a7545f0fe84fec4c1d7e5cf6a",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/source_snapshot/cad_cf/terminal_bridge.py",
+      "source": "results/cli_pocket_model_20261023_001/source_snapshot/cad_cf/terminal_bridge.py",
+      "source_sha256": "4c3e9f8023a6b8b344c5c70c495312ab1624e97273509f46134ea9339c55a17d",
+      "sha256": "4c3e9f8023a6b8b344c5c70c495312ab1624e97273509f46134ea9339c55a17d",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/source_snapshot/cad_cf/upstream_launch.py",
+      "source": "results/cli_pocket_model_20261023_001/source_snapshot/cad_cf/upstream_launch.py",
+      "source_sha256": "39353dd1bcb5bc906a17da49da9a42d2206f23e7c8d3e426fb6f84469f96ada0",
+      "sha256": "39353dd1bcb5bc906a17da49da9a42d2206f23e7c8d3e426fb6f84469f96ada0",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/source_snapshot/configs/cli_pocket_credit_20261023.json",
+      "source": "results/cli_pocket_model_20261023_001/source_snapshot/configs/cli_pocket_credit_20261023.json",
+      "source_sha256": "6b235a29afe872288fb60f91c81762b5e9015514fc9c8e95c5a95fdce509ce95",
+      "sha256": "6b235a29afe872288fb60f91c81762b5e9015514fc9c8e95c5a95fdce509ce95",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/source_snapshot/scripts/cli_causal_worker.py",
+      "source": "results/cli_pocket_model_20261023_001/source_snapshot/scripts/cli_causal_worker.py",
+      "source_sha256": "131a100b76f598717513ecd5ff969a3dfcdc01ced5c7e92f1d7394140974f1f5",
+      "sha256": "131a100b76f598717513ecd5ff969a3dfcdc01ced5c7e92f1d7394140974f1f5",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/source_snapshot/scripts/cli_pocket_worker.py",
+      "source": "results/cli_pocket_model_20261023_001/source_snapshot/scripts/cli_pocket_worker.py",
+      "source_sha256": "8f1216d7d207938833c21cdefe746c5c54fa9505f0210bb40bf0d3a9e841b833",
+      "sha256": "8f1216d7d207938833c21cdefe746c5c54fa9505f0210bb40bf0d3a9e841b833",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/source_snapshot/scripts/run_cli_causal_credit.py",
+      "source": "results/cli_pocket_model_20261023_001/source_snapshot/scripts/run_cli_causal_credit.py",
+      "source_sha256": "291334e0c04606ceb87a6d923beb2c23261c0dd60ff19391cda43b994d2b08db",
+      "sha256": "291334e0c04606ceb87a6d923beb2c23261c0dd60ff19391cda43b994d2b08db",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/source_snapshot/scripts/run_cli_model_pair.py",
+      "source": "results/cli_pocket_model_20261023_001/source_snapshot/scripts/run_cli_model_pair.py",
+      "source_sha256": "9656986ca12c75b7761ea14774a84079e4e0f605e330944bff846cbec654fcef",
+      "sha256": "9656986ca12c75b7761ea14774a84079e4e0f605e330944bff846cbec654fcef",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/source_snapshot/scripts/run_cli_pocket_credit.py",
+      "source": "results/cli_pocket_model_20261023_001/source_snapshot/scripts/run_cli_pocket_credit.py",
+      "source_sha256": "374235f10f1af3bcfe5dcb7fa2b06448a8aea564475396a26da55493fd0c076a",
+      "sha256": "374235f10f1af3bcfe5dcb7fa2b06448a8aea564475396a26da55493fd0c076a",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_model_20261023_001/source_snapshot/scripts/run_structural_credit_diagnostic.py",
+      "source": "results/cli_pocket_model_20261023_001/source_snapshot/scripts/run_structural_credit_diagnostic.py",
+      "source_sha256": "4fe03faeb3ae0d9254c0ec5c5bbd5e10783ae62d15db79ab569e5e11c5f6dcda",
+      "sha256": "4fe03faeb3ae0d9254c0ec5c5bbd5e10783ae62d15db79ab569e5e11c5f6dcda",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/summary.json",
+      "source": "results/cli_pocket_clone_probe_20261023_001/summary.json",
+      "source_sha256": "5707c76702b71c8ddb5a213d2db14a8ae2f7a2f69c99ddae216db6abdc86174a",
+      "sha256": "5707c76702b71c8ddb5a213d2db14a8ae2f7a2f69c99ddae216db6abdc86174a",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/source_manifest.json",
+      "source": "results/cli_pocket_clone_probe_20261023_001/source_manifest.json",
+      "source_sha256": "5ee1d0d5a367686dad99cfc752f09b6f61c9faab3ca93733f86618c8f4d9051a",
+      "sha256": "5ee1d0d5a367686dad99cfc752f09b6f61c9faab3ca93733f86618c8f4d9051a",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/pair.json",
+      "source": "results/cli_pocket_clone_probe_20261023_001/pair.json",
+      "source_sha256": "784f02c6a747ad0fddc1a8b1e788543bdf68fac951db52672a640d7458253dfd",
+      "sha256": "784f02c6a747ad0fddc1a8b1e788543bdf68fac951db52672a640d7458253dfd",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/pairs.json",
+      "source": "results/cli_pocket_clone_probe_20261023_001/pairs.json",
+      "source_sha256": "7e2152116c2518498d9c67a83babc1a6a7d203797674a59412d268b7fd917ba8",
+      "sha256": "7e2152116c2518498d9c67a83babc1a6a7d203797674a59412d268b7fd917ba8",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/verification.json",
+      "source": "results/cli_pocket_clone_probe_20261023_001/verification.json",
+      "source_sha256": "6ae244ade35e105f285e5337f93a20bda9cadd80f52bd59e8e647d7923783eb3",
+      "sha256": "6ae244ade35e105f285e5337f93a20bda9cadd80f52bd59e8e647d7923783eb3",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/pair_trace.jsonl",
+      "source": "results/cli_pocket_clone_probe_20261023_001/pair_trace.jsonl",
+      "source_sha256": "c733ad5500b628361419d63925d22a272e6cc419ff888a484f2c64d1ffca4baa",
+      "sha256": "c733ad5500b628361419d63925d22a272e6cc419ff888a484f2c64d1ffca4baa",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/deployed_worker.py",
+      "source": "results/cli_pocket_clone_probe_20261023_001/deployed_worker.py",
+      "source_sha256": "fd48e105c46f5d1ce9d3225b8fbd2ba72b2cb917a4fc301002ba0d4ca6340ee5",
+      "sha256": "fd48e105c46f5d1ce9d3225b8fbd2ba72b2cb917a4fc301002ba0d4ca6340ee5",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/source_recovery.json",
+      "source": "results/cli_pocket_clone_probe_20261023_001/source_recovery.json",
+      "source_sha256": "fdce55d4625dd26ed2112590b3cf66a370e7aaa9cff52774dda1f63982513921",
+      "sha256": "fdce55d4625dd26ed2112590b3cf66a370e7aaa9cff52774dda1f63982513921",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/branch_A/request.json",
+      "source": "results/cli_pocket_clone_probe_20261023_001/branch_A/request.json",
+      "source_sha256": "731f57affb40f5e493cbb6998e7a2c6254f9947c41d277e8cbf3810cc89e3c2f",
+      "sha256": "731f57affb40f5e493cbb6998e7a2c6254f9947c41d277e8cbf3810cc89e3c2f",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/branch_A/observation.json",
+      "source": "results/cli_pocket_clone_probe_20261023_001/branch_A/observation.json",
+      "source_sha256": "ef85ab544b0414618622bfcbbeb869a3a82e1140a95b0b7c89afb469f3692e0d",
+      "sha256": "ef85ab544b0414618622bfcbbeb869a3a82e1140a95b0b7c89afb469f3692e0d",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/branch_A/provenance.json",
+      "source": "results/cli_pocket_clone_probe_20261023_001/branch_A/provenance.json",
+      "source_sha256": "4b6cc5f264b4640d559934204655e12eaabee3b787c2a5f620b3ad1f3b3037f4",
+      "sha256": "4b6cc5f264b4640d559934204655e12eaabee3b787c2a5f620b3ad1f3b3037f4",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/branch_A/trace.jsonl",
+      "source": "results/cli_pocket_clone_probe_20261023_001/branch_A/trace.jsonl",
+      "source_sha256": "ecf4fb2d90ffcc3ba98d41476c046806f6d6df1e662d6151ced42d87bafaa225",
+      "sha256": "ecf4fb2d90ffcc3ba98d41476c046806f6d6df1e662d6151ced42d87bafaa225",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/branch_A/execution_summary.json",
+      "source": "results/cli_pocket_clone_probe_20261023_001/branch_A/execution_summary.json",
+      "source_sha256": "858e56705c85eab23155fd9e505bffb6784dbcc49da8cfa08396265b1ae4aea8",
+      "sha256": "858e56705c85eab23155fd9e505bffb6784dbcc49da8cfa08396265b1ae4aea8",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/branch_A/dispatch_public.json",
+      "source": "results/cli_pocket_clone_probe_20261023_001/branch_A/dispatch_public.json",
+      "source_sha256": "daaf4a461beb462421ee7ded868463c15d0e3c799fd6a6b5bd926b94a596e7c9",
+      "sha256": "daaf4a461beb462421ee7ded868463c15d0e3c799fd6a6b5bd926b94a596e7c9",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/branch_A/dispatch.dispatch.json",
+      "source": "results/cli_pocket_clone_probe_20261023_001/branch_A/dispatch.sqlite",
+      "source_sha256": "e10bb09baf319dfd7e861ff10a083f53de5f4fa078e9a953dd373e166f87d316",
+      "sha256": "5f93ae63319a71df235793a1cd08ca9621614f9996081cf72428313792b0b786",
+      "redacted": false,
+      "derived": true
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/branch_B/request.json",
+      "source": "results/cli_pocket_clone_probe_20261023_001/branch_B/request.json",
+      "source_sha256": "53c73fe25b8004e168baf12c211a1c992e489291531983275e399046cad3b5d5",
+      "sha256": "53c73fe25b8004e168baf12c211a1c992e489291531983275e399046cad3b5d5",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/branch_B/observation.json",
+      "source": "results/cli_pocket_clone_probe_20261023_001/branch_B/observation.json",
+      "source_sha256": "c7963651e1d34037ba58b13d51d9a01d98729815a46ac654c5125d43e4b071e3",
+      "sha256": "c7963651e1d34037ba58b13d51d9a01d98729815a46ac654c5125d43e4b071e3",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/branch_B/provenance.json",
+      "source": "results/cli_pocket_clone_probe_20261023_001/branch_B/provenance.json",
+      "source_sha256": "7ad0f9997182ec94408a00402484e03bbe3d79d5d98817c9cb96b590e50a436b",
+      "sha256": "7ad0f9997182ec94408a00402484e03bbe3d79d5d98817c9cb96b590e50a436b",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/branch_B/trace.jsonl",
+      "source": "results/cli_pocket_clone_probe_20261023_001/branch_B/trace.jsonl",
+      "source_sha256": "4b4d62bf3ed5fb713fa5a8745ac5e3718a5b5a8f17ebfd164c76561afcbda7de",
+      "sha256": "4b4d62bf3ed5fb713fa5a8745ac5e3718a5b5a8f17ebfd164c76561afcbda7de",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/branch_B/execution_summary.json",
+      "source": "results/cli_pocket_clone_probe_20261023_001/branch_B/execution_summary.json",
+      "source_sha256": "d5cc576b47089ceaa2ce10f6e0a87cf36a1ee348b6eccdff55a1b7504ff955d5",
+      "sha256": "d5cc576b47089ceaa2ce10f6e0a87cf36a1ee348b6eccdff55a1b7504ff955d5",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/branch_B/dispatch_public.json",
+      "source": "results/cli_pocket_clone_probe_20261023_001/branch_B/dispatch_public.json",
+      "source_sha256": "52cd52223412bdc0e683db5e23b60ee8e101d0ffdbbe9ec17e8cf534806aeb20",
+      "sha256": "52cd52223412bdc0e683db5e23b60ee8e101d0ffdbbe9ec17e8cf534806aeb20",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/branch_B/dispatch.dispatch.json",
+      "source": "results/cli_pocket_clone_probe_20261023_001/branch_B/dispatch.sqlite",
+      "source_sha256": "af1b725f17786740d828688138479a7a48c1daa43427a806fa93157a0f9c1109",
+      "sha256": "a244b9038f7168ac3a72c85ecaf091b5da30e5b86e7c983fc1efe31bca7d4349",
+      "redacted": false,
+      "derived": true
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/branch_A/runtime/vm_001/launch.json",
+      "source": "results/cli_pocket_clone_probe_20261023_001/branch_A/runtime/vm_001/launch.json",
+      "source_sha256": "49cc52aa8c7d648dd8719c822e3ee320d11c6b01f83a159930dfe3947cb35f86",
+      "sha256": "49cc52aa8c7d648dd8719c822e3ee320d11c6b01f83a159930dfe3947cb35f86",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/branch_A/runtime/vm_001/ready.json",
+      "source": "results/cli_pocket_clone_probe_20261023_001/branch_A/runtime/vm_001/ready.json",
+      "source_sha256": "3df2aa835421be8f2c46fe691c80058101d22d4ec30f84db9c4c1e42f0aa6382",
+      "sha256": "3df2aa835421be8f2c46fe691c80058101d22d4ec30f84db9c4c1e42f0aa6382",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/branch_A/runtime/vm_001/stopped.json",
+      "source": "results/cli_pocket_clone_probe_20261023_001/branch_A/runtime/vm_001/stopped.json",
+      "source_sha256": "01147001eb469098ce912d88fa160c4f42d649fb205b538fab1f15c49bfd0434",
+      "sha256": "01147001eb469098ce912d88fa160c4f42d649fb205b538fab1f15c49bfd0434",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/branch_A/runtime/vm_001/readiness.jsonl",
+      "source": "results/cli_pocket_clone_probe_20261023_001/branch_A/runtime/vm_001/readiness.jsonl",
+      "source_sha256": "dcbee4dadeb54d5f027f6928f682cc99231009b0fdf5efda0c0743bcf6236164",
+      "sha256": "dcbee4dadeb54d5f027f6928f682cc99231009b0fdf5efda0c0743bcf6236164",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/branch_B/runtime/vm_001/launch.json",
+      "source": "results/cli_pocket_clone_probe_20261023_001/branch_B/runtime/vm_001/launch.json",
+      "source_sha256": "e0f58d7073e706a5c3c42b439e086e115f6a5feb32f7c99dffe256f98814ba3a",
+      "sha256": "e0f58d7073e706a5c3c42b439e086e115f6a5feb32f7c99dffe256f98814ba3a",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/branch_B/runtime/vm_001/ready.json",
+      "source": "results/cli_pocket_clone_probe_20261023_001/branch_B/runtime/vm_001/ready.json",
+      "source_sha256": "c0f5a3ca17123ec4f13bcd0bdd48133556d86d202bc8f1ee6b8641119dd23118",
+      "sha256": "c0f5a3ca17123ec4f13bcd0bdd48133556d86d202bc8f1ee6b8641119dd23118",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/branch_B/runtime/vm_001/stopped.json",
+      "source": "results/cli_pocket_clone_probe_20261023_001/branch_B/runtime/vm_001/stopped.json",
+      "source_sha256": "7d1b6d479a868b2dfcf937cd944812dc1d2866a1f22a58588a01572695828f4d",
+      "sha256": "7d1b6d479a868b2dfcf937cd944812dc1d2866a1f22a58588a01572695828f4d",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/branch_B/runtime/vm_001/readiness.jsonl",
+      "source": "results/cli_pocket_clone_probe_20261023_001/branch_B/runtime/vm_001/readiness.jsonl",
+      "source_sha256": "b08290a8357d2f645257234e69c61497dfe23e43dcda8293c95f7e16f2ffcdf0",
+      "sha256": "b08290a8357d2f645257234e69c61497dfe23e43dcda8293c95f7e16f2ffcdf0",
+      "redacted": false,
+      "derived": false
+    },
+    {
+      "path": "cli_pocket_clone_probe_20261023_001/source_snapshot/scripts/probe_cli_pocket_clones.py",
+      "source": "results/cli_pocket_clone_probe_20261023_001/source_snapshot/scripts/probe_cli_pocket_clones.py",
+      "source_sha256": "76d9952a46f3c401fc29f826156739ebdb41aa995c75fa13a2b18b43cf186dbe",
+      "sha256": "76d9952a46f3c401fc29f826156739ebdb41aa995c75fa13a2b18b43cf186dbe",
+      "redacted": false,
+      "derived": false
+    }
+  ],
+  "omitted_screenshots": [],
+  "complete_agent_jsonl": null,
+  "agent_jsonl_reason": "scoped candidate protocol has model and dispatch traces; no official terminal episode",
+  "runs": [
+    "results/cli_pocket_dry_20261023_001",
+    "results/cli_pocket_prepare_20261023_001",
+    "results/cli_pocket_model_20261023_001",
+    "results/cli_pocket_clone_probe_20261023_001"
+  ],
+  "official_episodes_added": 0,
+  "training_rows": 0
+}

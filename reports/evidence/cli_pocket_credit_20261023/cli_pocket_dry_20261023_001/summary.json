@@ -1,0 +1,9 @@
+{
+  "status": "DRY_RUN_ONLY",
+  "model_calls": 0,
+  "native_dispatches": 0,
+  "quality": null,
+  "candidate_vm_clones": 2,
+  "max_model_calls": 2,
+  "max_output_tokens": 4096
+}

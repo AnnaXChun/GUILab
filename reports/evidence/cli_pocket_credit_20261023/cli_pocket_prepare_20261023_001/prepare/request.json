@@ -1,0 +1,11 @@
+{
+  "mode": "prepare",
+  "root": "/home/user/.structural_credit_47eb2a1261a9/seeds",
+  "pairs": [
+    {
+      "id": "pocket-control",
+      "control": true,
+      "classification": "synthetic_irrelevant_block_control"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "rows": [
+    {
+      "method": "first_sample",
+      "selected": "A",
+      "observed_response_q": null
+    },
+    {
+      "method": "initial_geometry_best_of_2",
+      "selected": null,
+      "observed_response_q": null
+    },
+    {
+      "method": "response_terminal_best_of_2",
+      "selected": null,
+      "observed_response_q": null
+    },
+    {
+      "method": "local_credit",
+      "selected": null,
+      "observed_response_q": null
+    },
+    {
+      "method": "swapped_credit",
+      "selected": null,
+      "observed_response_q": null
+    }
+  ],
+  "shared_reward_equivalence": false,
+  "new_experiments": 0,
+  "tie_policy": "A including swapped labels",
+  "training_effect": null,
+  "episode_broadcast_comparison": null,
+  "episode_broadcast_reason": "a frozen trusted prefix is not a captured multi-block model episode"
+}

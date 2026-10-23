@@ -75,7 +75,7 @@ def snapshot_sources(output, worker):
         shutil.copyfile(ROOT / name, target)
 
 
-def verify_prepared(run):
+def verify_prepared(run, *, current_sources=True):
     proof = json.loads((run / 'pre_request_proof.json').read_text())
     if proof['status'] != 'PASS' or proof['model_calls'] != 0:
         raise ValueError('native preparation/control proof missing')
@@ -84,7 +84,7 @@ def verify_prepared(run):
     if digest(seed['native_state']) != seed['seed_state_sha256'] or seed.get('captured_before_model_requests') is not True:
         raise ValueError('prospective S1 binding invalid')
     for name, value in json.loads((run / 'source_manifest.json').read_text()).items():
-        path = run / name if name == 'deployed_worker.py' else ROOT / name
+        path = run / name if name == 'deployed_worker.py' else (ROOT / name if current_sources else run / 'source_snapshot' / name)
         if file_sha(path) != value:
             raise ValueError('frozen source changed: ' + name)
     disk, sha = stopped_disk(run)
@@ -93,6 +93,14 @@ def verify_prepared(run):
     if json.loads((run / 'execution_summary.json').read_text())['dispatches'] != 3:
         raise ValueError('prepare requires exactly three audited dispatches')
     return captured, disk, sha
+
+
+def claim_prepared(run, output):
+    """An ended or unknown batch consumes its snapshot's single sampling claim."""
+    with (run / 'sample_claim.json').open('x') as stream:
+        json.dump({'sample_run': str(output.resolve()), 'claim_origin': 'pre_request',
+                   'policy': 'one sampling batch; never remove claim to recover budget'}, stream)
+        stream.write('\n')
 
 
 def run_branch(pair, seed, branch, runtime, output, worker_source, snapshot_sha):
@@ -212,7 +220,8 @@ def main(argv=None):
             save(output / 'frozen_pair_before_requests.json', pair)
             control.update(copy.deepcopy(pair))
             control.update(id='pocket-control', control=True, classification='synthetic_irrelevant_block_control',
-                           continuation='doc.recompute()', candidates={b: "doc.getObject('AuditNote').Text=" + repr('control-' + b) for b in ('A', 'B')})
+                           continuation='doc.recompute()', candidates={b: "doc.getObject('AuditNote').Text=" + repr('control-' + b) for b in ('A', 'B')},
+                           candidate_origins={b: 'trusted_synthetic_control' for b in ('A', 'B')})
             freeze(control)
 
         rows = run_native(plan, {'port': 15071, 'vnc_port': 15971, 'worker_timeout_seconds': 180,
@@ -230,6 +239,7 @@ def main(argv=None):
                    'control_credit': rows[0]['credit'] if rows else None, 'training_rows': 0}
     else:
         captured, disk, sha = verify_prepared(source)
+        claim_prepared(source, output)
         runtime.update(base=str(disk), base_sha=sha, controller_only=True)
         seed = captured['seeds']['pocket']
         pair = json.loads((source / 'frozen_pair_before_requests.json').read_text())
@@ -255,7 +265,11 @@ def main(argv=None):
                 if file_sha(disk) != sha:
                     raise ValueError('prepared stopped disk changed')
         except Exception as exc:
-            error = {'status': 'EXECUTION_UNCERTAIN' if isinstance(exc, ExecutionUncertain) else 'CANDIDATE_OR_SERVICE_ERROR',
+            status = 'EXECUTION_UNCERTAIN' if isinstance(exc, ExecutionUncertain) else 'CANDIDATE_OR_SERVICE_ERROR'
+            for prefix in ('CANDIDATE_REJECTED', 'BLOCKED_BY_CREDENTIALS', 'MODEL_REQUEST_FAILED', 'MODEL_USAGE_UNKNOWN'):
+                if str(exc).startswith(prefix):
+                    status = prefix
+            error = {'status': status,
                      'reason': type(exc).__name__, 'message': str(exc), 'quality': None}
             save(output / 'error.json', error)
         finally:

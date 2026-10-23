@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-23T03:40:59.627986+00:00",
+  "project_tests_passed": 318,
+  "upstream_cli_tests_passed": 7,
+  "commands": [
+    "ENABLE_PAID_RUNS=0 .venv/bin/python -m pytest tests/test_cli_pocket_credit.py tests/test_cli_causal_credit.py tests/test_cli_model_pair.py -q",
+    "ENABLE_PAID_RUNS=0 .venv/bin/python -m pytest -q",
+    "ENABLE_PAID_RUNS=0 PYTHONPATH=vendor/CADWORLD .venv/bin/python -m unittest CLI.test_terminal_agent",
+    "ENABLE_PAID_RUNS=0 .venv/bin/python scripts/run_cli_pocket_credit.py --mode dry-run --output results/cli_pocket_dry_20261023_001",
+    "ENABLE_PAID_RUNS=0 .venv/bin/python scripts/run_cli_pocket_credit.py --mode prepare --source results/cli_causal_inspect_native_20261022_004 --runtime-config results/cli_focus_runtime_20261021.json --output results/cli_pocket_prepare_20261023_001",
+    "ENABLE_PAID_RUNS=1 .venv/bin/python scripts/run_cli_pocket_credit.py --mode sample --source results/cli_pocket_prepare_20261023_001 --runtime-config results/cli_focus_runtime_20261021.json --output results/cli_pocket_model_20261023_001",
+    "ENABLE_PAID_RUNS=0 .venv/bin/python scripts/probe_cli_pocket_clones.py --prepared results/cli_pocket_prepare_20261023_001 --runtime-config results/cli_focus_runtime_20261021.json --output results/cli_pocket_clone_probe_20261023_001",
+    "ENABLE_PAID_RUNS=0 .venv/bin/python scripts/audit_cli_pocket_credit.py --run results/cli_pocket_model_20261023_001",
+    "ENABLE_PAID_RUNS=0 .venv/bin/python scripts/audit_cli_pocket_credit.py --clone-probe --run results/cli_pocket_clone_probe_20261023_001",
+    "ENABLE_PAID_RUNS=0 .venv/bin/python scripts/archive_cli_pocket_evidence.py --run results/cli_pocket_dry_20261023_001 --run results/cli_pocket_prepare_20261023_001 --run results/cli_pocket_model_20261023_001 --run results/cli_pocket_clone_probe_20261023_001 --output reports/evidence/cli_pocket_credit_20261023"
+  ],
+  "native_dispatches": 5,
+  "native_uncertain": 0,
+  "model_requests": 2,
+  "artifact_protocol_audits": "PASS",
+  "archive_files": 134,
+  "source_and_export_sha_checks": 268,
+  "json_parsed": 77,
+  "jsonl_lines_parsed": 68,
+  "fcstd_or_qcow2_exported": 0,
+  "paid_calls_after_sample": 0,
+  "all_vm_stopped": true,
+  "upstream_tracked_modified": false,
+  "final_related_tests_passed": 69,
+  "final_pocket_tests_passed": 26,
+  "secret_exclusion_check": "PASS",
+  "binary_exclusion_check": "PASS",
+  "codebase_memory": {
+    "project": "Users-bytedance-Desktop-Own-CUA-cad-cf-hybrid",
+    "status": "ready",
+    "parse_partial_files": 114,
+    "parse_unusable": 0,
+    "skipped": 0,
+    "detect_changes": "completed; final scope follows git diff",
+    "index_diagnostics_exported": false
+  }
+}
