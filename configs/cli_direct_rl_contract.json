@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "status": "PLANNED_ADAPTER_NOT_IMPLEMENTED",
+  "authorization": "2026-10-23 user: skip SFT, directly run RL using existing remote veRL Docker/code",
+  "protocol": "docs/CLI_DIRECT_RL_VERL.md",
+  "cadworld_commit": "e5d0ebab8bd28da6e98c68c61db05747d1647f7b",
+  "sft_required": false,
+  "local_credit_non_tie_required_for_vanilla_rl": false,
+  "framework": "reuse_remote_verl",
+  "algorithm": "reuse_existing_working_algorithm",
+  "prefer_if_already_supported": "grpo",
+  "remote_repo": null,
+  "remote_launcher": null,
+  "verl_commit": null,
+  "docker_image_digest": null,
+  "student_model_path": null,
+  "gpu_configuration": null,
+  "rollout_backend": null,
+  "environment": {
+    "candidate_backend": "isolated_linux_freecad_cpu_worker",
+    "validated_in_linux_container": false,
+    "reference_freecad_version": "1.1.0",
+    "kvm_required": false,
+    "tool_schema": "pinned_CLI_terminal_finish",
+    "candidate_ast_scoper_is_full_rl_tool_policy": false,
+    "reset_and_native_state_sha_required": true,
+    "same_task_group_same_s0": true,
+    "non_idempotent_retries": 0
+  },
+  "reward": {
+    "initial_kind": "full_public_task_and_native_artifact_binary",
+    "known_values": [0, 1],
+    "unknown_value": null,
+    "unsupported_task_admission": "exclude_before_sampling",
+    "invalid_group_policy_for_grpo": "drop_entire_group_no_auto_replacement",
+    "official_evaluator_in_training": false,
+    "synthetic_controls_as_training_preferences": false
+  },
+  "rollout": {
+    "source": "current_student_policy_verl_engine",
+    "loss_mask": "assistant_generated_tokens_only",
+    "token_ids_and_logprobs_required": true,
+    "policy_version_required": true,
+    "tool_call_id_matching_required": true
+  },
+  "pilot_proposal": {
+    "max_updates": 20,
+    "samples_per_task": 4,
+    "max_turns": 20,
+    "max_output_tokens_per_episode": 16384,
+    "checkpoint_eval_updates": [0, 5, 10, 20],
+    "task_pool": null,
+    "train_batch_size": null,
+    "environment_parallelism": null,
+    "total_generation_budget": null,
+    "gpu_wall_budget_seconds": null,
+    "all_remaining_fields_frozen_before_training": true
+  },
+  "automatic_weight_download": false,
+  "actual_training_updates": 0,
+  "actual_new_rollouts": 0,
+  "actual_rl_effect": null
+}

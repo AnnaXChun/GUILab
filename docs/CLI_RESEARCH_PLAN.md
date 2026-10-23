@@ -1,5 +1,7 @@
 # CADWorld CLI 研究计划
 
+**2026-10-23 最新方向：跳过SFT，直接RL，复用用户已有的远程veRL Docker/代码。** 首轮做完整CLI episode的公开奖励RL，用同一学生模型的step0与checkpoint比较结果；不把SFT样本数或局部信用非tie作为普通RL的前置条件。接入范围与验收顺序见 [直接RL契约](CLI_DIRECT_RL_VERL.md)。下文“先SFT”“不接veRL”和等待局部标签的安排保留为历史，仅局部信用方法组仍需对应证据。
+
 本文件落实 2026-10-21 用户的新方向：停止 GUI，围绕 CADWorld CLI 做数据清洗、RL 和成功率改进。`SPEC.md` 保留原 ACTC 方案，涉及 GUI/API 路由的 RQ、P1–P3 gate 和 novelty 不再作为本方向的研究主张。旧 GUI 成绩和失败仍保留，不能据此声称 ACTC 已完成。
 
 用户随后指出普通 SFT/RL 缺少方法创新，并要求继续验证。当前优先验证 [CLI 结构信用](CLI_STRUCTURAL_CREDIT.md)：在初始几何相同的条件下，参数干预能否识别错误依赖，固定续执行下的代码替换能否产生可归因的相对收益。先用三个可信 fixture 排查信号和检查器，再决定是否收集模型配对轨迹。SFT/RL 作为后续优化对照，研究价值取决于相同检查器、相同预算下的实际收益。

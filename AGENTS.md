@@ -4,6 +4,8 @@
 
 ## 接手入口
 
+**2026-10-23 用户最新方向：直接 RL，跳过 SFT，复用远程已有 veRL Docker/旧代码**。入口为 `docs/CLI_DIRECT_RL_VERL.md`、`configs/cli_direct_rl_contract.json`。此前“不接veRL”“先SFT”“等局部信用非tie再开训”的限制不再用于首轮普通RL；先读取远程现有代码/启动脚本，匹配真实版本，适配多轮rollout、Linux FreeCAD CPU worker、公开奖励和checkpoint评测。当前adapter只是规划，训练更新0；远程环境是用户报告存在，尚未读取验收。不恢复GUI、不接触官方规则作训练奖励、不重开旧账本、不自动下载大模型。局部信用作为后续方法对照，首轮普通RL无需SFT示范或preference。
+
 **2026-10-23 最新后续边界**：读取 `reports/CLI_POCKET_CREDIT_20261023.md`、`reports/CLI_POCKET_STATUS_20261023.json` 和 `docs/CLI_POCKET_CREDIT_PILOT.md`。新prospective Pad S1/六探针/文本控制通过，Pocket两原文均静态拒绝，2请求7098输入/1772输出tokens，天然执行0、credit=null。原生独立克隆控制为synthetic，不能增加自然pair或训练样本。源码中的 `pocket_api_contract_v2_not_sampled` 尚未模型采样；旧scoper/prompt由快照审计，不能回写旧拒绝。单次sample claim结束后也不删除，本次旧prepare的claim为posthoc补建。新实验需新准备快照和冻结预算；本批不追加采样、不重跑200题、不恢复GUI、不训练。最终结果和VM停止证据由本轮机器状态维护。
 
 **2026-10-23 全量 CLI 与审计已完成**：`cli_full_sweep_native_20261022_001` 已尝试 200 题，185 可评估、14 通过、171 未通过、15 运行错误，完整分母交付率 7.00%，子集通过率 7.57%。3163 次模型请求，用量完整，pending=0。129 个 `.FCStd` 已做独立审计，128 个重开、93 个对象状态有效、40 个编辑探针通过，1 个空对象元数据错误保留；官方通过且原生状态有效为 12/200=6.00%。200 台任务 VM 与 1 台审计 VM 均停止，不启动原 job、原账本或原审计目录。入口为 `reports/CLI_EXPERIMENTS_20261022.md`、`reports/FAILURE_CASES.md`、`reports/evidence/cli_full_sweep_native_20261022_001/INDEX.json` 和 `HANDOFF.md`。候选 part-014 的一个 tie、credit=0、训练新增 0 单列；方法增益和训练仍 NO-GO。下一步冻结小批等预算局部归因与同奖励终局对照，不自动采样或训练。下方 RUNNING 与旧下一步按日期作为历史。

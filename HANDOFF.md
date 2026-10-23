@@ -1,5 +1,7 @@
 # GUILab 交接
 
+**2026-10-23 用户最新决定：直接 RL，不做 SFT，使用远程已有 veRL Docker 和旧训练代码。** 接手先读 [接入契约](docs/CLI_DIRECT_RL_VERL.md)和 `configs/cli_direct_rl_contract.json`。任务数据改为公开任务起始状态；复用pinned terminal/finish与原生审计，新增版本匹配的veRL多轮rollout、Linux CPU FreeCAD环境和在线奖励。首轮普通RL不等待局部信用非tie，旧“不接veRL/先SFT”安排被本决定覆盖。远程代码/启动脚本尚待提供，adapter未实现、训练更新0；读取真实接口后再填模型、并发和总预算，先单组rollout/backward，再20更新小批与step0同模型对照。当前所有历史实验和已消费账本保持。
+
 **2026-10-23 后续 Pocket 下游小批已采样结束**：入口 [本轮结果](reports/CLI_POCKET_CREDIT_20261023.md)、`reports/CLI_POCKET_STATUS_20261023.json` 与 [协议](docs/CLI_POCKET_CREDIT_PILOT.md)。原生prospective S1、可信Pocket、六探针和文本控制通过；新两请求7098输入/1772输出tokens，两原文静态拒绝、天然执行0、credit=null、训练新增0。原200题不重跑，历史Pad一个tie保持。当前代码的API契约v2尚未采样，原prompt/scoper按源码快照保留；消费过的准备目录已有posthoc claim，不能删除或恢复额度。下一轮须按当前源码新建准备目录，再冻结小批；不训练或恢复GUI。独立VM synthetic克隆检查与模型失败分别统计，最终状态见本轮机器记录。
 
 本轮三个VM均已停止，5次native派发全部complete、uncertain0；两独立clone控制Q=1/1、credit0，独立审计PASS。318项目tests/7upstream CLI tests通过，134文件脱敏证据及SHA核验已交付。当前阻塞是模型Pocket接口契约使用，环境和凭证本轮均可用；不要标成KVM或凭证阻塞。
